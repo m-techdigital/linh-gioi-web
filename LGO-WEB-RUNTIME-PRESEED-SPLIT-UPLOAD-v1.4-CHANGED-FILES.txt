@@ -1,0 +1,13 @@
+WEB v1.4 changed files vs v1.3 baseline
+
+A	HANDOFF-LGO-WEB-RUNTIME-PRESEED-SPLIT-UPLOAD-v1.4.md
+A	LGO-WEB-RUNTIME-PRESEED-SPLIT-UPLOAD-v1.4-CHANGED-FILES.txt
+A	LGO-WEB-RUNTIME-PRESEED-SPLIT-UPLOAD-v1.4-DELETIONS.txt
+A	docs/execution/WEB-RUNTIME-E2E-PRESEED-v1.4.md
+A	docs/execution/checklists/WEB-RUNTIME-KIT-SPLIT-UPLOAD-CHECKLIST-v1.4.md
+A	reports/LGO-WEB-RUNTIME-PRESEED-SPLIT-UPLOAD-REPORT-v1.4.md
+M	package.json
+M	tools/runtime-kit/Dockerfile.lgo-web-vnext-browser-e2e-kit
+M	tools/runtime-kit/README-LGO-WEB-vNEXT-BROWSER-E2E-KIT.md
+M	tools/runtime-kit/run_uploaded_runtime_kit_web_checks.sh
+M	tools/validate_web_runtime_preseed.py

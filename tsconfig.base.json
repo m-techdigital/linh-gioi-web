@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "lib": ["DOM", "DOM.Iterable", "ES2023"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": false,
+    "baseUrl": ".",
+    "paths": {
+      "@lgo-web/ui": ["packages/ui/src/index.ts"],
+      "@lgo-web/design-tokens": ["packages/design-tokens/src/index.ts"],
+      "@lgo-web/design-tokens/tokens.css": ["packages/design-tokens/src/tokens.css"],
+      "@lgo-web/content": ["packages/content/src/index.ts"],
+      "@lgo-web/contracts": ["packages/contracts/src/index.ts"],
+      "@lgo-web/api-client": ["packages/api-client/src/index.ts"],
+      "@lgo-web/auth": ["packages/auth/src/index.ts"],
+      "@lgo-web/config": ["packages/config/src/index.ts"],
+      "@lgo-web/testing": ["packages/testing/src/index.ts"]
+    }
+  }
+}

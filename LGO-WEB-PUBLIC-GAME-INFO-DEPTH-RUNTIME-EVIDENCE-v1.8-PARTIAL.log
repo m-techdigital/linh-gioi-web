@@ -1,0 +1,18 @@
+WEB v1.8 targeted runtime guardrail evidence
+
+Runtime kit:
+- source /mnt/data/lgo-web-runtime-kit-v13/env.sh
+- node --version => v24.20.0
+- pnpm --version => 10.15.0
+
+Commands executed before final clean:
+- pnpm install --offline --ignore-scripts => PASS (see /mnt/data/lgo-web-v18-pnpm-install.log)
+- pnpm --filter @lgo-web/content test => PASS, 1 test passed (see /mnt/data/lgo-web-v18-content-test.log)
+- pnpm --filter @lgo-web/content typecheck => PASS (see /mnt/data/lgo-web-v18-content-typecheck.log)
+- pnpm --filter @lgo-web/ui typecheck => PASS (see /mnt/data/lgo-web-v18-ui-typecheck.log)
+- pnpm --filter @lgo-web/web typecheck => PASS (see /mnt/data/lgo-web-v18-web-typecheck.log)
+- pnpm lint => PASS, 11 packages successful (see /mnt/data/lgo-web-v18-lint.log)
+- NEXT_TELEMETRY_DISABLED=1 pnpm --filter @lgo-web/web build => PASS on rerun, routes include /guides/beginner and news static params (see /mnt/data/lgo-web-v18-web-build-rerun.log)
+
+Not claimed:
+- No full v1.8 multi-app browser matrix PASS. Runtime/browser/e2e remains guardrail only and was not expanded as the main task.

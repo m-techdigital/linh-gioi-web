@@ -1,0 +1,19 @@
+import { FaqDiscoveryGroupBoard, IssueCategoryRouteBoard } from "../../../components/PublicFaqHelpfulnessSections";
+import { FaqHelpfulnessCta } from "../../../components/PublicFaqHelpfulnessSections";
+import { GameCard, LinkButton, SectionHeading, Stack, StatusBadge } from "@lgo-web/ui";
+import { AccessibilityReadabilityCta } from "../../../components/PublicAccessibilityReadabilitySections";
+import { ContentIaStartCta } from "../../../components/PublicContentHubSections";
+import { ClosedTesterChecklistBoard, ClosedTesterInformationPackCta, DeviceReportTemplateBoard, KnownLimitationNotesBoard, SafeFeedbackTemplateBoard } from "../../../components/PublicClosedTesterInformationPackSections";
+import { PerformanceBudgetCta } from "../../../components/PublicPerformanceBudgetSections";
+import { PlayerSafetySupportCta } from "../../../components/PublicPlayerSafetySections";
+import { PlayerTrustReleaseCta } from "../../../components/PublicPlayerTrustReleaseSections";
+import { ReleaseReadinessHubCta, TesterExpectationCopyBoard } from "../../../components/PublicReleaseReadinessHubSections";
+import { RouteContinuityCta } from "../../../components/PublicRouteContinuitySections";
+import { WebAppShell } from "../../../components/WebAppShell";
+
+export const metadata = { title: "Closed tester information pack" };
+
+export default function ClosedTesterInformationPackPage() {
+  return <WebAppShell><Stack><ContentIaStartCta />
+        <FaqHelpfulnessCta /><RouteContinuityCta /><GameCard className="lgo-detail-hero-card lgo-closed-tester-hero-card"><StatusBadge tone="gold">WEB v1.20 closed tester information pack</StatusBadge><span className="lgo-card-kicker">Tester checklist · safe feedback · known limitations · device report template · No live intake</span><h1>Closed tester information: chuẩn bị đúng, không gửi nhầm dữ liệu</h1><p className="lgo-hero-lead">Trang này giải thích người chơi nên chuẩn bị gì nếu sau này có closed test, nhưng không mở form đăng ký, không bảo đảm slot test và không thu thập thông tin nhạy cảm.</p><p>Mục tiêu là làm web hữu ích trước release: người chơi hiểu stage hiện tại, biết cách ghi feedback an toàn, biết known limitations và quay lại Download/Status/Support đúng ngữ cảnh.</p><div className="lgo-product-first-actions"><LinkButton href="/release/readiness" tone="gold">Release readiness</LinkButton><LinkButton href="/download/trust" tone="spirit">Download trust</LinkButton><LinkButton href="/support/safety" tone="jade">Safety support</LinkButton></div></GameCard><SectionHeading eyebrow="Tester guidance before intake" title="Static guidance trước, kênh official sau">v1.20 tiếp tục xây web thật bằng cách biến closed-test wording thành checklist và template an toàn, không phải backend hoặc funnel giả.</SectionHeading><ClosedTesterChecklistBoard /><SafeFeedbackTemplateBoard /><FaqDiscoveryGroupBoard /><IssueCategoryRouteBoard /><KnownLimitationNotesBoard /><DeviceReportTemplateBoard /><TesterExpectationCopyBoard /><ClosedTesterInformationPackCta /><ReleaseReadinessHubCta /><PlayerTrustReleaseCta /><PlayerSafetySupportCta /><AccessibilityReadabilityCta /><PerformanceBudgetCta /></Stack></WebAppShell>;
+}

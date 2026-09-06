@@ -1,0 +1,146 @@
+# syntax=docker/dockerfile:1.7
+ARG TARGETPLATFORM=linux/amd64
+FROM --platform=$TARGETPLATFORM node:24-bookworm
+
+ENV PNPM_HOME=/opt/pnpm \
+    PLAYWRIGHT_BROWSERS_PATH=/opt/ms-playwright \
+    COREPACK_HOME=/opt/corepack \
+    CI=1
+ENV PATH="$PNPM_HOME:$PATH"
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates curl git tar gzip xz-utils python3 rsync bash \
+    libasound2 libatk-bridge2.0-0 libatk1.0-0 libcups2 libdbus-1-3 libdrm2 libgbm1 \
+    libgtk-3-0 libnspr4 libnss3 libx11-xcb1 libxcomposite1 libxdamage1 libxfixes3 \
+    libxkbcommon0 libxrandr2 xvfb fonts-liberation \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN corepack enable && corepack prepare pnpm@10.15.0 --activate
+
+WORKDIR /work/source
+COPY . /work/source
+
+RUN node --version && corepack --version && pnpm --version
+RUN pnpm install --frozen-lockfile=false
+RUN pnpm exec playwright install chromium
+RUN mkdir -p /kit/workspace /kit/workspace-node-modules /kit/toolchain/node /kit/cache/pnpm-store /kit/bin /kit/meta
+
+# Copy Node as a real Linux binary. Create self-locating wrappers for pnpm/pnpx/corepack;
+# copying Corepack shims alone is invalid because they depend on adjacent lib files.
+RUN cp -L "$(command -v node)" /kit/bin/node
+RUN cp -a /usr/local/lib/node_modules /kit/toolchain/node/node_modules
+RUN cat > /kit/bin/pnpm <<'EOF'
+#!/usr/bin/env bash
+set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+KIT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+exec "$SCRIPT_DIR/node" "$KIT_ROOT/cache/corepack/v1/pnpm/10.15.0/bin/pnpm.cjs" "$@"
+EOF
+RUN cat > /kit/bin/pnpx <<'EOF'
+#!/usr/bin/env bash
+set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+KIT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+exec "$SCRIPT_DIR/node" "$KIT_ROOT/cache/corepack/v1/pnpm/10.15.0/bin/pnpx.cjs" "$@"
+EOF
+RUN cat > /kit/bin/corepack <<'EOF'
+#!/usr/bin/env bash
+set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+KIT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+exec "$SCRIPT_DIR/node" "$KIT_ROOT/toolchain/node/node_modules/corepack/dist/lib/corepack.cjs" "$@"
+EOF
+RUN chmod +x /kit/bin/node /kit/bin/pnpm /kit/bin/pnpx /kit/bin/corepack
+
+RUN if [ -d /opt/corepack ]; then cp -a /opt/corepack /kit/cache/corepack; fi
+RUN if [ -d /opt/ms-playwright ]; then cp -a /opt/ms-playwright /kit/cache/ms-playwright; fi
+
+# Preserve pnpm store layout exactly as pnpm expects: cache/pnpm-store/v10/...
+RUN STORE_PATH="$(pnpm store path)" \
+  && echo "$STORE_PATH" > /kit/meta/PNPM_STORE_PATH.txt \
+  && STORE_BASENAME="$(basename "$STORE_PATH")" \
+  && cp -a "$STORE_PATH" "/kit/cache/pnpm-store/$STORE_BASENAME"
+
+# Preserve generated lockfile and every workspace node_modules tree, not only the root.
+RUN if [ -f /work/source/pnpm-lock.yaml ]; then cp -a /work/source/pnpm-lock.yaml /kit/workspace/pnpm-lock.yaml; fi
+RUN cd /work/source \
+  && find . -type d -name node_modules -prune | sort > /kit/meta/NODE_MODULES_PATHS.txt \
+  && while IFS= read -r d; do mkdir -p "/kit/workspace-node-modules/$(dirname "$d")"; cp -a "$d" "/kit/workspace-node-modules/$d"; done < /kit/meta/NODE_MODULES_PATHS.txt
+
+RUN node --version > /kit/meta/NODE_VERSION.txt
+RUN pnpm --version > /kit/meta/PNPM_VERSION.txt
+RUN python3 --version > /kit/meta/PYTHON_VERSION.txt
+RUN uname -a > /kit/meta/UNAME.txt
+RUN find /opt/ms-playwright -maxdepth 3 -type f \( -name 'chrome' -o -name 'chromium' -o -name 'chrome-headless-shell' \) 2>/dev/null | sort > /kit/meta/PLAYWRIGHT_BROWSER_BINARIES.txt || true
+
+RUN cat > /kit/env.sh <<'EOF'
+#!/usr/bin/env bash
+if [ -z "${LGO_WEB_RUNTIME_KIT_ROOT:-}" ]; then
+  LGO_WEB_RUNTIME_KIT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+fi
+export LGO_WEB_RUNTIME_KIT_ROOT
+export PATH="$LGO_WEB_RUNTIME_KIT_ROOT/bin:$PATH"
+export COREPACK_HOME="$LGO_WEB_RUNTIME_KIT_ROOT/cache/corepack"
+export PLAYWRIGHT_BROWSERS_PATH="$LGO_WEB_RUNTIME_KIT_ROOT/cache/ms-playwright"
+export PNPM_HOME="$LGO_WEB_RUNTIME_KIT_ROOT/bin"
+export PNPM_STORE_DIR="$LGO_WEB_RUNTIME_KIT_ROOT/cache/pnpm-store"
+export PNPM_CONFIG_STORE_DIR="$LGO_WEB_RUNTIME_KIT_ROOT/cache/pnpm-store"
+export npm_config_store_dir="$LGO_WEB_RUNTIME_KIT_ROOT/cache/pnpm-store"
+export CI=1
+EOF
+
+RUN cat > /kit/install-into-repo.sh <<'EOF'
+#!/usr/bin/env bash
+set -euo pipefail
+REPO_ROOT="${1:-$PWD}"
+KIT_ROOT="${LGO_WEB_RUNTIME_KIT_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)}"
+test -f "$REPO_ROOT/package.json"
+if [ -f "$KIT_ROOT/workspace/pnpm-lock.yaml" ]; then
+  cp -a "$KIT_ROOT/workspace/pnpm-lock.yaml" "$REPO_ROOT/pnpm-lock.yaml"
+fi
+if [ -d "$KIT_ROOT/workspace-node-modules" ]; then
+  (cd "$KIT_ROOT/workspace-node-modules" && find . -type d -name node_modules -prune | sort) | while IFS= read -r d; do
+    src="$KIT_ROOT/workspace-node-modules/$d"
+    dst="$REPO_ROOT/$d"
+    mkdir -p "$(dirname "$dst")"
+    rsync -a --delete "$src" "$(dirname "$dst")/"
+  done
+fi
+EOF
+
+RUN cat > /kit/run-web-checks.sh <<'EOF'
+#!/usr/bin/env bash
+set -euo pipefail
+KIT_ROOT="${LGO_WEB_RUNTIME_KIT_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)}"
+export LGO_WEB_RUNTIME_KIT_ROOT="$KIT_ROOT"
+source "$KIT_ROOT/env.sh"
+export NEXT_TELEMETRY_DISABLED=1
+REPO_ROOT="${1:-$PWD}"
+cd "$REPO_ROOT"
+test -f package.json
+hash -r
+node --version
+pnpm --version
+python3 -m py_compile tools/*.py
+python3 tools/validate_web_current_state.py
+if [ -f "$KIT_ROOT/workspace/pnpm-lock.yaml" ]; then
+  cp -a "$KIT_ROOT/workspace/pnpm-lock.yaml" "$REPO_ROOT/pnpm-lock.yaml"
+fi
+pnpm install --offline --ignore-scripts --frozen-lockfile=false --prefer-offline --store-dir "$KIT_ROOT/cache/pnpm-store" --reporter=append-only
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm build
+pnpm test:e2e
+EOF
+
+RUN cat > /kit/README-RUNTIME-KIT.txt <<'EOF'
+LGO Web vNext Browser/E2E Runtime Kit
+Target: linux/amd64 ChatGPT sandbox compatible runtime helper.
+Includes: Node 24, self-locating pnpm 10.15.0 wrapper, pnpm store, workspace node_modules snapshot, Playwright Chromium cache.
+This is a toolchain/cache artifact, not source. Do not commit it to the repo.
+EOF
+
+RUN chmod +x /kit/*.sh /kit/bin/*
+RUN (cd /kit && find . -type f -o -type l | sort > MANIFEST.txt)
+RUN tar -C /kit -czf /tmp/lgo-web-vnext-browser-e2e-runtime-kit-linux-amd64.tar.gz .

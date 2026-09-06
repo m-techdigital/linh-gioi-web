@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "version": "0.2.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "node ../../tools/lgo_web_lint.mjs .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "@lgo-web/ui": "workspace:*",
+    "@lgo-web/auth": "workspace:*",
+    "@lgo-web/api-client": "workspace:*"
+  },
+  "devDependencies": {},
+  "name": "@lgo-web/ops",
+  "description": "Internal ops/admin shell with visual-only fixtures"
+}

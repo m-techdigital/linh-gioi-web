@@ -1,0 +1,16 @@
+{
+  "name": "@lgo-web/config",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared environment labels and non-secret config declarations.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "lint": "node ../../tools/lgo_web_lint.mjs .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  }
+}

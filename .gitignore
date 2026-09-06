@@ -1,0 +1,16 @@
+
+# LGO generated runtime artifacts
+/out/
+*.tar.gz
+*.tar.gz.part-*
+*.zip
+*.sha256
+.DS_Store
+node_modules/
+.next/
+.turbo/
+.vite/
+dist/
+build/
+coverage/
+__pycache__/

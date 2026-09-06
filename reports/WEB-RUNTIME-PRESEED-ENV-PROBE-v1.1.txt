@@ -1,0 +1,3 @@
+pwd=/mnt/data/lgo-web-runtime-continuation-v1/web-source
+v22.16.0
+0.32.0

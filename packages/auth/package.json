@@ -1,0 +1,16 @@
+{
+  "name": "@lgo-web/auth",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Auth boundary placeholder for WEB-01.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "lint": "node ../../tools/lgo_web_lint.mjs .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  }
+}

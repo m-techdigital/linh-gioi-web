@@ -1,0 +1,33 @@
+# LGO WEB PUBLIC STATUS DOWNLOAD TRUST POLISH v1.10 — CHANGED FILES
+
+Added: 10
+- HANDOFF-LGO-WEB-PUBLIC-STATUS-DOWNLOAD-TRUST-POLISH-v1.10.md
+- LGO-WEB-PUBLIC-STATUS-DOWNLOAD-TRUST-POLISH-REPORT-v1.10.md
+- LGO-WEB-PUBLIC-STATUS-DOWNLOAD-TRUST-POLISH-v1.10-CHANGED-FILES.txt
+- LGO-WEB-PUBLIC-STATUS-DOWNLOAD-TRUST-POLISH-v1.10-DELETIONS.txt
+- apps/web/src/app/download/trust/page.tsx
+- apps/web/src/components/PublicTrustSections.tsx
+- docs/execution/WEB-PUBLIC-STATUS-DOWNLOAD-TRUST-POLISH-v1.10.md
+- docs/execution/checklists/WEB-PUBLIC-STATUS-DOWNLOAD-TRUST-POLISH-CHECKLIST-v1.10.md
+- reports/LGO-WEB-PUBLIC-STATUS-DOWNLOAD-TRUST-POLISH-REPORT-v1.10.md
+- tools/validate_web_public_status_download_trust_polish.py
+
+Modified: 15
+- apps/web/src/app/download/page.tsx
+- apps/web/src/app/globals.css
+- apps/web/src/app/page.tsx
+- apps/web/src/app/sitemap.ts
+- apps/web/src/app/status/page.tsx
+- apps/web/src/app/support/page.tsx
+- docs/execution/WEB-NEXT-ACTION.md
+- docs/execution/WEB-NON-CLAIMS.md
+- docs/execution/WEB-PROJECT-STATE.md
+- docs/execution/WEB-TASK-LEDGER.md
+- package.json
+- packages/content/src/fixtures.ts
+- packages/content/src/index.ts
+- packages/content/src/types.ts
+- tools/validate_web_current_state.py
+
+Deleted: 0
+- No deletions.

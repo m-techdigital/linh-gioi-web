@@ -1,0 +1,23 @@
+# WEB Runtime Kit Split Upload Checklist v1.3
+
+- [ ] Confirm `.tar.gz.part-*` files exist.
+- [ ] Confirm `.parts.sha256` exists.
+- [ ] Confirm full `.tar.gz.sha256` exists.
+- [ ] Confirm `.MANIFEST.txt` exists.
+- [ ] Reassemble from `part-aa`.
+- [ ] Verify every part checksum.
+- [ ] Verify full archive checksum.
+- [ ] Verify archive contains self-locating `bin/pnpm`.
+- [ ] Verify archive contains `cache/corepack/v1/pnpm/10.15.0/bin/pnpm.cjs`.
+- [ ] Verify archive contains `cache/pnpm-store/v10/**`.
+- [ ] Verify archive contains `workspace/pnpm-lock.yaml`.
+- [ ] Verify archive contains `workspace-node-modules/**/node_modules`.
+- [ ] Install kit into `/mnt/data/lgo-web-runtime-kit`.
+- [ ] Run Node 24 probe.
+- [ ] Run pnpm 10.15 probe.
+- [ ] Run `pnpm lint`.
+- [ ] Run `pnpm typecheck`.
+- [ ] Run `pnpm test`.
+- [ ] Run `pnpm build`.
+- [ ] Run `pnpm validate`.
+- [ ] Run `pnpm test:e2e`.
