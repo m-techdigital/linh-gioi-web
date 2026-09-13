@@ -42,6 +42,19 @@ export default function SupportHelpPage() {
             <LinkButton href="/status" tone="shadow">Status boundaries</LinkButton>
           </div>
         </GameCard>
+        <figure className="lgo-support-help-design-board lgo-panel" aria-label="Support help route map board">
+          <img
+            src="/game-art/design-boards/support-help-route-map.svg"
+            alt="Support help route map board"
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption>
+            <StatusBadge tone="spirit">Game reference art</StatusBadge>
+            <strong>Route-map guidance before live search</strong>
+            <span>Small LinhGioiOnline world-hub reference board that grounds FAQ routing without claiming live search, ticket backend, account lookup or sensitive-data intake.</span>
+          </figcaption>
+        </figure>
         <SectionHeading eyebrow="Helpful support IA" title="FAQ không cần search backend giả để hữu ích">
           v1.21 tiếp tục xây web thật bằng cách biến FAQ thành bản đồ route rõ ràng, có helpful next step và privacy boundary.
         </SectionHeading>
