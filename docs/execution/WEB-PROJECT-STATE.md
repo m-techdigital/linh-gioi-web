@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-CINEMATIC-IMAGE-LOADING-v1.53 WEB_CLOSED.
+
+Current decision: v1.53 FE public cinematic image loading slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.53 updates public `CinematicWorldScene` image loading intent.
+- Public cinematic world concept image now renders with `loading="eager"` across homepage and compact route hero variants after browser review showed `/game` compact scene can also be LCP-sensitive.
+- v1.53 evidence: RED e2e reproduced missing `loading="eager"` under the old priority path; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.54.
+
 Current phase: WEB-FE-PORTAL-JOURNEY-LCP-IMAGE-v1.52 WEB_CLOSED.
 
 Current decision: v1.52 FE Portal journey LCP image slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

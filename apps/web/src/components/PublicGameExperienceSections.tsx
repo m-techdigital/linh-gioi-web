@@ -34,7 +34,7 @@ export function CinematicWorldScene({ compact = false }: { compact?: boolean }) 
           alt=""
           width={1360}
           height={765}
-          priority={!compact}
+          loading="eager"
           sizes={compact ? "(max-width: 900px) 100vw, 680px" : "(max-width: 900px) 100vw, 58vw"}
         />
       </div>

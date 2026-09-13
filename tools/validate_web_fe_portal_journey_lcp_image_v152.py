@@ -80,7 +80,7 @@ def check_tests_and_docs() -> None:
         "| WEB-FE-PORTAL-JOURNEY-LCP-IMAGE-v1.52 | WEB-FE | WEB_CLOSED |",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.53",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
         "browser/e2e",
     ])
 
