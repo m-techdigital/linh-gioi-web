@@ -1,3 +1,14 @@
+Current phase: WEB-FE-OPS-AUDIT-VISUAL-v1.69 WEB_CLOSED.
+
+Current decision: v1.69 FE Ops audit visual slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.69 updates Ops `/audit` in `apps/ops`.
+- The visual-only audit route now renders real game-art with accessible name `Ops audit trail visual`, eager loading and responsive layout while keeping NO_REAL_OPS_MUTATION and RBAC/audit/API blocked-state copy explicit.
+- v1.69 evidence: RED browser/e2e reproduced missing Ops audit image on `/audit`; source validator PASS; Ops typecheck PASS; Ops production build PASS; Playwright desktop/mobile image-loading/locked-filter/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded image natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.70.
+
 Current phase: WEB-FE-PORTAL-ACCESS-JOURNEY-VISUAL-v1.68 WEB_CLOSED.
 
 Current decision: v1.68 FE Portal access journey visual slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

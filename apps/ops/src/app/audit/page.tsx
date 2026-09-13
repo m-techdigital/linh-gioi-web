@@ -10,6 +10,18 @@ export default function Page() {
       description="Visual-only audit review. No real mutation endpoints, database mutation, event store or permission model."
       boundary="Ops/Admin is blocked until accepted RBAC/audit/security/API contract. No real ops/admin mutation is claimed."
     >
+      <figure className="lgo-ops-audit-visual" aria-label="Ops audit trail visual panel">
+        <img
+          src="/game-art/world/dong-mon-skyline.webp"
+          alt="Ops audit trail visual"
+          loading="eager"
+          decoding="async"
+        />
+        <figcaption>
+          <strong>Audit trail review, visual only</strong>
+          <span>Game-art thật tạo ngữ cảnh cho review flow; mọi filter và timeline vẫn là fixture đọc-only đến khi RBAC/audit/API contract được chấp nhận.</span>
+        </figcaption>
+      </figure>
       <InlineFeedback tone="warning" title="Audit filters are disabled fixtures">Không có audit query API, event store hoặc canonical actor/action schema.</InlineFeedback>
       <FormField id="ops-audit-actor" label="Actor" help="Fixture filter; không query audit backend.">
         {(controlProps) => <TextInput {...controlProps} placeholder="operator@example.com" disabled />}
