@@ -90,6 +90,9 @@ Runtime/browser/e2e remains guardrail only.
 
 | WEB-OPS-SUPPORT-TRIAGE-UX-DEPTH-v1.34 | WEB-OPS | RUNTIME_READY_VISUAL_ENV_LIMITED | LGO-WEB-portal-support-recovery-ux-depth-v1.33-full-source.zip | LGO-WEB-ops-support-triage-ux-depth-v1.34-full-source.zip | v1.34/current-state validators PASS; ui/ops lint+typecheck PASS; Ops build PASS + 6/6 smoke; browser visual policy-limited | ChatGPT sandbox | 2026-09-13 | 2026-09-13 | LGO_WEB_OPS_SUPPORT_TRIAGE_UX_DEPTH_RUNTIME_READY_VISUAL_ENV_LIMITED_v1.34 | WEB-OPS-GAME-OPERATIONS-UX-DEPTH-v1.35 |
 
-| WEB-PORTAL-ACCESS-ONBOARDING-UX-DEPTH-v1.36 | WEB-PORTAL | WEB_FIX_REQUIRED | cc74182 workspace v1.35 | out/v1.36 | Source PASS; build PASS; HTTP 7/7; browser 8/8; visual inherited defects queued v1.37 | Codex local | 2026-09-13 | 2026-09-13 | WEB_HANDOFF_DONE with visual repair outstanding | WEB-SHARED-WORKSPACE-VISUAL-CLOSURE-v1.37 |
+| WEB-PORTAL-ACCESS-ONBOARDING-UX-DEPTH-v1.36 | WEB-PORTAL | WEB_CLOSED | cc74182 workspace v1.35 | out/v1.36 | Source PASS; build PASS; HTTP 7/7; browser 8/8; visual inherited defects queued v1.37 | Codex local | 2026-09-13 | 2026-09-13 | WEB_HANDOFF_DONE; visual repair subsequently closed by v1.37 | WEB-SHARED-WORKSPACE-VISUAL-CLOSURE-v1.37 |
 
 | WEB-SHARED-WORKSPACE-VISUAL-CLOSURE-v1.37 | WEB-BASE | WEB_CLOSED | f5f3a46 | out/v1.37 | RED 4/4 reproduced; GREEN 12/12; Portal/Ops builds; lint/types; scoped visual PASS; axe 0 violations | Codex local | 2026-09-13 | 2026-09-13 | WEB_HANDOFF_DONE; closes v1.36 visual repair | WEB-OPS-REVIEW-WORKSPACE-DEPTH-v1.38 |
+
+| WEB-OPS-REVIEW-WORKSPACE-DEPTH-v1.38 | WEB-OPS | WEB_CLOSED | 308a04c | out/v1.38 | Source RED→GREEN; lint/types/build PASS; HTTP 7/7; combined browser 14/14; scoped visual PASS; axe 0 | Codex local | 2026-09-13 | 2026-09-13 | WEB_HANDOFF_DONE | WEB-08-GAME-CONTRACT-SYNC-v1.0 |
+| WEB-08-GAME-CONTRACT-SYNC-v1.0 | WEB-08 | WEB_BLOCKED_EXTERNAL_CONTRACT | v1.38 | No integration artifact | packages/contracts declares NO_ACCEPTED_BACKEND_CONTRACT; accepted contracts not supplied | Game backend owner / Web | 2026-09-13 | - | WEB_BLOCKED_EXTERNAL_CONTRACT | Supply accepted canonical contract |

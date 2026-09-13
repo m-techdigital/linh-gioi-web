@@ -1,3 +1,17 @@
+Current phase: WEB-OPS-REVIEW-WORKSPACE-DEPTH-v1.38 WEB_CLOSED (fixture UX scope).
+
+Current decision: WEB_BLOCKED_EXTERNAL_CONTRACT for WEB-08-GAME-CONTRACT-SYNC-v1.0. Entire program is NOT production-complete.
+
+- v1.36 access/onboarding source/runtime complete; v1.37 closed its visual repair.
+- v1.38 Control Center and Trust & Safety now contain review compositions; home links reach every workspace; Security consumes shared ProgressSteps.
+- Ops lint/typecheck/build PASS; HTTP smoke 7/7 PASS; final access/workspace/review Playwright matrix 14/14 PASS across desktop/mobile. Portal rebuilt for reviewed /access banner fix; Public evidence reused.
+- Ops changed-route screenshots inspected; six axe WCAG A/AA checks report zero violations. Evidence is scoped, not full-site certification.
+- packages/contracts/src/index.ts still explicitly declares NO_ACCEPTED_BACKEND_CONTRACT. No accepted endpoint, session, RBAC or audit contracts were supplied; WEB-08/09/10 remain incomplete.
+- Baseline imported from workspace as cc74182; authoritative v1.35 ZIP was not attached. Full/delta package comparisons use named git baselines and do not claim original ZIP identity.
+- Local runtime Node 26.8.1 / pnpm 10.15.0 / Next 16.3.4; Node 24.20.0 target not verified.
+
+## Previous checkpoint records
+
 Current phase: WEB-SHARED-WORKSPACE-VISUAL-CLOSURE-v1.37 WEB_CLOSED. v1.36 visual repair closed by v1.37 evidence.
 
 Current decision: WEB_VERIFY_PASSED for changed workspace surfaces. Next WEB-OPS-REVIEW-WORKSPACE-DEPTH-v1.38.

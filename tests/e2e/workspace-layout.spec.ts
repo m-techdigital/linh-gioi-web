@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-for (const [app, url] of [["Portal", "http://127.0.0.1:3101/login"], ["Ops", "http://127.0.0.1:3102/security-governance"]]) {
+for (const [app, url] of [["Portal", `${process.env.LGO_PORTAL_URL ?? "http://127.0.0.1:3001"}/login`], ["Ops", `${process.env.LGO_OPS_URL ?? "http://127.0.0.1:3002"}/security-governance`]]) {
   test(`${app}: shared shell has gutters and accessible controls`, async ({ page }) => {
     await page.goto(url!);
     const box = await page.locator(".lgo-workspace-header-inner").boundingBox();

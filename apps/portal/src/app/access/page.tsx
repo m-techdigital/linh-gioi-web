@@ -5,6 +5,7 @@ export default function AccessPage() {
   return (
     <WorkspacePage mainClassName="lgo-portal-shell" badge={`${PROVISIONAL_WEB_FIXTURE} · ${NOT_CANONICAL_BACKEND_CONTRACT}`}
       title="Trạng thái truy cập" description="Bạn đang khám phá bản mẫu Player Portal. Việc mở trang không đồng nghĩa đã đăng nhập."
+      boundaryBadge="Trạng thái bản mẫu"
       boundary="Đăng nhập, đăng ký và khôi phục chưa mở. Không thu thông tin cá nhân, không tạo tài khoản hoặc phiên đăng nhập."
       actions={[{ href: "/", label: "Khám phá Portal mẫu", tone: "spirit" }]}>
       <CaseSummary title="Chưa có quyền truy cập thật" state="Bản mẫu" summary="Khi hệ thống tài khoản chính thức sẵn sàng, hướng dẫn đăng nhập và xác minh sẽ xuất hiện tại đây.">

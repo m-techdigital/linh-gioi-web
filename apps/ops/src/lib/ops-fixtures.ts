@@ -50,3 +50,29 @@ export const opsGameOperationActivityFixtures = [
   { id: "gameop-b", title: "Event fixture previewed", timestamp: "11:08 · fixture", description: "No scheduler, publish or rollback operation was executed.", meta: "NO_REAL_OPS_MUTATION" },
   { id: "gameop-c", title: "Operational action remained blocked", timestamp: "11:11 · fixture", description: "Restart, drain, publish and rollback actions stay disabled until accepted contracts exist.", meta: "NOT_CANONICAL_BACKEND_CONTRACT" }
 ] as const;
+
+export const opsReviewQueueFixtures = [
+  { title: "Hỗ trợ người chơi", count: opsSupportQueueFixtures.length, href: "/support", description: "Xem hàng đợi hỗ trợ mẫu và thông tin cần làm rõ." },
+  { title: "An toàn cộng đồng", count: 1, href: "/trust-safety", description: "Rà soát ngữ cảnh trước khi cân nhắc hành động. Không có xử phạt thật." },
+  { title: "Thế giới & sự kiện", count: opsGameOperationFixtures.length, href: "/game-operations", description: "Xem tình huống vận hành minh họa; không phải số liệu máy chủ trực tiếp." }
+] as const;
+
+export const opsApprovalSteps = [
+  { title: "Rà soát ngữ cảnh", description: "Đọc thông tin minh họa, ghi nhận phần chưa đủ căn cứ.", state: "current", statusLabel: "Đang xem bản mẫu" },
+  { title: "Kiểm tra quyền & phê duyệt", description: "Cần quy tắc RBAC và phê duyệt được backend chấp nhận.", state: "blocked", statusLabel: "Chưa khả dụng" },
+  { title: "Thực thi & lưu vết", description: "Chỉ thực thi khi quyền, API và audit đã sẵn sàng.", state: "blocked", statusLabel: "Không có thao tác thật" }
+] as const;
+
+export const opsSafetyReviewFixture = {
+  id: "safety-fixture-001",
+  title: "Báo cáo hành vi trong cộng đồng · mẫu",
+  state: "Chưa đủ ngữ cảnh · mẫu",
+  summary: "Tình huống minh họa cách rà soát một báo cáo. Không đại diện cho người chơi, tin nhắn hoặc vi phạm thật.",
+  evidence: "Không có bằng chứng thực tế được tải lên",
+  nextStep: "Đọc ngữ cảnh → kiểm tra quyền → phê duyệt khi hệ thống sẵn sàng",
+  timeline: [
+    { title: "Tiếp nhận báo cáo mẫu", timestamp: "Bước 1 · minh họa", description: "Một tình huống mẫu được chọn để kiểm tra bố cục rà soát." },
+    { title: "Đánh dấu thiếu ngữ cảnh", timestamp: "Bước 2 · minh họa", description: "Không suy luận vi phạm hay áp dụng xử phạt từ dữ liệu minh họa." },
+    { title: "Hành động bị khóa", timestamp: "Bước 3 · minh họa", description: "Chưa có API xử lý báo cáo, RBAC, phê duyệt hoặc audit chính thức." }
+  ]
+} as const;

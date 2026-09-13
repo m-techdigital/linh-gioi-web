@@ -7,11 +7,20 @@ import {
   PermissionGatePlaceholder,
   Player360Placeholder,
   RuntimeStatusPlaceholder,
-  StatusBadge,
+  LinkButton,
   WorkspacePage
 } from "@lgo-web/ui";
 
-const workspaces = ["Control Center", "Player Operations", "Game Operations", "Content & LiveOps", "Support", "Trust & Safety", "Security & Governance", "Audit"];
+const workspaces = [
+  { title: "Control Center", href: "/control-center" },
+  { title: "Player Operations", href: "/player-operations" },
+  { title: "Game Operations", href: "/game-operations" },
+  { title: "Content & LiveOps", href: "/content-liveops" },
+  { title: "Support", href: "/support" },
+  { title: "Trust & Safety", href: "/trust-safety" },
+  { title: "Security & Governance", href: "/security-governance" },
+  { title: "Audit", href: "/audit" }
+];
 const boundary = "Ops/Admin is blocked until accepted RBAC/audit/security/API contract. No real ops/admin mutation is claimed.";
 
 export default function OpsHomePage() {
@@ -27,10 +36,10 @@ export default function OpsHomePage() {
       <DataList aria-label="Ops workspaces">
         {workspaces.map((workspace) => (
           <DataListItem
-            key={workspace}
-            title={workspace}
+            key={workspace.href}
+            title={workspace.title}
             description="Visual-only fixture workspace. NOT_CANONICAL_BACKEND_CONTRACT."
-            trailing={<StatusBadge tone="neutral">fixture</StatusBadge>}
+            trailing={<LinkButton href={workspace.href}>Mở {workspace.title}</LinkButton>}
           />
         ))}
       </DataList>

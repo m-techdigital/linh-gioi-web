@@ -1,31 +1,21 @@
 # WEB-NEXT-ACTION
 
-Current implementation task:
+Current task:
 
 ```text
-WEB-OPS-REVIEW-WORKSPACE-DEPTH-v1.38
+WEB-08-GAME-CONTRACT-SYNC-v1.0
 ```
 
-Primary focus: replace empty Control Center and Trust & Safety compositions with fixture review queues and workflow guidance; connect home workspace links; add approval-readiness steps to Security & Governance using shared ProgressSteps. No real RBAC, audit or moderation mutation. After fixture composition gaps close, return to blocked WEB-08 contract sync instead of inventing backend behavior.
+Status: WEB_BLOCKED_EXTERNAL_CONTRACT.
 
-## Base First
-Search and extend `packages/*` before app-local duplication. Evidence Reuse / Build Once remains mandatory.
+v1.36–v1.38 fixture UX work and its discovered visual repairs are closed. Continue the program with the accepted backend Auth/API/DB/RBAC/audit contract. The program is not production-complete.
 
-## Product-first rule
-Public Website keeps its game/story identity. Portal and Ops share neutral structural primitives without collapsing into the same product surface.
+Required input: canonical Java/Spring Boot repository commit and API version; owner-approved endpoint inventory/schema; auth/session/expiry/error semantics; permission and audit requirements; integration environment and test-account procedure. Read and record these centrally in packages/contracts before any real Portal/Ops integration. A source file or a fixture alone is not owner acceptance.
 
-## Blocked canonical backend sync
-WEB-08-GAME-CONTRACT-SYNC-v1.0 remains blocked until accepted backend Auth/API/DB/RBAC/audit contract exists.
+After acceptance: SELECT → SPEC_LOCK → IMPLEMENT contract records/client generation only where supported → SOURCE_VERIFY → RUNTIME_VERIFY → VISUAL_REVIEW (applicable scope recorded) → HANDOFF → CLOSED. Then select WEB-09 integration flows and WEB-10 deployment/security gates according to the master roadmap.
 
-## Historical execution continuity
-- WEB-PUBLIC-HOMEPAGE-DISCOVERY-AND-MEDIA-STORYTELLING-v1.26 is the accepted public-web baseline.
-- WEB-PORTAL-ACCOUNT-CHARACTER-UX-DEPTH-v1.31 is runtime-ready at fixture UX level only.
-- WEB-OPS-PLAYER-OPERATIONS-UX-DEPTH-v1.32 is runtime-ready at fixture UX level only.
+Base First and Evidence Reuse / Build Once remain mandatory. No independent backend, no duplicate DTO owners, no fake fetch, no enabling fixture mutation controls. Do not generate endless version-only fixture batches to claim production completion.
 
-## Required historical gate continuity
-- `WEB-PUBLIC-ACCESSIBILITY-READABILITY-POLISH-v1.15` remains completed historical evidence.
-- If WEB-01 package/runtime closure is revisited, first resolve package/runtime environment and rerun WEB-01 runtime gates.
-- Before claiming historical environment-limited WEB-01 through WEB-07 milestones fully runtime-closed, rerun WEB-01 through WEB-07 package/runtime/browser gates.
+Historical continuity: WEB-PUBLIC-ACCESSIBILITY-READABILITY-POLISH-v1.15 remains historical evidence. WEB-01 through WEB-07 environment-limited claims are not globally upgraded by scoped v1.36–v1.38 tests; rerun relevant package/runtime/browser gates before claiming them fully closed.
 
-## Post-closure successor
-After v1.36 closes, continue with the next accepted Portal/Ops product-depth task; Base First and Evidence Reuse / Build Once remain mandatory.
+If WEB-01 package/runtime closure is revisited, first resolve package/runtime environment and rerun WEB-01 runtime gates. Before claiming historical environment-limited WEB-01 through WEB-07 milestones fully runtime-closed, rerun WEB-01 through WEB-07 package/runtime/browser gates.

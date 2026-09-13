@@ -1,4 +1,5 @@
-import { CheckboxField, FormActions, FormField, InlineFeedback, ProvisionalFeatureShell, SelectInput, SpiritButton } from "@lgo-web/ui";
+import { opsApprovalSteps } from "../../lib/ops-fixtures";
+import { ProgressSteps, ProgressStep, CheckboxField, FormActions, FormField, InlineFeedback, ProvisionalFeatureShell, SelectInput, SpiritButton } from "@lgo-web/ui";
 
 export default function Page() {
   return (
@@ -12,6 +13,9 @@ export default function Page() {
       <InlineFeedback tone="warning" title="Governance controls are disabled fixtures">
         Không có canonical role, permission mutation hoặc approval backend.
       </InlineFeedback>
+      <ProgressSteps label="Điều kiện phê duyệt dự kiến">
+        {opsApprovalSteps.map((step) => <ProgressStep key={step.title} {...step} />)}
+      </ProgressSteps>
       <FormField id="ops-role-preview" label="Role preview" help="NOT_CANONICAL_BACKEND_CONTRACT — chỉ minh họa control shape.">
         {(controlProps) => (
           <SelectInput {...controlProps} disabled defaultValue="viewer">

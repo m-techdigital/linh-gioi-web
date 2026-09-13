@@ -104,6 +104,7 @@ VALIDATORS = [
     "validate_web_ops_support_triage_depth_v134.py",
     "validate_web_ops_game_operations_depth_v135.py",
     "validate_web_portal_access_depth_v136.py",
+    "validate_web_ops_review_depth_v138.py",
 ]
 def main() -> int:
     check_forbidden_roots(); check_no_app_api_routes(); check_no_generated_artifacts(); require_non_claims()

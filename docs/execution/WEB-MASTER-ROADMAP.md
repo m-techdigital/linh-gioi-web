@@ -199,3 +199,7 @@ Required evidence: Build, smoke, security checklist, monitoring/rollback rehears
 Non-claims: No claim for surfaces not deployed; portal/ops may remain blocked while public web ships.
 
 Next phase: Program enters maintenance/release workflow
+
+## 2026-09-13 continuation checkpoint v1.38
+
+Portal access/onboarding, shared workspace visual repair and remaining Ops review compositions are verified at fixture UX scope. Shared ProgressSteps has Portal and Ops consumers. WEB-08 is the current external-contract gate; WEB-09 real integration and WEB-10 deployment remain incomplete. Scoped local build/browser evidence does not retroactively certify all historical release/security gates or the target Node runtime.
