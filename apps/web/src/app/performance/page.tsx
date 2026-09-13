@@ -42,6 +42,21 @@ export default function PerformanceBudgetPage() {
             <LinkButton href="/download/trust" tone="gold">Download trust</LinkButton>
           </div>
         </GameCard>
+        <figure className="lgo-performance-design-board lgo-panel" aria-label="Performance copy budget HUD reference art">
+          <img
+            src="/game-art/design-boards/performance-copy-budget-hud.svg"
+            alt="Performance copy budget HUD board"
+            loading="eager"
+          />
+          <figcaption>
+            <StatusBadge tone="jade">Game reference art</StatusBadge>
+            <strong>Performance budget nhìn từ HUD: ít chữ hơn, quyết định rõ hơn.</strong>
+            <span>
+              Board này dùng visual thật từ LinhGioiOnline để giữ copy, asset và CTA budget gọn trên public route,
+              without claiming Lighthouse certification, CDN deployment or formal Core Web Vitals PASS.
+            </span>
+          </figcaption>
+        </figure>
         <SectionHeading eyebrow="Product-first performance" title="Nhanh hơn bằng cách nói ít nhưng đúng hơn">
           v1.16 không mở backend, CMS, image pipeline hoặc tool loop mới. Nó làm web public dễ scan hơn và giảm cảm giác nặng ở hero/cards/routes.
         </SectionHeading>

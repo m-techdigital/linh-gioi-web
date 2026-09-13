@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-PERFORMANCE-DESIGN-BOARD-v1.76 WEB_CLOSED.
+
+Current decision: v1.76 FE public performance design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.76 adds a real LinhGioiOnline HUD reference-art SVG to `/performance`.
+- The performance board renders with accessible name `Performance copy budget HUD board`, eager loading and responsive layout while keeping Lighthouse/CDN/Core Web Vitals/monitoring non-claims explicit.
+- v1.76 evidence: RED browser/e2e reproduced missing performance HUD board on `/performance`; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded SVG natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.77.
+
 Current phase: WEB-FE-PUBLIC-COMMUNITY-ONBOARDING-DESIGN-BOARD-v1.75 WEB_CLOSED.
 
 Current decision: v1.75 FE public community onboarding design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
