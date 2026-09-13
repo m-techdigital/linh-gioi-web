@@ -28,7 +28,7 @@ def check_tests_and_docs() -> None:
         require_text(rel, ["WEB-FE-PUBLIC-PERFORMANCE-DESIGN-BOARD-v1.76", "WEB_CLOSED", "Performance copy budget HUD board", "browser/e2e", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-PUBLIC-PERFORMANCE-DESIGN-BOARD-v1.76 WEB_CLOSED", "WEB-FE-PUBLIC-PERFORMANCE-DESIGN-BOARD-v1.76"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-PUBLIC-PERFORMANCE-DESIGN-BOARD-v1.76 | WEB-FE | WEB_CLOSED |"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.77", "browser/e2e"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "browser/e2e"])
 def main() -> int:
     check_performance_board(); check_tests_and_docs()
     if ERRORS:
