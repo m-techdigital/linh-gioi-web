@@ -17,7 +17,7 @@ export function PublicNavigation() {
         <span className="lgo-brand-sigil" aria-hidden="true">界</span>
         <span><strong>Linh Giới</strong><small>ONLINE</small></span>
       </a>
-      <div className="lgo-brand-links">
+      <div className="lgo-brand-links" role="region" aria-label="Public primary route links" tabIndex={0}>
         {primaryItems.map((item) => <RouteAwareLink href={item.href} currentWhen="section" key={item.href}>{item.label}</RouteAwareLink>)}
       </div>
       <RouteAwareLink className="lgo-nav-play" href="/download" currentWhen="exact">Trạng thái chơi</RouteAwareLink>

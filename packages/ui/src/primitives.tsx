@@ -428,7 +428,7 @@ export function WorkspaceAppShell({
 
 export function SiteNavigation({ items }: { items: NavItem[] }) {
   return (
-    <nav aria-label="Linh Giới Online public navigation" className="lgo-nav">
+    <nav aria-label="Linh Giới Online public navigation" className="lgo-nav" tabIndex={0}>
       {items.map((item) => (
         <a key={item.href} href={item.href} aria-disabled={item.blocked ? "true" : undefined}>
           {item.label}

@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-BRAND-NAV-SCROLL-REGION-v1.63 WEB_CLOSED.
+
+Current decision: v1.63 FE public brand nav scroll-region slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.63 updates the public header route-link rail in `apps/web` and the shared legacy `SiteNavigation` owner in `packages/ui`.
+- Mobile public route links now expose a named keyboard-focusable scroll region with `role="region"`, `aria-label="Public primary route links"`, `tabIndex={0}` and visible focus styling.
+- v1.63 evidence: RED browser/e2e reproduced the missing named region on mobile `/classes` and `/download`; source validator PASS; UI/Web typecheck PASS; Web production build PASS; Playwright public brand-nav mobile keyboard/font-size/overflow PASS; public navigation desktop/mobile regression PASS; screenshot/visual metric review completed with pageOverflow 0 and nav fonts <= 18px.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.64.
+
 Current phase: WEB-FE-PORTAL-HOME-VISUAL-LCP-IMAGES-v1.62 WEB_CLOSED.
 
 Current decision: v1.62 FE Portal home visual LCP image slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
