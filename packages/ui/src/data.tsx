@@ -229,11 +229,28 @@ export function PaginationBar({
   previousDisabled?: boolean;
   nextDisabled?: boolean;
 }) {
+  const paginationUnavailableReason = "không khả dụng trong fixture hiện tại";
   return (
     <nav className="lgo-pagination-bar" aria-label="Pagination">
-      <SpiritButton type="button" tone="neutral" disabled={previousDisabled}>{previousLabel}</SpiritButton>
+      <SpiritButton
+        type="button"
+        tone="neutral"
+        aria-disabled={previousDisabled ? "true" : undefined}
+        data-disabled={previousDisabled ? "true" : undefined}
+        aria-label={previousDisabled ? `${previousLabel} — ${paginationUnavailableReason}` : previousLabel}
+      >
+        {previousLabel}
+      </SpiritButton>
       <span>{label}</span>
-      <SpiritButton type="button" tone="neutral" disabled={nextDisabled}>{nextLabel}</SpiritButton>
+      <SpiritButton
+        type="button"
+        tone="neutral"
+        aria-disabled={nextDisabled ? "true" : undefined}
+        data-disabled={nextDisabled ? "true" : undefined}
+        aria-label={nextDisabled ? `${nextLabel} — ${paginationUnavailableReason}` : nextLabel}
+      >
+        {nextLabel}
+      </SpiritButton>
     </nav>
   );
 }

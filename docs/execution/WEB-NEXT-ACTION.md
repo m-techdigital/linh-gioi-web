@@ -3,14 +3,14 @@
 Current task:
 
 ```text
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.57
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.58
 ```
 
 Status: WEB_TASK_CONTINUE.
 
 User direction: continue FE work first, use needed game images from LinhGioiOnline where useful, and verify real UI/UX layout in browser/e2e. Demo data is allowed while backend is not ready. Do not create an independent backend and do not claim real integration.
 
-Current FE scope: continue accessibility and interaction audit after v1.56. Focus on the next visible browser/e2e issue across public, Portal and Ops surfaces: keyboard reachability, accessible names, blocked/disabled state clarity, navigation continuity, typography caps, horizontal overflow, mobile readability, fixture boundary clarity and real design image usage. Prefer shared `packages/ui` ownership for reusable fixes.
+Current FE scope: continue accessibility and interaction audit after v1.57. Focus on the next visible browser/e2e issue across public, Portal and Ops surfaces: keyboard reachability, accessible names, blocked/disabled state clarity, navigation continuity, typography caps, horizontal overflow, mobile readability, fixture boundary clarity and real design image usage. Prefer shared `packages/ui` ownership for reusable fixes.
 
 Lifecycle: SELECT → SPEC_LOCK → IMPLEMENT FE-only accessibility/interaction improvements → SOURCE_VERIFY → RUNTIME_VERIFY → VISUAL_REVIEW → HANDOFF → CLOSED.
 
@@ -22,6 +22,6 @@ After acceptance: SELECT → SPEC_LOCK → IMPLEMENT contract records/client gen
 
 Base First and Evidence Reuse / Build Once remain mandatory. No independent backend, no duplicate DTO owners, no fake fetch, no enabling fixture mutation controls. Do not generate endless version-only fixture batches to claim production completion.
 
-Historical continuity: WEB-PUBLIC-ACCESSIBILITY-READABILITY-POLISH-v1.15 remains historical evidence. WEB-01 through WEB-07 environment-limited claims are not globally upgraded by scoped v1.36–v1.56 tests; rerun relevant package/runtime/browser gates before claiming them fully closed.
+Historical continuity: WEB-PUBLIC-ACCESSIBILITY-READABILITY-POLISH-v1.15 remains historical evidence. WEB-01 through WEB-07 environment-limited claims are not globally upgraded by scoped v1.36–v1.57 tests; rerun relevant package/runtime/browser gates before claiming them fully closed.
 
 If WEB-01 package/runtime closure is revisited, first resolve package/runtime environment and rerun WEB-01 runtime gates. Before claiming historical environment-limited WEB-01 through WEB-07 milestones fully runtime-closed, rerun WEB-01 through WEB-07 package/runtime/browser gates.

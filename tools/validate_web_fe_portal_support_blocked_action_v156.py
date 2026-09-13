@@ -84,7 +84,7 @@ def check_tests_and_docs() -> None:
         "| WEB-FE-PORTAL-SUPPORT-BLOCKED-ACTION-v1.56 | WEB-FE | WEB_CLOSED |",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.57",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
         "browser/e2e",
     ])
 
