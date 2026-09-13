@@ -88,7 +88,7 @@ def check_tests_and_docs() -> None:
         "| WEB-FE-PUBLIC-STORY-CHAPTER-TYPOGRAPHY-v1.64 | WEB-FE | WEB_CLOSED |",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.65",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
         "browser/e2e",
     ])
 

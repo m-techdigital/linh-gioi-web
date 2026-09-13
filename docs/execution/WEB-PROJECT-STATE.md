@@ -1,3 +1,14 @@
+Current phase: WEB-FE-EXPANDED-ROUTE-READABILITY-v1.65 WEB_CLOSED.
+
+Current decision: v1.65 FE expanded route readability audit guardrail closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.65 adds a permanent Playwright mobile route readability matrix in `tests/e2e/fe-expanded-route-readability-v165.spec.ts`.
+- The matrix covers 16 public/detail/Portal/Ops route cases and checks serious/critical axe violations, horizontal overflow, visible typography caps, nav/action font caps and named keyboard-readable scroll regions.
+- v1.65 evidence: temporary browser audits covered 44 mobile routes, 17 axe routes and 10 detail routes; permanent v1.65 Playwright matrix PASS 16/16; source validator PASS; relevant app typecheck/build evidence recorded in handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.66.
+
 Current phase: WEB-FE-PUBLIC-STORY-CHAPTER-TYPOGRAPHY-v1.64 WEB_CLOSED.
 
 Current decision: v1.64 FE public story chapter typography slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
