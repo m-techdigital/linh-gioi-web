@@ -25,6 +25,33 @@ export function SpiritButton({ tone = "spirit", className, ...props }: ButtonPro
   return <button {...props} className={cx("lgo-button", toneClass(tone), className)} />;
 }
 
+export function BlockedActionButton({
+  tone = "spirit",
+  className,
+  children,
+  reason = "NO_ACCEPTED_BACKEND_CONTRACT — action is blocked until the canonical backend contract is accepted.",
+  id,
+  ...props
+}: ButtonProps & { reason?: ReactNode }) {
+  const helpId = `${id ?? "lgo"}-blocked-action`;
+  return (
+    <span className="lgo-blocked-action">
+      <button
+        {...props}
+        id={id}
+        type={props.type ?? "button"}
+        aria-disabled="true"
+        data-disabled="true"
+        aria-describedby={helpId}
+        className={cx("lgo-button", toneClass(tone), className)}
+      >
+        {children}
+      </button>
+      <small id={helpId} className="lgo-blocked-action-help">{reason}</small>
+    </span>
+  );
+}
+
 export function LinkButton({ tone = "spirit", className, ...props }: LinkButtonProps) {
   return <a {...props} className={cx("lgo-link-button", toneClass(tone), className)} />;
 }

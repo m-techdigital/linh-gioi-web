@@ -4,11 +4,11 @@ import {
   ActivityTimelineItem,
   CaseSummary,
   CaseSummaryItem,
+  BlockedActionButton,
   FormActions,
   FormField,
   InlineFeedback,
   ProvisionalFeatureShell,
-  SpiritButton,
   TextInput
 } from "@lgo-web/ui";
 import {
@@ -47,7 +47,7 @@ export default function Page() {
         {(controlProps) => <TextInput {...controlProps} placeholder="player@example.com" disabled />}
       </FormField>
       <FormActions>
-        <SpiritButton type="button" disabled>Khôi phục chưa khả dụng</SpiritButton>
+        <BlockedActionButton id="portal-recovery-blocked-action" reason="NO_ACCEPTED_BACKEND_CONTRACT — No production auth, recovery token delivery or credential mutation exists yet.">Khôi phục chưa khả dụng</BlockedActionButton>
       </FormActions>
 
       <ActivityTimeline aria-label="Recovery stages">

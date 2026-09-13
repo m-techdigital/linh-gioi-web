@@ -1,5 +1,5 @@
 import { AccessJourney } from "../../components/AccessJourney";
-import { CheckboxField, FormActions, FormField, InlineFeedback, ProvisionalFeatureShell, SpiritButton, TextInput } from "@lgo-web/ui";
+import { BlockedActionButton, CheckboxField, FormActions, FormField, InlineFeedback, ProvisionalFeatureShell, TextInput } from "@lgo-web/ui";
 
 export default function Page() {
   return (
@@ -22,7 +22,7 @@ export default function Page() {
       </FormField>
       <CheckboxField id="portal-register-consent" label="Đồng ý điều khoản khi đăng ký mở" description="Chưa tiếp nhận sự đồng ý. Điều khoản chính thức sẽ được cung cấp trước khi tạo tài khoản." disabled />
       <FormActions>
-        <SpiritButton type="button" disabled>Đăng ký chưa khả dụng</SpiritButton>
+        <BlockedActionButton id="portal-register-blocked-action" reason="NO_ACCEPTED_BACKEND_CONTRACT — No production auth, account creation or DB persistence exists yet.">Đăng ký chưa khả dụng</BlockedActionButton>
       </FormActions>
     </ProvisionalFeatureShell>
   );

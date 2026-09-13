@@ -268,11 +268,27 @@
   overflow-wrap: anywhere;
 }
 .lgo-workspace-shell .lgo-link-button.lgo-tone-gold { border-color: var(--lgo-color-warm-gold); }
-.lgo-workspace-shell .lgo-button:disabled {
+.lgo-workspace-shell .lgo-button:disabled,
+.lgo-workspace-shell .lgo-button[aria-disabled="true"],
+.lgo-workspace-shell .lgo-button[data-disabled="true"] {
   color: var(--lgo-color-text-muted);
   border-color: var(--lgo-color-text-muted);
   border-style: dashed;
   cursor: not-allowed;
+}
+.lgo-workspace-shell .lgo-button[aria-disabled="true"]:focus-visible {
+  outline: 3px solid var(--lgo-color-warm-gold);
+  outline-offset: 4px;
+}
+.lgo-blocked-action {
+  display: inline-grid;
+  gap: .45rem;
+  max-width: 100%;
+}
+.lgo-blocked-action-help {
+  max-width: 54ch;
+  color: var(--lgo-color-text-muted);
+  line-height: 1.45;
 }
 .lgo-workspace-shell a:focus-visible,
 .lgo-workspace-shell button:focus-visible {

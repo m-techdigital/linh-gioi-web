@@ -1,5 +1,6 @@
 export { FoundationBadge } from "./FoundationBadge";
 export {
+  BlockedActionButton,
   BoundaryBanner,
   Container,
   DataList,

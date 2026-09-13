@@ -1,5 +1,5 @@
 import { AccessJourney } from "../../components/AccessJourney";
-import { CheckboxField, FormActions, FormField, InlineFeedback, ProvisionalFeatureShell, SpiritButton, TextInput } from "@lgo-web/ui";
+import { BlockedActionButton, CheckboxField, FormActions, FormField, InlineFeedback, ProvisionalFeatureShell, TextInput } from "@lgo-web/ui";
 
 export default function Page() {
   return (
@@ -22,7 +22,7 @@ export default function Page() {
       </FormField>
       <CheckboxField id="portal-login-remember" label="Ghi nhớ thiết bị" description="Tùy chọn minh họa đang khóa; không lưu thiết bị hay tạo phiên." disabled />
       <FormActions>
-        <SpiritButton type="button" disabled>Đăng nhập chưa khả dụng</SpiritButton>
+        <BlockedActionButton id="portal-login-blocked-action" reason="NO_ACCEPTED_BACKEND_CONTRACT — No production auth, session or credential validation exists yet.">Đăng nhập chưa khả dụng</BlockedActionButton>
       </FormActions>
     </ProvisionalFeatureShell>
   );

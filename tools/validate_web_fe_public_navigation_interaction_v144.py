@@ -103,7 +103,7 @@ def check_tests_and_docs() -> None:
         "| WEB-FE-PUBLIC-NAVIGATION-INTERACTION-v1.44 | WEB-FE | WEB_CLOSED |",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.45",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
         "browser/e2e",
     ])
 

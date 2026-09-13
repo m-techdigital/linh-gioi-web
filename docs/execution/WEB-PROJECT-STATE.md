@@ -1,3 +1,14 @@
+Current phase: WEB-FE-BLOCKED-ACTION-KEYBOARD-v1.45 WEB_CLOSED.
+
+Current decision: v1.45 FE blocked action keyboard slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.45 adds shared `BlockedActionButton` in `packages/ui` for focusable blocked actions with `aria-disabled`, `data-disabled` and explicit reason text.
+- Portal `/login`, `/register` and `/recovery` now expose blocked primary actions that keyboard users can focus and read without enabling auth/account/recovery flows.
+- v1.45 evidence: RED e2e reproduced native disabled action issue; source validator PASS; UI/Portal typecheck PASS; Portal production build PASS; Playwright desktop/mobile keyboard/no-write/font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.46.
+
 Current phase: WEB-FE-PUBLIC-NAVIGATION-INTERACTION-v1.44 WEB_CLOSED.
 
 Current decision: v1.44 FE public navigation interaction slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
