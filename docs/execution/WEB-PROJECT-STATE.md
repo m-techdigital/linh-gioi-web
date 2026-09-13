@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-STORY-CHAPTER-TYPOGRAPHY-v1.64 WEB_CLOSED.
+
+Current decision: v1.64 FE public story chapter typography slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.64 updates mobile `/story` narrative chapter visual typography in `apps/web/src/app/globals.css`.
+- Decorative `NarrativeChapterGrid` numbers now cap to `2.75rem` on mobile after browser audit found 60.8px chapter numbers that dominated the heading scale.
+- v1.64 evidence: RED browser/e2e reproduced oversized mobile `/story` chapter number `01` at 60.8px; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright story typography mobile font-size/overflow PASS; visual metric review completed with pageOverflow 0 and chapter numbers <= 48px.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.65.
+
 Current phase: WEB-FE-PUBLIC-BRAND-NAV-SCROLL-REGION-v1.63 WEB_CLOSED.
 
 Current decision: v1.63 FE public brand nav scroll-region slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

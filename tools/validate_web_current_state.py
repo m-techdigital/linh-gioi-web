@@ -131,6 +131,7 @@ VALIDATORS = [
     "validate_web_fe_workspace_nav_scroll_region_v161.py",
     "validate_web_fe_portal_home_visual_lcp_images_v162.py",
     "validate_web_fe_public_brand_nav_scroll_region_v163.py",
+    "validate_web_fe_public_story_chapter_typography_v164.py",
 ]
 def main() -> int:
     check_forbidden_roots(); check_no_app_api_routes(); check_no_generated_artifacts(); require_non_claims()
@@ -184,7 +185,7 @@ def main() -> int:
         "LGO_WEB_PUBLIC_UX_CONTENT_POLISH_READY_v1.6",
         "LGO_WEB_RUNTIME_BROWSER_E2E_MATRIX_PASSED_v1.5",
     ])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.64")
+    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.65")
     require_text("docs/execution/WEB-NEXT-ACTION.md", "browser/e2e")
     for phrase in ["No independent backend", "No CMS", "No production deployment", "No payment/shop/economy"]:
         require_text("docs/execution/WEB-NON-CLAIMS.md", phrase)
