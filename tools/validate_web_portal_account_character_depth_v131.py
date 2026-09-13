@@ -42,7 +42,7 @@ def main() -> int:
     routes = {
         "apps/portal/src/app/page.tsx": ("MetricGrid", "DataList", "LinkButton"),
         "apps/portal/src/app/account/page.tsx": ("KeyValueGrid", "MetricGrid", "LinkButton"),
-        "apps/portal/src/app/account/security/page.tsx": ("TextInput", "CheckboxField", "InlineFeedback"),
+        "apps/portal/src/app/account/security/page.tsx": ("VisualProofGrid", "DataList", "InlineFeedback", "NO_ACCEPTED_BACKEND_CONTRACT"),
         "apps/portal/src/app/account/sessions/page.tsx": ("DataTable", "PaginationBar", "portalSessionFixtures"),
         "apps/portal/src/app/characters/page.tsx": ("DataTable", "MetricGrid", "LinkButton"),
         "apps/portal/src/app/characters/[id]/page.tsx": ("KeyValueGrid", "portalCharacterFixtures", "LinkButton"),
@@ -57,7 +57,6 @@ def main() -> int:
         forbid(rel, "fetch(")
         forbid(rel, "axios")
         forbid(rel, "<form")
-    require("apps/portal/src/app/account/security/page.tsx", "disabled")
 
     if ERRORS:
         print("WEB PORTAL ACCOUNT CHARACTER DEPTH v1.31 VALIDATION FAIL")

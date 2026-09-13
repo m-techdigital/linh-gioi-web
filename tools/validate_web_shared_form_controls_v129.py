@@ -50,14 +50,13 @@ def main():
 
     ops_pages=('apps/ops/src/app/security-governance/page.tsx','apps/ops/src/app/audit/page.tsx')
     for rel in ops_pages:
-        require(rel, 'disabled')
         require(rel, 'NO_REAL_OPS_MUTATION')
         require(rel, 'NOT_CANONICAL_BACKEND_CONTRACT')
         forbid(rel, '<input')
         forbid(rel, '<select')
         forbid(rel, '<form')
-    require('apps/ops/src/app/security-governance/page.tsx', 'SelectInput')
-    require('apps/ops/src/app/security-governance/page.tsx', 'CheckboxField')
+    require('apps/ops/src/app/security-governance/page.tsx', 'VisualProofGrid')
+    require('apps/ops/src/app/security-governance/page.tsx', 'Governance route continuity')
     require('apps/ops/src/app/audit/page.tsx', 'TextInput')
     require('apps/ops/src/app/audit/page.tsx', 'SelectInput')
 

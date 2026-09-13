@@ -108,6 +108,34 @@ export const opsHomeVisualPanels = [
   }
 ] as const;
 
+export const opsSecurityContinuityPanels = [
+  {
+    id: "ops-security-world",
+    src: "/game-art/world/dong-mon-skyline.webp",
+    alt: "Governance world context",
+    width: 1360,
+    height: 765,
+    claim: "WORLD_CONCEPT",
+    title: "Governance nối về ca trực",
+    description: "Security governance là route điều kiện vận hành; không phải nơi bật policy thật khi chưa có RBAC/audit contract."
+  },
+  {
+    id: "ops-security-skill",
+    src: "/game-art/classes/vo-lv1-skill-atlas.webp",
+    alt: "Governance skill preview",
+    width: 820,
+    height: 820,
+    claim: "DEVELOPMENT_ART_PREVIEW",
+    title: "Quyền và hành động vẫn bị khóa",
+    description: "Skill preview nhắc rằng mọi hành động LiveOps cần approval/audit thật trước khi mở mutation."
+  }
+] as const;
+
+export const opsSecurityContinuityActions = [
+  { title: "Control Center", description: "Quay lại điểm bắt đầu ca trực để xem hàng đợi mẫu.", href: "/control-center" },
+  { title: "Audit", description: "Xem timeline fixture; không có audit event store thật.", href: "/audit" }
+] as const;
+
 export const opsReviewQueueFixtures = [
   { title: "Hỗ trợ người chơi", count: opsSupportQueueFixtures.length, href: "/support", description: "Xem hàng đợi hỗ trợ mẫu và thông tin cần làm rõ." },
   { title: "An toàn cộng đồng", count: 1, href: "/trust-safety", description: "Rà soát ngữ cảnh trước khi cân nhắc hành động. Không có xử phạt thật." },

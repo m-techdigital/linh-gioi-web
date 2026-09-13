@@ -99,6 +99,34 @@ export const portalHomeVisualPanels = [
   }
 ] as const;
 
+export const portalSecurityContinuityPanels = [
+  {
+    id: "portal-security-world",
+    src: "/game-art/world/dong-mon-skyline.webp",
+    alt: "Security route Đông Môn context",
+    width: 1360,
+    height: 765,
+    claim: "WORLD_CONCEPT",
+    title: "Bảo mật là một chặng trong hành trình",
+    description: "Security route cần nối lại với thế giới và phiên chơi, không đứng riêng như một form kỹ thuật."
+  },
+  {
+    id: "portal-security-skill",
+    src: "/game-art/classes/vo-lv1-skill-atlas.webp",
+    alt: "Security route skill preview",
+    width: 820,
+    height: 820,
+    claim: "DEVELOPMENT_ART_PREVIEW",
+    title: "Không thu credential trong fixture",
+    description: "Visual preview thay cho input thật; route chỉ giải thích trạng thái bảo mật khi chưa có Auth contract."
+  }
+] as const;
+
+export const portalSecurityContinuityActions = [
+  { title: "Phiên đăng nhập", description: "Xem session fixture kế tiếp; không có token lifecycle thật.", href: "/account/sessions" },
+  { title: "Hành trình", description: "Quay lại bản đồ hành trình để thấy security trong tổng thể Portal.", href: "/journey" }
+] as const;
+
 
 export const portalSupportTopics = [
   { id: "account-access", title: "Truy cập tài khoản", description: "Khôi phục quyền truy cập, session và security fixture." },

@@ -108,8 +108,10 @@ def check_tests_and_docs() -> None:
         "WEB-FE-ROUTE-DEPTH-CONTINUITY-v1.42",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ROUTE-DEPTH-CONTINUITY-v1.42",
         "browser/e2e",
+    ])
+    require_text("docs/execution/WEB-PROJECT-STATE.md", [
+        "WEB-FE-ROUTE-DEPTH-CONTINUITY-v1.42",
     ])
 
 

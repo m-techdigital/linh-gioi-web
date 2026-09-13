@@ -37,6 +37,17 @@ Current decision: v1.41 FE continued surface polish closed; continue route-depth
 
 Next task: WEB-FE-ROUTE-DEPTH-CONTINUITY-v1.42.
 
+Current phase: WEB-FE-ROUTE-DEPTH-CONTINUITY-v1.42 WEB_CLOSED.
+
+Current decision: v1.42 FE route-depth continuity closed; continue accessibility/interaction audit next. Entire program is NOT production-complete.
+
+- v1.42 refactored Portal `/account/security` and Ops `/security-governance` from disabled form/control pages into read-only route continuity pages.
+- Both routes now use shared visual proof cards, read-only route actions and browser-verified navigation links.
+- v1.42 keeps all data provisional: no production auth, no DB persistence, no real Portal integration, no real Ops/Admin mutation, and `NO_ACCEPTED_BACKEND_CONTRACT` remains active.
+- v1.42 evidence: source validator, Portal/Ops typecheck, browser/e2e desktop/mobile, production builds and screenshot review.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.43.
+
 ## Previous checkpoint records
 
 Current phase: WEB-OPS-REVIEW-WORKSPACE-DEPTH-v1.38 WEB_CLOSED (fixture UX scope).
