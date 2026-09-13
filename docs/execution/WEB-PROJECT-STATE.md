@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-SAFETY-SUPPORT-DESIGN-BOARD-v1.72 WEB_CLOSED.
+
+Current decision: v1.72 FE public safety support design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.72 adds a real LinhGioiOnline HUD reference-art SVG to `/support/safety`.
+- The safety support board renders with accessible name `Player safety support HUD board`, eager loading and responsive layout while keeping account lookup/moderation backend/live ticketing/SLA non-claims explicit.
+- v1.72 evidence: RED browser/e2e reproduced missing safety support HUD board on `/support/safety`; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded SVG natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.73.
+
 Current phase: WEB-FE-PUBLIC-RELEASE-READINESS-DESIGN-BOARD-v1.71 WEB_CLOSED.
 
 Current decision: v1.71 FE public release readiness design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

@@ -53,6 +53,19 @@ export default function SafetySupportPage() {
             <LinkButton href="/performance" tone="spirit">Hiệu năng/copy budget</LinkButton>
           </div>
         </GameCard>
+        <figure className="lgo-safety-support-design-board lgo-panel" aria-label="Player safety support HUD board">
+          <img
+            src="/game-art/design-boards/player-safety-support-hud.svg"
+            alt="Player safety support HUD board"
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption>
+            <StatusBadge tone="spirit">Game reference art</StatusBadge>
+            <strong>Safety/support guidance before live ticketing</strong>
+            <span>Small LinhGioiOnline HUD reference board that grounds support guidance without claiming account lookup, moderation backend, live ticketing or production SLA.</span>
+          </figcaption>
+        </figure>
         <SectionHeading eyebrow="Product-first support" title="Hỗ trợ phải rõ, thân thiện và không hứa backend giả">
           Runtime/browser/e2e chỉ là guardrail nội bộ. Nội dung chính là player-facing safety/support expectation cho closed testing sau này.
         </SectionHeading>
