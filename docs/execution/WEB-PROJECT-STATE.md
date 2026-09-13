@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PORTAL-HOME-LCP-IMAGE-v1.51 WEB_CLOSED.
+
+Current decision: v1.51 FE Portal home LCP image slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.51 updates Portal home visual image loading for the WORLD_CONCEPT panel.
+- The Portal home WORLD_CONCEPT image now renders with `loading="eager"`; non-WORLD_CONCEPT visual panels remain lazy-loaded.
+- v1.51 evidence: RED e2e reproduced `loading="lazy"`; source validator PASS; Portal typecheck PASS; Portal production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.52.
+
 Current phase: WEB-FE-PUBLIC-SKIP-LINK-VISUAL-v1.50 WEB_CLOSED.
 
 Current decision: v1.50 FE public skip link visual slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
