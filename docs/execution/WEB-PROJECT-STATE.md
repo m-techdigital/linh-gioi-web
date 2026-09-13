@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-CLASS-ART-TYPOGRAPHY-v1.55 WEB_CLOSED.
+
+Current decision: v1.55 FE public class art typography slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.55 updates the public `/classes` class art spotlight typography scale.
+- Decorative VÕ pseudo lettering is capped from the previous viewport-dominant 281.6px browser result to a bounded atmospheric scale, and the mobile class art heading clamp is reduced.
+- v1.55 evidence: RED browser/e2e reproduced oversized decorative VÕ at 281.6px; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.56.
+
 Current phase: WEB-FE-PUBLIC-CLASS-ART-LOADING-v1.54 WEB_CLOSED.
 
 Current decision: v1.54 FE public class art loading slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

@@ -84,7 +84,7 @@ def check_tests_and_docs() -> None:
         "| WEB-FE-PUBLIC-CLASS-ART-LOADING-v1.54 | WEB-FE | WEB_CLOSED |",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.55",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
         "browser/e2e",
     ])
 

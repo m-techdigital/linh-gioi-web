@@ -2080,7 +2080,8 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
   top: -3.2rem;
   color: rgba(239,166,73,.035);
   font-family: var(--lgo-font-display);
-  font-size: clamp(10rem, 22vw, 20rem);
+  /* WEB v1.55 FE public class art typography scale: keep decorative lettering atmospheric instead of viewport-dominant. */
+  font-size: clamp(4.5rem, 9vw, 8rem);
   font-weight: 900;
   line-height: 1;
   pointer-events: none;
@@ -2261,7 +2262,13 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
   }
 
   .lgo-class-art-spotlight-copy h2 {
-    font-size: clamp(2.1rem, 11vw, 3.35rem);
+    font-size: clamp(1.95rem, 8.6vw, 2.65rem);
+  }
+
+  .lgo-class-art-spotlight::before {
+    right: -.45rem;
+    top: -.95rem;
+    font-size: clamp(4rem, 18vw, 5.5rem);
   }
 
   .lgo-class-art-spotlight-visual {
