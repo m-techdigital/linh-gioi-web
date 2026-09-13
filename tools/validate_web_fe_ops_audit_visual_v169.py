@@ -88,7 +88,7 @@ def check_tests_and_docs() -> None:
         "| WEB-FE-OPS-AUDIT-VISUAL-v1.69 | WEB-FE | WEB_CLOSED |",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.70",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
         "browser/e2e",
     ])
 

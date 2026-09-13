@@ -38,6 +38,19 @@ export default function RoadmapPage() {
             Roadmap này giúp người chơi và owner hiểu thứ tự phát triển web: ưu tiên visual/responsive polish, nội dung game, download/support/community, rồi mới tới contract sync. Đây là public web roadmap, không claim production auth, DB persistence, full MMO gameplay, CMS hoặc backend integration. WEB-08 remains blocked until accepted backend contracts exist; no production auth is claimed here. v1.11 adds decision gates so planned roadmap items are not confused with release promises.
           </p>
         </SpiritPanel>
+        <figure className="lgo-roadmap-design-board lgo-panel" aria-label="Public roadmap flow design board">
+          <img
+            src="/game-art/design-boards/public-roadmap-flow.svg"
+            alt="Public roadmap flow design board"
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption>
+            <StatusBadge tone="spirit">Game reference art</StatusBadge>
+            <strong>Roadmap flow before release promise</strong>
+            <span>Small LinhGioiOnline design-board asset that visualizes planning gates without claiming production auth, download, CMS or backend integration.</span>
+          </figcaption>
+        </figure>
         <SectionHeading eyebrow="Plan" title="Tập trung sản phẩm trước, tooling chỉ làm guardrail" />
         <Grid>
           {publicRoadmapItems.map((item) => (
