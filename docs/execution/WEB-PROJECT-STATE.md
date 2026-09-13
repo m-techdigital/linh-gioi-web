@@ -1,3 +1,15 @@
+Current phase: WEB-FE-PUBLIC-NAVIGATION-INTERACTION-v1.44 WEB_CLOSED.
+
+Current decision: v1.44 FE public navigation interaction slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.44 adds shared `RouteAwareLink` in `packages/ui` for exact/section active route state without depending on Next.js routing APIs.
+- Public header navigation now marks `/classes` and the `/download` play/status CTA with `aria-current="page"` and visible active styling.
+- Workspace navigation now consumes the same shared route-aware link logic introduced for public navigation.
+- v1.44 evidence: RED e2e reproduced missing public `aria-current`; source validator PASS; UI/Web typecheck PASS; Web production build PASS; Playwright desktop/mobile keyboard/navigation/font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.45.
+
 Current phase: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.43 WEB_CLOSED.
 
 Current decision: v1.43 FE accessibility/interaction audit closed; continue FE/browser UI work next. Entire program is NOT production-complete.

@@ -30,7 +30,9 @@ export {
   WorkspacePage
 } from "./primitives";
 export { WorkspaceNavigation } from "./workspace-navigation";
+export { RouteAwareLink } from "./route-aware-link";
 export type { WorkspaceShellNavItem } from "./workspace-navigation";
+export type { RouteAwareLinkProps } from "./route-aware-link";
 export type { ButtonProps, ExperienceHeroAction, LinkButtonProps, NavItem, PageAction, Tone } from "./primitives";
 export {
   ApprovalFlowPlaceholder,

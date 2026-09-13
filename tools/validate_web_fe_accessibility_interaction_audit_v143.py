@@ -31,13 +31,19 @@ def check_shared_interaction_source() -> None:
         '"use client"',
         "WorkspaceNavigation",
         "WorkspaceShellNavItem",
+        "RouteAwareLink",
+        "currentWhen=\"section\"",
+    ])
+    shared_nav = require_text("packages/ui/src/route-aware-link.tsx", [
+        '"use client"',
+        "RouteAwareLink",
         "aria-current",
         "data-current",
         "popstate",
         "hashchange",
         "startsWith",
     ])
-    if "next/navigation" in nav:
+    if "next/navigation" in nav or "next/navigation" in shared_nav:
         fail("workspace navigation must not depend on Next.js routing")
     primitives = require_text("packages/ui/src/primitives.tsx", [
         'import { WorkspaceNavigation } from "./workspace-navigation"',
@@ -109,7 +115,7 @@ def check_tests_and_docs() -> None:
         "| WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.43 | WEB-FE | WEB_CLOSED |",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.44",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
         "browser/e2e",
     ])
 

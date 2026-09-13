@@ -1305,7 +1305,18 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
 .lgo-brand-links { display: flex; justify-content: center; gap: .1rem; min-width: 0; }
 .lgo-brand-links a { padding: .7rem .72rem; color: var(--lgo-color-text-muted); text-decoration: none; font-size: .91rem; white-space: nowrap; }
 .lgo-brand-links a:hover, .lgo-brand-links a:focus-visible { color: #fff; }
+.lgo-brand-links a[aria-current="page"], .lgo-brand-links a[data-current="page"] {
+  color: var(--lgo-color-text-primary);
+  border-radius: var(--lgo-radius-pill);
+  background: rgba(49,216,232,.12);
+  box-shadow: inset 0 0 0 1px rgba(49,216,232,.22);
+}
 .lgo-nav-play { text-decoration: none; border: 1px solid rgba(245,200,107,.5); color: var(--lgo-color-warm-gold); border-radius: 999px; padding: .7rem 1rem; font-weight: 800; }
+.lgo-nav-play[aria-current="page"], .lgo-nav-play[data-current="page"] {
+  color: #08111e;
+  background: linear-gradient(135deg, #f9dc94, #dca743);
+  box-shadow: 0 12px 32px rgba(245, 200, 107, .16);
+}
 
 .lgo-cinematic-hero {
   position: relative;

@@ -1,3 +1,5 @@
+import { RouteAwareLink } from "@lgo-web/ui";
+
 const primaryItems = [
   { href: "/game", label: "Thế giới" },
   { href: "/classes", label: "Năm Lộ" },
@@ -16,9 +18,9 @@ export function PublicNavigation() {
         <span><strong>Linh Giới</strong><small>ONLINE</small></span>
       </a>
       <div className="lgo-brand-links">
-        {primaryItems.map((item) => <a href={item.href} key={item.href}>{item.label}</a>)}
+        {primaryItems.map((item) => <RouteAwareLink href={item.href} currentWhen="section" key={item.href}>{item.label}</RouteAwareLink>)}
       </div>
-      <a className="lgo-nav-play" href="/download">Trạng thái chơi</a>
+      <RouteAwareLink className="lgo-nav-play" href="/download" currentWhen="exact">Trạng thái chơi</RouteAwareLink>
     </nav>
   );
 }
