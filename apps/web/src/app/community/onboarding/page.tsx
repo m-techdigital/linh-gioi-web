@@ -40,6 +40,21 @@ export default function CommunityOnboardingPage() {
             <LinkButton href="/download/trust" tone="gold">Download trust</LinkButton>
           </div>
         </GameCard>
+        <figure className="lgo-community-onboarding-design-board lgo-panel" aria-label="Community onboarding gameplay loop reference art">
+          <img
+            src="/game-art/design-boards/community-onboarding-gameplay-loop.svg"
+            alt="Community onboarding gameplay loop board"
+            loading="eager"
+          />
+          <figcaption>
+            <StatusBadge tone="jade">Game reference art</StatusBadge>
+            <strong>Onboarding bắt đầu bằng vòng chơi và gate đọc, không phải forum live.</strong>
+            <span>
+              Board này dùng visual thật từ LinhGioiOnline để nối guide, status, roadmap và community expectation
+              thành một hành trình static trước khi có forum, guild chat, ticket backend hoặc waitlist thật.
+            </span>
+          </figcaption>
+        </figure>
         <SectionHeading eyebrow="Player reading path" title="Đi theo thứ tự để không hiểu nhầm trạng thái release">
           Người chơi nên đọc status/download trust trước, rồi roadmap gates, support/community expectation và guide onboarding.
         </SectionHeading>

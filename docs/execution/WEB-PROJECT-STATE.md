@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-COMMUNITY-ONBOARDING-DESIGN-BOARD-v1.75 WEB_CLOSED.
+
+Current decision: v1.75 FE public community onboarding design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.75 adds a real LinhGioiOnline core gameplay-loop reference-art SVG to `/community/onboarding`.
+- The community onboarding board renders with accessible name `Community onboarding gameplay loop board`, eager loading and responsive layout while keeping live forum/chat/guild/ticket/waitlist backend non-claims explicit.
+- v1.75 evidence: RED browser/e2e reproduced missing community onboarding gameplay-loop board on `/community/onboarding`; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded SVG natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.76.
+
 Current phase: WEB-FE-PUBLIC-RELEASE-NARRATIVE-DESIGN-BOARD-v1.74 WEB_CLOSED.
 
 Current decision: v1.74 FE public release narrative design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
