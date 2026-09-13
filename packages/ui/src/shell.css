@@ -208,3 +208,45 @@
   .lgo-data-list-item { align-items: flex-start; flex-direction: column; }
   .lgo-data-list-trailing { width: 100%; }
 }
+
+/* Workspace primitives: shared by Portal and Ops, scoped away from public branding. */
+.lgo-workspace-shell .lgo-container {
+  width: min(calc(100% - 2rem), var(--lgo-page-max-width));
+  margin-inline: auto;
+}
+.lgo-workspace-shell .lgo-button,
+.lgo-workspace-shell .lgo-link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--lgo-space-sm);
+  min-height: 44px;
+  padding: .75rem 1rem;
+  border: 1px solid var(--lgo-color-spirit-cyan);
+  border-radius: var(--lgo-radius-pill);
+  color: var(--lgo-color-text-primary);
+  background: var(--lgo-color-night-panel);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.lgo-workspace-shell .lgo-link-button.lgo-tone-gold { border-color: var(--lgo-color-warm-gold); }
+.lgo-workspace-shell .lgo-button:disabled {
+  color: var(--lgo-color-text-muted);
+  border-color: var(--lgo-color-text-muted);
+  border-style: dashed;
+  cursor: not-allowed;
+}
+.lgo-workspace-shell a:focus-visible,
+.lgo-workspace-shell button:focus-visible {
+  outline: 2px solid var(--lgo-color-warm-gold);
+  outline-offset: 4px;
+}
+.lgo-workspace-shell .lgo-status-badge { max-width: 100%; overflow-wrap: anywhere; font-size: .8rem; }
+.lgo-workspace-shell .lgo-boundary-banner > .lgo-status-badge { flex-shrink: 0; }
+@media (max-width: 720px) {
+  .lgo-workspace-shell .lgo-boundary-banner { flex-direction: column; }
+  .lgo-workspace-shell .lgo-form-actions > .lgo-link-button { width: 100%; }
+}

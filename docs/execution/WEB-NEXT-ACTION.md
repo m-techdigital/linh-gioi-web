@@ -3,10 +3,10 @@
 Current implementation task:
 
 ```text
-WEB-SHARED-WORKSPACE-VISUAL-CLOSURE-v1.37
+WEB-OPS-REVIEW-WORKSPACE-DEPTH-v1.38
 ```
 
-Primary focus: fix runtime-observed shared workspace container, button, and mobile boundary presentation in packages/ui. Reuse Portal v1.36 access browser checks, add regression checks for computed layout, inspect Portal/Ops desktop/mobile. Preserve public brand styles and disabled fixture behavior.
+Primary focus: replace empty Control Center and Trust & Safety compositions with fixture review queues and workflow guidance; connect home workspace links; add approval-readiness steps to Security & Governance using shared ProgressSteps. No real RBAC, audit or moderation mutation. After fixture composition gaps close, return to blocked WEB-08 contract sync instead of inventing backend behavior.
 
 ## Base First
 Search and extend `packages/*` before app-local duplication. Evidence Reuse / Build Once remains mandatory.

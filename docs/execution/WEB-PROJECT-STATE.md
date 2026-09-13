@@ -1,3 +1,11 @@
+Current phase: WEB-SHARED-WORKSPACE-VISUAL-CLOSURE-v1.37 WEB_CLOSED. v1.36 visual repair closed by v1.37 evidence.
+
+Current decision: WEB_VERIFY_PASSED for changed workspace surfaces. Next WEB-OPS-REVIEW-WORKSPACE-DEPTH-v1.38.
+
+- Shared container/button/mobile boundary CSS fixed in packages/ui/shell.css.
+- UI/Portal/Ops lint/typecheck PASS; Portal/Ops production builds PASS; browser 12/12 PASS.
+- Visual review of representative Portal/Ops desktop/mobile screenshots PASS; axe WCAG A/AA: zero violations across login/register/recovery/access/security-governance at 1440/390. This is scoped evidence, not full-site accessibility certification.
+
 Current phase: v1.36 source/runtime verified; visual review found inherited workspace layout defects. Next task WEB-SHARED-WORKSPACE-VISUAL-CLOSURE-v1.37.
 
 Current decision: WEB_FIX_REQUIRED (visual); source/runtime evidence retained.

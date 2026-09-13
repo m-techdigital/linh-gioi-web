@@ -1,0 +1,10 @@
+HANDOFF-LGO-WEB-WORKSPACE-VISUAL-v1.37.md
+LGO-WEB-WORKSPACE-VISUAL-REPORT-v1.37.md
+LGO-WEB-v1.37-CHANGED-FILES.txt
+LGO-WEB-v1.37-DELETIONS.txt
+docs/execution/WEB-NEXT-ACTION.md
+docs/execution/WEB-PROJECT-STATE.md
+docs/execution/WEB-TASK-LEDGER.md
+docs/execution/specs/WEB-WORKSPACE-VISUAL-v1.37.md
+packages/ui/src/shell.css
+tests/e2e/workspace-layout.spec.ts
