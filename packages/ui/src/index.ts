@@ -27,10 +27,11 @@ export {
   VisualProofCard,
   VisualProofGrid,
   WorkspaceBoundaryNotice,
-  WorkspaceNavigation,
   WorkspacePage
 } from "./primitives";
-export type { ButtonProps, ExperienceHeroAction, LinkButtonProps, NavItem, PageAction, Tone, WorkspaceShellNavItem } from "./primitives";
+export { WorkspaceNavigation } from "./workspace-navigation";
+export type { WorkspaceShellNavItem } from "./workspace-navigation";
+export type { ButtonProps, ExperienceHeroAction, LinkButtonProps, NavItem, PageAction, Tone } from "./primitives";
 export {
   ApprovalFlowPlaceholder,
   AuditTimelinePlaceholder,

@@ -1,4 +1,6 @@
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, HTMLAttributes, ReactNode } from "react";
+import { WorkspaceNavigation } from "./workspace-navigation";
+import type { WorkspaceShellNavItem } from "./workspace-navigation";
 
 export type Tone = "spirit" | "gold" | "jade" | "shadow" | "neutral";
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & { tone?: Tone };
@@ -343,25 +345,6 @@ export function ProvisionalFeatureShell({
   );
 }
 
-
-export type WorkspaceShellNavItem = {
-  href: string;
-  label: string;
-  badge?: string;
-};
-
-export function WorkspaceNavigation({ items, ariaLabel = "Workspace navigation" }: { items: WorkspaceShellNavItem[]; ariaLabel?: string }) {
-  return (
-    <nav className="lgo-workspace-nav" aria-label={ariaLabel}>
-      {items.map((item) => (
-        <a href={item.href} key={`${item.href}:${item.label}`}>
-          <span>{item.label}</span>
-          {item.badge ? <small>{item.badge}</small> : null}
-        </a>
-      ))}
-    </nav>
-  );
-}
 
 export function WorkspaceBoundaryNotice({ badge, children }: { badge: string; children: ReactNode }) {
   return <BoundaryBanner badge={badge}>{children}</BoundaryBanner>;

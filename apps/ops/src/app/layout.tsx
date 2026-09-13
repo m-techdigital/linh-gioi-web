@@ -19,7 +19,8 @@ const navItems: WorkspaceShellNavItem[] = [
   { href: "/game-operations", label: "Game" },
   { href: "/content-liveops", label: "LiveOps" },
   { href: "/support", label: "Support" },
-  { href: "/audit", label: "Audit", badge: "blocked" }
+  { href: "/audit", label: "Audit", badge: "blocked" },
+  { href: "/security-governance", label: "Governance", badge: "fixture" }
 ];
 
 export default function OpsLayout({ children }: { children: ReactNode }) {

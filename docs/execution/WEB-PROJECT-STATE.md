@@ -1,3 +1,15 @@
+Current phase: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.43 WEB_CLOSED.
+
+Current decision: v1.43 FE accessibility/interaction audit closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.43 adds shared workspace active navigation with `aria-current="page"` and visible current/focus styles.
+- Workspace skip link remains first keyboard target and now has explicit focus-visible styling to move focus to `#workspace-content`.
+- Portal nested `/account/security` keeps Account nav continuity; Ops `/security-governance` now has direct Governance nav continuity.
+- v1.43 evidence: source validator PASS; UI/Portal/Ops typecheck PASS; Portal/Ops production build PASS; Playwright desktop/mobile keyboard/focus/navigation/font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.44.
+
 Current phase: WEB-PORTAL-JOURNEY-DEMO-DATA-v1.39 WEB_CLOSED.
 
 Current decision: v1.39 FE/demo data slice closed; continue FE visual/layout review next. Entire program is NOT production-complete.
