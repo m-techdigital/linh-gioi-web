@@ -1,4 +1,4 @@
-import { Stack } from "@lgo-web/ui";
+import { Stack, StatusBadge } from "@lgo-web/ui";
 import { ClassPathGrid, WorldRouteJourney } from "../../components/PublicGameExperienceSections";
 import { PublicPlayerHero } from "../../components/PublicPlayerHero";
 import { WebAppShell } from "../../components/WebAppShell";
@@ -27,6 +27,22 @@ export default function StartPage() {
             { href: "/download", label: "Trạng thái tải game", tone: "spirit" }
           ]}
         />
+
+        <figure className="lgo-start-design-board lgo-panel" aria-label="Start tutorial gameplay loop reference art">
+          <img
+            src="/game-art/design-boards/start-tutorial-gameplay-loop.svg"
+            alt="Start tutorial gameplay loop board"
+            loading="eager"
+          />
+          <figcaption>
+            <StatusBadge tone="spirit">Game reference art</StatusBadge>
+            <strong>Start route dạy bằng vòng chơi nhỏ, không mở download hay account backend.</strong>
+            <span>
+              Board này dùng visual thật từ LinhGioiOnline để nối tutorial, class skill, Shadow Slime và cổng Linh Thành
+              thành một hành trình đọc rõ trước khi có public build, login hoặc entitlement flow.
+            </span>
+          </figcaption>
+        </figure>
 
         <ClassPathGrid compact />
         <WorldRouteJourney />

@@ -27,7 +27,7 @@ def check_tests_and_docs() -> None:
         require_text(rel, ["WEB-FE-PUBLIC-ACCESSIBILITY-DESIGN-BOARD-v1.78", "WEB_CLOSED", "Accessibility readability route map board", "browser/e2e", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-PUBLIC-ACCESSIBILITY-DESIGN-BOARD-v1.78 WEB_CLOSED", "WEB-FE-PUBLIC-ACCESSIBILITY-DESIGN-BOARD-v1.78"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-PUBLIC-ACCESSIBILITY-DESIGN-BOARD-v1.78 | WEB-FE | WEB_CLOSED |"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.79", "browser/e2e"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "browser/e2e"])
 def main() -> int:
     check_accessibility_board(); check_tests_and_docs()
     if ERRORS:

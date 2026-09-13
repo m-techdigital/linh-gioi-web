@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-START-DESIGN-BOARD-v1.79 WEB_CLOSED.
+
+Current decision: v1.79 FE public start design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.79 adds a real LinhGioiOnline core gameplay-loop reference-art SVG to `/start`.
+- The start tutorial board renders with accessible name `Start tutorial gameplay loop board`, eager loading and responsive layout while keeping download/account/login/entitlement non-claims explicit.
+- v1.79 evidence: RED browser/e2e reproduced missing start tutorial gameplay-loop board on `/start`; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded SVG natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.80.
+
 Current phase: WEB-FE-PUBLIC-ACCESSIBILITY-DESIGN-BOARD-v1.78 WEB_CLOSED.
 
 Current decision: v1.78 FE public accessibility design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
