@@ -24,7 +24,7 @@ def main():
     audit='apps/ops/src/app/audit/page.tsx'
     for m in ('DataTable','LinkButton','opsPlayerFixtures','NO_REAL_OPS_MUTATION'):
         req(listp,m)
-    for m in ('KeyValueGrid','ActivityTimeline','opsPlayerFixtures','SpiritButton','disabled','NO_REAL_OPS_MUTATION'):
+    for m in ('KeyValueGrid','ActivityTimeline','opsPlayerFixtures','BlockedActionButton','NO_ACCEPTED_BACKEND_CONTRACT','NO_REAL_OPS_MUTATION'):
         req(detail,m)
     for m in ('ActivityTimeline','opsAuditFixtureEvents','NO_REAL_OPS_MUTATION'):
         req(audit,m)

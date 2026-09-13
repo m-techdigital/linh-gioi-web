@@ -8,7 +8,7 @@ def main():
     errors=[]
     expected={
         'apps/ops/src/app/control-center/page.tsx':['MetricGrid','opsReviewQueueFixtures','DataList','LinkButton'],
-        'apps/ops/src/app/trust-safety/page.tsx':['CaseSummary','ActivityTimeline','opsSafetyReviewFixture','ProgressSteps','disabled'],
+        'apps/ops/src/app/trust-safety/page.tsx':['CaseSummary','ActivityTimeline','opsSafetyReviewFixture','ProgressSteps','BlockedActionButton','NO_ACCEPTED_BACKEND_CONTRACT'],
         'apps/ops/src/app/security-governance/page.tsx':['ProgressSteps','opsApprovalSteps','VisualProofGrid','Governance route continuity'],
         'apps/ops/src/app/page.tsx':['LinkButton','href: "/trust-safety"','href: "/security-governance"'],
         'apps/ops/src/app/layout.tsx':['@lgo-web/ui/progress.css'],

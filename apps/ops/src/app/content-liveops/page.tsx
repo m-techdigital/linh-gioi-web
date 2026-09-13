@@ -1,14 +1,15 @@
 import {
   ActivityTimeline,
   ActivityTimelineItem,
+  BlockedActionButton,
   CaseSummary,
   CaseSummaryItem,
   FormActions,
   InlineFeedback,
-  ProvisionalFeatureShell,
-  SpiritButton
+  ProvisionalFeatureShell
 } from "@lgo-web/ui";
 import {
+  NO_ACCEPTED_BACKEND_CONTRACT,
   NO_REAL_OPS_MUTATION,
   NOT_CANONICAL_BACKEND_CONTRACT,
   PROVISIONAL_WEB_FIXTURE,
@@ -39,8 +40,8 @@ export default function Page() {
         ))}
       </ActivityTimeline>
       <FormActions>
-        <SpiritButton type="button" disabled>Publish event — blocked</SpiritButton>
-        <SpiritButton type="button" disabled>Rollback — blocked</SpiritButton>
+        <BlockedActionButton id="ops-liveops-publish-blocked" reason={`${NO_ACCEPTED_BACKEND_CONTRACT} — ${NO_REAL_OPS_MUTATION}; publish requires accepted scheduler, RBAC and audit contracts.`}>Publish event — blocked</BlockedActionButton>
+        <BlockedActionButton id="ops-liveops-rollback-blocked" reason={`${NO_ACCEPTED_BACKEND_CONTRACT} — ${NO_REAL_OPS_MUTATION}; rollback requires canonical content mutation and audit contracts.`}>Rollback — blocked</BlockedActionButton>
       </FormActions>
     </ProvisionalFeatureShell>
   );

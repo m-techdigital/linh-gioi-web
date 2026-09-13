@@ -1,6 +1,7 @@
 import {
   ActivityTimeline,
   ActivityTimelineItem,
+  BlockedActionButton,
   CaseSummary,
   CaseSummaryItem,
   FormActions,
@@ -8,10 +9,10 @@ import {
   InlineFeedback,
   LinkButton,
   ProvisionalFeatureShell,
-  SelectInput,
-  SpiritButton
+  SelectInput
 } from "@lgo-web/ui";
 import {
+  NO_ACCEPTED_BACKEND_CONTRACT,
   NO_REAL_OPS_MUTATION,
   NOT_CANONICAL_BACKEND_CONTRACT,
   PROVISIONAL_WEB_FIXTURE,
@@ -56,8 +57,8 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       </ActivityTimeline>
 
       <FormActions>
-        <SpiritButton type="button" disabled>Assign case — blocked</SpiritButton>
-        <SpiritButton type="button" disabled>Escalate — blocked</SpiritButton>
+        <BlockedActionButton id="ops-support-assign-blocked" reason={`${NO_ACCEPTED_BACKEND_CONTRACT} — ${NO_REAL_OPS_MUTATION}; assignment requires accepted Support/RBAC/API/audit contracts.`}>Assign case — blocked</BlockedActionButton>
+        <BlockedActionButton id="ops-support-escalate-blocked" reason={`${NO_ACCEPTED_BACKEND_CONTRACT} — ${NO_REAL_OPS_MUTATION}; escalation requires accepted Support/RBAC/API/audit contracts.`}>Escalate — blocked</BlockedActionButton>
         <LinkButton href="/support" tone="neutral">Back to queue</LinkButton>
       </FormActions>
     </ProvisionalFeatureShell>

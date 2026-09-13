@@ -1,6 +1,7 @@
 import {
   ActivityTimeline,
   ActivityTimelineItem,
+  BlockedActionButton,
   CaseSummary,
   CaseSummaryItem,
   FormActions,
@@ -8,10 +9,10 @@ import {
   InlineFeedback,
   LinkButton,
   ProvisionalFeatureShell,
-  SelectInput,
-  SpiritButton
+  SelectInput
 } from "@lgo-web/ui";
 import {
+  NO_ACCEPTED_BACKEND_CONTRACT,
   NO_REAL_OPS_MUTATION,
   NOT_CANONICAL_BACKEND_CONTRACT,
   PROVISIONAL_WEB_FIXTURE,
@@ -54,7 +55,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
         ))}
       </ActivityTimeline>
       <FormActions>
-        <SpiritButton type="button" disabled>Apply operation — blocked</SpiritButton>
+        <BlockedActionButton id="ops-game-operation-blocked" reason={`${NO_ACCEPTED_BACKEND_CONTRACT} — ${NO_REAL_OPS_MUTATION}; game operation mutation requires accepted Game Operations/RBAC/API/audit contracts.`}>Apply operation — blocked</BlockedActionButton>
         <LinkButton href="/game-operations" tone="neutral">Back to operations</LinkButton>
       </FormActions>
     </ProvisionalFeatureShell>

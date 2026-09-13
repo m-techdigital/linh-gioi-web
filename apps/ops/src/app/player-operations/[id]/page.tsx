@@ -1,5 +1,5 @@
-import { ActivityTimeline, ActivityTimelineItem, FormActions, InlineFeedback, KeyValueGrid, KeyValueItem, LinkButton, ProvisionalFeatureShell, SpiritButton } from "@lgo-web/ui";
-import { NO_REAL_OPS_MUTATION, NOT_CANONICAL_BACKEND_CONTRACT, PROVISIONAL_WEB_FIXTURE, opsPlayerActivityFixtures, opsPlayerFixtures } from "../../../lib/ops-fixtures";
+import { ActivityTimeline, ActivityTimelineItem, BlockedActionButton, FormActions, InlineFeedback, KeyValueGrid, KeyValueItem, LinkButton, ProvisionalFeatureShell } from "@lgo-web/ui";
+import { NO_ACCEPTED_BACKEND_CONTRACT, NO_REAL_OPS_MUTATION, NOT_CANONICAL_BACKEND_CONTRACT, PROVISIONAL_WEB_FIXTURE, opsPlayerActivityFixtures, opsPlayerFixtures } from "../../../lib/ops-fixtures";
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -27,8 +27,8 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
         ))}
       </ActivityTimeline>
       <FormActions>
-        <SpiritButton type="button" disabled>Suspend account — blocked</SpiritButton>
-        <SpiritButton type="button" disabled>Apply moderation — blocked</SpiritButton>
+        <BlockedActionButton id="ops-player-suspend-blocked" reason={`${NO_ACCEPTED_BACKEND_CONTRACT} — ${NO_REAL_OPS_MUTATION}; suspension requires accepted account, RBAC and audit contracts.`}>Suspend account — blocked</BlockedActionButton>
+        <BlockedActionButton id="ops-player-moderation-blocked" reason={`${NO_ACCEPTED_BACKEND_CONTRACT} — ${NO_REAL_OPS_MUTATION}; moderation mutation remains blocked until canonical contracts exist.`}>Apply moderation — blocked</BlockedActionButton>
         <LinkButton href="/player-operations" tone="neutral">Back to queue</LinkButton>
       </FormActions>
     </ProvisionalFeatureShell>

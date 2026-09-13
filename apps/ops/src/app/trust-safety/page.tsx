@@ -1,5 +1,5 @@
-import { ActivityTimeline, ActivityTimelineItem, CaseSummary, CaseSummaryItem, FormActions, InlineFeedback, LinkButton, ProgressStep, ProgressSteps, ProvisionalFeatureShell, SpiritButton } from "@lgo-web/ui";
-import { opsApprovalSteps, opsSafetyReviewFixture } from "../../lib/ops-fixtures";
+import { ActivityTimeline, ActivityTimelineItem, BlockedActionButton, CaseSummary, CaseSummaryItem, FormActions, InlineFeedback, LinkButton, ProgressStep, ProgressSteps, ProvisionalFeatureShell } from "@lgo-web/ui";
+import { NO_ACCEPTED_BACKEND_CONTRACT, NO_REAL_OPS_MUTATION, opsApprovalSteps, opsSafetyReviewFixture } from "../../lib/ops-fixtures";
 
 export default function Page() {
   const review = opsSafetyReviewFixture;
@@ -20,8 +20,8 @@ export default function Page() {
         {review.timeline.map((event) => <ActivityTimelineItem key={event.title} {...event} tone="neutral" />)}
       </ActivityTimeline>
       <FormActions>
-        <SpiritButton type="button" disabled>Chuyển phê duyệt — chưa khả dụng</SpiritButton>
-        <SpiritButton type="button" disabled>Áp dụng biện pháp — chưa khả dụng</SpiritButton>
+        <BlockedActionButton id="ops-trust-approval-blocked" reason={`${NO_ACCEPTED_BACKEND_CONTRACT} — ${NO_REAL_OPS_MUTATION}; approval transition requires accepted RBAC/audit/security/API contracts.`}>Chuyển phê duyệt — chưa khả dụng</BlockedActionButton>
+        <BlockedActionButton id="ops-trust-action-blocked" reason={`${NO_ACCEPTED_BACKEND_CONTRACT} — ${NO_REAL_OPS_MUTATION}; enforcement action remains blocked until canonical mutation and audit contracts exist.`}>Áp dụng biện pháp — chưa khả dụng</BlockedActionButton>
         <LinkButton href="/security-governance">Xem điều kiện phê duyệt</LinkButton>
         <LinkButton href="/control-center">Trở về Control Center</LinkButton>
       </FormActions>
