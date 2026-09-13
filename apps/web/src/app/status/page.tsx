@@ -36,6 +36,21 @@ export default function Page() {
         <PerformanceBudgetCta />
         <PerceivedLoadSignalBoard />
         <SectionHeading eyebrow="WEB v1.11 staged release messaging · WEB v1.10 status trust transparency · WEB v1.9 status transparency" title="Trạng thái / Maintenance">No CMS. No backend. PROVISIONAL_WEB_FIXTURE only. Status separates public, internal and blocked surfaces.</SectionHeading>
+        <figure className="lgo-status-design-board lgo-panel" aria-label="Status maintenance signal reference art">
+          <img
+            src="/game-art/design-boards/status-maintenance-signal-board.svg"
+            alt="Status maintenance signal board"
+            loading="eager"
+          />
+          <figcaption>
+            <StatusBadge tone="jade">Game reference art</StatusBadge>
+            <strong>Status signal là fixture public rõ nghĩa, không phải monitoring backend.</strong>
+            <span>
+              Board này dùng visual thật từ LinhGioiOnline để phân biệt public status, blocked surfaces và trust notes
+              mà không claim CMS, production monitoring, incident backend hoặc live server health.
+            </span>
+          </figcaption>
+        </figure>
         <StatusExplanationDepth />
         <StatusTrustBoard />
         <NoSearchBackendNoteBoard />

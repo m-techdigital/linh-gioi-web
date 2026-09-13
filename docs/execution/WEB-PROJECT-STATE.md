@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-STATUS-DESIGN-BOARD-v1.81 WEB_CLOSED.
+
+Current decision: v1.81 FE public status design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.81 adds a real LinhGioiOnline HUD/status reference-art SVG to `/status`.
+- The status maintenance board renders with accessible name `Status maintenance signal board`, eager loading and responsive layout while keeping CMS/monitoring/incident/live-server-health non-claims explicit.
+- v1.81 evidence: RED browser/e2e reproduced missing status maintenance signal board on `/status`; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded SVG natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.82.
+
 Current phase: WEB-FE-PUBLIC-JOURNEY-DESIGN-BOARD-v1.80 WEB_CLOSED.
 
 Current decision: v1.80 FE public journey design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
