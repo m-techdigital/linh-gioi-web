@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-GAME-LOOP-DESIGN-BOARD-v1.82 WEB_CLOSED.
+
+Current decision: v1.82 FE public game loop design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.82 adds a real LinhGioiOnline core gameplay-loop reference-art SVG to `/game/loop`.
+- The game loop board renders with accessible name `World gameplay loop board`, eager loading and responsive layout while keeping live combat/inventory/party/account integration non-claims explicit.
+- v1.82 evidence: RED browser/e2e reproduced missing world gameplay-loop board on `/game/loop`; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded SVG natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.83.
+
 Current phase: WEB-FE-PUBLIC-STATUS-DESIGN-BOARD-v1.81 WEB_CLOSED.
 
 Current decision: v1.81 FE public status design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

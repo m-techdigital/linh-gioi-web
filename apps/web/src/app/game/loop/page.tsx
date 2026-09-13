@@ -36,6 +36,21 @@ export default function WorldGameplayLoopPage() {
             <LinkButton href="/status" tone="gold">Status</LinkButton>
           </div>
         </SpiritPanel>
+        <figure className="lgo-game-loop-design-board lgo-panel" aria-label="World gameplay loop reference art">
+          <img
+            src="/game-art/design-boards/world-gameplay-loop-board.svg"
+            alt="World gameplay loop board"
+            loading="eager"
+          />
+          <figcaption>
+            <StatusBadge tone="spirit">Game reference art</StatusBadge>
+            <strong>Gameplay loop là expectation public, không phải combat backend thật.</strong>
+            <span>
+              Board này dùng visual thật từ LinhGioiOnline để nối Spirit Gate, Gate Keeper, Training Stone và release trust,
+              without claiming live combat, inventory persistence, party flow or account integration.
+            </span>
+          </figcaption>
+        </figure>
         <SectionHeading eyebrow="Product-first content" title="Đây là nội dung game public, không phải tooling page">
           Runtime/browser/e2e chỉ dùng làm guardrail. Nội dung chính là giúp người chơi hiểu gameplay expectation một cách trung thực.
         </SectionHeading>
