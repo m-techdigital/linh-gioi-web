@@ -51,7 +51,7 @@ export default function JourneyPage() {
                 width={panel.width}
                 height={panel.height}
                 sizes="(max-width: 720px) 100vw, 50vw"
-                priority={panel.claim === "WORLD_CONCEPT"}
+                loading="eager"
               />
             )}
             meta={<StatusBadge tone={panel.claim === "WORLD_CONCEPT" ? "jade" : "gold"}>{panel.claim}</StatusBadge>}

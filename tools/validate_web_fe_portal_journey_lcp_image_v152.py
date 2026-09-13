@@ -26,45 +26,42 @@ def require_text(rel: str, markers: list[str]) -> str:
             fail(f"{rel}: missing {marker}")
     return text
 
-def check_portal_home_route() -> None:
-    rel = "apps/portal/src/app/page.tsx"
+def check_portal_journey_route() -> None:
+    rel = "apps/portal/src/app/journey/page.tsx"
     text = require_text(rel, [
-        "portalHomeVisualPanels",
+        "portalJourneyFixture.artPanels",
         "Image",
-        "loading=",
-        "WORLD_CONCEPT",
+        "loading=\"eager\"",
         "NO_ACCEPTED_BACKEND_CONTRACT",
     ])
     if "priority" in text:
         fail(f"{rel}: use explicit loading=\"eager\" for selected visual, not priority")
-    if not re.search(r"loading=\{panel\.claim === \"WORLD_CONCEPT\" \? \"eager\" : \"lazy\"\}", text):
-        fail(f"{rel}: missing WORLD_CONCEPT eager loading expression")
     if "fetch(" in text or "axios" in text or "<form" in text:
         fail(f"{rel}: forbidden backend/form marker")
 
 def check_tests_and_docs() -> None:
     for rel in [
-        "tests/e2e/fe-portal-home-lcp-image-v151.spec.ts",
-        "docs/execution/specs/WEB-FE-PORTAL-HOME-LCP-IMAGE-v1.51.md",
-        "LGO-WEB-FE-PORTAL-HOME-LCP-IMAGE-REPORT-v1.51.md",
-        "HANDOFF-LGO-WEB-FE-PORTAL-HOME-LCP-IMAGE-v1.51.md",
+        "tests/e2e/fe-portal-journey-lcp-image-v152.spec.ts",
+        "docs/execution/specs/WEB-FE-PORTAL-JOURNEY-LCP-IMAGE-v1.52.md",
+        "LGO-WEB-FE-PORTAL-JOURNEY-LCP-IMAGE-REPORT-v1.52.md",
+        "HANDOFF-LGO-WEB-FE-PORTAL-JOURNEY-LCP-IMAGE-v1.52.md",
     ]:
         require_file(rel)
-    require_text("tests/e2e/fe-portal-home-lcp-image-v151.spec.ts", [
-        "Portal home Đông Môn world concept",
+    require_text("tests/e2e/fe-portal-journey-lcp-image-v152.spec.ts", [
+        "Khung concept Đông Môn trong Linh Giới",
         "loading",
         "eager",
         "horizontal overflow",
         "font-size",
-        "Tổng quan người chơi",
+        "Hành trình người chơi",
     ])
     for rel in [
-        "docs/execution/specs/WEB-FE-PORTAL-HOME-LCP-IMAGE-v1.51.md",
-        "LGO-WEB-FE-PORTAL-HOME-LCP-IMAGE-REPORT-v1.51.md",
-        "HANDOFF-LGO-WEB-FE-PORTAL-HOME-LCP-IMAGE-v1.51.md",
+        "docs/execution/specs/WEB-FE-PORTAL-JOURNEY-LCP-IMAGE-v1.52.md",
+        "LGO-WEB-FE-PORTAL-JOURNEY-LCP-IMAGE-REPORT-v1.52.md",
+        "HANDOFF-LGO-WEB-FE-PORTAL-JOURNEY-LCP-IMAGE-v1.52.md",
     ]:
         require_text(rel, [
-            "WEB-FE-PORTAL-HOME-LCP-IMAGE-v1.51",
+            "WEB-FE-PORTAL-JOURNEY-LCP-IMAGE-v1.52",
             "WEB_CLOSED",
             "LCP",
             "loading=\"eager\"",
@@ -76,26 +73,26 @@ def check_tests_and_docs() -> None:
             "NO_ACCEPTED_BACKEND_CONTRACT",
         ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
-        "Current phase: WEB-FE-PORTAL-HOME-LCP-IMAGE-v1.51 WEB_CLOSED",
-        "WEB-FE-PORTAL-HOME-LCP-IMAGE-v1.51",
+        "Current phase: WEB-FE-PORTAL-JOURNEY-LCP-IMAGE-v1.52 WEB_CLOSED",
+        "WEB-FE-PORTAL-JOURNEY-LCP-IMAGE-v1.52",
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
-        "| WEB-FE-PORTAL-HOME-LCP-IMAGE-v1.51 | WEB-FE | WEB_CLOSED |",
+        "| WEB-FE-PORTAL-JOURNEY-LCP-IMAGE-v1.52 | WEB-FE | WEB_CLOSED |",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.53",
         "browser/e2e",
     ])
 
 def main() -> int:
-    check_portal_home_route()
+    check_portal_journey_route()
     check_tests_and_docs()
     if ERRORS:
-        print("WEB FE PORTAL HOME LCP IMAGE v1.51 VALIDATION FAIL")
+        print("WEB FE PORTAL JOURNEY LCP IMAGE v1.52 VALIDATION FAIL")
         for error in ERRORS:
             print(f"- {error}")
         return 1
-    print("WEB FE PORTAL HOME LCP IMAGE v1.51 VALIDATION PASS")
+    print("WEB FE PORTAL JOURNEY LCP IMAGE v1.52 VALIDATION PASS")
     return 0
 
 if __name__ == "__main__":

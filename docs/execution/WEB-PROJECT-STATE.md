@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PORTAL-JOURNEY-LCP-IMAGE-v1.52 WEB_CLOSED.
+
+Current decision: v1.52 FE Portal journey LCP image slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.52 updates Portal `/journey` visual image loading for the above-fold art row.
+- The Portal journey art row now renders with `loading="eager"` for all three reviewed images after browser review showed development art could also be LCP-sensitive.
+- v1.52 evidence: RED e2e reproduced missing `loading="eager"` under the old priority path and lazy development-art images after the runtime LCP warning; source validator PASS; Portal typecheck PASS; Portal production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.53.
+
 Current phase: WEB-FE-PORTAL-HOME-LCP-IMAGE-v1.51 WEB_CLOSED.
 
 Current decision: v1.51 FE Portal home LCP image slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
