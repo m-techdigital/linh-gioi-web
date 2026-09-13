@@ -1,3 +1,4 @@
+import { AccessJourney } from "../../components/AccessJourney";
 import {
   ActivityTimeline,
   ActivityTimelineItem,
@@ -25,6 +26,7 @@ export default function Page() {
       description="Recovery journey fixture giúp kiểm tra hierarchy và trạng thái trước khi auth/recovery backend contract được chấp nhận."
       boundary="No real account lookup, email delivery, recovery token or credential mutation exists in this Web Program task."
     >
+      <AccessJourney journey="recovery" />
       <InlineFeedback tone="warning" title="Recovery fixture only">
         Không gửi email/token recovery và không lookup tài khoản thật.
       </InlineFeedback>

@@ -3,10 +3,10 @@
 Current implementation task:
 
 ```text
-WEB-PORTAL-ACCESS-ONBOARDING-UX-DEPTH-v1.36
+WEB-SHARED-WORKSPACE-VISUAL-CLOSURE-v1.37
 ```
 
-Primary focus: deepen Portal access/onboarding UX across login, registration and post-access guidance using shared page/form/case/timeline foundations. Keep credential validation, account creation and session establishment fixture-only until accepted Auth/API/DB contracts exist. Extend `packages/*` first if a reusable onboarding-step pattern emerges.
+Primary focus: fix runtime-observed shared workspace container, button, and mobile boundary presentation in packages/ui. Reuse Portal v1.36 access browser checks, add regression checks for computed layout, inspect Portal/Ops desktop/mobile. Preserve public brand styles and disabled fixture behavior.
 
 ## Base First
 Search and extend `packages/*` before app-local duplication. Evidence Reuse / Build Once remains mandatory.

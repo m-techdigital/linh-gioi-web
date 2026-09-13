@@ -57,3 +57,22 @@ export const portalRecoveryFixture = {
     { title: "Đặt lại credential", timestamp: "Bước 4", description: "Không có credential mutation hay password reset backend." },
   ],
 } as const;
+
+// Presentation scenarios only: these steps never indicate a real authenticated session.
+export const portalAccessJourneys = {
+  login: [
+    { title: "Thông tin đăng nhập", description: "Xem trước thông tin cần chuẩn bị. Không nhập mật khẩu thật.", state: "current", statusLabel: "Đang xem bản mẫu" },
+    { title: "Xác minh truy cập", description: "Đăng nhập chưa mở; chưa có phiên truy cập được tạo.", state: "blocked", statusLabel: "Chưa khả dụng" },
+    { title: "Tài khoản & nhân vật", description: "Có thể khám phá bản mẫu Portal ngay lúc này.", state: "upcoming", statusLabel: "Bước tiếp theo dự kiến" }
+  ],
+  register: [
+    { title: "Thông tin cơ bản", description: "Email và tên hiển thị chỉ minh họa bố cục đăng ký.", state: "current", statusLabel: "Đang xem bản mẫu" },
+    { title: "Điều khoản & xác minh", description: "Điều khoản và cách xác minh sẽ được công bố khi đăng ký mở.", state: "blocked", statusLabel: "Chưa khả dụng" },
+    { title: "Bắt đầu hành trình", description: "Sau khi đăng ký được mở, hướng dẫn sẽ dẫn tới tài khoản và nhân vật.", state: "upcoming", statusLabel: "Bước tiếp theo dự kiến" }
+  ],
+  recovery: [
+    { title: "Nhận diện tài khoản", description: "Xem trước bước cung cấp thông tin; không tìm tài khoản thật.", state: "current", statusLabel: "Đang xem bản mẫu" },
+    { title: "Xác minh quyền sở hữu", description: "Chưa có phương thức xác minh hoặc gửi email khôi phục.", state: "blocked", statusLabel: "Chưa khả dụng" },
+    { title: "Trở lại Portal", description: "Chỉ tiếp tục khi quyền truy cập được xác nhận trong hệ thống chính thức.", state: "upcoming", statusLabel: "Bước tiếp theo dự kiến" }
+  ]
+} as const;

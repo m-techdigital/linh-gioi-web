@@ -2,6 +2,7 @@ import "@lgo-web/design-tokens/tokens.css";
 import "@lgo-web/ui/shell.css";
 import "@lgo-web/ui/forms.css";
 import "@lgo-web/ui/data.css";
+import "@lgo-web/ui/progress.css";
 import "./globals.css";
 import { WorkspaceAppShell, type WorkspaceShellNavItem } from "@lgo-web/ui";
 import type { ReactNode } from "react";

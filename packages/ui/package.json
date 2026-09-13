@@ -8,7 +8,8 @@
     ".": "./src/index.ts",
     "./shell.css": "./src/shell.css",
     "./forms.css": "./src/forms.css",
-    "./data.css": "./src/data.css"
+    "./data.css": "./src/data.css",
+    "./progress.css": "./src/progress.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

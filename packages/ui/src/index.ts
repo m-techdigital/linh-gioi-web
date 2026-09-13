@@ -51,3 +51,5 @@ export {
 export type { FormFieldControlProps } from "./forms";
 export { ActivityTimeline, ActivityTimelineItem, CaseSummary, CaseSummaryItem, DataTable, DataToolbar, KeyValueGrid, KeyValueItem, MetricCard, MetricGrid, PaginationBar } from "./data";
 export type { DataTableColumn, DataTableRow } from "./data";
+export { ProgressSteps, ProgressStep } from "./progress";
+export type { ProgressStepState } from "./progress";

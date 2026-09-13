@@ -1,3 +1,13 @@
+Current phase: v1.36 source/runtime verified; visual review found inherited workspace layout defects. Next task WEB-SHARED-WORKSPACE-VISUAL-CLOSURE-v1.37.
+
+Current decision: WEB_FIX_REQUIRED (visual); source/runtime evidence retained.
+
+- Shared ProgressSteps and Portal access journey implemented; /access connects preview account and characters.
+- Portal build PASS; HTTP 7/7; Playwright desktop/mobile 8/8 PASS.
+- Visual inspection executed: missing shared container/button styling and cramped mobile boundary banner require v1.37.
+- Ops v1.35 build now PASS; 4/4 HTTP smoke. Actual local runtime Node 26.8.1 / pnpm 10.15.0 / Next 16.3.4; target Node 24.20.0 not verified.
+- Imported workspace baseline cc74182; supplied attachment contained no authoritative ZIP.
+
 Current phase: WEB-OPS-GAME-OPERATIONS-UX-DEPTH-v1.35 closed at source level; next implementation task is WEB-PORTAL-ACCESS-ONBOARDING-UX-DEPTH-v1.36.
 
 Current decision: LGO_WEB_OPS_GAME_OPERATIONS_UX_DEPTH_SOURCE_READY_RUNTIME_ENV_LIMITED_v1.35
