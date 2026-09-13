@@ -41,6 +41,21 @@ export default function AccessibilityReadabilityPage() {
             <LinkButton href="/performance" tone="gold">Hiệu năng/copy budget</LinkButton>
           </div>
         </GameCard>
+        <figure className="lgo-accessibility-design-board lgo-panel" aria-label="Accessibility readability route map reference art">
+          <img
+            src="/game-art/design-boards/accessibility-readability-route-map.svg"
+            alt="Accessibility readability route map board"
+            loading="eager"
+          />
+          <figcaption>
+            <StatusBadge tone="spirit">Game reference art</StatusBadge>
+            <strong>Readability là route map rõ ràng, không phải claim audit pháp lý.</strong>
+            <span>
+              Board này dùng visual thật từ LinhGioiOnline để nối heading clarity, focus order, mobile scannability
+              và non-claim gần CTA mà không claim formal WCAG audit hoặc personal settings backend.
+            </span>
+          </figcaption>
+        </figure>
         <SectionHeading eyebrow="Readability path" title="Một trang để kiểm tra cách người chơi đọc website">
           Ưu tiên scan nhanh trên mobile, focus order rõ cho keyboard, CTA text cụ thể và non-claim gần các surface dễ hiểu nhầm.
         </SectionHeading>

@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-ACCESSIBILITY-DESIGN-BOARD-v1.78 WEB_CLOSED.
+
+Current decision: v1.78 FE public accessibility design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.78 adds a real LinhGioiOnline world-hub route-map reference-art SVG to `/accessibility`.
+- The accessibility readability board renders with accessible name `Accessibility readability route map board`, eager loading and responsive layout while keeping formal WCAG/legal/settings-backend non-claims explicit.
+- v1.78 evidence: RED browser/e2e reproduced missing accessibility route-map board on `/accessibility`; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded SVG natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.79.
+
 Current phase: WEB-FE-PUBLIC-CLOSED-TESTER-DESIGN-BOARD-v1.77 WEB_CLOSED.
 
 Current decision: v1.77 FE public closed tester design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
