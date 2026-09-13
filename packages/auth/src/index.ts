@@ -1,4 +1,5 @@
 export const authStatus = "NO_PRODUCTION_AUTH" as const;
+export const backendContractStatus = "NO_ACCEPTED_BACKEND_CONTRACT" as const;
 export const authBoundary = "Auth helpers blocked until backend contract" as const;
 
 export type PortalShellState =

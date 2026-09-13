@@ -1,3 +1,15 @@
+Current phase: WEB-08-GAME-CONTRACT-SYNC-v1.0 WEB_BLOCKED_EXTERNAL_CONTRACT.
+
+Current decision: WEB-08 intake gate verified as blocked. Entire program is NOT production-complete.
+
+- WEB-08 blocked-state spec/report/handoff and validator now record the missing acceptance inputs.
+- Sibling game repo `../LinhGioiOnline` was inspected at commit `efa46a898b738cb84f275463e6449a8cde48e177`; it had a dirty worktree, so it is not a sealed accepted web-contract baseline.
+- Existing accepted game-side governance/combat markers, including `M6_COMBAT_PROTOCOL_GAMEDATA_CONTRACT_ACCEPTED_v0.40.0`, are useful context but not sufficient for Portal/Ops web integration.
+- Required missing inputs remain: canonical Java/Spring Boot commit/API version, owner-approved endpoint inventory/schema, auth/session/expiry/error semantics, permission and audit requirements, integration environment and test-account procedure.
+- packages/contracts/src/index.ts still explicitly declares NO_ACCEPTED_BACKEND_CONTRACT. WEB-09/10 remain incomplete.
+
+## Previous checkpoint records
+
 Current phase: WEB-OPS-REVIEW-WORKSPACE-DEPTH-v1.38 WEB_CLOSED (fixture UX scope).
 
 Current decision: WEB_BLOCKED_EXTERNAL_CONTRACT for WEB-08-GAME-CONTRACT-SYNC-v1.0. Entire program is NOT production-complete.
@@ -9,8 +21,6 @@ Current decision: WEB_BLOCKED_EXTERNAL_CONTRACT for WEB-08-GAME-CONTRACT-SYNC-v1
 - packages/contracts/src/index.ts still explicitly declares NO_ACCEPTED_BACKEND_CONTRACT. No accepted endpoint, session, RBAC or audit contracts were supplied; WEB-08/09/10 remain incomplete.
 - Baseline imported from workspace as cc74182; authoritative v1.35 ZIP was not attached. Full/delta package comparisons use named git baselines and do not claim original ZIP identity.
 - Local runtime Node 26.8.1 / pnpm 10.15.0 / Next 16.3.4; Node 24.20.0 target not verified.
-
-## Previous checkpoint records
 
 Current phase: WEB-SHARED-WORKSPACE-VISUAL-CLOSURE-v1.37 WEB_CLOSED. v1.36 visual repair closed by v1.37 evidence.
 

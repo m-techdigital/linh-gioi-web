@@ -10,6 +10,8 @@ Status: WEB_BLOCKED_EXTERNAL_CONTRACT.
 
 v1.36–v1.38 fixture UX work and its discovered visual repairs are closed. Continue the program with the accepted backend Auth/API/DB/RBAC/audit contract. The program is not production-complete.
 
+Latest WEB-08 intake verification: blocked-state spec/report/handoff and validator are present. The sibling game repo was inspected at commit `efa46a898b738cb84f275463e6449a8cde48e177`, but it had a dirty worktree and only provided governance/combat/network/gamedata context, not accepted web Auth/API/DB/RBAC/audit contracts.
+
 Required input: canonical Java/Spring Boot repository commit and API version; owner-approved endpoint inventory/schema; auth/session/expiry/error semantics; permission and audit requirements; integration environment and test-account procedure. Read and record these centrally in packages/contracts before any real Portal/Ops integration. A source file or a fixture alone is not owner acceptance.
 
 After acceptance: SELECT → SPEC_LOCK → IMPLEMENT contract records/client generation only where supported → SOURCE_VERIFY → RUNTIME_VERIFY → VISUAL_REVIEW (applicable scope recorded) → HANDOFF → CLOSED. Then select WEB-09 integration flows and WEB-10 deployment/security gates according to the master roadmap.
