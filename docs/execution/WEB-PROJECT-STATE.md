@@ -1,3 +1,14 @@
+Current phase: WEB-FE-ACCESSIBILITY-AXE-MATRIX-v1.58 WEB_CLOSED.
+
+Current decision: v1.58 FE accessibility axe matrix slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.58 adds an axe-powered browser/e2e accessibility route matrix across public, Portal and Ops representative routes.
+- The matrix found and closed Ops `/support` mobile overflow caused by long metric fixture/contract tokens; shared metric card text now wraps safely.
+- v1.58 evidence: RED browser/e2e reproduced Ops `/support` mobile overflow 19px; source validator PASS; UI/Web/Portal/Ops typecheck PASS; Web/Portal/Ops production build PASS; Playwright desktop/mobile axe/font-size/overflow matrix PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.59.
+
 Current phase: WEB-FE-SHARED-PAGINATION-BOUNDARY-v1.57 WEB_CLOSED.
 
 Current decision: v1.57 FE shared pagination boundary slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

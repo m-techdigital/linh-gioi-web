@@ -167,3 +167,13 @@
 .lgo-case-summary-item dd span { color: var(--lgo-color-text-muted); font-size: .9rem; }
 .lgo-case-summary-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
 @media (max-width: 700px) { .lgo-case-summary-heading { flex-direction: column; } }
+
+/* WEB v1.58 accessibility axe matrix: prevent long fixture/contract tokens inside metric cards from creating page-level mobile overflow. */
+.lgo-metric-card { min-width: 0; }
+.lgo-metric-card .lgo-status-badge,
+.lgo-metric-value,
+.lgo-metric-detail {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
