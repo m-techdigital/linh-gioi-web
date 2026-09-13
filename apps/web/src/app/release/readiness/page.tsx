@@ -41,6 +41,19 @@ export default function ReleaseReadinessPage() {
             <LinkButton href="/support/safety" tone="jade">Safety support</LinkButton>
           </div>
         </GameCard>
+        <figure className="lgo-release-readiness-design-board lgo-panel" aria-label="Release readiness production board">
+          <img
+            src="/game-art/design-boards/release-readiness-production-board.svg"
+            alt="Release readiness production board"
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption>
+            <StatusBadge tone="spirit">Game reference art</StatusBadge>
+            <strong>Production gate before tester expectation</strong>
+            <span>Small LinhGioiOnline production-board asset that visualizes owner gates without claiming a public build, entitlement, ticket backend or production launch.</span>
+          </figcaption>
+        </figure>
         <SectionHeading eyebrow="Readiness before conversion" title="Release clarity phải đi trước mọi CTA nhạy cảm">
           v1.19 tập trung vào product web: owner gates, tester expectation copy, download/status/support alignment và release route clarity.
         </SectionHeading>

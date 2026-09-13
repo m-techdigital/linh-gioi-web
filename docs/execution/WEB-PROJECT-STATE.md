@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-RELEASE-READINESS-DESIGN-BOARD-v1.71 WEB_CLOSED.
+
+Current decision: v1.71 FE public release readiness design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.71 adds a real LinhGioiOnline production-board reference-art SVG to `/release/readiness`.
+- The release readiness board renders with accessible name `Release readiness production board`, eager loading and responsive layout while keeping public build/entitlement/ticket backend/launch non-claims explicit.
+- v1.71 evidence: RED browser/e2e reproduced missing release readiness production board on `/release/readiness`; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded SVG natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.72.
+
 Current phase: WEB-FE-PUBLIC-ROADMAP-DESIGN-BOARD-v1.70 WEB_CLOSED.
 
 Current decision: v1.70 FE public roadmap design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
