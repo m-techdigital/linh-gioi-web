@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-JOURNEY-DESIGN-BOARD-v1.80 WEB_CLOSED.
+
+Current decision: v1.80 FE public journey design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.80 adds a real LinhGioiOnline route-flow reference-art SVG to `/journey`.
+- The journey route-flow board renders with accessible name `Journey session route flow board`, eager loading and responsive layout while keeping live guild/account/inventory/backend non-claims explicit.
+- v1.80 evidence: RED browser/e2e reproduced missing journey route-flow board on `/journey`; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded SVG natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.81.
+
 Current phase: WEB-FE-PUBLIC-START-DESIGN-BOARD-v1.79 WEB_CLOSED.
 
 Current decision: v1.79 FE public start design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
