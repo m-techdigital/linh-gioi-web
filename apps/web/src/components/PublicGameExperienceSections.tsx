@@ -137,6 +137,7 @@ export function ClassArtSpotlight() {
               width={1280}
               height={1280}
               sizes="(max-width: 720px) 92vw, 620px"
+              loading="eager"
             />
           </div>
           <figcaption>Modular gear board · Võ</figcaption>
@@ -149,7 +150,7 @@ export function ClassArtSpotlight() {
               width={820}
               height={820}
               sizes="(max-width: 720px) 50vw, 260px"
-              loading="lazy"
+              loading="eager"
             />
           </div>
           <figcaption>{voSkillArt.publicLabel}</figcaption>

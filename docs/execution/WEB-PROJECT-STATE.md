@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-CLASS-ART-LOADING-v1.54 WEB_CLOSED.
+
+Current decision: v1.54 FE public class art loading slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.54 updates public ClassArtSpotlight image loading intent on `/classes`.
+- Both Võ class art board images now render with explicit `loading="eager"` after browser review reported the starter art board as LCP-sensitive.
+- v1.54 evidence: RED source validator reproduced missing explicit loading intent on both class art board images, and browser review reported the starter art board as LCP-sensitive; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.55.
+
 Current phase: WEB-FE-PUBLIC-CINEMATIC-IMAGE-LOADING-v1.53 WEB_CLOSED.
 
 Current decision: v1.53 FE public cinematic image loading slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
