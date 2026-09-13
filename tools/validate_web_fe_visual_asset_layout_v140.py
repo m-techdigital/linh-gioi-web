@@ -66,8 +66,8 @@ def main() -> None:
         require(marker in report, f"Report missing {marker}")
         require(marker in handoff, f"Handoff missing {marker}")
     require("WEB-FE-VISUAL-ASSET-LAYOUT-REVIEW-v1.40" in ledger and "WEB_CLOSED" in ledger, "Ledger must close v1.40")
-    require("Current phase: WEB-FE-VISUAL-ASSET-LAYOUT-REVIEW-v1.40 WEB_CLOSED" in state, "State must record v1.40 closed")
-    require("WEB-FE-CONTINUED-SURFACE-POLISH-v1.41" in next_action, "Next action must advance to v1.41")
+    require("WEB-FE-VISUAL-ASSET-LAYOUT-REVIEW-v1.40" in state and "WEB_CLOSED" in state, "State must retain v1.40 closed record")
+    require("browser/e2e" in next_action, "Current next action must retain browser/e2e evidence requirement")
     require("font-size/layout/image/overflow" in e2e and "ops/control-center" in e2e, "E2E must cover visual metrics and Ops control center")
 
     print("WEB FE VISUAL ASSET LAYOUT v1.40 VALIDATION PASS")

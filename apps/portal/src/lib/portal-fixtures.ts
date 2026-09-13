@@ -76,6 +76,29 @@ export const portalJourneyFixture = {
   ]
 } as const;
 
+export const portalHomeVisualPanels = [
+  {
+    id: "portal-home-world",
+    src: "/game-art/world/dong-mon-skyline.webp",
+    alt: "Portal home Đông Môn world concept",
+    width: 1360,
+    height: 765,
+    claim: "WORLD_CONCEPT",
+    title: "Bắt đầu từ Đông Môn",
+    description: "Home Portal cần cho người chơi cảm giác đang quay lại một thế giới cụ thể, nhưng dữ liệu vẫn là fixture."
+  },
+  {
+    id: "portal-home-vo",
+    src: "/game-art/classes/vo-lv1-starter-atlas.webp",
+    alt: "Portal home development art Võ",
+    width: 1280,
+    height: 1280,
+    claim: "DEVELOPMENT_ART_PREVIEW",
+    title: "Nhìn thấy nhân vật trước khi có BE",
+    description: "Art preview giúp dashboard bớt khô, không tạo character DTO hay production profile riêng."
+  }
+] as const;
+
 
 export const portalSupportTopics = [
   { id: "account-access", title: "Truy cập tài khoản", description: "Khôi phục quyền truy cập, session và security fixture." },

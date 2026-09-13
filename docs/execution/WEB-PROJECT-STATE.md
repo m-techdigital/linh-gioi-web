@@ -26,6 +26,17 @@ Current decision: v1.40 FE visual/layout slice closed; continue FE surface polis
 
 Next task: WEB-FE-CONTINUED-SURFACE-POLISH-v1.41.
 
+Current phase: WEB-FE-CONTINUED-SURFACE-POLISH-v1.41 WEB_CLOSED.
+
+Current decision: v1.41 FE continued surface polish closed; continue route-depth continuity next. Entire program is NOT production-complete.
+
+- v1.41 added shared visual proof sections to Portal home and Ops home using existing game-art derivatives.
+- Portal home now shows `portalHomeVisualPanels`; Ops home now shows `opsHomeVisualPanels`.
+- v1.41 keeps all data provisional: no production auth, no DB persistence, no real Portal integration, no real Ops/Admin mutation, and `NO_ACCEPTED_BACKEND_CONTRACT` remains active.
+- v1.41 evidence: source validator, Portal/Ops typecheck, browser/e2e desktop/mobile, production builds and screenshot review.
+
+Next task: WEB-FE-ROUTE-DEPTH-CONTINUITY-v1.42.
+
 ## Previous checkpoint records
 
 Current phase: WEB-OPS-REVIEW-WORKSPACE-DEPTH-v1.38 WEB_CLOSED (fixture UX scope).

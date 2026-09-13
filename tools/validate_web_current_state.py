@@ -108,6 +108,7 @@ VALIDATORS = [
     "validate_web_game_contract_sync_v10.py",
     "validate_web_portal_journey_demo_v139.py",
     "validate_web_fe_visual_asset_layout_v140.py",
+    "validate_web_fe_continued_surface_polish_v141.py",
 ]
 def main() -> int:
     check_forbidden_roots(); check_no_app_api_routes(); check_no_generated_artifacts(); require_non_claims()
@@ -161,7 +162,7 @@ def main() -> int:
         "LGO_WEB_PUBLIC_UX_CONTENT_POLISH_READY_v1.6",
         "LGO_WEB_RUNTIME_BROWSER_E2E_MATRIX_PASSED_v1.5",
     ])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-CONTINUED-SURFACE-POLISH-v1.41")
+    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ROUTE-DEPTH-CONTINUITY-v1.42")
     require_text("docs/execution/WEB-NEXT-ACTION.md", "browser/e2e")
     for phrase in ["No independent backend", "No CMS", "No production deployment", "No payment/shop/economy"]:
         require_text("docs/execution/WEB-NON-CLAIMS.md", phrase)

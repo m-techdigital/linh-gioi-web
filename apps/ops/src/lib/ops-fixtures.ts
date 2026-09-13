@@ -85,6 +85,29 @@ export const opsVisualProofPanels = [
   }
 ] as const;
 
+export const opsHomeVisualPanels = [
+  {
+    id: "ops-home-world",
+    src: "/game-art/world/dong-mon-skyline.webp",
+    alt: "Ops home world concept",
+    width: 1360,
+    height: 765,
+    claim: "WORLD_CONCEPT",
+    title: "Bản đồ ca trực gắn với thế giới",
+    description: "Ops home dùng ảnh để định vị bối cảnh vận hành; đây không phải server map, telemetry hay session thật."
+  },
+  {
+    id: "ops-home-skill",
+    src: "/game-art/classes/vo-lv1-skill-atlas.webp",
+    alt: "Ops home skill development art",
+    width: 820,
+    height: 820,
+    claim: "DEVELOPMENT_ART_PREVIEW",
+    title: "LiveOps vẫn chỉ là preview",
+    description: "Skill art tạo visual anchor cho vận hành game, nhưng publish/rollback/audit thật vẫn chờ contract."
+  }
+] as const;
+
 export const opsReviewQueueFixtures = [
   { title: "Hỗ trợ người chơi", count: opsSupportQueueFixtures.length, href: "/support", description: "Xem hàng đợi hỗ trợ mẫu và thông tin cần làm rõ." },
   { title: "An toàn cộng đồng", count: 1, href: "/trust-safety", description: "Rà soát ngữ cảnh trước khi cân nhắc hành động. Không có xử phạt thật." },

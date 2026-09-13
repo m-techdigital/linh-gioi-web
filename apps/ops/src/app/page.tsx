@@ -8,8 +8,13 @@ import {
   Player360Placeholder,
   RuntimeStatusPlaceholder,
   LinkButton,
+  StatusBadge,
+  VisualProofCard,
+  VisualProofGrid,
   WorkspacePage
 } from "@lgo-web/ui";
+import Image from "next/image";
+import { NO_ACCEPTED_BACKEND_CONTRACT, NO_REAL_OPS_MUTATION, opsHomeVisualPanels } from "../lib/ops-fixtures";
 
 const workspaces = [
   { title: "Control Center", href: "/control-center" },
@@ -33,6 +38,34 @@ export default function OpsHomePage() {
       boundaryBadge="Contract boundary"
       boundary={boundary}
     >
+      <section className="lgo-panel" aria-labelledby="ops-home-visual-heading">
+        <div className="lgo-section-heading">
+          <p className="lgo-eyebrow">Visual route map</p>
+          <h2 id="ops-home-visual-heading">Bản đồ vận hành trực quan</h2>
+          <p>Ops home dùng hình ảnh để gom các workspace thành một bản đồ review dễ đọc, không mở thao tác thật.</p>
+        </div>
+        <VisualProofGrid aria-label="Ops home visual panels">
+          {opsHomeVisualPanels.map((panel) => (
+            <VisualProofCard
+              key={panel.id}
+              eyebrow={panel.claim}
+              title={panel.title}
+              description={panel.description}
+              media={(
+                <Image
+                  src={panel.src}
+                  alt={panel.alt}
+                  width={panel.width}
+                  height={panel.height}
+                  sizes="(max-width: 720px) 100vw, 50vw"
+                />
+              )}
+              meta={<StatusBadge tone="shadow">{NO_ACCEPTED_BACKEND_CONTRACT}</StatusBadge>}
+            />
+          ))}
+        </VisualProofGrid>
+        <p className="lgo-data-list-meta">{NO_REAL_OPS_MUTATION} · {NO_ACCEPTED_BACKEND_CONTRACT}</p>
+      </section>
       <DataList aria-label="Ops workspaces">
         {workspaces.map((workspace) => (
           <DataListItem
