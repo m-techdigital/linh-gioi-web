@@ -101,7 +101,7 @@ def check_tests_and_docs() -> None:
         "| WEB-FE-SHARED-PAGINATION-BOUNDARY-REASON-v1.66 | WEB-FE | WEB_CLOSED |",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.67",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
         "browser/e2e",
     ])
 

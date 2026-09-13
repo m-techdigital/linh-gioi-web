@@ -7,6 +7,7 @@ import {
   DownloadTrustCta,
   DownloadTrustGateBoard,
   ReleaseEvidenceChecklist,
+  ReleaseTrustDesignBoard,
   StatusTrustBoard
 } from "../../../components/PublicTrustSections";
 import { WorldGameplayLoopCta } from "../../../components/PublicWorldGameplayLoopSections";
@@ -53,6 +54,7 @@ export default function DownloadTrustPage() {
         <SectionHeading eyebrow="Trust-first download" title="Người chơi cần bằng chứng trước khi tải">
           Runtime/browser/e2e chỉ là guardrail nội bộ. Public download cần artifact thật, SHA256, provenance, known limitations và support expectation.
         </SectionHeading>
+        <ReleaseTrustDesignBoard />
         <PerformanceBudgetCta />
         <DownloadTrustGateBoard />
         <ReleaseEvidenceChecklist />

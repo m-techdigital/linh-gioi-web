@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-DOWNLOAD-TRUST-DESIGN-BOARD-v1.67 WEB_CLOSED.
+
+Current decision: v1.67 FE public download trust design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.67 adds a real LinhGioiOnline reference-art SVG to `/download/trust`.
+- The release trust gate board renders with an accessible image name, eager loading, responsive layout and zero mobile overflow.
+- v1.67 evidence: RED browser/e2e reproduced missing design board image on `/download/trust`; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded SVG natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.68.
+
 Current phase: WEB-FE-SHARED-PAGINATION-BOUNDARY-REASON-v1.66 WEB_CLOSED.
 
 Current decision: v1.66 FE shared pagination boundary reason slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

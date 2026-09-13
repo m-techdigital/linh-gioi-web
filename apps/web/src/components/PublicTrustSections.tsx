@@ -33,6 +33,25 @@ export function DownloadTrustGateBoard() {
   );
 }
 
+
+export function ReleaseTrustDesignBoard() {
+  return (
+    <figure className="lgo-release-trust-board lgo-panel" aria-label="Release trust gate design board">
+      <img
+        src="/game-art/design-boards/release-trust-gate.svg"
+        alt="Release trust gate design board"
+        loading="eager"
+        decoding="async"
+      />
+      <figcaption>
+        <StatusBadge tone="spirit">Game reference art</StatusBadge>
+        <strong>Gate review before public download</strong>
+        <span>Small reference board copied from LinhGioiOnline docs; it visualizes the release gate without claiming a downloadable build.</span>
+      </figcaption>
+    </figure>
+  );
+}
+
 export function ReleaseEvidenceChecklist() {
   return (
     <section className="lgo-panel lgo-release-evidence" aria-labelledby="release-evidence-heading">
