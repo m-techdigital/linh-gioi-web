@@ -10,18 +10,22 @@
 
 .lgo-workspace-skip {
   position: fixed;
-  left: 1rem;
-  top: -5rem;
+  left: max(.75rem, env(safe-area-inset-left));
+  top: 0;
   z-index: 100;
-  padding: .75rem 1rem;
+  max-width: min(calc(100vw - 2rem), 22rem);
+  padding: .65rem .9rem;
   border-radius: var(--lgo-radius-md);
   background: var(--lgo-color-warm-gold);
   color: #07111f;
   font-weight: 800;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+  transform: translateY(calc(-100% - .75rem));
 }
 .lgo-workspace-skip:focus,
 .lgo-workspace-skip:focus-visible {
-  top: 1rem;
+  transform: translateY(.75rem);
   outline: 3px solid rgba(49, 216, 232, .8);
   outline-offset: 3px;
 }

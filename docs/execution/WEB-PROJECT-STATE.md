@@ -1,3 +1,15 @@
+Current phase: WEB-FE-WORKSPACE-SKIP-LINK-VISUAL-v1.47 WEB_CLOSED.
+
+Current decision: v1.47 FE shared workspace skip link visual slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.47 updates shared `.lgo-workspace-skip` behavior in `packages/ui` for Portal and Ops workspaces.
+- Hidden skip link now stays anchored at `top: 0` and hides with `transform`, avoiding full-page screenshot overlay artifacts after scroll.
+- Focused skip link remains the first keyboard target, appears near the viewport top, keeps readable font size and does not create horizontal overflow on desktop/mobile.
+- v1.47 evidence: RED e2e reproduced negative-top hidden skip link; source validator PASS; UI/Portal/Ops typecheck PASS; Portal/Ops production build PASS; Playwright desktop/mobile hidden/focused/font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.48.
+
 Current phase: WEB-FE-OPS-BLOCKED-ACTION-KEYBOARD-v1.46 WEB_CLOSED.
 
 Current decision: v1.46 FE Ops/Admin blocked action keyboard slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
