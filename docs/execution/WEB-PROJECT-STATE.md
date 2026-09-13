@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-RELEASE-NARRATIVE-DESIGN-BOARD-v1.74 WEB_CLOSED.
+
+Current decision: v1.74 FE public release narrative design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.74 adds a real LinhGioiOnline M0-to-M1 gate reference-art SVG to `/release`.
+- The release narrative gate board renders with accessible name `Release narrative M0 to M1 gate board`, eager loading and responsive layout while keeping public build/open beta/entitlement/backend non-claims explicit.
+- v1.74 evidence: RED browser/e2e reproduced missing release narrative M0-to-M1 gate board on `/release`; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded SVG natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.75.
+
 Current phase: WEB-FE-PUBLIC-SUPPORT-HELP-DESIGN-BOARD-v1.73 WEB_CLOSED.
 
 Current decision: v1.73 FE public support help design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

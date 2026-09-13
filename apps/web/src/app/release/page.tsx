@@ -45,6 +45,21 @@ export default function ReleaseNarrativePage() {
             <LinkButton href="/support/safety" tone="jade">Safety support</LinkButton>
           </div>
         </GameCard>
+        <figure className="lgo-release-narrative-design-board lgo-panel" aria-label="Release narrative M0 to M1 gate reference art">
+          <img
+            src="/game-art/design-boards/release-narrative-m0-to-m1-gate.svg"
+            alt="Release narrative M0 to M1 gate board"
+            loading="eager"
+          />
+          <figcaption>
+            <StatusBadge tone="gold">Game reference art</StatusBadge>
+            <strong>M0 → M1 là gate có bằng chứng, không phải nút mở beta.</strong>
+            <span>
+              Board này dùng visual thật từ LinhGioiOnline để giải thích staging: content-ready, trust checks,
+              closed-test prerequisites và các non-claim còn giữ trước khi có accepted backend/build entitlement.
+            </span>
+          </figcaption>
+        </figure>
         <SectionHeading eyebrow="Player trust first" title="Release wording phải chứng minh trước, rồi mới hứa sau">
           v1.18 tập trung vào product web: player trust, closed-test readiness, staged release messaging và route clarity giữa download/status/support.
         </SectionHeading>
