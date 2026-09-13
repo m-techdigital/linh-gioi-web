@@ -1,6 +1,7 @@
 export const PROVISIONAL_WEB_FIXTURE = "PROVISIONAL_WEB_FIXTURE" as const;
 export const NO_REAL_OPS_MUTATION = "NO_REAL_OPS_MUTATION" as const;
 export const NOT_CANONICAL_BACKEND_CONTRACT = "NOT_CANONICAL_BACKEND_CONTRACT" as const;
+export const NO_ACCEPTED_BACKEND_CONTRACT = "NO_ACCEPTED_BACKEND_CONTRACT" as const;
 
 export const opsPlayerFixtures = [
   { id: "fixture-001", displayName: "Fixture Player 001", accountState: "Review fixture", characterSummary: "2 characters · illustrative", trustState: "No canonical trust score", surface: "Account review preview" },
@@ -49,6 +50,39 @@ export const opsGameOperationActivityFixtures = [
   { id: "gameop-a", title: "World fixture inspected", timestamp: "11:02 · fixture", description: "Presentation-only world/session review.", meta: "No session query API" },
   { id: "gameop-b", title: "Event fixture previewed", timestamp: "11:08 · fixture", description: "No scheduler, publish or rollback operation was executed.", meta: "NO_REAL_OPS_MUTATION" },
   { id: "gameop-c", title: "Operational action remained blocked", timestamp: "11:11 · fixture", description: "Restart, drain, publish and rollback actions stay disabled until accepted contracts exist.", meta: "NOT_CANONICAL_BACKEND_CONTRACT" }
+] as const;
+
+export const opsVisualProofPanels = [
+  {
+    id: "ops-dong-mon",
+    src: "/game-art/world/dong-mon-skyline.webp",
+    alt: "Ops visual proof Đông Môn world concept",
+    width: 1360,
+    height: 765,
+    claim: "WORLD_CONCEPT",
+    title: "Đọc ca trực bằng bối cảnh thế giới",
+    description: "Control Center cần nhìn giống một màn vận hành game, nhưng ảnh chỉ là visual demo; không phải telemetry hay dữ liệu server."
+  },
+  {
+    id: "ops-vo-kit",
+    src: "/game-art/classes/vo-lv1-starter-atlas.webp",
+    alt: "Ops visual proof development art Võ",
+    width: 1280,
+    height: 1280,
+    claim: "DEVELOPMENT_ART_PREVIEW",
+    title: "Nhận diện nhân vật trong review",
+    description: "Ảnh development art giúp review queue có ngữ cảnh hình ảnh, vẫn không tạo character DTO hay contract riêng."
+  },
+  {
+    id: "ops-vo-skill",
+    src: "/game-art/classes/vo-lv1-skill-atlas.webp",
+    alt: "Ops visual proof kỹ năng Võ",
+    width: 820,
+    height: 820,
+    claim: "DEVELOPMENT_ART_PREVIEW",
+    title: "Kỹ năng và sự kiện chỉ là minh họa",
+    description: "LiveOps preview dùng art để kiểm tra layout/hierarchy; publish, rollback và audit thật vẫn bị chặn bởi backend contract."
+  }
 ] as const;
 
 export const opsReviewQueueFixtures = [

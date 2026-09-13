@@ -52,8 +52,8 @@ a { color: inherit; }
   font-size: 0.78rem;
 }
 .lgo-section-heading h1, .lgo-section-heading h2, h1, h2, h3 { font-family: var(--lgo-font-display); line-height: 1.08; }
-h1 { font-size: clamp(2.5rem, 7vw, 5.5rem); margin: 0; }
-h2 { font-size: clamp(1.8rem, 3.5vw, 3rem); margin: 0; }
+h1 { font-size: clamp(2.25rem, 5vw, 4rem); margin: 0; }
+h2 { font-size: clamp(1.6rem, 2.7vw, 2.55rem); margin: 0; }
 p { color: var(--lgo-color-text-muted); line-height: 1.7; }
 .lgo-button, .lgo-link-button {
   border: 1px solid rgba(255,255,255,0.14);
@@ -1322,7 +1322,7 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
 }
 .lgo-cinematic-copy { position: relative; z-index: 2; }
 .lgo-hero-kicker { color: var(--lgo-color-warm-gold); letter-spacing: .19em; text-transform: uppercase; font-size: .74rem; font-weight: 900; margin: 1rem 0 .8rem; }
-.lgo-cinematic-copy h1 { max-width: 12ch; font-size: clamp(3.2rem, 6.7vw, 6.8rem); letter-spacing: -.045em; }
+.lgo-cinematic-copy h1 { max-width: 13ch; font-size: clamp(2.5rem, 4.8vw, 4rem); letter-spacing: -.025em; }
 .lgo-cinematic-copy .lgo-hero-lead { max-width: 61ch; }
 .lgo-hero-signals { margin-top: 1.4rem; display: flex; flex-wrap: wrap; gap: .55rem; align-items: center; color: rgba(230,241,248,.68); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
 .lgo-hero-signals i { width: 3px; height: 3px; border-radius: 99px; background: var(--lgo-color-spirit-cyan); box-shadow: 0 0 12px var(--lgo-color-spirit-cyan); }
@@ -1416,7 +1416,7 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
 }
 @media (max-width: 560px){
   .lgo-player-facing-stack{gap:3.5rem}.lgo-main{padding-top:1rem}.lgo-brand-nav{gap:.75rem}.lgo-nav-play{font-size:.78rem;padding:.55rem .7rem}.lgo-brand-links{gap:0}.lgo-brand-links a{padding:.55rem .6rem}
-  .lgo-cinematic-copy h1{font-size:clamp(2.8rem,15vw,4.6rem)}.lgo-cinematic-scene{min-height:360px;border-radius:1.4rem}.lgo-scene-gate{width:130px;height:185px}.lgo-scene-rift{left:55%;transform:scale(.78) rotate(9deg)}.lgo-scene-caption strong{font-size:.92rem}
+  .lgo-cinematic-copy h1{font-size:clamp(2.35rem,10vw,3.35rem)}.lgo-cinematic-scene{min-height:360px;border-radius:1.4rem}.lgo-scene-gate{width:130px;height:185px}.lgo-scene-rift{left:55%;transform:scale(.78) rotate(9deg)}.lgo-scene-caption strong{font-size:.92rem}
   .lgo-class-path-grid,.lgo-world-route,.lgo-session-loop{grid-template-columns:1fr}.lgo-class-path{min-height:340px}.lgo-class-path-grid-compact .lgo-class-path{min-height:300px}.lgo-world-route-stop{display:grid;grid-template-columns:max-content 1fr;gap:1rem}.lgo-route-marker{margin:0}.lgo-narrative-chapter{min-height:285px}.lgo-shadow-invasion{padding:1.35rem;border-radius:1.4rem}.lgo-shadow-invasion-art{min-height:285px}.lgo-invasion-portal{width:190px;height:250px}.lgo-five-path-orbit,.lgo-journey-cycle{transform:scale(.84);margin-block:-20px}.lgo-world-fantasy-panel,.lgo-path-philosophy,.lgo-guide-hero,.lgo-start-hero,.lgo-journey-hero,.lgo-paths-hero{padding:1.4rem;border-radius:1.4rem}
 }
 
@@ -2431,3 +2431,17 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
 .lgo-discovery-rift i:nth-child(3) { inset: 41%; background: rgba(194,166,255,.28); }
 @media (max-width: 960px) { .lgo-home-discovery-grid { grid-template-columns: 1fr; } .lgo-media-frame { grid-template-columns: minmax(180px, .72fr) 1fr; grid-template-rows: none; } }
 @media (max-width: 640px) { .lgo-media-frame { grid-template-columns: 1fr; grid-template-rows: 190px auto; } .lgo-media-frame-visual { min-height: 190px; } .lgo-media-frame-copy { padding: var(--lgo-space-lg); } }
+
+/* WEB v1.40 FE visual asset/layout review: cap oversized public headings after route-specific sections. */
+.lgo-public-shell main h1 { font-size: clamp(2.25rem, 5vw, 4rem); }
+.lgo-public-shell main h2 { font-size: clamp(1.6rem, 2.7vw, 2.55rem); }
+.lgo-public-shell main h3 { font-size: clamp(1.1rem, 1.8vw, 1.75rem); }
+@media (max-width: 620px) {
+  .lgo-public-shell main h1 { font-size: clamp(2.2rem, 9.6vw, 2.65rem); }
+  .lgo-public-shell main h2 { font-size: clamp(1.45rem, 7.8vw, 2rem); }
+  .lgo-public-shell main h3 { font-size: clamp(1.05rem, 5.7vw, 1.5rem); }
+}
+.lgo-public-shell main p { font-size: clamp(.98rem, 1.15vw, 1.125rem); }
+.lgo-public-shell,
+.lgo-cinematic-hero,
+.lgo-experience-hero { overflow-x: clip; }

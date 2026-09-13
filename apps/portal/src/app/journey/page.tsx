@@ -7,6 +7,8 @@ import {
   ProgressStep,
   ProgressSteps,
   StatusBadge,
+  VisualProofCard,
+  VisualProofGrid,
   WorkspacePage
 } from "@lgo-web/ui";
 import Image from "next/image";
@@ -35,25 +37,27 @@ export default function JourneyPage() {
         { href: "/support", label: "Hỗ trợ mẫu", tone: "jade" }
       ]}
     >
-      <section className="lgo-journey-art-grid" aria-label="Hình ảnh demo hành trình">
+      <VisualProofGrid aria-label="Hình ảnh demo hành trình">
         {portalJourneyFixture.artPanels.map((panel) => (
-          <article className="lgo-journey-art-card" key={panel.id}>
-            <Image
-              src={panel.src}
-              alt={panel.alt}
-              width={panel.width}
-              height={panel.height}
-              sizes="(max-width: 720px) 100vw, 50vw"
-              priority={panel.claim === "WORLD_CONCEPT"}
-            />
-            <div>
-              <StatusBadge tone={panel.claim === "WORLD_CONCEPT" ? "jade" : "gold"}>{panel.claim}</StatusBadge>
-              <h2>{panel.title}</h2>
-              <p>{panel.description}</p>
-            </div>
-          </article>
+          <VisualProofCard
+            key={panel.id}
+            eyebrow={panel.claim}
+            title={panel.title}
+            description={panel.description}
+            media={(
+              <Image
+                src={panel.src}
+                alt={panel.alt}
+                width={panel.width}
+                height={panel.height}
+                sizes="(max-width: 720px) 100vw, 50vw"
+                priority={panel.claim === "WORLD_CONCEPT"}
+              />
+            )}
+            meta={<StatusBadge tone={panel.claim === "WORLD_CONCEPT" ? "jade" : "gold"}>{panel.claim}</StatusBadge>}
+          />
         ))}
-      </section>
+      </VisualProofGrid>
 
       <ProgressSteps label="Các bước hành trình demo">
         {portalJourneyFixture.journeySteps.map((step) => (

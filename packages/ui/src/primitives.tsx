@@ -63,6 +63,39 @@ export function Grid({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
 
 
 
+
+export function VisualProofGrid({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
+  return <div {...props} className={cx("lgo-visual-proof-grid", className)} />;
+}
+
+export function VisualProofCard({
+  eyebrow,
+  title,
+  description,
+  media,
+  meta,
+  className
+}: {
+  eyebrow: string;
+  title: string;
+  description: ReactNode;
+  media: ReactNode;
+  meta?: ReactNode;
+  className?: string;
+}) {
+  return (
+    <article className={cx("lgo-visual-proof-card", className)}>
+      <div className="lgo-visual-proof-media">{media}</div>
+      <div className="lgo-visual-proof-copy">
+        <span className="lgo-card-kicker">{eyebrow}</span>
+        <h2>{title}</h2>
+        <p>{description}</p>
+        {meta ? <div className="lgo-visual-proof-meta">{meta}</div> : null}
+      </div>
+    </article>
+  );
+}
+
 export function MediaFrame({
   eyebrow,
   title,

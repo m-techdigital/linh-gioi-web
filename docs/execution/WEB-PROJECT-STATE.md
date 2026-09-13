@@ -14,6 +14,18 @@ Current decision: v1.39 FE/demo data slice closed; continue FE visual/layout rev
 
 Next task: WEB-FE-VISUAL-ASSET-LAYOUT-REVIEW-v1.40.
 
+Current phase: WEB-FE-VISUAL-ASSET-LAYOUT-REVIEW-v1.40 WEB_CLOSED.
+
+Current decision: v1.40 FE visual/layout slice closed; continue FE surface polish next. Entire program is NOT production-complete.
+
+- v1.40 reduced oversized Public typography caps and clipped decorative Public hero overflow.
+- v1.40 introduced shared `VisualProofGrid`/`VisualProofCard` ownership in `packages/ui`.
+- Portal `/journey` now consumes shared visual proof cards; Ops Control Center now has three game-art visual proof cards copied from existing web derivatives with Ops manifest provenance.
+- v1.40 keeps all visual data provisional: no production auth, no DB persistence, no real Portal integration, no real Ops/Admin mutation, and `NO_ACCEPTED_BACKEND_CONTRACT` remains active.
+- v1.40 evidence: source validator, UI/Web/Portal/Ops typecheck, browser/e2e desktop/mobile, production builds and screenshot review.
+
+Next task: WEB-FE-CONTINUED-SURFACE-POLISH-v1.41.
+
 ## Previous checkpoint records
 
 Current phase: WEB-OPS-REVIEW-WORKSPACE-DEPTH-v1.38 WEB_CLOSED (fixture UX scope).

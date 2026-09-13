@@ -24,6 +24,8 @@ export {
   Stack,
   StatusBadge,
   WorkspaceAppShell,
+  VisualProofCard,
+  VisualProofGrid,
   WorkspaceBoundaryNotice,
   WorkspaceNavigation,
   WorkspacePage

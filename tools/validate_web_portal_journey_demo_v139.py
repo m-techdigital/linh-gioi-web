@@ -57,7 +57,8 @@ def check_portal_journey() -> None:
         "DataListItem",
         "Image",
         "portalJourneyFixture",
-        "lgo-journey-art-grid",
+        "VisualProofGrid",
+        "VisualProofCard",
         "PROVISIONAL_WEB_FIXTURE",
         "NOT_CANONICAL_BACKEND_CONTRACT",
         "NO_ACCEPTED_BACKEND_CONTRACT",
@@ -108,18 +109,18 @@ def check_docs_and_evidence() -> None:
             "No DB persistence",
             "No real Portal integration",
         ])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-VISUAL-ASSET-LAYOUT-REVIEW-v1.40",
-        "browser/e2e",
-        "No independent backend",
-    ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         "WEB-PORTAL-JOURNEY-DEMO-DATA-v1.39",
         "WEB_CLOSED",
+        "WEB-FE-VISUAL-ASSET-LAYOUT-REVIEW-v1.40",
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
         "WEB-PORTAL-JOURNEY-DEMO-DATA-v1.39",
         "WEB_CLOSED",
+    ])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", [
+        "browser/e2e",
+        "No independent backend",
     ])
 
 

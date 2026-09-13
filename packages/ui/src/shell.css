@@ -268,11 +268,13 @@
 }
 .lgo-workspace-shell .lgo-status-badge { max-width: 100%; overflow-wrap: anywhere; font-size: .8rem; }
 .lgo-workspace-shell .lgo-boundary-banner > .lgo-status-badge { flex-shrink: 0; }
+.lgo-visual-proof-grid,
 .lgo-journey-art-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(220px, .8fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--lgo-space-md);
 }
+.lgo-visual-proof-card,
 .lgo-journey-art-card {
   display: grid;
   gap: var(--lgo-space-md);
@@ -283,6 +285,11 @@
   background: rgba(10, 24, 42, .68);
   overflow: hidden;
 }
+.lgo-visual-proof-media {
+  overflow: hidden;
+  background: rgba(6, 16, 29, .8);
+}
+.lgo-visual-proof-card img,
 .lgo-journey-art-card img {
   display: block;
   width: 100%;
@@ -291,16 +298,25 @@
   object-fit: cover;
   background: rgba(6, 16, 29, .8);
 }
-.lgo-journey-art-card:not(:first-child) img { aspect-ratio: 1 / 1; }
+.lgo-visual-proof-copy,
 .lgo-journey-art-card > div {
   display: grid;
   gap: .55rem;
   padding: 0 var(--lgo-space-md) var(--lgo-space-md);
 }
+.lgo-visual-proof-copy { padding-top: 0; }
+.lgo-visual-proof-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.lgo-visual-proof-card h2,
 .lgo-journey-art-card h2,
 .lgo-journey-art-card p { margin: 0; }
+.lgo-visual-proof-card p { margin: 0; }
 @media (max-width: 720px) {
   .lgo-workspace-shell .lgo-boundary-banner { flex-direction: column; }
   .lgo-workspace-shell .lgo-form-actions > .lgo-link-button { width: 100%; }
+  .lgo-visual-proof-grid,
   .lgo-journey-art-grid { grid-template-columns: 1fr; }
 }

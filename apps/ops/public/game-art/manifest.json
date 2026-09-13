@@ -1,0 +1,34 @@
+{
+  "version": "v1.40",
+  "policy": "ops demo uses selected web editorial derivatives from audited project-source art; assets remain fixture/development preview and never imply live server telemetry or gameplay screenshots",
+  "sourceManifest": "apps/web/public/game-art/manifest.json",
+  "assets": [
+    {
+      "id": "ops-visual-dong-mon-world-concept",
+      "webPath": "game-art/world/dong-mon-skyline.webp",
+      "width": 1360,
+      "height": 765,
+      "derivativeSha256": "7c99154110e4f1a6fe7755be259d79f826818d8692468033c451ab79cc009f5f",
+      "upstreamStatus": "DRAFT_OWNER_REVIEW",
+      "claim": "WORLD_CONCEPT"
+    },
+    {
+      "id": "ops-visual-vo-starter-development-art",
+      "webPath": "game-art/classes/vo-lv1-starter-atlas.webp",
+      "width": 1280,
+      "height": 1280,
+      "derivativeSha256": "a931d3afefc1dc82a58a4818ae1399ebede12be1d0dd0481e5a2d439eb66d38a",
+      "upstreamStatus": "APPROVED_RUNTIME_ART",
+      "claim": "DEVELOPMENT_ART_PREVIEW"
+    },
+    {
+      "id": "ops-visual-vo-skill-development-art",
+      "webPath": "game-art/classes/vo-lv1-skill-atlas.webp",
+      "width": 820,
+      "height": 820,
+      "derivativeSha256": "9bd9933c10d99658fdca275ff8b7c705b10db69b36c05558e0b9d7f31263b0c8",
+      "upstreamStatus": "APPROVED_RUNTIME_ART",
+      "claim": "DEVELOPMENT_ART_PREVIEW"
+    }
+  ]
+}
