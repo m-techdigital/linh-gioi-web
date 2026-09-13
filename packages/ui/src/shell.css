@@ -91,6 +91,10 @@
   outline: 2px solid rgba(49, 216, 232, .35);
   outline-offset: 2px;
 }
+.lgo-workspace-nav:focus-visible {
+  outline: 2px solid var(--lgo-color-spirit-cyan);
+  outline-offset: 3px;
+}
 .lgo-workspace-nav a[aria-current="page"],
 .lgo-workspace-nav a[data-current="page"] {
   color: var(--lgo-color-text-primary);

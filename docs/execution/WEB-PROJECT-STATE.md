@@ -1,3 +1,14 @@
+Current phase: WEB-FE-WORKSPACE-NAV-SCROLL-REGION-v1.61 WEB_CLOSED.
+
+Current decision: v1.61 FE shared workspace nav scroll-region slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.61 updates shared `WorkspaceNavigation` in `packages/ui`.
+- Portal/Ops mobile workspace navigation now keeps horizontal scrolling but exposes the nav container as a keyboard-focusable scroll region with `tabIndex={0}` and visible focus styling.
+- v1.61 evidence: RED browser/e2e reproduced mobile workspace nav `tabIndex === -1`; source validator PASS; UI/Portal/Ops typecheck PASS; Portal/Ops production build PASS; Playwright desktop/mobile keyboard/nav/font-size/overflow PASS; screenshot review completed with mobile pageOverflow 0, solid 2px nav focus outline and 16px max nav link font.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.62.
+
 Current phase: WEB-FE-SHARED-FIXTURE-FORM-CONTROLS-v1.60 WEB_CLOSED.
 
 Current decision: v1.60 FE shared fixture form controls slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

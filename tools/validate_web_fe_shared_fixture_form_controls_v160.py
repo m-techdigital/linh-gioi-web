@@ -102,7 +102,7 @@ def check_tests_and_docs() -> None:
         "| WEB-FE-SHARED-FIXTURE-FORM-CONTROLS-v1.60 | WEB-FE | WEB_CLOSED |",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.61",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
         "browser/e2e",
     ])
 

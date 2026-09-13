@@ -10,7 +10,7 @@ export type WorkspaceShellNavItem = {
 
 export function WorkspaceNavigation({ items, ariaLabel = "Workspace navigation" }: { items: WorkspaceShellNavItem[]; ariaLabel?: string }) {
   return (
-    <nav className="lgo-workspace-nav" aria-label={ariaLabel}>
+    <nav className="lgo-workspace-nav" aria-label={ariaLabel} tabIndex={0}>
       {items.map((item) => (
         <RouteAwareLink href={item.href} currentWhen="section" key={`${item.href}:${item.label}`}>
           <span>{item.label}</span>
