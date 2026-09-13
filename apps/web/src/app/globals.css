@@ -858,21 +858,25 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
 /* WEB v1.15 accessibility / readability polish */
 .lgo-skip-link {
   position: fixed;
-  top: .75rem;
-  left: .75rem;
-  z-index: 50;
-  transform: translateY(-200%);
+  top: 0;
+  left: max(.75rem, env(safe-area-inset-left));
+  z-index: 200;
+  max-width: min(calc(100vw - 2rem), 22rem);
+  transform: translateY(calc(-100% - .75rem));
   border: 2px solid rgba(245,200,107,.85);
   border-radius: var(--lgo-radius-pill);
-  padding: .75rem 1rem;
+  padding: .65rem .9rem;
   background: #07111f;
   color: var(--lgo-color-text-primary);
   text-decoration: none;
   font-weight: 900;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
   box-shadow: var(--lgo-shadow-gold-glow);
 }
 
-.lgo-skip-link:focus { transform: translateY(0); }
+.lgo-skip-link:focus,
+.lgo-skip-link:focus-visible { transform: translateY(.75rem); }
 
 .lgo-main:focus { outline: none; }
 

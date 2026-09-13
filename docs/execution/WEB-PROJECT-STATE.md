@@ -1,3 +1,15 @@
+Current phase: WEB-FE-PUBLIC-SKIP-LINK-VISUAL-v1.50 WEB_CLOSED.
+
+Current decision: v1.50 FE public skip link visual slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.50 updates `.lgo-skip-link` in the public web app to match the safer transform-hidden pattern used by workspace shells.
+- Hidden public skip link now stays anchored at `top: 0`, uses bounded transform hiding, has viewport max-width and wraps safely on mobile.
+- Focused skip link remains the first keyboard target and still jumps to `#main-content`.
+- v1.50 evidence: RED e2e reproduced old `top: 12px`/`translateY(-200%)` behavior; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile hidden/focused/font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.51.
+
 Current phase: WEB-FE-OPS-VISUAL-LCP-IMAGE-v1.49 WEB_CLOSED.
 
 Current decision: v1.49 FE Ops visual LCP image slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
