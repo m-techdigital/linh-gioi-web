@@ -1,4 +1,4 @@
-import type { HTMLAttributes, ReactNode } from "react";
+import { useId, type HTMLAttributes, type ReactNode } from "react";
 import { SpiritButton, StatusBadge, type Tone } from "./primitives";
 
 function cx(...parts: Array<string | undefined | false>) {
@@ -235,6 +235,9 @@ export function PaginationBar({
   nextDisabled?: boolean;
 }) {
   const paginationUnavailableReason = "không khả dụng trong fixture hiện tại";
+  const reactId = useId();
+  const paginationReasonId = `lgo-pagination-boundary-reason-${reactId}`;
+  const hasDisabledBoundary = previousDisabled || nextDisabled;
   return (
     <nav className="lgo-pagination-bar" aria-label="Pagination">
       <SpiritButton
@@ -243,6 +246,7 @@ export function PaginationBar({
         aria-disabled={previousDisabled ? "true" : undefined}
         data-disabled={previousDisabled ? "true" : undefined}
         aria-label={previousDisabled ? `${previousLabel} — ${paginationUnavailableReason}` : previousLabel}
+        aria-describedby={previousDisabled ? paginationReasonId : undefined}
       >
         {previousLabel}
       </SpiritButton>
@@ -253,9 +257,15 @@ export function PaginationBar({
         aria-disabled={nextDisabled ? "true" : undefined}
         data-disabled={nextDisabled ? "true" : undefined}
         aria-label={nextDisabled ? `${nextLabel} — ${paginationUnavailableReason}` : nextLabel}
+        aria-describedby={nextDisabled ? paginationReasonId : undefined}
       >
         {nextLabel}
       </SpiritButton>
+      {hasDisabledBoundary ? (
+        <small id={paginationReasonId} className="lgo-pagination-reason">
+          Pagination unavailable — {paginationUnavailableReason}
+        </small>
+      ) : null}
     </nav>
   );
 }

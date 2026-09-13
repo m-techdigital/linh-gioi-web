@@ -94,6 +94,15 @@
   color: var(--lgo-color-text-muted);
 }
 
+.lgo-pagination-reason {
+  flex-basis: 100%;
+  color: var(--lgo-color-text-muted);
+  font-size: .82rem;
+  line-height: 1.5;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 700px) {
   .lgo-data-toolbar { align-items: stretch; flex-direction: column; }
   .lgo-data-toolbar-actions { width: 100%; }
