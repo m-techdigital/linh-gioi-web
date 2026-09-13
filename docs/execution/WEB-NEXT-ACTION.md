@@ -3,14 +3,14 @@
 Current task:
 
 ```text
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.60
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.61
 ```
 
 Status: WEB_TASK_CONTINUE.
 
 User direction: continue FE work first, use needed game images from LinhGioiOnline where useful, and verify real UI/UX layout in browser/e2e. Demo data is allowed while backend is not ready. Do not create an independent backend and do not claim real integration.
 
-Current FE scope: continue accessibility and interaction audit after v1.59. Focus on the next visible browser/e2e issue across public, Portal and Ops surfaces: keyboard reachability, accessible names, blocked/disabled state clarity, navigation continuity, typography caps, horizontal overflow, mobile readability, fixture boundary clarity and real design image usage. Prefer shared `packages/ui` ownership for reusable fixes.
+Current FE scope: continue accessibility and interaction audit after v1.60. Focus on the next visible browser/e2e issue across public, Portal and Ops surfaces: keyboard reachability, accessible names, blocked/disabled state clarity, navigation continuity, typography caps, horizontal overflow, mobile readability, fixture boundary clarity and real design image usage. Prefer shared `packages/ui` ownership for reusable fixes.
 
 Lifecycle: SELECT → SPEC_LOCK → IMPLEMENT FE-only accessibility/interaction improvements → SOURCE_VERIFY → RUNTIME_VERIFY → VISUAL_REVIEW → HANDOFF → CLOSED.
 

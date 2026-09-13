@@ -1,3 +1,14 @@
+Current phase: WEB-FE-SHARED-FIXTURE-FORM-CONTROLS-v1.60 WEB_CLOSED.
+
+Current decision: v1.60 FE shared fixture form controls slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.60 updates shared `TextInput`, `SelectInput` and `CheckboxField` locked fixture behavior in `packages/ui`.
+- Portal/Ops fixture controls no longer rely on native `disabled`; locked text inputs are readonly focusable controls, and locked select/checkbox controls render keyboard-readable ARIA readouts with `aria-disabled`/`data-disabled`.
+- v1.60 evidence: RED browser/e2e reproduced native disabled Portal auth inputs and Ops support select; source validator PASS; UI/Portal/Ops typecheck PASS; Portal/Ops production build PASS; Playwright desktop/mobile keyboard/no-mutation/font-size/overflow PASS; screenshot review completed with pageOverflow 0 and 16px focused controls.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.61.
+
 Current phase: WEB-FE-SHARED-DATA-TABLE-SCROLL-REGION-v1.59 WEB_CLOSED.
 
 Current decision: v1.59 FE shared DataTable scroll-region slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
