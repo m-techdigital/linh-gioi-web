@@ -546,3 +546,72 @@ export type DeviceReportTemplateField = {
   safeFormat: string;
   doNotCollect: string;
 };
+
+export type GameExperiencePillar = {
+  id: "social" | "action" | "progression";
+  title: string;
+  tagline: string;
+  summary: string;
+};
+
+export type ClassPath = {
+  id: "vo" | "kiem" | "phap" | "co" | "linh";
+  name: string;
+  role: string;
+  fantasy: string;
+  combatIdentity: string;
+  visualSignal: string;
+  battleRhythm: string;
+  worldLens: string;
+  teamFantasy: string;
+  signatureVerbs: string[];
+};
+
+export type WorldRouteStop = {
+  order: string;
+  name: string;
+  kind: "hub" | "gate" | "field" | "ruins" | "realm";
+  summary: string;
+  mood: string;
+  playerPromise: string;
+  signatureActivity: string;
+  narrativePressure: string;
+};
+
+export type NarrativeChapter = {
+  chapter: string;
+  title: string;
+  hook: string;
+  playerRole: string;
+  openingImage: string;
+  stakes: string;
+  closingTurn: string;
+};
+
+export type SessionBeat = {
+  time: string;
+  title: string;
+  summary: string;
+};
+
+export interface PublicGameArtAsset {
+  id: string;
+  label: string;
+  webPath: string;
+  upstreamStatus: "APPROVED_RUNTIME_ART" | "DRAFT_OWNER_REVIEW";
+  webStatus: "WEB_REFERENCE_APPROVED";
+  role: "world-concept" | "class-development-preview" | "skill-development-preview";
+  publicLabel: string;
+  sourceSha256: string;
+  notFinalArt: string;
+}
+
+export type HomeDiscoveryMoment = {
+  id: string;
+  kind: "class" | "world" | "story";
+  sourceRef: string;
+  eyebrow: string;
+  href: string;
+  actionLabel: string;
+  tone: "spirit" | "gold" | "jade" | "shadow";
+};

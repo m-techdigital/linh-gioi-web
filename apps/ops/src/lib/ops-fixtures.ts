@@ -1,0 +1,52 @@
+export const PROVISIONAL_WEB_FIXTURE = "PROVISIONAL_WEB_FIXTURE" as const;
+export const NO_REAL_OPS_MUTATION = "NO_REAL_OPS_MUTATION" as const;
+export const NOT_CANONICAL_BACKEND_CONTRACT = "NOT_CANONICAL_BACKEND_CONTRACT" as const;
+
+export const opsPlayerFixtures = [
+  { id: "fixture-001", displayName: "Fixture Player 001", accountState: "Review fixture", characterSummary: "2 characters · illustrative", trustState: "No canonical trust score", surface: "Account review preview" },
+  { id: "fixture-002", displayName: "Fixture Player 002", accountState: "Observe fixture", characterSummary: "1 character · illustrative", trustState: "No canonical trust score", surface: "Character review preview" }
+] as const;
+
+export const opsPlayerActivityFixtures = [
+  { id: "activity-a", title: "Account review opened", timestamp: "09:30 · fixture", description: "Presentation-only operator review event.", meta: "No audit event store" },
+  { id: "activity-b", title: "Character summary inspected", timestamp: "09:34 · fixture", description: "Illustrative review sequence only.", meta: "NO_REAL_OPS_MUTATION" },
+  { id: "activity-c", title: "Action remained blocked", timestamp: "09:36 · fixture", description: "Mutation controls stay disabled until canonical RBAC/API contracts exist.", meta: "NOT_CANONICAL_BACKEND_CONTRACT" }
+] as const;
+
+export const opsAuditFixtureEvents = [
+  { id: "audit-a", title: "Operator fixture signed in", timestamp: "08:10 · fixture", description: "Visual audit event only.", meta: "No actor schema" },
+  { id: "audit-b", title: "Player review fixture opened", timestamp: "08:18 · fixture", description: "No real player query was executed.", meta: "No audit backend" },
+  { id: "audit-c", title: "Blocked action previewed", timestamp: "08:21 · fixture", description: "No mutation endpoint exists.", meta: "NO_REAL_OPS_MUTATION" }
+] as const;
+
+export const opsSupportQueueFixtures = [
+  { id: "support-fixture-001", player: "Fixture Player 001", category: "Account access", priority: "Review fixture", age: "12m · illustrative", state: "Awaiting triage" },
+  { id: "support-fixture-002", player: "Fixture Player 002", category: "Technical", priority: "Observe fixture", age: "31m · illustrative", state: "Needs context" }
+] as const;
+
+export const opsSupportCaseFixture = {
+  id: "support-fixture-001",
+  player: "Fixture Player 001",
+  category: "Account access",
+  state: "Awaiting triage",
+  priority: "Review fixture",
+  owner: "Unassigned · fixture",
+  escalation: "Blocked by contract",
+  summary: "Illustrative support case for operator UX only; no support backend or player lookup was executed.",
+  timeline: [
+    { id: "support-a", title: "Case entered fixture queue", timestamp: "10:02 · fixture", description: "Presentation-only event; no ticket store exists.", meta: "No support backend" },
+    { id: "support-b", title: "Player context previewed", timestamp: "10:07 · fixture", description: "No account or character query was executed.", meta: "NOT_CANONICAL_BACKEND_CONTRACT" },
+    { id: "support-c", title: "Escalation remained blocked", timestamp: "10:12 · fixture", description: "Assignment and escalation controls stay disabled until accepted RBAC/API/audit contracts exist.", meta: "NO_REAL_OPS_MUTATION" }
+  ]
+} as const;
+
+export const opsGameOperationFixtures = [
+  { id: "world-fixture-001", surface: "World session A", state: "Observe fixture", capacity: "24 / 100 · illustrative", region: "East realm · fixture", note: "No canonical world/session model" },
+  { id: "event-fixture-001", surface: "World event preview", state: "Scheduled fixture", capacity: "Not applicable", region: "Global · illustrative", note: "No live event scheduler" }
+] as const;
+
+export const opsGameOperationActivityFixtures = [
+  { id: "gameop-a", title: "World fixture inspected", timestamp: "11:02 · fixture", description: "Presentation-only world/session review.", meta: "No session query API" },
+  { id: "gameop-b", title: "Event fixture previewed", timestamp: "11:08 · fixture", description: "No scheduler, publish or rollback operation was executed.", meta: "NO_REAL_OPS_MUTATION" },
+  { id: "gameop-c", title: "Operational action remained blocked", timestamp: "11:11 · fixture", description: "Restart, drain, publish and rollback actions stay disabled until accepted contracts exist.", meta: "NOT_CANONICAL_BACKEND_CONTRACT" }
+] as const;

@@ -50,3 +50,31 @@ Next.js route handlers may only be thin presentation/BFF adapters when explicitl
 ## Blocked integrations
 
 Portal and Ops real integration remain blocked until an accepted Auth/DB/API contract exists in `WEB-API-CONTRACT-REGISTER.md` and corresponding contract records exist under `packages/contracts`.
+
+## Base First dependency direction
+
+All three applications consume shared owners before defining local equivalents:
+
+```text
+packages/design-tokens  ─┐
+packages/ui             ─┤
+packages/auth           ─┤
+packages/api-client     ─┼─> apps/web | apps/portal | apps/ops
+packages/config         ─┤
+packages/contracts      ─┤
+packages/content        ─┤
+packages/testing        ─┘
+```
+
+Rules:
+
+- reusable visual primitives belong in `packages/ui`;
+- theme primitives belong in `packages/design-tokens`;
+- auth/session helpers belong in `packages/auth` once contracts are accepted;
+- HTTP/API transport belongs in `packages/api-client` once contracts are accepted;
+- shared DTO/contract records belong in `packages/contracts`;
+- typed public/game editorial content belongs in `packages/content`;
+- cross-app testing helpers belong in `packages/testing`;
+- apps own route composition and domain-specific presentation only.
+
+A base package must not absorb app-specific business semantics merely to reduce file count. Reuse is based on responsibility, not similarity alone.

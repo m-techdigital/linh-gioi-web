@@ -1,4 +1,4 @@
-import { Container, LgoThemeProvider, SiteFooter } from "@lgo-web/ui";
+import { Container, LgoThemeProvider } from "@lgo-web/ui";
 import type { ReactNode } from "react";
 import { PublicNavigation } from "./PublicNavigation";
 
@@ -7,17 +7,24 @@ export function PublicSiteShell({ children }: { children: ReactNode }) {
     <LgoThemeProvider>
       <div className="lgo-public-shell">
         <a className="lgo-skip-link" href="#main-content">Bỏ qua menu tới nội dung chính</a>
-        <header>
-          <Container>
-            <PublicNavigation />
-          </Container>
+        <header className="lgo-site-header">
+          <Container><PublicNavigation /></Container>
         </header>
         <main id="main-content" className="lgo-main" tabIndex={-1}>
           <Container>{children}</Container>
         </main>
-        <SiteFooter>
-          <p>No production auth, DB persistence, CMS, deployment, or backend integration is claimed.</p>
-        </SiteFooter>
+        <footer className="lgo-brand-footer">
+          <Container className="lgo-brand-footer-inner">
+            <div>
+              <strong>Linh Giới Online</strong>
+              <p>2D Social Action MMORPG · Một thế giới để chiến đấu, trưởng thành và thuộc về.</p>
+            </div>
+            <div className="lgo-footer-links">
+              <a href="/download">Trạng thái chơi</a><a href="/status">Trạng thái</a><a href="/roadmap">Roadmap</a><a href="/support">Hỗ trợ</a>
+            </div>
+            <small>Bản public chưa được mở. Các trang Download/Status là nguồn kiểm tra availability hiện tại.</small>
+          </Container>
+        </footer>
       </div>
     </LgoThemeProvider>
   );

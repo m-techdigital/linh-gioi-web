@@ -48,7 +48,15 @@
     "validate:public-release-narrative": "python3 tools/validate_web_public_player_trust_release_narrative.py",
     "validate:public-release-readiness": "python3 tools/validate_web_public_release_readiness_hub_polish.py",
     "validate:public-closed-tester": "python3 tools/validate_web_public_closed_tester_information_pack.py",
-    "validate:public-faq-helpfulness": "python3 tools/validate_web_public_faq_search_helpfulness_polish.py"
+    "validate:public-faq-helpfulness": "python3 tools/validate_web_public_faq_search_helpfulness_polish.py",
+    "validate:public-game-experience": "python3 tools/validate_web_public_game_experience_v122.py",
+    "validate:public-game-visual": "python3 tools/validate_web_public_game_visual_cta_v123.py",
+    "validate:public-art": "python3 tools/validate_web_public_approved_art_ingest_v124.py",
+    "validate:public-depth": "python3 tools/validate_web_public_class_world_story_depth_v125.py",
+    "validate:public-home-discovery": "python3 tools/validate_web_public_home_discovery_v126.py",
+    "validate:shared-page-patterns": "python3 tools/validate_web_shared_page_patterns_v128.py",
+    "validate:shared-form-controls": "python3 tools/validate_web_shared_form_controls_v129.py",
+    "validate:shared-data-display": "python3 tools/validate_web_shared_data_display_v130.py"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",

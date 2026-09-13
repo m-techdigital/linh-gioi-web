@@ -68,7 +68,14 @@ export {
   supportTopics,
   visualPolishItems,
   worldPillars,
-  worldStoryChapters
+  worldStoryChapters,
+  gameExperiencePillars,
+  classPaths,
+  worldRouteStops,
+  narrativeChapters,
+  sampleSessionBeats,
+  publicGameArtAssets,
+  homeDiscoveryMoments
 } from "./fixtures";
 export { LocalContentRepository, localContentRepository } from "./repository";
 export { assertContentFixturesValid, findDuplicateSlugs, findInvalidDates, findInvalidSlugs } from "./validation";
@@ -144,7 +151,14 @@ export type {
   IssueCategoryRoute,
   NoSearchBackendNote,
   WorldStoryChapter,
-  WorldPillar
+  WorldPillar,
+  GameExperiencePillar,
+  ClassPath,
+  WorldRouteStop,
+  NarrativeChapter,
+  SessionBeat,
+  PublicGameArtAsset,
+  HomeDiscoveryMoment
 } from "./types";
 
 export const contentStatus = {

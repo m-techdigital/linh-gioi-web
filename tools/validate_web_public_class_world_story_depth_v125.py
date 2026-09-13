@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+ERRORS: list[str] = []
+
+def fail(msg: str) -> None:
+    ERRORS.append(msg)
+
+def read(rel: str) -> str:
+    path = ROOT / rel
+    if not path.is_file():
+        fail(f"missing file: {rel}")
+        return ""
+    return path.read_text(encoding="utf-8")
+
+def require_text(rel: str, *needles: str) -> None:
+    text = read(rel)
+    for needle in needles:
+        if needle not in text:
+            fail(f"{rel} missing required text: {needle}")
+
+def main() -> int:
+    require_text("packages/content/src/types.ts", "battleRhythm", "worldLens", "teamFantasy", "signatureVerbs")
+    require_text("packages/content/src/types.ts", "playerPromise", "signatureActivity", "narrativePressure")
+    require_text("packages/content/src/types.ts", "openingImage", "stakes", "closingTurn")
+    require_text("apps/web/src/components/PublicPlayerHero.tsx", "PublicPlayerHero", "PublicHeroAction")
+    require_text("apps/web/src/components/PublicGameDepthSections.tsx", "ClassIdentityDeck", "WorldAtlasStories", "StoryArcTimeline")
+    for rel in (
+        "apps/web/src/app/classes/page.tsx",
+        "apps/web/src/app/game/page.tsx",
+        "apps/web/src/app/story/page.tsx",
+        "apps/web/src/app/start/page.tsx",
+        "apps/web/src/app/journey/page.tsx",
+        "apps/web/src/app/guides/page.tsx",
+        "apps/web/src/app/download/page.tsx",
+    ):
+        require_text(rel, "PublicPlayerHero")
+        if "lgo-hero-kicker" in read(rel):
+            fail(f"{rel} duplicates base hero kicker markup instead of PublicPlayerHero")
+    if any(symbol in read("apps/web/src/components/PublicGameExperienceSections.tsx") for symbol in ("ClassIdentityDeck", "WorldAtlasStories", "StoryArcTimeline")):
+        fail("PublicGameExperienceSections.tsx still owns v1.25 depth components; split them into PublicGameDepthSections.tsx")
+    require_text("apps/web/src/app/classes/page.tsx", "ClassIdentityDeck")
+    require_text("apps/web/src/app/game/page.tsx", "WorldAtlasStories")
+    require_text("apps/web/src/app/story/page.tsx", "StoryArcTimeline")
+    require_text("apps/web/src/app/globals.css", "WEB v1.25 class world story depth", "lgo-class-identity-deck", "lgo-world-atlas-stories", "lgo-story-arc-timeline")
+    require_text("docs/execution/WEB-PROJECT-STATE.md", "v1.25")
+    require_text("HANDOFF-LGO-WEB-PUBLIC-CLASS-WORLD-STORY-DEPTH-v1.25.md", "WEB-PUBLIC-CLASS-WORLD-STORY-DEPTH-v1.25")
+
+    if ERRORS:
+        print("WEB PUBLIC CLASS WORLD STORY DEPTH v1.25 VALIDATION FAIL")
+        for error in ERRORS:
+            print(f"- {error}")
+        return 1
+    print("WEB PUBLIC CLASS WORLD STORY DEPTH v1.25 VALIDATION PASS")
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())

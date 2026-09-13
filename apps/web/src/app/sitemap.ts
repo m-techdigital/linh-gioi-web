@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/release/tester-pack",
     "/support/help",
     "/game",
+    "/classes",
+    "/story",
     "/game/loop",
     "/roadmap",
     "/news",
@@ -46,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/status"
   ];
   return [
-    ...staticRoutes.map((route) => ({ url: `${base}${route}`, lastModified: new Date("2026-09-05") })),
+    ...staticRoutes.map((route) => ({ url: `${base}${route}`, lastModified: new Date("2026-09-13") })),
     ...localContentRepository.list("news").map((entry) => ({ url: `${base}/news/${entry.slug}`, lastModified: new Date(entry.publishedAt) }))
   ];
 }

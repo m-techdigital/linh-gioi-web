@@ -1274,3 +1274,1160 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
     flex-direction: column;
   }
 }
+
+/* WEB v1.22 public game experience & brand realignment */
+.lgo-player-facing-stack { gap: clamp(4rem, 8vw, 7.5rem); }
+.lgo-site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid rgba(49,216,232,.12);
+  background: rgba(5,13,26,.84);
+  backdrop-filter: blur(18px);
+}
+.lgo-brand-nav {
+  min-height: 74px;
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  align-items: center;
+  gap: 1.5rem;
+}
+.lgo-brand-mark { display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; }
+.lgo-brand-mark > span:last-child { display: grid; line-height: 1; }
+.lgo-brand-mark strong { font-family: var(--lgo-font-display); font-size: 1.2rem; letter-spacing: .03em; }
+.lgo-brand-mark small { color: var(--lgo-color-warm-gold); font-size: .58rem; letter-spacing: .28em; margin-top: .3rem; }
+.lgo-brand-sigil {
+  width: 2.25rem; height: 2.25rem; display: grid; place-items: center;
+  border: 1px solid rgba(245,200,107,.55); border-radius: .7rem;
+  background: radial-gradient(circle, rgba(49,216,232,.16), rgba(7,17,31,.9));
+  color: var(--lgo-color-warm-gold); box-shadow: 0 0 24px rgba(49,216,232,.16);
+}
+.lgo-brand-links { display: flex; justify-content: center; gap: .1rem; min-width: 0; }
+.lgo-brand-links a { padding: .7rem .72rem; color: var(--lgo-color-text-muted); text-decoration: none; font-size: .91rem; white-space: nowrap; }
+.lgo-brand-links a:hover, .lgo-brand-links a:focus-visible { color: #fff; }
+.lgo-nav-play { text-decoration: none; border: 1px solid rgba(245,200,107,.5); color: var(--lgo-color-warm-gold); border-radius: 999px; padding: .7rem 1rem; font-weight: 800; }
+
+.lgo-cinematic-hero {
+  position: relative;
+  min-height: min(760px, calc(100vh - 110px));
+  display: grid;
+  grid-template-columns: minmax(0, 1.03fr) minmax(420px, .97fr);
+  gap: clamp(2rem, 5vw, 5.5rem);
+  align-items: center;
+  padding: clamp(2.5rem, 7vw, 6rem) 0;
+}
+.lgo-cinematic-hero::before {
+  content: ""; position: absolute; inset: -10% -8%; pointer-events: none;
+  background: radial-gradient(circle at 75% 35%, rgba(122,75,217,.13), transparent 24rem), radial-gradient(circle at 10% 30%, rgba(49,216,232,.09), transparent 28rem);
+}
+.lgo-cinematic-copy { position: relative; z-index: 2; }
+.lgo-hero-kicker { color: var(--lgo-color-warm-gold); letter-spacing: .19em; text-transform: uppercase; font-size: .74rem; font-weight: 900; margin: 1rem 0 .8rem; }
+.lgo-cinematic-copy h1 { max-width: 12ch; font-size: clamp(3.2rem, 6.7vw, 6.8rem); letter-spacing: -.045em; }
+.lgo-cinematic-copy .lgo-hero-lead { max-width: 61ch; }
+.lgo-hero-signals { margin-top: 1.4rem; display: flex; flex-wrap: wrap; gap: .55rem; align-items: center; color: rgba(230,241,248,.68); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+.lgo-hero-signals i { width: 3px; height: 3px; border-radius: 99px; background: var(--lgo-color-spirit-cyan); box-shadow: 0 0 12px var(--lgo-color-spirit-cyan); }
+
+.lgo-cinematic-scene {
+  position: relative; min-height: 520px; overflow: hidden; isolation: isolate;
+  border: 1px solid rgba(245,200,107,.2); border-radius: 2rem;
+  background: linear-gradient(180deg, #101a35 0%, #101b32 38%, #081321 78%, #060c16 100%);
+  box-shadow: 0 35px 90px rgba(0,0,0,.4), 0 0 80px rgba(49,216,232,.08);
+}
+.lgo-cinematic-scene::after { content: ""; position: absolute; inset: 0; z-index: 9; background: linear-gradient(180deg, transparent 55%, rgba(4,9,18,.75)); pointer-events: none; }
+.lgo-cinematic-scene-compact { min-height: 430px; }
+.lgo-scene-sky { position: absolute; inset: 0; background: radial-gradient(ellipse at 55% 5%, rgba(57,101,154,.28), transparent 48%), linear-gradient(115deg, transparent 20%, rgba(49,216,232,.035) 20% 21%, transparent 21% 45%, rgba(245,200,107,.03) 45% 46%, transparent 46%); }
+.lgo-scene-moon { position: absolute; width: 120px; height: 120px; right: 11%; top: 11%; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #e9fbff, #8adce8 30%, rgba(49,216,232,.13) 63%, transparent 67%); box-shadow: 0 0 50px rgba(49,216,232,.18); }
+.lgo-scene-rift { position: absolute; z-index: 4; left: 57%; top: 8%; width: 150px; height: 220px; transform: rotate(9deg); }
+.lgo-scene-rift::before { content: ""; position: absolute; left: 47%; top: 0; width: 4px; height: 100%; background: linear-gradient(#c8a7ff, #7a4bd9 40%, transparent); box-shadow: 0 0 16px #7a4bd9, 0 0 42px rgba(122,75,217,.7); clip-path: polygon(44% 0, 100% 18%, 35% 28%, 80% 44%, 20% 58%, 70% 76%, 35% 100%, 0 78%, 45% 62%, 6% 47%, 55% 31%, 12% 14%); }
+.lgo-scene-rift i { position: absolute; width: 50px; height: 2px; background: linear-gradient(90deg, transparent, #9d7aea, transparent); box-shadow: 0 0 12px #7a4bd9; }
+.lgo-scene-rift i:nth-child(1){left:28px;top:45px;transform:rotate(-28deg)} .lgo-scene-rift i:nth-child(2){left:62px;top:108px;transform:rotate(24deg)} .lgo-scene-rift i:nth-child(3){left:31px;top:158px;transform:rotate(-19deg)}
+.lgo-scene-city { position: absolute; inset-inline: 0; bottom: 76px; display: flex; align-items: end; justify-content: space-evenly; }
+.lgo-scene-city i { display:block; width: 14%; border: 1px solid rgba(245,200,107,.13); background: linear-gradient(180deg, rgba(22,55,76,.85), rgba(5,15,28,.95)); clip-path: polygon(15% 12%,42% 12%,50% 0,58% 12%,85% 12%,85% 100%,15% 100%); }
+.lgo-scene-city-far { opacity:.55; filter: blur(.3px); bottom: 138px; } .lgo-scene-city-far i:nth-child(odd){height:150px}.lgo-scene-city-far i:nth-child(even){height:105px}
+.lgo-scene-city-near { z-index:5; bottom:62px; } .lgo-scene-city-near i:nth-child(1){height:180px}.lgo-scene-city-near i:nth-child(2){height:120px}.lgo-scene-city-near i:nth-child(3){height:210px}.lgo-scene-city-near i:nth-child(4){height:145px}
+.lgo-scene-gate { position:absolute; z-index:7; left:50%; bottom:52px; width:165px; height:235px; transform:translateX(-50%); border:4px solid rgba(245,200,107,.46); border-bottom:0; border-radius:90px 90px 10px 10px; box-shadow:0 0 35px rgba(49,216,232,.14), inset 0 0 35px rgba(49,216,232,.1); }
+.lgo-scene-gate span:first-child { position:absolute; inset:20px 25px 0; border-radius:65px 65px 8px 8px; background:radial-gradient(circle at 50% 40%, rgba(49,216,232,.28), rgba(122,75,217,.17) 50%, rgba(4,10,22,.78)); border:1px solid rgba(49,216,232,.34); }
+.lgo-scene-gate span:last-child { position:absolute; left:-25px; right:-25px; bottom:-10px; height:12px; background:linear-gradient(90deg, transparent, rgba(245,200,107,.52), transparent); }
+.lgo-scene-lanterns {position:absolute;z-index:8;inset:0}.lgo-scene-lanterns i{position:absolute;width:9px;height:14px;border-radius:3px;background:#f5c86b;box-shadow:0 0 18px #f5c86b}.lgo-scene-lanterns i:nth-child(1){left:16%;bottom:160px}.lgo-scene-lanterns i:nth-child(2){right:18%;bottom:115px}.lgo-scene-lanterns i:nth-child(3){left:34%;bottom:95px}
+.lgo-scene-caption { position:absolute; z-index:12; left:1.25rem; right:1.25rem; bottom:1.15rem; padding:1rem 1.1rem; border:1px solid rgba(255,255,255,.11); border-radius:1rem; background:rgba(5,12,23,.72); backdrop-filter:blur(12px); }
+.lgo-scene-caption span {display:block;color:var(--lgo-color-warm-gold);font-size:.68rem;letter-spacing:.16em;font-weight:900}.lgo-scene-caption strong{display:block;margin-top:.35rem;font-family:var(--lgo-font-display);font-size:1.08rem}
+
+.lgo-experience-section { display: grid; gap: 1.5rem; }
+.lgo-section-heading-row { display:flex; align-items:end; justify-content:space-between; gap:1.5rem; }
+.lgo-section-heading-row .lgo-section-heading { max-width: 780px; }
+.lgo-experience-pillar-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.lgo-experience-pillar { position:relative; min-height:280px; overflow:hidden; padding-top:4.8rem; }
+.lgo-experience-pillar::before { content:""; position:absolute; inset:0; opacity:.6; pointer-events:none; }
+.lgo-pillar-social::before { background:radial-gradient(circle at 10% 0%, rgba(53,198,163,.2), transparent 50%); }
+.lgo-pillar-action::before { background:radial-gradient(circle at 10% 0%, rgba(245,200,107,.2), transparent 50%); }
+.lgo-pillar-progression::before { background:radial-gradient(circle at 10% 0%, rgba(122,75,217,.22), transparent 50%); }
+.lgo-card-index { position:absolute; top:1rem; right:1.25rem; font-size:3rem; font-family:var(--lgo-font-display); color:rgba(255,255,255,.08); }
+
+.lgo-class-path-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:.85rem; }
+.lgo-class-path { position:relative; min-height:390px; overflow:hidden; border:1px solid rgba(255,255,255,.11); border-radius:1.4rem; background:linear-gradient(180deg, rgba(16,34,57,.86), rgba(6,14,27,.95)); padding:1.1rem; display:flex; flex-direction:column; justify-content:flex-end; }
+.lgo-class-path::before { content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 20%, rgba(6,14,27,.88) 76%); }
+.lgo-class-sigil { position:absolute; inset:1rem 1rem auto; height:185px; display:grid; place-items:center; border-radius:1rem; border:1px solid rgba(255,255,255,.09); background:radial-gradient(circle, rgba(49,216,232,.12), transparent 65%); }
+.lgo-class-sigil::before,.lgo-class-sigil::after{content:"";position:absolute;border:1px solid currentColor;border-radius:50%;opacity:.22}.lgo-class-sigil::before{width:110px;height:110px}.lgo-class-sigil::after{width:75px;height:75px;transform:rotate(45deg);border-radius:14px}.lgo-class-sigil span{font-family:var(--lgo-font-display);font-size:3.1rem;color:#fff;text-shadow:0 0 24px currentColor}
+.lgo-class-copy { position:relative; z-index:2; }.lgo-class-copy h3{font-size:1.7rem;margin:.25rem 0}.lgo-class-copy p{font-size:.92rem;line-height:1.55}.lgo-class-copy small{color:rgba(255,255,255,.55);font-size:.7rem}
+.lgo-class-vo{color:#f2a65a}.lgo-class-kiem{color:#72dbe8}.lgo-class-phap{color:#9878e8}.lgo-class-co{color:#f0c96f}.lgo-class-linh{color:#55c6a3}
+.lgo-class-path-grid-compact .lgo-class-path{min-height:315px}.lgo-class-path-grid-compact .lgo-class-sigil{height:150px}.lgo-class-path-grid-compact .lgo-class-fantasy{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+.lgo-world-route-section { position:relative; }
+.lgo-world-route { position:relative; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:.6rem; }
+.lgo-world-route::before { content:""; position:absolute; left:8%; right:8%; top:2.25rem; height:1px; background:linear-gradient(90deg, rgba(49,216,232,.1), rgba(49,216,232,.65), rgba(122,75,217,.72)); }
+.lgo-world-route-stop { position:relative; z-index:1; padding:.65rem; }
+.lgo-route-marker { display:flex; align-items:center; margin-bottom:1rem; }
+.lgo-route-marker span { width:3.3rem;height:3.3rem;display:grid;place-items:center;border-radius:50%;background:#091729;border:1px solid rgba(49,216,232,.4);font-weight:900;color:var(--lgo-color-warm-gold);box-shadow:0 0 24px rgba(49,216,232,.08); }
+.lgo-world-realm .lgo-route-marker span{border-color:rgba(122,75,217,.65);box-shadow:0 0 28px rgba(122,75,217,.18)}
+.lgo-world-route-stop h3{font-size:1.22rem;margin:.45rem 0}.lgo-world-route-stop p{font-size:.88rem;line-height:1.6}
+
+.lgo-narrative-chapters { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+.lgo-narrative-chapter { min-height:330px; padding:1.4rem; border:1px solid rgba(122,75,217,.22); border-radius:1.4rem; background:radial-gradient(circle at 90% 5%, rgba(122,75,217,.12), transparent 45%), linear-gradient(150deg, rgba(15,28,52,.9), rgba(6,13,27,.95)); display:flex;flex-direction:column; }
+.lgo-narrative-chapter h3{font-size:1.65rem;margin:.6rem 0}.lgo-chapter-role{margin-top:auto;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);display:grid;gap:.4rem}.lgo-chapter-role strong{color:var(--lgo-color-warm-gold);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}.lgo-chapter-role span{color:var(--lgo-color-text-muted);font-size:.9rem;line-height:1.55}
+
+.lgo-session-loop { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:.7rem; }
+.lgo-session-beat { position:relative; min-height:230px; padding:1.1rem; border:1px solid rgba(53,198,163,.16); border-radius:1.2rem; background:linear-gradient(180deg,rgba(13,32,50,.75),rgba(6,14,27,.86)); }
+.lgo-session-beat > span{display:inline-flex;color:var(--lgo-color-warm-gold);font-weight:900;font-size:.72rem;letter-spacing:.1em}.lgo-session-beat h3{font-size:1.06rem;margin:.8rem 0}.lgo-session-beat p{font-size:.82rem;line-height:1.55}
+
+.lgo-shadow-invasion { min-height:480px; display:grid; grid-template-columns:minmax(340px,.9fr) minmax(0,1.1fr); align-items:center; gap:clamp(2rem,5vw,5rem); padding:clamp(2rem,5vw,4rem); border:1px solid rgba(122,75,217,.32); border-radius:2rem; overflow:hidden; background:radial-gradient(circle at 18% 50%,rgba(122,75,217,.2),transparent 35%),linear-gradient(130deg,#0a1125,#07111f 56%,#101127); }
+.lgo-shadow-invasion-copy h2{font-size:clamp(2.2rem,4.2vw,4.2rem);margin:.45rem 0 1rem}.lgo-shadow-invasion-art{position:relative;min-height:350px}.lgo-invasion-portal{position:absolute;width:240px;height:310px;left:50%;top:20px;transform:translateX(-50%);border:3px solid rgba(157,122,234,.6);border-radius:50%;box-shadow:0 0 42px rgba(122,75,217,.65),inset 0 0 48px rgba(122,75,217,.5);background:radial-gradient(ellipse,rgba(7,2,20,.98) 35%,rgba(122,75,217,.25) 70%,transparent 72%)}.lgo-invasion-portal::before{content:"";position:absolute;inset:24px;border:1px solid rgba(200,167,255,.5);border-radius:50%;box-shadow:inset 0 0 35px rgba(122,75,217,.35)}.lgo-invasion-portal i{position:absolute;width:75px;height:2px;background:linear-gradient(90deg,transparent,#c8a7ff,transparent);box-shadow:0 0 10px #9d7aea}.lgo-invasion-portal i:nth-child(1){left:-18px;top:75px;transform:rotate(-22deg)}.lgo-invasion-portal i:nth-child(2){right:-25px;top:145px;transform:rotate(16deg)}.lgo-invasion-portal i:nth-child(3){left:-5px;bottom:50px;transform:rotate(25deg)}.lgo-invasion-ground{position:absolute;left:4%;right:4%;bottom:5px;height:65px;border-radius:50%;background:radial-gradient(ellipse,rgba(122,75,217,.38),rgba(7,17,31,.1) 70%,transparent);filter:blur(3px)}
+
+.lgo-availability-note { display:grid;grid-template-columns:1fr max-content;gap:1.5rem;align-items:center;padding:1.4rem 1.6rem;border:1px solid rgba(53,198,163,.2);border-radius:1.25rem;background:rgba(7,17,31,.66) }.lgo-availability-note strong{display:block;margin:.25rem 0;font-family:var(--lgo-font-display);font-size:1.1rem}.lgo-availability-note p{margin:0;font-size:.86rem}
+.lgo-home-latest { display:grid;gap:1.5rem }.lgo-news-card{min-height:230px}.lgo-news-card .lgo-link-button{margin-top:auto}
+
+.lgo-world-fantasy-panel,.lgo-path-philosophy,.lgo-guide-hero,.lgo-start-hero,.lgo-journey-hero,.lgo-paths-hero{border:1px solid rgba(49,216,232,.16);border-radius:2rem;background:radial-gradient(circle at top right,rgba(49,216,232,.08),transparent 30rem),linear-gradient(145deg,rgba(13,27,46,.9),rgba(7,17,31,.9));padding:clamp(2rem,5vw,4.5rem)}
+.lgo-world-fantasy-panel{display:grid;grid-template-columns:1fr .75fr;gap:3rem;align-items:center}.lgo-world-layer-stack{display:grid;gap:.55rem}.lgo-world-layer-stack span{padding:.75rem 1rem;border:1px solid rgba(255,255,255,.09);border-radius:.8rem;background:linear-gradient(90deg,rgba(49,216,232,.09),rgba(245,200,107,.03));transform:translateX(var(--shift,0))}.lgo-world-layer-stack span:nth-child(2){--shift:12px}.lgo-world-layer-stack span:nth-child(3){--shift:24px}.lgo-world-layer-stack span:nth-child(4){--shift:36px}.lgo-world-layer-stack span:nth-child(5){--shift:48px}.lgo-world-layer-stack span:nth-child(6){--shift:60px}
+.lgo-paths-hero,.lgo-journey-hero{display:grid;grid-template-columns:1fr 360px;align-items:center;gap:3rem}.lgo-five-path-orbit,.lgo-journey-cycle{position:relative;width:320px;height:320px;margin:auto;border:1px solid rgba(49,216,232,.18);border-radius:50%;box-shadow:inset 0 0 50px rgba(49,216,232,.07)}.lgo-five-path-orbit::before,.lgo-journey-cycle::before{content:"";position:absolute;inset:48px;border:1px solid rgba(245,200,107,.16);border-radius:50%}.lgo-five-path-orbit i,.lgo-journey-cycle i{position:absolute;inset:105px;border-radius:50%;background:radial-gradient(circle,rgba(49,216,232,.35),rgba(122,75,217,.11) 55%,transparent 65%);box-shadow:0 0 34px rgba(49,216,232,.15)}.lgo-five-path-orbit span,.lgo-journey-cycle span{position:absolute;z-index:2;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:#0b1a2d;border:1px solid rgba(245,200,107,.28);font-family:var(--lgo-font-display);font-weight:800}.lgo-five-path-orbit span:nth-child(1){left:131px;top:6px}.lgo-five-path-orbit span:nth-child(2){right:8px;top:94px}.lgo-five-path-orbit span:nth-child(3){right:54px;bottom:13px}.lgo-five-path-orbit span:nth-child(4){left:54px;bottom:13px}.lgo-five-path-orbit span:nth-child(5){left:8px;top:94px}.lgo-journey-cycle span:nth-child(1){left:131px;top:6px}.lgo-journey-cycle span:nth-child(2){right:4px;top:131px}.lgo-journey-cycle span:nth-child(3){left:131px;bottom:6px}.lgo-journey-cycle span:nth-child(4){left:4px;top:131px}
+.lgo-onboarding-steps{margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:.55rem}.lgo-onboarding-steps span{padding:.55rem .75rem;border:1px solid rgba(49,216,232,.18);border-radius:999px;background:rgba(7,17,31,.55);font-size:.76rem;color:rgba(255,255,255,.72)}
+.lgo-story-hero .lgo-cinematic-copy h1{max-width:13ch}.lgo-guide-hero{min-height:390px}.lgo-path-philosophy{max-width:980px;margin-inline:auto;text-align:center}.lgo-path-philosophy .lgo-hero-actions{justify-content:center}
+
+.lgo-brand-footer{margin-top:clamp(4rem,8vw,8rem);border-top:1px solid rgba(49,216,232,.12);background:rgba(4,10,20,.72);padding:2rem 0}.lgo-brand-footer-inner{display:grid;grid-template-columns:1fr auto;gap:1.25rem 2rem;align-items:center}.lgo-brand-footer-inner p{margin:.35rem 0 0}.lgo-brand-footer-inner small{grid-column:1/-1;color:rgba(255,255,255,.48)}.lgo-footer-links{display:flex;flex-wrap:wrap;gap:1rem}.lgo-footer-links a{color:var(--lgo-color-text-muted);text-decoration:none}
+
+@media (max-width: 1100px){
+  .lgo-brand-links{overflow-x:auto;justify-content:flex-start}.lgo-brand-links a{font-size:.84rem}
+  .lgo-cinematic-hero{grid-template-columns:1fr;min-height:auto}.lgo-cinematic-scene{min-height:430px}.lgo-cinematic-copy h1{max-width:15ch}
+  .lgo-class-path-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.lgo-world-route{grid-template-columns:repeat(3,minmax(0,1fr))}.lgo-world-route::before{display:none}.lgo-session-loop{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width: 820px){
+  .lgo-brand-nav{grid-template-columns:max-content 1fr}.lgo-brand-links{grid-column:1/-1;order:3;padding-bottom:.7rem}.lgo-nav-play{justify-self:end}.lgo-site-header{position:relative}
+  .lgo-experience-pillar-grid,.lgo-narrative-chapters{grid-template-columns:1fr}.lgo-class-path-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lgo-world-route{grid-template-columns:repeat(2,minmax(0,1fr))}.lgo-session-loop{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lgo-shadow-invasion,.lgo-world-fantasy-panel,.lgo-paths-hero,.lgo-journey-hero{grid-template-columns:1fr}.lgo-shadow-invasion-art{min-height:320px}.lgo-five-path-orbit,.lgo-journey-cycle{width:280px;height:280px}.lgo-five-path-orbit i,.lgo-journey-cycle i{inset:90px}.lgo-five-path-orbit span:nth-child(1),.lgo-journey-cycle span:nth-child(1){left:111px}.lgo-five-path-orbit span:nth-child(2){top:80px}.lgo-five-path-orbit span:nth-child(3){right:45px}.lgo-five-path-orbit span:nth-child(4){left:45px}.lgo-five-path-orbit span:nth-child(5){top:80px}.lgo-journey-cycle span:nth-child(2){top:111px}.lgo-journey-cycle span:nth-child(3){left:111px}.lgo-journey-cycle span:nth-child(4){top:111px}
+  .lgo-section-heading-row,.lgo-availability-note,.lgo-brand-footer-inner{grid-template-columns:1fr;display:grid;align-items:start}.lgo-brand-footer-inner small{grid-column:auto}
+}
+@media (max-width: 560px){
+  .lgo-player-facing-stack{gap:3.5rem}.lgo-main{padding-top:1rem}.lgo-brand-nav{gap:.75rem}.lgo-nav-play{font-size:.78rem;padding:.55rem .7rem}.lgo-brand-links{gap:0}.lgo-brand-links a{padding:.55rem .6rem}
+  .lgo-cinematic-copy h1{font-size:clamp(2.8rem,15vw,4.6rem)}.lgo-cinematic-scene{min-height:360px;border-radius:1.4rem}.lgo-scene-gate{width:130px;height:185px}.lgo-scene-rift{left:55%;transform:scale(.78) rotate(9deg)}.lgo-scene-caption strong{font-size:.92rem}
+  .lgo-class-path-grid,.lgo-world-route,.lgo-session-loop{grid-template-columns:1fr}.lgo-class-path{min-height:340px}.lgo-class-path-grid-compact .lgo-class-path{min-height:300px}.lgo-world-route-stop{display:grid;grid-template-columns:max-content 1fr;gap:1rem}.lgo-route-marker{margin:0}.lgo-narrative-chapter{min-height:285px}.lgo-shadow-invasion{padding:1.35rem;border-radius:1.4rem}.lgo-shadow-invasion-art{min-height:285px}.lgo-invasion-portal{width:190px;height:250px}.lgo-five-path-orbit,.lgo-journey-cycle{transform:scale(.84);margin-block:-20px}.lgo-world-fantasy-panel,.lgo-path-philosophy,.lgo-guide-hero,.lgo-start-hero,.lgo-journey-hero,.lgo-paths-hero{padding:1.4rem;border-radius:1.4rem}
+}
+
+/* WEB v1.23 game visual asset & CTA polish */
+.lgo-cinematic-hero-v123 {
+  isolation: isolate;
+}
+
+.lgo-cinematic-hero-v123::after {
+  content: "";
+  position: absolute;
+  inset: 8% -6% -8% 38%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 58% 35%, rgba(49, 216, 232, .10), transparent 27rem),
+    radial-gradient(circle at 72% 52%, rgba(122, 75, 217, .12), transparent 23rem);
+  filter: blur(2px);
+}
+
+.lgo-hero-actions-primary .lgo-link-button:first-child {
+  color: #08111e;
+  border-color: rgba(245, 200, 107, .85);
+  background: linear-gradient(135deg, #f9dc94, #dca743);
+  box-shadow: 0 18px 45px rgba(245, 200, 107, .18), 0 0 34px rgba(245, 200, 107, .14);
+}
+
+.lgo-hero-actions-primary .lgo-link-button:first-child:hover,
+.lgo-hero-actions-primary .lgo-link-button:first-child:focus-visible {
+  box-shadow: 0 20px 52px rgba(245, 200, 107, .25), 0 0 42px rgba(245, 200, 107, .2);
+}
+
+.lgo-spirit-route-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: 1.35rem;
+  color: rgba(215, 232, 245, .72);
+  font-size: .76rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.lgo-spirit-route-breadcrumb span {
+  white-space: nowrap;
+}
+
+.lgo-spirit-route-breadcrumb i {
+  width: 1.2rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(49,216,232,.15), rgba(245,200,107,.7), rgba(49,216,232,.15));
+  box-shadow: 0 0 8px rgba(245,200,107,.25);
+}
+
+.lgo-cinematic-scene {
+  box-shadow: 0 40px 120px rgba(0,0,0,.42), inset 0 0 90px rgba(49,216,232,.04);
+}
+
+.lgo-cinematic-scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 18;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.025), transparent 18%, transparent 74%, rgba(2,6,14,.44)),
+    radial-gradient(circle at 50% 35%, transparent 30%, rgba(3,8,18,.32) 88%);
+}
+
+.lgo-hero-atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.lgo-hero-atmosphere i {
+  position: absolute;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  border: 1px solid rgba(49,216,232,.10);
+  box-shadow: inset 0 0 40px rgba(49,216,232,.06), 0 0 40px rgba(49,216,232,.05);
+  animation: lgoSpiritFloat 9s ease-in-out infinite;
+}
+
+.lgo-hero-atmosphere i:nth-child(1) { left: -6rem; top: 12%; }
+.lgo-hero-atmosphere i:nth-child(2) { right: -7rem; top: 30%; width: 19rem; height: 19rem; animation-delay: -3s; }
+.lgo-hero-atmosphere i:nth-child(3) { left: 38%; bottom: -8rem; width: 17rem; height: 17rem; animation-delay: -6s; }
+
+.lgo-scene-mountain {
+  position: absolute;
+  z-index: 5;
+  bottom: 24%;
+  clip-path: polygon(0 100%, 8% 58%, 18% 70%, 29% 28%, 38% 55%, 52% 17%, 62% 47%, 73% 26%, 84% 60%, 94% 39%, 100% 100%);
+  transform-origin: bottom center;
+}
+
+.lgo-scene-mountain-far {
+  left: -8%;
+  right: -8%;
+  height: 38%;
+  opacity: .26;
+  background: linear-gradient(180deg, rgba(50,92,113,.38), rgba(8,20,36,.8));
+  filter: blur(1px);
+}
+
+.lgo-scene-mountain-near {
+  left: -12%;
+  right: -12%;
+  height: 28%;
+  opacity: .6;
+  background: linear-gradient(180deg, rgba(13,35,49,.72), rgba(3,10,19,.96));
+  transform: scaleX(1.08);
+}
+
+.lgo-scene-spirit-trails {
+  position: absolute;
+  inset: 0;
+  z-index: 13;
+  pointer-events: none;
+}
+
+.lgo-scene-spirit-trails i {
+  position: absolute;
+  width: 9rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(49,216,232,.7), transparent);
+  filter: blur(.2px);
+  opacity: .5;
+  animation: lgoSpiritTrail 7s ease-in-out infinite;
+}
+
+.lgo-scene-spirit-trails i:nth-child(1) { left: 12%; top: 29%; transform: rotate(-14deg); }
+.lgo-scene-spirit-trails i:nth-child(2) { right: 8%; top: 58%; transform: rotate(12deg); animation-delay: -2.5s; }
+.lgo-scene-spirit-trails i:nth-child(3) { left: 27%; bottom: 21%; transform: rotate(4deg); animation-delay: -4.5s; }
+
+.lgo-pillar-visual {
+  position: relative;
+  width: 5.4rem;
+  height: 5.4rem;
+  margin-bottom: 1.1rem;
+  border-radius: 1.45rem;
+  border: 1px solid rgba(49,216,232,.2);
+  background: radial-gradient(circle at 50% 40%, rgba(49,216,232,.18), rgba(7,17,31,.2) 56%, transparent 70%);
+  overflow: hidden;
+}
+
+.lgo-pillar-visual span,
+.lgo-pillar-visual i,
+.lgo-pillar-visual b {
+  position: absolute;
+  display: block;
+}
+
+.lgo-pillar-visual span { inset: 16%; border: 1px solid rgba(245,200,107,.38); border-radius: 50%; }
+.lgo-pillar-visual i { width: 64%; height: 1px; left: 18%; top: 50%; background: linear-gradient(90deg, transparent, rgba(49,216,232,.9), transparent); transform: rotate(-34deg); }
+.lgo-pillar-visual b { width: 1.2rem; height: 1.2rem; left: calc(50% - .6rem); top: calc(50% - .6rem); border-radius: 50%; background: var(--lgo-color-spirit-cyan); box-shadow: 0 0 22px rgba(49,216,232,.65); }
+.lgo-pillar-action .lgo-pillar-visual b { background: var(--lgo-color-warm-gold); box-shadow: 0 0 22px rgba(245,200,107,.55); }
+.lgo-pillar-progression .lgo-pillar-visual b { background: var(--lgo-color-jade-teal); box-shadow: 0 0 22px rgba(53,198,163,.55); }
+
+.lgo-class-path {
+  --class-accent: 49, 216, 232;
+  overflow: hidden;
+}
+
+.lgo-class-vo { --class-accent: 239, 166, 73; }
+.lgo-class-kiem { --class-accent: 103, 213, 244; }
+.lgo-class-phap { --class-accent: 149, 102, 243; }
+.lgo-class-co { --class-accent: 70, 215, 181; }
+.lgo-class-linh { --class-accent: 110, 226, 172; }
+
+.lgo-class-emblem {
+  position: relative;
+  width: 8.4rem;
+  height: 8.4rem;
+  margin: .25rem auto 1.5rem;
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(0 18px 34px rgba(var(--class-accent), .15));
+}
+
+.lgo-class-emblem::before,
+.lgo-class-emblem::after {
+  content: "";
+  position: absolute;
+  inset: 10%;
+  border: 1px solid rgba(var(--class-accent), .42);
+  transform: rotate(45deg);
+  border-radius: 1.35rem;
+}
+
+.lgo-class-emblem::after {
+  inset: 22%;
+  transform: rotate(0deg);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--class-accent), .18), transparent 68%);
+  box-shadow: inset 0 0 32px rgba(var(--class-accent), .11);
+}
+
+.lgo-class-emblem-ring {
+  position: absolute;
+  inset: 3%;
+  border-radius: 50%;
+  border: 1px dashed rgba(var(--class-accent), .26);
+  animation: lgoEmblemSpin 20s linear infinite;
+}
+
+.lgo-class-emblem-core {
+  position: relative;
+  z-index: 4;
+  width: 3.35rem;
+  height: 3.35rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #f7fbff;
+  font-family: var(--lgo-font-display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  background: linear-gradient(145deg, rgba(var(--class-accent), .34), rgba(7,17,31,.94));
+  border: 1px solid rgba(var(--class-accent), .62);
+  box-shadow: 0 0 28px rgba(var(--class-accent), .32);
+}
+
+.lgo-class-emblem > i {
+  position: absolute;
+  z-index: 2;
+  width: 2.7rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(var(--class-accent), .72), transparent);
+}
+
+.lgo-class-emblem > i:nth-of-type(1) { left: -4%; top: 34%; transform: rotate(-22deg); }
+.lgo-class-emblem > i:nth-of-type(2) { right: -4%; top: 57%; transform: rotate(18deg); }
+.lgo-class-emblem > i:nth-of-type(3) { left: 31%; bottom: 5%; transform: rotate(90deg); }
+
+.lgo-class-copy small {
+  color: rgba(var(--class-accent), .92);
+}
+
+.lgo-world-panorama {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, .82fr) minmax(480px, 1.18fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  min-height: 540px;
+  padding: clamp(2rem, 5vw, 4.5rem);
+  border: 1px solid rgba(49,216,232,.2);
+  border-radius: 2.2rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 75% 24%, rgba(49,216,232,.09), transparent 22rem),
+    linear-gradient(135deg, rgba(13,27,46,.96), rgba(6,14,27,.94));
+}
+
+.lgo-world-panorama::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 42%;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(2,7,15,.55));
+}
+
+.lgo-world-panorama-copy { position: relative; z-index: 5; }
+.lgo-world-panorama-copy h2 { margin: .45rem 0 1rem; font-size: clamp(2.2rem, 4.2vw, 4.4rem); max-width: 13ch; }
+
+.lgo-world-panorama-art {
+  position: relative;
+  min-height: 400px;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  background: linear-gradient(180deg, #102844 0%, #14293b 36%, #0b1a25 72%, #050b13 100%);
+  box-shadow: 0 28px 70px rgba(0,0,0,.34);
+}
+
+.lgo-panorama-sky,
+.lgo-panorama-city,
+.lgo-panorama-forest,
+.lgo-panorama-ruins,
+.lgo-panorama-realm { position: absolute; inset: 0; }
+
+.lgo-panorama-sky {
+  background:
+    radial-gradient(circle at 22% 20%, rgba(245,200,107,.5) 0 2%, transparent 2.4%),
+    radial-gradient(circle at 76% 16%, rgba(49,216,232,.45) 0 1%, transparent 1.4%),
+    radial-gradient(circle at 88% 27%, rgba(122,75,217,.5) 0 1.2%, transparent 1.6%);
+  opacity: .72;
+}
+
+.lgo-panorama-city {
+  top: 26%;
+  left: -4%;
+  width: 33%;
+  height: 61%;
+  inset: auto auto 10% -4%;
+  clip-path: polygon(0 100%, 0 54%, 8% 54%, 8% 37%, 17% 37%, 17% 47%, 24% 47%, 24% 16%, 31% 16%, 31% 44%, 40% 44%, 40% 29%, 50% 29%, 50% 49%, 60% 49%, 60% 21%, 69% 21%, 69% 50%, 77% 50%, 77% 35%, 86% 35%, 86% 57%, 100% 57%, 100% 100%);
+  background: linear-gradient(180deg, rgba(46,100,118,.95), rgba(5,14,23,.98));
+  box-shadow: 0 0 50px rgba(49,216,232,.08);
+}
+
+.lgo-panorama-forest {
+  left: 24%;
+  bottom: 7%;
+  width: 27%;
+  height: 54%;
+  inset: auto auto 7% 24%;
+  clip-path: polygon(0 100%, 6% 48%, 12% 100%, 18% 35%, 25% 100%, 33% 52%, 40% 100%, 47% 29%, 55% 100%, 62% 44%, 69% 100%, 77% 38%, 84% 100%, 91% 53%, 100% 100%);
+  background: linear-gradient(180deg, rgba(32,117,96,.9), rgba(5,24,23,.96));
+}
+
+.lgo-panorama-ruins {
+  left: 49%;
+  bottom: 8%;
+  width: 25%;
+  height: 48%;
+  inset: auto auto 8% 49%;
+  clip-path: polygon(0 100%, 0 60%, 12% 60%, 12% 22%, 26% 22%, 26% 9%, 44% 9%, 44% 48%, 58% 48%, 58% 29%, 75% 29%, 75% 60%, 88% 60%, 88% 40%, 100% 40%, 100% 100%);
+  background: linear-gradient(180deg, rgba(146,119,80,.88), rgba(30,24,21,.98));
+}
+
+.lgo-panorama-realm {
+  right: -5%;
+  bottom: -4%;
+  width: 34%;
+  height: 78%;
+  inset: auto -5% -4% auto;
+  border-radius: 48% 0 0 45%;
+  background:
+    radial-gradient(ellipse at 50% 46%, rgba(5,2,16,.96) 0 28%, rgba(122,75,217,.28) 29% 42%, transparent 44%),
+    radial-gradient(circle at 55% 50%, rgba(122,75,217,.28), transparent 58%);
+  box-shadow: -18px 0 50px rgba(122,75,217,.18);
+}
+
+.lgo-panorama-route {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: 4%;
+  z-index: 8;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: .35rem;
+}
+
+.lgo-panorama-route::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 9%;
+  right: 9%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(49,216,232,.45), rgba(245,200,107,.7), rgba(122,75,217,.7));
+}
+
+.lgo-panorama-route span {
+  position: relative;
+  padding-top: 1.9rem;
+  text-align: center;
+  color: rgba(255,255,255,.72);
+  font-size: .68rem;
+  letter-spacing: .03em;
+}
+
+.lgo-panorama-route span::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #0d1b2e;
+  border: 2px solid var(--lgo-color-warm-gold);
+  box-shadow: 0 0 13px rgba(245,200,107,.38);
+}
+
+.lgo-chapter-visual {
+  position: relative;
+  width: 100%;
+  height: 7.2rem;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(122,75,217,.18);
+  background:
+    radial-gradient(circle at 72% 40%, rgba(122,75,217,.20), transparent 38%),
+    linear-gradient(135deg, rgba(49,216,232,.07), rgba(7,17,31,.7));
+}
+
+.lgo-chapter-visual span {
+  position: absolute;
+  left: 1rem;
+  bottom: .55rem;
+  font-family: var(--lgo-font-display);
+  font-size: 3.8rem;
+  line-height: 1;
+  color: rgba(255,255,255,.08);
+  font-weight: 900;
+}
+
+.lgo-chapter-visual i,
+.lgo-chapter-visual b {
+  position: absolute;
+  display: block;
+}
+
+.lgo-chapter-visual i {
+  width: 8rem;
+  height: 8rem;
+  right: 1rem;
+  top: -1.8rem;
+  border-radius: 50%;
+  border: 1px solid rgba(122,75,217,.42);
+  box-shadow: 0 0 30px rgba(122,75,217,.16), inset 0 0 28px rgba(122,75,217,.12);
+}
+
+.lgo-chapter-visual b {
+  right: 3rem;
+  top: 2rem;
+  width: 5rem;
+  height: 1px;
+  transform: rotate(-24deg);
+  background: linear-gradient(90deg, transparent, rgba(245,200,107,.85), transparent);
+}
+
+.lgo-invasion-sentinels { position: absolute; inset: auto 8% 6% 8%; height: 5.5rem; }
+.lgo-invasion-sentinels i { position: absolute; bottom: 0; width: 2.1rem; height: 5rem; clip-path: polygon(50% 0, 76% 28%, 69% 100%, 31% 100%, 24% 28%); background: linear-gradient(180deg, rgba(49,216,232,.52), rgba(4,12,23,.98) 62%); opacity: .74; }
+.lgo-invasion-sentinels i:nth-child(1) { left: 10%; }
+.lgo-invasion-sentinels i:nth-child(2) { left: calc(50% - 1rem); height: 5.5rem; background: linear-gradient(180deg, rgba(245,200,107,.55), rgba(4,12,23,.98) 62%); }
+.lgo-invasion-sentinels i:nth-child(3) { right: 10%; background: linear-gradient(180deg, rgba(53,198,163,.52), rgba(4,12,23,.98) 62%); }
+
+@keyframes lgoSpiritFloat {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: .42; }
+  50% { transform: translate3d(0, -12px, 0) scale(1.05); opacity: .72; }
+}
+
+@keyframes lgoSpiritTrail {
+  0%, 100% { opacity: .15; transform: translateX(-8px) rotate(var(--trail-rotate, 0deg)); }
+  50% { opacity: .65; transform: translateX(12px) rotate(var(--trail-rotate, 0deg)); }
+}
+
+@keyframes lgoEmblemSpin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 980px) {
+  .lgo-world-panorama { grid-template-columns: 1fr; min-height: auto; }
+  .lgo-world-panorama-copy h2 { max-width: 16ch; }
+  .lgo-world-panorama-art { min-height: 360px; }
+}
+
+@media (max-width: 720px) {
+  .lgo-spirit-route-breadcrumb { gap: .45rem; }
+  .lgo-spirit-route-breadcrumb i { width: .65rem; }
+  .lgo-class-emblem { width: 7.4rem; height: 7.4rem; }
+  .lgo-world-panorama { padding: 1.35rem; border-radius: 1.5rem; }
+  .lgo-world-panorama-art { min-height: 320px; }
+  .lgo-panorama-route span { font-size: .58rem; }
+}
+
+@media (max-width: 520px) {
+  .lgo-spirit-route-breadcrumb { display: grid; grid-template-columns: 1fr 1fr; }
+  .lgo-spirit-route-breadcrumb i { display: none; }
+  .lgo-world-panorama-art { min-height: 290px; }
+  .lgo-panorama-route { grid-template-columns: repeat(5, minmax(62px, 1fr)); overflow-x: auto; padding-bottom: .35rem; }
+  .lgo-panorama-route::before { left: 36px; right: 36px; }
+  .lgo-panorama-city { width: 38%; }
+  .lgo-panorama-forest { left: 25%; width: 31%; }
+  .lgo-panorama-ruins { left: 52%; width: 28%; }
+  .lgo-panorama-realm { width: 38%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lgo-hero-atmosphere i,
+  .lgo-scene-spirit-trails i,
+  .lgo-class-emblem-ring {
+    animation: none !important;
+  }
+
+  .lgo-link-button,
+  .lgo-brand-links a,
+  .lgo-nav-play {
+    transition: none !important;
+  }
+}
+
+.lgo-download-player-hero {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(245,200,107,.26);
+  background:
+    radial-gradient(circle at 76% 32%, rgba(245,200,107,.11), transparent 24rem),
+    radial-gradient(circle at 12% 20%, rgba(49,216,232,.09), transparent 26rem),
+    linear-gradient(135deg, rgba(11,27,46,.96), rgba(6,14,27,.97));
+}
+
+.lgo-download-gate-visual {
+  min-height: 280px;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(245,200,107,.28);
+}
+
+.lgo-download-gate-visual::before,
+.lgo-download-gate-visual::after {
+  content: "";
+  position: absolute;
+  right: -2rem;
+  top: -3rem;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  border: 1px solid rgba(49,216,232,.16);
+}
+
+.lgo-download-gate-visual::after {
+  right: 2rem;
+  top: 1rem;
+  width: 9rem;
+  height: 9rem;
+  border-color: rgba(245,200,107,.24);
+}
+
+.lgo-download-seal {
+  width: 4.2rem;
+  height: 4.2rem;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(245,200,107,.54);
+  background: radial-gradient(circle, rgba(245,200,107,.15), rgba(7,17,31,.88));
+  color: var(--lgo-color-warm-gold);
+  font-family: var(--lgo-font-display);
+  font-size: 1.7rem;
+  box-shadow: 0 0 32px rgba(245,200,107,.12);
+}
+
+.lgo-download-gate-visual small {
+  color: rgba(215,232,245,.55);
+  line-height: 1.6;
+}
+
+.lgo-release-detail-stack {
+  display: grid;
+  gap: var(--lgo-space-lg);
+}
+
+/* WEB v1.24 approved art ingest */
+.lgo-world-concept-art {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  background: #0a1728;
+}
+
+.lgo-world-concept-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(4, 11, 22, .12), rgba(5, 13, 26, .48) 56%, rgba(4, 9, 18, .82)),
+    linear-gradient(90deg, rgba(5, 13, 26, .28), transparent 42%, rgba(28, 18, 53, .20));
+}
+
+.lgo-world-concept-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 52% 50%;
+  filter: saturate(.84) contrast(1.04) brightness(.67) hue-rotate(4deg);
+  transform: scale(1.015);
+}
+
+.lgo-art-status-chip {
+  position: absolute;
+  z-index: 19;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  min-height: 1.9rem;
+  padding: .42rem .72rem;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+  color: rgba(238, 248, 255, .9);
+  background: rgba(5, 13, 26, .68);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.20);
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.lgo-art-status-chip::before {
+  content: "";
+  width: .42rem;
+  height: .42rem;
+  border-radius: 50%;
+  background: var(--lgo-color-warm-gold);
+  box-shadow: 0 0 14px rgba(245,200,107,.58);
+}
+
+.lgo-world-concept-chip {
+  top: 1rem;
+  left: 1rem;
+}
+
+.lgo-class-art-spotlight {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, .78fr) minmax(520px, 1.22fr);
+  gap: clamp(2rem, 5vw, 5.5rem);
+  align-items: center;
+  min-height: 610px;
+  padding: clamp(1.6rem, 4vw, 4.2rem);
+  border: 1px solid rgba(239,166,73,.24);
+  border-radius: 2.2rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 79% 26%, rgba(239,166,73,.13), transparent 25rem),
+    radial-gradient(circle at 18% 77%, rgba(49,216,232,.08), transparent 20rem),
+    linear-gradient(138deg, rgba(15,29,45,.98), rgba(7,15,28,.98));
+  box-shadow: 0 32px 90px rgba(0,0,0,.25);
+}
+
+.lgo-class-art-spotlight::before {
+  content: "VÕ";
+  position: absolute;
+  right: -1.5rem;
+  top: -3.2rem;
+  color: rgba(239,166,73,.035);
+  font-family: var(--lgo-font-display);
+  font-size: clamp(10rem, 22vw, 20rem);
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.lgo-class-art-spotlight-copy {
+  position: relative;
+  z-index: 4;
+}
+
+.lgo-class-art-spotlight-copy h2 {
+  margin: .55rem 0 1.2rem;
+  max-width: 12ch;
+  font-size: clamp(2.25rem, 4.2vw, 4.7rem);
+  line-height: .98;
+}
+
+.lgo-class-art-spotlight-copy > p {
+  max-width: 58ch;
+  color: var(--lgo-color-text-muted);
+  font-size: 1.02rem;
+  line-height: 1.76;
+}
+
+.lgo-class-art-note {
+  display: grid;
+  gap: .35rem;
+  margin-top: 1.5rem;
+  padding: 1rem 1.05rem;
+  border-left: 2px solid rgba(239,166,73,.68);
+  border-radius: 0 1rem 1rem 0;
+  background: rgba(239,166,73,.065);
+}
+
+.lgo-class-art-note strong {
+  color: #f3c37f;
+  font-size: .78rem;
+  letter-spacing: .04em;
+}
+
+.lgo-class-art-note span {
+  color: rgba(220,233,243,.66);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.lgo-class-parity-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: 1.4rem;
+}
+
+.lgo-class-parity-strip span {
+  display: inline-flex;
+  min-width: 2.5rem;
+  justify-content: center;
+  padding: .45rem .7rem;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 999px;
+  color: rgba(224,238,247,.72);
+  background: rgba(5,13,26,.55);
+  font-family: var(--lgo-font-display);
+  font-size: .75rem;
+  font-weight: 800;
+}
+
+.lgo-class-parity-strip span:first-child {
+  border-color: rgba(239,166,73,.48);
+  color: #f3c37f;
+  background: rgba(239,166,73,.09);
+}
+
+.lgo-class-art-spotlight-visual {
+  position: relative;
+  z-index: 3;
+  min-height: 510px;
+}
+
+.lgo-class-art-board {
+  margin: 0;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 1.55rem;
+  background: linear-gradient(145deg, rgba(16,31,49,.82), rgba(4,11,21,.92));
+  box-shadow: 0 30px 70px rgba(0,0,0,.32);
+  overflow: hidden;
+}
+
+.lgo-class-art-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 55% 43%, rgba(49,216,232,.07), transparent 35%),
+    linear-gradient(135deg, rgba(239,166,73,.04), transparent 42%);
+}
+
+.lgo-class-art-board img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.lgo-class-art-board figcaption {
+  padding: .76rem .9rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: rgba(222,236,246,.66);
+  background: rgba(5,13,26,.72);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.lgo-class-art-board-starter {
+  position: absolute;
+  inset: 0 11% 0 0;
+  transform: rotate(-1.2deg);
+}
+
+.lgo-class-art-board-starter .lgo-class-art-frame {
+  height: 456px;
+}
+
+.lgo-class-art-board-starter img {
+  object-position: 48% 38%;
+  transform: scale(1.03);
+}
+
+.lgo-class-art-board-skill {
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+  width: 42%;
+  transform: rotate(2.4deg);
+  border-color: rgba(49,216,232,.22);
+  box-shadow: 0 24px 58px rgba(0,0,0,.42), 0 0 42px rgba(49,216,232,.08);
+}
+
+.lgo-class-art-board-skill .lgo-class-art-frame {
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(49,216,232,.09), rgba(5,13,26,.96) 70%);
+}
+
+.lgo-class-art-board-skill img {
+  filter: saturate(.93) brightness(1.03);
+}
+
+@media (max-width: 980px) {
+  .lgo-class-art-spotlight {
+    grid-template-columns: 1fr;
+  }
+
+  .lgo-class-art-spotlight-copy h2 {
+    max-width: 16ch;
+  }
+
+  .lgo-class-art-spotlight-visual {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 640px) {
+  .lgo-world-concept-art img {
+    object-position: 60% 50%;
+  }
+
+  .lgo-art-status-chip {
+    font-size: .58rem;
+    letter-spacing: .07em;
+  }
+
+  .lgo-class-art-spotlight {
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+  }
+
+  .lgo-class-art-spotlight-copy h2 {
+    font-size: clamp(2.1rem, 11vw, 3.35rem);
+  }
+
+  .lgo-class-art-spotlight-visual {
+    min-height: 430px;
+  }
+
+  .lgo-class-art-board-starter {
+    inset: 0 0 58px;
+    transform: none;
+  }
+
+  .lgo-class-art-board-starter .lgo-class-art-frame {
+    height: 330px;
+  }
+
+  .lgo-class-art-board-skill {
+    width: 45%;
+    right: .4rem;
+    bottom: 0;
+  }
+}
+
+/* WEB v1.25 class world story depth */
+.lgo-class-identity-section,
+.lgo-world-atlas-section,
+.lgo-story-arc-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.lgo-class-identity-deck {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(14px, 1.8vw, 24px);
+}
+
+.lgo-class-identity-card {
+  grid-column: span 6;
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid color-mix(in srgb, var(--lgo-class-accent, #78d9ff) 30%, rgba(255,255,255,.10));
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 90% 5%, color-mix(in srgb, var(--lgo-class-accent, #78d9ff) 16%, transparent), transparent 33%),
+    linear-gradient(145deg, rgba(12,24,39,.94), rgba(5,13,25,.78));
+  box-shadow: 0 24px 80px rgba(0,0,0,.18);
+}
+
+.lgo-class-identity-card:last-child { grid-column: 4 / span 6; }
+.lgo-class-vo { --lgo-class-accent: #f6b24f; }
+.lgo-class-kiem { --lgo-class-accent: #86d8ff; }
+.lgo-class-phap { --lgo-class-accent: #b490ff; }
+.lgo-class-co { --lgo-class-accent: #72e3ca; }
+.lgo-class-linh { --lgo-class-accent: #98e8b8; }
+
+.lgo-class-identity-card > header {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.lgo-class-identity-number {
+  font: 700 .72rem/1 var(--lgo-font-mono, monospace);
+  letter-spacing: .16em;
+  color: rgba(255,255,255,.42);
+}
+
+.lgo-class-identity-mark {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--lgo-class-accent) 55%, transparent);
+  box-shadow: inset 0 0 22px color-mix(in srgb, var(--lgo-class-accent) 14%, transparent);
+}
+.lgo-class-identity-mark b { color: var(--lgo-class-accent); font-size: 1.05rem; }
+.lgo-class-identity-mark i { position: absolute; width: 78%; height: 1px; background: color-mix(in srgb, var(--lgo-class-accent) 50%, transparent); transform: rotate(45deg); }
+.lgo-class-identity-mark i:last-child { transform: rotate(-45deg); }
+.lgo-class-identity-card h3 { margin: .2rem 0 0; font-size: clamp(1.7rem, 2.5vw, 2.35rem); }
+.lgo-class-identity-fantasy { font-size: 1.04rem; color: rgba(244,249,255,.88); }
+.lgo-class-identity-card dl { display: grid; gap: 14px; margin: 22px 0; }
+.lgo-class-identity-card dl > div { display: grid; grid-template-columns: minmax(110px, .35fr) 1fr; gap: 16px; border-top: 1px solid rgba(255,255,255,.08); padding-top: 14px; }
+.lgo-class-identity-card dt { color: var(--lgo-class-accent); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+.lgo-class-identity-card dd { margin: 0; color: rgba(226,236,246,.76); }
+.lgo-class-signature-verbs { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
+.lgo-class-signature-verbs span { padding: 7px 11px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--lgo-class-accent) 32%, rgba(255,255,255,.1)); color: rgba(245,250,255,.88); background: color-mix(in srgb, var(--lgo-class-accent) 8%, transparent); font-size: .8rem; }
+
+.lgo-world-atlas-stories { display: grid; gap: 18px; }
+.lgo-world-atlas-card { display: grid; grid-template-columns: minmax(180px, .42fr) 1fr; min-height: 310px; overflow: hidden; border: 1px solid rgba(255,255,255,.1); border-radius: 28px; background: rgba(6,16,30,.72); }
+.lgo-world-atlas-card:nth-child(even) { grid-template-columns: 1fr minmax(180px, .42fr); }
+.lgo-world-atlas-card:nth-child(even) .lgo-world-atlas-visual { order: 2; }
+.lgo-world-atlas-visual { min-height: 100%; position: relative; display: grid; place-items: center; overflow: hidden; background: radial-gradient(circle at 50% 42%, rgba(91,210,255,.2), transparent 28%), linear-gradient(180deg, #102c43, #081421); }
+.lgo-world-atlas-gate .lgo-world-atlas-visual { background: radial-gradient(circle at 50% 50%, rgba(84,232,204,.18), transparent 24%), linear-gradient(180deg,#16383b,#081a25); }
+.lgo-world-atlas-field .lgo-world-atlas-visual { background: radial-gradient(circle at 45% 38%, rgba(113,220,150,.2), transparent 25%), linear-gradient(180deg,#17352d,#071c20); }
+.lgo-world-atlas-ruins .lgo-world-atlas-visual { background: radial-gradient(circle at 55% 45%, rgba(236,188,100,.18), transparent 25%), linear-gradient(180deg,#332d2b,#14141d); }
+.lgo-world-atlas-realm .lgo-world-atlas-visual { background: radial-gradient(circle at 50% 50%, rgba(156,79,255,.35), transparent 23%), linear-gradient(180deg,#281b45,#0b0719); }
+.lgo-world-atlas-visual > span { position: relative; z-index: 2; font: 600 clamp(2.4rem,7vw,5.8rem)/1 serif; color: rgba(255,255,255,.17); }
+.lgo-world-atlas-visual i { position: absolute; width: 58%; aspect-ratio: 1; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; transform: rotate(16deg); }
+.lgo-world-atlas-visual i:nth-of-type(2) { width: 36%; transform: rotate(-26deg); }
+.lgo-world-atlas-visual b { position: absolute; bottom: 14%; width: 76%; height: 22%; border-radius: 50% 50% 10% 10%; background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(0,0,0,.2)); filter: blur(.2px); }
+.lgo-world-atlas-copy { padding: clamp(24px, 4vw, 44px); display: grid; align-content: center; gap: 18px; }
+.lgo-world-atlas-copy header small { color: rgba(255,255,255,.45); }
+.lgo-world-atlas-copy h3 { margin: .25rem 0; font-size: clamp(2rem, 3.6vw, 3.4rem); }
+.lgo-world-atlas-mood { max-width: 72ch; font-size: 1.05rem; color: rgba(236,244,252,.82); }
+.lgo-world-atlas-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.lgo-world-atlas-facts > div { border-top: 1px solid rgba(255,255,255,.1); padding-top: 12px; }
+.lgo-world-atlas-facts strong { display: block; margin-bottom: 8px; color: rgba(122,221,255,.84); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }
+.lgo-world-atlas-facts span { color: rgba(220,231,242,.67); font-size: .9rem; }
+
+.lgo-story-arc-timeline { display: grid; gap: 0; max-width: 1050px; margin-inline: auto; }
+.lgo-story-arc-entry { display: grid; grid-template-columns: 82px 1fr; gap: 22px; }
+.lgo-story-arc-spine { position: relative; display: flex; justify-content: center; }
+.lgo-story-arc-spine span { position: relative; z-index: 2; width: 54px; height: 54px; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(156,111,255,.5); background: #100d1f; color: #d7c5ff; font-weight: 700; }
+.lgo-story-arc-spine i { position: absolute; top: 54px; bottom: -1px; width: 1px; background: linear-gradient(#865bd7, rgba(134,91,215,.12)); }
+.lgo-story-arc-card { margin-bottom: 24px; padding: clamp(24px, 4vw, 42px); border: 1px solid rgba(162,120,255,.18); border-radius: 28px; background: radial-gradient(circle at 100% 0%, rgba(129,74,220,.14), transparent 38%), rgba(9,12,24,.8); }
+.lgo-story-arc-card h3 { margin: .25rem 0 1rem; font-size: clamp(2rem, 3.5vw, 3.3rem); }
+.lgo-story-arc-card blockquote { margin: 0 0 24px; padding-left: 18px; border-left: 2px solid rgba(183,139,255,.55); color: rgba(244,239,255,.88); font: 500 1.05rem/1.7 serif; }
+.lgo-story-arc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.lgo-story-arc-grid > div { padding: 18px; border-radius: 18px; background: rgba(255,255,255,.035); }
+.lgo-story-arc-grid strong,
+.lgo-story-arc-card footer > span { display: block; margin-bottom: 8px; color: #c8a9ff; text-transform: uppercase; font-size: .76rem; letter-spacing: .08em; }
+.lgo-story-arc-grid p,
+.lgo-story-arc-card footer p { margin: 0; color: rgba(220,226,240,.72); }
+.lgo-story-arc-card footer { margin-top: 16px; padding: 18px; border: 1px solid rgba(166,116,255,.16); border-radius: 18px; background: rgba(112,64,187,.07); }
+
+@media (max-width: 900px) {
+  .lgo-class-identity-card,
+  .lgo-class-identity-card:last-child { grid-column: 1 / -1; }
+  .lgo-world-atlas-card,
+  .lgo-world-atlas-card:nth-child(even) { grid-template-columns: 1fr; }
+  .lgo-world-atlas-card:nth-child(even) .lgo-world-atlas-visual { order: initial; }
+  .lgo-world-atlas-visual { min-height: 190px; }
+  .lgo-world-atlas-facts { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .lgo-class-identity-card { padding: 20px; border-radius: 22px; }
+  .lgo-class-identity-card > header { grid-template-columns: auto 1fr; }
+  .lgo-class-identity-number { display: none; }
+  .lgo-class-identity-card dl > div { grid-template-columns: 1fr; gap: 6px; }
+  .lgo-world-atlas-card { border-radius: 22px; }
+  .lgo-world-atlas-copy { padding: 22px; }
+  .lgo-story-arc-entry { grid-template-columns: 44px 1fr; gap: 10px; }
+  .lgo-story-arc-spine span { width: 40px; height: 40px; font-size: .8rem; }
+  .lgo-story-arc-spine i { top: 40px; }
+  .lgo-story-arc-card { padding: 20px; border-radius: 22px; }
+  .lgo-story-arc-grid { grid-template-columns: 1fr; }
+}
+
+/* WEB v1.26 — homepage discovery uses one reusable media-frame rail instead of repeating deep-route sections. */
+.lgo-home-discovery { position: relative; }
+.lgo-home-discovery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--lgo-space-lg); }
+.lgo-media-frame { display: grid; grid-template-rows: minmax(220px, 0.9fr) auto; overflow: hidden; border: 1px solid rgba(49,216,232,.2); border-radius: var(--lgo-radius-xl); background: linear-gradient(180deg, rgba(10,22,43,.92), rgba(7,15,31,.98)); box-shadow: var(--lgo-shadow-panel); }
+.lgo-media-frame-visual { min-height: 220px; position: relative; overflow: hidden; background: radial-gradient(circle at 50% 30%, rgba(49,216,232,.14), transparent 56%), #07101f; }
+.lgo-media-frame-copy { padding: var(--lgo-space-xl); display: grid; align-content: start; gap: .75rem; }
+.lgo-media-frame-copy h3, .lgo-media-frame-copy p { margin: 0; }
+.lgo-media-frame-copy h3 { font-size: clamp(1.65rem, 2.4vw, 2.4rem); }
+.lgo-media-frame-meta { color: var(--lgo-color-text-muted); font-size: .9rem; line-height: 1.55; border-top: 1px solid rgba(255,255,255,.08); padding-top: .75rem; }
+.lgo-discovery-media { position: absolute; inset: 0; display: grid; place-items: center; isolation: isolate; }
+.lgo-discovery-media::before, .lgo-discovery-media::after { content: ""; position: absolute; inset: 12%; border: 1px solid rgba(255,255,255,.14); transform: rotate(45deg); border-radius: 24%; }
+.lgo-discovery-media::after { inset: 27%; border-color: rgba(49,216,232,.3); transform: rotate(-24deg); }
+.lgo-discovery-class-mark { z-index: 2; display: grid; place-items: center; width: 7rem; aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(245,200,107,.55); background: radial-gradient(circle, rgba(245,200,107,.2), rgba(7,16,31,.8)); color: var(--lgo-color-warm-gold); font-size: 2rem; font-weight: 900; box-shadow: 0 0 48px rgba(245,200,107,.12); }
+.lgo-discovery-class-verbs { position: absolute; inset: auto 1rem 1rem; z-index: 3; display: flex; justify-content: center; gap: .45rem; flex-wrap: wrap; }
+.lgo-discovery-class-verbs i { font-style: normal; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; padding: .35rem .55rem; border-radius: var(--lgo-radius-pill); background: rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.12); }
+.lgo-discovery-media-world { background: linear-gradient(180deg, rgba(25,71,92,.32), rgba(14,32,43,.12)), radial-gradient(circle at 50% 78%, rgba(49,216,232,.2), transparent 42%); }
+.lgo-discovery-media-world > span { position: absolute; top: 1rem; left: 1rem; color: rgba(255,255,255,.42); font-size: 3rem; font-weight: 900; }
+.lgo-discovery-media-world > strong, .lgo-discovery-media-story > strong { z-index: 3; max-width: 70%; text-align: center; font-size: clamp(1.15rem, 2vw, 1.7rem); }
+.lgo-discovery-media-world > i { position: absolute; bottom: 18%; width: 70%; height: 20%; border-radius: 50% 50% 10% 10%; background: rgba(10,35,43,.85); transform: translateX(-10%) skewX(-12deg); }
+.lgo-discovery-media-world > i:nth-of-type(2) { bottom: 9%; transform: translateX(12%) scale(.8) skewX(9deg); opacity: .75; }
+.lgo-discovery-media-world > b { position: absolute; bottom: 0; width: 100%; height: 22%; background: linear-gradient(180deg, transparent, rgba(5,11,22,.96)); }
+.lgo-discovery-media-story { background: radial-gradient(circle at 50% 45%, rgba(122,75,217,.35), transparent 35%), linear-gradient(160deg, rgba(36,17,63,.9), #07101f 72%); }
+.lgo-discovery-media-story > span { position: absolute; top: 1rem; left: 1rem; font-size: 3rem; font-weight: 900; color: rgba(194,166,255,.35); }
+.lgo-discovery-rift { position: absolute; width: 4rem; height: 9rem; border-radius: 50%; border: 2px solid rgba(194,166,255,.6); box-shadow: 0 0 46px rgba(122,75,217,.55), inset 0 0 28px rgba(122,75,217,.35); transform: rotate(9deg); }
+.lgo-discovery-rift i { position: absolute; inset: 12%; border: 1px solid rgba(255,255,255,.24); border-radius: 50%; transform: rotate(18deg); }
+.lgo-discovery-rift i:nth-child(2) { inset: 27%; transform: rotate(-29deg); }
+.lgo-discovery-rift i:nth-child(3) { inset: 41%; background: rgba(194,166,255,.28); }
+@media (max-width: 960px) { .lgo-home-discovery-grid { grid-template-columns: 1fr; } .lgo-media-frame { grid-template-columns: minmax(180px, .72fr) 1fr; grid-template-rows: none; } }
+@media (max-width: 640px) { .lgo-media-frame { grid-template-columns: 1fr; grid-template-rows: 190px auto; } .lgo-media-frame-visual { min-height: 190px; } .lgo-media-frame-copy { padding: var(--lgo-space-lg); } }

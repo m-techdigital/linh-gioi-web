@@ -5,7 +5,10 @@
   "description": "Minimal LGO UI foundation package for WEB-01.",
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./shell.css": "./src/shell.css",
+    "./forms.css": "./src/forms.css",
+    "./data.css": "./src/data.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

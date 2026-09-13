@@ -1,0 +1,10 @@
+HANDOFF-LGO-WEB-OPS-SUPPORT-TRIAGE-UX-DEPTH-v1.34.md
+LGO-WEB-OPS-SUPPORT-TRIAGE-UX-DEPTH-REPORT-v1.34.md
+apps/ops/src/app/support/[id]/page.tsx
+apps/ops/src/app/support/page.tsx
+apps/ops/src/lib/ops-fixtures.ts
+docs/execution/WEB-NEXT-ACTION.md
+docs/execution/WEB-PROJECT-STATE.md
+docs/execution/WEB-TASK-LEDGER.md
+tools/validate_web_current_state.py
+tools/validate_web_ops_support_triage_depth_v134.py

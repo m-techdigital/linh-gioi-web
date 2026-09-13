@@ -1,10 +1,11 @@
 import { FaqHelpfulnessCta } from "../../components/PublicFaqHelpfulnessSections";
 import { ClosedTesterInformationPackCta, KnownLimitationNotesBoard } from "../../components/PublicClosedTesterInformationPackSections";
 import { downloadBuilds, downloadReadiness } from "@lgo-web/content";
-import { GameCard, Grid, LinkButton, SectionHeading, Stack, StatusBadge } from "@lgo-web/ui";
+import { GameCard, Grid, SectionHeading, Stack, StatusBadge } from "@lgo-web/ui";
 import { WorldGameplayLoopCta } from "../../components/PublicWorldGameplayLoopSections";
 import { PlayerSafetySupportCta } from "../../components/PublicPlayerSafetySections";
 import { RouteContinuityCta } from "../../components/PublicRouteContinuitySections";
+import { PublicPlayerHero } from "../../components/PublicPlayerHero";
 import { WebAppShell } from "../../components/WebAppShell";
 import { ContentIaStartCta } from "../../components/PublicContentHubSections";
 import { DownloadStatusDepth } from "../../components/PublicGameInfoDepthSections";
@@ -16,7 +17,7 @@ import { PlayerTrustReleaseCta, ClosedTestReadinessBoard } from "../../component
 import { PerformanceBudgetCta, StaticRouteCompositionBoard } from "../../components/PublicPerformanceBudgetSections";
 import { ReleaseReadinessHubCta, ReleaseSurfaceAlignmentBoard } from "../../components/PublicReleaseReadinessHubSections";
 
-export const metadata = { title: "Tải game" };
+export const metadata = { title: "Trạng thái chơi & tải game" };
 
 function statusTone(status: string) {
   if (status === "done") return "jade" as const;
@@ -27,37 +28,34 @@ function statusTone(status: string) {
 export default function DownloadPage() {
   return (
     <WebAppShell>
-      <Stack>
-        <ReleaseReadinessHubCta />
-        <ReleaseSurfaceAlignmentBoard />
-        <PlayerTrustReleaseCta />
-        <ClosedTestReadinessBoard />
-        <ContentIaStartCta />
-        <FaqHelpfulnessCta />
-        <RouteContinuityCta />
-        <WorldGameplayLoopCta />
-        <PlayerSafetySupportCta />
-        <AccessibilityReadabilityCta />
-        <PerformanceBudgetCta />
-        <section className="lgo-download-hero lgo-panel">
-          <div>
-            <StatusBadge tone="gold">WEB v1.8 download status depth</StatusBadge>
-            <h1>Trạng thái tải game</h1>
-            <p className="lgo-hero-lead">No public production download is available. Trang này giải thích rõ khi nào có thể tải, điều gì còn bị chặn, và vì sao không có nút tải giả.</p>
-          </div>
-          <div className="lgo-download-cta-box">
-            <strong>Không có nút tải giả</strong>
-            <p>Download thật chỉ xuất hiện khi có release artifact, checksum và owner approval.</p>
-            <LinkButton href="/roadmap" tone="gold">Xem điều kiện mở tải</LinkButton>
-          </div>
-        </section>
+      <Stack className="lgo-player-facing-stack">
+        <PublicPlayerHero
+          className="lgo-download-hero lgo-panel lgo-download-player-hero"
+          badge="Public access"
+          badgeTone="gold"
+          kicker="KHI NÀO CÓ THỂ BƯỚC VÀO LINH GIỚI?"
+          title="Trạng thái chơi & tải game"
+          lead="No public production download is available. Bản public hiện chưa được mở. Khi có build được duyệt, trang này sẽ hiển thị đúng artifact, checksum, phiên bản và ghi chú phát hành — không dùng nút tải giả để tạo cảm giác game đã sẵn sàng."
+          actions={[
+            { href: "/status", label: "Xem trạng thái hiện tại", tone: "jade" },
+            { href: "/release", label: "Xem lộ trình phát hành", tone: "gold" },
+            { href: "/game", label: "Khám phá Linh Giới", tone: "spirit" }
+          ]}
+          visual={(
+            <div className="lgo-download-cta-box lgo-download-gate-visual">
+              <span className="lgo-download-seal" aria-hidden="true">界</span>
+              <strong>Chưa mở cổng public</strong>
+              <p>Download thật chỉ xuất hiện khi có release artifact, checksum và owner approval.</p>
+              <small>Không cần đoán link tải · Không cần tìm mirror không chính thức</small>
+            </div>
+          )}
+        />
 
-        <SectionHeading eyebrow="Download" title="Download readiness không che giấu blocker">
-          Người chơi cần thấy trạng thái thật: build chưa public, closed testing còn planned, backend contract sync vẫn blocked, và runtime/browser web checks chỉ là guardrail.
+        <SectionHeading eyebrow="Readiness" title="Trước khi nút tải xuất hiện">
+          Trang public giữ một checklist minh bạch để người chơi biết chính xác điều gì đã sẵn sàng và điều gì còn bị chặn.
         </SectionHeading>
 
         <section className="lgo-panel">
-          <SectionHeading eyebrow="Readiness" title="Download readiness checklist" />
           <div className="lgo-readiness-list">
             {downloadReadiness.map((item) => (
               <article className="lgo-readiness-item" key={item.label}>
@@ -72,15 +70,8 @@ export default function DownloadPage() {
         </section>
 
         <DownloadStatusDepth />
-
-        <section className="lgo-panel"><h2>WEB v1.10 trust polish · WEB v1.9 download explanation</h2><p>Release artifact, checksum, provenance, known limitations and owner approval must be visible before any public download can appear.</p></section>
-
         <DownloadTrustGateBoard />
         <ReleaseEvidenceChecklist />
-        <StaticRouteCompositionBoard />
-        <DownloadExplanationDepth />
-        <DownloadTrustCta />
-        <StagedReleaseMessagingBoard />
 
         <SectionHeading eyebrow="Channels" title="Các kênh tải dự kiến" />
         <Grid>
@@ -92,9 +83,27 @@ export default function DownloadPage() {
             </GameCard>
           ))}
         </Grid>
-              <KnownLimitationNotesBoard />
-        <ClosedTesterInformationPackCta />
-        </Stack>
+
+        <section className="lgo-release-detail-stack" aria-label="Chi tiết release và hỗ trợ">
+          <ReleaseReadinessHubCta />
+          <ReleaseSurfaceAlignmentBoard />
+          <PlayerTrustReleaseCta />
+          <ClosedTestReadinessBoard />
+          <StagedReleaseMessagingBoard />
+          <DownloadExplanationDepth />
+          <DownloadTrustCta />
+          <KnownLimitationNotesBoard />
+          <ClosedTesterInformationPackCta />
+          <ContentIaStartCta />
+          <FaqHelpfulnessCta />
+          <RouteContinuityCta />
+          <WorldGameplayLoopCta />
+          <PlayerSafetySupportCta />
+          <AccessibilityReadabilityCta />
+          <PerformanceBudgetCta />
+          <StaticRouteCompositionBoard />
+        </section>
+      </Stack>
     </WebAppShell>
   );
 }

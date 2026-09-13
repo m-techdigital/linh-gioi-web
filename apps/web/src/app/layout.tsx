@@ -4,13 +4,13 @@ import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: {
-    default: "Linh Giới Online",
+    default: "Linh Giới Online — 2D Social Action MMORPG",
     template: "%s | Linh Giới Online"
   },
-  description: "Official public website source for Linh Giới Online. Public RC source only; no production auth, DB, CMS or backend integration claim.",
+  description: "Linh Giới Online là 2D Side-Scrolling Social Action MMORPG lấy Linh Thành làm trái tim xã hội, kết hợp action combat, năm Lộ Võ–Kiếm–Pháp–Cơ–Linh và câu chuyện về những cánh cổng Âm Giới.",
   openGraph: {
-    title: "Linh Giới Online",
-    description: "Vietnamese spiritual fantasy online RPG web source.",
+    title: "Linh Giới Online — Sống một đời khác trong Linh Giới",
+    description: "Khám phá Linh Thành, chọn một trong năm Lộ và cùng cộng đồng đối mặt Âm Giới Xâm Lăng.",
     type: "website"
   }
 };

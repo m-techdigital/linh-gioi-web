@@ -83,3 +83,11 @@ Runtime/browser/e2e is guardrail only and must not be marketed as game release r
 - No account lookup or account recovery from FAQ copy.
 - No production support SLA from FAQ copy.
 - No collection of passwords, tokens, payment data or sensitive personal data through FAQ/helpfulness copy.
+
+## v1.22 player-facing game experience boundary
+
+- No claim that every designed world region is currently playable in a public build.
+- No claim that all five designed Lộ have complete production runtime content.
+- No claim that the full Âm Giới Xâm Lăng world event is publicly live.
+- No claim that designed social, progression, guild, economy or housing systems are production-complete.
+- No public build or release availability claim outside the Download/Status trust surfaces.

@@ -33,3 +33,14 @@ No runtime kit artifact is source. Do not commit generated tarballs, browser bin
 ## Runtime kit split upload contract
 
 The upload set for large kits is `*.tar.gz.part-*`, `*.tar.gz.parts.sha256`, `*.tar.gz.sha256`, `*.tar.gz.MANIFEST.txt`, and `UPLOAD-THESE-LGO-WEB-RUNTIME-KIT-FILES.txt`. The full `.tar.gz` is reconstructed inside sandbox only after every part checksum passes.
+
+## Base First preflight
+
+Before implementation:
+
+1. identify which of `apps/web`, `apps/portal`, `apps/ops` is affected;
+2. search the existing `packages/*` owners for reusable capability;
+3. decide whether the change belongs in shared/base or app-local composition;
+4. record affected validation slices;
+5. use targeted gates during development;
+6. defer the full production build to closure unless build evidence is specifically required earlier.

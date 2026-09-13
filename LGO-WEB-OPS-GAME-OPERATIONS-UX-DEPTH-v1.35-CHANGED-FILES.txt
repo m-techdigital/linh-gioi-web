@@ -1,0 +1,10 @@
+HANDOFF-LGO-WEB-OPS-GAME-OPERATIONS-UX-DEPTH-v1.35.md
+LGO-WEB-OPS-GAME-OPERATIONS-UX-DEPTH-REPORT-v1.35.md
+apps/ops/src/app/content-liveops/page.tsx
+apps/ops/src/app/game-operations/[id]/page.tsx
+apps/ops/src/app/game-operations/page.tsx
+apps/ops/src/lib/ops-fixtures.ts
+docs/execution/WEB-NEXT-ACTION.md
+docs/execution/WEB-PROJECT-STATE.md
+tools/validate_web_current_state.py
+tools/validate_web_ops_game_operations_depth_v135.py

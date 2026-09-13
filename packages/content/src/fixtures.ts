@@ -66,7 +66,14 @@ import type {
   FaqDiscoveryGroup,
   FaqHelpfulnessPrompt,
   IssueCategoryRoute,
-  NoSearchBackendNote
+  NoSearchBackendNote,
+  GameExperiencePillar,
+  ClassPath,
+  WorldRouteStop,
+  HomeDiscoveryMoment,
+  NarrativeChapter,
+  SessionBeat,
+  PublicGameArtAsset
 } from "./types";
 
 export const PROVISIONAL_WEB_FIXTURE = "PROVISIONAL_WEB_FIXTURE" as const;
@@ -2649,5 +2656,251 @@ export const statusExplainers: StatusExplainer[] = [
     label: "Runtime/browser guardrails",
     visibility: "internal",
     detail: "Dùng để chống regression sau khi đổi nội dung web; không phải nội dung chính và không thay thế product readiness."
+  }
+];
+
+
+// WEB v1.22 — player-facing game experience narrative derived from the approved 2D scenario/design spine.
+export const gameExperiencePillars: GameExperiencePillar[] = [
+  {
+    id: "social",
+    title: "Một thành phố để thuộc về",
+    tagline: "Social MMORPG",
+    summary: "Linh Thành là trái tim của thế giới: nơi gặp bạn bè, bang hội, giao dịch, thời trang, nhà ở và các hoạt động cộng đồng trước khi lại lên đường."
+  },
+  {
+    id: "action",
+    title: "Chiến đấu có nhịp và chuyển động",
+    tagline: "Action",
+    summary: "Side-scrolling combat đặt walk, run, jump, dash, combo và skill vào cùng một nhịp đọc rõ ràng, từ Shadow Slime đến boss và world event."
+  },
+  {
+    id: "progression",
+    title: "Lớn lên theo cách của bạn",
+    tagline: "Progression",
+    summary: "Level, skill, trang bị, ngoại hình, linh thú và lựa chọn class tạo nên một hành trình dài, nhưng không tách khỏi đời sống xã hội của Linh Thành."
+  }
+];
+
+export const classPaths: ClassPath[] = [
+  {
+    id: "vo",
+    name: "Võ",
+    role: "Áp sát · phản đòn",
+    fantasy: "Đứng vững ở tuyến đầu, dùng nhịp tay và thời điểm để bẻ gãy áp lực của đối thủ.",
+    combatIdentity: "Combo cận chiến, phá giáp, stagger và phản đòn đúng thời điểm.",
+    visualSignal: "Cam · vàng · bụi lực · shockwave",
+    battleRhythm: "Tiến vào tầm nguy hiểm, đọc đòn đối phương rồi đổi phòng thủ thành một nhịp phản công nặng và dứt khoát.",
+    worldLens: "Nhìn mọi biến cố qua câu hỏi: ai đang cần được bảo vệ ngay lúc này?",
+    teamFantasy: "Là người đứng lại khi cả đội cần một điểm tựa — giữ tuyến, phá thế và mở khoảng trống cho đồng đội.",
+    signatureVerbs: ["Áp sát", "Đỡ", "Phản", "Phá thế"]
+  },
+  {
+    id: "kiem",
+    name: "Kiếm",
+    role: "Cơ động · combo",
+    fantasy: "Lướt qua chiến trường bằng những đường kiếm chính xác, nhanh và khó đoán.",
+    combatIdentity: "Tốc độ, counter, mobility, air combo và nhịp kết liễu sắc gọn.",
+    visualSignal: "Afterimage · sword trail · kiếm khí",
+    battleRhythm: "Không đứng yên quá lâu: đổi góc, nối chuỗi, đưa đối thủ vào nhịp của mình rồi kết thúc trước khi thế trận kịp đảo chiều.",
+    worldLens: "Xem dị biến như một dấu vết cần truy đến tận nguồn, không chỉ một mối nguy cần dập tắt.",
+    teamFantasy: "Là mũi nhọn cơ động của tổ đội — tiếp cận mục tiêu khó, cắt nhịp nguy hiểm và truy đuổi khi trận tuyến vỡ ra.",
+    signatureVerbs: ["Lướt", "Chém", "Nối combo", "Kết liễu"]
+  },
+  {
+    id: "phap",
+    name: "Pháp",
+    role: "Nguyên tố · khống chế",
+    fantasy: "Định hình chiến trường bằng linh thuật và các vùng tác động có chủ ý.",
+    combatIdentity: "Ranged, elemental, AoE, barrier và control theo vùng.",
+    visualSignal: "Hỏa · băng · lôi · barrier · gravity",
+    battleRhythm: "Đọc vị trí và thời điểm trước khi ra tay: dựng vùng nguy hiểm, khóa đường di chuyển rồi bùng nổ khi đối thủ đã bước vào thế trận.",
+    worldLens: "Mỗi portal là một hiện tượng phải được giải nghĩa — quy luật nào đang bị bẻ cong và vì sao?",
+    teamFantasy: "Là người định hình không gian chiến đấu: ép quái rời vị trí tốt, bảo vệ vùng an toàn và tạo thời cơ cho cả đội.",
+    signatureVerbs: ["Niệm", "Khóa vùng", "Bùng nổ", "Bẻ quy luật"]
+  },
+  {
+    id: "co",
+    name: "Cơ",
+    role: "Cơ giới · triển khai",
+    fantasy: "Pha công nghệ vào linh lực, biến chiến trường thành một mạng lưới thiết bị và hỏa lực.",
+    combatIdentity: "Ranged weapon, turret, mine, drone, cannon và deployable.",
+    visualSignal: "Drone · rail shot · cơ khí Neo-Asian",
+    battleRhythm: "Chuẩn bị trước một bước: đặt thiết bị, khóa góc bắn, tạo chuỗi hỏa lực rồi liên tục tái bố trí theo biến động của trận đấu.",
+    worldLens: "Đo thứ người khác chỉ cảm nhận: cường độ linh lực, dao động portal và dấu vết vật lý của một thế giới đang chồng lên thế giới này.",
+    teamFantasy: "Là bộ não chiến thuật thực địa — biến địa hình thành lợi thế và giữ nhịp ổn định khi cuộc chiến kéo dài.",
+    signatureVerbs: ["Đo", "Triển khai", "Khóa mục tiêu", "Tái bố trí"]
+  },
+  {
+    id: "linh",
+    name: "Linh",
+    role: "Triệu hồi · hỗ trợ",
+    fantasy: "Lắng nghe linh giới, gọi trợ lực từ những thực thể bên kia và giữ nhịp cho cả đội.",
+    combatIdentity: "Summon, heal, buff, shield, purification và bind/debuff.",
+    visualSignal: "Jade · linh phù · summon · purification",
+    battleRhythm: "Quan sát toàn đội và nhịp nguy hiểm: triệu hồi đúng lúc, giữ lớp bảo hộ, thanh tẩy sai lệch và trói những mục tiêu cần bị chặn.",
+    worldLens: "Nghe thấy điều khe nứt đang nói — những tiếng vọng, linh thể và ký ức mà bốn Lộ khác khó tiếp cận trực tiếp.",
+    teamFantasy: "Là mạch nối của tổ đội: giữ mọi người sống sót, tăng sức mạnh đúng thời điểm và biến thế giới vô hình thành lợi thế hữu hình.",
+    signatureVerbs: ["Gọi", "Che chở", "Thanh tẩy", "Trói"]
+  }
+];
+
+export const worldRouteStops: WorldRouteStop[] = [
+  {
+    order: "01",
+    name: "Linh Thành",
+    kind: "hub",
+    summary: "Trái tim xã hội của thế giới — nơi bắt đầu, trở về, gặp gỡ và xây dựng danh tính của Người Thức Tỉnh.",
+    mood: "Ánh đèn, tiếng người, linh phù và cảm giác một thành phố vẫn đang sống dù thế giới bên ngoài đổi khác.",
+    playerPromise: "Bạn luôn có một nơi để trở về, không chỉ một menu giữa các trận đánh.",
+    signatureActivity: "Gặp bạn bè, chuẩn bị loadout, thời trang, guild/social và chọn mục tiêu cho phiên chơi kế tiếp.",
+    narrativePressure: "Càng nhiều khe nứt xuất hiện, Linh Thành càng chuyển từ nơi trú ẩn thành nơi người chơi phải chủ động bảo vệ."
+  },
+  {
+    order: "02",
+    name: "Đông Môn",
+    kind: "gate",
+    summary: "Cửa ngõ nhập môn: Người Giữ Cổng, Bia Luyện và những bài học đầu tiên về di chuyển, dash và skill class.",
+    mood: "Ranh giới giữa an toàn và chưa biết — cổng thành phía sau, rừng và linh khí bất ổn phía trước.",
+    playerPromise: "Bước ra khỏi hub và cảm nhận class của mình qua chuyển động, tương tác và những nguy hiểm đầu tiên.",
+    signatureActivity: "Training, gặp Gate Keeper, học nhịp di chuyển và nhận dấu hiệu đầu tiên rằng vùng ngoài thành không còn bình thường.",
+    narrativePressure: "Một vết nứt nhỏ ở đây là điểm khởi đầu cho chuỗi biến cố đủ lớn để chạm tới toàn Linh Thành."
+  },
+  {
+    order: "03",
+    name: "Linh Lâm",
+    kind: "field",
+    summary: "Vùng ngoài thành nơi Shadow Slime, linh khí bất ổn và dấu vết đầu tiên của Âm Giới bắt đầu xuất hiện.",
+    mood: "Rừng ẩm, linh quang xanh ngọc xen những vùng tím bất thường; đẹp nhưng không còn hoàn toàn thuộc về thế giới này.",
+    playerPromise: "Có không gian để side-scrolling action, exploration và đọc môi trường cùng tồn tại trong một nhịp chơi.",
+    signatureActivity: "Theo dấu linh khí, xử lý quái ngoài thành, khám phá lối phụ và nhận các mảnh thông tin dẫn sâu hơn vào bí ẩn portal.",
+    narrativePressure: "Bất thường không còn đứng yên ở cổng thành; nó đang lan, sinh vật thay đổi và những mảnh Âm Giới bắt đầu ở lại."
+  },
+  {
+    order: "04",
+    name: "Cổ Di Tích",
+    kind: "ruins",
+    summary: "Những tầng lịch sử cũ hơn mở ra các bí ẩn về portal, linh lực và mối liên hệ giữa hai thế giới.",
+    mood: "Im lặng, cổ xưa và có cảm giác rằng người chơi đang bước vào một bí mật đã tồn tại trước cả Linh Thành hiện đại.",
+    playerPromise: "Thế giới không chỉ rộng hơn — nó có lịch sử, tầng nghĩa và những câu trả lời khiến các biến cố hiện tại thay đổi ý nghĩa.",
+    signatureActivity: "Giải dấu tích, vượt không gian nhiều lớp, đối mặt guardian/mini-boss và ghép lore thành một bức tranh lớn hơn.",
+    narrativePressure: "Những cánh cổng có thể không phải tai nạn mới xuất hiện; dấu vết cho thấy hai thế giới từng liên hệ sâu hơn người hiện tại biết."
+  },
+  {
+    order: "05",
+    name: "Âm Giới",
+    kind: "realm",
+    summary: "Nguồn của các cánh cổng dị thường và mối đe dọa đủ lớn để kéo cả cộng đồng vào cùng một trận chiến.",
+    mood: "Không gian lệch chuẩn, tím sâu, cấu trúc quen mà sai và cảm giác chính quy luật của thế giới đang bị viết lại.",
+    playerPromise: "Đưa fantasy từ phiêu lưu cá nhân thành xung đột cộng đồng: nhiều vai trò cùng góp phần vào một hiểm họa lớn hơn bất kỳ người chơi nào.",
+    signatureActivity: "World event, đóng portal, vượt zone bị xâm lấn và đối mặt những thực thể buộc nhiều Lộ phải phối hợp.",
+    narrativePressure: "Nếu cánh cổng không được đóng, Âm Giới không còn là nơi ở phía bên kia — nó bắt đầu trở thành một phần của Linh Thành."
+  }
+];
+
+export const narrativeChapters: NarrativeChapter[] = [
+  {
+    chapter: "Chapter 01",
+    title: "Vết Nứt Đông Môn",
+    hook: "Linh khí ngoài thành dao động, Shadow Slime xuất hiện và một mảnh Âm Giới Fragment đặt câu hỏi đầu tiên.",
+    playerRole: "Rời Linh Thành, điều tra Linh Lâm và trở về với bằng chứng rằng sự bất thường không còn là chuyện nhỏ.",
+    openingImage: "Một buổi tối bình thường ở Đông Môn bị cắt đôi bởi vệt tím trên bầu trời; linh phù quanh cổng thành lần lượt sáng lên.",
+    stakes: "Nếu đây không phải hiện tượng đơn lẻ, tuyến ngoài thành — và những người vẫn sống nhờ nó — đang là lớp phòng thủ đầu tiên của Linh Thành.",
+    closingTurn: "Mảnh Âm Giới Fragment không biến mất khi khe nứt đóng. Nó còn ở lại, như bằng chứng rằng phía bên kia đã chạm được vào thế giới này."
+  },
+  {
+    chapter: "Chapter 02",
+    title: "Những Cánh Cổng Không Thuộc Về Thế Giới Này",
+    hook: "Các portal nhỏ bắt đầu mở ở nhiều nơi và năm class nhìn cùng một hiểm họa bằng năm cách khác nhau.",
+    playerRole: "Bảo vệ, truy tìm, nghiên cứu, đo đạc hoặc lắng nghe — lựa chọn Lộ định hình cách bạn đọc thế giới.",
+    openingImage: "Những báo cáo rời rạc cùng xuất hiện: cánh cổng trong rừng, tín hiệu lạ dưới di tích, linh thể nghe thấy tiếng gọi và thiết bị đo cho cùng một kết quả bất khả thi.",
+    stakes: "Mối đe dọa không còn có một điểm xuất phát duy nhất; nó đang thử nhiều cách để bước qua và buộc năm Lộ chia sẻ những mảnh sự thật khác nhau.",
+    closingTurn: "Khi các dữ kiện ghép lại, câu hỏi đổi từ ‘portal mở ở đâu?’ thành ‘điều gì đang cố mở chúng từ phía bên kia?’"
+  },
+  {
+    chapter: "Chapter 03",
+    title: "Âm Giới Xâm Lăng",
+    hook: "Portal đồng loạt xuất hiện, thành phố chuyển từ nơi sinh sống thành nơi cần được bảo vệ.",
+    playerRole: "Hợp lực qua nhiều zone, đóng góp theo vai trò và cùng cộng đồng đối mặt World Boss trước khi Linh Thành được phục hồi.",
+    openingImage: "Chuông cảnh giới vang khắp Linh Thành. Từng tuyến cổng báo động cùng lúc và bầu trời phía trên thành phố xuất hiện nhiều vòng sáng tím thay vì một khe nứt đơn lẻ.",
+    stakes: "Thất bại không còn chỉ mất một chuyến phiêu lưu; nếu các tuyến phòng thủ sụp đổ, nơi người chơi gọi là nhà sẽ trở thành chiến trường của một thế giới khác.",
+    closingTurn: "Cuộc xâm lăng có thể bị đẩy lùi, nhưng cánh cổng lớn nhất cho thấy đây không phải kết thúc — chỉ là lần đầu hai thế giới thực sự nhìn thấy nhau."
+  }
+];
+
+export const sampleSessionBeats: SessionBeat[] = [
+  { time: "00–03", title: "Gặp nhau ở Linh Thành", summary: "Vào game, chào bạn bè, đọc hoạt động đang diễn ra và chọn việc muốn làm trong phiên." },
+  { time: "03–06", title: "Nhận mục tiêu", summary: "Chọn Daily hoặc tuyến phiêu lưu, chuẩn bị class/loadout và rời hub qua một cổng khu vực." },
+  { time: "06–12", title: "Tiến vào Linh Lâm", summary: "Di chuyển, combat, tương tác với môi trường và theo dấu linh khí bất thường." },
+  { time: "12–16", title: "Đối mặt mini boss", summary: "Một cao trào ngắn kiểm tra nhịp di chuyển, skill và khả năng đọc telegraph." },
+  { time: "16–18", title: "Nhận phần thưởng", summary: "Thu item/material/progression và quyết định giữ, dùng hay chuẩn bị cho mục tiêu kế tiếp." },
+  { time: "18–20", title: "Trở về Linh Thành", summary: "Đổi trang phục, gặp guild/bạn bè, sắp xếp tiến trình và kết thúc phiên ở nơi có cảm giác thuộc về." }
+];
+
+export const publicGameArtAssets: PublicGameArtAsset[] = [
+  {
+    id: "dong-mon-world-concept",
+    label: "Đông Môn skyline",
+    webPath: "/game-art/world/dong-mon-skyline.webp",
+    upstreamStatus: "DRAFT_OWNER_REVIEW",
+    webStatus: "WEB_REFERENCE_APPROVED",
+    role: "world-concept",
+    publicLabel: "World concept · Đông Môn",
+    sourceSha256: "6dc7313b27f2b00eb93c0fa8dd0a1f3793c9f7a4f406439068959664cf75ea1a",
+    notFinalArt: "Concept art for public world direction; not a gameplay screenshot or production-final environment."
+  },
+  {
+    id: "vo-lv1-starter-development-art",
+    label: "Võ Lv1–30 starter art",
+    webPath: "/game-art/classes/vo-lv1-starter-atlas.webp",
+    upstreamStatus: "APPROVED_RUNTIME_ART",
+    webStatus: "WEB_REFERENCE_APPROVED",
+    role: "class-development-preview",
+    publicLabel: "Development art preview · Võ Lv1–30",
+    sourceSha256: "1008388e9401cd58e0e602e77e88cbd4169d1899e18466e400b278506a720089",
+    notFinalArt: "Approved runtime source art with refinement still in progress; not production-final class key art."
+  },
+  {
+    id: "vo-lv1-skill-development-art",
+    label: "Võ Lv1 skill/VFX art",
+    webPath: "/game-art/classes/vo-lv1-skill-atlas.webp",
+    upstreamStatus: "APPROVED_RUNTIME_ART",
+    webStatus: "WEB_REFERENCE_APPROVED",
+    role: "skill-development-preview",
+    publicLabel: "Skill/VFX development preview",
+    sourceSha256: "224bdeec4b411723e32d3cc4958066f1601b5f43ec38a4af7b19daf671becd46",
+    notFinalArt: "Approved runtime source art used as a development preview; not a final combat screenshot."
+  }
+];
+
+
+// WEB v1.26 — homepage discovery references canonical class/world/story data instead of duplicating deep-route summaries.
+export const homeDiscoveryMoments: HomeDiscoveryMoment[] = [
+  {
+    id: "class-kiem",
+    kind: "class",
+    sourceRef: "kiem",
+    eyebrow: "Một Lộ để bắt đầu",
+    href: "/classes",
+    actionLabel: "Khám phá đủ 5 Lộ",
+    tone: "gold"
+  },
+  {
+    id: "world-co-di-tich",
+    kind: "world",
+    sourceRef: "Cổ Di Tích",
+    eyebrow: "Một nơi để muốn bước tới",
+    href: "/game",
+    actionLabel: "Mở bản đồ Linh Giới",
+    tone: "spirit"
+  },
+  {
+    id: "story-shadow-invasion",
+    kind: "story",
+    sourceRef: "Chapter 03",
+    eyebrow: "Một biến cố để cùng nhớ",
+    href: "/story",
+    actionLabel: "Đi vào cốt truyện",
+    tone: "shadow"
   }
 ];

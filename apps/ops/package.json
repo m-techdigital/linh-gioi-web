@@ -9,12 +9,13 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
+    "@lgo-web/api-client": "workspace:*",
+    "@lgo-web/auth": "workspace:*",
+    "@lgo-web/design-tokens": "workspace:*",
+    "@lgo-web/ui": "workspace:*",
     "next": "^16.0.0",
     "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "@lgo-web/ui": "workspace:*",
-    "@lgo-web/auth": "workspace:*",
-    "@lgo-web/api-client": "workspace:*"
+    "react-dom": "19.2.0"
   },
   "devDependencies": {},
   "name": "@lgo-web/ops",

@@ -1,58 +1,31 @@
 # WEB-NEXT-ACTION
 
-Recently completed source task:
+Current implementation task:
 
 ```text
-WEB-PUBLIC-FAQ-SEARCH-AND-HELPFULNESS-POLISH-v1.21
+WEB-PORTAL-ACCESS-ONBOARDING-UX-DEPTH-v1.36
 ```
 
-Next recommended implementation task:
+Primary focus: deepen Portal access/onboarding UX across login, registration and post-access guidance using shared page/form/case/timeline foundations. Keep credential validation, account creation and session establishment fixture-only until accepted Auth/API/DB contracts exist. Extend `packages/*` first if a reusable onboarding-step pattern emerges.
 
-```text
-WEB-PUBLIC-SUPPORT-SELF-SERVE-PATHS-v1.22
-```
-
-Primary focus:
-
-```text
-Continue building the actual public web product: self-serve support paths, FAQ-to-action clarity, support journey summaries, player-safe reporting examples and route-level help cohesion. Runtime/browser/e2e remains a regression guard only.
-```
+## Base First
+Search and extend `packages/*` before app-local duplication. Evidence Reuse / Build Once remains mandatory.
 
 ## Product-first rule
-
-Runtime/browser/e2e gates are support infrastructure. Keep them as guardrails, but do not spend the next task only expanding tooling unless a real web product regression blocks development.
-
-## Current source state
-
-WEB-PUBLIC-FAQ-SEARCH-AND-HELPFULNESS-POLISH-v1.21 completed `/support/help`, FAQ discovery groups, helpful answer prompts, issue-category routes, no-search-backend notes, guide/news content and public route linking on top of WEB-PUBLIC-CLOSED-TESTER-INFORMATION-PACK-v1.20.
+Public Website keeps its game/story identity. Portal and Ops share neutral structural primitives without collapsing into the same product surface.
 
 ## Blocked canonical backend sync
+WEB-08-GAME-CONTRACT-SYNC-v1.0 remains blocked until accepted backend Auth/API/DB/RBAC/audit contract exists.
 
-WEB-08-GAME-CONTRACT-SYNC-v1.0 is still blocked until an accepted backend Auth/API/DB/RBAC/audit contract is provided from `LinhGioiOnline/server`.
+## Historical execution continuity
+- WEB-PUBLIC-HOMEPAGE-DISCOVERY-AND-MEDIA-STORYTELLING-v1.26 is the accepted public-web baseline.
+- WEB-PORTAL-ACCOUNT-CHARACTER-UX-DEPTH-v1.31 is runtime-ready at fixture UX level only.
+- WEB-OPS-PLAYER-OPERATIONS-UX-DEPTH-v1.32 is runtime-ready at fixture UX level only.
 
-Until then, continue public web/product polish only within the same governance model.
+## Required historical gate continuity
+- `WEB-PUBLIC-ACCESSIBILITY-READABILITY-POLISH-v1.15` remains completed historical evidence.
+- If WEB-01 package/runtime closure is revisited, first resolve package/runtime environment and rerun WEB-01 runtime gates.
+- Before claiming historical environment-limited WEB-01 through WEB-07 milestones fully runtime-closed, rerun WEB-01 through WEB-07 package/runtime/browser gates.
 
-Do not start real portal integration, real ops/admin mutation, production auth, DB persistence, independent backend, CMS, payment/shop/economy, live community backend, fake waitlist, live search backend, AI support bot, ticket routing backend, secure ticket inbox, production support SLA, moderation dashboard, account-aware personalization, backend recommendation engine, combat/economy claims, formal WCAG/legal accessibility certification, personal accessibility settings backend, Core Web Vitals certification, Lighthouse certification, production RUM monitoring, CDN deployment, image CDN integration, approved production art pipeline, public build, open beta, live tester intake, open registration, closed-test entitlement automation, tester slot guarantee, collection of passwords/tokens/payment data/sensitive personal data, reward/economy promise or production deployment from this state.
-
-## Legacy validator continuity markers retained
-
-Previous completed next-action markers retained for validator continuity:
-- WEB-PUBLIC-FAQ-SEARCH-AND-HELPFULNESS-POLISH-v1.21
-- WEB-PUBLIC-CLOSED-TESTER-INFORMATION-PACK-v1.20
-- WEB-PUBLIC-RELEASE-READINESS-HUB-POLISH-v1.19
-- WEB-PUBLIC-PLAYER-TRUST-RELEASE-NARRATIVE-v1.18
-- WEB-PUBLIC-ROUTE-CONTINUITY-CONVERSION-POLISH-v1.17
-- WEB-PUBLIC-PERFORMANCE-COPY-ASSET-BUDGET-POLISH-v1.16
-- WEB-PUBLIC-ACCESSIBILITY-READABILITY-POLISH-v1.15
-- WEB-PUBLIC-PLAYER-SAFETY-SUPPORT-FAQ-POLISH-v1.14
-- WEB-PUBLIC-WORLD-GAMEPLAY-LOOP-DEPTH-v1.13
-- WEB-PUBLIC-CONTENT-IA-HUB-POLISH-v1.12
-- WEB-PUBLIC-COMMUNITY-ROADMAP-ONBOARDING-v1.11
-- WEB-PUBLIC-STATUS-DOWNLOAD-TRUST-POLISH-v1.10
-- WEB-PUBLIC-NEWS-GUIDE-DETAIL-PAGES-v1.9
-- WEB-PUBLIC-GAME-INFO-DEPTH-v1.8
-- WEB-PUBLIC-VISUAL-RESPONSIVE-POLISH-v1.7
-- WEB-PUBLIC-UX-CONTENT-POLISH-v1.6
-
-
-Compatibility note: if WEB-01 package/runtime closure is revisited, rerun WEB-01 runtime gates or resolve package/runtime environment before claiming WEB-01 closed. Current public web product polish remains source-level and targeted-runtime guarded.
+## Post-closure successor
+After v1.36 closes, continue with the next accepted Portal/Ops product-depth task; Base First and Evidence Reuse / Build Once remain mandatory.

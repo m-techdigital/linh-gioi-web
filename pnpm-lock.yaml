@@ -41,6 +41,9 @@ importers:
 
   apps/ops:
     dependencies:
+      '@lgo-web/design-tokens':
+        specifier: workspace:*
+        version: link:../../packages/design-tokens
       '@lgo-web/api-client':
         specifier: workspace:*
         version: link:../../packages/api-client
@@ -62,6 +65,9 @@ importers:
 
   apps/portal:
     dependencies:
+      '@lgo-web/design-tokens':
+        specifier: workspace:*
+        version: link:../../packages/design-tokens
       '@lgo-web/api-client':
         specifier: workspace:*
         version: link:../../packages/api-client

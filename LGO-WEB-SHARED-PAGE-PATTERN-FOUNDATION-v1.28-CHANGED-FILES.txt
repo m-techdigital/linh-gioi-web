@@ -1,0 +1,17 @@
+HANDOFF-LGO-WEB-SHARED-PAGE-PATTERN-FOUNDATION-v1.28.md
+LGO-WEB-SHARED-PAGE-PATTERN-FOUNDATION-REPORT-v1.28.md
+LGO-WEB-SHARED-PAGE-PATTERN-FOUNDATION-v1.28-CHANGED-FILES.txt
+LGO-WEB-SHARED-PAGE-PATTERN-FOUNDATION-v1.28-DELETIONS.txt
+apps/ops/src/app/page.tsx
+apps/portal/src/app/page.tsx
+docs/execution/WEB-NEXT-ACTION.md
+docs/execution/WEB-PROJECT-STATE.md
+docs/execution/WEB-TASK-LEDGER.md
+docs/superpowers/plans/2026-09-13-shared-page-pattern-foundation-v128.md
+docs/superpowers/specs/2026-09-13-shared-page-pattern-foundation-v128-design.md
+package.json
+packages/ui/src/index.ts
+packages/ui/src/primitives.tsx
+packages/ui/src/shell.css
+tools/validate_web_current_state.py
+tools/validate_web_shared_page_patterns_v128.py

@@ -4,6 +4,8 @@ export type Tone = "spirit" | "gold" | "jade" | "shadow" | "neutral";
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & { tone?: Tone };
 export type LinkButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & { tone?: Tone };
 export type NavItem = { href: string; label: string; blocked?: boolean };
+export type ExperienceHeroAction = { href: string; label: string; tone?: Tone };
+
 
 function toneClass(tone: Tone = "spirit") {
   return `lgo-tone-${tone}`;
@@ -57,6 +59,328 @@ export function Stack({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
 
 export function Grid({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return <div {...props} className={cx("lgo-grid", className)} />;
+}
+
+
+
+export function MediaFrame({
+  eyebrow,
+  title,
+  description,
+  action,
+  media,
+  meta,
+  className
+}: {
+  eyebrow: string;
+  title: string;
+  description: ReactNode;
+  action?: ExperienceHeroAction;
+  media: ReactNode;
+  meta?: ReactNode;
+  className?: string;
+}) {
+  return (
+    <article className={cx("lgo-media-frame", className)}>
+      <div className="lgo-media-frame-visual">{media}</div>
+      <div className="lgo-media-frame-copy">
+        <span className="lgo-card-kicker">{eyebrow}</span>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        {meta ? <div className="lgo-media-frame-meta">{meta}</div> : null}
+        {action ? (
+          <LinkButton href={action.href} {...(action.tone ? { tone: action.tone } : {})}>
+            {action.label}
+          </LinkButton>
+        ) : null}
+      </div>
+    </article>
+  );
+}
+
+export function ExperienceHero({
+  badge,
+  badgeTone = "spirit",
+  kicker,
+  title,
+  lead,
+  actions = [],
+  className,
+  copyClassName,
+  detail,
+  visual
+}: {
+  badge: string;
+  badgeTone?: Tone;
+  kicker: string;
+  title: string;
+  lead: ReactNode;
+  actions?: ExperienceHeroAction[];
+  className?: string;
+  copyClassName?: string;
+  detail?: ReactNode;
+  visual?: ReactNode;
+}) {
+  return (
+    <section className={cx(className, "lgo-experience-hero")}>
+      <div className={copyClassName}>
+        <StatusBadge tone={badgeTone}>{badge}</StatusBadge>
+        <p className="lgo-hero-kicker">{kicker}</p>
+        <h1>{title}</h1>
+        <p className="lgo-hero-lead">{lead}</p>
+        {detail}
+        {actions.length ? (
+          <div className="lgo-hero-actions">
+            {actions.map((action) => (
+              <LinkButton href={action.href} {...(action.tone ? { tone: action.tone } : {})} key={`${action.href}:${action.label}`}>
+                {action.label}
+              </LinkButton>
+            ))}
+          </div>
+        ) : null}
+      </div>
+      {visual}
+    </section>
+  );
+}
+
+
+export type PageAction = ExperienceHeroAction;
+
+export function PageHeader({
+  badge,
+  badgeTone = "shadow",
+  eyebrow,
+  title,
+  description,
+  actions = []
+}: {
+  badge?: string;
+  badgeTone?: Tone;
+  eyebrow?: string;
+  title: string;
+  description?: ReactNode;
+  actions?: PageAction[];
+}) {
+  return (
+    <header className="lgo-page-header">
+      <div className="lgo-page-header-copy">
+        {badge ? <StatusBadge tone={badgeTone}>{badge}</StatusBadge> : null}
+        {eyebrow ? <p className="lgo-eyebrow">{eyebrow}</p> : null}
+        <h1>{title}</h1>
+        {description ? <p className="lgo-page-header-lead">{description}</p> : null}
+      </div>
+      {actions.length ? (
+        <div className="lgo-page-header-actions">
+          {actions.map((action) => (
+            <LinkButton href={action.href} {...(action.tone ? { tone: action.tone } : {})} key={`${action.href}:${action.label}`}>
+              {action.label}
+            </LinkButton>
+          ))}
+        </div>
+      ) : null}
+    </header>
+  );
+}
+
+export function BoundaryBanner({
+  badge,
+  badgeTone = "shadow",
+  children,
+  ariaLabel = "Environment boundary",
+  className
+}: {
+  badge: string;
+  badgeTone?: Tone;
+  children: ReactNode;
+  ariaLabel?: string;
+  className?: string;
+}) {
+  return (
+    <aside className={cx("lgo-boundary-banner", className)} aria-label={ariaLabel}>
+      <StatusBadge tone={badgeTone}>{badge}</StatusBadge>
+      <div className="lgo-boundary-banner-copy">{children}</div>
+    </aside>
+  );
+}
+
+export function DataList({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
+  return <div {...props} role="list" className={cx("lgo-data-list", className)} />;
+}
+
+export function DataListItem({
+  title,
+  description,
+  meta,
+  trailing,
+  className
+}: {
+  title: ReactNode;
+  description?: ReactNode;
+  meta?: ReactNode;
+  trailing?: ReactNode;
+  className?: string;
+}) {
+  return (
+    <article role="listitem" className={cx("lgo-data-list-item", className)}>
+      <div className="lgo-data-list-copy">
+        <h3>{title}</h3>
+        {description ? <p>{description}</p> : null}
+        {meta ? <div className="lgo-data-list-meta">{meta}</div> : null}
+      </div>
+      {trailing ? <div className="lgo-data-list-trailing">{trailing}</div> : null}
+    </article>
+  );
+}
+
+export function PageStateGroup({ children, className }: { children: ReactNode; className?: string }) {
+  return <div className={cx("lgo-page-state-group", className)}>{children}</div>;
+}
+
+export function WorkspacePage({
+  mainClassName,
+  badge,
+  badgeTone = "shadow",
+  eyebrow,
+  title,
+  description,
+  actions = [],
+  boundary,
+  boundaryBadge,
+  children
+}: {
+  mainClassName?: string;
+  badge?: string;
+  badgeTone?: Tone;
+  eyebrow?: string;
+  title: string;
+  description?: ReactNode;
+  actions?: PageAction[];
+  boundary?: ReactNode;
+  boundaryBadge?: string;
+  children?: ReactNode;
+}) {
+  return (
+    <main className={cx("lgo-workspace-page", mainClassName)}>
+      <Stack>
+        <PageHeader
+          title={title}
+          {...(badge ? { badge } : {})}
+          {...(badgeTone ? { badgeTone } : {})}
+          {...(eyebrow ? { eyebrow } : {})}
+          {...(description ? { description } : {})}
+          {...(actions.length ? { actions } : {})}
+        />
+        {boundary && boundaryBadge ? <BoundaryBanner badge={boundaryBadge}>{boundary}</BoundaryBanner> : null}
+        {children}
+      </Stack>
+    </main>
+  );
+}
+
+export function ProvisionalFeatureShell({
+  mainClassName,
+  badge,
+  title,
+  description,
+  boundary,
+  badgeTone = "shadow",
+  children
+}: {
+  mainClassName: string;
+  badge: string;
+  title: string;
+  description: ReactNode;
+  boundary: ReactNode;
+  badgeTone?: Tone;
+  children?: ReactNode;
+}) {
+  return (
+    <WorkspacePage
+      mainClassName={mainClassName}
+      badge={badge}
+      badgeTone={badgeTone}
+      title={title}
+      description={description}
+      boundaryBadge="Contract boundary"
+      boundary={boundary}
+    >
+      {children}
+    </WorkspacePage>
+  );
+}
+
+
+export type WorkspaceShellNavItem = {
+  href: string;
+  label: string;
+  badge?: string;
+};
+
+export function WorkspaceNavigation({ items, ariaLabel = "Workspace navigation" }: { items: WorkspaceShellNavItem[]; ariaLabel?: string }) {
+  return (
+    <nav className="lgo-workspace-nav" aria-label={ariaLabel}>
+      {items.map((item) => (
+        <a href={item.href} key={`${item.href}:${item.label}`}>
+          <span>{item.label}</span>
+          {item.badge ? <small>{item.badge}</small> : null}
+        </a>
+      ))}
+    </nav>
+  );
+}
+
+export function WorkspaceBoundaryNotice({ badge, children }: { badge: string; children: ReactNode }) {
+  return <BoundaryBanner badge={badge}>{children}</BoundaryBanner>;
+}
+
+export function WorkspaceAppShell({
+  appName,
+  appLabel,
+  description,
+  navItems,
+  boundaryBadge,
+  boundary,
+  children,
+  homeHref = "/"
+}: {
+  appName: string;
+  appLabel: string;
+  description: ReactNode;
+  navItems: WorkspaceShellNavItem[];
+  boundaryBadge: string;
+  boundary: ReactNode;
+  children: ReactNode;
+  homeHref?: string;
+}) {
+  return (
+    <LgoThemeProvider>
+      <div className="lgo-workspace-shell">
+        <a className="lgo-workspace-skip" href="#workspace-content">Bỏ qua điều hướng tới nội dung chính</a>
+        <header className="lgo-workspace-header">
+          <Container className="lgo-workspace-header-inner">
+            <a className="lgo-workspace-brand" href={homeHref} aria-label={`${appName} — Trang chủ`}>
+              <span className="lgo-workspace-brand-sigil" aria-hidden="true">界</span>
+              <span><strong>{appName}</strong><small>{appLabel}</small></span>
+            </a>
+            <WorkspaceNavigation items={navItems} ariaLabel={`${appName} navigation`} />
+          </Container>
+        </header>
+        <Container className="lgo-workspace-boundary-wrap">
+          <WorkspaceBoundaryNotice badge={boundaryBadge}>{boundary}</WorkspaceBoundaryNotice>
+        </Container>
+        <div id="workspace-content" className="lgo-workspace-content" tabIndex={-1}>
+          <Container>{children}</Container>
+        </div>
+        <footer className="lgo-workspace-footer">
+          <Container>
+            <strong>{appName}</strong>
+            <p>{description}</p>
+          </Container>
+        </footer>
+      </div>
+    </LgoThemeProvider>
+  );
 }
 
 export function SiteNavigation({ items }: { items: NavItem[] }) {

@@ -35,7 +35,14 @@ import {
   faqDiscoveryGroups,
   faqHelpfulnessPrompts,
   issueCategoryRoutes,
-  noSearchBackendNotes
+  noSearchBackendNotes,
+  gameExperiencePillars,
+  classPaths,
+  worldRouteStops,
+  narrativeChapters,
+  sampleSessionBeats,
+  publicGameArtAssets,
+  homeDiscoveryMoments
 } from "./fixtures";
 import { LocalContentRepository } from "./repository";
 import { assertContentFixturesValid } from "./validation";
@@ -131,4 +138,62 @@ it("keeps WEB v1.21 FAQ search/helpfulness guidance bounded", () => {
   expect(issueCategoryRoutes.map((item) => item.recommendedRoute)).toContain("/download/trust");
   expect(issueCategoryRoutes.every((item) => item.privacyBoundary.length > 0)).toBe(true);
   expect(noSearchBackendNotes.every((item) => item.notClaimed.includes("No "))).toBe(true);
+});
+
+
+it("keeps WEB v1.22 game experience narrative anchored to the 2D scenario", () => {
+  expect(gameExperiencePillars.map((item) => item.id)).toEqual(["social", "action", "progression"]);
+  expect(classPaths.map((item) => item.name)).toEqual(["Võ", "Kiếm", "Pháp", "Cơ", "Linh"]);
+  expect(worldRouteStops.map((item) => item.name)).toEqual(["Linh Thành", "Đông Môn", "Linh Lâm", "Cổ Di Tích", "Âm Giới"]);
+  expect(narrativeChapters.map((item) => item.title)).toEqual([
+    "Vết Nứt Đông Môn",
+    "Những Cánh Cổng Không Thuộc Về Thế Giới Này",
+    "Âm Giới Xâm Lăng"
+  ]);
+  expect(sampleSessionBeats.length).toBeGreaterThanOrEqual(6);
+  expect(sampleSessionBeats.at(-1)?.title).toContain("Linh Thành");
+});
+
+
+it("keeps WEB v1.24 public art provenance and claims bounded", () => {
+  expect(publicGameArtAssets).toHaveLength(3);
+  expect(publicGameArtAssets.map((item) => item.webStatus)).toEqual([
+    "WEB_REFERENCE_APPROVED",
+    "WEB_REFERENCE_APPROVED",
+    "WEB_REFERENCE_APPROVED"
+  ]);
+  expect(publicGameArtAssets.some((item) => item.upstreamStatus === "DRAFT_OWNER_REVIEW")).toBe(true);
+  expect(publicGameArtAssets.some((item) => item.upstreamStatus === "APPROVED_RUNTIME_ART")).toBe(true);
+  expect(publicGameArtAssets.every((item) => item.notFinalArt.includes("not"))).toBe(true);
+  expect(publicGameArtAssets.some((item) => item.notFinalArt.includes("gameplay screenshot"))).toBe(true);
+});
+
+it("keeps WEB v1.25 class/world/story depth complete and balanced", () => {
+  expect(classPaths).toHaveLength(5);
+  expect(classPaths.every((item) => item.battleRhythm.length > 0)).toBe(true);
+  expect(classPaths.every((item) => item.worldLens.length > 0)).toBe(true);
+  expect(classPaths.every((item) => item.teamFantasy.length > 0)).toBe(true);
+  expect(classPaths.every((item) => item.signatureVerbs.length >= 3)).toBe(true);
+
+  expect(worldRouteStops).toHaveLength(5);
+  expect(worldRouteStops.every((item) => item.mood.length > 0)).toBe(true);
+  expect(worldRouteStops.every((item) => item.playerPromise.length > 0)).toBe(true);
+  expect(worldRouteStops.every((item) => item.signatureActivity.length > 0)).toBe(true);
+  expect(worldRouteStops.every((item) => item.narrativePressure.length > 0)).toBe(true);
+
+  expect(narrativeChapters).toHaveLength(3);
+  expect(narrativeChapters.every((item) => item.openingImage.length > 0)).toBe(true);
+  expect(narrativeChapters.every((item) => item.stakes.length > 0)).toBe(true);
+  expect(narrativeChapters.every((item) => item.closingTurn.length > 0)).toBe(true);
+});
+
+
+it("keeps WEB v1.26 homepage discovery references canonical deep content", () => {
+  expect(homeDiscoveryMoments).toHaveLength(3);
+  expect(homeDiscoveryMoments.map((item) => item.kind)).toEqual(["class", "world", "story"]);
+  expect(new Set(homeDiscoveryMoments.map((item) => item.id)).size).toBe(3);
+  expect(homeDiscoveryMoments.every((item) => item.href.startsWith("/"))).toBe(true);
+  expect(classPaths.some((item) => item.id === homeDiscoveryMoments.find((item) => item.kind === "class")?.sourceRef)).toBe(true);
+  expect(worldRouteStops.some((item) => item.name === homeDiscoveryMoments.find((item) => item.kind === "world")?.sourceRef)).toBe(true);
+  expect(narrativeChapters.some((item) => item.chapter === homeDiscoveryMoments.find((item) => item.kind === "story")?.sourceRef)).toBe(true);
 });

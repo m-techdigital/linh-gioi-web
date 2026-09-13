@@ -1,80 +1,58 @@
-import { playerJourneySteps, worldPillars } from "@lgo-web/content";
-import { GameCard, Grid, SectionHeading, SpiritPanel, Stack, StatusBadge } from "@lgo-web/ui";
+import { Stack } from "@lgo-web/ui";
+import {
+  CinematicWorldScene,
+  GamePillarGrid,
+  ShadowInvasionFeature,
+  WorldRouteJourney
+} from "../../components/PublicGameExperienceSections";
+import { WorldAtlasStories } from "../../components/PublicGameDepthSections";
+import { PublicPlayerHero } from "../../components/PublicPlayerHero";
 import { WebAppShell } from "../../components/WebAppShell";
-import { ResponsiveProofStrip, SpiritStagePreview } from "../../components/PublicVisualSections";
-import { BeginnerGuideDepth, WorldStoryDepth } from "../../components/PublicGameInfoDepthSections";
-import { GameplayLoopStageBoard, GameplayScopeBoundaryBoard, WorldGameplayLoopCta } from "../../components/PublicWorldGameplayLoopSections";
 
 export const metadata = { title: "Thế giới" };
 
 export default function GamePage() {
   return (
     <WebAppShell>
-      <Stack>
-        <SpiritPanel className="lgo-hero-panel lgo-hero-with-stage">
-          <div className="lgo-hero-copy">
-            <StatusBadge tone="spirit">Vietnamese spiritual fantasy · WEB v1.13 world gameplay loop depth · WEB v1.8 game info depth</StatusBadge>
-            <h1>Thế giới Linh Giới</h1>
-            <p className="lgo-hero-lead">
-            Linh Giới được trình bày như một online RPG thân thiện: người chơi bước qua Spirit Gate,
-            gặp Gate Keeper, tương tác với Training Stone, hiểu loop non-combat đầu tiên và quay lại status/download trust trước khi combat thật được mở bằng contract rõ ràng.
+      <Stack className="lgo-player-facing-stack">
+        <PublicPlayerHero
+          className="lgo-cinematic-hero lgo-cinematic-hero-inner"
+          copyClassName="lgo-cinematic-copy"
+          badge="World of Linh Giới"
+          badgeTone="spirit"
+          kicker="LINH THÀNH · VÀ NHỮNG VÙNG ĐẤT BÊN NGOÀI"
+          title="Một thế giới có nơi để trở về"
+          lead="Linh Thành là trung tâm xã hội; Đông Môn là cửa ngõ nhập môn; Linh Lâm và Cổ Di Tích kéo bạn ra xa khỏi vùng an toàn; Âm Giới là lời nhắc rằng hai thế giới chưa bao giờ thực sự tách biệt."
+          actions={[
+            { href: "/journey", label: "Theo hành trình một phiên chơi", tone: "gold" },
+            { href: "/story", label: "Đọc cốt truyện", tone: "shadow" }
+          ]}
+          visual={<CinematicWorldScene compact />}
+        />
+
+        <WorldRouteJourney />
+        <WorldAtlasStories />
+        <GamePillarGrid />
+
+        <section className="lgo-world-fantasy-panel">
+          <div>
+            <p className="lgo-eyebrow">World structure</p>
+            <h2>Zone Network thay vì một open world phẳng</h2>
+            <p>
+              Thế giới được tổ chức thành các node và tuyến vùng: Linh Thành, các cổng Đông/Tây/Nam/Bắc, khu dân cư, thương phố, học viện, training field, Linh Lâm, Cổ Di Tích và các realm cao hơn. Mỗi nơi có vai trò xã hội, phiêu lưu hoặc cốt truyện riêng.
             </p>
           </div>
-          <SpiritStagePreview />
-        </SpiritPanel>
-
-        <WorldStoryDepth />
-
-        <WorldGameplayLoopCta />
-
-        <GameplayLoopStageBoard />
-
-        <SectionHeading eyebrow="World pillars" title="Các điểm neo trải nghiệm hiện tại" />
-        <Grid>
-          {worldPillars.map((pillar) => (
-            <GameCard key={pillar.title}>
-              <span className="lgo-card-kicker">{pillar.eyebrow}</span>
-              <h3>{pillar.title}</h3>
-              <p>{pillar.summary}</p>
-              <p>{pillar.detail}</p>
-            </GameCard>
-          ))}
-        </Grid>
-
-        <section className="lgo-panel">
-          <SectionHeading eyebrow="Current player loop" title="Luồng hiện tại được mô tả cho người chơi" />
-          <div className="lgo-timeline">
-            {playerJourneySteps.map((step) => (
-              <article className="lgo-timeline-item" key={step.step}>
-                <span>{step.step}</span>
-                <h3>{step.title}</h3>
-                <p>{step.summary}</p>
-              </article>
-            ))}
+          <div className="lgo-world-layer-stack" aria-label="2D parallax layers">
+            <span>Sky / Fog</span>
+            <span>Far Background</span>
+            <span>Mid Background</span>
+            <span>Near Background</span>
+            <span>Gameplay Plane</span>
+            <span>Foreground</span>
           </div>
         </section>
 
-        <BeginnerGuideDepth />
-
-        <GameplayScopeBoundaryBoard />
-
-        <ResponsiveProofStrip />
-
-        <SectionHeading title="Current scope / non-claims" />
-        <Grid>
-          <GameCard>
-            <h3>Đã định hướng</h3>
-            <p>Friendly online RPG, spirit cyan, warm gold, jade/teal, dark navy panels và public UX rõ ràng hơn.</p>
-          </GameCard>
-          <GameCard>
-            <h3>Chưa claim</h3>
-            <p>No production auth, DB persistence, real portal integration, ops/admin mutation, payment/shop/economy.</p>
-          </GameCard>
-          <GameCard>
-            <h3>Backend rule</h3>
-            <p>Java/Spring Boot game backend remains canonical and requires WEB-08 explicit contract sync.</p>
-          </GameCard>
-        </Grid>
+        <ShadowInvasionFeature />
       </Stack>
     </WebAppShell>
   );

@@ -51,3 +51,19 @@ Deleted:
 ## Next allowed step
 
 ## Forbidden next step
+
+## Base First audit
+
+Shared owners searched:
+
+Shared owners changed:
+
+App-local owners added and why they are not shareable:
+
+Duplicate code removed:
+
+Affected validation slices:
+
+Evidence reused:
+
+Full production build decision:

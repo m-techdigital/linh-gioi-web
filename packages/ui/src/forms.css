@@ -1,0 +1,101 @@
+.lgo-form-field {
+  display: grid;
+  gap: .45rem;
+}
+
+.lgo-form-label {
+  color: var(--lgo-color-text-primary);
+  font-weight: 700;
+}
+
+.lgo-form-required,
+.lgo-form-error {
+  color: #ff8a9a;
+}
+
+.lgo-form-help,
+.lgo-form-error {
+  line-height: 1.5;
+}
+
+.lgo-form-help {
+  color: var(--lgo-color-text-muted);
+}
+
+.lgo-form-control {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid rgba(49, 216, 232, .24);
+  border-radius: var(--lgo-radius-md);
+  padding: .7rem .8rem;
+  background: rgba(5, 15, 28, .78);
+  color: var(--lgo-color-text-primary);
+  font: inherit;
+}
+
+.lgo-form-control:focus-visible {
+  outline: 2px solid var(--lgo-color-spirit-cyan);
+  outline-offset: 2px;
+}
+
+.lgo-form-control:disabled {
+  cursor: not-allowed;
+  opacity: .58;
+}
+
+.lgo-form-field-error .lgo-form-control {
+  border-color: rgba(255, 138, 154, .7);
+}
+
+.lgo-checkbox-field {
+  display: flex;
+  gap: .75rem;
+  align-items: flex-start;
+  padding: .85rem 1rem;
+  border: 1px solid rgba(49, 216, 232, .16);
+  border-radius: var(--lgo-radius-md);
+  background: rgba(10, 24, 42, .55);
+}
+
+.lgo-checkbox-field input {
+  width: 1.05rem;
+  height: 1.05rem;
+  margin-top: .2rem;
+  accent-color: var(--lgo-color-spirit-cyan);
+}
+
+.lgo-checkbox-copy {
+  display: grid;
+  gap: .25rem;
+}
+
+.lgo-checkbox-copy small {
+  color: var(--lgo-color-text-muted);
+  line-height: 1.5;
+}
+
+.lgo-form-actions {
+  display: flex;
+  gap: .65rem;
+  flex-wrap: wrap;
+}
+
+.lgo-inline-feedback {
+  display: grid;
+  gap: .35rem;
+  padding: .8rem 1rem;
+  border: 1px solid rgba(49, 216, 232, .22);
+  border-radius: var(--lgo-radius-md);
+  background: rgba(49, 216, 232, .06);
+  color: var(--lgo-color-text-muted);
+}
+
+.lgo-inline-feedback strong { color: var(--lgo-color-text-primary); }
+.lgo-inline-feedback-success { border-color: rgba(73, 208, 143, .4); background: rgba(73, 208, 143, .07); }
+.lgo-inline-feedback-warning { border-color: rgba(245, 200, 107, .42); background: rgba(245, 200, 107, .07); }
+.lgo-inline-feedback-error { border-color: rgba(255, 138, 154, .5); background: rgba(255, 138, 154, .07); }
+
+@media (max-width: 640px) {
+  .lgo-form-actions { flex-direction: column; }
+  .lgo-form-actions > * { width: 100%; }
+}

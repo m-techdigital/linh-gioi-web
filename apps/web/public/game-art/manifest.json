@@ -1,0 +1,36 @@
+{
+  "version": "v1.24",
+  "policy": "web editorial derivatives from audited project-source art; labels remain non-final/non-gameplay where applicable",
+  "assets": [
+    {
+      "id": "dong-mon-world-concept",
+      "webPath": "game-art/world/dong-mon-skyline.webp",
+      "width": 1360,
+      "height": 765,
+      "sourceSha256": "6dc7313b27f2b00eb93c0fa8dd0a1f3793c9f7a4f406439068959664cf75ea1a",
+      "derivativeSha256": "7c99154110e4f1a6fe7755be259d79f826818d8692468033c451ab79cc009f5f",
+      "upstreamStatus": "DRAFT_OWNER_REVIEW",
+      "claim": "WORLD_CONCEPT"
+    },
+    {
+      "id": "vo-lv1-starter-development-art",
+      "webPath": "game-art/classes/vo-lv1-starter-atlas.webp",
+      "width": 1280,
+      "height": 1280,
+      "sourceSha256": "1008388e9401cd58e0e602e77e88cbd4169d1899e18466e400b278506a720089",
+      "derivativeSha256": "a931d3afefc1dc82a58a4818ae1399ebede12be1d0dd0481e5a2d439eb66d38a",
+      "upstreamStatus": "APPROVED_RUNTIME_ART",
+      "claim": "DEVELOPMENT_ART_PREVIEW"
+    },
+    {
+      "id": "vo-lv1-skill-development-art",
+      "webPath": "game-art/classes/vo-lv1-skill-atlas.webp",
+      "width": 820,
+      "height": 820,
+      "sourceSha256": "224bdeec4b411723e32d3cc4958066f1601b5f43ec38a4af7b19daf671becd46",
+      "derivativeSha256": "9bd9933c10d99658fdca275ff8b7c705b10db69b36c05558e0b9d7f31263b0c8",
+      "upstreamStatus": "APPROVED_RUNTIME_ART",
+      "claim": "DEVELOPMENT_ART_PREVIEW"
+    }
+  ]
+}

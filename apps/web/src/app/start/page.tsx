@@ -1,72 +1,36 @@
-import { FaqHelpfulnessCta } from "../../components/PublicFaqHelpfulnessSections";
-import { ClosedTesterInformationPackCta } from "../../components/PublicClosedTesterInformationPackSections";
-// Legacy validator marker: WEB v1.12 content IA hub
-import { LinkButton, SectionHeading, SpiritPanel, Stack, StatusBadge } from "@lgo-web/ui";
-import {
-  ContentIaStartCta,
-  PlayerEntryQuestionBoard,
-  PublicContentHubBoard,
-  PublicRouteGroupBoard
-} from "../../components/PublicContentHubSections";
-import { CommunityRoadmapOnboardingCta } from "../../components/PublicOnboardingSections";
-import { DownloadTrustCta } from "../../components/PublicTrustSections";
-import { PlayerTrustReleaseCta, TrustJourneyCheckpointBoard } from "../../components/PublicPlayerTrustReleaseSections";
+import { Stack } from "@lgo-web/ui";
+import { ClassPathGrid, WorldRouteJourney } from "../../components/PublicGameExperienceSections";
+import { PublicPlayerHero } from "../../components/PublicPlayerHero";
 import { WebAppShell } from "../../components/WebAppShell";
-import { BeginnerExpectationBoard, WorldGameplayLoopCta } from "../../components/PublicWorldGameplayLoopSections";
-import { PlayerSafetySupportCta } from "../../components/PublicPlayerSafetySections";
-import { AccessibilityReadabilityCta, MobileScannabilityBoard } from "../../components/PublicAccessibilityReadabilitySections";
-import { MobileDensityBudgetBoard, PerformanceBudgetCta } from "../../components/PublicPerformanceBudgetSections";
-import { ConversionSafeCtaBoard, RouteContinuityCta } from "../../components/PublicRouteContinuitySections";
-import { ReleaseReadinessHubCta, OwnerReleaseGateBoard } from "../../components/PublicReleaseReadinessHubSections";
 
 export const metadata = { title: "Bắt đầu" };
 
 export default function StartPage() {
   return (
     <WebAppShell>
-      <Stack>
-        <SpiritPanel>
-          <StatusBadge tone="spirit">WEB v1.17 route continuity · WEB v1.16 performance/copy budget · WEB v1.15 readability · WEB v1.14 safety support · WEB v1.13 world loop depth</StatusBadge>
-          <h1>Bắt đầu với Linh Giới Online</h1>
-          <p className="lgo-hero-lead">
-            Đây là Start hub cho người chơi mới: chọn đúng đường đọc trước khi tìm download, account, community hoặc roadmap.
-            Website đang phát triển nội dung public thật, nhưng không claim production auth, DB, CMS, backend integration hoặc public game artifact.
-          </p>
-          <div className="lgo-product-first-actions">
-            <LinkButton href="/journey" tone="spirit">Journey hub</LinkButton>
-            <LinkButton href="/game/loop" tone="spirit">Hiểu world loop</LinkButton>
-            <LinkButton href="/download/trust" tone="gold">Kiểm tra tải game</LinkButton>
-            <LinkButton href="/community/onboarding" tone="jade">Theo dõi cộng đồng</LinkButton>
-            <LinkButton href="/support/safety" tone="gold">Safety support</LinkButton>
-            <LinkButton href="/accessibility" tone="spirit">Đọc dễ hơn</LinkButton>
-            <LinkButton href="/performance" tone="jade">Hiệu năng/copy budget</LinkButton>
-          </div>
-        </SpiritPanel>
-        <SectionHeading eyebrow="Player entry" title="Một hub thay cho việc đoán mò trong menu">
-          Người chơi có thể bắt đầu theo câu hỏi của mình: game là gì, tải được chưa, roadmap tới đâu, hoặc góp ý ở đâu.
-        </SectionHeading>
-        <ReleaseReadinessHubCta />
-        <OwnerReleaseGateBoard />
-        <PlayerTrustReleaseCta />
-        <TrustJourneyCheckpointBoard />
-        <RouteContinuityCta />
-        <WorldGameplayLoopCta />
-        <PlayerSafetySupportCta />
-        <AccessibilityReadabilityCta />
-        <PerformanceBudgetCta />
-        <MobileScannabilityBoard />
-        <MobileDensityBudgetBoard />
-        <BeginnerExpectationBoard />
-        <PublicContentHubBoard />
-        <PlayerEntryQuestionBoard />
-        <PublicRouteGroupBoard />
-        <ConversionSafeCtaBoard />
-        <DownloadTrustCta />
-        <CommunityRoadmapOnboardingCta />
-        <ContentIaStartCta />
-        <FaqHelpfulnessCta />
-              <ClosedTesterInformationPackCta />
-        </Stack>
+      <Stack className="lgo-player-facing-stack">
+        <PublicPlayerHero
+          className="lgo-start-hero"
+          badge="Người Thức Tỉnh"
+          badgeTone="spirit"
+          kicker="BẮT ĐẦU TẠI LINH THÀNH — ĐÔNG MÔN"
+          title="Học cách di chuyển. Chọn nhịp chiến đấu. Mở cánh cửa vào thành."
+          lead="Tutorial đưa bạn tới Người Giữ Cổng, Bia Luyện, walk/run/jump/dash, skill class và Shadow Slime trước khi mở Linh Thành. Nó dạy bằng hành động thay vì dồn tất cả hệ thống vào một màn hình hướng dẫn."
+          detail={(
+            <div className="lgo-onboarding-steps" aria-label="Tutorial flow">
+              <span>01 · Người Giữ Cổng</span><span>02 · Bia Luyện</span><span>03 · Move / Jump / Dash</span><span>04 · Class Skill</span><span>05 · Shadow Slime</span><span>06 · Mở Linh Thành</span>
+            </div>
+          )}
+          actions={[
+            { href: "/classes", label: "Tìm hiểu năm Lộ", tone: "gold" },
+            { href: "/journey", label: "Xem một phiên chơi mẫu", tone: "jade" },
+            { href: "/download", label: "Trạng thái tải game", tone: "spirit" }
+          ]}
+        />
+
+        <ClassPathGrid compact />
+        <WorldRouteJourney />
+      </Stack>
     </WebAppShell>
   );
 }

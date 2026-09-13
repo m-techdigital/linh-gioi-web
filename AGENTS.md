@@ -74,3 +74,9 @@ Web contract records live under `packages/contracts` after contract sync begins.
 ## Evidence rule
 
 Source inspection alone is not runtime PASS. If runtime/browser/visual gates cannot run in the environment, classify them as not executed or environment limited in the task handoff. Never skip-as-PASS.
+
+## Base First rule
+
+Base First is mandatory for all three applications (`apps/web`, `apps/portal`, `apps/ops`). Search shared owners before creating app-local code. If a capability can be reused by two or more apps, extend `packages/*` first and let apps consume it. App-local duplicates of reusable UI, auth, API, config, contracts or testing helpers are forbidden unless the handoff records a concrete reason.
+
+Build Once is the verification rule: use targeted validators/tests/typechecks during the inner loop, reuse unchanged PASS evidence, and run the full production build at closure or when build-relevant source/config/dependency changes invalidate that evidence.
