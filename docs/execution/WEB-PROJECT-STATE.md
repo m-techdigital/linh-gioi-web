@@ -1,3 +1,14 @@
+Current phase: WEB-FE-OPS-VISUAL-LCP-IMAGE-v1.49 WEB_CLOSED.
+
+Current decision: v1.49 FE Ops visual LCP image slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.49 updates Ops home, Control Center and Security & Governance visual image loading for WORLD_CONCEPT panels.
+- WORLD_CONCEPT visuals now render with `loading="eager"`; secondary visual panels remain lazy-loaded.
+- v1.49 evidence: RED e2e reproduced `loading="lazy"` across three Ops routes; source validator PASS; Ops typecheck PASS; Ops production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.50.
+
 Current phase: WEB-FE-PORTAL-SECURITY-LCP-IMAGE-v1.48 WEB_CLOSED.
 
 Current decision: v1.48 FE Portal security LCP image slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
