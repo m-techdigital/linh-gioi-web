@@ -77,7 +77,12 @@ export function DataTable({
   className?: string;
 }) {
   return (
-    <div className={cx("lgo-data-table-wrap", className)}>
+    <div
+      className={cx("lgo-data-table-wrap", className)}
+      role="region"
+      aria-label={`Scrollable data table: ${caption}`}
+      tabIndex={0}
+    >
       <table className="lgo-data-table">
         <caption>{caption}</caption>
         <thead>

@@ -86,7 +86,7 @@ def check_tests_and_docs() -> None:
         "| WEB-FE-ACCESSIBILITY-AXE-MATRIX-v1.58 | WEB-FE | WEB_CLOSED |",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.59",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
         "browser/e2e",
     ])
 

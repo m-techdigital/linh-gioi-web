@@ -43,6 +43,12 @@
   background: rgba(10, 24, 42, .62);
 }
 
+
+.lgo-data-table-wrap:focus-visible {
+  outline: 2px solid var(--lgo-color-spirit-cyan);
+  outline-offset: 3px;
+}
+
 .lgo-data-table {
   width: 100%;
   min-width: 620px;

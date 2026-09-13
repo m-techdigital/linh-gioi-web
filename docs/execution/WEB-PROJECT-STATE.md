@@ -1,3 +1,14 @@
+Current phase: WEB-FE-SHARED-DATA-TABLE-SCROLL-REGION-v1.59 WEB_CLOSED.
+
+Current decision: v1.59 FE shared DataTable scroll-region slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.59 updates shared `DataTable` horizontal scroll wrappers in `packages/ui`.
+- Data table wrappers now expose `role="region"`, caption-derived labels, `tabIndex={0}`, and focus-visible styling for keyboard access to scrollable data tables.
+- v1.59 evidence: RED browser/e2e reproduced missing named region on Ops `/support` table wrapper; source validator PASS; UI typecheck PASS; Ops typecheck PASS; Ops production build PASS; Playwright desktop/mobile keyboard/region/font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.60.
+
 Current phase: WEB-FE-ACCESSIBILITY-AXE-MATRIX-v1.58 WEB_CLOSED.
 
 Current decision: v1.58 FE accessibility axe matrix slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
