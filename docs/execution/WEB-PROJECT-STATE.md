@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PORTAL-ACCESS-JOURNEY-VISUAL-v1.68 WEB_CLOSED.
+
+Current decision: v1.68 FE Portal access journey visual slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.68 updates shared Portal `AccessJourney` in `apps/portal`.
+- Portal access/auth fixture routes now render real game-art with accessible name `Portal access gate art`, eager loading and responsive layout while keeping Auth/DB/API blocked-state copy explicit.
+- v1.68 evidence: RED browser/e2e reproduced missing Portal access image on `/login`; source validator PASS; Portal typecheck PASS; Portal production build PASS; Playwright desktop/mobile image-loading/keyboard/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded image natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.69.
+
 Current phase: WEB-FE-PUBLIC-DOWNLOAD-TRUST-DESIGN-BOARD-v1.67 WEB_CLOSED.
 
 Current decision: v1.67 FE public download trust design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

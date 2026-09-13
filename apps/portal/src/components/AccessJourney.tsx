@@ -4,7 +4,19 @@ import { portalAccessJourneys } from "../lib/portal-fixtures";
 /** Portal route composition; shared UI owns all progress presentation. */
 export function AccessJourney({ journey }: { journey: keyof typeof portalAccessJourneys }) {
   return (
-    <section aria-label="Hành trình truy cập">
+    <section className="lgo-access-journey" aria-label="Hành trình truy cập">
+      <figure className="lgo-access-journey-visual" aria-label="Portal access gate art panel">
+        <img
+          src="/game-art/world/dong-mon-skyline.webp"
+          alt="Portal access gate art"
+          loading="eager"
+          decoding="async"
+        />
+        <figcaption>
+          <strong>Đông Môn access gate</strong>
+          <span>Ảnh game-art thật dùng để mô tả entry flow; đăng nhập vẫn bị khóa đến khi Auth/DB/API contract được chấp nhận.</span>
+        </figcaption>
+      </figure>
       <ProgressSteps label="Các bước truy cập dự kiến">
         {portalAccessJourneys[journey].map((step) => <ProgressStep key={step.title} {...step} />)}
       </ProgressSteps>
