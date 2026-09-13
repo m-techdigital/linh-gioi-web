@@ -3,16 +3,20 @@
 Current task:
 
 ```text
-WEB-08-GAME-CONTRACT-SYNC-v1.0
+WEB-FE-VISUAL-ASSET-LAYOUT-REVIEW-v1.40
 ```
 
-Status: WEB_BLOCKED_EXTERNAL_CONTRACT.
+Status: WEB_TASK_CONTINUE.
 
-v1.36–v1.38 fixture UX work and its discovered visual repairs are closed. Continue the program with the accepted backend Auth/API/DB/RBAC/audit contract. The program is not production-complete.
+User direction: continue FE work first, use needed game images, and verify real UI/UX layout in browser/e2e. Demo data is allowed while backend is not ready. Do not create an independent backend and do not claim real integration.
 
-Latest WEB-08 intake verification: blocked-state spec/report/handoff and validator are present. The sibling game repo was inspected at commit `efa46a898b738cb84f275463e6449a8cde48e177`, but it had a dirty worktree and only provided governance/combat/network/gamedata context, not accepted web Auth/API/DB/RBAC/audit contracts.
+Current FE scope: review and improve visual design/layout across demo surfaces using selected game-art assets where useful. Start from Portal `/journey`, then inspect Portal/Ops/Public surfaces for oversized typography, weak visual hierarchy, image gaps, horizontal overflow and mobile readability. Keep fixtures clearly provisional.
 
-Required input: canonical Java/Spring Boot repository commit and API version; owner-approved endpoint inventory/schema; auth/session/expiry/error semantics; permission and audit requirements; integration environment and test-account procedure. Read and record these centrally in packages/contracts before any real Portal/Ops integration. A source file or a fixture alone is not owner acceptance.
+Lifecycle: SELECT → SPEC_LOCK → IMPLEMENT FE-only visual/layout improvements → SOURCE_VERIFY → RUNTIME_VERIFY → VISUAL_REVIEW → HANDOFF → CLOSED.
+
+Required evidence: source validator for the selected visual/layout task, app/UI typecheck, relevant production build, Playwright desktop/mobile e2e with font-size/layout/image/overflow assertions, screenshot review. No independent backend, no duplicate DTO owners, no fake fetch, no forms, no enabling fixture mutation controls.
+
+WEB-08 note: accepted backend Auth/API/DB/RBAC/audit contract is still required before any real Portal/Ops integration. The WEB-08 blocked-state spec/report/handoff and validator remain as the integration gate. A source file or a fixture alone is not owner acceptance.
 
 After acceptance: SELECT → SPEC_LOCK → IMPLEMENT contract records/client generation only where supported → SOURCE_VERIFY → RUNTIME_VERIFY → VISUAL_REVIEW (applicable scope recorded) → HANDOFF → CLOSED. Then select WEB-09 integration flows and WEB-10 deployment/security gates according to the master roadmap.
 

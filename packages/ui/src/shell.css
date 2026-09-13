@@ -102,6 +102,27 @@
 
 .lgo-workspace-content { flex: 1; padding-block: var(--lgo-space-xl); }
 .lgo-workspace-page { min-height: 60vh; }
+.lgo-workspace-shell h1 {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+.lgo-workspace-shell h2 {
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+.lgo-workspace-shell h3 {
+  font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+.lgo-workspace-shell p,
+.lgo-workspace-shell dd,
+.lgo-workspace-shell li {
+  font-size: 1rem;
+  letter-spacing: 0;
+}
 .lgo-workspace-footer {
   border-top: 1px solid rgba(49, 216, 232, .12);
   padding-block: var(--lgo-space-lg);
@@ -227,6 +248,7 @@
   color: var(--lgo-color-text-primary);
   background: var(--lgo-color-night-panel);
   font: inherit;
+  font-size: .95rem;
   font-weight: 700;
   text-decoration: none;
   text-align: center;
@@ -246,7 +268,39 @@
 }
 .lgo-workspace-shell .lgo-status-badge { max-width: 100%; overflow-wrap: anywhere; font-size: .8rem; }
 .lgo-workspace-shell .lgo-boundary-banner > .lgo-status-badge { flex-shrink: 0; }
+.lgo-journey-art-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, .8fr);
+  gap: var(--lgo-space-md);
+}
+.lgo-journey-art-card {
+  display: grid;
+  gap: var(--lgo-space-md);
+  align-content: start;
+  min-width: 0;
+  border: 1px solid rgba(49, 216, 232, .16);
+  border-radius: var(--lgo-radius-lg);
+  background: rgba(10, 24, 42, .68);
+  overflow: hidden;
+}
+.lgo-journey-art-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: rgba(6, 16, 29, .8);
+}
+.lgo-journey-art-card:not(:first-child) img { aspect-ratio: 1 / 1; }
+.lgo-journey-art-card > div {
+  display: grid;
+  gap: .55rem;
+  padding: 0 var(--lgo-space-md) var(--lgo-space-md);
+}
+.lgo-journey-art-card h2,
+.lgo-journey-art-card p { margin: 0; }
 @media (max-width: 720px) {
   .lgo-workspace-shell .lgo-boundary-banner { flex-direction: column; }
   .lgo-workspace-shell .lgo-form-actions > .lgo-link-button { width: 100%; }
+  .lgo-journey-art-grid { grid-template-columns: 1fr; }
 }

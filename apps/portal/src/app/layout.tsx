@@ -14,6 +14,7 @@ export const metadata = {
 
 const navItems: WorkspaceShellNavItem[] = [
   { href: "/", label: "Tổng quan" },
+  { href: "/journey", label: "Hành trình" },
   { href: "/account", label: "Tài khoản" },
   { href: "/characters", label: "Nhân vật" },
   { href: "/support", label: "Hỗ trợ" },

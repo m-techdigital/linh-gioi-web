@@ -75,6 +75,8 @@ def check_web08_records() -> None:
     require_text(handoff, "Contracts consumed")
     require_text(handoff, "Contract changes")
     require_text(handoff, "No production auth, DB, Portal/Ops integration or deployment is claimed")
+    require_text("docs/execution/WEB-TASK-LEDGER.md", "WEB-08-GAME-CONTRACT-SYNC-v1.0")
+    require_text("docs/execution/WEB-TASK-LEDGER.md", "WEB_BLOCKED_EXTERNAL_CONTRACT")
 
 
 def check_no_fake_integration() -> None:

@@ -1,5 +1,6 @@
 export const PROVISIONAL_WEB_FIXTURE = "PROVISIONAL_WEB_FIXTURE" as const;
 export const NOT_CANONICAL_BACKEND_CONTRACT = "NOT_CANONICAL_BACKEND_CONTRACT" as const;
+export const NO_ACCEPTED_BACKEND_CONTRACT = "NO_ACCEPTED_BACKEND_CONTRACT" as const;
 
 export const portalAccountFixture = {
   displayName: "Minh Linh Khách",
@@ -19,6 +20,61 @@ export const portalCharacterFixtures = [
   { id: "fixture-a", name: "Vân Quyền", path: "Võ", level: "Lv. 18 · illustrative", zone: "Đông Môn", state: "Ready fixture", lastPlayed: "Hôm nay · illustrative" },
   { id: "fixture-b", name: "Thanh Vũ", path: "Kiếm", level: "Lv. 12 · illustrative", zone: "Linh Thành", state: "Resting fixture", lastPlayed: "Hôm qua · illustrative" }
 ] as const;
+
+export const portalJourneyFixture = {
+  title: "Hành trình người chơi",
+  state: NO_ACCEPTED_BACKEND_CONTRACT,
+  summary: "Demo data nối tài khoản, bảo mật, nhân vật và hỗ trợ để review FE/UX trong lúc chưa mở BE.",
+  artPanels: [
+    {
+      id: "portal-journey-dong-mon-world-concept",
+      title: "Đông Môn",
+      description: "World concept dùng làm ngữ cảnh hành trình; không phải gameplay screenshot.",
+      src: "/game-art/world/dong-mon-skyline.webp",
+      alt: "Khung concept Đông Môn trong Linh Giới",
+      width: 1360,
+      height: 765,
+      claim: "WORLD_CONCEPT"
+    },
+    {
+      id: "portal-journey-vo-starter-development-art",
+      title: "Võ khởi đầu",
+      description: "Development art preview giúp demo nhân vật có chất game hơn.",
+      src: "/game-art/classes/vo-lv1-starter-atlas.webp",
+      alt: "Bảng development art Võ cấp đầu",
+      width: 1280,
+      height: 1280,
+      claim: "DEVELOPMENT_ART_PREVIEW"
+    },
+    {
+      id: "portal-journey-vo-skill-development-art",
+      title: "Kỹ năng Võ",
+      description: "Preview skill atlas cho cảm giác action trong Portal demo.",
+      src: "/game-art/classes/vo-lv1-skill-atlas.webp",
+      alt: "Bảng development art kỹ năng Võ",
+      width: 820,
+      height: 820,
+      claim: "DEVELOPMENT_ART_PREVIEW"
+    }
+  ],
+  journeySteps: [
+    { title: "Xem tài khoản", description: "Kiểm tra identity, email và security posture ở mức fixture.", state: "complete", statusLabel: "Demo sẵn sàng" },
+    { title: "Duyệt phiên", description: "Soát thiết bị minh họa; không có token lifecycle hoặc revoke API.", state: "complete", statusLabel: "Demo sẵn sàng" },
+    { title: "Chọn nhân vật", description: "Đi từ roster tới detail để kiểm tra layout character.", state: "current", statusLabel: "Đang review" },
+    { title: "Gửi hỗ trợ", description: "Luồng support vẫn bị khóa cho tới khi có contract backend.", state: "blocked", statusLabel: "Chưa mở BE" }
+  ],
+  recentActivity: [
+    { title: "Portal demo opened", timestamp: "T+0", description: "Người chơi vào tổng quan fixture, không tạo session thật.", meta: "PROVISIONAL_WEB_FIXTURE" },
+    { title: "Security preview checked", timestamp: "T+2", description: "Các field security giữ disabled để tránh thu credential.", meta: "NO_ACCEPTED_BACKEND_CONTRACT" },
+    { title: "Character roster reviewed", timestamp: "T+5", description: "Rows chỉ dùng cho FE/e2e, không định nghĩa canonical DTO.", meta: "NOT_CANONICAL_BACKEND_CONTRACT" },
+    { title: "Support path discovered", timestamp: "T+8", description: "Điểm chạm support hiện chỉ hướng dẫn người dùng trong UI demo.", meta: "No real Portal integration" }
+  ],
+  nextActions: [
+    { title: "Tài khoản mẫu", description: "Mở fixture account để xem thông tin nhận diện.", href: "/account" },
+    { title: "Nhân vật mẫu", description: "Mở roster và character detail minh họa.", href: "/characters" },
+    { title: "Hỗ trợ mẫu", description: "Xem support/recovery boundary khi chưa có BE.", href: "/support" }
+  ]
+} as const;
 
 
 export const portalSupportTopics = [

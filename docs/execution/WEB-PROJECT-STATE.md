@@ -1,12 +1,18 @@
-Current phase: WEB-08-GAME-CONTRACT-SYNC-v1.0 WEB_BLOCKED_EXTERNAL_CONTRACT.
+Current phase: WEB-PORTAL-JOURNEY-DEMO-DATA-v1.39 WEB_CLOSED.
 
-Current decision: WEB-08 intake gate verified as blocked. Entire program is NOT production-complete.
+Current decision: v1.39 FE/demo data slice closed; continue FE visual/layout review next. Entire program is NOT production-complete.
 
+- User accepted continuing FE first with demo data while BE is not ready.
+- v1.39 adds `/journey` in Portal with provisional data only, copied game-art derivatives with Portal provenance, plus browser/e2e layout guards for typography, image loading and overflow.
+- v1.39 evidence: source validator PASS; Portal/UI typecheck PASS; Portal production build PASS; Playwright desktop/mobile 4/4 PASS; production screenshots inspected at 1440 and 390 widths.
+- No production auth, No DB persistence, No real Portal integration, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 - WEB-08 blocked-state spec/report/handoff and validator now record the missing acceptance inputs.
 - Sibling game repo `../LinhGioiOnline` was inspected at commit `efa46a898b738cb84f275463e6449a8cde48e177`; it had a dirty worktree, so it is not a sealed accepted web-contract baseline.
 - Existing accepted game-side governance/combat markers, including `M6_COMBAT_PROTOCOL_GAMEDATA_CONTRACT_ACCEPTED_v0.40.0`, are useful context but not sufficient for Portal/Ops web integration.
 - Required missing inputs remain: canonical Java/Spring Boot commit/API version, owner-approved endpoint inventory/schema, auth/session/expiry/error semantics, permission and audit requirements, integration environment and test-account procedure.
 - packages/contracts/src/index.ts still explicitly declares NO_ACCEPTED_BACKEND_CONTRACT. WEB-09/10 remain incomplete.
+
+Next task: WEB-FE-VISUAL-ASSET-LAYOUT-REVIEW-v1.40.
 
 ## Previous checkpoint records
 
