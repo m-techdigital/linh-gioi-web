@@ -8,7 +8,7 @@ import {
   FormActions,
   InlineFeedback,
   ProvisionalFeatureShell,
-  SpiritButton,
+  BlockedActionButton,
   StatusBadge
 } from "@lgo-web/ui";
 import {
@@ -50,7 +50,13 @@ export default function Page() {
         summary="Một case mẫu để kiểm tra cách người chơi đọc trạng thái, category và next step trước khi support contract được mở."
         actions={(
           <FormActions>
-            <SpiritButton type="button" disabled>Mở case mới chưa khả dụng</SpiritButton>
+            <BlockedActionButton
+              id="portal-support-new-case-blocked"
+              type="button"
+              reason="NO_ACCEPTED_BACKEND_CONTRACT — No production auth, support-ticket backend, account lookup or audit contract is accepted yet."
+            >
+              Mở case mới chưa khả dụng
+            </BlockedActionButton>
           </FormActions>
         )}
       >

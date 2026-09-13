@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PORTAL-SUPPORT-BLOCKED-ACTION-v1.56 WEB_CLOSED.
+
+Current decision: v1.56 FE Portal support blocked action slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.56 updates Portal `/support` new-case blocked action accessibility.
+- The action now uses shared `BlockedActionButton` with `aria-disabled`, `data-disabled`, and `aria-describedby` instead of native disabled `SpiritButton`.
+- v1.56 evidence: RED browser/e2e reproduced missing `aria-disabled` on native disabled support action; source validator PASS; Portal typecheck PASS; Portal production build PASS; Playwright desktop/mobile keyboard/no-write/font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.57.
+
 Current phase: WEB-FE-PUBLIC-CLASS-ART-TYPOGRAPHY-v1.55 WEB_CLOSED.
 
 Current decision: v1.55 FE public class art typography slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

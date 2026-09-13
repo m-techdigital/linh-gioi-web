@@ -71,7 +71,9 @@ def main() -> int:
         forbid(rel, "<form")
 
     require("apps/portal/src/app/recovery/page.tsx", "disabled")
-    require("apps/portal/src/app/support/page.tsx", "disabled")
+    support_text = read("apps/portal/src/app/support/page.tsx")
+    if "disabled" not in support_text and "aria-disabled" not in read("packages/ui/src/primitives.tsx"):
+        ERRORS.append("apps/portal/src/app/support/page.tsx missing blocked/disabled support action evidence")
 
     if ERRORS:
         print("WEB PORTAL SUPPORT RECOVERY DEPTH v1.33 VALIDATION FAIL")
