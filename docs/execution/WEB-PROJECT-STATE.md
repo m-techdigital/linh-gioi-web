@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PORTAL-HOME-VISUAL-LCP-IMAGES-v1.62 WEB_CLOSED.
+
+Current decision: v1.62 FE Portal home visual LCP image slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.62 updates Portal home visual panel image loading in `apps/portal/src/app/page.tsx`.
+- Both Portal home visual images now render with `loading="eager"` after browser review reported the Võ development-art image as LCP-sensitive on mobile.
+- v1.62 evidence: RED browser/e2e reproduced `Portal home development art Võ` with `loading="lazy"`; source validator PASS; Portal typecheck PASS; Portal production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; screenshot review completed with console warnings empty, eager complete images and pageOverflow 0.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.63.
+
 Current phase: WEB-FE-WORKSPACE-NAV-SCROLL-REGION-v1.61 WEB_CLOSED.
 
 Current decision: v1.61 FE shared workspace nav scroll-region slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

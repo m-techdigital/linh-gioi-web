@@ -36,7 +36,7 @@ export default function PortalHomePage() {
                   alt={panel.alt}
                   width={panel.width}
                   height={panel.height}
-                  loading={panel.claim === "WORLD_CONCEPT" ? "eager" : "lazy"}
+                  loading="eager"
                   sizes="(max-width: 720px) 100vw, 50vw"
                 />
               )}

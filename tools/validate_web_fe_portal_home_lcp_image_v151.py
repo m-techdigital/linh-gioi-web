@@ -31,14 +31,14 @@ def check_portal_home_route() -> None:
     text = require_text(rel, [
         "portalHomeVisualPanels",
         "Image",
-        "loading=",
-        "WORLD_CONCEPT",
+        "loading=\"eager\"",
         "NO_ACCEPTED_BACKEND_CONTRACT",
     ])
     if "priority" in text:
         fail(f"{rel}: use explicit loading=\"eager\" for selected visual, not priority")
-    if not re.search(r"loading=\{panel\.claim === \"WORLD_CONCEPT\" \? \"eager\" : \"lazy\"\}", text):
-        fail(f"{rel}: missing WORLD_CONCEPT eager loading expression")
+    fixtures = require_text("apps/portal/src/lib/portal-fixtures.ts", ["portalHomeVisualPanels", "WORLD_CONCEPT", "portal-home-world"])
+    if "portal-home-world" not in fixtures:
+        fail("apps/portal/src/lib/portal-fixtures.ts: missing Portal home WORLD_CONCEPT panel")
     if "fetch(" in text or "axios" in text or "<form" in text:
         fail(f"{rel}: forbidden backend/form marker")
 
