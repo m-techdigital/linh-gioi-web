@@ -50,6 +50,7 @@ export default function Page() {
                   width={panel.width}
                   height={panel.height}
                   sizes="(max-width: 720px) 100vw, 50vw"
+                  loading={panel.claim === "WORLD_CONCEPT" ? "eager" : "lazy"}
                 />
               )}
               meta={<StatusBadge tone="shadow">{NO_ACCEPTED_BACKEND_CONTRACT}</StatusBadge>}

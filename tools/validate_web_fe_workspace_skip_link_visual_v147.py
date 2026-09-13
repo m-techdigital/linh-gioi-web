@@ -88,7 +88,7 @@ def check_tests_and_docs() -> None:
         "| WEB-FE-WORKSPACE-SKIP-LINK-VISUAL-v1.47 | WEB-FE | WEB_CLOSED |",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.48",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
         "browser/e2e",
     ])
 

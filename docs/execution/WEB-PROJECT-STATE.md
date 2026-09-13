@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PORTAL-SECURITY-LCP-IMAGE-v1.48 WEB_CLOSED.
+
+Current decision: v1.48 FE Portal security LCP image slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.48 updates Portal `/account/security` image loading for the browser-reported LCP visual.
+- The WORLD_CONCEPT security image now renders with `loading="eager"`; secondary visuals remain lazy-loaded.
+- v1.48 evidence: RED e2e reproduced `loading="lazy"`; source validator PASS; Portal typecheck PASS; Portal production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; screenshot review completed.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.49.
+
 Current phase: WEB-FE-WORKSPACE-SKIP-LINK-VISUAL-v1.47 WEB_CLOSED.
 
 Current decision: v1.47 FE shared workspace skip link visual slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
