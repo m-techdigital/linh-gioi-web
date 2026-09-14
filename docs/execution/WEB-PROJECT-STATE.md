@@ -1,3 +1,17 @@
+Current phase: WEB-FE-START-DESIGN-TARGET-DENSITY-v1.124 WEB_CLOSED.
+
+Current decision: v1.124 FE start design target density slice closed. Public `/start` now has a dedicated high-fidelity `Public Start` design target and runtime desktop/mobile browser/e2e guardrails for first-fold onboarding board/screenshot density. Entire program is NOT production-complete.
+
+- v1.124 created `start-detailed-design-target-v1124.png` with built-in image_gen and mirrored it under `docs/design/reference`.
+- v1.124 registered `Public Start`, routed `/start` to that page-specific target and left Public Core as a broad fallback for public patterns outside page-specific targets.
+- v1.124 compacted desktop `/start` hero, tutorial steps, start board and screenshot panel spacing under `lgo-startpage-stack` while preserving mobile behavior.
+- v1.124 evidence: RED browser/e2e reproduced missing `Public Start` target attachment; Playwright desktop/mobile start design target density PASS 2/2 after fix; dedicated validator and closure checks recorded in report/handoff.
+- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.125.
+
 Current phase: WEB-FE-JOURNEY-DESIGN-TARGET-DENSITY-v1.123 WEB_CLOSED.
 
 Current decision: v1.123 FE journey design target density slice closed. Public `/journey` now has a dedicated high-fidelity `Public Journey` design target and runtime desktop/mobile browser/e2e guardrails for first-fold journey board/session-loop density. Entire program is NOT production-complete.

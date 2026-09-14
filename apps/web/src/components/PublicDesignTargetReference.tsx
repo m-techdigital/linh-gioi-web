@@ -33,6 +33,12 @@ const PUBLIC_JOURNEY_TARGET = {
   scope: "Public Journey"
 };
 
+const PUBLIC_START_TARGET = {
+  label: "Start detailed design target",
+  href: "/design-reference/start-detailed-design-target-v1124.png",
+  scope: "Public Start"
+};
+
 const PUBLIC_CORE_TARGET = {
   label: "Public Core design target",
   href: "/design-reference/design-atlas-public-core-v195.png",
@@ -56,6 +62,7 @@ function targetForPath(pathname: string) {
   if (pathname === "/story") return PUBLIC_STORY_TARGET;
   if (pathname === "/classes") return PUBLIC_CLASSES_TARGET;
   if (pathname === "/journey") return PUBLIC_JOURNEY_TARGET;
+  if (pathname === "/start") return PUBLIC_START_TARGET;
   if (publicServicePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_SERVICE_TARGET;
   if (publicCorePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_CORE_TARGET;
   return PUBLIC_CORE_TARGET;

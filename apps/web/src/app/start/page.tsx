@@ -30,7 +30,7 @@ const onboardingScreenshots = [
 export default function StartPage() {
   return (
     <WebAppShell>
-      <Stack className="lgo-player-facing-stack">
+      <Stack className="lgo-player-facing-stack lgo-startpage-stack">
         <PublicPlayerHero
           className="lgo-start-hero"
           badge="Người Thức Tỉnh"
