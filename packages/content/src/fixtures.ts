@@ -813,9 +813,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "route-continuity-conversion-polish-started",
     category: "news",
-    title: "Route continuity and safe next steps get clearer",
-    summary: "WEB v1.17 connects public routes into a safer player journey: start, world loop, download trust, status, support safety and performance all point to the right next step.",
-    body: "This update focuses on the public website product. It improves page-to-page cohesion, CTA hierarchy and conversion-safe routing without creating fake download, account, portal, ticket, payment or backend conversion flows.",
+    title: "Route continuity và bước tiếp an toàn rõ hơn",
+    summary: "WEB v1.17 nối các route public thành hành trình an toàn: Bắt đầu, world loop, download trust, trạng thái, hỗ trợ an toàn và performance đều dẫn đúng bước tiếp.",
+    body: "WEB v1.17 cải thiện cohesion giữa các page, hierarchy CTA và routing conversion-safe mà không tạo luồng tải game, tài khoản, portal, ticket, thanh toán hoặc backend giả.",
     publishedAt: "2026-09-05T22:05:00.000Z",
     status: "published",
     featured: true,
@@ -1029,16 +1029,16 @@ export const contentDetailSections: ContentDetailSection[] = [
   {
     slug: "route-continuity-conversion-polish-started",
     heading: "Route continuity biến menu dài thành hành trình đọc",
-    body: "WEB v1.17 nối Start, World Loop, Download Trust, Status, Support Safety, Community Onboarding, Accessibility và Performance bằng CTA hierarchy rõ hơn.",
+    body: "WEB v1.17 nối Bắt đầu, World Loop, Download Trust, Trạng thái, Support Safety, Community Onboarding, Accessibility và Performance bằng CTA hierarchy rõ hơn.",
     playerImpact: "Người chơi mới biết nên đọc gì tiếp theo và vì sao chưa nên kỳ vọng download, account hoặc ticket thật.",
-    nonClaim: "No fake funnel, no public artifact, no account/support backend."
+    nonClaim: "Không có funnel giả, không có artifact public và không có backend tài khoản/hỗ trợ."
   },
   {
     slug: "route-continuity-conversion-polish-started",
     heading: "Conversion-safe nghĩa là không hứa nhầm",
-    body: "CTA vẫn cần rõ và hấp dẫn, nhưng mỗi CTA nhạy cảm phải mở thông tin/status/trust trước khi có hành động release thật.",
+    body: "CTA vẫn cần rõ và hấp dẫn, nhưng mỗi CTA nhạy cảm phải mở thông tin, trạng thái và trust trước khi có hành động release thật.",
     playerImpact: "Download, support và community không còn giống lời hứa production; chúng trở thành các bước hiểu trạng thái hiện tại.",
-    nonClaim: "No entitlement, payment, launcher, secure inbox or live moderation claim."
+    nonClaim: "Không có entitlement, thanh toán, launcher, secure inbox hoặc moderation live."
   },
   {
     slug: "content-ia-hub-polish-started",

@@ -22,6 +22,7 @@ const articleDetailTitles: Record<string, string> = {
   "closed-tester-information-pack-started": "Bài viết giải thích closed tester information pack",
   "release-readiness-hub-polish-started": "Bài viết giải thích release readiness hub",
   "player-trust-release-narrative-started": "Bài viết giải thích player trust và release narrative",
+  "route-continuity-conversion-polish-started": "Bài viết giải thích route continuity và conversion-safe",
 };
 
 function articleDetailTitle(slug: string) {
