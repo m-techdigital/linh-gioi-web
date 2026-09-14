@@ -39,8 +39,8 @@ def check_tests_docs() -> None:
     if "| Public Core | `apps/web/public/design-reference/design-atlas-public-core-v195.png` | `/start`" in registry: fail("docs/design/DESIGN-TARGET-REGISTRY.md: /start should not remain under broad Public Core applies-to list")
     for rel in ["docs/execution/specs/WEB-FE-START-DESIGN-TARGET-DENSITY-v1.124.md", "LGO-WEB-FE-START-DESIGN-TARGET-DENSITY-REPORT-v1.124.md", "HANDOFF-LGO-WEB-FE-START-DESIGN-TARGET-DENSITY-v1.124.md"]:
         require_text(rel, ["WEB-FE-START-DESIGN-TARGET-DENSITY-v1.124", "WEB_CLOSED", "Design Target First", "Base UI/UX Layout", "Public Start", "browser/e2e", "fold density", "built-in image_gen", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
-    require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-START-DESIGN-TARGET-DENSITY-v1.124 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.125"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.125", "Design Target First", "Base UI/UX Layout", "browser/e2e"])
+    require_text("docs/execution/WEB-PROJECT-STATE.md", ["WEB-FE-START-DESIGN-TARGET-DENSITY-v1.124 WEB_CLOSED", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.125"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "Design Target First", "Base UI/UX Layout", "browser/e2e"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-START-DESIGN-TARGET-DENSITY-v1.124 | WEB-FE | WEB_CLOSED |"])
 def main() -> int:
     check_target(); check_tests_docs()

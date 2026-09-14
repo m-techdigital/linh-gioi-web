@@ -1,3 +1,17 @@
+Current phase: WEB-FE-DOWNLOAD-DESIGN-TARGET-DENSITY-v1.125 WEB_CLOSED.
+
+Current decision: v1.125 FE download design target density slice closed. Public `/download` now has a dedicated high-fidelity `Public Download` design target and runtime desktop/mobile browser/e2e guardrails for first-fold release readiness density. Entire program is NOT production-complete.
+
+- v1.125 created `download-detailed-design-target-v1125.png` with built-in image_gen and mirrored it under `docs/design/reference`.
+- v1.125 registered `Public Download`, routed `/download` to that page-specific target and kept Public Service as the broader target for remaining service routes.
+- v1.125 compacted desktop `/download` hero, sealed gate and readiness checklist under `lgo-downloadpage-stack` while preserving mobile behavior.
+- v1.125 evidence: RED browser/e2e reproduced missing `Public Download` target attachment; Playwright desktop/mobile download design target density PASS 2/2 after fix; dedicated validator and closure checks recorded in report/handoff.
+- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.126.
+
 Current phase: WEB-FE-START-DESIGN-TARGET-DENSITY-v1.124 WEB_CLOSED.
 
 Current decision: v1.124 FE start design target density slice closed. Public `/start` now has a dedicated high-fidelity `Public Start` design target and runtime desktop/mobile browser/e2e guardrails for first-fold onboarding board/screenshot density. Entire program is NOT production-complete.

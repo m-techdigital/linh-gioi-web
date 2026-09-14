@@ -28,7 +28,7 @@ function statusTone(status: string) {
 export default function DownloadPage() {
   return (
     <WebAppShell>
-      <Stack className="lgo-player-facing-stack">
+      <Stack className="lgo-player-facing-stack lgo-downloadpage-stack">
         <PublicPlayerHero
           className="lgo-download-hero lgo-panel lgo-download-player-hero"
           badge="Public access"
@@ -51,12 +51,11 @@ export default function DownloadPage() {
           )}
         />
 
-        <SectionHeading eyebrow="Readiness" title="Trước khi nút tải xuất hiện">
-          Trang public giữ một checklist minh bạch để người chơi biết chính xác điều gì đã sẵn sàng và điều gì còn bị chặn.
-        </SectionHeading>
-
-        <section className="lgo-panel">
-          <div className="lgo-readiness-list">
+        <section className="lgo-panel lgo-download-readiness-target-panel" aria-labelledby="download-readiness-heading">
+          <SectionHeading eyebrow="Readiness" title="Trước khi nút tải xuất hiện">
+            Trang public giữ một checklist minh bạch để người chơi biết chính xác điều gì đã sẵn sàng và điều gì còn bị chặn.
+          </SectionHeading>
+          <div className="lgo-readiness-list" id="download-readiness-heading">
             {downloadReadiness.map((item) => (
               <article className="lgo-readiness-item" key={item.label}>
                 <StatusBadge tone={statusTone(item.status)}>{item.status}</StatusBadge>
