@@ -1,3 +1,14 @@
+Current phase: WEB-FE-WORKSPACE-DESIGN-TARGET-ASSET-v1.99 WEB_CLOSED.
+
+Current decision: v1.99 FE workspace design-target asset slice closed. Portal and Ops/Admin now serve their registered design target PNGs from their own app runtimes, so Design Target First links can be opened directly during browser review. Entire program is NOT production-complete.
+
+- v1.99 mirrors the existing v1.95 Player Portal and Ops/Admin atlas targets into Portal/Ops public design-reference folders.
+- v1.99 does not create a new design and does not replace a target; it makes the registered target reachable where the UI link lives.
+- v1.99 evidence: RED browser/e2e reproduced 404 design-target links; Playwright desktop/mobile asset loading PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.100.
+
 Current phase: WEB-FE-WORKSPACE-DESIGN-TARGET-ATTACHMENT-v1.98 WEB_CLOSED.
 
 Current decision: v1.98 FE workspace design-target attachment slice closed. Portal and Ops now expose a runtime Design Target First band linked to their registered Player Portal and Ops/Admin atlas targets through shared WorkspaceAppShell. Entire program is NOT production-complete.
