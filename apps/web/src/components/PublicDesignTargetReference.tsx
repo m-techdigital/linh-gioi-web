@@ -63,6 +63,12 @@ const PUBLIC_RELEASE_READINESS_TARGET = {
   scope: "Public Release Readiness"
 };
 
+const PUBLIC_TESTER_PACK_TARGET = {
+  label: "Tester pack detailed design target",
+  href: "/design-reference/tester-pack-detailed-design-target-v1129.png",
+  scope: "Public Tester Pack"
+};
+
 const PUBLIC_CORE_TARGET = {
   label: "Public Core design target",
   href: "/design-reference/design-atlas-public-core-v195.png",
@@ -90,6 +96,7 @@ function targetForPath(pathname: string) {
   if (pathname === "/download/trust") return PUBLIC_DOWNLOAD_TRUST_TARGET;
   if (pathname === "/download") return PUBLIC_DOWNLOAD_TARGET;
   if (pathname === "/release/readiness") return PUBLIC_RELEASE_READINESS_TARGET;
+  if (pathname === "/release/tester-pack") return PUBLIC_TESTER_PACK_TARGET;
   if (pathname === "/release") return PUBLIC_RELEASE_TARGET;
   if (publicServicePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_SERVICE_TARGET;
   if (publicCorePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_CORE_TARGET;

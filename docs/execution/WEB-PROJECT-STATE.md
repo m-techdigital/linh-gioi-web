@@ -1,3 +1,17 @@
+Current phase: WEB-FE-TESTER-PACK-DESIGN-TARGET-DENSITY-v1.129 WEB_CLOSED.
+
+Current decision: v1.129 FE tester pack design target density slice closed. Public `/release/tester-pack` now has a dedicated high-fidelity `Public Tester Pack` design target and runtime desktop/mobile browser/e2e guardrails for first-fold tester guidance density. Entire program is NOT production-complete.
+
+- v1.129 created `tester-pack-detailed-design-target-v1129.png` with built-in image_gen and mirrored it under `docs/design/reference`.
+- v1.129 registered `Public Tester Pack`, routed `/release/tester-pack` to that page-specific target and kept Public Service as the broader target for remaining service routes.
+- v1.129 compacted desktop `/release/tester-pack` hero, production board, checklist and safe feedback template under `lgo-testerpackpage-stack` while preserving mobile behavior.
+- v1.129 evidence: RED browser/e2e reproduced missing `Public Tester Pack` target attachment; Playwright desktop/mobile tester pack design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
+- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.130.
+
 Current phase: WEB-FE-RELEASE-READINESS-DESIGN-TARGET-DENSITY-v1.128 WEB_CLOSED.
 
 Current decision: v1.128 FE release readiness design target density slice closed. Public `/release/readiness` now has a dedicated high-fidelity `Public Release Readiness` design target and runtime desktop/mobile browser/e2e guardrails for first-fold readiness/owner-gate density. Entire program is NOT production-complete.

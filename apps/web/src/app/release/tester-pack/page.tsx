@@ -16,7 +16,7 @@ export const metadata = { title: "Closed tester information pack" };
 export default function ClosedTesterInformationPackPage() {
   return (
     <WebAppShell>
-      <Stack>
+      <Stack className="lgo-player-facing-stack lgo-testerpackpage-stack">
         <GameCard className="lgo-detail-hero-card lgo-closed-tester-hero-card">
           <StatusBadge tone="gold">WEB v1.20 closed tester information pack</StatusBadge>
           <span className="lgo-card-kicker">Tester checklist · safe feedback · known limitations · device report template · No live intake</span>
@@ -38,11 +38,11 @@ export default function ClosedTesterInformationPackPage() {
           </figcaption>
         </figure>
         <SectionHeading eyebrow="Tester guidance before intake" title="Static guidance trước, kênh official sau">v1.20 tiếp tục xây web thật bằng cách biến closed-test wording thành checklist và template an toàn, không phải backend hoặc funnel giả.</SectionHeading>
+        <ClosedTesterChecklistBoard />
+        <SafeFeedbackTemplateBoard />
         <ContentIaStartCta />
         <FaqHelpfulnessCta />
         <RouteContinuityCta />
-        <ClosedTesterChecklistBoard />
-        <SafeFeedbackTemplateBoard />
         <FaqDiscoveryGroupBoard />
         <IssueCategoryRouteBoard />
         <KnownLimitationNotesBoard />
