@@ -1,48 +1,93 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
-  <title id="title">Production Board</title>
-  <desc id="desc">Sandbox progress and handoff workflow reference</desc>
+  <title id="title">Board gói tester cộng đồng</title>
+  <desc id="desc">Bảng tham chiếu tiếng Việt cho checklist chuẩn bị tester, feedback an toàn, báo cáo thiết bị và giới hạn đã biết.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#121829"/>
-      <stop offset="55%" stop-color="#18263b"/>
-      <stop offset="100%" stop-color="#10251f"/>
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="52%" stop-color="#17263b"/>
+      <stop offset="100%" stop-color="#10231f"/>
     </linearGradient>
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity="0.28"/>
+      <feDropShadow dx="0" dy="16" stdDeviation="13" flood-color="#000000" flood-opacity="0.32"/>
     </filter>
     <style>
-      .title { font: 800 44px Inter, Arial, sans-serif; fill: #f7fafc; }
-      .subtitle { font: 500 20px Inter, Arial, sans-serif; fill: #b8c7d9; }
-      .label { font: 700 20px Inter, Arial, sans-serif; fill: #f7fafc; }
-      .small { font: 500 15px Inter, Arial, sans-serif; fill: #d8e2ed; }
+      .title { font: 800 46px Georgia, 'Times New Roman', serif; fill: #fff4d4; letter-spacing: .5px; }
+      .subtitle { font: 500 20px Inter, Arial, sans-serif; fill: #bfd1e2; }
+      .label { font: 750 21px Inter, Arial, sans-serif; fill: #f7fafc; }
+      .small { font: 500 15px Inter, Arial, sans-serif; fill: #dce7f2; }
       .tiny { font: 500 13px Inter, Arial, sans-serif; fill: #aebed0; }
-      .card { fill: #20324d; stroke: #4fd1c5; stroke-width: 2; rx: 24; filter: url(#shadow); }
+      .card { fill: #20324d; stroke: #d7b36a; stroke-width: 2; rx: 24; filter: url(#shadow); }
       .card2 { fill: #26344f; stroke: #f6ad55; stroke-width: 2; rx: 24; filter: url(#shadow); }
       .card3 { fill: #1f3a32; stroke: #68d391; stroke-width: 2; rx: 24; filter: url(#shadow); }
-      .muted { fill: #1a2539; stroke: #6b7280; stroke-width: 1.5; rx: 18; }
+      .muted { fill: #1a2539; stroke: #718096; stroke-width: 1.5; rx: 18; }
       .line { stroke: #94a3b8; stroke-width: 4; stroke-linecap: round; }
       .dash { stroke: #f6ad55; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 10 10; }
       .accent { fill: #4fd1c5; }
       .warn { fill: #f6ad55; }
       .ok { fill: #68d391; }
+      .seal { fill: #d7b36a; }
     </style>
   </defs>
   <rect width="1440" height="900" fill="url(#bg)"/>
-  <text x="72" y="86" class="title">Production Board</text>
-  <text x="72" y="124" class="subtitle">Sandbox progress and handoff workflow reference</text>
+  <circle cx="1198" cy="108" r="62" fill="none" stroke="#d7b36a" stroke-width="3" opacity=".8"/>
+  <path d="M1198 58 L1218 108 L1198 158 L1178 108 Z" fill="none" stroke="#d7b36a" stroke-width="3"/>
+  <text x="72" y="86" class="title">Gói tester cộng đồng</text>
+  <text x="72" y="124" class="subtitle">Checklist chuẩn bị · feedback an toàn · giới hạn rõ ràng · chưa mở intake</text>
 
-  <rect x="90" y="185" width="190" height="510" class="muted"/><text x="130" y="235" class="label">Backlog</text>
-  <rect x="315" y="185" width="190" height="510" class="muted"/><text x="365" y="235" class="label">Ready</text>
-  <rect x="540" y="185" width="190" height="510" class="card"/><text x="565" y="235" class="label">In progress</text>
-  <rect x="765" y="185" width="190" height="510" class="card2"/><text x="820" y="235" class="label">Verify</text>
-  <rect x="990" y="185" width="190" height="510" class="card"/><text x="1035" y="235" class="label">Handoff</text>
-  <rect x="1215" y="185" width="145" height="510" class="card3"/><text x="1248" y="235" class="label">Done</text>
-  <rect x="115" y="285" width="140" height="80" class="card2"/><text x="135" y="330" class="small">Gate task</text>
-  <rect x="565" y="285" width="140" height="80" class="card"/><text x="585" y="330" class="small">S1/S2/S5</text>
-  <rect x="790" y="285" width="140" height="80" class="card2"/><text x="806" y="330" class="small">Evidence</text>
-  <rect x="1015" y="285" width="140" height="80" class="card"/><text x="1030" y="330" class="small">ZIP + SHA</text>
-  <rect x="1230" y="285" width="115" height="80" class="card3"/><text x="1248" y="330" class="small">Accept</text>
-  <text x="122" y="748" class="small">Each card must preserve baseline, allowed paths, evidence class, and next allowed step.</text>
+  <rect x="88" y="178" width="245" height="510" class="card2"/>
+  <text x="122" y="230" class="label">Chưa mở intake</text>
+  <text x="122" y="274" class="small">Không có form đăng ký.</text>
+  <text x="122" y="302" class="small">Không thu tài khoản, mật khẩu,</text>
+  <text x="122" y="330" class="small">số điện thoại hoặc định danh.</text>
+  <circle cx="215" cy="468" r="74" fill="none" stroke="#f6ad55" stroke-width="5"/>
+  <path d="M178 468 L252 468" class="dash"/>
+  <text x="122" y="622" class="tiny">Người chơi chỉ đọc hướng dẫn chuẩn bị,</text>
+  <text x="122" y="646" class="tiny">không gửi dữ liệu nhạy cảm.</text>
 
-  <text x="72" y="854" class="tiny">Linh Giới Online — planning/reference SVG, non-production art, generated for execution governance.</text>
+  <rect x="378" y="178" width="245" height="510" class="card"/>
+  <text x="412" y="230" class="label">Checklist chuẩn bị</text>
+  <text x="412" y="274" class="small">Đọc trạng thái phát hành,</text>
+  <text x="412" y="302" class="small">kênh tải chính thức, hỗ trợ</text>
+  <text x="412" y="330" class="small">và giới hạn đã biết.</text>
+  <rect x="453" y="402" width="92" height="116" rx="14" fill="#132033" stroke="#d7b36a" stroke-width="4"/>
+  <path d="M474 432 h50 M474 466 h50 M474 500 h50" class="line"/>
+  <path d="M455 432 l9 9 16 -20 M455 466 l9 9 16 -20 M455 500 l9 9 16 -20" stroke="#68d391" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <text x="412" y="622" class="tiny">Mục tiêu là chuẩn bị cách quan sát,</text>
+  <text x="412" y="646" class="tiny">không hứa suất tester.</text>
+
+  <rect x="668" y="178" width="245" height="510" class="card"/>
+  <text x="702" y="230" class="label">Báo cáo thiết bị</text>
+  <text x="702" y="274" class="small">Chỉ mô tả thiết bị đủ để</text>
+  <text x="702" y="302" class="small">tái hiện lỗi: máy, OS,</text>
+  <text x="702" y="330" class="small">trình duyệt, kích thước màn.</text>
+  <rect x="736" y="408" width="110" height="76" rx="10" fill="#132033" stroke="#4fd1c5" stroke-width="4"/>
+  <path d="M765 506 h52" class="line"/>
+  <text x="702" y="622" class="tiny">Không cần tên thật, email cá nhân</text>
+  <text x="702" y="646" class="tiny">hoặc thông tin đăng nhập.</text>
+
+  <rect x="958" y="178" width="245" height="510" class="card3"/>
+  <text x="992" y="230" class="label">Feedback an toàn</text>
+  <text x="992" y="274" class="small">Tóm tắt vấn đề, bước tái hiện,</text>
+  <text x="992" y="302" class="small">kết quả mong đợi và kết quả</text>
+  <text x="992" y="330" class="small">thực tế quan sát được.</text>
+  <rect x="1036" y="406" width="88" height="118" rx="12" fill="#132033" stroke="#68d391" stroke-width="4"/>
+  <path d="M1058 438 h44 M1058 468 h44 M1058 498 h44" class="line"/>
+  <text x="992" y="622" class="tiny">Gửi bằng kênh owner công bố sau,</text>
+  <text x="992" y="646" class="tiny">không dùng form giả.</text>
+
+  <rect x="1248" y="178" width="130" height="510" class="muted"/>
+  <text x="1271" y="230" class="label">Giới hạn</text>
+  <path d="M1314 356 l58 104 h-116 z" fill="#f6ad55" opacity=".9"/>
+  <text x="1280" y="548" class="tiny">Thiếu tính năng,</text>
+  <text x="1270" y="572" class="tiny">build thử nghiệm,</text>
+  <text x="1268" y="596" class="tiny">chưa có SLA.</text>
+
+  <line x1="335" y1="438" x2="374" y2="438" class="dash"/>
+  <line x1="625" y1="438" x2="664" y2="438" class="dash"/>
+  <line x1="915" y1="438" x2="954" y2="438" class="dash"/>
+  <line x1="1205" y1="438" x2="1244" y2="438" class="dash"/>
+
+  <rect x="92" y="740" width="1254" height="72" rx="22" fill="#0f1a2b" stroke="#d7b36a" stroke-width="1.5" opacity=".92"/>
+  <text x="122" y="784" class="small">Luồng đúng: đọc readiness → xem checklist → ghi feedback an toàn → owner mở kênh chính thức sau. Không claim live intake, slot test, backend thu thập dữ liệu hoặc dữ liệu production.</text>
+  <text x="72" y="854" class="tiny">Linh Giới Online — board tham chiếu FE cho /release/tester-pack, chỉ dùng demo tĩnh, chưa có backend intake.</text>
 </svg>

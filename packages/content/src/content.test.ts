@@ -123,9 +123,9 @@ it("keeps WEB v1.19 release readiness hub bounded", () => {
 it("keeps WEB v1.20 closed tester information pack bounded", () => {
   expect(closedTesterChecklist.length).toBeGreaterThanOrEqual(4);
   expect(closedTesterChecklist.map((item) => item.whereToRead)).toContain("/release/tester-pack");
-  expect(closedTesterChecklist.every((item) => item.nonClaim.includes("No "))).toBe(true);
+  expect(closedTesterChecklist.every((item) => item.nonClaim.includes("Không "))).toBe(true);
   expect(safeFeedbackTemplates.every((item) => item.privacyBoundary.length > 0)).toBe(true);
-  expect(knownLimitationNotes.every((item) => item.mustNotClaim.includes("No "))).toBe(true);
+  expect(knownLimitationNotes.every((item) => item.mustNotClaim.includes("Không "))).toBe(true);
   expect(deviceReportTemplateFields.every((item) => item.doNotCollect.length > 0)).toBe(true);
 });
 

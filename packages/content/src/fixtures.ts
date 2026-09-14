@@ -1860,7 +1860,7 @@ export const playerSafetyPrinciples: PlayerSafetyPrinciple[] = [
     title: "Báo lỗi không gửi dữ liệu nhạy cảm",
     whyItMatters: "Người chơi mới thường muốn gửi ảnh/log ngay, nhưng web chưa có kênh intake, ticket backend hoặc privacy workflow chính thức.",
     playerCopy: "Khi góp ý, chỉ mô tả route, thiết bị, bước tái hiện và ảnh/log đã che thông tin riêng tư.",
-    notClaimed: "No secure ticket inbox, no account lookup, no moderation dashboard."
+    notClaimed: "Không có inbox ticket bảo mật, không tra cứu tài khoản, không có moderation dashboard."
   },
   {
     id: "closed-test-boundary",
@@ -1998,7 +1998,7 @@ export const routeReadabilityChecks: RouteReadabilityCheck[] = [
     headingPromise: "Báo lỗi và góp ý mà không gửi dữ liệu nhạy cảm.",
     firstAction: "Đọc privacy boundary trước khi chuẩn bị ảnh/log.",
     scanAid: "Issue paths nối lỗi phổ biến tới route đọc an toàn.",
-    boundary: "No secure ticket inbox, no account lookup, no moderation dashboard."
+    boundary: "Không có inbox ticket bảo mật, không tra cứu tài khoản, không có moderation dashboard."
   },
   {
     route: "/game/loop",
@@ -2553,7 +2553,7 @@ export const testerExpectationCopy: TesterExpectationCopy[] = [
     supportBoundary: "No live ticket backend or production SLA."
   },
   {
-    topic: "Gameplay scope",
+    topic: "Phạm vi gameplay",
     playerExpectation: "Hiểu closed test là kiểm tra stage nhỏ, không phải cam kết combat/economy/social đầy đủ.",
     copyOnWeb: "Tester copy phải nêu rõ scope và known limitations cạnh release stage.",
     supportBoundary: "No reward/economy promise, no live event reward, no PvP/boss claim."
@@ -2593,31 +2593,31 @@ export const releaseSurfaceAlignment: ReleaseSurfaceAlignment[] = [
 
 
 export const closedTesterChecklist: ClosedTesterChecklistItem[] = [
-  { id: "read-stage-first", title: "Đọc stage trước khi kỳ vọng quyền test", testerQuestion: "Tôi có đang được mời test chưa?", safePreparation: "Đọc /release/readiness và /release/tester-pack để hiểu hiện mới là thông tin chuẩn bị, chưa phải lời mời hoặc form đăng ký.", whereToRead: "/release/readiness", nonClaim: "No live tester intake, no tester slot guarantee, no entitlement automation." },
-  { id: "prepare-device-context", title: "Chuẩn bị bối cảnh thiết bị an toàn", testerQuestion: "Nếu sau này có kênh chính thức, tôi nên chuẩn bị thông tin gì?", safePreparation: "Ghi thiết bị, OS, mạng, độ phân giải, route/screen và bước tái hiện theo mẫu; không gửi secrets hoặc dữ liệu riêng tư.", whereToRead: "/release/tester-pack", nonClaim: "No device certification, no performance guarantee, no data collection backend." },
-  { id: "report-small-scope", title: "Báo lỗi theo phạm vi stage nhỏ", testerQuestion: "Feedback nên tập trung vào đâu?", safePreparation: "Tập trung vào download trust, status clarity, support wording, beginner journey và known limitations; không kỳ vọng combat/economy/social đầy đủ.", whereToRead: "/game/loop", nonClaim: "No full MMO claim, no combat reward promise, no live event reward." },
-  { id: "wait-for-official-channel", title: "Chờ kênh owner-approved", testerQuestion: "Tôi gửi feedback ở đâu?", safePreparation: "Hiện chỉ chuẩn bị nội dung feedback. Chỉ gửi khi website hoặc owner công bố kênh chính thức có privacy boundary rõ ràng.", whereToRead: "/support/safety", nonClaim: "No secure ticket inbox, no account lookup, no moderation dashboard." }
+  { id: "read-stage-first", title: "Đọc stage trước khi kỳ vọng quyền test", testerQuestion: "Tôi có đang được mời test chưa?", safePreparation: "Đọc /release/readiness và /release/tester-pack để hiểu hiện mới là thông tin chuẩn bị, chưa phải lời mời hoặc form đăng ký.", whereToRead: "/release/readiness", nonClaim: "Không mở intake tester, không bảo đảm slot, không tự động cấp quyền." },
+  { id: "prepare-device-context", title: "Chuẩn bị bối cảnh thiết bị an toàn", testerQuestion: "Nếu sau này có kênh chính thức, tôi nên chuẩn bị thông tin gì?", safePreparation: "Ghi thiết bị, OS, mạng, độ phân giải, route/screen và bước tái hiện theo mẫu; không gửi secrets hoặc dữ liệu riêng tư.", whereToRead: "/release/tester-pack", nonClaim: "Không chứng nhận thiết bị, không bảo đảm hiệu năng, không có backend thu dữ liệu." },
+  { id: "report-small-scope", title: "Báo lỗi theo phạm vi stage nhỏ", testerQuestion: "Feedback nên tập trung vào đâu?", safePreparation: "Tập trung vào download trust, status clarity, support wording, beginner journey và known limitations; không kỳ vọng combat/economy/social đầy đủ.", whereToRead: "/game/loop", nonClaim: "Không claim MMO đầy đủ, không hứa thưởng combat, không hứa thưởng live event." },
+  { id: "wait-for-official-channel", title: "Chờ kênh owner-approved", testerQuestion: "Tôi gửi feedback ở đâu?", safePreparation: "Hiện chỉ chuẩn bị nội dung feedback. Chỉ gửi khi website hoặc owner công bố kênh chính thức có privacy boundary rõ ràng.", whereToRead: "/support/safety", nonClaim: "Không có inbox ticket bảo mật, không tra cứu tài khoản, không có moderation dashboard." }
 ];
 
 export const safeFeedbackTemplates: SafeFeedbackTemplate[] = [
-  { field: "Tóm tắt ngắn", guidance: "Mô tả vấn đề trong một câu: route hoặc màn hình nào, chuyện gì xảy ra, mức độ ảnh hưởng.", example: "Trên trang Download Trust, tôi không hiểu khác nhau giữa checksum và owner approval.", privacyBoundary: "Không ghi tên tài khoản, email, token, password hoặc dữ liệu thanh toán." },
-  { field: "Bước tái hiện", guidance: "Ghi 3-5 bước rõ ràng để reviewer đi lại đúng hành trình.", example: "Mở /start → bấm Release readiness → đọc Download Trust → quay về Support Safety.", privacyBoundary: "Không đính kèm log thô chứa path riêng tư hoặc thông tin nhận diện cá nhân." },
-  { field: "Kỳ vọng / thực tế", guidance: "Tách expected và actual để tránh biến feedback thành góp ý mơ hồ.", example: "Expected: biết chưa có link tải. Actual: CTA khiến tôi tưởng sắp có build public.", privacyBoundary: "Không yêu cầu người chơi chứng minh quyền truy cập hoặc chia sẻ entitlement." },
-  { field: "Severity gợi ý", guidance: "Dùng mức nhẹ: blocker, confusing, typo, visual, performance-feel hoặc accessibility-feel.", example: "confusing — wording làm tôi tưởng đây là open registration.", privacyBoundary: "Không thu thập medical/accessibility profile cá nhân; chỉ nói cảm nhận đọc/truy cập ở mức tự nguyện." }
+  { field: "Tóm tắt", guidance: "Mô tả vấn đề trong một câu: route hoặc màn hình nào, chuyện gì xảy ra, mức độ ảnh hưởng.", example: "Trên trang Download Trust, tôi không hiểu khác nhau giữa checksum và owner approval.", privacyBoundary: "Không ghi tên tài khoản, email, token, password hoặc dữ liệu thanh toán." },
+  { field: "Bước tái hiện", guidance: "Ghi 3-5 bước rõ ràng để reviewer đi lại đúng hành trình.", example: "Mở /start → bấm Sẵn sàng phát hành → đọc Tin cậy tải game → quay về Hỗ trợ an toàn.", privacyBoundary: "Không đính kèm log thô chứa path riêng tư hoặc thông tin nhận diện cá nhân." },
+  { field: "Kỳ vọng / thực tế", guidance: "Tách expected và actual để tránh biến feedback thành góp ý mơ hồ.", example: "Kỳ vọng: biết chưa có link tải. Thực tế: CTA khiến tôi tưởng sắp có build public.", privacyBoundary: "Không yêu cầu người chơi chứng minh quyền truy cập hoặc chia sẻ entitlement." },
+  { field: "Mức ảnh hưởng", guidance: "Dùng mức nhẹ: chặn luồng, gây hiểu nhầm, lỗi chữ, lỗi hiển thị, cảm giác chậm hoặc khó đọc.", example: "Gây hiểu nhầm — wording làm tôi tưởng đây là đăng ký mở.", privacyBoundary: "Không thu thập medical/accessibility profile cá nhân; chỉ nói cảm nhận đọc/truy cập ở mức tự nguyện." }
 ];
 
 export const knownLimitationNotes: KnownLimitationNote[] = [
-  { area: "Public build", playerMessage: "Chưa có public game build artifact được duyệt, nên mọi download CTA vẫn là trạng thái giải thích.", ownerNote: "Chỉ đổi copy khi artifact, SHA256, manifest, limitation note và owner sign-off tồn tại.", mustNotClaim: "No public build, no open beta, no fake download CTA." },
-  { area: "Closed tester access", playerMessage: "Closed tester information pack không phải form đăng ký, invite hoặc bảo đảm slot test.", ownerNote: "Cần kênh intake chính thức, privacy boundary và triage owner trước khi nhận thông tin tester.", mustNotClaim: "No live tester intake, no tester slot guarantee, no entitlement automation." },
-  { area: "Support and safety", playerMessage: "Support hiện là hướng dẫn an toàn; chưa có ticket backend, account lookup hoặc secure inbox.", ownerNote: "Không yêu cầu secrets hoặc dữ liệu nhạy cảm qua public copy.", mustNotClaim: "No secure ticket inbox, no account recovery, no production SLA." },
-  { area: "Gameplay scope", playerMessage: "Thông tin world/gameplay loop giải thích Spirit Gate và Training Stone, chưa hứa combat/economy/live event rewards.", ownerNote: "Giữ scope wording cạnh guide/tester pages để tránh reviewer hiểu nhầm.", mustNotClaim: "No combat damage, no loot, no reward/economy promise." }
+  { area: "Bản build công khai", playerMessage: "Chưa có public game build artifact được duyệt, nên mọi download CTA vẫn là trạng thái giải thích.", ownerNote: "Chỉ đổi copy khi artifact, SHA256, manifest, limitation note và owner sign-off tồn tại.", mustNotClaim: "Không có public build, không open beta, không đặt CTA tải giả." },
+  { area: "Quyền tester kín", playerMessage: "Gói tester cộng đồng không phải form đăng ký, lời mời hoặc bảo đảm slot test.", ownerNote: "Cần kênh intake chính thức, privacy boundary và triage owner trước khi nhận thông tin tester.", mustNotClaim: "Không mở intake tester, không bảo đảm slot, không tự động cấp quyền." },
+  { area: "Hỗ trợ và an toàn", playerMessage: "Hỗ trợ hiện là hướng dẫn an toàn; chưa có ticket backend, tra cứu tài khoản hoặc inbox bảo mật.", ownerNote: "Không yêu cầu secrets hoặc dữ liệu nhạy cảm qua public copy.", mustNotClaim: "Không có ticket inbox bảo mật, không phục hồi tài khoản, không có SLA production." },
+  { area: "Phạm vi gameplay", playerMessage: "Thông tin vòng chơi giải thích Cổng Linh Khí và Đá Luyện, chưa hứa combat/kinh tế/thưởng live event.", ownerNote: "Giữ scope wording cạnh guide/tester pages để tránh reviewer hiểu nhầm.", mustNotClaim: "Không có sát thương combat, không loot, không hứa thưởng/kinh tế." }
 ];
 
 export const deviceReportTemplateFields: DeviceReportTemplateField[] = [
-  { field: "Device class", whyItMatters: "Giúp owner đọc feedback theo nhóm desktop/laptop/tablet/mobile mà không cần nhận dữ liệu định danh.", safeFormat: "Laptop Windows 11, MacBook macOS, Android phone, iPhone, iPad hoặc tablet Android.", doNotCollect: "Không thu số serial, IMEI, phone number, email riêng tư hoặc account ID." },
-  { field: "OS / browser / screen", whyItMatters: "Giúp tái hiện lỗi layout, focus, readability hoặc perceived load.", safeFormat: "macOS + Chrome, Windows + Edge, Android + Chrome, iOS + Safari; độ phân giải gần đúng nếu biết.", doNotCollect: "Không thu browser profile, cookie, token, extension list hoặc lịch sử duyệt web." },
-  { field: "Network context", whyItMatters: "Giúp phân biệt wording/perceived load với lỗi mạng thật khi tải trang static.", safeFormat: "Wi-Fi nhà, 4G/5G, mạng công ty, chậm/ổn định/không ổn định.", doNotCollect: "Không thu IP public, địa chỉ nhà, vị trí chính xác hoặc thông tin nhà mạng nhạy cảm." },
-  { field: "Screenshot/log safety", whyItMatters: "Ảnh minh họa giúp debug nhưng phải che thông tin riêng tư trước khi gửi qua kênh chính thức.", safeFormat: "Ảnh đã che tên/email/token; log rút gọn chỉ chứa lỗi liên quan route/screen.", doNotCollect: "Không gửi password, token, payment data, private chat hoặc dữ liệu cá nhân nhạy cảm." }
+  { field: "Loại thiết bị", whyItMatters: "Giúp owner đọc feedback theo nhóm desktop/laptop/tablet/mobile mà không cần nhận dữ liệu định danh.", safeFormat: "Laptop Windows 11, MacBook macOS, điện thoại Android, iPhone, iPad hoặc tablet Android.", doNotCollect: "Không thu số serial, IMEI, phone number, email riêng tư hoặc account ID." },
+  { field: "OS / trình duyệt / màn hình", whyItMatters: "Giúp tái hiện lỗi layout, focus, readability hoặc perceived load.", safeFormat: "macOS + Chrome, Windows + Edge, Android + Chrome, iOS + Safari; độ phân giải gần đúng nếu biết.", doNotCollect: "Không thu browser profile, cookie, token, extension list hoặc lịch sử duyệt web." },
+  { field: "Bối cảnh mạng", whyItMatters: "Giúp phân biệt wording/perceived load với lỗi mạng thật khi tải trang static.", safeFormat: "Wi-Fi nhà, 4G/5G, mạng công ty, chậm/ổn định/không ổn định.", doNotCollect: "Không thu IP public, địa chỉ nhà, vị trí chính xác hoặc thông tin nhà mạng nhạy cảm." },
+  { field: "An toàn ảnh/log", whyItMatters: "Ảnh minh họa giúp debug nhưng phải che thông tin riêng tư trước khi gửi qua kênh chính thức.", safeFormat: "Ảnh đã che tên/email/token; log rút gọn chỉ chứa lỗi liên quan route/screen.", doNotCollect: "Không gửi password, token, payment data, private chat hoặc dữ liệu cá nhân nhạy cảm." }
 ];
 
 

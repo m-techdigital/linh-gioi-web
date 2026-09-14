@@ -5,7 +5,7 @@ const web = process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
 const routes = [
   { path: "/release", title: "Hành trình phát hành" },
   { path: "/release/readiness", title: "Sẵn sàng phát hành" },
-  { path: "/release/tester-pack", title: "Closed tester information: chuẩn bị đúng, không gửi nhầm dữ liệu" },
+  { path: "/release/tester-pack", title: "Gói tester cộng đồng" },
 ];
 
 type HeadingMetrics = {

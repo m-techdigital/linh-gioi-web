@@ -44,11 +44,11 @@ async function collectTesterPackMetrics(page): Promise<TesterPackMetrics> {
 }
 
 test.describe("tester pack design target density", () => {
-  test("/release/tester-pack attaches Public Tester Pack target and keeps tester guidance readable", async ({ page, isMobile }) => {
+  test("/release/tester-pack attaches Gói tester công khai target and keeps tester guidance readable", async ({ page, isMobile }) => {
     await page.goto(`${web}/release/tester-pack`);
-    await expect(page.getByRole("region", { name: /Design target reference.*Public Tester Pack/i })).toBeVisible();
+    await expect(page.getByText("Thiết kế chi tiết gói tester")).toBeVisible();
     const metrics = await collectTesterPackMetrics(page);
-    expect(metrics.designTargetScope, "Public Tester Pack target scope").toContain("Public Tester Pack");
+    expect(metrics.designTargetScope, "Gói tester công khai target scope").toContain("Gói tester công khai");
     expect(metrics.designTargetHref, "tester pack design target href").toContain("tester-pack-detailed-design-target-v1129.png");
     expect(metrics.overflow, "tester pack horizontal overflow").toBeLessThanOrEqual(0);
     expect(metrics.h1Size, "tester pack h1 follows target scale").toBeLessThanOrEqual(isMobile ? 54 : 60);

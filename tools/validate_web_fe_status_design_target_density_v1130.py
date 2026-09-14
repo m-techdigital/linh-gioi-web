@@ -36,7 +36,7 @@ def check_tests_docs() -> None:
     if page.find("<ReleaseReadinessHubCta />") < page.find("<StatusTrustBoard />"):
         fail("apps/web/src/app/status/page.tsx: ReleaseReadinessHubCta should stay after status proof flow")
     require_text("apps/web/src/app/globals.css", ["WEB v1.130 status detailed design target density", ".lgo-statuspage-stack", ".lgo-page-header", ".lgo-status-design-board", ".lgo-status-trust"])
-    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_STATUS_TARGET", "Status detailed design target", "status-detailed-design-target-v1130.png", "Public Status", "pathname === \"/status\""])
+    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_STATUS_TARGET", "Thiết kế chi tiết trạng thái", "status-detailed-design-target-v1130.png", "Public Status", "pathname === \"/status\""])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Status", "status-detailed-design-target-v1130.png", "WEB-FE-STATUS-DETAILED-DESIGN-TARGET-v1.130.png", "Design Target First"])
     registry = read("docs/design/DESIGN-TARGET-REGISTRY.md")
     for line in registry.splitlines():

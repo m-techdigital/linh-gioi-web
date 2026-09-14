@@ -30,13 +30,16 @@ def check_target() -> None:
     if all((ROOT / rel).is_file() for rel in targets) and (ROOT / targets[0]).read_bytes() != (ROOT / targets[1]).read_bytes(): fail("tester pack detailed target public/docs copies differ")
 def check_tests_docs() -> None:
     for rel in ["tests/e2e/fe-tester-pack-design-target-density-v1129.spec.ts", "docs/execution/specs/WEB-FE-TESTER-PACK-DESIGN-TARGET-DENSITY-v1.129.md", "LGO-WEB-FE-TESTER-PACK-DESIGN-TARGET-DENSITY-REPORT-v1.129.md", "HANDOFF-LGO-WEB-FE-TESTER-PACK-DESIGN-TARGET-DENSITY-v1.129.md"]: require_file(rel)
-    require_text("tests/e2e/fe-tester-pack-design-target-density-v1129.spec.ts", ["tester pack design target density", "Public Tester Pack", "tester-pack-detailed-design-target-v1129.png", "desktop tester pack board enters first fold", "desktop tester checklist follows target sequence", "desktop safe feedback stays near tester guidance flow", "tester pack h1 follows target scale"])
+    require_text("tests/e2e/fe-tester-pack-design-target-density-v1129.spec.ts", ["tester pack design target density", "Gói tester công khai", "tester-pack-detailed-design-target-v1129.png", "desktop tester pack board enters first fold", "desktop tester checklist follows target sequence", "desktop safe feedback stays near tester guidance flow", "tester pack h1 follows target scale"])
     require_text("apps/web/src/app/release/tester-pack/page.tsx", ["lgo-testerpackpage-stack", "lgo-closed-tester-hero-card", "lgo-closed-tester-design-board", "ClosedTesterChecklistBoard", "SafeFeedbackTemplateBoard"])
     page = read("apps/web/src/app/release/tester-pack/page.tsx")
     if page.find("<SafeFeedbackTemplateBoard />") > page.find("<ContentIaStartCta />"):
         fail("apps/web/src/app/release/tester-pack/page.tsx: SafeFeedbackTemplateBoard should stay in the early tester guidance flow")
-    require_text("apps/web/src/app/globals.css", ["WEB v1.129 tester pack detailed design target density", ".lgo-testerpackpage-stack", ".lgo-closed-tester-hero-card", ".lgo-closed-tester-design-board", ".lgo-closed-tester-checklist-board", ".lgo-safe-feedback-template-board"])
-    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_TESTER_PACK_TARGET", "Tester pack detailed design target", "tester-pack-detailed-design-target-v1129.png", "Public Tester Pack", "pathname === \"/release/tester-pack\""])
+    require_text("packages/ui/src/service-layout.css", ["lgo-service-compact-proof-page", "lgo-service-proof-board", "lgo-service-proof-card-grid", "lgo-service-proof-list", "lgo-service-proof-item"])
+    require_text("apps/web/src/app/release/tester-pack/page.tsx", ["lgo-service-compact-proof-page", "lgo-service-proof-board", "lgo-service-status-actions"])
+    if "WEB v1.129 tester pack detailed design target density" in read("apps/web/src/app/globals.css"):
+        fail("apps/web/src/app/globals.css: tester pack v1.129 route CSS should be consolidated into shared service layout")
+    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_TESTER_PACK_TARGET", "Thiết kế chi tiết gói tester", "tester-pack-detailed-design-target-v1129.png", "Gói tester công khai", "pathname === \"/release/tester-pack\""])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Tester Pack", "tester-pack-detailed-design-target-v1129.png", "WEB-FE-TESTER-PACK-DETAILED-DESIGN-TARGET-v1.129.png", "Design Target First"])
     registry = read("docs/design/DESIGN-TARGET-REGISTRY.md")
     for line in registry.splitlines():

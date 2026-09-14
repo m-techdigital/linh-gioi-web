@@ -11,42 +11,42 @@ import { ReleaseReadinessHubCta, TesterExpectationCopyBoard } from "../../../com
 import { RouteContinuityCta } from "../../../components/PublicRouteContinuitySections";
 import { WebAppShell } from "../../../components/WebAppShell";
 
-export const metadata = { title: "Closed tester information pack" };
+export const metadata = { title: "Gói tester cộng đồng" };
 
 export default function ClosedTesterInformationPackPage() {
   return (
     <WebAppShell>
-      <Stack className="lgo-player-facing-stack lgo-testerpackpage-stack">
+      <Stack className="lgo-player-facing-stack lgo-service-compact-proof-page lgo-testerpackpage-stack">
         <GameCard className="lgo-detail-hero-card lgo-closed-tester-hero-card">
-          <StatusBadge tone="gold">WEB v1.20 closed tester information pack</StatusBadge>
-          <span className="lgo-card-kicker">Tester checklist · safe feedback · known limitations · device report template · No live intake</span>
-          <h1>Closed tester information: chuẩn bị đúng, không gửi nhầm dữ liệu</h1>
-          <p className="lgo-hero-lead">Trang này giải thích người chơi nên chuẩn bị gì nếu sau này có closed test, nhưng không mở form đăng ký, không bảo đảm slot test và không thu thập thông tin nhạy cảm.</p>
-          <p>Mục tiêu là làm web hữu ích trước release: người chơi hiểu stage hiện tại, biết cách ghi feedback an toàn, biết known limitations và quay lại Download/Status/Support đúng ngữ cảnh.</p>
-          <div className="lgo-product-first-actions">
-            <LinkButton href="/release/readiness" tone="gold">Release readiness</LinkButton>
-            <LinkButton href="/download/trust" tone="spirit">Download trust</LinkButton>
-            <LinkButton href="/support/safety" tone="jade">Safety support</LinkButton>
+          <StatusBadge tone="gold">WEB v1.144 gói tester cộng đồng</StatusBadge>
+          <span className="lgo-card-kicker">Checklist · feedback an toàn · giới hạn rõ ràng · chưa mở intake</span>
+          <h1>Gói tester cộng đồng</h1>
+          <p className="lgo-hero-lead">Trang này giúp người chơi chuẩn bị cho closed test sau này: đọc checklist, biết cách ghi feedback an toàn, nắm giới hạn hiện tại và không gửi nhầm dữ liệu nhạy cảm.</p>
+          <p>Hiện chưa có form đăng ký, chưa bảo đảm slot tester và chưa có backend thu nhận feedback. Khi owner mở kênh chính thức, page này là bộ hướng dẫn để gửi đúng phạm vi.</p>
+          <div className="lgo-product-first-actions lgo-service-status-actions" aria-label="Trạng thái gói tester">
+            <span className="lgo-service-status-seal">Chưa mở intake<small>Không có form đăng ký</small></span>
+            <span className="lgo-service-status-seal">Không hứa slot<small>Không tự động cấp quyền</small></span>
+            <span className="lgo-service-status-seal">Feedback an toàn<small>Không gửi dữ liệu nhạy cảm</small></span>
           </div>
         </GameCard>
-        <figure className="lgo-closed-tester-design-board lgo-panel" aria-label="Closed tester information production reference art">
-          <img src="/game-art/design-boards/closed-tester-production-board.svg" alt="Closed tester information production board" loading="eager" />
+        <figure className="lgo-closed-tester-design-board lgo-service-proof-board lgo-panel" aria-label="Board gói tester cộng đồng">
+          <img src="/game-art/design-boards/closed-tester-production-board.svg" alt="Board gói tester cộng đồng" loading="eager" />
           <figcaption>
-            <StatusBadge tone="gold">Game reference art</StatusBadge>
+            <StatusBadge tone="gold">Board tham chiếu</StatusBadge>
             <strong>Tester pack là checklist an toàn trước intake, không phải form đăng ký.</strong>
-            <span>Board này dùng visual thật từ LinhGioiOnline để nối device report, known limitations và safe feedback mà không claim live intake, guaranteed tester slot hoặc backend thu thập dữ liệu.</span>
+            <span>Board này nối báo cáo thiết bị, giới hạn đã biết và feedback an toàn mà không claim intake thật, slot tester hoặc backend thu thập dữ liệu.</span>
           </figcaption>
         </figure>
-        <SectionHeading eyebrow="Tester guidance before intake" title="Static guidance trước, kênh official sau">v1.20 tiếp tục xây web thật bằng cách biến closed-test wording thành checklist và template an toàn, không phải backend hoặc funnel giả.</SectionHeading>
+        <SectionHeading eyebrow="Hướng dẫn tester trước intake" title="Chuẩn bị static trước, kênh chính thức sau">v1.144 biến tester pack thành luồng đọc gọn: checklist chuẩn bị, mẫu feedback an toàn, giới hạn đã biết và mẫu báo cáo thiết bị.</SectionHeading>
         <ClosedTesterChecklistBoard />
         <SafeFeedbackTemplateBoard />
+        <KnownLimitationNotesBoard />
+        <DeviceReportTemplateBoard />
         <ContentIaStartCta />
         <FaqHelpfulnessCta />
         <RouteContinuityCta />
         <FaqDiscoveryGroupBoard />
         <IssueCategoryRouteBoard />
-        <KnownLimitationNotesBoard />
-        <DeviceReportTemplateBoard />
         <TesterExpectationCopyBoard />
         <ClosedTesterInformationPackCta />
         <ReleaseReadinessHubCta />

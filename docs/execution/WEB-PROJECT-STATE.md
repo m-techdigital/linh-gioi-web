@@ -1,3 +1,16 @@
+Current phase: WEB-FE-TESTER-PACK-REAL-UI-LAYOUT-v1.144 WEB_CLOSED.
+
+Current decision: v1.144 closed the active `/release/tester-pack` page slice as a real browser UI/UX Layout task. `/release/tester-pack` now uses a Vietnamese tester-pack target, Vietnamese closed tester board, compact shared service/proof layout, and Base First proof list/card density from `packages/ui/src/service-layout.css`. Entire program is NOT production-complete.
+
+- v1.144 corrected only the current tester-pack design target because the existing target was English-heavy and blocked comparison.
+- v1.144 replaced the old English closed tester workflow SVG with a Vietnamese Gói tester cộng đồng board.
+- v1.144 moved tester-pack density away from page-local v1.129 CSS in `apps/web/src/app/globals.css` and into reusable `packages/ui/src/service-layout.css` proof list/item classes.
+- v1.144 updated `/release/tester-pack` first-flow: compact Gói tester cộng đồng hero → board → tester guidance → checklist → feedback an toàn → giới hạn đã biết → mẫu báo cáo thiết bị.
+- v1.144 evidence: RED browser metrics showed desktop hero 409.656px, mobile hero 859.703px and first-flow English leaks; GREEN browser metrics after fix show desktop overflow 0, h1 34.816px, hero bottom 471.797px, board top 467.156px, board bottom 658.906px, checklist top 845.688px; mobile overflow 0 and h1 46.8px.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.145. Select `/status` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-RELEASE-READINESS-REAL-UI-LAYOUT-v1.143 WEB_CLOSED.
 
 Current decision: v1.143 closed the active `/release/readiness` page slice as a real browser UI/UX Layout task. `/release/readiness` now prioritizes rendered layout over design iteration: compact Sẵn sàng phát hành hero, blocked-readiness seal, readiness board, readiness hub and owner gates. Entire program is NOT production-complete.

@@ -64,31 +64,31 @@ const PUBLIC_RELEASE_READINESS_TARGET = {
 };
 
 const PUBLIC_TESTER_PACK_TARGET = {
-  label: "Tester pack detailed design target",
+  label: "Thiết kế chi tiết gói tester",
   href: "/design-reference/tester-pack-detailed-design-target-v1129.png",
-  scope: "Public Tester Pack"
+  scope: "Gói tester công khai"
 };
 
 const PUBLIC_STATUS_TARGET = {
-  label: "Status detailed design target",
+  label: "Thiết kế chi tiết trạng thái",
   href: "/design-reference/status-detailed-design-target-v1130.png",
   scope: "Public Status"
 };
 
 const PUBLIC_SUPPORT_TARGET = {
-  label: "Support detailed design target",
+  label: "Thiết kế chi tiết hỗ trợ",
   href: "/design-reference/support-detailed-design-target-v1131.png",
   scope: "Public Support"
 };
 
 const PUBLIC_SUPPORT_HELP_TARGET = {
-  label: "Support help detailed design target",
+  label: "Thiết kế chi tiết trung tâm trợ giúp",
   href: "/design-reference/support-help-detailed-design-target-v1132.png",
   scope: "Public Support Help"
 };
 
 const PUBLIC_SUPPORT_SAFETY_TARGET = {
-  label: "Support safety detailed design target",
+  label: "Thiết kế chi tiết hỗ trợ an toàn",
   href: "/design-reference/support-safety-detailed-design-target-v1133.png",
   scope: "Public Support Safety"
 };

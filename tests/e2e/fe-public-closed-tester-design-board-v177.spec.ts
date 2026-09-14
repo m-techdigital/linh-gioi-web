@@ -22,7 +22,7 @@ async function collectClosedTesterBoardMetrics(page: Page): Promise<ClosedTester
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const image = document.querySelector<HTMLImageElement>('img[alt="Closed tester information production board"]');
+    const image = document.querySelector<HTMLImageElement>('img[alt="Board gói tester cộng đồng"]');
     const caption = image?.closest("figure")?.querySelector("figcaption");
     return {
       pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -41,8 +41,8 @@ async function collectClosedTesterBoardMetrics(page: Page): Promise<ClosedTester
 test.describe("public closed tester information design board", () => {
   test("/release/tester-pack renders the production-board visual without mobile overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/release/tester-pack`);
-    await expect(page.getByRole("heading", { name: "Closed tester information: chuẩn bị đúng, không gửi nhầm dữ liệu" })).toBeVisible();
-    await expect(page.getByRole("img", { name: "Closed tester information production board" })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1, name: "Gói tester cộng đồng", exact: true })).toBeVisible();
+    await expect(page.getByRole("img", { name: "Board gói tester cộng đồng" })).toBeVisible();
 
     const metrics = await collectClosedTesterBoardMetrics(page);
     expect(metrics.board, "closed tester board metrics").not.toBeNull();
