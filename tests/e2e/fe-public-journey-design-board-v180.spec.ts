@@ -22,7 +22,7 @@ async function collectJourneyBoardMetrics(page: Page): Promise<JourneyBoardMetri
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const image = document.querySelector<HTMLImageElement>('img[alt="Journey session route flow board"]');
+    const image = document.querySelector<HTMLImageElement>('img[alt="Bảng tuyến hành trình một phiên chơi"]');
     const caption = image?.closest("figure")?.querySelector("figcaption");
     return {
       pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -42,7 +42,7 @@ test.describe("public journey design board", () => {
   test("/journey renders the route-flow visual without mobile overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/journey`);
     await expect(page.getByRole("heading", { name: "20 phút không chỉ để đánh quái" })).toBeVisible();
-    await expect(page.getByRole("img", { name: "Journey session route flow board" })).toBeVisible();
+    await expect(page.getByRole("img", { name: "Bảng tuyến hành trình một phiên chơi" })).toBeVisible();
 
     const metrics = await collectJourneyBoardMetrics(page);
     expect(metrics.board, "journey board metrics").not.toBeNull();

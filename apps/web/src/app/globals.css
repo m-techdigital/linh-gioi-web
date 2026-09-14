@@ -2948,71 +2948,6 @@ h3 {
 }
 
 
-/* WEB v1.123 journey detailed design target density */
-@media (min-width: 981px) {
-  .lgo-journeypage-stack {
-    gap: clamp(1.1rem, 2.4vw, 2.2rem);
-  }
-
-  .lgo-journeypage-stack .lgo-journey-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
-    gap: clamp(1.5rem, 3vw, 2.7rem);
-    padding: clamp(1.45rem, 3vw, 2.55rem);
-  }
-
-  .lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy h1 {
-    max-width: 13ch;
-    font-size: clamp(3.3rem, 5.2vw, 5rem);
-    line-height: .94;
-  }
-
-  .lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy p {
-    max-width: 64ch;
-    font-size: clamp(.95rem, 1.05vw, 1.07rem);
-    line-height: 1.6;
-  }
-
-  .lgo-journeypage-stack .lgo-journey-cycle {
-    width: clamp(250px, 22vw, 320px);
-    height: clamp(250px, 22vw, 320px);
-  }
-
-  .lgo-journeypage-stack .lgo-journey-design-board {
-    grid-template-columns: minmax(0, 1.25fr) minmax(15rem, .75fr);
-    gap: clamp(1rem, 2vw, 1.6rem);
-    padding: clamp(.85rem, 1.2vw, 1.05rem);
-  }
-
-  .lgo-journeypage-stack .lgo-journey-design-board img {
-    max-height: 300px;
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
-
-  .lgo-journeypage-stack .lgo-journey-design-board figcaption {
-    font-size: .88rem;
-    line-height: 1.48;
-  }
-
-  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) {
-    gap: clamp(.75rem, 1.2vw, 1rem);
-  }
-
-  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading h2 {
-    font-size: clamp(1.8rem, 2.4vw, 2.45rem);
-    line-height: 1.03;
-  }
-
-  .lgo-journeypage-stack .lgo-session-loop {
-    gap: clamp(.6rem, .9vw, .85rem);
-  }
-
-  .lgo-journeypage-stack .lgo-session-beat {
-    min-height: 230px;
-    padding: clamp(.95rem, 1.4vw, 1.25rem);
-  }
-}
-
 /* WEB v1.124 start detailed design target density */
 /* WEB v1.139 start Vietnamese design match */
 .lgo-startpage-stack .lgo-start-hero.lgo-cinematic-hero {
@@ -3888,54 +3823,6 @@ h3 {
     display: none;
   }
 }
-
-/* WEB v1.138 journey Vietnamese design match: place the 20-minute loop directly after the hero like the refreshed target. */
-@media (min-width: 981px) {
-  .lgo-journeypage-stack {
-    gap: clamp(.75rem, 1.85vw, 1.55rem);
-  }
-
-  .lgo-journeypage-stack .lgo-journey-hero {
-    padding: clamp(1.25rem, 2.55vw, 2.25rem);
-  }
-
-  .lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy h1 {
-    font-size: clamp(3.05rem, 4.75vw, 4.7rem);
-  }
-
-  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) {
-    gap: clamp(.45rem, .78vw, .7rem);
-  }
-
-  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading {
-    display: grid;
-    grid-template-columns: minmax(17rem, .3fr) minmax(0, 1fr);
-    align-items: end;
-    column-gap: clamp(.9rem, 1.5vw, 1.2rem);
-    row-gap: .2rem;
-    max-width: none;
-  }
-
-  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading .lgo-eyebrow {
-    grid-column: 1 / -1;
-    margin-bottom: -.15rem;
-    font-size: .62rem;
-  }
-
-  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading h2 {
-    max-width: 18ch;
-    font-size: clamp(1.32rem, 1.68vw, 1.68rem);
-    line-height: 1;
-  }
-
-  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading p:last-child {
-    margin: 0;
-    max-width: none;
-    font-size: .78rem;
-    line-height: 1.28;
-  }
-}
-
 
 /* WEB v1.142 release Vietnamese design match */
 @media (min-width: 981px) {

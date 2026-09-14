@@ -7289,3 +7289,417 @@
     padding-block: clamp(.72rem, 1.45vw, 1.25rem);
   }
 }
+
+/* v1.216 shared journey overview layout for the public session-loop route. */
+.lgo-journeypage-stack {
+  gap: clamp(.78rem, 1.2vw, 1.12rem);
+}
+
+.lgo-journeypage-stack .lgo-journey-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
+  gap: clamp(.82rem, 1.8vw, 1.8rem);
+  padding: clamp(.82rem, 1.65vw, 1.35rem);
+}
+
+.lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy {
+  display: grid;
+  gap: .52rem;
+}
+
+.lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy h1,
+.lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy p,
+.lgo-journeypage-stack .lgo-journey-hero .lgo-hero-kicker {
+  margin: 0;
+}
+
+.lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy h1 {
+  max-width: 13ch;
+  font-size: clamp(2.24rem, 3.45vw, 3.35rem);
+  line-height: .94;
+}
+
+.lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy p {
+  max-width: 66ch;
+  font-size: clamp(.86rem, .92vw, .98rem);
+  line-height: 1.42;
+}
+
+.lgo-journeypage-stack .lgo-hero-actions {
+  gap: .5rem;
+  margin-top: .1rem;
+}
+
+.lgo-journeypage-stack .lgo-link-button {
+  min-height: 36px;
+  padding: .5rem .78rem;
+  font-size: .82rem;
+}
+
+.lgo-journeypage-stack .lgo-journey-cycle {
+  width: clamp(212px, 18vw, 252px);
+  height: clamp(212px, 18vw, 252px);
+}
+
+.lgo-journeypage-stack .lgo-journey-cycle::before {
+  inset: 31%;
+}
+
+.lgo-journeypage-stack .lgo-journey-cycle i {
+  inset: 39%;
+}
+
+.lgo-journeypage-stack .lgo-journey-cycle span {
+  width: clamp(46px, 4vw, 54px);
+  height: clamp(46px, 4vw, 54px);
+  font-size: .76rem;
+  line-height: 1.02;
+  text-align: center;
+}
+
+.lgo-journeypage-stack .lgo-journey-cycle span:nth-child(1) {
+  left: calc(50% - clamp(23px, 2vw, 27px));
+  top: 0;
+}
+
+.lgo-journeypage-stack .lgo-journey-cycle span:nth-child(2) {
+  right: 0;
+  top: calc(50% - clamp(23px, 2vw, 27px));
+}
+
+.lgo-journeypage-stack .lgo-journey-cycle span:nth-child(3) {
+  left: calc(50% - clamp(23px, 2vw, 27px));
+  bottom: 0;
+}
+
+.lgo-journeypage-stack .lgo-journey-cycle span:nth-child(4) {
+  left: 0;
+  top: calc(50% - clamp(23px, 2vw, 27px));
+}
+
+.lgo-journeypage-stack .lgo-experience-section:nth-of-type(2),
+.lgo-journeypage-stack .lgo-world-route-section {
+  display: grid;
+  gap: .58rem;
+}
+
+.lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading,
+.lgo-journeypage-stack .lgo-world-route-section .lgo-section-heading {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: .18rem .75rem;
+  align-items: baseline;
+  max-width: 980px;
+}
+
+.lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading .lgo-eyebrow,
+.lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading h2,
+.lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading p,
+.lgo-journeypage-stack .lgo-world-route-section .lgo-section-heading .lgo-eyebrow,
+.lgo-journeypage-stack .lgo-world-route-section .lgo-section-heading h2,
+.lgo-journeypage-stack .lgo-world-route-section .lgo-section-heading p {
+  margin: 0;
+}
+
+.lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading h2,
+.lgo-journeypage-stack .lgo-world-route-section .lgo-section-heading h2 {
+  font-size: clamp(1.16rem, 1.52vw, 1.55rem);
+  line-height: 1.02;
+}
+
+.lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading p:last-child,
+.lgo-journeypage-stack .lgo-world-route-section .lgo-section-heading p:last-child {
+  grid-column: 1 / -1;
+  max-width: 88ch;
+  font-size: .76rem;
+  line-height: 1.28;
+}
+
+.lgo-journeypage-stack .lgo-session-loop {
+  gap: .5rem;
+}
+
+.lgo-journeypage-stack .lgo-session-beat {
+  min-height: 174px;
+  padding: .66rem;
+  border-radius: 1rem;
+}
+
+.lgo-journeypage-stack .lgo-session-beat > span {
+  font-size: .62rem;
+}
+
+.lgo-journeypage-stack .lgo-session-beat h3 {
+  font-size: clamp(.88rem, 1.08vw, 1rem);
+  line-height: 1.03;
+  margin: .5rem 0 .36rem;
+}
+
+.lgo-journeypage-stack .lgo-session-beat p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  font-size: .72rem;
+  line-height: 1.24;
+}
+
+.lgo-journeypage-stack .lgo-world-route {
+  gap: .46rem;
+}
+
+.lgo-journeypage-stack .lgo-world-route::before {
+  top: 1.72rem;
+}
+
+.lgo-journeypage-stack .lgo-world-route-stop {
+  padding: .5rem;
+}
+
+.lgo-journeypage-stack .lgo-route-marker {
+  margin-bottom: .48rem;
+}
+
+.lgo-journeypage-stack .lgo-route-marker span {
+  width: 2.45rem;
+  height: 2.45rem;
+  font-size: .72rem;
+}
+
+.lgo-journeypage-stack .lgo-world-route-stop h3 {
+  font-size: clamp(.92rem, 1.18vw, 1.06rem);
+  line-height: 1.04;
+  margin: .26rem 0 .28rem;
+}
+
+.lgo-journeypage-stack .lgo-world-route-stop p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  font-size: .72rem;
+  line-height: 1.25;
+}
+
+.lgo-journeypage-stack .lgo-journey-design-board {
+  grid-template-columns: minmax(0, 1.12fr) minmax(14rem, .88fr);
+  gap: .74rem;
+  margin-top: -.15rem;
+  padding: .66rem;
+}
+
+.lgo-journeypage-stack .lgo-journey-design-board img {
+  height: 224px;
+  max-height: 224px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+}
+
+.lgo-journeypage-stack .lgo-journey-design-board figcaption {
+  gap: .42rem;
+  font-size: .74rem;
+  line-height: 1.24;
+}
+
+.lgo-journeypage-stack .lgo-journey-design-board figcaption strong {
+  font-size: .96rem;
+  line-height: 1.08;
+}
+
+.lgo-journeypage-stack .lgo-journey-design-board figcaption span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+@media (min-width: 981px) {
+  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) {
+    margin-top: -1rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .lgo-journeypage-stack .lgo-journey-hero {
+    grid-template-columns: 1fr;
+    gap: .6rem;
+    padding: .88rem;
+  }
+
+  .lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy h1 {
+    font-size: clamp(2rem, 7.4vw, 2.45rem);
+  }
+
+  .lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    font-size: .82rem;
+    line-height: 1.3;
+  }
+
+  .lgo-journeypage-stack .lgo-journey-cycle {
+    width: min(210px, 66vw);
+    height: min(210px, 66vw);
+  }
+}
+
+@media (max-width: 760px) {
+  .lgo-journeypage-stack {
+    gap: .58rem;
+  }
+
+  .lgo-journeypage-stack .lgo-journey-hero {
+    gap: .42rem;
+    padding: .74rem;
+  }
+
+  .lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy {
+    gap: .32rem;
+  }
+
+  .lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy h1 {
+    font-size: clamp(1.78rem, 7vw, 2.06rem);
+  }
+
+  .lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy p {
+    -webkit-line-clamp: 3;
+    font-size: .74rem;
+    line-height: 1.2;
+  }
+
+  .lgo-journeypage-stack .lgo-hero-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lgo-journeypage-stack .lgo-link-button {
+    min-height: 34px;
+    padding-inline: .45rem;
+    font-size: .66rem;
+  }
+
+  .lgo-journeypage-stack .lgo-journey-cycle {
+    width: min(154px, 54vw);
+    height: min(154px, 54vw);
+  }
+
+  .lgo-journeypage-stack .lgo-journey-cycle span {
+    width: 38px;
+    height: 38px;
+    font-size: .54rem;
+  }
+
+  .lgo-journeypage-stack .lgo-journey-cycle span:nth-child(1) {
+    left: calc(50% - 19px);
+  }
+
+  .lgo-journeypage-stack .lgo-journey-cycle span:nth-child(2) {
+    top: calc(50% - 19px);
+  }
+
+  .lgo-journeypage-stack .lgo-journey-cycle span:nth-child(3) {
+    left: calc(50% - 19px);
+  }
+
+  .lgo-journeypage-stack .lgo-journey-cycle span:nth-child(4) {
+    top: calc(50% - 19px);
+  }
+
+  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2),
+  .lgo-journeypage-stack .lgo-world-route-section {
+    gap: .44rem;
+  }
+
+  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading,
+  .lgo-journeypage-stack .lgo-world-route-section .lgo-section-heading {
+    display: block;
+  }
+
+  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading .lgo-eyebrow,
+  .lgo-journeypage-stack .lgo-world-route-section .lgo-section-heading .lgo-eyebrow {
+    margin-bottom: .12rem;
+    font-size: .58rem;
+  }
+
+  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading h2,
+  .lgo-journeypage-stack .lgo-world-route-section .lgo-section-heading h2 {
+    font-size: clamp(1.12rem, 5.4vw, 1.42rem);
+  }
+
+  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading p,
+  .lgo-journeypage-stack .lgo-world-route-section .lgo-section-heading p {
+    display: none;
+  }
+
+  .lgo-journeypage-stack .lgo-session-loop,
+  .lgo-journeypage-stack .lgo-world-route {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .46rem;
+  }
+
+  .lgo-journeypage-stack .lgo-session-beat {
+    min-height: 150px;
+    padding: .52rem;
+    border-radius: .92rem;
+  }
+
+  .lgo-journeypage-stack .lgo-session-beat > span,
+  .lgo-journeypage-stack .lgo-card-kicker {
+    font-size: .52rem;
+  }
+
+  .lgo-journeypage-stack .lgo-session-beat h3,
+  .lgo-journeypage-stack .lgo-world-route-stop h3 {
+    font-size: .82rem;
+    line-height: 1.04;
+  }
+
+  .lgo-journeypage-stack .lgo-session-beat p,
+  .lgo-journeypage-stack .lgo-world-route-stop p {
+    -webkit-line-clamp: 3;
+    font-size: .62rem;
+    line-height: 1.16;
+  }
+
+  .lgo-journeypage-stack .lgo-world-route::before {
+    display: none;
+  }
+
+  .lgo-journeypage-stack .lgo-world-route-stop {
+    display: block;
+    padding: .52rem;
+  }
+
+  .lgo-journeypage-stack .lgo-route-marker {
+    margin-bottom: .28rem;
+  }
+
+  .lgo-journeypage-stack .lgo-route-marker span {
+    width: 2rem;
+    height: 2rem;
+    font-size: .62rem;
+  }
+
+  .lgo-journeypage-stack .lgo-journey-design-board {
+    grid-template-columns: 1fr;
+    gap: .48rem;
+    padding: .58rem;
+  }
+
+  .lgo-journeypage-stack .lgo-journey-design-board img {
+    height: 150px;
+    max-height: 150px;
+  }
+
+  .lgo-journeypage-stack .lgo-journey-design-board figcaption {
+    gap: .32rem;
+    font-size: .64rem;
+    line-height: 1.16;
+  }
+
+  .lgo-journeypage-stack .lgo-journey-design-board figcaption strong {
+    font-size: .84rem;
+  }
+}

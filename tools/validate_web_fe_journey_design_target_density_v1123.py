@@ -32,7 +32,10 @@ def check_tests_docs() -> None:
     for rel in ["tests/e2e/fe-journey-design-target-density-v1123.spec.ts", "docs/execution/specs/WEB-FE-JOURNEY-DESIGN-TARGET-DENSITY-v1.123.md", "LGO-WEB-FE-JOURNEY-DESIGN-TARGET-DENSITY-REPORT-v1.123.md", "HANDOFF-LGO-WEB-FE-JOURNEY-DESIGN-TARGET-DENSITY-v1.123.md"]: require_file(rel)
     require_text("tests/e2e/fe-journey-design-target-density-v1123.spec.ts", ["journey design target density", "Public Journey", "journey-detailed-design-target-v1123.png", "desktop session loop enters first fold", "desktop first session card visible in first fold", "desktop reference board follows session and route", "journey page h1 follows target scale"])
     require_text("apps/web/src/app/journey/page.tsx", ["lgo-journeypage-stack", "SessionLoopRail", "WorldRouteJourney", "lgo-journey-design-board"])
-    require_text("apps/web/src/app/globals.css", ["WEB v1.123 journey detailed design target density", ".lgo-journeypage-stack", ".lgo-journey-design-board", ".lgo-session-loop"])
+    require_text("packages/ui/src/service-layout.css", ["v1.216 shared journey overview layout for the public session-loop route", ".lgo-journeypage-stack", ".lgo-journey-design-board", ".lgo-session-loop"])
+    globals_css = read("apps/web/src/app/globals.css")
+    if "WEB v1.123 journey detailed design target density" in globals_css or "WEB v1.138 journey Vietnamese design match" in globals_css:
+        fail("apps/web/src/app/globals.css: stale journey page-local density owner remains")
     require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_JOURNEY_TARGET", "Thiết kế chi tiết hành trình", "journey-detailed-design-target-v1123.png", "Public Journey", "pathname === \"/journey\""])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Journey", "journey-detailed-design-target-v1123.png", "WEB-FE-JOURNEY-DETAILED-DESIGN-TARGET-v1.123.png", "Design Target First"])
     registry = read("docs/design/DESIGN-TARGET-REGISTRY.md")

@@ -3,12 +3,12 @@
 Status: WEB_TASK_CONTINUE
 
 Next task:
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.216
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.217
 
 Objective:
-Continue the sequential Real Browser UI/UX Layout pass for the next single public journey page after v1.215 `/classes` closure. The work must stay page-scoped, Base First and browser-evidence driven.
+Continue the sequential Real Browser UI/UX Layout pass for the next single public start page after v1.216 `/journey` closure. The work must stay page-scoped, Base First and browser-evidence driven.
 
-Current FE scope: select `/journey` as the next single active page after v1.215 `/classes` closure. Complete `/journey` fully before any other page: confirm the registered public route target, apply only the minimal target correction needed if it blocks comparison, then prioritize the real Journey UI/UX Layout in browser. Required work is first-fold structure, visual hierarchy, spacing, typography scale, route/loop density, mobile behavior, keyboard/focus/accessibility, screenshot/design-target comparison, docs/handoff/ledger, commit and push.
+Current FE scope: select `/start` as the next single active page after v1.216 `/journey` closure. Complete `/start` fully before any other page: confirm the registered public route target, apply only the minimal target correction needed if it blocks comparison, then prioritize the real Start UI/UX Layout in browser. Required work is first-fold structure, visual hierarchy, spacing, typography scale, onboarding density, mobile behavior, keyboard/focus/accessibility, screenshot/design-target comparison, docs/handoff/ledger, commit and push.
 
 Mandatory execution rules:
 
@@ -21,7 +21,7 @@ Mandatory execution rules:
 3. CSS must be managed by owner/role.
    Theme/tokens belong in `packages/design-tokens`; reusable component/layout style belongs in `packages/ui`; app/page code should compose base classes and keep only real route-specific differences. Do not inflate `apps/web/src/app/globals.css` with repeated current-page blocks.
 
-4. Do not move past `/journey` until closure evidence exists:
+4. Do not move past `/start` until closure evidence exists:
    - render page in browser/e2e;
    - e2e or browser metrics for desktop/mobile;
    - screenshot/visual review against the design target and shared shell;
@@ -39,11 +39,11 @@ Mandatory execution rules:
    - multiple pages at once.
 
 6. If execution drifts, stop and reset to this page:
-   - return to `/journey`;
+   - return to `/start`;
    - inspect the rendered browser layout;
    - check Base First owners;
    - modify shared base if a pattern repeats;
-   - continue until `/journey` is closed.
+   - continue until `/start` is closed.
 
 Non-claims: FE-only until accepted game backend contracts exist; no independent backend, no production auth, no DB persistence, no CMS, no production deployment, no payment/shop/economy.
 

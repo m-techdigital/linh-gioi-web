@@ -1,3 +1,21 @@
+Current phase: WEB-FE-JOURNEY-REAL-UI-LAYOUT-v1.216 WEB_CLOSED.
+
+Current decision: v1.216 closed the active `/journey` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Journey design target and shared public shell were usable as comparison guardrails; work focused on the rendered `/journey` page, first-fold density, session loop rhythm, world route density, compact journey board and Base First CSS ownership. Entire program is NOT production-complete.
+
+- v1.216 did not create or batch a new design target because the existing Public Journey board plus shared public shell were sufficient for checking header, footer, menu, shell, route flow and session-loop scenario alignment.
+- v1.216 changed real UI layout: `/journey` now keeps hero, session loop, world route and the journey design board in a reviewable flow without the old tall one-column mobile layout.
+- v1.216 moved the reusable journey overview layout CSS into `packages/ui/src/service-layout.css` and removed stale `/journey` page-local density blocks from `apps/web/src/app/globals.css`.
+- v1.216 referenced AXIRO only for code organization judgment: Base components first, page composition second, CSS owner clarity and no copied code or design.
+- v1.216 kept the page Vietnamese and FE-only: no production auth, no backend integration, no DB persistence, no CMS, no full MMO gameplay, no public download promise and no accepted backend contract.
+- v1.216 explicitly checked rendered screenshots against the Public Journey design board and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.216 final browser/e2e metrics: desktop overflow 0, h1/max font 51.20px, hero bottom 383.02px, session top 452.27px, session bottom 626.27px, first beat visible height 174px, route top 641.63px, route bottom 859.89px, design board top 872.86px, scrollHeight 1608px, 6 session columns, 5 route columns; mobile overflow 0, h1/max font 36px, hero bottom 616.78px, session top 678.45px, session bottom 1143.17px, first beat visible height 150px, route top 1152.44px, route bottom 1625.17px, design board top 1632.05px, scrollHeight 2529px, 2 session columns, 2 route columns.
+- v1.216 evidence: RED browser metrics showed desktop page height 2262px and mobile page height 5140px with one-column mobile session/route flow; GREEN Playwright desktop/mobile 8/8 journey layout/design-board checks; screenshot review `/tmp/journey-desktop-v1216.png` and `/tmp/journey-mobile-v1216.png`; source validator `tools/validate_web_fe_journey_real_ui_layout_v1216.py`; Web/UI typecheck; Web build; current-state closure validator.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.217.
+Select `/start` as the next single active page. Continue Real Browser UI/UX Layout First and Base First; use design target only as a comparison guardrail and do not move past `/start` before browser/e2e, screenshot review, validator, build/typecheck, docs, commit and push.
+
+Historical snapshot follows.
+
 Current phase: WEB-FE-CLASSES-REAL-UI-LAYOUT-v1.215 WEB_CLOSED.
 
 Current decision: v1.215 closed the active `/classes` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Classes design target and shared public shell were usable as comparison guardrails; work focused on the rendered `/classes` page, first-fold density, typography scale, class card rhythm, mobile two-column flow, shared disclosure proof grouping and Base First CSS ownership. Entire program is NOT production-complete.

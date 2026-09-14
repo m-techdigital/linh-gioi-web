@@ -39,14 +39,15 @@ def check_source():
  forbid('apps/web/src/components/PublicDesignTargetReference.tsx',['Journey detailed design target'])
  req('packages/content/src/fixtures.ts',['Rời Đông Môn','Khám phá Cổ Di Tích','Trở về Linh Thành mạnh hơn','nhiệm vụ ngày'])
  forbid('packages/content/src/fixtures.ts',['Chọn Daily'])
- req('apps/web/src/app/globals.css',['WEB v1.138 journey Vietnamese design match','.lgo-journeypage-stack','.lgo-session-loop'])
+ req('packages/ui/src/service-layout.css',['v1.216 shared journey overview layout for the public session-loop route','.lgo-journeypage-stack','.lgo-session-loop'])
+ forbid('apps/web/src/app/globals.css',['WEB v1.138 journey Vietnamese design match','WEB v1.123 journey detailed design target density'])
 def check_docs():
  files=['tests/e2e/fe-journey-vietnamese-design-match-v1138.spec.ts','docs/execution/specs/WEB-FE-JOURNEY-VIETNAMESE-DESIGN-MATCH-v1.138.md','LGO-WEB-FE-JOURNEY-VIETNAMESE-DESIGN-MATCH-REPORT-v1.138.md','HANDOFF-LGO-WEB-FE-JOURNEY-VIETNAMESE-DESIGN-MATCH-v1.138.md']
  for f in files: req_file(f)
  req('tests/e2e/fe-journey-vietnamese-design-match-v1138.spec.ts',['journey Vietnamese design match','Thiết kế chi tiết hành trình','20-minute card loop starts in the opening viewport','world route follows session loop before boundary board'])
  for f in files[1:]: req(f,['WEB-FE-JOURNEY-VIETNAMESE-DESIGN-MATCH-v1.138','WEB_CLOSED','Sequential Page Completion','Just-in-time Design','Design Target First','Layout Match Before Closure','Base UI/UX Layout','Public Journey','Vietnamese','browser/e2e','built-in imagegen','No production auth','No DB persistence','No real Portal integration','No real Ops/Admin mutation','NO_ACCEPTED_BACKEND_CONTRACT'])
  req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-JOURNEY-VIETNAMESE-DESIGN-MATCH-v1.138 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.139'])
- req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.216','select `/journey` as the next single active page'])
+ req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.217','select `/start` as the next single active page'])
  req('docs/execution/WEB-TASK-LEDGER.md',['| WEB-FE-JOURNEY-VIETNAMESE-DESIGN-MATCH-v1.138 | WEB-FE | WEB_CLOSED |'])
 def main():
  check_target(); check_source(); check_docs()
