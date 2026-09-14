@@ -33,20 +33,20 @@ def forbid_text(rel: str, needles: list[str]) -> None:
 
 def main() -> int:
     require_text("apps/web/src/components/PublicDetailSections.tsx", [
-        '"release-readiness-hub-polish-started": "Bài viết giải thích release readiness hub"',
+        '"release-readiness-hub-polish-started": "Bài viết giải thích hub sẵn sàng phát hành"',
         'title={articleDetailTitle(slug)}',
         'lgo-newsdetail-depth',
         'lgo-newsdetail-depth-card',
     ])
     require_text("packages/content/src/fixtures.ts", [
         'slug: "release-readiness-hub-polish-started"',
-        'title: "Release readiness hub rõ ràng hơn"',
-        'WEB v1.19 gom owner gates, kỳ vọng tester và sự đồng bộ Download/Status/Support vào một hub readiness riêng.',
-        'WEB v1.19 làm rõ /release/readiness để người chơi và reviewer thấy gate nào public',
-        'Release readiness hub gom gate quan trọng về một chỗ',
-        'Download, Status và Support phải cùng nói một sự thật',
-        'Không có public download, không mở beta công khai và không có tự động cấp quyền.',
-        'Không có ticket giả, không có checksum placeholder và không claim sẵn sàng phát hành.',
+        'title: "Hub sẵn sàng phát hành rõ ràng hơn"',
+        'WEB v1.19 gom cổng phê duyệt, kỳ vọng kiểm thử và sự đồng bộ Tải game · Trạng thái · Hỗ trợ vào một hub sẵn sàng riêng.',
+        'WEB v1.19 làm rõ /release/readiness để người chơi và reviewer thấy cổng nào công khai',
+        'Hub sẵn sàng phát hành gom các cổng quan trọng về một chỗ',
+        'Tải game, Trạng thái và Hỗ trợ phải cùng nói một sự thật',
+        'Không có bản tải công khai, không mở beta công khai và không tự động cấp quyền.',
+        'Không có phiếu hỗ trợ giả, không có checksum giữ chỗ và không tuyên bố sẵn sàng phát hành.',
     ])
     fixtures = read("packages/content/src/fixtures.ts")
     if fixtures.count('slug: "release-readiness-hub-polish-started"') != 3:
@@ -80,8 +80,8 @@ def main() -> int:
 
     require_text("tests/e2e/fe-news-release-readiness-real-ui-layout-v1184.spec.ts", [
         '/news/release-readiness-hub-polish-started renders compact Vietnamese release readiness article flow',
-        'Release readiness hub rõ ràng hơn',
-        'Bài viết giải thích release readiness hub',
+        'Hub sẵn sàng phát hành rõ ràng hơn',
+        'Bài viết giải thích hub sẵn sàng phát hành',
         'toHaveCount(2)',
         'mobile related not pushed by raw body',
         'desktop next steps reachable',
@@ -90,15 +90,15 @@ def main() -> int:
 
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-RELEASE-READINESS-REAL-UI-LAYOUT-v1.184 WEB_CLOSED',
-        'Select `/news/release-readiness-hub-polish-started`',
+        'Select `/news/closed-tester-information-pack-started`',
         '/tmp/news-release-readiness-desktop-v1184.png',
         '/tmp/news-release-readiness-mobile-v1184.png',
         'Real Browser UI/UX Layout First',
         'Base First',
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.195',
-        'Current FE scope: select `/news/release-readiness-hub-polish-started`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.196',
+        'Current FE scope: select `/news/closed-tester-information-pack-started`',
         'Real Browser UI/UX Layout First',
         'Base UI/UX Layout',
     ])

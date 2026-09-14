@@ -857,9 +857,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "release-readiness-hub-polish-started",
     category: "news",
-    title: "Release readiness hub rõ ràng hơn",
-    summary: "WEB v1.19 gom owner gates, kỳ vọng tester và sự đồng bộ Download/Status/Support vào một hub readiness riêng.",
-    body: "WEB v1.19 làm rõ /release/readiness để người chơi và reviewer thấy gate nào public, gate nào nội bộ hoặc bị chặn trước khi download, test, support hay CTA cộng đồng được xem là thật.",
+    title: "Hub sẵn sàng phát hành rõ ràng hơn",
+    summary: "WEB v1.19 gom cổng phê duyệt, kỳ vọng kiểm thử và sự đồng bộ Tải game · Trạng thái · Hỗ trợ vào một hub sẵn sàng riêng.",
+    body: "WEB v1.19 làm rõ /release/readiness để người chơi và reviewer thấy cổng nào công khai, cổng nào nội bộ hoặc bị chặn trước khi tải game, kiểm thử, hỗ trợ hay CTA cộng đồng được xem là thật.",
     publishedAt: "2026-09-05T23:05:00.000Z",
     status: "published",
     featured: true,
@@ -1014,17 +1014,17 @@ export const contentDetailSections: ContentDetailSection[] = [
   },
   {
     slug: "release-readiness-hub-polish-started",
-    heading: "Release readiness hub gom gate quan trọng về một chỗ",
-    body: "WEB v1.19 thêm /release/readiness để người chơi thấy rõ owner gates, kỳ vọng tester và sự đồng bộ giữa Download, Status, Support trước khi có public build.",
-    playerImpact: "Người chơi không bị dẫn từ release narrative sang download/test mà thiếu điều kiện chứng minh.",
-    nonClaim: "Không có public download, không mở beta công khai và không có tự động cấp quyền."
+    heading: "Hub sẵn sàng phát hành gom các cổng quan trọng về một chỗ",
+    body: "WEB v1.19 thêm /release/readiness để người chơi thấy rõ cổng phê duyệt, kỳ vọng kiểm thử và sự đồng bộ giữa Tải game, Trạng thái, Hỗ trợ trước khi có bản tải công khai.",
+    playerImpact: "Người chơi không bị dẫn từ câu chuyện phát hành sang tải game hoặc kiểm thử khi còn thiếu điều kiện chứng minh.",
+    nonClaim: "Không có bản tải công khai, không mở beta công khai và không tự động cấp quyền."
   },
   {
     slug: "release-readiness-hub-polish-started",
-    heading: "Download, Status và Support phải cùng nói một sự thật",
-    body: "Release readiness làm rõ mỗi surface cần nói gì, link tới đâu và mâu thuẫn nào phải tránh trước khi mở kỳ vọng tester.",
-    playerImpact: "Người chơi hiểu blocker tại đúng route thay vì suy diễn từ CTA hoặc build guardrail.",
-    nonClaim: "Không có ticket giả, không có checksum placeholder và không claim sẵn sàng phát hành."
+    heading: "Tải game, Trạng thái và Hỗ trợ phải cùng nói một sự thật",
+    body: "Hub sẵn sàng phát hành làm rõ mỗi bề mặt cần nói gì, dẫn tới đâu và mâu thuẫn nào phải tránh trước khi mở kỳ vọng kiểm thử.",
+    playerImpact: "Người chơi hiểu điểm chặn tại đúng route thay vì suy diễn từ CTA hoặc guardrail build.",
+    nonClaim: "Không có phiếu hỗ trợ giả, không có checksum giữ chỗ và không tuyên bố sẵn sàng phát hành."
   },
   {
     slug: "route-continuity-conversion-polish-started",

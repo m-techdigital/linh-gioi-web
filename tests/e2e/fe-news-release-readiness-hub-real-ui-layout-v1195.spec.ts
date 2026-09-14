@@ -1,4 +1,4 @@
-// v1.184 coverage: /news/release-readiness-hub-polish-started must render as compact Vietnamese release readiness article, not a raw WEB v1.19 fixture body.
+// v1.195 coverage: /news/release-readiness-hub-polish-started must render compact Vietnamese release readiness hub article with detail cards, not a body-only mixed-English readiness fixture.
 import { test, expect, type Page } from "@playwright/test";
 
 const web = process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
@@ -56,8 +56,8 @@ async function collectArticleMetrics(page: Page): Promise<ArticleMetrics> {
   });
 }
 
-test.describe("news release readiness real UI layout v1.184", () => {
-  test("/news/release-readiness-hub-polish-started renders compact Vietnamese release readiness article flow", async ({ page, isMobile }) => {
+test.describe("news release readiness hub real UI layout v1.195", () => {
+  test("/news/release-readiness-hub-polish-started renders compact Vietnamese release readiness hub article flow", async ({ page, isMobile }) => {
     await page.goto(`${web}/news/release-readiness-hub-polish-started`);
 
     await expect(page.getByRole("heading", { level: 1, name: "Hub sẵn sàng phát hành rõ ràng hơn" })).toBeVisible();
@@ -70,7 +70,7 @@ test.describe("news release readiness real UI layout v1.184", () => {
     await expect(page.locator(".lgo-newsdetail-next-steps")).toBeVisible();
 
     const mainText = await page.locator("main").innerText();
-    expect(mainText).not.toMatch(/Release readiness hub gets clearer|WEB v1\.19 groups owner gates|WEB v1\.19 keeps building the public web product|players and reviewers can see|before any download, test, support or community CTA is treated as real|No public download|No fake ticket|placeholder checksum|no entitlement automation/i);
+    expect(mainText).not.toMatch(/Release readiness hub|owner gates|tester expectations|Download\/Status\/Support|public build|open beta|entitlement|ticket|checksum placeholder|release backend|production SLA/i);
 
     const backToNews = page.locator(".lgo-newsdetail-hero-card").getByRole("link", { name: "Tin tức" });
     await backToNews.focus();
@@ -107,6 +107,6 @@ test.describe("news release readiness real UI layout v1.184", () => {
       expect(metrics.relatedColumns).toBeGreaterThanOrEqual(2);
     }
 
-    await page.screenshot({ path: `/tmp/news-release-readiness-${isMobile ? "mobile" : "desktop"}-v1184.png`, fullPage: true });
+    await page.screenshot({ path: `/tmp/news-release-readiness-hub-${isMobile ? "mobile" : "desktop"}-v1195.png`, fullPage: true });
   });
 });

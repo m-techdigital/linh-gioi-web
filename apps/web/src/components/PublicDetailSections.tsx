@@ -20,7 +20,7 @@ const articleDetailTitles: Record<string, string> = {
   "news-guide-detail-pages-started": "Bài viết giải thích news và guide detail",
   "status-download-trust-polish-started": "Bài viết giải thích status và download trust",
   "closed-tester-information-pack-started": "Bài viết giải thích closed tester information pack",
-  "release-readiness-hub-polish-started": "Bài viết giải thích release readiness hub",
+  "release-readiness-hub-polish-started": "Bài viết giải thích hub sẵn sàng phát hành",
   "player-trust-release-narrative-started": "Bài viết giải thích niềm tin người chơi và lộ trình phát hành",
   "route-continuity-conversion-polish-started": "Bài viết giải thích route continuity và conversion-safe",
   "content-ia-hub-polish-started": "Bài viết giải thích content IA và hub bắt đầu",
