@@ -3,12 +3,12 @@
 Status: WEB_TASK_CONTINUE
 
 Next task:
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.202
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.203
 
 Objective:
-Continue the sequential Real Browser UI/UX Layout pass for the next single public release page after v1.201 closure. The work must stay page-scoped, Base First and browser-evidence driven.
+Continue the sequential Real Browser UI/UX Layout pass for the next single public status page after v1.202 closure. The work must stay page-scoped, Base First and browser-evidence driven.
 
-Current FE scope: select `/release/tester-pack` as the next single active page after v1.201 `/release/readiness` closure. Complete `/release/tester-pack` fully before any other page: confirm the registered public route target, apply only the minimal target correction needed if it blocks comparison, then prioritize the real Tester Pack UI/UX Layout in browser. Required work is first-fold structure, visual hierarchy, spacing, typography scale, card density, mobile behavior, keyboard/focus/accessibility, screenshot/design-target comparison, docs/handoff/ledger, commit and push.
+Current FE scope: select `/status` as the next single active page after v1.202 `/release/tester-pack` closure. Complete `/status` fully before any other page: confirm the registered public route target, apply only the minimal target correction needed if it blocks comparison, then prioritize the real Status UI/UX Layout in browser. Required work is first-fold structure, visual hierarchy, spacing, typography scale, card density, mobile behavior, keyboard/focus/accessibility, screenshot/design-target comparison, docs/handoff/ledger, commit and push.
 
 Mandatory execution rules:
 
@@ -21,7 +21,7 @@ Mandatory execution rules:
 3. CSS must be managed by owner/role.
    Theme/tokens belong in `packages/design-tokens`; reusable component/layout style belongs in `packages/ui`; app/page code should compose base classes and keep only real route-specific differences. Do not inflate `apps/web/src/app/globals.css` with repeated current-page blocks.
 
-4. Do not move past `/release/tester-pack` until closure evidence exists:
+4. Do not move past `/status` until closure evidence exists:
    - render page in browser/e2e;
    - e2e or browser metrics for desktop/mobile;
    - screenshot/visual review against the design target and shared shell;

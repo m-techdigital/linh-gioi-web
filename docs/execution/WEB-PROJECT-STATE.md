@@ -1,3 +1,21 @@
+Current phase: WEB-FE-RELEASE-TESTER-PACK-REAL-UI-LAYOUT-v1.202 WEB_CLOSED.
+
+Current decision: v1.202 closed the active `/release/tester-pack` page slice as a real browser UI/UX Layout task. The existing public closed tester target and shared shell were sufficient for comparison; work focused on the rendered tester-pack page, mobile typography, first-flow density, checklist hierarchy, keyboard/focus evidence and Base First shared disclosure/compact proof layout. Entire program is NOT production-complete.
+
+- v1.202 did not create a design batch because the registered Gói tester công khai target already matched the shared header, footer, menu and shell well enough for comparison.
+- v1.202 changed real UI layout: `/release/tester-pack` now keeps the first-flow to hero, design board, intro and checklist, while feedback templates, limitations, device report guidance and secondary route proof boards are grouped behind the shared native disclosure.
+- v1.202 added tester-pack composition rules to `packages/ui/src/service-layout.css`, reusing `lgo-service-compact-proof-page`, `lgo-service-disclosure-stack` and `lgo-service-disclosure-body` rather than adding current-page CSS to `apps/web/src/app/globals.css`.
+- v1.202 kept the page Vietnamese and release-scenario safe: no tester intake, no slot promise, no account entitlement, no feedback backend, no production auth and no accepted backend contract.
+- v1.202 explicitly checked rendered screenshots against the Gói tester công khai target and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.202 final browser/e2e metrics: desktop hero bottom 401.98px, design top 394.14px, design bottom 594.52px, checklist top 783.27px, disclosure top 1131.20px, scrollHeight 1687px, h1/max font 40.32px, 4 checklist columns, 1 disclosure, overflow 0; mobile hero bottom 573.80px, design top 585.31px, design bottom 954.98px, checklist top 1145.08px, disclosure top 1749.63px, scrollHeight 2492px, h1/max font 29.44px, 2 checklist columns, 1 disclosure, overflow 0.
+- v1.202 evidence: browser/e2e desktop/mobile v1.202; screenshot review `/tmp/release-tester-pack-desktop-v1202.png` and `/tmp/release-tester-pack-mobile-v1202.png`; source validator; Web/UI checks; Web build; clean current-state closure validator.
+- AXIRO reference remains organizational only: shared base/layout/style owners and separated style primitives. No AXIRO code was copied.
+- Design target sync rule remains recorded: design targets must stay synchronized with shared header, footer, menu, shell and navigation; if a current target diverges, only the smallest current-page target area may be corrected before returning to browser layout.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.203. Select `/status` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-RELEASE-READINESS-REAL-UI-LAYOUT-v1.201 WEB_CLOSED.
 
 Current decision: v1.201 closed the active `/release/readiness` page slice as a real browser UI/UX Layout task. The existing Public Release Readiness design target and shared shell were sufficient for comparison; work focused on the rendered Release Readiness page, first-flow density, mobile typography, primary gate hierarchy, keyboard focus and Base First shared disclosure/compact proof layout. Entire program is NOT production-complete.

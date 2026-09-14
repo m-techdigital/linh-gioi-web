@@ -39,21 +39,29 @@ export default function ClosedTesterInformationPackPage() {
         </figure>
         <SectionHeading eyebrow="Hướng dẫn tester trước intake" title="Chuẩn bị static trước, kênh chính thức sau">v1.144 biến tester pack thành luồng đọc gọn: checklist chuẩn bị, mẫu feedback an toàn, giới hạn đã biết và mẫu báo cáo thiết bị.</SectionHeading>
         <ClosedTesterChecklistBoard />
-        <SafeFeedbackTemplateBoard />
-        <KnownLimitationNotesBoard />
-        <DeviceReportTemplateBoard />
-        <ContentIaStartCta />
-        <FaqHelpfulnessCta />
-        <RouteContinuityCta />
-        <FaqDiscoveryGroupBoard />
-        <IssueCategoryRouteBoard />
-        <TesterExpectationCopyBoard />
-        <ClosedTesterInformationPackCta />
-        <ReleaseReadinessHubCta />
-        <PlayerTrustReleaseCta />
-        <PlayerSafetySupportCta />
-        <AccessibilityReadabilityCta />
-        <PerformanceBudgetCta />
+        <details className="lgo-service-disclosure-stack lgo-tester-pack-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>Giữ đủ Content IA, FAQ, route continuity, readiness, trust, safety và performance nhưng không ép toàn bộ proof board vào first-flow tester pack.</small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <SafeFeedbackTemplateBoard />
+            <KnownLimitationNotesBoard />
+            <DeviceReportTemplateBoard />
+            <ContentIaStartCta />
+            <FaqHelpfulnessCta />
+            <RouteContinuityCta />
+            <FaqDiscoveryGroupBoard />
+            <IssueCategoryRouteBoard />
+            <TesterExpectationCopyBoard />
+            <ClosedTesterInformationPackCta />
+            <ReleaseReadinessHubCta />
+            <PlayerTrustReleaseCta />
+            <PlayerSafetySupportCta />
+            <AccessibilityReadabilityCta />
+            <PerformanceBudgetCta />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );
