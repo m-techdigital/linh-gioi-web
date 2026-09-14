@@ -62,13 +62,13 @@ def main() -> int:
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-CONTENT-IA-HUB-REAL-UI-LAYOUT-v1.187 WEB_CLOSED',
-        'Select `/news/player-trust-release-narrative-started`',
+        'Select `/news/release-readiness-hub-polish-started`',
         '/tmp/news-content-ia-hub-desktop-v1187.png', '/tmp/news-content-ia-hub-mobile-v1187.png',
         'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.194',
-        'Current FE scope: select `/news/player-trust-release-narrative-started`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.195',
+        'Current FE scope: select `/news/release-readiness-hub-polish-started`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
         '| WEB-FE-NEWS-CONTENT-IA-HUB-REAL-UI-LAYOUT-v1.187 | WEB-FE | WEB_CLOSED | 823b55e |',

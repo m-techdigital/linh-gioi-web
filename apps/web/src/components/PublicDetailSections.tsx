@@ -21,7 +21,7 @@ const articleDetailTitles: Record<string, string> = {
   "status-download-trust-polish-started": "Bài viết giải thích status và download trust",
   "closed-tester-information-pack-started": "Bài viết giải thích closed tester information pack",
   "release-readiness-hub-polish-started": "Bài viết giải thích release readiness hub",
-  "player-trust-release-narrative-started": "Bài viết giải thích player trust và release narrative",
+  "player-trust-release-narrative-started": "Bài viết giải thích niềm tin người chơi và lộ trình phát hành",
   "route-continuity-conversion-polish-started": "Bài viết giải thích route continuity và conversion-safe",
   "content-ia-hub-polish-started": "Bài viết giải thích content IA và hub bắt đầu",
   "community-roadmap-onboarding-started": "Bài viết giải thích community onboarding và roadmap",

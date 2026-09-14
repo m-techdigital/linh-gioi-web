@@ -836,8 +836,8 @@ export const contentEntries: ContentEntry[] = [
     slug: "player-trust-release-narrative-started",
     category: "news",
     title: "Niềm tin phát hành rõ ràng hơn",
-    summary: "WEB v1.18 giải thích lộ trình content-ready → closed test → public download mà không claim hệ thống phát hành production.",
-    body: "WEB v1.18 làm rõ tín hiệu niềm tin, stage phát hành và checkpoint trust để người chơi biết hôm nay có gì thật, cần bằng chứng gì tiếp theo và claim nào vẫn bị chặn.",
+    summary: "WEB v1.18 giải thích lộ trình nội dung sẵn sàng → chuẩn bị kiểm thử giới hạn → ứng viên tải công khai mà không tuyên bố hệ thống phát hành production.",
+    body: "WEB v1.18 làm rõ tín hiệu niềm tin, giai đoạn phát hành và điểm kiểm chứng để người chơi biết hôm nay có gì thật, cần bằng chứng gì tiếp theo và tuyên bố nào vẫn bị chặn.",
     publishedAt: "2026-09-05T16:30:00.000Z",
     status: "published",
     featured: true,
@@ -1154,17 +1154,17 @@ export const contentDetailSections: ContentDetailSection[] = [
   },
   {
     slug: "player-trust-release-narrative-started",
-    heading: "Release narrative giải thích stage, không phải quảng cáo launch",
-    body: "WEB v1.18 thêm /release để nói rõ web content-ready khác với chuẩn bị closed-test, limited closed test và public download candidate.",
-    playerImpact: "Người chơi hiểu vì sao website đã có nhiều trang nhưng vẫn chưa có public build hoặc account entitlement.",
-    nonClaim: "Không có public build, không mở beta công khai và không có funnel cấp quyền."
+    heading: "Lộ trình phát hành giải thích giai đoạn, không quảng cáo launch",
+    body: "WEB v1.18 thêm /release để nói rõ nội dung web sẵn sàng khác với chuẩn bị kiểm thử giới hạn và ứng viên tải công khai.",
+    playerImpact: "Người chơi hiểu vì sao website đã có nhiều trang nhưng vẫn chưa có bản tải công khai hoặc quyền tài khoản.",
+    nonClaim: "Không có bản tải công khai, không mở beta công khai và không có luồng cấp quyền."
   },
   {
     slug: "player-trust-release-narrative-started",
-    heading: "Trust journey nối Download, Status và Support",
-    body: "Release hub dẫn người chơi qua Download Trust, Status và Support Safety theo thứ tự proof-before-claim.",
-    playerImpact: "Người chơi không bị ép vào CTA nhạy cảm; họ thấy blocker và bằng chứng cần có ngay trước khi chờ download/test/support.",
-    nonClaim: "Không có download giả, không có hộp thư ticket bảo mật và không có SLA production."
+    heading: "Hành trình tin cậy nối Tải game, Trạng thái và Hỗ trợ",
+    body: "Hub phát hành dẫn người chơi qua Tin cậy tải game, Trạng thái và Hỗ trợ an toàn theo thứ tự có bằng chứng trước khi có tuyên bố.",
+    playerImpact: "Người chơi không bị ép vào CTA nhạy cảm; họ thấy blocker và bằng chứng cần có ngay trước khi chờ tải game, kiểm thử hoặc hỗ trợ.",
+    nonClaim: "Không có tải game giả, không có hộp thư ticket bảo mật và không có SLA production."
   }
 ];
 

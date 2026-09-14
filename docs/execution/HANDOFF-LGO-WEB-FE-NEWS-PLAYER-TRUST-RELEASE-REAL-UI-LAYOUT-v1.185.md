@@ -6,7 +6,7 @@ Status: WEB_CLOSED
 
 Process: Real Browser UI/UX Layout First; Base First; browser/e2e evidence before closure.
 
-Closed page: `/news/player-trust-release-narrative-started`.
+Closed page: `/news/release-readiness-hub-polish-started`.
 
 What changed:
 

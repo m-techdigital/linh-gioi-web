@@ -1,4 +1,4 @@
-// v1.185 coverage: /news/player-trust-release-narrative-started must render as compact Vietnamese player trust release article, not a raw WEB v1.18 fixture body.
+// v1.194 coverage: /news/player-trust-release-narrative-started must render compact Vietnamese player trust release article with detail cards, not a body-only player trust fixture.
 import { test, expect, type Page } from "@playwright/test";
 
 const web = process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
@@ -56,7 +56,7 @@ async function collectArticleMetrics(page: Page): Promise<ArticleMetrics> {
   });
 }
 
-test.describe("news player trust release real UI layout v1.185", () => {
+test.describe("news player trust release real UI layout v1.194", () => {
   test("/news/player-trust-release-narrative-started renders compact Vietnamese player trust release article flow", async ({ page, isMobile }) => {
     await page.goto(`${web}/news/player-trust-release-narrative-started`);
 
@@ -70,7 +70,7 @@ test.describe("news player trust release real UI layout v1.185", () => {
     await expect(page.locator(".lgo-newsdetail-next-steps")).toBeVisible();
 
     const mainText = await page.locator("main").innerText();
-    expect(mainText).not.toMatch(/Player trust and release narrative get clearer|WEB v1\.18 explains the path from content-ready website|WEB v1\.18 keeps building the public web product|player trust signals, staged release narrative|closed-test readiness checks|which claims remain blocked|No public build|No fake download|secure ticket inbox|production SLA|entitlement funnel/i);
+    expect(mainText).not.toMatch(/Bài viết giải thích nội dung public|public build|beta entitlement|download entitlement|ticket support|production SLA|release backend|account flow/i);
 
     const backToNews = page.locator(".lgo-newsdetail-hero-card").getByRole("link", { name: "Tin tức" });
     await backToNews.focus();
@@ -107,6 +107,6 @@ test.describe("news player trust release real UI layout v1.185", () => {
       expect(metrics.relatedColumns).toBeGreaterThanOrEqual(2);
     }
 
-    await page.screenshot({ path: `/tmp/news-player-trust-release-${isMobile ? "mobile" : "desktop"}-v1185.png`, fullPage: true });
+    await page.screenshot({ path: `/tmp/news-player-trust-release-${isMobile ? "mobile" : "desktop"}-v1194.png`, fullPage: true });
   });
 });

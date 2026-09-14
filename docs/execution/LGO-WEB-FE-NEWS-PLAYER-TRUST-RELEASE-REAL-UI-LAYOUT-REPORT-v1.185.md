@@ -6,7 +6,7 @@ Status: WEB_CLOSED
 
 Process: Real Browser UI/UX Layout First; Base First; browser/e2e evidence before closure.
 
-The `/news/player-trust-release-narrative-started` page was completed as a real browser UI/UX Layout slice. The page uses the shared compact News Detail base from `packages/ui/src/service-layout.css`, with no route CSS added to `apps/web/src/app/globals.css`. The existing public core design target remained usable because its header, menu, footer, shell and navigation match the accepted common UI/UX layout; no design batch was created.
+The `/news/release-readiness-hub-polish-started` page was completed as a real browser UI/UX Layout slice. The page uses the shared compact News Detail base from `packages/ui/src/service-layout.css`, with no route CSS added to `apps/web/src/app/globals.css`. The existing public core design target remained usable because its header, menu, footer, shell and navigation match the accepted common UI/UX layout; no design batch was created.
 
 Baseline browser/e2e review found the selected detail page rendered the shared article layout, but the current article h1/body/non-claims were still English and the page had no current-slug detail title mapping. The first GREEN attempt exposed a 1px desktop hero density miss, so the current title and hero copy were shortened to fit the accepted News Detail density without CSS changes.
 

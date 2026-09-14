@@ -6,7 +6,7 @@ Status: WEB_CLOSED
 
 Process: Real Browser UI/UX Layout First; Base First; browser/e2e evidence before closure.
 
-Scope: complete only `/news/player-trust-release-narrative-started` as the active page from WEB-NEXT-ACTION.
+Scope: complete only `/news/release-readiness-hub-polish-started` as the active page from WEB-NEXT-ACTION.
 
 Goal: render a compact Vietnamese News Detail article page that explains player trust and release narrative while preserving shared public shell coherence: same header, menu, footer, article rhythm, related-news flow and backend-boundary wording.
 
