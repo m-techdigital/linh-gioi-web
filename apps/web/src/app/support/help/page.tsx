@@ -22,7 +22,6 @@ export default function SupportHelpPage() {
   return (
     <WebAppShell>
       <Stack>
-        <FaqHelpfulnessCta />
         <GameCard className="lgo-detail-hero-card">
           <StatusBadge tone="jade">WEB v1.21 FAQ search/helpfulness polish</StatusBadge>
           <span className="lgo-card-kicker">FAQ discoverability · issue-category routing · no search backend · no live ticket</span>
@@ -58,6 +57,7 @@ export default function SupportHelpPage() {
         <SectionHeading eyebrow="Helpful support IA" title="FAQ không cần search backend giả để hữu ích">
           v1.21 tiếp tục xây web thật bằng cách biến FAQ thành bản đồ route rõ ràng, có helpful next step và privacy boundary.
         </SectionHeading>
+        <FaqHelpfulnessCta />
         <FaqDiscoveryGroupBoard />
         <FaqHelpfulnessPromptBoard />
         <IssueCategoryRouteBoard />

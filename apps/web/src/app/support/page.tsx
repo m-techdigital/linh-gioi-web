@@ -20,11 +20,6 @@ export default function SupportPage() {
   return (
     <WebAppShell>
       <Stack>
-        <PlayerTrustReleaseCta />
-        <ContentIaStartCta />
-        <FaqHelpfulnessCta />
-        <RouteContinuityCta />
-        <WorldGameplayLoopCta />
         <section className="lgo-panel lgo-support-hero">
           <StatusBadge tone="jade">WEB v1.14 player safety support · WEB v1.11 community feedback guidance · WEB v1.10 support expectation trust · WEB v1.8 support FAQ depth</StatusBadge>
           <h1>Hỗ trợ cộng đồng</h1>
@@ -34,6 +29,11 @@ export default function SupportPage() {
         <SectionHeading eyebrow="Support" title="Các nhóm hỗ trợ hiện có">
           Support guidance is static. No real ticket backend, account lookup or ops/admin mutation exists in this web repo.
         </SectionHeading>
+        <PlayerTrustReleaseCta />
+        <ContentIaStartCta />
+        <FaqHelpfulnessCta />
+        <RouteContinuityCta />
+        <WorldGameplayLoopCta />
         <Grid>
           {supportTopics.map((topic) => (
             <GameCard key={topic.title}>

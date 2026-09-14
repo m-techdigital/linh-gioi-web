@@ -26,14 +26,6 @@ export default function SafetySupportPage() {
   return (
     <WebAppShell>
       <Stack>
-        <ReleaseReadinessHubCta />
-        <TesterExpectationCopyBoard />
-        <PlayerTrustReleaseCta />
-        <ClosedTestReadinessBoard />
-        <ContentIaStartCta />
-        <FaqHelpfulnessCta />
-        <RouteContinuityCta />
-        <WorldGameplayLoopCta />
         <GameCard className="lgo-detail-hero-card">
           <StatusBadge tone="jade">WEB v1.14 player safety / support FAQ polish</StatusBadge>
           <span className="lgo-card-kicker">No live ticket · no account lookup · no moderation backend</span>
@@ -69,6 +61,14 @@ export default function SafetySupportPage() {
         <SectionHeading eyebrow="Product-first support" title="Hỗ trợ phải rõ, thân thiện và không hứa backend giả">
           Runtime/browser/e2e chỉ là guardrail nội bộ. Nội dung chính là player-facing safety/support expectation cho closed testing sau này.
         </SectionHeading>
+        <ReleaseReadinessHubCta />
+        <TesterExpectationCopyBoard />
+        <PlayerTrustReleaseCta />
+        <ClosedTestReadinessBoard />
+        <ContentIaStartCta />
+        <FaqHelpfulnessCta />
+        <RouteContinuityCta />
+        <WorldGameplayLoopCta />
         <PlayerSafetyPrinciplesBoard />
         <SupportIssuePathBoard />
         <IssueCategoryRouteBoard />
