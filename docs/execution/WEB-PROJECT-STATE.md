@@ -1,3 +1,14 @@
+Current phase: WEB-FE-DESIGN-TARGET-LINK-REL-v1.103 WEB_CLOSED.
+
+Current decision: v1.103 FE design-target link rel slice closed. Public, Portal and Ops Design Target First links now use explicit `noopener noreferrer` while preserving the registered v1.95 design targets and new-tab accessible names. Entire program is NOT production-complete.
+
+- v1.103 updates shared `DesignTargetReference` in `packages/ui` instead of adding app-local link variants.
+- v1.103 uses existing v1.95 Component/state plus page/workspace design targets; no new design target was required and no stale target was replaced.
+- v1.103 evidence: RED browser/e2e reproduced missing `noopener`; Playwright desktop/mobile new-tab rel safety PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.104.
+
 Current phase: WEB-FE-DESIGN-TARGET-FOCUS-MOTION-v1.102 WEB_CLOSED.
 
 Current decision: v1.102 FE design-target focus-motion slice closed. Portal and Ops workspace design-target links now share the same visible focus lift as public links while staying attached to the registered v1.95 Component/state and workspace design targets. Entire program is NOT production-complete.

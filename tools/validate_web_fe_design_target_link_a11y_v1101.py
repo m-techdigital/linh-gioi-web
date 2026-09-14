@@ -31,7 +31,7 @@ def check_source() -> None:
         "aria-label={designTargetNewTabLabel(label)}",
         "aria-label={designTargetNewTabLabel(target.label)}",
         "target=\"_blank\"",
-        "rel=\"noreferrer\"",
+        "rel=\"noopener noreferrer\"",
         "DesignTargetReference",
     ])
     require_text("apps/web/src/components/PublicDesignTargetReference.tsx", [
