@@ -32,6 +32,11 @@ export default function PortalLayout({ children }: { children: ReactNode }) {
           navItems={navItems}
           boundaryBadge="PROVISIONAL_WEB_FIXTURE"
           boundary="Auth / DB / API canonical contract chưa được chấp nhận; mọi trạng thái hiện tại chỉ là UX fixture."
+          designTarget={{
+            label: "Player Portal design target",
+            href: "/design-reference/design-atlas-portal-v195.png",
+            scope: "Player Portal"
+          }}
         >
           {children}
         </WorkspaceAppShell>

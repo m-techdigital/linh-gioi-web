@@ -34,6 +34,11 @@ export default function OpsLayout({ children }: { children: ReactNode }) {
           navItems={navItems}
           boundaryBadge="NO_REAL_OPS_MUTATION"
           boundary="RBAC / audit / security / API canonical contract chưa được chấp nhận; thao tác hiện tại chỉ là visual fixture."
+          designTarget={{
+            label: "Ops/Admin design target",
+            href: "/design-reference/design-atlas-ops-v195.png",
+            scope: "Ops/Admin"
+          }}
         >
           {children}
         </WorkspaceAppShell>

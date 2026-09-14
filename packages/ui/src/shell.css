@@ -357,3 +357,83 @@
   .lgo-visual-proof-grid,
   .lgo-journey-art-grid { grid-template-columns: 1fr; }
 }
+
+/* WEB v1.98 workspace design target attachment */
+.lgo-workspace-design-target-wrap {
+  padding-bottom: var(--lgo-space-lg);
+}
+
+.lgo-workspace-shell .lgo-design-target-reference {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid rgba(245, 200, 107, .26);
+  border-radius: var(--lgo-radius-xl);
+  padding: clamp(1rem, 2vw, 1.25rem);
+  background:
+    radial-gradient(circle at top left, rgba(245, 200, 107, .12), transparent 17rem),
+    linear-gradient(135deg, rgba(49, 216, 232, .10), rgba(122, 75, 217, .08)),
+    rgba(7, 17, 31, .82);
+  box-shadow: var(--lgo-shadow-panel);
+}
+
+.lgo-workspace-shell .lgo-design-target-reference-copy {
+  min-width: 0;
+}
+
+.lgo-workspace-shell .lgo-design-target-reference-copy span {
+  display: inline-flex;
+  margin-bottom: .35rem;
+  color: var(--lgo-color-warm-gold);
+  font-size: .76rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.lgo-workspace-shell .lgo-design-target-reference-copy strong {
+  display: block;
+  font-family: var(--lgo-font-display);
+  font-size: clamp(1.08rem, 1.5vw, 1.35rem);
+  line-height: 1.12;
+}
+
+.lgo-workspace-shell .lgo-design-target-reference-copy p {
+  margin: .35rem 0 0;
+  color: var(--lgo-color-text-muted);
+  font-size: .98rem;
+  line-height: 1.55;
+}
+
+.lgo-workspace-shell .lgo-design-target-reference-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border: 1px solid rgba(49, 216, 232, .42);
+  border-radius: var(--lgo-radius-pill);
+  padding: .72rem 1rem;
+  color: var(--lgo-color-text-primary);
+  background: rgba(49, 216, 232, .10);
+  text-decoration: none;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.lgo-workspace-shell .lgo-design-target-reference-link:hover,
+.lgo-workspace-shell .lgo-design-target-reference-link:focus-visible {
+  outline: 2px solid rgba(245, 200, 107, .56);
+  outline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+  .lgo-workspace-shell .lgo-design-target-reference {
+    grid-template-columns: 1fr;
+  }
+  .lgo-workspace-shell .lgo-design-target-reference-link {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+}

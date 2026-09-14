@@ -385,7 +385,8 @@ export function WorkspaceAppShell({
   boundaryBadge,
   boundary,
   children,
-  homeHref = "/"
+  homeHref = "/",
+  designTarget
 }: {
   appName: string;
   appLabel: string;
@@ -395,6 +396,7 @@ export function WorkspaceAppShell({
   boundary: ReactNode;
   children: ReactNode;
   homeHref?: string;
+  designTarget?: DesignTargetReferenceProps;
 }) {
   return (
     <LgoThemeProvider>
@@ -415,6 +417,14 @@ export function WorkspaceAppShell({
         <div id="workspace-content" className="lgo-workspace-content" tabIndex={-1}>
           <Container>{children}</Container>
         </div>
+        {designTarget ? (
+          <Container className="lgo-workspace-design-target-wrap">
+            <DesignTargetReference
+              {...designTarget}
+              note={designTarget.note ?? <>Base UI/UX Layout · đối chiếu workspace này với atlas đã đăng ký trước khi sửa UI.</>}
+            />
+          </Container>
+        ) : null}
         <footer className="lgo-workspace-footer">
           <Container>
             <strong>{appName}</strong>

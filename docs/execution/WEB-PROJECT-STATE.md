@@ -1,3 +1,14 @@
+Current phase: WEB-FE-WORKSPACE-DESIGN-TARGET-ATTACHMENT-v1.98 WEB_CLOSED.
+
+Current decision: v1.98 FE workspace design-target attachment slice closed. Portal and Ops now expose a runtime Design Target First band linked to their registered Player Portal and Ops/Admin atlas targets through shared WorkspaceAppShell. Entire program is NOT production-complete.
+
+- v1.98 extends shared Base UI/UX Layout in `packages/ui` rather than duplicating target bands in Portal/Ops.
+- v1.98 uses existing v1.95 Player Portal and Ops/Admin design atlas targets; no new design target was required and no stale target was replaced.
+- v1.98 evidence: RED browser/e2e reproduced missing workspace design-target region; Playwright desktop/mobile workspace design-target attachment PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.99.
+
 Current phase: WEB-FE-PUBLIC-DESIGN-TARGET-ATTACHMENT-v1.97 WEB_CLOSED.
 
 Current decision: v1.97 FE public design-target attachment slice closed. Public routes now expose a compact runtime Design Target First band linked to the registered Public Core or Public Service atlas, implemented through shared Base UI/UX Layout in packages/ui. Entire program is NOT production-complete.
