@@ -1,3 +1,14 @@
+Current phase: WEB-FE-DESIGN-TARGET-REGION-DESCRIPTION-v1.105 WEB_CLOSED.
+
+Current decision: v1.105 FE design-target region description slice closed. Public, Portal and Ops Design Target First regions now connect their visible comparison notes through `aria-describedby` while preserving registered v1.95 visual targets. Entire program is NOT production-complete.
+
+- v1.105 updates shared `DesignTargetReference` in `packages/ui` with `useId()` note linkage instead of app-local region descriptions.
+- v1.105 uses existing v1.95 Component/state, Public Core/Public Service, Player Portal and Ops/Admin design targets; no new design target was required and no stale target was replaced.
+- v1.105 evidence: RED browser/e2e reproduced missing `aria-describedby`; Playwright desktop/mobile described-region PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.106.
+
 Current phase: WEB-FE-DESIGN-TARGET-REGION-SCOPE-v1.104 WEB_CLOSED.
 
 Current decision: v1.104 FE design-target region scope slice closed. Public, Portal and Ops Design Target First regions now include the registered surface scope in their accessible names while preserving the v1.95 visual targets. Entire program is NOT production-complete.

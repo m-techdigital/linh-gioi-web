@@ -1,4 +1,4 @@
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes, HTMLAttributes, ReactNode } from "react";
+import { useId, type AnchorHTMLAttributes, type ButtonHTMLAttributes, type HTMLAttributes, type ReactNode } from "react";
 import { WorkspaceNavigation } from "./workspace-navigation";
 import type { WorkspaceShellNavItem } from "./workspace-navigation";
 
@@ -485,12 +485,19 @@ function designTargetNewTabLabel(label: string) {
 }
 
 export function DesignTargetReference({ label, href, scope, note, className, companionTargets = [] }: DesignTargetReferenceProps) {
+  const noteId = useId();
+
   return (
-    <aside className={cx("lgo-design-target-reference", className)} role="region" aria-label={`Design target reference — ${scope}`}>
+    <aside
+      className={cx("lgo-design-target-reference", className)}
+      role="region"
+      aria-label={`Design target reference — ${scope}`}
+      aria-describedby={note ? noteId : undefined}
+    >
       <div className="lgo-design-target-reference-copy">
         <span>Design Target First</span>
         <strong>{scope}</strong>
-        {note ? <p>{note}</p> : null}
+        {note ? <p id={noteId}>{note}</p> : null}
       </div>
       <div className="lgo-design-target-reference-actions">
         <a className="lgo-design-target-reference-link" href={href} target="_blank" rel="noopener noreferrer" aria-label={designTargetNewTabLabel(label)}>
