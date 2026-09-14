@@ -3,18 +3,18 @@
 Current task:
 
 ```text
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.95
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.96
 ```
 
 Status: WEB_TASK_CONTINUE.
 
-User direction: continue FE work first, use needed game images from LinhGioiOnline where useful, and verify real UI/UX layout in browser/e2e. Demo data is allowed while backend is not ready. Do not create an independent backend and do not claim real integration.
+User direction: continue FE work first, use needed game images from LinhGioiOnline where useful, verify real UI/UX layout in browser/e2e, and now compare future layout work against the complete v1.95 design atlas rather than one or two screens. Demo data is allowed while backend is not ready. Do not create an independent backend and do not claim real integration.
 
-Current FE scope: continue accessibility and interaction audit after v1.65. Focus on the next visible browser/e2e issue across public, Portal and Ops surfaces: keyboard reachability, accessible names, blocked/disabled state clarity, navigation continuity, typography caps, horizontal overflow, mobile readability, fixture boundary clarity and real design image usage. Prefer shared `packages/ui` ownership for reusable fixes.
+Current FE scope: continue accessibility and interaction audit after v1.95 design-atlas closure. Focus on the next visible browser/e2e issue across public, Portal and Ops surfaces: keyboard reachability, accessible names, blocked/disabled state clarity, navigation continuity, typography caps, horizontal overflow, mobile readability, fixture boundary clarity and implementation alignment with `apps/web/public/design-reference/design-atlas-*-v195.png`. Prefer shared `packages/ui` ownership for reusable fixes.
 
 Lifecycle: SELECT → SPEC_LOCK → IMPLEMENT FE-only accessibility/interaction improvements → SOURCE_VERIFY → RUNTIME_VERIFY → VISUAL_REVIEW → HANDOFF → CLOSED.
 
-Required evidence: source validator for the selected audit task, relevant package/app typecheck, relevant production build, Playwright desktop/mobile e2e with keyboard/focus/navigation/font-size/layout/overflow assertions, screenshot review. No independent backend, no duplicate DTO owners, no fake fetch, no forms, no enabling fixture mutation controls.
+Required evidence: source validator for the selected audit task, relevant package/app typecheck, relevant production build, Playwright desktop/mobile e2e with keyboard/focus/navigation/font-size/layout/overflow assertions, screenshot/design-atlas comparison review. No independent backend, no duplicate DTO owners, no fake fetch, no forms, no enabling fixture mutation controls.
 
 WEB-08 note: accepted backend Auth/API/DB/RBAC/audit contract is still required before any real Portal/Ops integration. The WEB-08 blocked-state spec/report/handoff and validator remain as the integration gate. A source file or a fixture alone is not owner acceptance.
 

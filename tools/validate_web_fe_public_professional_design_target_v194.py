@@ -40,7 +40,7 @@ def check_tests_and_docs() -> None:
     require_text("LGO-WEB-FE-PUBLIC-PROFESSIONAL-DESIGN-TARGET-REPORT-v1.94.md", ["Final image generation prompt", "built-in image_gen", "Homepage", "Community"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-PUBLIC-PROFESSIONAL-DESIGN-TARGET-v1.94 WEB_CLOSED", "WEB-FE-PUBLIC-PROFESSIONAL-DESIGN-TARGET-v1.94"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-PUBLIC-PROFESSIONAL-DESIGN-TARGET-v1.94 | WEB-FE | WEB_CLOSED |"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.95", "browser/e2e"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "browser/e2e"])
 def main() -> int:
     check_targets(); check_tests_and_docs()
     if ERRORS:

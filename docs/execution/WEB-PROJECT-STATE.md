@@ -1,3 +1,14 @@
+Current phase: WEB-FE-COMPLETE-DESIGN-ATLAS-v1.95 WEB_CLOSED.
+
+Current decision: v1.95 FE complete design atlas slice closed after user requested full-screen/page and component-level professional design references instead of one or two screens. Continue UI/UX implementation next against these saved targets. Entire program is NOT production-complete.
+
+- v1.95 adds five high-fidelity raster design atlas boards for Public Core, Public Service, Player Portal, Ops/Admin and Component/state references.
+- The atlas is saved under public assets and docs design reference, so browser/e2e and human visual review can use the same destination images.
+- v1.95 evidence: RED browser/e2e reproduced missing atlas assets; Playwright desktop/mobile atlas availability/dimension PASS; source validator and closure checks recorded in the handoff/report.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.96.
+
 Current phase: WEB-FE-PUBLIC-PROFESSIONAL-DESIGN-TARGET-v1.94 WEB_CLOSED.
 
 Current decision: v1.94 FE public professional design target slice closed after user clarified that the SVG target was not enough and requested real professional design images for comparison. Continue UI/UX layout work next by matching live pages against this high-fidelity target. Entire program is NOT production-complete.
