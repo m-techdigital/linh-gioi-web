@@ -1,3 +1,21 @@
+Current phase: WEB-FE-GAME-REAL-UI-LAYOUT-v1.213 WEB_CLOSED.
+
+Current decision: v1.213 closed the active `/game` page slice as a real browser UI/UX Layout task. The existing Vietnamese game world atlas target and shared public shell were sufficient as comparison guardrails after the rendered page proved the board was missing and the first-flow density was too tall; work focused on the rendered `/game` page, shared Base First CSS ownership, target-board placement, compact route density, atlas hierarchy and a native disclosure for secondary proof. Entire program is NOT production-complete.
+
+- v1.213 did not create or batch a new design target because the existing game world atlas board plus shared public shell were usable for checking header, footer, menu, shell, route flow and game scenario alignment.
+- v1.213 changed real UI layout: `/game` now keeps the first-flow to hero, game world target board, route journey and world atlas stories, while boundary, pillars, world layer proof and Âm Giới invasion evidence are grouped behind the shared native disclosure.
+- v1.213 moved and extended the reusable game overview layout CSS in `packages/ui/src/service-layout.css`; no current-page game overview CSS remains in `apps/web/src/app/globals.css`.
+- v1.213 referenced AXIRO only for code organization judgment: Base components first, page composition second, CSS owner clarity and no copied code or design.
+- v1.213 kept the page Vietnamese and FE-only: no production auth, no backend integration, no DB persistence, no CMS, no full MMO gameplay, no public download promise and no accepted backend contract.
+- v1.213 explicitly checked rendered screenshots against the world atlas design board and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.213 final browser/e2e metrics: desktop overflow 0, h1 font 38.40px, max font 51.20px, hero bottom 385.00px, board top 391.39px, board bottom 606.42px, route top 631.70px, route bottom 838.86px, atlas top 849.42px, atlas bottom 1126.59px, disclosure top 1133.95px, scrollHeight 1690px, 2 board columns, 5 route columns, 5 atlas columns, 1 disclosure; mobile overflow 0, h1 font 29.12px, max font 29.12px, hero bottom 683.70px, board top 689.47px, board bottom 980.13px, route top 1007.00px, route bottom 1588.20px, atlas top 1599.08px, atlas bottom 2673.42px, disclosure top 2679.19px, scrollHeight 3422px, 1 board column, 2 route columns, 1 atlas column, 1 disclosure.
+- v1.213 evidence: RED baseline from existing `/game` e2e for missing `Game world atlas hub board` and desktop/mobile first-flow density failures; GREEN browser/e2e desktop/mobile 8/8 game overview layout/design-board checks; screenshot review `/tmp/game-desktop-v1213.png` and `/tmp/game-mobile-v1213.png`; source validator `tools/validate_web_fe_game_real_ui_layout_v1213.py`; Web/UI typecheck; Web build; current-state closure validator.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.214.
+Select `/story` as the next single active page. Continue Real Browser UI/UX Layout First and Base First; use design target only as a comparison guardrail and do not move past `/story` before browser/e2e, screenshot review, validator, build/typecheck, docs, commit and push.
+
+Historical snapshot follows.
+
 Current phase: WEB-FE-GAME-LOOP-REAL-UI-LAYOUT-v1.212 WEB_CLOSED.
 
 Current decision: v1.212 closed the active `/game/loop` page slice as a real browser UI/UX Layout task. The existing Vietnamese gameplay loop design board and shared public shell were sufficient for comparison; work focused on the rendered page, first-flow density, mobile typography, compact gate/stage boards, native disclosure grouping for secondary proof and Base First shared CSS ownership. Entire program is NOT production-complete.

@@ -6027,3 +6027,679 @@
     line-height: 1.16;
   }
 }
+
+
+/* Shared game overview page layout for public world atlas surfaces. */
+/* WEB v1.83 public game world atlas hub board */
+.lgo-game-world-design-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(16rem, .85fr);
+  align-items: center;
+  gap: var(--lgo-space-lg);
+  overflow: hidden;
+}
+
+.lgo-game-world-design-board img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid rgba(49,216,232,.20);
+  border-radius: var(--lgo-radius-lg);
+  background: rgba(7,17,31,.72);
+}
+
+.lgo-game-world-design-board figcaption {
+  display: grid;
+  gap: .65rem;
+  color: var(--lgo-color-text-muted);
+  font-size: .95rem;
+  line-height: 1.55;
+}
+
+.lgo-game-world-design-board figcaption strong {
+  color: var(--lgo-color-text-primary);
+  font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+}
+
+.lgo-game-world-design-board figcaption span { overflow-wrap: anywhere; }
+
+@media (max-width: 760px) {
+  .lgo-game-world-design-board { grid-template-columns: 1fr; }
+}
+
+/* WEB v1.83 public game world hero typography cap */
+.lgo-public-shell main .lgo-public-player-hero.lgo-cinematic-hero .lgo-cinematic-copy h1 {
+  font-size: clamp(36px, 3.5vw, 64px);
+}
+
+@media (max-width: 620px) {
+  .lgo-public-shell main .lgo-public-player-hero.lgo-cinematic-hero .lgo-cinematic-copy h1 {
+    font-size: clamp(34px, 9vw, 48px);
+  }
+}
+
+/* WEB v1.83 public game world atlas typography cap */
+.lgo-public-shell main .lgo-world-atlas-visual > span {
+  font: 600 clamp(42px, 4vw, 64px)/1 serif;
+}
+
+@media (max-width: 620px) {
+  .lgo-public-shell main .lgo-world-atlas-visual > span {
+    font: 600 clamp(34px, 12vw, 48px)/1 serif;
+  }
+}
+
+/* WEB v1.120/v1.135 game world detailed design target density */
+.lgo-game-world-boundary {
+  display: grid;
+  grid-template-columns: max-content minmax(0, .92fr) minmax(16rem, 1fr);
+  gap: .75rem 1rem;
+  align-items: center;
+  padding: 1rem 1.15rem;
+  border-color: rgba(49, 216, 232, .2);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(49, 216, 232, .08), transparent 16rem),
+    rgba(7, 17, 31, .68);
+}
+
+.lgo-game-world-boundary strong {
+  color: rgba(246, 249, 255, .92);
+  font-size: clamp(.98rem, 1vw, 1.08rem);
+  line-height: 1.36;
+}
+
+.lgo-game-world-boundary span:last-child {
+  color: rgba(215, 228, 239, .68);
+  font-size: .88rem;
+  line-height: 1.45;
+}
+
+@media (min-width: 981px) {
+  .lgo-player-facing-stack.lgo-gamepage-stack {
+    gap: clamp(.85rem, 1.45vw, 1.5rem);
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-hero {
+    min-height: min(430px, calc(100vh - 270px));
+    grid-template-columns: minmax(0, .78fr) minmax(500px, 1.22fr);
+    gap: clamp(1.25rem, 2.6vw, 3rem);
+    padding: clamp(1rem, 2.2vw, 2.1rem) 0 clamp(.65rem, 1.35vw, 1.2rem);
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-hero::before {
+    inset: -18% -10% -22%;
+    background:
+      radial-gradient(circle at 70% 22%, rgba(49, 216, 232, .16), transparent 27rem),
+      radial-gradient(circle at 92% 42%, rgba(122, 75, 217, .16), transparent 24rem),
+      radial-gradient(circle at 16% 46%, rgba(245, 200, 107, .08), transparent 22rem);
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-scene {
+    min-height: 340px;
+    border-radius: 2.1rem;
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-copy {
+    display: grid;
+    gap: .6rem;
+    align-content: center;
+  }
+
+  .lgo-gamepage-stack .lgo-hero-kicker,
+  .lgo-gamepage-stack .lgo-cinematic-copy p,
+  .lgo-gamepage-stack .lgo-cinematic-copy h1 {
+    margin: 0;
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-copy h1 {
+    max-width: 13ch;
+    font-size: clamp(2.55rem, 4.25vw, 3.75rem);
+    line-height: .95;
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-copy .lgo-hero-lead {
+    max-width: 58ch;
+    font-size: clamp(.94rem, 1vw, 1.06rem);
+    line-height: 1.52;
+  }
+
+  .lgo-gamepage-stack .lgo-hero-actions {
+    margin-top: .2rem;
+    gap: .5rem;
+  }
+
+  .lgo-gamepage-stack .lgo-link-button {
+    padding: .66rem .88rem;
+    font-size: .85rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-section {
+    margin-top: 0;
+    padding: .8rem .9rem .9rem;
+    border: 1px solid rgba(49, 216, 232, .18);
+    border-radius: 1.65rem;
+    background:
+      linear-gradient(90deg, rgba(5, 16, 29, .92), rgba(10, 25, 42, .78), rgba(5, 16, 29, .92)),
+      radial-gradient(circle at 86% 50%, rgba(122, 75, 217, .12), transparent 18rem);
+    box-shadow: 0 18px 58px rgba(0, 0, 0, .18);
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-section .lgo-section-heading {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: .15rem .85rem;
+    align-items: baseline;
+    margin-bottom: .55rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-section .lgo-section-heading .lgo-eyebrow,
+  .lgo-gamepage-stack .lgo-world-route-section .lgo-section-heading h2,
+  .lgo-gamepage-stack .lgo-world-route-section .lgo-section-heading p {
+    margin: 0;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-section .lgo-section-heading h2 {
+    font-size: clamp(1rem, 1.24vw, 1.28rem);
+    line-height: 1.08;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-section .lgo-section-heading p:last-child {
+    grid-column: 1 / -1;
+    max-width: 86ch;
+    color: rgba(218, 231, 241, .66);
+    font-size: .8rem;
+    line-height: 1.28;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route {
+    gap: .5rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route::before {
+    top: 2.05rem;
+    left: 9%;
+    right: 9%;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-stop {
+    padding: .58rem;
+    border-color: rgba(245, 200, 107, .13);
+    background: rgba(5, 13, 25, .6);
+  }
+
+  .lgo-gamepage-stack .lgo-route-marker {
+    width: 2.45rem;
+    height: 2.45rem;
+    margin-bottom: .36rem;
+  }
+
+  .lgo-gamepage-stack .lgo-route-marker span {
+    font-size: .72rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-stop h3 {
+    margin: .24rem 0 .18rem;
+    font-size: .94rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-stop p {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: .72rem;
+    line-height: 1.28;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-section {
+    gap: .75rem;
+    margin-top: .1rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-section .lgo-section-heading {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: .1rem .9rem;
+    align-items: baseline;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-section .lgo-section-heading .lgo-eyebrow,
+  .lgo-gamepage-stack .lgo-world-atlas-section .lgo-section-heading h2,
+  .lgo-gamepage-stack .lgo-world-atlas-section .lgo-section-heading p {
+    margin: 0;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-section .lgo-section-heading h2 {
+    font-size: clamp(1.5rem, 2.35vw, 2.25rem);
+    line-height: 1.02;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-section .lgo-section-heading p:last-child {
+    grid-column: 1 / -1;
+    max-width: 92ch;
+    font-size: .86rem;
+    line-height: 1.38;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-stories {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: .8rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-card,
+  .lgo-gamepage-stack .lgo-world-atlas-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    min-height: 245px;
+    border-radius: 1.05rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-card:nth-child(even) .lgo-world-atlas-visual {
+    order: 0;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-visual {
+    min-height: 96px;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-copy {
+    padding: .85rem;
+    gap: .52rem;
+    align-content: start;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-copy h3 {
+    margin: .12rem 0;
+    font-size: clamp(1.12rem, 1.45vw, 1.35rem);
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-copy header small,
+  .lgo-gamepage-stack .lgo-world-atlas-mood {
+    font-size: .75rem;
+    line-height: 1.32;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-facts {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .lgo-game-world-boundary {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+
+/* v1.213 compact real browser layout for the public game overview page. */
+.lgo-gamepage-stack .lgo-game-world-design-board {
+  gap: .72rem;
+  margin-top: -.32rem;
+  padding: .72rem;
+}
+
+.lgo-gamepage-stack .lgo-game-world-design-board img {
+  max-height: 190px;
+  object-fit: contain;
+}
+
+.lgo-gamepage-stack .lgo-game-world-design-board figcaption {
+  gap: .52rem;
+  font-size: .86rem;
+  line-height: 1.36;
+}
+
+.lgo-gamepage-stack .lgo-game-world-design-board figcaption strong {
+  font-size: clamp(.98rem, 1.25vw, 1.16rem);
+  line-height: 1.16;
+}
+
+.lgo-gamepage-stack .lgo-gamepage-expanded-evidence {
+  margin-top: -.32rem;
+}
+
+@media (min-width: 981px) {
+  .lgo-player-facing-stack.lgo-gamepage-stack {
+    gap: .78rem;
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-hero {
+    min-height: min(350px, calc(100vh - 330px));
+    grid-template-columns: minmax(0, .86fr) minmax(430px, 1.14fr);
+    gap: clamp(.9rem, 1.8vw, 2rem);
+    padding: .82rem 0 .58rem;
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-scene {
+    min-height: 285px;
+    border-radius: 1.65rem;
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-copy {
+    gap: .46rem;
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-copy h1 {
+    font-size: clamp(2.2rem, 3.35vw, 3.15rem);
+    line-height: .94;
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-copy .lgo-hero-lead {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    font-size: .9rem;
+    line-height: 1.34;
+  }
+
+  .lgo-gamepage-stack .lgo-hero-actions {
+    margin-top: .08rem;
+    gap: .44rem;
+  }
+
+  .lgo-gamepage-stack .lgo-link-button {
+    min-height: 34px;
+    padding: .45rem .7rem;
+    font-size: .78rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-section {
+    margin-top: -.2rem;
+    padding: .68rem .72rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-section .lgo-section-heading {
+    gap: .12rem .72rem;
+    margin-bottom: .44rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-section .lgo-section-heading h2 {
+    font-size: clamp(.98rem, 1.12vw, 1.16rem);
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-section .lgo-section-heading p:last-child {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: .72rem;
+    line-height: 1.2;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route {
+    gap: .42rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-stop {
+    padding: .46rem;
+  }
+
+  .lgo-gamepage-stack .lgo-route-marker {
+    width: 2.05rem;
+    height: 2.05rem;
+    margin-bottom: .24rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-stop h3 {
+    font-size: .82rem;
+    line-height: 1.04;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-stop p {
+    font-size: .64rem;
+    line-height: 1.14;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-section {
+    gap: .58rem;
+    margin-top: -.12rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-section .lgo-section-heading h2 {
+    font-size: clamp(1.18rem, 1.65vw, 1.58rem);
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-section .lgo-section-heading p:last-child {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: .76rem;
+    line-height: 1.22;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-stories {
+    gap: .5rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-card,
+  .lgo-gamepage-stack .lgo-world-atlas-card:nth-child(even) {
+    min-height: 210px;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-visual {
+    min-height: 78px;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-copy {
+    padding: .62rem;
+    gap: .34rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-copy h3 {
+    font-size: clamp(.96rem, 1.12vw, 1.12rem);
+    line-height: 1.04;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-copy header small,
+  .lgo-gamepage-stack .lgo-world-atlas-mood {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    font-size: .66rem;
+    line-height: 1.14;
+  }
+}
+
+@media (max-width: 760px) {
+  .lgo-player-facing-stack.lgo-gamepage-stack {
+    gap: .68rem;
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-hero {
+    gap: .62rem;
+    padding-block: .58rem;
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-copy h1 {
+    font-size: clamp(1.98rem, 8vw, 2.12rem);
+    line-height: .96;
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-copy .lgo-hero-lead {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    font-size: .82rem;
+    line-height: 1.28;
+  }
+
+  .lgo-gamepage-stack .lgo-cinematic-scene {
+    min-height: 250px;
+    border-radius: 1.35rem;
+  }
+
+  .lgo-gamepage-stack .lgo-game-world-design-board {
+    padding: .62rem;
+  }
+
+  .lgo-gamepage-stack .lgo-game-world-design-board img {
+    max-height: 150px;
+  }
+
+  .lgo-gamepage-stack .lgo-game-world-design-board figcaption,
+  .lgo-gamepage-stack .lgo-world-route-section .lgo-section-heading p,
+  .lgo-gamepage-stack .lgo-world-route-stop p,
+  .lgo-gamepage-stack .lgo-world-atlas-section .lgo-section-heading p,
+  .lgo-gamepage-stack .lgo-world-atlas-mood {
+    font-size: .68rem;
+    line-height: 1.18;
+  }
+
+  .lgo-gamepage-stack .lgo-game-world-design-board figcaption span,
+  .lgo-gamepage-stack .lgo-world-route-section .lgo-section-heading p,
+  .lgo-gamepage-stack .lgo-world-route-stop p,
+  .lgo-gamepage-stack .lgo-world-atlas-section .lgo-section-heading p,
+  .lgo-gamepage-stack .lgo-world-atlas-mood {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .42rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-stop {
+    grid-template-columns: 1fr;
+    gap: .24rem;
+    padding: .44rem;
+  }
+
+  .lgo-gamepage-stack .lgo-route-marker {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0 .18rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-route-stop h3 {
+    font-size: .82rem;
+    line-height: 1.04;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-visual {
+    min-height: 76px;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-copy {
+    padding: .58rem;
+    gap: .3rem;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-copy h3 {
+    font-size: .95rem;
+    line-height: 1.04;
+  }
+
+  .lgo-gamepage-stack .lgo-world-atlas-facts {
+    display: none;
+  }
+}
+
+/* v1.213 final specificity pass for rendered /game fold density. */
+@media (min-width: 981px) {
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-public-player-hero.lgo-cinematic-hero {
+    min-height: 315px;
+    gap: .85rem;
+    padding-block: .58rem .42rem;
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-public-player-hero.lgo-cinematic-hero .lgo-cinematic-scene {
+    min-height: 235px;
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-public-player-hero.lgo-cinematic-hero .lgo-cinematic-copy h1 {
+    font-size: clamp(2.08rem, 3vw, 2.8rem);
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-public-player-hero.lgo-cinematic-hero .lgo-cinematic-copy .lgo-hero-lead {
+    font-size: .82rem;
+    line-height: 1.24;
+    -webkit-line-clamp: 3;
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-public-player-hero.lgo-cinematic-hero .lgo-hero-kicker {
+    font-size: .68rem;
+    line-height: 1.12;
+  }
+}
+
+@media (max-width: 760px) {
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-public-player-hero.lgo-cinematic-hero {
+    gap: .46rem;
+    padding-block: .44rem;
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-public-player-hero.lgo-cinematic-hero .lgo-cinematic-copy h1 {
+    font-size: clamp(1.82rem, 7vw, 2rem);
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-public-player-hero.lgo-cinematic-hero .lgo-cinematic-copy .lgo-hero-lead {
+    font-size: .76rem;
+    line-height: 1.2;
+    -webkit-line-clamp: 3;
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-public-player-hero.lgo-cinematic-hero .lgo-cinematic-scene {
+    min-height: 205px;
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-public-player-hero.lgo-cinematic-hero .lgo-link-button {
+    min-height: 30px;
+    padding: .34rem .54rem;
+    font-size: .68rem;
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-world-atlas-card,
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-world-atlas-card:nth-child(even) {
+    min-height: auto;
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-world-atlas-visual {
+    min-height: 58px;
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-world-atlas-visual > span {
+    font: 600 clamp(1.6rem, 7vw, 2.15rem)/1 serif;
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-world-atlas-copy header small,
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-world-atlas-mood {
+    -webkit-line-clamp: 1;
+    font-size: .6rem;
+    line-height: 1.08;
+  }
+}
+
+/* v1.213 fold tightening after browser metrics. */
+@media (min-width: 981px) {
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-public-player-hero.lgo-cinematic-hero {
+    min-height: 278px;
+    padding-block: .34rem .28rem;
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-public-player-hero.lgo-cinematic-hero .lgo-cinematic-scene {
+    min-height: 205px;
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-game-world-design-board {
+    margin-top: -.38rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-world-route-section .lgo-section-heading h2,
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-world-atlas-section .lgo-section-heading h2 {
+    font-size: clamp(1.35rem, 6.4vw, 2rem);
+    line-height: 1.02;
+  }
+
+  .lgo-public-shell main .lgo-gamepage-stack .lgo-world-atlas-copy h3 {
+    font-size: .88rem;
+  }
+}

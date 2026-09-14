@@ -62,9 +62,9 @@ test.describe("game world design target density", () => {
       expect(metrics.heroHeight, "desktop game hero leaves room for target route map").toBeLessThanOrEqual(540);
       expect(metrics.designBoardTop, "desktop world design board enters first fold").toBeLessThanOrEqual(650);
       expect(metrics.designBoardVisibleHeight, "desktop world design board visible in first fold").toBeGreaterThanOrEqual(90);
-      expect(metrics.routeTop, "desktop world route starts near first target board").toBeLessThanOrEqual(960);
+      expect(metrics.routeTop, "desktop world route starts near first target board").toBeLessThanOrEqual(700);
     } else {
-      expect(metrics.heroBottom, "mobile game hero does not force extreme blank fold").toBeLessThanOrEqual(1450);
+      expect(metrics.heroBottom, "mobile game hero does not force extreme blank fold").toBeLessThanOrEqual(720);
     }
   });
 });

@@ -14,6 +14,7 @@ type GameVietnameseMetrics = {
   routeTop: number;
   atlasTop: number;
   atlasCardCount: number;
+  boardGap: number;
   routeGap: number;
   wireframeBoardVisible: boolean;
 };
@@ -48,7 +49,8 @@ async function collectGameVietnameseMetrics(page: Page): Promise<GameVietnameseM
       routeTop: route.top,
       atlasTop: atlas.top,
       atlasCardCount: document.querySelectorAll(".lgo-gamepage-stack .lgo-world-atlas-card").length,
-      routeGap: route.top - hero.bottom,
+      boardGap: board.top - hero.bottom,
+      routeGap: route.top - board.top,
       wireframeBoardVisible: /Bảng tham chiếu bản đồ|Ảnh tham chiếu thế giới|wireframe|reference board/i.test(`${boardText} ${boardAlt}`),
     };
   });
@@ -63,7 +65,7 @@ test.describe("game world Vietnamese first-flow", () => {
     await expect(page.getByText("Thế giới Linh Giới", { exact: true })).toBeVisible();
     await expect(page.locator(".lgo-world-route-section").getByText("Linh Thành", { exact: true })).toBeVisible();
     await expect(page.locator(".lgo-world-route-section").getByText("Âm Giới", { exact: true })).toBeVisible();
-    await expect(page.getByText("Cấu trúc thế giới", { exact: true })).toBeVisible();
+    await expect(page.getByText("Bằng chứng phụ và tuyến liên quan", { exact: true })).toBeVisible();
 
     const metrics = await collectGameVietnameseMetrics(page);
     expect(metrics.designReferenceText, "game design target link uses Vietnamese visible label").toContain("Thiết kế chi tiết thế giới");
@@ -72,8 +74,9 @@ test.describe("game world Vietnamese first-flow", () => {
     expect(metrics.overflow, "game page horizontal overflow").toBeLessThanOrEqual(0);
     expect(metrics.h1Size, "game page h1 follows target scale").toBeLessThanOrEqual(isMobile ? 54 : 60);
     if (!isMobile) {
-      expect(metrics.routeGap, "desktop route strip should follow the hero like the design target").toBeLessThanOrEqual(36);
-      expect(metrics.routeTop, "desktop route strip enters immediately after the hero").toBeLessThanOrEqual(620);
+      expect(metrics.boardGap, "desktop target board should follow the hero like the design target").toBeLessThanOrEqual(16);
+      expect(metrics.routeGap, "desktop route strip should follow the target board").toBeLessThanOrEqual(260);
+      expect(metrics.routeTop, "desktop route strip enters after the target board").toBeLessThanOrEqual(700);
       expect(metrics.atlasTop, "desktop atlas cards should be visible in the first design-led flow").toBeLessThanOrEqual(900);
       expect(metrics.atlasCardCount, "game scenario should expose all opening world stops").toBeGreaterThanOrEqual(5);
       expect(metrics.wireframeBoardVisible, "first-flow should not show the old wireframe/reference board as product UI").toBe(false);

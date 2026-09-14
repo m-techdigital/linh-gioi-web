@@ -71,7 +71,8 @@ def check_tests_docs() -> None:
         "game page h1 follows target scale",
     ])
     require_text("apps/web/src/app/game/page.tsx", ["lgo-gamepage-stack", "WorldRouteJourney", "WorldAtlasStories", "lgo-game-world-boundary"])
-    require_text("apps/web/src/app/globals.css", [
+    require_text("packages/ui/src/service-layout.css", [
+        "Shared game overview page layout for public world atlas surfaces",
         "WEB v1.120/v1.135 game world detailed design target density",
         ".lgo-gamepage-stack",
         ".lgo-world-route-section",
