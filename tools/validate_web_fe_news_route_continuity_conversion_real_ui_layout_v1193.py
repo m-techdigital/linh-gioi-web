@@ -59,13 +59,13 @@ def main() -> int:
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-ROUTE-CONTINUITY-CONVERSION-REAL-UI-LAYOUT-v1.193 WEB_CLOSED',
-        'Select `/events`',
+        'Select `/patch-notes`',
         '/tmp/news-route-continuity-conversion-desktop-v1193.png', '/tmp/news-route-continuity-conversion-mobile-v1193.png',
         'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.198',
-        'Current FE scope: select `/events`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.199',
+        'Current FE scope: select `/patch-notes`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
         '| WEB-FE-NEWS-ROUTE-CONTINUITY-CONVERSION-REAL-UI-LAYOUT-v1.193 | WEB-FE | WEB_CLOSED | 8b23782 |',
