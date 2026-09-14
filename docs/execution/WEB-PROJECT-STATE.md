@@ -1,3 +1,14 @@
+Current phase: WEB-FE-DESIGN-TARGET-REGION-SCOPE-v1.104 WEB_CLOSED.
+
+Current decision: v1.104 FE design-target region scope slice closed. Public, Portal and Ops Design Target First regions now include the registered surface scope in their accessible names while preserving the v1.95 visual targets. Entire program is NOT production-complete.
+
+- v1.104 updates shared `DesignTargetReference` in `packages/ui` instead of adding app-local region labels.
+- v1.104 uses existing v1.95 Public Core/Public Service, Player Portal, Ops/Admin and Component/state design targets; no new design target was required and no stale target was replaced.
+- v1.104 evidence: RED browser/e2e reproduced generic region names; Playwright desktop/mobile scoped-region accessible name PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.105.
+
 Current phase: WEB-FE-DESIGN-TARGET-LINK-REL-v1.103 WEB_CLOSED.
 
 Current decision: v1.103 FE design-target link rel slice closed. Public, Portal and Ops Design Target First links now use explicit `noopener noreferrer` while preserving the registered v1.95 design targets and new-tab accessible names. Entire program is NOT production-complete.

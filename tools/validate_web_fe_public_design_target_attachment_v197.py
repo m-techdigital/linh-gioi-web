@@ -29,7 +29,7 @@ def check_shared_ui() -> None:
         "export type DesignTargetReferenceProps",
         "export function DesignTargetReference",
         "role=\"region\"",
-        "aria-label=\"Design target reference\"",
+        "Design target reference —",
         "Design Target First",
         "lgo-design-target-reference-link",
     ])

@@ -486,7 +486,7 @@ function designTargetNewTabLabel(label: string) {
 
 export function DesignTargetReference({ label, href, scope, note, className, companionTargets = [] }: DesignTargetReferenceProps) {
   return (
-    <aside className={cx("lgo-design-target-reference", className)} role="region" aria-label="Design target reference">
+    <aside className={cx("lgo-design-target-reference", className)} role="region" aria-label={`Design target reference — ${scope}`}>
       <div className="lgo-design-target-reference-copy">
         <span>Design Target First</span>
         <strong>{scope}</strong>
