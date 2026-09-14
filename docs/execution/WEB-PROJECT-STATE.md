@@ -1,3 +1,18 @@
+Current phase: WEB-FE-PATCH-NOTES-REAL-UI-LAYOUT-v1.175 WEB_CLOSED.
+
+Current decision: v1.175 closed the active `/patch-notes` page slice as a real browser UI/UX Layout task. The existing public core design target remained sufficient as the comparison guardrail; work focused on the rendered Patch Notes page, static release-note boundaries, first-fold density, mobile card flow, keyboard navigation and shared Base First service layout. Entire program is NOT production-complete.
+
+- v1.175 did not create a design batch because the existing public core target and registered route design target were enough for comparison.
+- v1.175 browser baseline/e2e showed the page still used raw content-fixture presentation: generic PageHeader, English fixture titles, stale Local content/Fixture entries labels and no current-page compact patch-notes layout.
+- v1.175 replaced the page with a Vietnamese release-note boundary layout: static update journal, patch card board and status/support CTA flow without fake live release, launcher update, CMS ownership or backend changelog claims.
+- v1.175 reused the shared compact service proof/card base in `packages/ui/src/service-layout.css`, added only current-page Patch Notes theme/density selectors there, and kept current-page CSS out of `apps/web/src/app/globals.css`.
+- v1.175 final browser/e2e metrics: desktop hero bottom 411.69px, board top 424.80px, first card top 542.23px, action band top 695.38px, scrollHeight 1421px, h1 45.36px, 2 desktop columns, overflow 0; mobile hero bottom 461.94px, board top 471.84px, first card top 619.55px, action band top 924.80px, scrollHeight 1779px, h1 27.52px, 1 mobile column, overflow 0.
+- v1.175 evidence: browser/e2e desktop/mobile v1.175; source validator; Web/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/patch-notes-desktop-v1175.png` and `/tmp/patch-notes-mobile-v1175.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.176. Select `/news` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-EVENTS-REAL-UI-LAYOUT-v1.174 WEB_CLOSED.
 
 Current decision: v1.174 closed the active `/events` page slice as a real browser UI/UX Layout task. The existing public core design target remained sufficient as the comparison guardrail; work focused on the rendered Events page, static event-state boundaries, first-fold density, mobile card flow, keyboard navigation and shared Base First service layout. Entire program is NOT production-complete.

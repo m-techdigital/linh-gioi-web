@@ -4357,3 +4357,145 @@
     -webkit-line-clamp: 1;
   }
 }
+
+/* Patch notes page composes shared service proof/card layout for static release-note boundaries. */
+.lgo-patchnotespage-stack {
+  gap: .82rem;
+}
+
+.lgo-patchnotes-hero-card {
+  border-color: rgba(147,118,255,.40);
+  background:
+    radial-gradient(circle at top left, rgba(147,118,255,.16), transparent 15rem),
+    radial-gradient(circle at bottom right, rgba(53,198,163,.12), transparent 17rem),
+    linear-gradient(145deg, rgba(13,27,46,.95), rgba(7,17,31,.90));
+}
+
+.lgo-patchnotespage-stack .lgo-detail-hero-card h1 {
+  max-width: 13ch;
+}
+
+.lgo-patchnotespage-stack .lgo-detail-hero-card .lgo-hero-lead,
+.lgo-patchnotespage-stack .lgo-detail-hero-card > p:not(.lgo-guide-detail-boundary),
+.lgo-patchnotespage-stack .lgo-guide-detail-boundary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-block: .18rem;
+}
+
+.lgo-patchnotespage-stack .lgo-detail-hero-card .lgo-hero-lead,
+.lgo-patchnotespage-stack .lgo-detail-hero-card > p:not(.lgo-guide-detail-boundary),
+.lgo-patchnotespage-stack .lgo-guide-detail-boundary {
+  -webkit-line-clamp: 2;
+}
+
+.lgo-patchnotespage-stack .lgo-guide-detail-boundary {
+  padding: .46rem .58rem;
+}
+
+.lgo-patchnotes-board {
+  padding: .86rem;
+}
+
+.lgo-patchnotes-board .lgo-section-heading h2 {
+  font-size: clamp(1.12rem, 1.65vw, 1.42rem);
+  line-height: 1.05;
+}
+
+.lgo-patchnotes-board .lgo-section-heading p,
+.lgo-patchnotes-card p,
+.lgo-patchnotes-card small {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  font-size: .76rem;
+  line-height: 1.26;
+}
+
+.lgo-patchnotes-card {
+  border-color: rgba(147,118,255,.26);
+  background: linear-gradient(145deg, rgba(30,25,58,.72), rgba(7,17,31,.80));
+  padding: .68rem;
+}
+
+.lgo-patchnotes-card h3 {
+  font-size: .98rem;
+  line-height: 1.08;
+}
+
+@media (min-width: 981px) {
+  .lgo-patchnotespage-stack .lgo-detail-hero-card h1 {
+    max-width: 100%;
+    font-size: clamp(2rem, 3.15vw, 2.86rem);
+  }
+
+  .lgo-patchnotes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .lgo-patchnotespage-stack {
+    gap: .62rem;
+  }
+
+  .lgo-patchnotespage-stack .lgo-detail-hero-card {
+    gap: .34rem;
+    padding: .62rem;
+  }
+
+  .lgo-patchnotespage-stack .lgo-detail-hero-card h1 {
+    font-size: clamp(1.72rem, 6.6vw, 1.9rem);
+  }
+
+  .lgo-patchnotespage-stack .lgo-detail-hero-card .lgo-hero-lead,
+  .lgo-patchnotespage-stack .lgo-detail-hero-card > p:not(.lgo-guide-detail-boundary),
+  .lgo-patchnotespage-stack .lgo-guide-detail-boundary {
+    margin-block: .1rem;
+    font-size: .82rem;
+    line-height: 1.22;
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-patchnotespage-stack .lgo-guide-detail-boundary {
+    padding: .38rem .48rem;
+  }
+
+  .lgo-patchnotespage-stack .lgo-detail-hero-card .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .34rem;
+  }
+
+  .lgo-patchnotespage-stack .lgo-link-button {
+    justify-content: center;
+    min-height: 31px;
+    padding-block: .28rem;
+    padding-inline: .38rem;
+    font-size: .68rem;
+    text-align: center;
+  }
+
+  .lgo-patchnotespage-stack .lgo-action-band h2 {
+    font-size: clamp(1.06rem, 5.5vw, 1.28rem);
+  }
+
+  .lgo-patchnotespage-stack .lgo-action-band p {
+    font-size: .72rem;
+    line-height: 1.24;
+  }
+
+  .lgo-patchnotes-board {
+    padding: .62rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-patchnotes-board .lgo-patchnotes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lgo-patchnotes-board .lgo-section-heading h2 {
+    font-size: clamp(1.04rem, 5.1vw, 1.2rem);
+  }
+}

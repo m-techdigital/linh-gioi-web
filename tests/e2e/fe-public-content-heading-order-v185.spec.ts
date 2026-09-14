@@ -4,7 +4,7 @@ import { test, expect, type Page } from "@playwright/test";
 const web = process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
 const routes = [
   { path: "/events", title: "Sự kiện Linh Giới" },
-  { path: "/patch-notes", title: "Patch notes" },
+  { path: "/patch-notes", title: "Ghi chú cập nhật Linh Giới" },
   { path: "/news", title: "Tin tức" },
   { path: "/status", title: "Trạng thái / Maintenance" },
 ];

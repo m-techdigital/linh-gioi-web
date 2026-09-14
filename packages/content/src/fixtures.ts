@@ -593,9 +593,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "monorepo-foundation-env-limited",
     category: "patch-notes",
-    title: "Monorepo foundation source is ready for local runtime closure",
-    summary: "The source-level pnpm/Turborepo/Next.js scaffold exists, while Node 24 and pnpm runtime gates require local or preseeded validation.",
-    body: "The web repository still does not claim production auth, DB persistence, backend integration, CMS or deployment.",
+    title: "Nền tảng web đã sẵn sàng cho kiểm runtime local",
+    summary: "Monorepo pnpm/Turborepo/Next.js đã có source kiểm soát, còn runtime gate vẫn phải được xác minh bằng môi trường local hoặc preseeded.",
+    body: "Web repo không claim production auth, DB persistence, backend integration, CMS hoặc deployment.",
     publishedAt: "2026-09-05T01:00:00.000Z",
     status: "published",
     featured: true,
@@ -604,9 +604,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "browser-matrix-guardrail-passed",
     category: "patch-notes",
-    title: "Browser matrix is now a support guardrail",
-    summary: "Public web, portal shell and ops shell routes have browser checks so product polish can continue with less regression risk.",
-    body: "The browser matrix protects web UX source changes; it is not a production deployment, live content, account, database or operations readiness claim.",
+    title: "Browser matrix trở thành guardrail hỗ trợ",
+    summary: "Public web, portal shell và ops shell đã có browser checks để tiếp tục polish sản phẩm với ít rủi ro regression hơn.",
+    body: "Browser matrix bảo vệ thay đổi UX web; nó không phải production deployment, live content, account, database hoặc operations readiness claim.",
     publishedAt: "2026-09-05T07:00:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
