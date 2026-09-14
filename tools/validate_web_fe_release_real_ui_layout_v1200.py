@@ -47,11 +47,11 @@ def main() -> int:
         'details:not([open]) .lgo-service-disclosure-body', '/tmp/release-${isMobile ? "mobile" : "desktop"}-v1200.png'
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
-        'Current phase: WEB-FE-RELEASE-REAL-UI-LAYOUT-v1.200 WEB_CLOSED', 'Select `/community`',
+        'Current phase: WEB-FE-RELEASE-REAL-UI-LAYOUT-v1.200 WEB_CLOSED', 'Select `/community/onboarding`',
         '/tmp/release-desktop-v1200.png', '/tmp/release-mobile-v1200.png', 'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.207', 'Current FE scope: select `/community`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.208', 'Current FE scope: select `/community/onboarding`',
         'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [

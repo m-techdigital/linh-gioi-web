@@ -1,3 +1,21 @@
+Current phase: WEB-FE-COMMUNITY-REAL-UI-LAYOUT-v1.207 WEB_CLOSED.
+
+Current decision: v1.207 closed the active `/community` page slice as a real browser UI/UX Layout task. The existing Vietnamese Community design target and shared shell were sufficient for comparison; work focused on the rendered community plaza route, first-flow density, mobile typography, real plaza image hierarchy, community readiness proof, keyboard/focus evidence and Base First shared disclosure/compact proof layout. Entire program is NOT production-complete.
+
+- v1.207 did not create a design batch because the registered Cộng đồng Linh Giới target already matched the shared header, footer, menu and shell well enough for comparison.
+- v1.207 changed real UI layout: `/community` now keeps the first-flow to hero, community design board, focus cards, Linh Thành plaza screenshots and community readiness, while onboarding/feedback/conduct/trust/route/safety/accessibility proof boards are grouped behind the shared native disclosure.
+- v1.207 added/extended community composition rules in `packages/ui/src/service-layout.css`, reusing `lgo-service-compact-proof-page`, `lgo-service-disclosure-stack` and `lgo-service-disclosure-body` rather than adding current-page CSS to `apps/web/src/app/globals.css`.
+- v1.207 kept the page Vietnamese and community-scenario safe: no chat backend, no forum, no guild, no ticket backend, no account lookup, no moderation dashboard, no production auth, no DB persistence and no accepted backend contract.
+- v1.207 explicitly checked rendered screenshots against the Community target and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.207 final browser/e2e metrics: desktop hero bottom 373.13px, design top 372.48px, design bottom 564.23px, focus top 593.19px, plaza top 889.92px, readiness top 1423.00px, disclosure top 1951.83px, scrollHeight 2507px, h1/max font 34.82px, 3 focus columns, 2 plaza columns, 3 readiness columns, 1 disclosure, 5 expanded top-level boards, overflow 0; mobile hero bottom 473.30px, design top 481.30px, design bottom 790.77px, focus top 821.95px, plaza top 1391.91px, readiness top 2090.80px, disclosure top 3283.80px, scrollHeight 4042px, h1/max font 29.12px, 2 focus columns, 2 plaza columns, 1 readiness column, 1 disclosure, 5 expanded top-level boards, overflow 0.
+- v1.207 evidence: browser/e2e desktop/mobile v1.207; screenshot review `/tmp/community-desktop-v1207.png` and `/tmp/community-mobile-v1207.png`; source validator; Web/UI checks; Web build; clean current-state closure validator.
+- AXIRO reference remains organizational only: shared base/layout/style owners and separated style primitives. No AXIRO code was copied.
+- Design target sync rule remains recorded: design targets must stay synchronized with shared header, footer, menu, shell and navigation; if a current target diverges, only the smallest current-page target area may be corrected before returning to browser layout.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.208. Select `/community/onboarding` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-SUPPORT-SAFETY-REAL-UI-LAYOUT-v1.206 WEB_CLOSED.
 
 Current decision: v1.206 closed the active `/support/safety` page slice as a real browser UI/UX Layout task. The existing Vietnamese Support Safety design target and shared shell were sufficient for comparison; work focused on the rendered safe-reporting route, first-flow density, mobile typography, checklist/principles/issue hierarchy, keyboard/focus evidence and Base First shared disclosure/compact proof layout. Entire program is NOT production-complete.

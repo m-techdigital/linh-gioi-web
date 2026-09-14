@@ -1309,6 +1309,67 @@
   .lgo-service-compact-proof-page .lgo-community-conduct-list {
     gap: .5rem;
   }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-community-expanded-evidence {
+    margin-top: -.35rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .lgo-service-compact-proof-page.lgo-communitypage-stack {
+    gap: .72rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card {
+    gap: .48rem;
+    padding: .78rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card h1 {
+    font-size: clamp(1.82rem, 7vw, 2.02rem);
+    line-height: .96;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack h2 {
+    font-size: clamp(1.14rem, 5.6vw, 1.54rem);
+    line-height: 1.08;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack h3 {
+    font-size: clamp(.88rem, 4.5vw, 1rem);
+    line-height: 1.08;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card p,
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card .lgo-hero-lead {
+    font-size: .78rem;
+    line-height: 1.24;
+    margin-block: .18rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-community-design-board img {
+    max-height: 168px;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-community-focus-grid,
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-onboarding-paths .lgo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .48rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-community-real-plaza-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .48rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-community-real-plaza-card img {
+    max-height: 118px;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-onboarding-card p,
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-onboarding-card small {
+    -webkit-line-clamp: 2;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1321,7 +1382,8 @@
   }
 
   .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card h1 {
-    font-size: clamp(2rem, 10vw, 2.8rem);
+    font-size: clamp(1.82rem, 7vw, 2.02rem);
+    line-height: .96;
   }
 
   .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card p,

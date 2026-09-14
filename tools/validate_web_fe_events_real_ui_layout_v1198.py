@@ -47,11 +47,11 @@ def main() -> int:
         '/tmp/events-${isMobile ? "mobile" : "desktop"}-v1198.png'
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
-        'Current phase: WEB-FE-EVENTS-REAL-UI-LAYOUT-v1.198 WEB_CLOSED', 'Select `/community`',
+        'Current phase: WEB-FE-EVENTS-REAL-UI-LAYOUT-v1.198 WEB_CLOSED', 'Select `/community/onboarding`',
         '/tmp/events-desktop-v1198.png', '/tmp/events-mobile-v1198.png', 'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.207', 'Current FE scope: select `/community`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.208', 'Current FE scope: select `/community/onboarding`',
         'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [

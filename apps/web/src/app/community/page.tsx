@@ -126,38 +126,46 @@ export default function CommunityPage() {
         </section>
 
         <CommunityReadinessDepth />
-        <CommunityOnboardingPathBoard />
-        <CommunityFeedbackGuidance />
-        <CommunityConductBoard />
-        <PlayerTrustReleaseCta />
-        <ContentIaStartCta />
-        <RouteContinuityCta />
-        <WorldGameplayLoopCta />
-        <PlayerSafetySupportCta />
-        <AccessibilityReadabilityCta />
+        <details className="lgo-service-disclosure-stack lgo-community-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>Giữ đủ phản hồi, quy tắc ứng xử, trust, content hub, route continuity, world loop, safety, accessibility, onboarding CTA và closed tester nhưng không ép toàn bộ proof board vào first-flow cộng đồng.</small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <CommunityOnboardingPathBoard />
+            <CommunityFeedbackGuidance />
+            <CommunityConductBoard />
+            <PlayerTrustReleaseCta />
+            <ContentIaStartCta />
+            <RouteContinuityCta />
+            <WorldGameplayLoopCta />
+            <PlayerSafetySupportCta />
+            <AccessibilityReadabilityCta />
 
-        <section className="lgo-action-band lgo-community-onboarding-cta">
-          <div>
-            <h2>Hòa nhập cộng đồng</h2>
-            <p>Người chơi mới nên đọc trạng thái, độ tin cậy tải game và các cổng lộ trình trước khi kỳ vọng thử nghiệm kín hoặc máy chủ thật.</p>
+            <section className="lgo-action-band lgo-community-onboarding-cta">
+              <div>
+                <h2>Hòa nhập cộng đồng</h2>
+                <p>Người chơi mới nên đọc trạng thái, độ tin cậy tải game và các cổng lộ trình trước khi kỳ vọng thử nghiệm kín hoặc máy chủ thật.</p>
+              </div>
+              <LinkButton href="/community/onboarding" tone="jade">Mở lộ trình</LinkButton>
+            </section>
+
+            <section className="lgo-panel lgo-community-principles-board">
+              <SectionHeading eyebrow="Tone" title="Nguyên tắc cộng đồng" />
+              <Grid>
+                {communityPrinciples.map((item) => (
+                  <GameCard key={item.title}>
+                    <h3>{item.title}</h3>
+                    <p>{item.summary}</p>
+                  </GameCard>
+                ))}
+              </Grid>
+            </section>
+
+            <CommunityRoadmapOnboardingCta />
+            <ClosedTesterInformationPackCta />
           </div>
-          <LinkButton href="/community/onboarding" tone="jade">Mở lộ trình</LinkButton>
-        </section>
-
-        <section className="lgo-panel lgo-community-principles-board">
-          <SectionHeading eyebrow="Tone" title="Nguyên tắc cộng đồng" />
-          <Grid>
-            {communityPrinciples.map((item) => (
-              <GameCard key={item.title}>
-                <h3>{item.title}</h3>
-                <p>{item.summary}</p>
-              </GameCard>
-            ))}
-          </Grid>
-        </section>
-
-        <CommunityRoadmapOnboardingCta />
-        <ClosedTesterInformationPackCta />
+        </details>
       </Stack>
     </WebAppShell>
   );
