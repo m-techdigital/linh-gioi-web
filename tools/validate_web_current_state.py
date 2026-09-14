@@ -244,6 +244,7 @@ VALIDATORS = [
     "validate_web_fe_events_real_ui_layout_v1174.py",
     "validate_web_fe_patch_notes_real_ui_layout_v1175.py",
     "validate_web_fe_news_real_ui_layout_v1176.py",
+    "validate_web_fe_news_control_tower_real_ui_layout_v1177.py",
 ]
 def main() -> int:
     check_forbidden_roots(); check_no_app_api_routes(); check_no_generated_artifacts(); require_non_claims()
@@ -297,7 +298,7 @@ def main() -> int:
         "LGO_WEB_PUBLIC_UX_CONTENT_POLISH_READY_v1.6",
         "LGO_WEB_RUNTIME_BROWSER_E2E_MATRIX_PASSED_v1.5",
     ])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.177")
+    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.178")
     require_text("docs/execution/WEB-NEXT-ACTION.md", "browser/e2e")
     for phrase in ["No independent backend", "No CMS", "No production deployment", "No payment/shop/economy"]:
         require_text("docs/execution/WEB-NON-CLAIMS.md", phrase)
@@ -319,11 +320,11 @@ def main() -> int:
         if result != 0:
             fail(f"validator failed: {validator}")
 
-    require_text("docs/execution/WEB-PROJECT-STATE.md", "Current phase: WEB-FE-NEWS-REAL-UI-LAYOUT-v1.176 WEB_CLOSED")
-    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.177")
+    require_text("docs/execution/WEB-PROJECT-STATE.md", "Current phase: WEB-FE-NEWS-CONTROL-TOWER-REAL-UI-LAYOUT-v1.177 WEB_CLOSED")
+    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.178")
     require_text("docs/execution/WEB-NEXT-ACTION.md", "Real Browser UI/UX Layout First")
     require_text("docs/execution/WEB-NEXT-ACTION.md", "Base UI/UX Layout")
-    require_text("docs/execution/WEB-TASK-LEDGER.md", "| WEB-FE-NEWS-REAL-UI-LAYOUT-v1.176 | WEB-FE | WEB_CLOSED |")
+    require_text("docs/execution/WEB-TASK-LEDGER.md", "| WEB-FE-NEWS-CONTROL-TOWER-REAL-UI-LAYOUT-v1.177 | WEB-FE | WEB_CLOSED |")
     return finish("WEB CURRENT STATE")
 
 if __name__ == "__main__":

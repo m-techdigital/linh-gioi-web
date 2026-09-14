@@ -25,25 +25,30 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
 
   return (
     <WebAppShell>
-      <Stack>
-        <GameCard className="lgo-detail-hero-card">
-          <StatusBadge tone="jade">WEB v1.9 article detail</StatusBadge>
-          <span className="lgo-card-kicker">{entry.category} · {entry.publishedAt}</span>
+      <Stack className="lgo-player-facing-stack lgo-service-compact-proof-page lgo-newsdetailpage-stack">
+        <GameCard className="lgo-detail-hero-card lgo-newsdetail-hero-card">
+          <StatusBadge tone="jade">Bài viết công khai</StatusBadge>
+          <span className="lgo-card-kicker">Tin tức · nội dung tĩnh · chưa có CMS/live feed</span>
           <h1>{entry.title}</h1>
           <p className="lgo-hero-lead">{entry.summary}</p>
           <p>{entry.body}</p>
-          <p><strong>Boundary:</strong> PROVISIONAL_WEB_FIXTURE · NOT_CANONICAL_BACKEND_CONTRACT · no CMS/live announcement backend.</p>
+          <div className="lgo-product-first-actions" aria-label="Luồng đọc bài viết tin tức">
+            <LinkButton href="/news" tone="jade">Tin tức</LinkButton>
+            <LinkButton href="/status" tone="gold">Trạng thái chơi</LinkButton>
+            <LinkButton href="/roadmap" tone="spirit">Roadmap</LinkButton>
+          </div>
+          <p className="lgo-guide-detail-boundary"><strong>Ranh giới:</strong> bài viết là nội dung web public tĩnh, không phải CMS, không phải thông cáo live server và không thay thế hợp đồng backend.</p>
         </GameCard>
         <ArticleDetailDepth slug={entry.slug} />
-        <section className="lgo-panel">
-          <h2>Tin liên quan</h2>
-          <Grid>
+        <section className="lgo-panel lgo-service-proof-card-grid lgo-newsdetail-related" aria-labelledby="newsdetail-related-heading">
+          <h2 id="newsdetail-related-heading">Tin liên quan để đọc tiếp</h2>
+          <Grid className="lgo-newsdetail-related-grid">
             {related.map((item) => (
-              <GameCard key={item.slug}>
-                <StatusBadge tone="spirit">{item.category}</StatusBadge>
+              <GameCard className="lgo-service-proof-card lgo-newsdetail-related-card" key={item.slug}>
+                <StatusBadge tone="spirit">tin tức</StatusBadge>
                 <h3>{item.title}</h3>
                 <p>{item.summary}</p>
-                <LinkButton href={`/news/${item.slug}`}>Đọc tiếp</LinkButton>
+                <LinkButton href={`/news/${item.slug}`} tone="jade">Đọc tiếp</LinkButton>
               </GameCard>
             ))}
           </Grid>

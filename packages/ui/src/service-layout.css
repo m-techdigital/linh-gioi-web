@@ -2160,7 +2160,7 @@
 .lgo-game-loop-gate-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
-  gap: .62rem;
+  gap: .48rem;
 }
 
 .lgo-game-loop-gate-card {
@@ -3645,14 +3645,14 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 2;
-  font-size: .76rem;
-  line-height: 1.26;
+  font-size: .72rem;
+  line-height: 1.2;
 }
 
 .lgo-events-card {
   border-color: rgba(53,198,163,.26);
   background: linear-gradient(145deg, rgba(10,42,39,.70), rgba(7,17,31,.80));
-  padding: .68rem;
+  padding: .56rem;
 }
 
 .lgo-events-card h3 {
@@ -3662,7 +3662,7 @@
 
 @media (min-width: 981px) {
   .lgo-eventspage-stack .lgo-detail-hero-card h1 {
-    font-size: clamp(2rem, 3.15vw, 2.86rem);
+    font-size: clamp(1.88rem, 2.95vw, 2.72rem);
   }
 
   .lgo-events-grid {
@@ -3676,8 +3676,8 @@
   }
 
   .lgo-eventspage-stack .lgo-detail-hero-card {
-    gap: .34rem;
-    padding: .62rem;
+    gap: .28rem;
+    padding: .56rem;
   }
 
   .lgo-eventspage-stack .lgo-detail-hero-card h1 {
@@ -4410,14 +4410,14 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 2;
-  font-size: .76rem;
-  line-height: 1.26;
+  font-size: .72rem;
+  line-height: 1.2;
 }
 
 .lgo-patchnotes-card {
   border-color: rgba(147,118,255,.26);
   background: linear-gradient(145deg, rgba(30,25,58,.72), rgba(7,17,31,.80));
-  padding: .68rem;
+  padding: .56rem;
 }
 
 .lgo-patchnotes-card h3 {
@@ -4428,7 +4428,7 @@
 @media (min-width: 981px) {
   .lgo-patchnotespage-stack .lgo-detail-hero-card h1 {
     max-width: 100%;
-    font-size: clamp(2rem, 3.15vw, 2.86rem);
+    font-size: clamp(1.88rem, 2.95vw, 2.72rem);
   }
 
   .lgo-patchnotes-grid {
@@ -4442,8 +4442,8 @@
   }
 
   .lgo-patchnotespage-stack .lgo-detail-hero-card {
-    gap: .34rem;
-    padding: .62rem;
+    gap: .28rem;
+    padding: .56rem;
   }
 
   .lgo-patchnotespage-stack .lgo-detail-hero-card h1 {
@@ -4547,14 +4547,14 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 2;
-  font-size: .76rem;
-  line-height: 1.26;
+  font-size: .72rem;
+  line-height: 1.2;
 }
 
 .lgo-newsfeed-card {
   border-color: rgba(53,198,163,.26);
   background: linear-gradient(145deg, rgba(10,42,39,.64), rgba(7,17,31,.80));
-  padding: .68rem;
+  padding: .56rem;
 }
 
 .lgo-newsfeed-card h3 {
@@ -4571,7 +4571,7 @@
 
 @media (min-width: 981px) {
   .lgo-newspage-stack .lgo-detail-hero-card h1 {
-    font-size: clamp(2rem, 3.15vw, 2.86rem);
+    font-size: clamp(1.88rem, 2.95vw, 2.72rem);
   }
 
   .lgo-newsfeed-grid {
@@ -4585,8 +4585,8 @@
   }
 
   .lgo-newspage-stack .lgo-detail-hero-card {
-    gap: .34rem;
-    padding: .62rem;
+    gap: .28rem;
+    padding: .56rem;
   }
 
   .lgo-newspage-stack .lgo-detail-hero-card h1 {
@@ -4639,5 +4639,170 @@
 
   .lgo-news-board .lgo-section-heading h2 {
     font-size: clamp(1.04rem, 5.1vw, 1.2rem);
+  }
+}
+
+/* News detail page composes shared service/detail layout for compact public article reading. */
+.lgo-newsdetailpage-stack {
+  gap: .68rem;
+}
+
+.lgo-newsdetail-hero-card {
+  border-color: rgba(53,198,163,.40);
+  background:
+    radial-gradient(circle at top left, rgba(53,198,163,.14), transparent 15rem),
+    radial-gradient(circle at bottom right, rgba(245,200,107,.12), transparent 17rem),
+    linear-gradient(145deg, rgba(13,27,46,.95), rgba(7,17,31,.90));
+}
+
+.lgo-newsdetailpage-stack .lgo-detail-hero-card h1 {
+  max-width: 14ch;
+}
+
+.lgo-newsdetailpage-stack .lgo-detail-hero-card .lgo-hero-lead,
+.lgo-newsdetailpage-stack .lgo-detail-hero-card > p:not(.lgo-guide-detail-boundary),
+.lgo-newsdetailpage-stack .lgo-guide-detail-boundary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-block: .18rem;
+  -webkit-line-clamp: 2;
+}
+
+.lgo-newsdetailpage-stack .lgo-guide-detail-boundary {
+  padding: .46rem .58rem;
+}
+
+.lgo-newsdetail-depth,
+.lgo-newsdetail-related,
+.lgo-newsdetail-next-steps {
+  padding: .72rem;
+}
+
+.lgo-newsdetailpage-stack .lgo-newsdetail-depth .lgo-section-heading h2,
+.lgo-newsdetailpage-stack .lgo-newsdetail-related .lgo-section-heading h2,
+.lgo-newsdetailpage-stack .lgo-newsdetail-related h2,
+.lgo-newsdetailpage-stack .lgo-newsdetail-next-steps h2 {
+  font-size: clamp(1.02rem, 1.35vw, 1.24rem);
+  line-height: 1.03;
+}
+
+.lgo-newsdetail-depth .lgo-section-heading p,
+.lgo-newsdetail-depth-card p,
+.lgo-newsdetail-depth-card small,
+.lgo-newsdetail-related-card p,
+.lgo-newsdetail-next-steps p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  font-size: .72rem;
+  line-height: 1.2;
+}
+
+.lgo-newsdetail-depth-grid,
+.lgo-newsdetail-related-grid {
+  display: grid;
+  gap: .62rem;
+}
+
+.lgo-newsdetail-depth-card,
+.lgo-newsdetail-related-card {
+  border: 1px solid rgba(53,198,163,.24);
+  border-radius: var(--lgo-radius-lg);
+  background: linear-gradient(145deg, rgba(10,42,39,.64), rgba(7,17,31,.80));
+  padding: .56rem;
+}
+
+.lgo-newsdetailpage-stack .lgo-newsdetail-depth-card h3,
+.lgo-newsdetailpage-stack .lgo-newsdetail-related-card h3 {
+  font-size: .88rem;
+  line-height: 1.04;
+  margin-block: .12rem .06rem;
+}
+
+.lgo-newsdetail-related-card .lgo-link-button {
+  min-height: 30px;
+  padding-block: .26rem;
+  padding-inline: .52rem;
+  font-size: .7rem;
+}
+
+@media (min-width: 981px) {
+  .lgo-newsdetailpage-stack .lgo-detail-hero-card h1 {
+    font-size: clamp(1.88rem, 2.95vw, 2.72rem);
+  }
+
+  .lgo-newsdetail-depth-grid,
+  .lgo-newsdetail-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .lgo-newsdetailpage-stack {
+    gap: .62rem;
+  }
+
+  .lgo-newsdetailpage-stack .lgo-detail-hero-card {
+    gap: .28rem;
+    padding: .56rem;
+  }
+
+  .lgo-newsdetailpage-stack .lgo-detail-hero-card h1 {
+    font-size: clamp(1.72rem, 6.6vw, 1.9rem);
+  }
+
+  .lgo-newsdetailpage-stack .lgo-detail-hero-card .lgo-hero-lead,
+  .lgo-newsdetailpage-stack .lgo-detail-hero-card > p:not(.lgo-guide-detail-boundary),
+  .lgo-newsdetailpage-stack .lgo-guide-detail-boundary {
+    margin-block: .1rem;
+    font-size: .82rem;
+    line-height: 1.22;
+  }
+
+  .lgo-newsdetailpage-stack .lgo-guide-detail-boundary {
+    padding: .38rem .48rem;
+  }
+
+  .lgo-newsdetailpage-stack .lgo-detail-hero-card .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .34rem;
+  }
+
+  .lgo-newsdetailpage-stack .lgo-link-button {
+    justify-content: center;
+    min-height: 31px;
+    padding-block: .28rem;
+    padding-inline: .38rem;
+    font-size: .68rem;
+    text-align: center;
+  }
+
+  .lgo-newsdetail-depth,
+  .lgo-newsdetail-related,
+  .lgo-newsdetail-next-steps {
+    padding: .56rem;
+  }
+
+  .lgo-newsdetailpage-stack .lgo-newsdetail-depth .lgo-section-heading h2,
+  .lgo-newsdetailpage-stack .lgo-newsdetail-related .lgo-section-heading h2,
+  .lgo-newsdetailpage-stack .lgo-newsdetail-related h2,
+  .lgo-newsdetailpage-stack .lgo-newsdetail-next-steps h2 {
+    font-size: clamp(1rem, 4.8vw, 1.14rem);
+    line-height: 1.04;
+  }
+
+  .lgo-newsdetailpage-stack .lgo-newsdetail-depth-card h3,
+  .lgo-newsdetailpage-stack .lgo-newsdetail-related-card h3 {
+    font-size: .9rem;
+    line-height: 1.05;
+  }
+
+  .lgo-newsdetailpage-stack .lgo-newsdetail-depth-grid,
+  .lgo-newsdetailpage-stack .lgo-newsdetail-related-grid,
+  .lgo-service-compact-proof-page .lgo-newsdetail-related .lgo-newsdetail-related-grid {
+    grid-template-columns: 1fr;
   }
 }

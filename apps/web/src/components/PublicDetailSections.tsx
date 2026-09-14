@@ -26,14 +26,14 @@ export function ArticleDetailDepth({ slug }: { slug: string }) {
   if (sections.length === 0) return null;
 
   return (
-    <section className="lgo-panel lgo-article-depth" aria-labelledby="article-detail-depth-heading">
-      <SectionHeading eyebrow="WEB v1.9 article detail" title="Bối cảnh chi tiết cho bài viết">
-        Detail page không chỉ lặp summary; mỗi section nói rõ ý nghĩa cho người chơi và non-claim cần giữ.
+    <section className="lgo-panel lgo-article-depth lgo-newsdetail-depth" aria-labelledby="article-detail-depth-heading">
+      <SectionHeading eyebrow="Chi tiết bài viết" title="Bài viết giải thích governance web độc lập">
+        Detail page mở rộng ngữ cảnh người chơi cần biết, tác động thực tế và ranh giới non-claim phải giữ.
       </SectionHeading>
-      <div id="article-detail-depth-heading" className="lgo-article-depth-grid">
+      <div id="article-detail-depth-heading" className="lgo-article-depth-grid lgo-newsdetail-depth-grid">
         {sections.map((section) => (
-          <article className="lgo-article-depth-card" key={`${section.slug}-${section.heading}`}>
-            <span className="lgo-card-kicker">Detail section</span>
+          <article className="lgo-article-depth-card lgo-newsdetail-depth-card" key={`${section.slug}-${section.heading}`}>
+            <span className="lgo-card-kicker">Chi tiết bài viết</span>
             <h3>{section.heading}</h3>
             <p>{section.body}</p>
             <p><strong>Ý nghĩa cho người chơi:</strong> {section.playerImpact}</p>
@@ -112,16 +112,16 @@ export function StatusExplanationDepth() {
 
 export function DetailPageNextSteps() {
   return (
-    <section className="lgo-detail-next-steps" aria-label="News and guide detail next steps">
+    <section className="lgo-detail-next-steps lgo-newsdetail-next-steps" aria-label="News and guide detail next steps">
       <div>
-        <StatusBadge tone="spirit">WEB v1.9 product content</StatusBadge>
-        <h2>News, guide, download và status pages đang được làm sâu theo hướng người chơi đọc được ngay.</h2>
-        <p>Runtime/browser/e2e chỉ là guardrail sau cùng; nội dung chính vẫn là web public chất lượng hơn.</p>
+        <StatusBadge tone="spirit">Nội dung public tĩnh</StatusBadge>
+        <h2>Tin tức, hướng dẫn, tải game và trạng thái đang được làm sâu theo hướng người chơi đọc được ngay.</h2>
+        <p>Browser/e2e là bằng chứng kiểm layout; nội dung vẫn là web public rõ ràng, không claim backend production.</p>
       </div>
       <div className="lgo-product-first-actions">
         <LinkButton href="/news" tone="spirit">Tin tức</LinkButton>
         <LinkButton href="/guides" tone="jade">Hướng dẫn</LinkButton>
-        <LinkButton href="/status" tone="gold">Status</LinkButton>
+        <LinkButton href="/status" tone="gold">Trạng thái</LinkButton>
       </div>
     </section>
   );

@@ -517,7 +517,7 @@ export const contentEntries: ContentEntry[] = [
     category: "news",
     title: "Control tower web đã được thiết lập",
     summary: "Repo web độc lập của Linh Giới Online đã có governance, ownership và guardrail non-claim.",
-    body: "This public content is a source-owned fixture for the web program. It is not a backend contract and does not claim a production website release. WEB v1.7 continues by improving visual hierarchy, responsive layout and player-facing page quality while tooling remains a support guardrail.",
+    body: "Bản tin này là nội dung source-owned của web program: nó giải thích governance, ownership và ranh giới non-claim mà không biến web repo thành backend contract hoặc thông báo release production.",
     publishedAt: "2026-09-05T00:00:00.000Z",
     status: "published",
     featured: true,
@@ -1007,7 +1007,14 @@ export const contentDetailSections: ContentDetailSection[] = [
     heading: "Vì sao web repo đứng độc lập?",
     body: "Trang tin này giải thích rằng website là lớp public/player-facing riêng, không được sao chép game source hoặc tự dựng backend thay game server canonical.",
     playerImpact: "Người đọc hiểu vì sao web có thể phát triển nhanh nhưng vẫn không hứa tính năng account, DB hoặc portal thật.",
-    nonClaim: "No independent backend, no production auth, no DB persistence."
+    nonClaim: "Không có backend độc lập, không có auth production, không có lưu trữ DB."
+  },
+  {
+    slug: "web-program-control-tower",
+    heading: "Control tower giữ header, footer, menu và workflow thống nhất",
+    body: "Governance web yêu cầu mỗi page đi theo shell public đã chấp nhận, dùng Base First cho layout lặp lại và chỉ sửa design target vừa đủ khi nó lệch UI chung.",
+    playerImpact: "Người chơi thấy cùng một header, menu, footer và nhịp đọc trên các trang public thay vì mỗi route một kiểu trình bày.",
+    nonClaim: "Không tính tiến độ design-only, không sao chép game backend, không tạo owner component trùng lặp."
   },
   {
     slug: "public-game-info-depth-started",
