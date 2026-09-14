@@ -1,5 +1,5 @@
 {
-  "version": "v1.24",
+  "version": "v1.90",
   "policy": "web editorial derivatives from audited project-source art; labels remain non-final/non-gameplay where applicable",
   "assets": [
     {
@@ -31,6 +31,39 @@
       "derivativeSha256": "9bd9933c10d99658fdca275ff8b7c705b10db69b36c05558e0b9d7f31263b0c8",
       "upstreamStatus": "APPROVED_RUNTIME_ART",
       "claim": "DEVELOPMENT_ART_PREVIEW"
+    },
+    {
+      "id": "dong-mon-onboarding-initial",
+      "webPath": "game-art/onboarding/dong-mon-01-initial.png",
+      "width": 1280,
+      "height": 720,
+      "sourcePath": "/Users/minhdc/Projects/LinhGioiOnline/build/dongmon-pc-grounding-checkpoint/3104d78/2d-onboarding-visual/01-initial.png",
+      "sourceSha256": "7aa68f58a6ffc5728c5c640fa5c7cc510e9414c7e807d265ba9e3a3f5ffbae70",
+      "derivativeSha256": "7aa68f58a6ffc5728c5c640fa5c7cc510e9414c7e807d265ba9e3a3f5ffbae70",
+      "upstreamStatus": "LOCAL_RUNTIME_SCREENSHOT_REFERENCE",
+      "claim": "STATIC_ONBOARDING_SCREENSHOT_REFERENCE"
+    },
+    {
+      "id": "dong-mon-onboarding-gate-focus",
+      "webPath": "game-art/onboarding/dong-mon-02-gate-focus.png",
+      "width": 1280,
+      "height": 720,
+      "sourcePath": "/Users/minhdc/Projects/LinhGioiOnline/build/dongmon-pc-grounding-checkpoint/3104d78/2d-onboarding-visual/02-gate-focus.png",
+      "sourceSha256": "d5fa902081ded1d3d6e76899b28709b4d8f39bb89da3c7d75b10a2bfc09381d1",
+      "derivativeSha256": "d5fa902081ded1d3d6e76899b28709b4d8f39bb89da3c7d75b10a2bfc09381d1",
+      "upstreamStatus": "LOCAL_RUNTIME_SCREENSHOT_REFERENCE",
+      "claim": "STATIC_ONBOARDING_SCREENSHOT_REFERENCE"
+    },
+    {
+      "id": "dong-mon-onboarding-dialogue",
+      "webPath": "game-art/onboarding/dong-mon-03-dialogue.png",
+      "width": 1280,
+      "height": 720,
+      "sourcePath": "/Users/minhdc/Projects/LinhGioiOnline/build/dongmon-pc-grounding-checkpoint/3104d78/2d-onboarding-visual/03-dialogue.png",
+      "sourceSha256": "42f3a914a7adc4ade12fa519ccd4059c69c182ebe54da232b6b5c26c66d96c13",
+      "derivativeSha256": "42f3a914a7adc4ade12fa519ccd4059c69c182ebe54da232b6b5c26c66d96c13",
+      "upstreamStatus": "LOCAL_RUNTIME_SCREENSHOT_REFERENCE",
+      "claim": "STATIC_ONBOARDING_SCREENSHOT_REFERENCE"
     }
   ]
 }

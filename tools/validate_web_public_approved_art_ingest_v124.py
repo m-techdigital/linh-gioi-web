@@ -42,8 +42,15 @@ def main() -> int:
         try:
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
             assets = manifest.get("assets", [])
-            if len(assets) != 3:
-                fail(f"expected exactly 3 audited web art assets, found {len(assets)}")
+            required_ids = {
+                "dong-mon-world-concept",
+                "vo-lv1-starter-development-art",
+                "vo-lv1-skill-development-art",
+            }
+            present_ids = {asset.get("id") for asset in assets}
+            missing_ids = sorted(required_ids - present_ids)
+            if missing_ids:
+                fail(f"missing original audited web art asset ids: {', '.join(missing_ids)}")
             for asset in assets:
                 rel = asset.get("webPath", "").lstrip("/")
                 asset_path = ROOT / "apps/web/public" / rel

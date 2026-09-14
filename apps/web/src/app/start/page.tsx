@@ -1,9 +1,31 @@
-import { Stack, StatusBadge } from "@lgo-web/ui";
+import { SectionHeading, Stack, StatusBadge } from "@lgo-web/ui";
 import { ClassPathGrid, WorldRouteJourney } from "../../components/PublicGameExperienceSections";
 import { PublicPlayerHero } from "../../components/PublicPlayerHero";
 import { WebAppShell } from "../../components/WebAppShell";
 
 export const metadata = { title: "Bắt đầu" };
+
+
+const onboardingScreenshots = [
+  {
+    src: "/game-art/onboarding/dong-mon-01-initial.png",
+    alt: "Dong Mon onboarding initial spawn screenshot",
+    title: "01 · Spawn tại Đông Môn",
+    caption: "Ảnh runtime từ LinhGioiOnline dùng làm reference đọc route, không phải public build/download claim."
+  },
+  {
+    src: "/game-art/onboarding/dong-mon-02-gate-focus.png",
+    alt: "Dong Mon onboarding gate focus screenshot",
+    title: "02 · Focus vào Người Giữ Cổng",
+    caption: "Khung hình cho thấy điểm neo hướng dẫn đầu tiên trước khi người chơi kỳ vọng hệ thống account thật."
+  },
+  {
+    src: "/game-art/onboarding/dong-mon-03-dialogue.png",
+    alt: "Dong Mon onboarding dialogue screenshot",
+    title: "03 · Dialogue hướng dẫn",
+    caption: "Dialogue là bằng chứng visual cho tutorial flow; nội dung web vẫn là static/demo khi chưa có accepted backend contract."
+  }
+];
 
 export default function StartPage() {
   return (
@@ -43,6 +65,24 @@ export default function StartPage() {
             </span>
           </figcaption>
         </figure>
+
+        <section className="lgo-start-real-screenshot-panel lgo-panel" aria-label="Dong Mon onboarding real screenshots">
+          <SectionHeading eyebrow="Real onboarding screenshots" title="Ảnh thật từ tutorial Đông Môn">
+            Ba khung hình được copy từ LinhGioiOnline để web có cảm giác sản phẩm thật hơn, nhưng vẫn chỉ là visual reference tĩnh khi chưa có public build, login hoặc entitlement backend.
+          </SectionHeading>
+          <div className="lgo-start-real-screenshot-grid">
+            {onboardingScreenshots.map((screenshot) => (
+              <figure key={screenshot.src} className="lgo-start-real-screenshot-card">
+                <img src={screenshot.src} alt={screenshot.alt} loading="lazy" />
+                <figcaption>
+                  <strong>{screenshot.title}</strong>
+                  <span>{screenshot.caption}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+
 
         <ClassPathGrid compact />
         <WorldRouteJourney />

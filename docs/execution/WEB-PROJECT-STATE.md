@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90 WEB_CLOSED.
+
+Current decision: v1.90 FE public start real onboarding screenshot gallery slice closed; continue FE/browser UI work next and keep using real LinhGioiOnline images where useful. Entire program is NOT production-complete.
+
+- v1.90 copies three lightweight Dong Mon onboarding PNG screenshots from the sibling LinhGioiOnline repo into `apps/web/public/game-art/onboarding`.
+- `/start` now presents those screenshots as static reference art with accessible names, compact captions, desktop 3-column layout and mobile 1-column layout.
+- v1.90 evidence: RED browser/e2e reproduced missing real screenshot gallery; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow/column-layout PASS; visual metric review completed with pageOverflow 0.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.91.
+
 Current phase: WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-v1.89 WEB_CLOSED.
 
 Current decision: v1.89 FE public remaining-route heading-priority slice closed; continue FE/browser UI work next, including real image/design usage from LinhGioiOnline where useful. Entire program is NOT production-complete.
