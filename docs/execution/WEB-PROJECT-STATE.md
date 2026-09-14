@@ -1,3 +1,14 @@
+Current phase: WEB-FE-DESIGN-TARGET-VISIBLE-NEW-TAB-CUE-v1.107 WEB_CLOSED.
+
+Current decision: v1.107 FE design-target visible new-tab cue slice closed. Public, Portal and Ops Design Target First links now show a visible `↗` cue while preserving accessible new-tab labels and registered v1.95 visual targets. Entire program is NOT production-complete.
+
+- v1.107 updates shared `DesignTargetReference` in `packages/ui` instead of app-local link decorations.
+- v1.107 uses existing v1.95 Component/state, Public Core/Public Service, Player Portal and Ops/Admin design targets; no new design target was required and no stale target was replaced.
+- v1.107 evidence: RED browser/e2e reproduced missing visible cue; Playwright desktop/mobile visible new-tab cue PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.108.
+
 Current phase: WEB-FE-DESIGN-TARGET-ACTIONS-GROUP-v1.106 WEB_CLOSED.
 
 Current decision: v1.106 FE design-target actions group slice closed. Public, Portal and Ops Design Target First primary/companion links now sit inside a named `role="group"` action set while preserving registered v1.95 visual targets. Entire program is NOT production-complete.

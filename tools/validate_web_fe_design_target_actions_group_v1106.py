@@ -70,7 +70,7 @@ def check_tests_docs() -> None:
         "Current phase: WEB-FE-DESIGN-TARGET-ACTIONS-GROUP-v1.106 WEB_CLOSED",
         "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.107",
     ])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.107", "Design Target First", "browser/e2e"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["Design Target First", "browser/e2e"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-DESIGN-TARGET-ACTIONS-GROUP-v1.106 | WEB-FE | WEB_CLOSED |"])
 
 def main() -> int:

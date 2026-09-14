@@ -501,7 +501,8 @@ export function DesignTargetReference({ label, href, scope, note, className, com
       </div>
       <div className="lgo-design-target-reference-actions" role="group" aria-label={`Design targets — ${scope}`}>
         <a className="lgo-design-target-reference-link" href={href} target="_blank" rel="noopener noreferrer" aria-label={designTargetNewTabLabel(label)}>
-          {label}
+          <span>{label}</span>
+          <span className="lgo-design-target-reference-link-cue" aria-hidden="true">↗</span>
         </a>
         {companionTargets.map((target) => (
           <a
@@ -512,7 +513,8 @@ export function DesignTargetReference({ label, href, scope, note, className, com
             aria-label={designTargetNewTabLabel(target.label)}
             key={`${target.href}:${target.label}`}
           >
-            {target.label}
+            <span>{target.label}</span>
+            <span className="lgo-design-target-reference-link-cue" aria-hidden="true">↗</span>
           </a>
         ))}
       </div>
