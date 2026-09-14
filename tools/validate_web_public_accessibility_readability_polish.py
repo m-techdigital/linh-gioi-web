@@ -47,7 +47,7 @@ def main() -> int:
             "lgo-skip-link", "#main-content", "id=\"main-content\""
         ],
         "apps/web/src/app/accessibility/page.tsx": [
-            "Accessibility và readability cho người chơi mới", "No formal WCAG audit", "no legal compliance claim", "no personal settings backend"
+            "Dễ đọc và dễ thao tác", "Chưa có audit WCAG chính thức", "chưa có claim pháp lý", "chưa có thiết lập cá nhân"
         ],
         "apps/web/src/app/globals.css": [
             "WEB v1.15 accessibility / readability polish", "lgo-skip-link", "focus-visible", "lgo-accessibility-cta"

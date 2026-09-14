@@ -15,63 +15,93 @@ import { RouteContinuityCta } from "../../components/PublicRouteContinuitySectio
 import { PlayerTrustReleaseCta } from "../../components/PublicPlayerTrustReleaseSections";
 import { WebAppShell } from "../../components/WebAppShell";
 
-export const metadata = { title: "Accessibility / readability" };
+const readabilitySteps = [
+  {
+    badge: "Bước 1",
+    title: "Đọc tiêu đề trước",
+    text: "Mỗi route phải nói rõ câu hỏi chính và trạng thái thật trước khi người chơi bấm CTA.",
+  },
+  {
+    badge: "Bước 2",
+    title: "Theo thứ tự focus",
+    text: "Keyboard và tab order đi từ skip link, hero, hành động chính rồi mới tới các bảng chi tiết.",
+  },
+  {
+    badge: "Bước 3",
+    title: "Giữ mobile dễ quét",
+    text: "Copy, thẻ và nhịp cuộn cần ngắn để người chơi không nhầm với dashboard vận hành.",
+  },
+];
+
+export const metadata = { title: "Dễ đọc và dễ thao tác" };
 
 export default function AccessibilityReadabilityPage() {
   return (
     <WebAppShell>
-      <Stack>
+      <Stack className="lgo-player-facing-stack lgo-service-compact-proof-page lgo-accessibilitypage-stack">
         <GameCard className="lgo-detail-hero-card lgo-readable-hero-card">
-          <StatusBadge tone="spirit">WEB v1.15 accessibility / readability polish</StatusBadge>
-          <span className="lgo-card-kicker">No formal WCAG audit · no legal compliance claim · no personal settings backend</span>
-          <h1>Accessibility và readability cho người chơi mới</h1>
+          <StatusBadge tone="spirit">WEB v1.152 · dễ đọc public</StatusBadge>
+          <span className="lgo-card-kicker">Chưa có audit WCAG chính thức · chưa có claim pháp lý · chưa có thiết lập cá nhân</span>
+          <h1>Dễ đọc và dễ thao tác</h1>
           <p className="lgo-hero-lead">
-            Trang này giúp người chơi đọc web rõ hơn: bắt đầu từ đâu, CTA nào quan trọng, route nào trả lời câu hỏi nào,
-            và boundary nào cần nhớ trước khi kỳ vọng download, account, combat hoặc support backend thật.
+            Trang này giúp người chơi mới đọc website rõ hơn: bắt đầu từ đâu, bấm gì trước, ranh giới nào cần nhớ và cách tab qua các hành động chính.
           </p>
           <p>
-            Đây là product web polish. Runtime/browser/e2e chỉ là guardrail nội bộ; nội dung chính là heading clarity,
-            mobile scannability, focus order và route-level reading comfort.
+            Đây là hướng dẫn tĩnh cho public web. Chưa công bố audit WCAG chính thức, chứng nhận pháp lý,
+            backend thiết lập cá nhân hoặc tuỳ biến truy cập theo tài khoản.
           </p>
           <div className="lgo-product-first-actions">
-            <LinkButton href="/start" tone="spirit">Start hub</LinkButton>
-            <LinkButton href="/download/trust" tone="gold">Download trust</LinkButton>
-            <LinkButton href="/support/safety" tone="jade">Safety support</LinkButton>
-            <LinkButton href="/performance" tone="gold">Hiệu năng/copy budget</LinkButton>
+            <LinkButton href="/start" tone="spirit">Bắt đầu</LinkButton>
+            <LinkButton href="/support/safety" tone="jade">Hỗ trợ an toàn</LinkButton>
+            <LinkButton href="/performance" tone="gold">Hiệu năng</LinkButton>
           </div>
         </GameCard>
-        <PlayerTrustReleaseCta />
-        <figure className="lgo-accessibility-design-board lgo-panel" aria-label="Accessibility readability route map reference art">
+
+        <figure className="lgo-accessibility-design-board lgo-panel" aria-label="Bảng lộ trình đọc dễ thao tác">
           <img
             src="/game-art/design-boards/accessibility-readability-route-map.svg"
-            alt="Accessibility readability route map board"
+            alt="Bảng lộ trình đọc dễ thao tác Linh Giới"
             loading="eager"
           />
           <figcaption>
-            <StatusBadge tone="spirit">Game reference art</StatusBadge>
-            <strong>Readability là route map rõ ràng, không phải claim audit pháp lý.</strong>
+            <StatusBadge tone="spirit">Board tham chiếu</StatusBadge>
+            <strong>Dễ đọc là lộ trình rõ ràng: tiêu đề đúng, focus đúng, CTA không gây hiểu nhầm.</strong>
             <span>
-              Board này dùng visual thật từ LinhGioiOnline để nối heading clarity, focus order, mobile scannability
-              và non-claim gần CTA mà không claim formal WCAG audit hoặc personal settings backend.
+              Board này dùng route-map từ LinhGioiOnline để nối tiêu đề, thứ tự focus, mật độ mobile và ranh giới gần CTA
+              trước khi có audit truy cập chính thức hoặc thiết lập cá nhân thật.
             </span>
           </figcaption>
         </figure>
-        <SectionHeading eyebrow="Readability path" title="Một trang để kiểm tra cách người chơi đọc website">
-          Ưu tiên scan nhanh trên mobile, focus order rõ cho keyboard, CTA text cụ thể và non-claim gần các surface dễ hiểu nhầm.
-        </SectionHeading>
+
+        <section className="lgo-accessibility-route-board lgo-panel" aria-label="Lộ trình đọc dễ thao tác đầu trang">
+          <SectionHeading eyebrow="Lộ trình đọc" title="Một trang để kiểm tra cách người chơi đọc website">
+            Ưu tiên scan nhanh trên mobile, focus order rõ cho keyboard, CTA cụ thể và ranh giới gần các surface dễ hiểu nhầm.
+          </SectionHeading>
+          <div className="lgo-accessibility-step-grid">
+            {readabilitySteps.map((step) => (
+              <article key={step.title} className="lgo-accessibility-step-card">
+                <StatusBadge tone="spirit">{step.badge}</StatusBadge>
+                <h2>{step.title}</h2>
+                <p>{step.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <AccessibilityReadabilityPrincipleBoard />
         <RouteReadabilityBoard />
         <MobileScannabilityBoard />
         <FocusOrderBoard />
         <MobileDensityBudgetBoard />
+        <PlayerTrustReleaseCta />
         <PerformanceBudgetCta />
         <AccessibilityReadabilityCta />
         <ContentIaStartCta />
         <RouteContinuityCta />
         <DownloadTrustCta />
         <PlayerSafetySupportCta />
-              <ClosedTesterInformationPackCta />
-        </Stack>
+        <ClosedTesterInformationPackCta />
+      </Stack>
     </WebAppShell>
   );
 }

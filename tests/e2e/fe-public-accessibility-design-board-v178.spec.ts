@@ -22,7 +22,7 @@ async function collectAccessibilityBoardMetrics(page: Page): Promise<Accessibili
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const image = document.querySelector<HTMLImageElement>('img[alt="Accessibility readability route map board"]');
+    const image = document.querySelector<HTMLImageElement>('img[alt="Bảng lộ trình đọc dễ thao tác Linh Giới"]');
     const caption = image?.closest("figure")?.querySelector("figcaption");
     return {
       pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -41,8 +41,8 @@ async function collectAccessibilityBoardMetrics(page: Page): Promise<Accessibili
 test.describe("public accessibility readability design board", () => {
   test("/accessibility renders the route-map visual without mobile overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/accessibility`);
-    await expect(page.getByRole("heading", { name: "Accessibility và readability cho người chơi mới" })).toBeVisible();
-    await expect(page.getByRole("img", { name: "Accessibility readability route map board" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Dễ đọc và dễ thao tác" })).toBeVisible();
+    await expect(page.getByRole("img", { name: "Bảng lộ trình đọc dễ thao tác Linh Giới" })).toBeVisible();
 
     const metrics = await collectAccessibilityBoardMetrics(page);
     expect(metrics.board, "accessibility board metrics").not.toBeNull();

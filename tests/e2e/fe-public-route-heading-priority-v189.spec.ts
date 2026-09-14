@@ -3,7 +3,7 @@ import { test, expect, type Page } from "@playwright/test";
 
 const web = process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
 const routes = [
-  { path: "/accessibility", title: "Accessibility và readability cho người chơi mới" },
+  { path: "/accessibility", title: "Dễ đọc và dễ thao tác" },
   { path: "/community", title: "Cộng đồng Linh Giới" },
   { path: "/game/loop", title: "World gameplay loop" },
   { path: "/performance", title: "Hiệu năng và ngân sách nội dung" },

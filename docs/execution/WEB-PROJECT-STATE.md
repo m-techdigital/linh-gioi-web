@@ -1,3 +1,16 @@
+Current phase: WEB-FE-ACCESSIBILITY-REAL-UI-LAYOUT-v1.152 WEB_CLOSED.
+
+Current decision: v1.152 closed the active `/accessibility` page slice as a real browser UI/UX Layout task. The existing Public Service design target remained the guardrail; work focused on the rendered page and shared Base First layout. Entire program is NOT production-complete.
+
+- v1.152 did not create a new design batch because the registered Public Service target was sufficient for comparison.
+- v1.152 replaced the old English-heavy first-flow with Vietnamese `Dễ đọc và dễ thao tác`, a compact boundary, the route-map board and a three-step readability path.
+- v1.152 moved accessibility board/layout CSS out of `apps/web/src/app/globals.css` and into shared `packages/ui/src/service-layout.css`.
+- v1.152 evidence: browser/e2e desktop/mobile v1.152 and historical v1.78/v1.89 compatibility; source validator; Web/content/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/accessibility-desktop-v1152.png` and `/tmp/accessibility-mobile-v1152.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.153. Select `/roadmap` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-PERFORMANCE-REAL-UI-LAYOUT-v1.151 WEB_CLOSED.
 
 Current decision: v1.151 closed the active `/performance` page slice as a real browser UI/UX Layout task. The existing Public Service design target remained the guardrail; work focused on the rendered page and shared Base First layout. Entire program is NOT production-complete.

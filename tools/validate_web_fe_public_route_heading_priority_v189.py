@@ -19,11 +19,11 @@ def require_order(rel: str, first: str, second: str) -> None:
     a, b = text.find(first), text.find(second)
     if a < 0 or b < 0 or a > b: fail(f"{rel}: expected {first} before {second}")
 def check_routes() -> None:
-    require_order("apps/web/src/app/accessibility/page.tsx", "<h1>Accessibility và readability cho người chơi mới</h1>", "<PlayerTrustReleaseCta />")
+    require_order("apps/web/src/app/accessibility/page.tsx", "<h1>Dễ đọc và dễ thao tác</h1>", "<PlayerTrustReleaseCta />")
     require_order("apps/web/src/app/community/page.tsx", "<h1>Cộng đồng Linh Giới</h1>", "<PlayerTrustReleaseCta />")
     require_order("apps/web/src/app/game/loop/page.tsx", "<h1>World gameplay loop</h1>", "<PlayerTrustReleaseCta />")
     require_order("apps/web/src/app/performance/page.tsx", "<h1>Hiệu năng và ngân sách nội dung</h1>", "<PlayerTrustReleaseCta />")
-    require_text("apps/web/src/app/accessibility/page.tsx", ["No formal WCAG audit", "no legal compliance claim", "no personal settings backend"])
+    require_text("apps/web/src/app/accessibility/page.tsx", ["Chưa có audit WCAG chính thức", "chưa có claim pháp lý", "chưa có thiết lập cá nhân"])
     require_text("apps/web/src/app/community/page.tsx", ["Chưa có trò chuyện · chưa có diễn đàn · chưa có bang hội", "chưa mở trò chuyện, diễn đàn, bang hội", "điều phối thật"])
     require_text("apps/web/src/app/game/loop/page.tsx", ["without claiming live combat", "inventory persistence", "account integration"])
     require_text("apps/web/src/app/performance/page.tsx", ["Chưa có đo Core Web Vitals", "chưa có chứng nhận Lighthouse", "chưa có CDN ảnh riêng"])
