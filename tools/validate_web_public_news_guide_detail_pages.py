@@ -86,17 +86,17 @@ def main() -> int:
     page_expectations = {
         "apps/web/src/app/news/page.tsx": ["WEB v1.9 news detail UX", "contentDetailSections"],
         "apps/web/src/app/news/[slug]/page.tsx": ["WEB v1.9 article detail", "ArticleDetailDepth", "DetailPageNextSteps"],
-        "apps/web/src/app/guides/page.tsx": ["WEB v1.9 guide detail UX", "href={`/guides/${entry.slug}`}"],
-        "apps/web/src/app/guides/[slug]/page.tsx": ["WEB v1.9 guide detail", "GuideDetailDepth", "generateStaticParams"],
-        "apps/web/src/app/download/page.tsx": ["DownloadExplanationDepth", "WEB v1.9 download explanation"],
-        "apps/web/src/app/status/page.tsx": ["StatusExplanationDepth", "WEB v1.9 status transparency"],
+        "apps/web/src/app/guides/page.tsx": ["Hướng dẫn cho Người Thức Tỉnh", "href={`/guides/${entry.slug}`}"],
+        "apps/web/src/app/guides/[slug]/page.tsx": ["WEB v1.155 · hướng dẫn gameplay", "GuideDetailDepth", "generateStaticParams"],
+        "apps/web/src/app/download/page.tsx": ["DownloadExplanationDepth"],
+        "apps/web/src/app/status/page.tsx": ["StatusExplanationDepth"],
     }
     for rel, markers in page_expectations.items():
         for marker in markers:
             require_text(rel, marker)
 
     for marker in ["lgo-article-depth", "lgo-guide-detail-step", "lgo-detail-next-steps", "WEB v1.9 public news / guide detail pages"]:
-        require_text("apps/web/src/app/globals.css", marker)
+        require_text("packages/ui/src/service-layout.css", marker)
 
     fixtures = read("packages/content/src/fixtures.ts")
     content_entries_match = re.search(r"export const contentEntries: ContentEntry\[\] = \[([\s\S]*?)\n\];\n\nexport const downloadBuilds", fixtures)

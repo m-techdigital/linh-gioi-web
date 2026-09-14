@@ -222,6 +222,7 @@ VALIDATORS = [
     "validate_web_fe_accessibility_real_ui_layout_v1152.py",
     "validate_web_fe_roadmap_real_ui_layout_v1153.py",
     "validate_web_fe_game_loop_real_ui_layout_v1154.py",
+    "validate_web_fe_guide_world_loop_real_ui_layout_v1155.py",
 ]
 def main() -> int:
     check_forbidden_roots(); check_no_app_api_routes(); check_no_generated_artifacts(); require_non_claims()
@@ -275,7 +276,7 @@ def main() -> int:
         "LGO_WEB_PUBLIC_UX_CONTENT_POLISH_READY_v1.6",
         "LGO_WEB_RUNTIME_BROWSER_E2E_MATRIX_PASSED_v1.5",
     ])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.155")
+    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.156")
     require_text("docs/execution/WEB-NEXT-ACTION.md", "browser/e2e")
     for phrase in ["No independent backend", "No CMS", "No production deployment", "No payment/shop/economy"]:
         require_text("docs/execution/WEB-NON-CLAIMS.md", phrase)
@@ -297,11 +298,11 @@ def main() -> int:
         if result != 0:
             fail(f"validator failed: {validator}")
 
-    require_text("docs/execution/WEB-PROJECT-STATE.md", "Current phase: WEB-FE-GAME-LOOP-REAL-UI-LAYOUT-v1.154 WEB_CLOSED")
-    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.155")
+    require_text("docs/execution/WEB-PROJECT-STATE.md", "Current phase: WEB-FE-GUIDE-WORLD-LOOP-REAL-UI-LAYOUT-v1.155 WEB_CLOSED")
+    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.156")
     require_text("docs/execution/WEB-NEXT-ACTION.md", "Real Browser UI/UX Layout First")
     require_text("docs/execution/WEB-NEXT-ACTION.md", "Base UI/UX Layout")
-    require_text("docs/execution/WEB-TASK-LEDGER.md", "| WEB-FE-GAME-LOOP-REAL-UI-LAYOUT-v1.154 | WEB-FE | WEB_CLOSED |")
+    require_text("docs/execution/WEB-TASK-LEDGER.md", "| WEB-FE-GUIDE-WORLD-LOOP-REAL-UI-LAYOUT-v1.155 | WEB-FE | WEB_CLOSED |")
     return finish("WEB CURRENT STATE")
 
 if __name__ == "__main__":

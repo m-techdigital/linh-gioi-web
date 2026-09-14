@@ -739,9 +739,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "world-gameplay-loop-guide",
     category: "guides",
-    title: "World loop: từ Spirit Gate tới Training Stone",
-    summary: "Guide giúp người chơi hiểu loop hiện tại: vào cổng, gặp Gate Keeper, tương tác Training Stone, đọc status/download trust và gửi feedback đúng phạm vi.",
-    body: "Đi theo /game/loop để hiểu cảm giác gameplay đang được mô tả. Đây là guide public tĩnh, không phải quest database, combat tutorial hoặc live progression system.",
+    title: "Vòng lặp thế giới: từ Spirit Gate tới Training Stone",
+    summary: "Guide giúp người chơi hiểu vòng lặp hiện tại: vào cổng, gặp Gate Keeper, tương tác Training Stone, đọc trạng thái/tin cậy tải game và gửi phản hồi đúng phạm vi.",
+    body: "Đi theo /game/loop để hiểu cảm giác gameplay đang được mô tả. Đây là hướng dẫn công khai tĩnh, không phải cơ sở dữ liệu nhiệm vụ, hướng dẫn chiến đấu thật hoặc hệ thống tiến trình vận hành.",
     publishedAt: "2026-09-05T15:25:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -1200,33 +1200,33 @@ export const guideDetailSteps: GuideDetailStep[] = [
     slug: "world-gameplay-loop-guide",
     step: "01",
     title: "Vào Spirit Gate bằng kỳ vọng đúng",
-    action: "Đọc /game/loop để hiểu loop world hiện tại là entry explanation, chưa phải combat release.",
-    expectedResult: "Người chơi biết mục tiêu là cảm nhận tone, scene anchors và next reading path.",
-    blockedScope: "No combat damage, HP, loot, inventory/economy or quest database."
+    action: "Đọc /game/loop để hiểu vòng lặp thế giới hiện tại là phần giải thích nhập môn, chưa phải bản phát hành chiến đấu.",
+    expectedResult: "Người chơi biết mục tiêu là cảm nhận tông thế giới, điểm neo cảnh và đường đọc tiếp theo.",
+    blockedScope: "Chưa có sát thương chiến đấu, HP, loot, túi đồ, kinh tế hoặc cơ sở dữ liệu nhiệm vụ."
   },
   {
     slug: "world-gameplay-loop-guide",
     step: "02",
     title: "Gặp Gate Keeper như onboarding guide",
-    action: "Dùng Gate Keeper như lời dẫn để đi từ world story sang beginner guide và download trust.",
-    expectedResult: "Người chơi hiểu NPC hiện là narrative/onboarding anchor, không phải live quest giver.",
-    blockedScope: "No persisted quest state, no NPC dialogue backend, no account-aware progression."
+    action: "Dùng Gate Keeper như lời dẫn để đi từ câu chuyện thế giới sang guide nhập môn và tin cậy tải game.",
+    expectedResult: "Người chơi hiểu NPC hiện là điểm neo kể chuyện và nhập môn, không phải nhân vật giao nhiệm vụ vận hành.",
+    blockedScope: "Chưa có trạng thái nhiệm vụ lưu trữ, backend hội thoại NPC hoặc tiến trình theo tài khoản."
   },
   {
     slug: "world-gameplay-loop-guide",
     step: "03",
     title: "Training Stone là vòng luyện tập an toàn",
-    action: "Đọc Training Stone như objective loop nhẹ: tương tác, feedback, biết blocker rồi quay lại roadmap/status.",
-    expectedResult: "Người chơi có kỳ vọng đúng về non-combat training loop và biết gửi feedback nào có ích.",
-    blockedScope: "No damage formula, skill economy, item drops, PvP, boss or live event reward."
+    action: "Đọc Training Stone như vòng mục tiêu nhẹ: tương tác, phản hồi, biết điểm bị chặn rồi quay lại roadmap/trạng thái.",
+    expectedResult: "Người chơi có kỳ vọng đúng về vòng luyện tập chưa chiến đấu và biết gửi phản hồi hữu ích.",
+    blockedScope: "Chưa có công thức sát thương, kinh tế kỹ năng, rơi đồ, PvP, boss hoặc thưởng sự kiện vận hành."
   },
   {
     slug: "world-gameplay-loop-guide",
     step: "04",
     title: "Rời loop qua Status và Support",
-    action: "Kiểm tra Status, Download Trust và Support trước khi chờ build hoặc góp ý.",
-    expectedResult: "Người chơi hiểu release artifact và backend contract vẫn là gate riêng.",
-    blockedScope: "No public artifact, no ticket backend, no production auth."
+    action: "Kiểm tra Trạng thái, Tin cậy tải game và Hỗ trợ trước khi chờ bản build hoặc góp ý.",
+    expectedResult: "Người chơi hiểu artifact phát hành và hợp đồng máy chủ vẫn là gate riêng.",
+    blockedScope: "Chưa có artifact công khai, backend ticket hoặc xác thực vận hành."
   },
 
   {

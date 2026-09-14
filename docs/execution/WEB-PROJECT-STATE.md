@@ -1,3 +1,16 @@
+Current phase: WEB-FE-GUIDE-WORLD-LOOP-REAL-UI-LAYOUT-v1.155 WEB_CLOSED.
+
+Current decision: v1.155 closed the active `/guides/world-gameplay-loop-guide` page slice as a real browser UI/UX Layout task. The existing guide/detail target and current gameplay-loop scenario remained the design guardrail; work focused on the rendered guide page, first-heading order, Vietnamese scenario boundaries and shared Base First layout. Entire program is NOT production-complete.
+
+- v1.155 did not create a new design batch because the existing public guide/detail target was sufficient for comparison after minimal Vietnamese alignment in the rendered page.
+- v1.155 moved guide detail content before generic CTAs so the page starts with `Vòng lặp thế giới: từ Spirit Gate tới Training Stone` and guide steps.
+- v1.155 moved guide detail layout CSS out of `apps/web/src/app/globals.css` and into shared `packages/ui/src/service-layout.css`.
+- v1.155 evidence: browser/e2e desktop/mobile v1.155; source validator; Web/content/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/guide-world-loop-desktop-v1155.png` and `/tmp/guide-world-loop-mobile-v1155.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.156. Select `/guides` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-GAME-LOOP-REAL-UI-LAYOUT-v1.154 WEB_CLOSED.
 
 Current decision: v1.154 closed the active `/game/loop` page slice as a real browser UI/UX Layout task. The existing gameplay-loop board remained the design guardrail; work focused on the rendered page, first-fold order, Vietnamese game-scenario boundaries and shared Base First layout. Entire program is NOT production-complete.

@@ -30,36 +30,41 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
 
   return (
     <WebAppShell>
-      <Stack>
-        <ReleaseReadinessHubCta />
-        <FaqHelpfulnessCta />
-        <PlayerTrustReleaseCta />
-        <GameCard className="lgo-detail-hero-card">
-          <StatusBadge tone="jade">WEB v1.9 guide detail</StatusBadge>
-          <span className="lgo-card-kicker">{entry.publishedAt}</span>
+      <Stack className="lgo-player-facing-stack lgo-service-compact-proof-page lgo-guidedetailpage-stack">
+        <GameCard className="lgo-detail-hero-card lgo-guide-detail-hero-card">
+          <StatusBadge tone="jade">WEB v1.155 · hướng dẫn gameplay</StatusBadge>
+          <span className="lgo-card-kicker">Guide tĩnh · chưa có hệ thống wiki · chưa có tiến trình tài khoản</span>
           <h1>{entry.title}</h1>
           <p className="lgo-hero-lead">{entry.summary}</p>
           <p>{entry.body}</p>
-          <p><strong>Boundary:</strong> PROVISIONAL_WEB_FIXTURE · NOT_CANONICAL_BACKEND_CONTRACT · no live guide/wiki backend.</p>
+          <div className="lgo-product-first-actions">
+            <LinkButton href="/game/loop" tone="spirit">Xem vòng lặp</LinkButton>
+            <LinkButton href="/status" tone="gold">Trạng thái chơi</LinkButton>
+            <LinkButton href="/download/trust" tone="jade">Tin cậy tải game</LinkButton>
+          </div>
+          <p className="lgo-guide-detail-boundary"><strong>Ranh giới:</strong> guide này là nội dung công khai tĩnh, không phải cơ sở dữ liệu nhiệm vụ, wiki live, ticket support hoặc hợp đồng backend được chấp nhận.</p>
         </GameCard>
         <GuideDetailDepth slug={entry.slug} />
-        <RouteContinuityCta />
         <WorldGameplayLoopCta />
+        <RouteContinuityCta />
+        <PlayerTrustReleaseCta />
+        <FaqHelpfulnessCta />
+        <ReleaseReadinessHubCta />
         <PlayerSafetySupportCta />
         <AccessibilityReadabilityCta />
         <PerformanceBudgetCta />
         <section className="lgo-action-band">
           <div>
             <h2>Tiếp tục đọc theo hướng người chơi</h2>
-            <p>Guide detail giúp người chơi hiểu trạng thái thật, không thay thế gameplay wiki hoặc support backend.</p>
+            <p>Trang hướng dẫn giúp người chơi hiểu trạng thái thật, không thay thế wiki gameplay hoặc backend hỗ trợ.</p>
           </div>
           <div className="lgo-product-first-actions">
             <LinkButton href="/guides" tone="jade">Tất cả hướng dẫn</LinkButton>
-            <LinkButton href="/support" tone="gold">Support FAQ</LinkButton>
+            <LinkButton href="/support" tone="gold">FAQ hỗ trợ</LinkButton>
           </div>
         </section>
-              <ClosedTesterInformationPackCta />
-        </Stack>
+        <ClosedTesterInformationPackCta />
+      </Stack>
     </WebAppShell>
   );
 }

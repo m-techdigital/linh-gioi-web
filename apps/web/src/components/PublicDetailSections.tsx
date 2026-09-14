@@ -51,8 +51,8 @@ export function GuideDetailDepth({ slug }: { slug: string }) {
 
   return (
     <section className="lgo-panel lgo-guide-detail-depth" aria-labelledby="guide-detail-depth-heading">
-      <SectionHeading eyebrow="WEB v1.9 guide detail" title="Các bước guide có kết quả mong đợi và blocked scope">
-        Guide detail là static public content. Không claim wiki backend, quest database, support ticket hoặc entitlement.
+      <SectionHeading eyebrow="Chi tiết hướng dẫn" title="Các bước guide có kết quả mong đợi và phạm vi tạm khóa">
+        Trang hướng dẫn là nội dung public tĩnh. Không công bố wiki vận hành, cơ sở dữ liệu nhiệm vụ, ticket hỗ trợ hoặc quyền tải game.
       </SectionHeading>
       <div id="guide-detail-depth-heading" className="lgo-guide-detail-steps">
         {steps.map((step) => (

@@ -2347,3 +2347,253 @@
   }
 }
 
+/* WEB v1.9 public news / guide detail pages */
+.lgo-detail-hero-card {
+  display: grid;
+  gap: var(--lgo-space-md);
+  border-color: rgba(245,200,107,.32);
+  background:
+    radial-gradient(circle at top right, rgba(245,200,107,.10), transparent 18rem),
+    linear-gradient(145deg, rgba(13,27,46,.94), rgba(7,17,31,.88));
+}
+
+.lgo-article-depth,
+.lgo-guide-detail-depth,
+.lgo-download-explainers,
+.lgo-status-explainers {
+  display: grid;
+  gap: var(--lgo-space-lg);
+}
+
+.lgo-article-depth-grid,
+.lgo-guide-detail-steps {
+  display: grid;
+  gap: var(--lgo-space-md);
+}
+
+.lgo-article-depth-card,
+.lgo-guide-detail-step {
+  border: 1px solid rgba(49,216,232,.18);
+  border-radius: var(--lgo-radius-lg);
+  background: linear-gradient(145deg, rgba(9,29,52,.68), rgba(7,17,31,.72));
+  padding: var(--lgo-space-lg);
+}
+
+.lgo-article-depth-card small,
+.lgo-guide-detail-step small {
+  display: block;
+  margin-top: var(--lgo-space-sm);
+  color: var(--lgo-color-warm-gold);
+  line-height: 1.55;
+}
+
+.lgo-guide-detail-step {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  align-items: start;
+  gap: var(--lgo-space-md);
+}
+
+.lgo-guide-detail-step > span {
+  display: inline-grid;
+  place-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: var(--lgo-radius-pill);
+  color: #07111f;
+  background: linear-gradient(135deg, var(--lgo-color-spirit-cyan), var(--lgo-color-warm-gold));
+  font-weight: 900;
+}
+
+.lgo-detail-next-steps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  align-items: center;
+  gap: var(--lgo-space-lg);
+  border: 1px solid rgba(53,198,163,.28);
+  border-radius: var(--lgo-radius-xl);
+  padding: var(--lgo-space-xl);
+  background:
+    radial-gradient(circle at bottom right, rgba(53,198,163,.14), transparent 18rem),
+    rgba(7,17,31,.84);
+}
+
+@media (max-width: 760px) {
+  .lgo-guide-detail-step { grid-template-columns: 1fr; }
+  .lgo-detail-next-steps { grid-template-columns: 1fr; }
+}
+
+/* Shared guide detail real layout for public reading surfaces. */
+
+.lgo-guide-detail-hero-card {
+  scroll-margin-top: 1rem;
+}
+
+.lgo-guidedetailpage-stack {
+  gap: 1rem;
+}
+
+.lgo-guidedetailpage-stack .lgo-detail-hero-card {
+  padding: clamp(1rem, 2.2vw, 1.55rem);
+}
+
+.lgo-guidedetailpage-stack .lgo-detail-hero-card h1 {
+  font-size: clamp(2.05rem, 4vw, 3.45rem);
+  line-height: .94;
+  max-width: 15ch;
+}
+
+.lgo-guidedetailpage-stack .lgo-detail-hero-card p {
+  max-width: 78ch;
+}
+
+.lgo-guide-detail-boundary {
+  border: 1px solid rgba(245,200,107,.20);
+  border-radius: var(--lgo-radius-lg);
+  background: rgba(245,200,107,.06);
+  color: var(--lgo-color-text-muted);
+  padding: .65rem .75rem;
+}
+
+.lgo-guidedetailpage-stack .lgo-guide-detail-depth {
+  padding: .9rem;
+}
+
+.lgo-guidedetailpage-stack .lgo-guide-detail-depth .lgo-section-heading {
+  max-width: 74ch;
+}
+
+.lgo-guidedetailpage-stack .lgo-guide-detail-steps {
+  gap: .62rem;
+}
+
+.lgo-guidedetailpage-stack .lgo-guide-detail-step {
+  gap: .65rem;
+  padding: .72rem;
+}
+
+.lgo-guidedetailpage-stack .lgo-guide-detail-step h3 {
+  margin-block: 0 .18rem;
+  font-size: .98rem;
+  line-height: 1.1;
+}
+
+.lgo-guidedetailpage-stack .lgo-guide-detail-step p,
+.lgo-guidedetailpage-stack .lgo-guide-detail-step small {
+  margin-block: .18rem 0;
+  font-size: .78rem;
+  line-height: 1.28;
+}
+
+@media (min-width: 981px) {
+  .lgo-guidedetailpage-stack {
+    gap: .82rem;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-detail-hero-card {
+    gap: .52rem;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-detail-hero-card .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 44rem;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-guide-detail-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lgo-guidedetailpage-stack .lgo-guide-detail-step p,
+  .lgo-guidedetailpage-stack .lgo-guide-detail-step small {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-guide-detail-step p {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-guide-detail-step small {
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .lgo-guidedetailpage-stack {
+    gap: .78rem;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-detail-hero-card {
+    gap: .48rem;
+    padding: .9rem;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-detail-hero-card h1 {
+    font-size: clamp(1.9rem, 7.75vw, 2.05rem);
+  }
+
+  .lgo-guidedetailpage-stack .lgo-detail-hero-card p,
+  .lgo-guidedetailpage-stack .lgo-detail-hero-card .lgo-hero-lead {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: .88rem;
+    line-height: 1.34;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-detail-hero-card .lgo-hero-lead,
+  .lgo-guidedetailpage-stack .lgo-detail-hero-card > p:not(.lgo-guide-detail-boundary) {
+    -webkit-line-clamp: 3;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-guide-detail-boundary {
+    -webkit-line-clamp: 3;
+    padding: .55rem .62rem;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-detail-hero-card .lgo-link-button {
+    min-height: 34px;
+    padding-block: .32rem;
+    padding-inline: .55rem;
+    font-size: .72rem;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-guide-detail-depth {
+    padding: .68rem;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-guide-detail-depth .lgo-section-heading p,
+  .lgo-guidedetailpage-stack .lgo-guide-detail-step p,
+  .lgo-guidedetailpage-stack .lgo-guide-detail-step small {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: .72rem;
+    line-height: 1.24;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-guide-detail-depth .lgo-section-heading p,
+  .lgo-guidedetailpage-stack .lgo-guide-detail-step p,
+  .lgo-guidedetailpage-stack .lgo-guide-detail-step small {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-guide-detail-step {
+    grid-template-columns: 2.1rem 1fr;
+    gap: .48rem;
+    padding: .56rem;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-guide-detail-step > span {
+    width: 2rem;
+    height: 2rem;
+    font-size: .76rem;
+  }
+
+  .lgo-guidedetailpage-stack .lgo-guide-detail-step h3 {
+    font-size: .86rem;
+  }
+}
+
