@@ -80,18 +80,26 @@ export default function SupportHelpPage() {
           </div>
         </section>
         <FaqDiscoveryGroupBoard />
-        <IssueCategoryRouteBoard />
-        <FaqHelpfulnessCta />
-        <FaqHelpfulnessPromptBoard />
-        <NoSearchBackendNoteBoard />
-        <ReleaseReadinessHubCta />
-        <PlayerTrustReleaseCta />
-        <ClosedTesterInformationPackCta />
-        <DownloadTrustCta />
-        <PlayerSafetySupportCta />
-        <AccessibilityReadabilityCta />
-        <PerformanceBudgetCta />
-        <RouteContinuityCta />
+        <details className="lgo-service-disclosure-stack lgo-support-help-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>Giữ đủ helpfulness prompt, no-search boundary, readiness, trust, download, safety, accessibility, performance và route continuity nhưng không ép toàn bộ proof board vào first-flow FAQ.</small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <IssueCategoryRouteBoard />
+            <FaqHelpfulnessCta />
+            <FaqHelpfulnessPromptBoard />
+            <NoSearchBackendNoteBoard />
+            <ReleaseReadinessHubCta />
+            <PlayerTrustReleaseCta />
+            <ClosedTesterInformationPackCta />
+            <DownloadTrustCta />
+            <PlayerSafetySupportCta />
+            <AccessibilityReadabilityCta />
+            <PerformanceBudgetCta />
+            <RouteContinuityCta />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );

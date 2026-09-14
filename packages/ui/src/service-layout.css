@@ -742,6 +742,10 @@
     font-size: .72rem;
   }
 
+  .lgo-service-compact-proof-page.lgo-supporthelppage-stack .lgo-support-help-expanded-evidence {
+    margin-top: -.35rem;
+  }
+
   .lgo-service-compact-proof-page .lgo-faq-discovery-board,
   .lgo-service-compact-proof-page .lgo-issue-category-board,
   .lgo-service-compact-proof-page .lgo-faq-helpfulness-board {
@@ -895,6 +899,17 @@
   }
 }
 
+/* Support-help tablet/mobile typography and board density guard for the current FAQ route-map page. */
+@media (max-width: 980px) {
+  .lgo-service-compact-proof-page.lgo-supporthelppage-stack .lgo-detail-hero-card h1 {
+    font-size: clamp(1.82rem, 7vw, 2.02rem);
+    line-height: .96;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supporthelppage-stack .lgo-support-help-design-board img {
+    max-height: 168px;
+  }
+}
 
 /* Shared support/safety safe-reporting layout. */
 .lgo-service-compact-proof-page .lgo-safety-support-design-board {

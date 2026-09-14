@@ -51,11 +51,11 @@ def main() -> int:
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-RELEASE-TESTER-PACK-REAL-UI-LAYOUT-v1.202 WEB_CLOSED',
-        'Select `/support/help`', '/tmp/release-tester-pack-desktop-v1202.png', '/tmp/release-tester-pack-mobile-v1202.png',
+        'Select `/support/safety`', '/tmp/release-tester-pack-desktop-v1202.png', '/tmp/release-tester-pack-mobile-v1202.png',
         'desktop hero bottom 401.98px', 'mobile hero bottom 573.80px', 'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.205', 'Current FE scope: select `/support/help`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.206', 'Current FE scope: select `/support/safety`',
         'Real Browser UI/UX Layout First', 'Base UI/UX Layout', 'CSS must be managed by owner/role'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
