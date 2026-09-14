@@ -105,8 +105,8 @@ def main() -> int:
         "/tmp/game-loop-mobile-v1154.png",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.173",
-        "Current FE scope: select `/guides/faq-search-helpfulness-guide`",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.174",
+        "Current FE scope: select `/events`",
         "Real Browser UI/UX Layout First",
         "Base UI/UX Layout",
     ])

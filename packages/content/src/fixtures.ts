@@ -902,9 +902,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "faq-search-helpfulness-guide",
     category: "guides",
-    title: "FAQ search and helpfulness guide",
-    summary: "Cách tìm câu trả lời theo nhóm vấn đề, chọn route hỗ trợ đúng và gửi feedback hữu ích mà không phụ thuộc search backend.",
-    body: "Bắt đầu từ /support/help để chọn nhóm câu hỏi: download, release, safety, tester pack, performance hoặc account/backend boundaries. Guide này không bật live search, chatbot support, ticket routing hoặc account lookup.",
+    title: "Tìm FAQ đúng nhóm và gửi feedback hữu ích",
+    summary: "Guide giúp người chơi tìm câu trả lời theo nhóm vấn đề, chọn route hỗ trợ đúng và gửi feedback cải thiện FAQ mà không phụ thuộc backend tìm kiếm.",
+    body: "Bắt đầu từ /support/help để chọn nhóm câu hỏi: tải game, phát hành, an toàn, gói tester, hiệu năng hoặc ranh giới tài khoản/backend. Guide này là chỉ dẫn tĩnh, không bật tìm kiếm trực tuyến, chatbot hỗ trợ, tuyến phiếu hỗ trợ hoặc tra cứu tài khoản.",
     publishedAt: "2026-09-05T23:58:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -1131,6 +1131,38 @@ export const guideDetailSteps: GuideDetailStep[] = [
     action: "Đi từ /release/tester-pack về /release/readiness, /download/trust và /support/safety để kiểm tra cổng nào còn khóa.",
     expectedResult: "Người chơi hiểu cần kênh được owner phê duyệt trước khi gửi feedback thật.",
     blockedScope: "Chưa có bỏ qua phê duyệt owner, suất tester bảo đảm hoặc SLA hỗ trợ production."
+  },
+  {
+    slug: "faq-search-helpfulness-guide",
+    step: "01",
+    title: "Chọn nhóm câu hỏi trước",
+    action: "Mở /support/help và chọn nhóm tải game, phát hành, an toàn, gói tester, hiệu năng hoặc ranh giới tài khoản/backend theo vấn đề đang gặp.",
+    expectedResult: "Người chơi đi vào nhóm FAQ đúng ngữ cảnh trước khi bấm CTA hỗ trợ hoặc suy diễn từ một câu hỏi lẻ.",
+    blockedScope: "Chưa có tìm kiếm trực tuyến, lập chỉ mục backend hoặc gợi ý cá nhân hóa."
+  },
+  {
+    slug: "faq-search-helpfulness-guide",
+    step: "02",
+    title: "Đọc route hỗ trợ đúng vấn đề",
+    action: "Đi từ câu hỏi tới Hỗ trợ, An toàn, Tin cậy tải game, Trạng thái hoặc Gói tester theo route được gợi ý.",
+    expectedResult: "Người chơi hiểu trang nào là nguồn đọc tiếp theo và trang nào chưa phải ticket thật hoặc công cụ tra cứu tài khoản.",
+    blockedScope: "Chưa có tuyến phiếu hỗ trợ, chatbot hỗ trợ hoặc tra cứu tài khoản trực tuyến."
+  },
+  {
+    slug: "faq-search-helpfulness-guide",
+    step: "03",
+    title: "Hiểu search chỉ là hướng dẫn tĩnh",
+    action: "Đọc ghi chú không có backend tìm kiếm để biết FAQ hiện là content tĩnh, chưa phải công cụ tìm kiếm sản phẩm.",
+    expectedResult: "Người chơi không kỳ vọng autocomplete, ranking cá nhân hoặc kết quả từ dữ liệu tài khoản.",
+    blockedScope: "Chưa có backend tìm kiếm, lịch sử người dùng hoặc dữ liệu hỗ trợ production."
+  },
+  {
+    slug: "faq-search-helpfulness-guide",
+    step: "04",
+    title: "Gửi feedback giúp cải thiện FAQ",
+    action: "Khi câu trả lời chưa đủ rõ, gửi feedback theo nhóm vấn đề, route liên quan và nội dung còn thiếu.",
+    expectedResult: "Feedback có ích cho nội dung public mà không gửi mật khẩu, token, dữ liệu thanh toán hoặc dữ liệu cá nhân nhạy cảm.",
+    blockedScope: "Chưa có tiếp nhận trực tuyến, SLA hỗ trợ production hoặc workflow moderation thật."
   },
   {
     slug: "player-trust-release-guide",

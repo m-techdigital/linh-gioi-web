@@ -1,3 +1,18 @@
+Current phase: WEB-FE-GUIDES-FAQ-SEARCH-HELPFULNESS-REAL-UI-LAYOUT-v1.173 WEB_CLOSED.
+
+Current decision: v1.173 closed the active `/guides/faq-search-helpfulness-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered FAQ Search Helpfulness guide, FAQ group → support route → static search boundary → useful feedback flow, Vietnamese public copy and shared Base First guide-flow layout. Entire program is NOT production-complete.
+
+- v1.173 did not create a design batch because the existing guide-detail direction was sufficient for comparison after minimal current-page scenario correction in the rendered page.
+- v1.173 browser baseline/e2e showed generic guide badge, English title/copy labels, missing compact guide-flow classes and no current-page guide-detail step flow.
+- v1.173 replaced the stale first-flow with Vietnamese FAQ group → support route → static search boundary → useful feedback expectations and four compact FAQ-helpfulness steps.
+- v1.173 reused the shared compact guide-flow base in `packages/ui/src/service-layout.css`, added only the current page FAQ-helpfulness visual theme there, and kept current page CSS out of `apps/web/src/app/globals.css`.
+- v1.173 final browser/e2e metrics: desktop hero bottom 424.38px, detail top 436.84px, first step top 688.23px, world CTA top 861.22px, route CTA top 1013.27px, action band top 2160.52px, scrollHeight 2877px, h1 42.88px, 4 desktop columns, overflow 0; mobile hero bottom 568.38px, detail top 578.28px, first step top 740.72px, world CTA top 1274.55px, route CTA top 1537.14px, action band top 3392.91px, scrollHeight 4422px, h1 27.52px, overflow 0.
+- v1.173 evidence: browser/e2e desktop/mobile v1.173; source validator; Web/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/guides-faq-search-helpfulness-desktop-v1173.png` and `/tmp/guides-faq-search-helpfulness-mobile-v1173.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.174. Select `/events` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-GUIDES-CLOSED-TESTER-INFORMATION-PACK-REAL-UI-LAYOUT-v1.172 WEB_CLOSED.
 
 Current decision: v1.172 closed the active `/guides/closed-tester-information-pack-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Closed Tester Information Pack guide, tester pack → feedback an toàn → giới hạn đã biết → readiness gate flow, Vietnamese public copy and shared Base First guide-flow layout. Entire program is NOT production-complete.
