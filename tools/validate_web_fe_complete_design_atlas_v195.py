@@ -86,10 +86,10 @@ def check_tests_and_docs() -> None:
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         "Current phase: WEB-FE-COMPLETE-DESIGN-ATLAS-v1.95 WEB_CLOSED",
         "WEB-FE-COMPLETE-DESIGN-ATLAS-v1.95",
-        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.96"
+        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT"
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-COMPLETE-DESIGN-ATLAS-v1.95 | WEB-FE | WEB_CLOSED |"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.96", "browser/e2e"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "browser/e2e"])
 
 def main() -> int:
     check_targets()

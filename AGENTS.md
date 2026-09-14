@@ -71,6 +71,15 @@ Web contract records live under `packages/contracts` after contract sync begins.
 - Apps compose pages and domain flows.
 - Duplicate component owners are forbidden.
 
+
+## Design Target First rule
+
+Design Target First is Priority #1 for FE/UI work. Every page, section and reusable component must be attached to a design target before implementation. If the current task has no matching design target, create or replace the design target first, save it under the project design-reference paths, register it in `docs/design/DESIGN-TARGET-REGISTRY.md`, and only then implement the page/component. If a design target becomes misleading or no longer matches the desired UI/UX direction, delete or supersede obsolete design targets in the same task so future work cannot compare against the wrong destination.
+
+## Base UI/UX Layout rule
+
+Reusable UI/UX layout belongs in `packages/design-tokens` and `packages/ui` first. Before adding page-local layout, search for a shared owner and extend the shared Base UI/UX Layout when the pattern can be reused across public web, Portal or Ops. Page-local implementations are allowed only when the handoff records why the pattern is truly one-off.
+
 ## Evidence rule
 
 Source inspection alone is not runtime PASS. If runtime/browser/visual gates cannot run in the environment, classify them as not executed or environment limited in the task handoff. Never skip-as-PASS.

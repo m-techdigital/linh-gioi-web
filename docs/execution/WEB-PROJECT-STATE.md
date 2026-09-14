@@ -1,3 +1,14 @@
+Current phase: WEB-FE-DESIGN-FIRST-GOVERNANCE-v1.96 WEB_CLOSED.
+
+Current decision: v1.96 FE design-first governance slice closed after user made design images the primary source of truth for UI/UX implementation. Continue UI work only after attaching each page, section or reusable component to a registered design target or creating/replacing the target first. Entire program is NOT production-complete.
+
+- v1.96 adds Design Target First governance and a design target registry mapping the v1.95 atlas to Public Core, Public Service, Player Portal, Ops/Admin and Component/state scopes.
+- v1.96 adds Base UI/UX Layout guidance requiring reusable UI layout to live in packages/design-tokens and packages/ui before page-local duplication.
+- v1.96 evidence: source validator RED reproduced missing governance; dedicated validator PASS after implementation; current-state validator includes the governance gate.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.97.
+
 Current phase: WEB-FE-COMPLETE-DESIGN-ATLAS-v1.95 WEB_CLOSED.
 
 Current decision: v1.95 FE complete design atlas slice closed after user requested full-screen/page and component-level professional design references instead of one or two screens. Continue UI/UX implementation next against these saved targets. Entire program is NOT production-complete.
