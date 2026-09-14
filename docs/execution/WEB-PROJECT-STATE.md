@@ -1,3 +1,14 @@
+Current phase: WEB-FE-DESIGN-TARGET-LINK-A11Y-v1.101 WEB_CLOSED.
+
+Current decision: v1.101 FE design-target link accessibility slice closed. Public, Portal and Ops Design Target First links now announce `opens in a new tab` through the shared Base UI/UX Layout primitive while preserving the registered v1.95 design targets. Entire program is NOT production-complete.
+
+- v1.101 extends shared `DesignTargetReference` accessible names for primary and Component/state companion links instead of adding app-local link variants.
+- v1.101 uses existing v1.95 Public Core, Public Service, Player Portal, Ops/Admin and Component/state design targets; no new design target was required and no stale target was replaced.
+- v1.101 evidence: RED browser/e2e reproduced missing new-tab accessible names; Playwright desktop/mobile design-target link a11y PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.102.
+
 Current phase: WEB-FE-COMPONENT-STATE-DESIGN-TARGET-v1.100 WEB_CLOSED.
 
 Current decision: v1.100 FE component/state design target slice closed. Public, Portal and Ops now expose a Component/state atlas companion link in their Design Target First region so shared Base UI/UX Layout work can be compared before implementation. Entire program is NOT production-complete.

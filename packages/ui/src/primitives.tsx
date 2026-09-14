@@ -480,6 +480,10 @@ export type DesignTargetReferenceProps = {
   companionTargets?: DesignTargetReferenceLink[];
 };
 
+function designTargetNewTabLabel(label: string) {
+  return `${label} — opens in a new tab`;
+}
+
 export function DesignTargetReference({ label, href, scope, note, className, companionTargets = [] }: DesignTargetReferenceProps) {
   return (
     <aside className={cx("lgo-design-target-reference", className)} role="region" aria-label="Design target reference">
@@ -489,11 +493,18 @@ export function DesignTargetReference({ label, href, scope, note, className, com
         {note ? <p>{note}</p> : null}
       </div>
       <div className="lgo-design-target-reference-actions">
-        <a className="lgo-design-target-reference-link" href={href} target="_blank" rel="noreferrer">
+        <a className="lgo-design-target-reference-link" href={href} target="_blank" rel="noreferrer" aria-label={designTargetNewTabLabel(label)}>
           {label}
         </a>
         {companionTargets.map((target) => (
-          <a className="lgo-design-target-reference-link lgo-design-target-reference-link-secondary" href={target.href} target="_blank" rel="noreferrer" key={`${target.href}:${target.label}`}>
+          <a
+            className="lgo-design-target-reference-link lgo-design-target-reference-link-secondary"
+            href={target.href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={designTargetNewTabLabel(target.label)}
+            key={`${target.href}:${target.label}`}
+          >
             {target.label}
           </a>
         ))}
