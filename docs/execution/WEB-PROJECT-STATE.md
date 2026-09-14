@@ -1,3 +1,20 @@
+Current phase: WEB-FE-DOWNLOAD-REAL-UI-LAYOUT-v1.218 WEB_CLOSED.
+
+Current decision: v1.218 closed the active `/download` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Download design target and shared public shell were usable as comparison guardrails; work focused on the rendered page, first-fold availability flow, release-gate density, trust/evidence rhythm, disclosure of secondary proof boards and Base First CSS ownership. Entire program is NOT production-complete.
+
+- v1.218 did not create or batch a new design target because the existing Public Download board plus shared public shell were sufficient for checking header, footer, menu, shell, route flow and release-gate scenario alignment.
+- v1.218 changed real UI layout: `/download` now keeps hero, readiness, official channels, status depth, trust gate, release evidence and secondary proof disclosure in a reviewable flow without the old huge always-expanded proof stack.
+- v1.218 moved the active Download availability layout CSS into `packages/ui/src/service-layout.css` and removed stale `/download` v1.125/v1.140 layout blocks from `apps/web/src/app/globals.css`.
+- v1.218 kept the design target Vietnamese and scenario-correct as a comparison guardrail only; no design-only, translation-only, validator-only or docs-only work was used as page progress.
+- v1.218 kept the page FE-only: no production auth, no backend integration, no DB persistence, no CMS, no real launcher build, no account entitlement, no public download promise and no accepted backend contract.
+- v1.218 final browser/e2e metrics: desktop overflow 0, desktop scrollHeight 2074px, h1/max font 38.4px, heroBottom 451px, gateTop 163px, readinessTop 457.41px, channelTop 622.33px, statusDepthTop 767.44px, trustGateTop 991.91px, releaseChecklistTop 1485.33px, releaseDetailTop 1717.33px, designBandTop 1877.23px, 5 readiness columns, 2 channel columns; mobile overflow 0, mobile scrollHeight 2935px, h1 27.19px, max font 32px, heroBottom 552.77px, readinessTop 562.03px, channelTop 984.95px, statusDepthTop 1212.84px, trustGateTop 1574.28px, releaseChecklistTop 2132.80px, releaseDetailTop 2476.19px, designBandTop 2678.66px, 2 readiness columns, 2 channel columns.
+- v1.218 evidence: RED browser metrics showed desktop scrollHeight 12567px and mobile scrollHeight 26690px with all secondary proof boards expanded in the main flow; GREEN Playwright desktop/mobile 6/6 Download layout/design-match checks; screenshot review `/tmp/download-desktop-v1218.png` and `/tmp/download-mobile-v1218.png`; source validator `tools/validate_web_fe_download_real_ui_layout_v1218.py`; Web/UI typecheck; Web build; current-state closure validator.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.219.
+Select `/download/trust` as the next single active page. Continue Real Browser UI/UX Layout First, Runtime Layout Gate and Base First; use design target only as a comparison guardrail and do not move past `/download/trust` before browser/e2e, screenshot review, validator, build/typecheck, docs, commit and push.
+
+Historical snapshot follows.
+
 Current phase: WEB-FE-START-REAL-UI-LAYOUT-v1.217 WEB_CLOSED.
 
 Current decision: v1.217 closed the active `/start` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Start design target and shared public shell were usable as comparison guardrails; work focused on the rendered page, onboarding first-flow density, real Đông Môn screenshot proof, compact class/route follow-up and Base First CSS ownership. Entire program is NOT production-complete.

@@ -39,14 +39,14 @@ def check_source():
  forbid('apps/web/src/components/PublicDesignTargetReference.tsx',['Download detailed design target'])
  req('packages/content/src/fixtures.ts',['Gói phát hành','Phê duyệt chủ sở hữu','Giới hạn đã biết','Sẵn sàng hỗ trợ','Launcher / gói build công khai','Gói kiểm thử giới hạn','Chưa có bản tải công khai từ web repo này'])
  forbid('packages/content/src/fixtures.ts',['label: "Public release artifact"','label: "Closed testing channel"','label: "Runtime/browser web checks"','label: "Backend contract sync"','title: "Public launcher/build"','title: "Closed testing build"'])
- req('apps/web/src/app/globals.css',['WEB v1.140 download Vietnamese design match','.lgo-downloadpage-stack .lgo-download-player-hero','display: grid','.lgo-downloadpage-stack .lgo-download-channel-section'])
+ req('packages/ui/src/service-layout.css',['v1.218 shared download availability layout','.lgo-downloadpage-stack .lgo-download-player-hero','display: grid','.lgo-downloadpage-stack .lgo-download-channel-section'])
 def check_docs():
  files=['tests/e2e/fe-download-vietnamese-design-match-v1140.spec.ts','docs/execution/specs/WEB-FE-DOWNLOAD-VIETNAMESE-DESIGN-MATCH-v1.140.md','LGO-WEB-FE-DOWNLOAD-VIETNAMESE-DESIGN-MATCH-REPORT-v1.140.md','HANDOFF-LGO-WEB-FE-DOWNLOAD-VIETNAMESE-DESIGN-MATCH-v1.140.md']
  for f in files: req_file(f)
  req('tests/e2e/fe-download-vietnamese-design-match-v1140.spec.ts',['download Vietnamese design match','Thiết kế chi tiết tải game','release readiness panel starts in the opening viewport','channel cards follow readiness in the design-led first flow'])
  for f in files[1:]: req(f,['WEB-FE-DOWNLOAD-VIETNAMESE-DESIGN-MATCH-v1.140','WEB_CLOSED','Sequential Page Completion','Just-in-time Design','Design Target First','Layout Match Before Closure','Base UI/UX Layout','Public Download','Vietnamese','game scenario','browser/e2e','built-in imagegen','No production auth','No DB persistence','No real Portal integration','No real Ops/Admin mutation','NO_ACCEPTED_BACKEND_CONTRACT'])
- req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-DOWNLOAD-VIETNAMESE-DESIGN-MATCH-v1.140 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.218'])
- req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.218','select `/download` as the next single active page'])
+ req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-DOWNLOAD-VIETNAMESE-DESIGN-MATCH-v1.140 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.219'])
+ req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.219','select `/download/trust` as the next single active page'])
  req('docs/execution/WEB-TASK-LEDGER.md',['| WEB-FE-DOWNLOAD-VIETNAMESE-DESIGN-MATCH-v1.140 | WEB-FE | WEB_CLOSED |'])
 def main():
  check_target(); check_source(); check_docs()

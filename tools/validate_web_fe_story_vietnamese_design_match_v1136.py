@@ -48,8 +48,8 @@ def check_tests_docs() -> None:
     for rel in ["docs/execution/specs/WEB-FE-STORY-VIETNAMESE-DESIGN-MATCH-v1.136.md", "LGO-WEB-FE-STORY-VIETNAMESE-DESIGN-MATCH-REPORT-v1.136.md", "HANDOFF-LGO-WEB-FE-STORY-VIETNAMESE-DESIGN-MATCH-v1.136.md"]:
         require_text(rel, ["WEB-FE-STORY-VIETNAMESE-DESIGN-MATCH-v1.136", "WEB_CLOSED", "Sequential Page Completion", "Just-in-time Design", "Design Target First", "Layout Match Before Closure", "Base UI/UX Layout", "Public Story", "Vietnamese", "browser/e2e", "built-in imagegen", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-STORY-VIETNAMESE-DESIGN-MATCH-v1.136 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.137"])
-    require_text("docs/execution/WEB-PROJECT-STATE.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.137", "Select `/start` as the next single active page"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.218", "select `/download` as the next single active page"])
+    require_text("docs/execution/WEB-PROJECT-STATE.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.137", "Select `/download/trust` as the next single active page"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.219", "select `/download/trust` as the next single active page"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-STORY-VIETNAMESE-DESIGN-MATCH-v1.136 | WEB-FE | WEB_CLOSED |"])
 def main() -> int:
     check_target(); check_source(); check_tests_docs()

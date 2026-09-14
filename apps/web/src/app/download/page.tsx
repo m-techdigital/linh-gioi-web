@@ -95,25 +95,33 @@ export default function DownloadPage() {
         <DownloadTrustGateBoard />
         <ReleaseEvidenceChecklist />
 
-        <section className="lgo-release-detail-stack" aria-label="Chi tiết phát hành và hỗ trợ">
-          <ReleaseReadinessHubCta />
-          <ReleaseSurfaceAlignmentBoard />
-          <PlayerTrustReleaseCta />
-          <ClosedTestReadinessBoard />
-          <StagedReleaseMessagingBoard />
-          <DownloadExplanationDepth />
-          <DownloadTrustCta />
-          <KnownLimitationNotesBoard />
-          <ClosedTesterInformationPackCta />
-          <ContentIaStartCta />
-          <FaqHelpfulnessCta />
-          <RouteContinuityCta />
-          <WorldGameplayLoopCta />
-          <PlayerSafetySupportCta />
-          <AccessibilityReadabilityCta />
-          <PerformanceBudgetCta />
-          <StaticRouteCompositionBoard />
-        </section>
+        <details className="lgo-service-disclosure-stack lgo-release-detail-stack lgo-download-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>
+              Giữ đủ readiness, trust, support, route continuity, performance và hướng dẫn liên quan nhưng không ép toàn bộ proof board vào luồng tải game chính.
+            </small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <ReleaseReadinessHubCta />
+            <ReleaseSurfaceAlignmentBoard />
+            <PlayerTrustReleaseCta />
+            <ClosedTestReadinessBoard />
+            <StagedReleaseMessagingBoard />
+            <DownloadExplanationDepth />
+            <DownloadTrustCta />
+            <KnownLimitationNotesBoard />
+            <ClosedTesterInformationPackCta />
+            <ContentIaStartCta />
+            <FaqHelpfulnessCta />
+            <RouteContinuityCta />
+            <WorldGameplayLoopCta />
+            <PlayerSafetySupportCta />
+            <AccessibilityReadabilityCta />
+            <PerformanceBudgetCta />
+            <StaticRouteCompositionBoard />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );

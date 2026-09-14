@@ -100,8 +100,8 @@ def main() -> int:
         'shared header/menu/footer coherence',
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.218',
-        'Current FE scope: select `/download`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.219',
+        'Current FE scope: select `/download/trust`',
         'Design targets must stay synchronized with accepted shared header, footer, menu, shell and navigation layout.',
         'Real Browser UI/UX Layout First',
         'Base UI/UX Layout',
