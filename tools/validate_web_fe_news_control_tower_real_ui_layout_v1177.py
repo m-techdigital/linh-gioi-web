@@ -105,15 +105,15 @@ def main() -> int:
 
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-CONTROL-TOWER-REAL-UI-LAYOUT-v1.177 WEB_CLOSED',
-        'Select `/roadmap`',
+        'Select `/game/loop`',
         '/tmp/news-control-tower-desktop-v1177.png',
         '/tmp/news-control-tower-mobile-v1177.png',
         'Real Browser UI/UX Layout First',
         'Base First',
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.211',
-        'Current FE scope: select `/roadmap`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.212',
+        'Current FE scope: select `/game/loop`',
         'Real Browser UI/UX Layout First',
         'Base UI/UX Layout',
     ])

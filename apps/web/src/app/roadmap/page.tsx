@@ -94,12 +94,6 @@ export default function RoadmapPage() {
           </div>
         </section>
 
-        <ReleaseReadinessHubCta />
-        <OwnerReleaseGateBoard />
-        <RoadmapDecisionGateBoard />
-        <PlayerTrustReleaseCta />
-        <ReleaseNarrativeStageBoard />
-        <RouteContinuityCta />
         <section className="lgo-roadmap-list-board lgo-panel" aria-label="Danh sách mốc roadmap public">
           <SectionHeading eyebrow="Danh sách mốc" title="Các mốc public web hiện tại" />
           <Grid>
@@ -113,15 +107,33 @@ export default function RoadmapPage() {
             ))}
           </Grid>
         </section>
-        <PublicRouteGroupBoard />
-        <GameplayScopeBoundaryBoard />
-        <StagedReleaseMessagingBoard />
-        <PlayerSafetySupportCta />
-        <AccessibilityReadabilityCta />
-        <PerformanceBudgetCta />
-        <PerceivedLoadSignalBoard />
-        <CommunityRoadmapOnboardingCta />
-        <ClosedTesterInformationPackCta />
+
+        <details className="lgo-service-disclosure-stack lgo-roadmap-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>
+              Giữ đủ release readiness, owner gate, decision gate, trust, release narrative, route continuity,
+              content grouping, gameplay boundary, safety, accessibility, performance, perceived load, community onboarding và closed tester nhưng không ép toàn bộ proof board vào first-flow roadmap.
+            </small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <ReleaseReadinessHubCta />
+            <OwnerReleaseGateBoard />
+            <RoadmapDecisionGateBoard />
+            <PlayerTrustReleaseCta />
+            <ReleaseNarrativeStageBoard />
+            <RouteContinuityCta />
+            <PublicRouteGroupBoard />
+            <GameplayScopeBoundaryBoard />
+            <StagedReleaseMessagingBoard />
+            <PlayerSafetySupportCta />
+            <AccessibilityReadabilityCta />
+            <PerformanceBudgetCta />
+            <PerceivedLoadSignalBoard />
+            <CommunityRoadmapOnboardingCta />
+            <ClosedTesterInformationPackCta />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );

@@ -1,3 +1,20 @@
+Current phase: WEB-FE-ROADMAP-REAL-UI-LAYOUT-v1.211 WEB_CLOSED.
+
+Current decision: v1.211 closed the active `/roadmap` page slice as a real browser UI/UX Layout task. The existing Vietnamese roadmap flow design board and shared public service shell were sufficient for comparison; work focused on the rendered roadmap route, first-flow density, moving the public roadmap list into the core flow, compacting long roadmap cards, disclosure grouping for secondary evidence and Base First shared CSS ownership. Entire program is NOT production-complete.
+
+- v1.211 did not create or batch a new design target because the existing roadmap flow board plus Public Service design reference were usable for checking header, footer, menu, shell, route flow and game scenario alignment.
+- v1.211 changed real UI layout: `/roadmap` now keeps the first-flow to hero, roadmap design board, gate route board and compact public milestone list, while release readiness, owner gate, decision gate, trust, release narrative, route continuity, content grouping, gameplay boundary, safety, accessibility, performance, perceived load, community onboarding and closed tester proof boards are grouped behind the shared native disclosure.
+- v1.211 extended the existing roadmap shared layout in `packages/ui/src/service-layout.css`; no current-page CSS was added to `apps/web/src/app/globals.css`.
+- v1.211 kept the page Vietnamese and FE-only: no production auth, no backend integration, no DB persistence, no CMS, no full MMO gameplay, no public download promise and no accepted backend contract.
+- v1.211 explicitly checked rendered screenshots against the roadmap flow design board and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.211 final browser/e2e metrics: desktop hero bottom 389.28px, design top 402.23px, design bottom 617.27px, route top 648.63px, list top 1032.97px, disclosure top 1510.80px, scrollHeight 2099px, h1/max font 41.60px, 3 step columns, 4 list columns, 1 disclosure, 4 expanded top-level boards, overflow 0; mobile hero bottom 486.91px, design top 492.83px, design bottom 806.78px, route top 831.11px, list top 1558.11px, disclosure top 2446.36px, scrollHeight 3221px, h1 font 29.12px, max heading font 32.00px, 2 step columns, 2 list columns, 1 disclosure, 4 expanded top-level boards, overflow 0.
+- v1.211 evidence: browser/e2e desktop/mobile v1.211; screenshot review `/tmp/roadmap-desktop-v1211.png` and `/tmp/roadmap-mobile-v1211.png`; source validator `tools/validate_web_fe_roadmap_real_ui_layout_v1211.py`; Web/UI typecheck; Web build; current-state closure validator.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.212.
+Select `/game/loop` as the next single active page. Continue Real Browser UI/UX Layout First and Base First; use design target only as a comparison guardrail and do not move past `/game/loop` before browser/e2e, screenshot review, validator, build/typecheck, docs, commit and push.
+
+Historical snapshot follows.
+
 Current phase: WEB-FE-ACCESSIBILITY-REAL-UI-LAYOUT-v1.210 WEB_CLOSED.
 
 Current decision: v1.210 closed the active `/accessibility` page slice as a real browser UI/UX Layout task. The existing Vietnamese accessibility route-map design board and shared public service shell were sufficient for comparison; work focused on the rendered accessibility route, first-flow density, mobile typography, route-card grid density, disclosure grouping for secondary evidence and Base First shared CSS ownership. Entire program is NOT production-complete.

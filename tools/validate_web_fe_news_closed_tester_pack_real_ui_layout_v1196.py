@@ -58,13 +58,13 @@ def main() -> int:
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-CLOSED-TESTER-PACK-REAL-UI-LAYOUT-v1.196 WEB_CLOSED',
-        'Select `/roadmap`',
+        'Select `/game/loop`',
         '/tmp/news-closed-tester-pack-desktop-v1196.png', '/tmp/news-closed-tester-pack-mobile-v1196.png',
         'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.211',
-        'Current FE scope: select `/roadmap`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.212',
+        'Current FE scope: select `/game/loop`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
         '| WEB-FE-NEWS-CLOSED-TESTER-PACK-REAL-UI-LAYOUT-v1.196 | WEB-FE | WEB_CLOSED | 2b8201e |',

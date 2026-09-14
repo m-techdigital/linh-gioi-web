@@ -53,11 +53,11 @@ def main() -> int:
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-ACCESSIBILITY-REAL-UI-LAYOUT-v1.210 WEB_CLOSED',
-        'Select `/roadmap`', '/tmp/accessibility-desktop-v1210.png', '/tmp/accessibility-mobile-v1210.png',
+        'Select `/game/loop`', '/tmp/accessibility-desktop-v1210.png', '/tmp/accessibility-mobile-v1210.png',
         'desktop hero bottom 387.75px', 'mobile hero bottom 486.91px', 'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.211', 'Current FE scope: select `/roadmap`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.212', 'Current FE scope: select `/game/loop`',
         'Real Browser UI/UX Layout First', 'Base UI/UX Layout', 'CSS must be managed by owner/role'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
