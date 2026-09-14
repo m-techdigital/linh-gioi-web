@@ -8,12 +8,14 @@ Web repo owns Official Web, Player Portal, Ops/Admin UI, web design system and w
 Read these files before every task:
 
 1. `AGENTS.md`
-2. `docs/execution/WEB-PROJECT-STATE.md`
-3. `docs/execution/WEB-NEXT-ACTION.md`
-4. `docs/execution/WEB-TASK-LEDGER.md`
-5. `docs/execution/WEB-MASTER-ROADMAP.md`
+2. `docs/execution/WEB-ACTIVE-GOAL.md`
+3. `docs/execution/WEB-PROJECT-STATE.md`
+4. `docs/execution/WEB-NEXT-ACTION.md`
+5. `docs/execution/WEB-TASK-LEDGER.md`
+6. `docs/execution/WEB-MASTER-ROADMAP.md`
 
 Only work on the current `WEB-NEXT-ACTION` task.
+The active FE execution goal is `docs/execution/WEB-ACTIVE-GOAL.md`; it supersedes stale thread goals and legacy Design Target First wording.
 Update state, ledger, report and handoff after every task.
 Never create an independent business backend for web.
 Java/Spring Boot game backend is canonical for auth/account/character/game data.
