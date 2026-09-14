@@ -20,7 +20,7 @@ def require_order(rel: str, first: str, second: str) -> None:
     if a < 0 or b < 0 or a > b: fail(f"{rel}: expected {first} before {second}")
 def check_routes() -> None:
     require_order("apps/web/src/app/support/page.tsx", "<h1>Hỗ trợ cộng đồng</h1>", "<PlayerTrustReleaseCta />")
-    require_order("apps/web/src/app/support/help/page.tsx", "<h1>FAQ nhanh: tìm đúng câu trả lời trước khi gửi phản hồi</h1>", "<FaqHelpfulnessCta />")
+    require_order("apps/web/src/app/support/help/page.tsx", "<h1>FAQ nhanh</h1>", "<FaqHelpfulnessCta />")
     require_order("apps/web/src/app/support/safety/page.tsx", "<h1>Báo lỗi an toàn cho người chơi mới</h1>", "<ReleaseReadinessHubCta />")
     require_text("apps/web/src/app/support/page.tsx", ["Không có hệ thống ticket thật", "tra cứu tài khoản", "thao tác vận hành/admin"])
     require_text("apps/web/src/app/support/help/page.tsx", ["chưa có tìm kiếm thật", "chưa có ticket thật", "không thu dữ liệu nhạy cảm"])

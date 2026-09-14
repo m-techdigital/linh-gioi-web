@@ -84,7 +84,7 @@ const PUBLIC_SUPPORT_TARGET = {
 const PUBLIC_SUPPORT_HELP_TARGET = {
   label: "Thiết kế chi tiết trung tâm trợ giúp",
   href: "/design-reference/support-help-detailed-design-target-v1132.png",
-  scope: "Public Support Help"
+  scope: "Trung tâm trợ giúp"
 };
 
 const PUBLIC_SUPPORT_SAFETY_TARGET = {

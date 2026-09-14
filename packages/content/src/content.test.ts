@@ -133,11 +133,11 @@ it("keeps WEB v1.20 closed tester information pack bounded", () => {
 it("keeps WEB v1.21 FAQ search/helpfulness guidance bounded", () => {
   expect(faqDiscoveryGroups.length).toBeGreaterThanOrEqual(5);
   expect(faqDiscoveryGroups.map((item) => item.route)).toContain("/support/help");
-  expect(faqDiscoveryGroups.every((item) => item.nonClaim.includes("No "))).toBe(true);
+  expect(faqDiscoveryGroups.every((item) => item.nonClaim.includes("Không "))).toBe(true);
   expect(faqHelpfulnessPrompts.every((item) => item.mustAvoid.length > 0)).toBe(true);
   expect(issueCategoryRoutes.map((item) => item.recommendedRoute)).toContain("/download/trust");
   expect(issueCategoryRoutes.every((item) => item.privacyBoundary.length > 0)).toBe(true);
-  expect(noSearchBackendNotes.every((item) => item.notClaimed.includes("No "))).toBe(true);
+  expect(noSearchBackendNotes.every((item) => item.notClaimed.includes("Không "))).toBe(true);
 });
 
 

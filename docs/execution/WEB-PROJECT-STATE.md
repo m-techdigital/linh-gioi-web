@@ -1,3 +1,17 @@
+Current phase: WEB-FE-SUPPORT-HELP-REAL-UI-LAYOUT-v1.147 WEB_CLOSED.
+
+Current decision: v1.147 closed the active `/support/help` page slice as a real browser UI/UX Layout task. `/support/help` kept its existing Vietnamese support-help target, removed stale support-help route CSS from `apps/web/src/app/globals.css`, and now uses shared Base First FAQ route-map layout from `packages/ui/src/service-layout.css`. Entire program is NOT production-complete.
+
+- v1.147 did not regenerate design because the existing `/support/help` target was already Vietnamese and usable for comparison.
+- v1.147 replaced stale first-flow `Design Target First` copy with `Board tham chiếu` and localized the target scope to `Trung tâm trợ giúp`.
+- v1.147 moved support-help route-map/discovery/issue density away from `apps/web/src/app/globals.css` and into reusable shared support/help classes.
+- v1.147 updated `/support/help` first-flow: compact FAQ nhanh hero → support-help board → route map → FAQ discovery groups → issue categories.
+- v1.147 evidence: RED browser metrics showed desktop hero 493.266, board 494.063–756.438, routes top 926.625, discovery top 1169.484; mobile hero 955.344, board bottom 1489.75, routes top 1855.188, discovery top 3809.844; GREEN browser metrics show desktop overflow 0, h1 34.816px, hero bottom 400.75, board top 396.109, board bottom 587.859, route board top 616.813, route board bottom 883.453, discovery top 902.0, issue top 1322.109; mobile overflow 0, h1 39px, hero bottom 531.547, board top 539.547, board bottom 879.859, route board top 911.047, route board bottom 1474.328, discovery top 1489.516, issue top 2745.391.
+- Base First/CSS ownership was strengthened: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.148. Select `/support/safety` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-SUPPORT-REAL-UI-LAYOUT-v1.146 WEB_CLOSED.
 
 Current decision: v1.146 closed the active `/support` page slice as a real browser UI/UX Layout task. `/support` kept its existing Vietnamese support target, removed stale page-local v1.131 support CSS, and now uses shared Base First support/service layout from `packages/ui/src/service-layout.css`. Entire program is NOT production-complete.

@@ -29,19 +29,20 @@ def check_support_help_board() -> None:
     require_file("apps/web/public/design-reference/support-help-detailed-design-target-v1132.png")
     require_text("apps/web/src/app/support/help/page.tsx", [
         "lgo-support-help-design-board",
+        "lgo-service-proof-board",
         "/design-reference/support-help-detailed-design-target-v1132.png",
-        "Bảng thiết kế bản đồ câu hỏi hỗ trợ",
+        "Thiết kế tiếng Việt cho FAQ nhanh và bản đồ câu hỏi hỗ trợ",
         "loading=\"eager\"",
-        "Design Target First",
+        "Board tham chiếu",
         "không có tìm kiếm thật",
     ])
-    require_text("apps/web/src/app/globals.css", [
-        "WEB v1.73 public support help route-map reference board",
-        "WEB v1.132 support help Vietnamese design target density",
-        ".lgo-support-help-design-board",
-        ".lgo-support-help-design-board img",
+    require_text("packages/ui/src/service-layout.css", [
+        "Shared support/help FAQ route-map layout",
+        "lgo-support-help-route-grid",
+        "lgo-support-help-route-board",
+        "lgo-faq-discovery-board",
+        "lgo-issue-category-board",
         "grid-template-columns: 1fr",
-        "overflow-wrap: anywhere",
     ])
 
 def check_tests_and_docs() -> None:

@@ -50,15 +50,16 @@ async function collectSupportHelpMetrics(page): Promise<SupportHelpMetrics> {
 }
 
 test.describe("support help Vietnamese design target density", () => {
-  test("/support/help attaches Public Support Help target and keeps FAQ route map readable", async ({ page, isMobile }) => {
+  test("/support/help attaches Trung tâm trợ giúp target and keeps FAQ route map readable", async ({ page, isMobile }) => {
     await page.goto(`${web}/support/help`);
-    await expect(page.getByRole("region", { name: /Design target reference.*Public Support Help/i })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "FAQ nhanh: tìm đúng câu trả lời trước khi gửi phản hồi" })).toBeVisible();
+    await expect(page.getByRole("region", { name: /Design target reference.*Trung tâm trợ giúp/i })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1, name: "FAQ nhanh" })).toBeVisible();
     await expect(page.locator(".lgo-support-help-design-board").getByText("Bản đồ câu hỏi", { exact: false })).toBeVisible();
     const metrics = await collectSupportHelpMetrics(page);
-    expect(metrics.designTargetScope, "Public Support Help target scope").toContain("Public Support Help");
+    expect(metrics.designTargetScope, "Trung tâm trợ giúp target scope").toContain("Trung tâm trợ giúp");
     expect(metrics.designTargetHref, "support help design target href").toContain("support-help-detailed-design-target-v1132.png");
     expect(metrics.englishLeak, "support/help first-flow visible copy should be Vietnamese").toBe("");
+    expect(metrics.designTargetScope, "stale design-first label should not appear").not.toContain("Design Target First");
     expect(metrics.overflow, "support/help horizontal overflow").toBeLessThanOrEqual(0);
     expect(metrics.h1Size, "support/help h1 follows target scale").toBeLessThanOrEqual(isMobile ? 54 : 60);
     if (!isMobile) {

@@ -175,7 +175,7 @@ export const publicRoadmapItems: PublicRoadmapItem[] = [
 
   {
     version: "v1.13",
-    title: "World / gameplay loop depth",
+    title: "Thế giới / lối chơi loop depth",
     status: "current",
     summary: "Deepens Spirit Gate-to-Training Stone loop, beginner expectations, guide-to-world navigation and route-level scope boundaries without combat/economy claims."
   },
@@ -429,7 +429,7 @@ export const supportFaqs: SupportFaq[] = [
   },
   {
     question: "Khi báo lỗi nên gửi gì?",
-    answer: "Ở giai đoạn static guidance, chỉ chuẩn bị route, thiết bị, bước tái hiện và ảnh/log không chứa bí mật. Không gửi mật khẩu, token, payment data hoặc thông tin cá nhân nhạy cảm.",
+    answer: "Ở giai đoạn static guidance, chỉ chuẩn bị route, thiết bị, bước tái hiện và ảnh/log không chứa bí mật. Không gửi mật khẩu, token, dữ liệu thanh toán hoặc thông tin cá nhân nhạy cảm.",
     scope: "privacy-safe issue reporting"
   },
   {
@@ -881,7 +881,7 @@ export const contentEntries: ContentEntry[] = [
     category: "guides",
     title: "Closed tester information pack guide",
     summary: "Cách đọc tester checklist, safe feedback template, known limitations và device report fields mà không hiểu nhầm là signup form.",
-    body: "Tester pack là static guidance. Trang giúp tester tương lai chuẩn bị feedback và thông tin thiết bị an toàn, tránh password, token, payment data, private account data và sensitive personal data. Trang này không mở registration, không bảo đảm access và không bật account entitlement.",
+    body: "Tester pack là static guidance. Trang giúp tester tương lai chuẩn bị feedback và thông tin thiết bị an toàn, tránh password, token, dữ liệu thanh toán, private account data và sensitive personal data. Trang này không mở registration, không bảo đảm access và không bật account entitlement.",
     publishedAt: "2026-09-05T23:05:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -951,7 +951,7 @@ export const contentDetailSections: ContentDetailSection[] = [
     heading: "Privacy boundary được đặt cạnh feedback",
     body: "Các field feedback chỉ yêu cầu mô tả route, bước tái hiện, expected/actual và device class an toàn; public copy không yêu cầu secrets hoặc dữ liệu nhạy cảm.",
     playerImpact: "Feedback tương lai dễ triage hơn mà không tạo cảm giác phải chia sẻ tài khoản hoặc token.",
-    nonClaim: "No collection of passwords, tokens, payment data or sensitive personal data."
+    nonClaim: "No collection of passwords, tokens, dữ liệu thanh toán or sensitive personal data."
   },
   {
     slug: "release-readiness-hub-polish-started",
@@ -1113,7 +1113,7 @@ export const guideDetailSteps: GuideDetailStep[] = [
     step: "02",
     title: "Chuẩn bị feedback không chứa dữ liệu nhạy cảm",
     action: "Dùng safe feedback template: summary, steps, expected/actual và severity gợi ý.",
-    expectedResult: "Feedback dễ đọc hơn mà không thu password, token, payment data hoặc private account data.",
+    expectedResult: "Feedback dễ đọc hơn mà không thu password, token, dữ liệu thanh toán hoặc private account data.",
     blockedScope: "No secure ticket inbox, no account lookup, no collection backend."
   },
   {
@@ -1526,7 +1526,7 @@ export const communityFeedbackChannels: CommunityFeedbackChannel[] = [
     channel: "Báo lỗi readiness",
     currentMode: "planned",
     whatToShare: "Khi có build test: thiết bị, bước tái hiện, ảnh/log nếu được hướng dẫn.",
-    whatNotToShare: "Không upload secrets, payment data, account recovery data hoặc private backend logs.",
+    whatNotToShare: "Không upload secrets, dữ liệu thanh toán, account recovery data hoặc private backend logs.",
     nextGate: "Support process and privacy rules approved before test announcement."
   },
   {
@@ -1883,7 +1883,7 @@ export const supportIssuePaths: SupportIssuePath[] = [
     issue: "Không thấy nút tải game",
     whereToRead: "/download/trust",
     whatToPrepare: "Không cần gửi request riêng; hãy đọc artifact/checksum/provenance gate và roadmap decision gate.",
-    privacyBoundary: "Không gửi email, số điện thoại, token hoặc payment data để xin quyền tải."
+    privacyBoundary: "Không gửi email, số điện thoại, token hoặc dữ liệu thanh toán để xin quyền tải."
   },
   {
     issue: "Không hiểu gameplay hiện tại",
@@ -2617,39 +2617,39 @@ export const deviceReportTemplateFields: DeviceReportTemplateField[] = [
   { field: "Loại thiết bị", whyItMatters: "Giúp owner đọc feedback theo nhóm desktop/laptop/tablet/mobile mà không cần nhận dữ liệu định danh.", safeFormat: "Laptop Windows 11, MacBook macOS, điện thoại Android, iPhone, iPad hoặc tablet Android.", doNotCollect: "Không thu số serial, IMEI, phone number, email riêng tư hoặc account ID." },
   { field: "OS / trình duyệt / màn hình", whyItMatters: "Giúp tái hiện lỗi layout, focus, readability hoặc perceived load.", safeFormat: "macOS + Chrome, Windows + Edge, Android + Chrome, iOS + Safari; độ phân giải gần đúng nếu biết.", doNotCollect: "Không thu browser profile, cookie, token, extension list hoặc lịch sử duyệt web." },
   { field: "Bối cảnh mạng", whyItMatters: "Giúp phân biệt wording/perceived load với lỗi mạng thật khi tải trang static.", safeFormat: "Wi-Fi nhà, 4G/5G, mạng công ty, chậm/ổn định/không ổn định.", doNotCollect: "Không thu IP public, địa chỉ nhà, vị trí chính xác hoặc thông tin nhà mạng nhạy cảm." },
-  { field: "An toàn ảnh/log", whyItMatters: "Ảnh minh họa giúp debug nhưng phải che thông tin riêng tư trước khi gửi qua kênh chính thức.", safeFormat: "Ảnh đã che tên/email/token; log rút gọn chỉ chứa lỗi liên quan route/screen.", doNotCollect: "Không gửi password, token, payment data, private chat hoặc dữ liệu cá nhân nhạy cảm." }
+  { field: "An toàn ảnh/log", whyItMatters: "Ảnh minh họa giúp debug nhưng phải che thông tin riêng tư trước khi gửi qua kênh chính thức.", safeFormat: "Ảnh đã che tên/email/token; log rút gọn chỉ chứa lỗi liên quan route/screen.", doNotCollect: "Không gửi password, token, dữ liệu thanh toán, private chat hoặc dữ liệu cá nhân nhạy cảm." }
 ];
 
 
 export const faqDiscoveryGroups: FaqDiscoveryGroup[] = [
-  { id: "faq-help-hub", title: "FAQ Help hub", playerQuestion: "Tôi chưa biết câu hỏi của mình thuộc nhóm nào?", route: "/support/help", helpfulnessCue: "Bắt đầu ở FAQ Help để chọn nhóm download, tester, safety, account/backend hoặc gameplay expectation.", nonClaim: "No search backend, no AI support bot, no live ticket routing." },
-  { id: "download-readiness", title: "Tải game / checksum", playerQuestion: "Tôi tải game ở đâu và biết file có thật không?", route: "/download/trust", helpfulnessCue: "Đọc Download Trust trước, sau đó xem Release Readiness để biết gate artifact, checksum và owner approval.", nonClaim: "No public game download artifact, no fake download button, no placeholder checksum." },
-  { id: "closed-test", title: "Closed test / tester pack", playerQuestion: "Tôi có được tham gia test chưa và cần chuẩn bị gì?", route: "/release/tester-pack", helpfulnessCue: "Đọc Tester Pack để chuẩn bị feedback an toàn; chỉ gửi khi owner công bố kênh chính thức.", nonClaim: "No live tester intake, no guaranteed tester slot, no entitlement automation." },
-  { id: "safety-support", title: "Safety / support", playerQuestion: "Tôi nên báo lỗi hoặc góp ý thế nào để không gửi nhầm dữ liệu?", route: "/support/safety", helpfulnessCue: "Dùng support safety để chuẩn bị route, bước tái hiện, device class và ảnh/log đã che dữ liệu riêng tư.", nonClaim: "No secure ticket inbox, no account lookup, no production SLA." },
-  { id: "account-backend", title: "Tài khoản / backend boundaries", playerQuestion: "Tại sao portal, login hoặc account chưa hoạt động như game thật?", route: "/status", helpfulnessCue: "Status page nói rõ public/internal/blocked surfaces; WEB-08 cần contract backend trước khi tích hợp thật.", nonClaim: "No production auth, no DB persistence, no real account portal integration." },
-  { id: "world-loop", title: "World loop / gameplay expectation", playerQuestion: "Game hiện đang mô tả gameplay tới mức nào?", route: "/game/loop", helpfulnessCue: "Game Loop giải thích Spirit Gate, Gate Keeper, Training Stone và những phần chưa claim như combat/economy/live world.", nonClaim: "No combat damage, loot, PvP, boss reward, live world server or production quest database." }
+  { id: "faq-help-hub", title: "Trung tâm FAQ nhanh", playerQuestion: "Tôi chưa biết câu hỏi của mình thuộc nhóm nào?", route: "/support/help", helpfulnessCue: "Bắt đầu ở FAQ nhanh để chọn nhóm tải game, tester, an toàn, tài khoản/backend hoặc kỳ vọng lối chơi.", nonClaim: "Không có backend tìm kiếm, không có bot hỗ trợ AI, không có định tuyến ticket live." },
+  { id: "download-readiness", title: "Tải game / checksum", playerQuestion: "Tôi tải game ở đâu và biết file có thật không?", route: "/download/trust", helpfulnessCue: "Đọc Tin cậy tải game trước, sau đó xem Sẵn sàng phát hành để biết gate gói build, checksum và duyệt owner.", nonClaim: "Không có gói tải game công khai, không có nút tải giả, không có checksum placeholder." },
+  { id: "closed-test", title: "Closed test / gói tester", playerQuestion: "Tôi có được tham gia test chưa và cần chuẩn bị gì?", route: "/release/tester-pack", helpfulnessCue: "Đọc Gói tester để chuẩn bị phản hồi an toàn; chỉ gửi khi owner công bố kênh chính thức.", nonClaim: "Không có kênh nhận tester live, không bảo đảm suất tester, không có tự động cấp quyền." },
+  { id: "safety-support", title: "An toàn / hỗ trợ", playerQuestion: "Tôi nên báo lỗi hoặc góp ý thế nào để không gửi nhầm dữ liệu?", route: "/support/safety", helpfulnessCue: "Dùng hỗ trợ an toàn để chuẩn bị route, bước tái hiện, loại thiết bị và ảnh/log đã che dữ liệu riêng tư.", nonClaim: "Không có hộp thư ticket bảo mật, không tra cứu tài khoản, không có SLA production." },
+  { id: "account-backend", title: "Tài khoản / ranh giới backend", playerQuestion: "Tại sao portal, login hoặc account chưa hoạt động như game thật?", route: "/status", helpfulnessCue: "Trang trạng thái nói rõ bề mặt công khai/nội bộ/tạm khóa; WEB-08 cần hợp đồng backend trước khi tích hợp thật.", nonClaim: "Không có xác thực production, không lưu DB thật, không tích hợp portal tài khoản thật." },
+  { id: "world-loop", title: "Vòng lặp thế giới / kỳ vọng lối chơi", playerQuestion: "Game hiện đang mô tả lối chơi tới mức nào?", route: "/game/loop", helpfulnessCue: "Vòng lặp game giải thích Cổng Linh, Người Gác Cổng, Đá Luyện Tập và những phần chưa claim như chiến đấu/kinh tế/thế giới live.", nonClaim: "Không có sát thương chiến đấu, loot, PvP, thưởng boss, máy chủ thế giới live hoặc database nhiệm vụ production." }
 ];
 
 export const faqHelpfulnessPrompts: FaqHelpfulnessPrompt[] = [
-  { prompt: "Tôi đang tìm câu trả lời về tải game", answerStyle: "Bắt đầu bằng trạng thái hiện tại, sau đó giải thích artifact/checksum/owner gate.", usefulNextStep: "Đi tới /download/trust rồi /release/readiness.", mustAvoid: "Không dùng lời kêu gọi tải ngay khi chưa có artifact thật." },
-  { prompt: "Tôi muốn báo lỗi", answerStyle: "Hỏi route/màn hình/bước tái hiện và nhắc che dữ liệu riêng tư.", usefulNextStep: "Đi tới /support/safety hoặc /release/tester-pack để dùng template an toàn.", mustAvoid: "Không yêu cầu password, token, account ID, IP chính xác hoặc dữ liệu thanh toán." },
-  { prompt: "Tôi muốn biết có được test không", answerStyle: "Nói rõ tester pack hiện là static guidance, không phải signup hoặc invite.", usefulNextStep: "Đi tới /release/tester-pack và theo dõi readiness gate.", mustAvoid: "Không hứa tester slot, entitlement, reward hoặc open beta." },
-  { prompt: "Tôi không biết nên đọc trang nào trước", answerStyle: "Đề xuất Start hub hoặc Journey hub theo câu hỏi của người chơi.", usefulNextStep: "Đi tới /start, /journey hoặc /support/help.", mustAvoid: "Không đẩy người chơi vòng quanh nhiều CTA mà không có route tiếp theo rõ ràng." }
+  { prompt: "Tôi đang tìm câu trả lời về tải game", answerStyle: "Bắt đầu bằng trạng thái hiện tại, sau đó giải thích gói build/checksum/gate owner.", usefulNextStep: "Đi tới /download/trust rồi /release/readiness.", mustAvoid: "Không dùng lời kêu gọi tải ngay khi chưa có gói build thật." },
+  { prompt: "Tôi muốn báo lỗi", answerStyle: "Hỏi route/màn hình/bước tái hiện và nhắc che dữ liệu riêng tư.", usefulNextStep: "Đi tới /support/safety hoặc /release/tester-pack để dùng mẫu an toàn.", mustAvoid: "Không yêu cầu mật khẩu, token, ID tài khoản, IP chính xác hoặc dữ liệu thanh toán." },
+  { prompt: "Tôi muốn biết có được test không", answerStyle: "Nói rõ gói tester hiện là hướng dẫn tĩnh, không phải đăng ký hoặc thư mời.", usefulNextStep: "Đi tới /release/tester-pack và theo dõi readiness gate.", mustAvoid: "Không hứa suất tester, quyền truy cập, phần thưởng hoặc open beta." },
+  { prompt: "Tôi không biết nên đọc trang nào trước", answerStyle: "Đề xuất trang Bắt đầu hoặc Hành trình theo câu hỏi của người chơi.", usefulNextStep: "Đi tới /start, /journey hoặc /support/help.", mustAvoid: "Không đẩy người chơi vòng quanh nhiều CTA mà không có route tiếp theo rõ ràng." }
 ];
 
 export const issueCategoryRoutes: IssueCategoryRoute[] = [
-  { category: "Download / checksum", whenPlayerSays: "Không thấy link tải, không hiểu checksum hoặc sợ file giả.", recommendedRoute: "/download/trust", whatToPrepare: "Tên route, đoạn copy gây nhầm, kỳ vọng của người chơi.", privacyBoundary: "Không gửi file thực thi lạ, token, email riêng tư hoặc payment data." },
-  { category: "Tester feedback", whenPlayerSays: "Muốn góp ý closed test hoặc báo known limitation.", recommendedRoute: "/release/tester-pack", whatToPrepare: "Device class, OS/browser, screen size gần đúng, bước tái hiện và expected/actual.", privacyBoundary: "Không gửi serial, IMEI, account ID, password hoặc private chat." },
-  { category: "Safety / conduct", whenPlayerSays: "Lo về hành vi cộng đồng, báo cáo nội dung hoặc quy tắc ứng xử.", recommendedRoute: "/support/safety", whatToPrepare: "Mô tả tình huống chung và route liên quan; chờ kênh official nếu cần moderation thật.", privacyBoundary: "Không gửi dữ liệu cá nhân nhạy cảm hoặc cáo buộc định danh khi chưa có kênh chính thức." },
-  { category: "Account / backend", whenPlayerSays: "Không rõ login, portal, character hoặc account recovery đã thật chưa.", recommendedRoute: "/status", whatToPrepare: "Đọc public/internal/blocked surface trước khi kỳ vọng flow tài khoản.", privacyBoundary: "Không nhập password hoặc email thật vào bất kỳ form giả nào." },
-  { category: "World / gameplay", whenPlayerSays: "Không rõ web đang hứa combat, boss, economy hay chỉ mô tả loop đầu.", recommendedRoute: "/game/loop", whatToPrepare: "Câu hỏi về Spirit Gate, Gate Keeper, Training Stone hoặc milestone gameplay.", privacyBoundary: "Không kỳ vọng reward, inventory, trading hoặc PvP khi chưa có milestone được claim." }
+  { category: "Tải game / checksum", whenPlayerSays: "Không thấy link tải, không hiểu checksum hoặc sợ file giả.", recommendedRoute: "/download/trust", whatToPrepare: "Tên route, đoạn copy gây nhầm, kỳ vọng của người chơi.", privacyBoundary: "Không gửi file thực thi lạ, token, email riêng tư hoặc dữ liệu thanh toán." },
+  { category: "Phản hồi tester", whenPlayerSays: "Muốn góp ý closed test hoặc báo giới hạn đã biết.", recommendedRoute: "/release/tester-pack", whatToPrepare: "Loại thiết bị, OS/browser, kích thước màn hình gần đúng, bước tái hiện và kỳ vọng/thực tế.", privacyBoundary: "Không gửi serial, IMEI, ID tài khoản, mật khẩu hoặc chat riêng." },
+  { category: "An toàn / ứng xử", whenPlayerSays: "Lo về hành vi cộng đồng, báo cáo nội dung hoặc quy tắc ứng xử.", recommendedRoute: "/support/safety", whatToPrepare: "Mô tả tình huống chung và route liên quan; chờ kênh chính thức nếu cần moderation thật.", privacyBoundary: "Không gửi dữ liệu cá nhân nhạy cảm hoặc cáo buộc định danh khi chưa có kênh chính thức." },
+  { category: "Tài khoản / backend", whenPlayerSays: "Không rõ đăng nhập, portal, nhân vật hoặc khôi phục tài khoản đã thật chưa.", recommendedRoute: "/status", whatToPrepare: "Đọc bề mặt công khai/nội bộ/tạm khóa trước khi kỳ vọng luồng tài khoản.", privacyBoundary: "Không nhập mật khẩu hoặc email thật vào bất kỳ form giả nào." },
+  { category: "Thế giới / lối chơi", whenPlayerSays: "Không rõ web đang hứa chiến đấu, boss, kinh tế hay chỉ mô tả vòng lặp đầu.", recommendedRoute: "/game/loop", whatToPrepare: "Câu hỏi về Cổng Linh, Người Gác Cổng, Đá Luyện Tập hoặc milestone lối chơi.", privacyBoundary: "Không kỳ vọng phần thưởng, túi đồ, giao dịch hoặc PvP khi chưa có milestone được claim." }
 ];
 
 export const noSearchBackendNotes: NoSearchBackendNote[] = [
-  { surface: "/support/help", currentBehavior: "FAQ được nhóm bằng typed local content và route links.", helpfulFallback: "Dùng nhóm câu hỏi, Issue category và Start/Journey hub để tự tìm đường.", notClaimed: "No search backend, no AI support bot, no ticket routing." },
-  { surface: "/support", currentBehavior: "Support page hiển thị static guidance và FAQ depth.", helpfulFallback: "Nếu câu hỏi liên quan dữ liệu riêng tư, chỉ chuẩn bị mô tả an toàn và chờ kênh owner-approved.", notClaimed: "No live support desk, no secure inbox, no SLA." },
-  { surface: "/status", currentBehavior: "Status phân biệt public/internal/blocked surfaces.", helpfulFallback: "Đọc Status trước khi hiểu nhầm portal/login/release readiness là production.", notClaimed: "No live status API, no monitoring integration." },
-  { surface: "/release/tester-pack", currentBehavior: "Tester pack cung cấp checklist và template chuẩn bị.", helpfulFallback: "Dùng template để ghi feedback offline; không gửi dữ liệu nhạy cảm cho tới khi có kênh chính thức.", notClaimed: "No tester intake, no signup form, no entitlement backend." }
+  { surface: "/support/help", currentBehavior: "FAQ được nhóm bằng nội dung local typed và link route.", helpfulFallback: "Dùng nhóm câu hỏi, nhóm vấn đề và trang Bắt đầu/Hành trình để tự tìm đường.", notClaimed: "Không có backend tìm kiếm, không có bot hỗ trợ AI, không định tuyến ticket." },
+  { surface: "/support", currentBehavior: "Trang hỗ trợ hiển thị hướng dẫn tĩnh và FAQ sâu.", helpfulFallback: "Nếu câu hỏi liên quan dữ liệu riêng tư, chỉ chuẩn bị mô tả an toàn và chờ kênh owner-approved.", notClaimed: "Không có bàn hỗ trợ live, không có hộp thư bảo mật, không có SLA." },
+  { surface: "/status", currentBehavior: "Trạng thái phân biệt bề mặt công khai/nội bộ/tạm khóa.", helpfulFallback: "Đọc Status trước khi hiểu nhầm portal/login/release readiness là production.", notClaimed: "Không có API trạng thái live, không tích hợp giám sát." },
+  { surface: "/release/tester-pack", currentBehavior: "Gói tester cung cấp checklist và mẫu chuẩn bị.", helpfulFallback: "Dùng template để ghi feedback offline; không gửi dữ liệu nhạy cảm cho tới khi có kênh chính thức.", notClaimed: "Không nhận tester, không form đăng ký, không backend cấp quyền." }
 ];
 
 

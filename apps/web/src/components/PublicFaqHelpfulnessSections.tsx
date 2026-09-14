@@ -9,8 +9,8 @@ import { GameCard, Grid, LinkButton, SectionHeading, StatusBadge } from "@lgo-we
 export function FaqDiscoveryGroupBoard() {
   return (
     <section className="lgo-panel lgo-faq-discovery-board" aria-labelledby="faq-discovery-heading">
-      <SectionHeading eyebrow="WEB v1.21 FAQ discoverability" title="FAQ được nhóm theo câu hỏi thật của người chơi">
-        Không cần search backend giả: mỗi nhóm câu hỏi dẫn tới route đang có nội dung rõ nhất và kèm non-claim để tránh hiểu nhầm.
+      <SectionHeading eyebrow="Nhóm câu hỏi" title="FAQ được nhóm theo câu hỏi thật của người chơi">
+        Không cần tìm kiếm backend giả: mỗi nhóm câu hỏi dẫn tới route đang có nội dung rõ nhất và kèm ranh giới để tránh hiểu nhầm.
       </SectionHeading>
       <Grid id="faq-discovery-heading">
         {faqDiscoveryGroups.map((group) => (
@@ -30,8 +30,8 @@ export function FaqDiscoveryGroupBoard() {
 export function FaqHelpfulnessPromptBoard() {
   return (
     <section className="lgo-panel lgo-faq-helpfulness-board" aria-labelledby="faq-helpfulness-heading">
-      <SectionHeading eyebrow="Helpful answer shape" title="Câu trả lời phải giúp người chơi biết bước tiếp theo">
-        Mỗi câu hỏi thường gặp nên có style trả lời, next step và điều phải tránh để không biến FAQ thành lời hứa release giả.
+      <SectionHeading eyebrow="Câu trả lời hữu ích" title="Câu trả lời phải giúp người chơi biết bước tiếp theo">
+        Mỗi câu hỏi thường gặp nên có kiểu trả lời, bước tiếp theo và điều phải tránh để không biến FAQ thành lời hứa phát hành giả.
       </SectionHeading>
       <Grid id="faq-helpfulness-heading">
         {faqHelpfulnessPrompts.map((item) => (
@@ -50,8 +50,8 @@ export function FaqHelpfulnessPromptBoard() {
 export function IssueCategoryRouteBoard() {
   return (
     <section className="lgo-panel lgo-issue-category-board" aria-labelledby="issue-category-heading">
-      <SectionHeading eyebrow="Issue-category routing" title="Báo lỗi theo nhóm vấn đề thay vì gửi nhầm dữ liệu">
-        Route gợi ý giúp người chơi chuẩn bị thông tin đúng phạm vi mà không gửi password, token, payment data hoặc dữ liệu nhạy cảm.
+      <SectionHeading eyebrow="Nhóm vấn đề" title="Báo lỗi theo nhóm vấn đề thay vì gửi nhầm dữ liệu">
+        Route gợi ý giúp người chơi chuẩn bị thông tin đúng phạm vi mà không gửi mật khẩu, token, dữ liệu thanh toán hoặc dữ liệu nhạy cảm.
       </SectionHeading>
       <div id="issue-category-heading" className="lgo-issue-category-list">
         {issueCategoryRoutes.map((item) => (
@@ -73,8 +73,8 @@ export function IssueCategoryRouteBoard() {
 export function NoSearchBackendNoteBoard() {
   return (
     <section className="lgo-panel lgo-no-search-backend-board" aria-labelledby="no-search-backend-heading">
-      <SectionHeading eyebrow="No search backend" title="Hữu ích bằng IA rõ ràng, không giả vờ có search/ticket system">
-        v1.21 cải thiện khả năng tìm câu trả lời bằng route grouping và helpful fallback, không thêm API search hoặc chatbot support.
+      <SectionHeading eyebrow="Không có tìm kiếm backend" title="Hữu ích bằng IA rõ ràng, không giả vờ có tìm kiếm hoặc ticket thật">
+        v1.21 cải thiện khả năng tìm câu trả lời bằng nhóm route và fallback hữu ích, không thêm API tìm kiếm hoặc chatbot hỗ trợ.
       </SectionHeading>
       <Grid id="no-search-backend-heading">
         {noSearchBackendNotes.map((note) => (
@@ -94,14 +94,14 @@ export function FaqHelpfulnessCta() {
   return (
     <section className="lgo-detail-next-steps lgo-faq-helpfulness-cta" aria-label="FAQ helpfulness next steps">
       <div>
-        <StatusBadge tone="jade">WEB v1.21 FAQ/helpfulness polish</StatusBadge>
-        <h2>Không biết nên đọc trang nào? Bắt đầu từ FAQ Help để chọn đúng nhóm vấn đề.</h2>
-        <p>FAQ Help gom download, release, tester pack, safety, account/backend boundaries và gameplay expectation mà không claim search backend.</p>
+        <StatusBadge tone="jade">WEB v1.21 FAQ hữu ích</StatusBadge>
+        <h2>Không biết nên đọc trang nào? Bắt đầu từ FAQ nhanh để chọn đúng nhóm vấn đề.</h2>
+        <p>FAQ nhanh gom tải game, phát hành, gói tester, an toàn, ranh giới tài khoản/backend và kỳ vọng lối chơi mà không claim tìm kiếm backend.</p>
       </div>
       <div className="lgo-product-first-actions">
-        <LinkButton href="/support/help" tone="jade">FAQ Help</LinkButton>
-        <LinkButton href="/support/safety" tone="gold">Safety support</LinkButton>
-        <LinkButton href="/download/trust" tone="spirit">Download trust</LinkButton>
+        <LinkButton href="/support/help" tone="jade">FAQ nhanh</LinkButton>
+        <LinkButton href="/support/safety" tone="gold">Hỗ trợ an toàn</LinkButton>
+        <LinkButton href="/download/trust" tone="spirit">Tin cậy tải game</LinkButton>
       </div>
     </section>
   );
