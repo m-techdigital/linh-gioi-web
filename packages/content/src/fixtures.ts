@@ -515,8 +515,8 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "web-program-control-tower",
     category: "news",
-    title: "Web program control tower established",
-    summary: "The independent Linh Giới Online web repo now has governance, ownership and non-claim guardrails.",
+    title: "Control tower web đã được thiết lập",
+    summary: "Repo web độc lập của Linh Giới Online đã có governance, ownership và guardrail non-claim.",
     body: "This public content is a source-owned fixture for the web program. It is not a backend contract and does not claim a production website release. WEB v1.7 continues by improving visual hierarchy, responsive layout and player-facing page quality while tooling remains a support guardrail.",
     publishedAt: "2026-09-05T00:00:00.000Z",
     status: "published",
@@ -526,8 +526,8 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "public-ux-content-polish-started",
     category: "news",
-    title: "Public UX/content polish starts",
-    summary: "The previous web slice focused on homepage hierarchy, game information, roadmap clarity, download status and support guidance.",
+    title: "Bắt đầu polish UX và nội dung public",
+    summary: "Slice web trước tập trung vào hierarchy trang chủ, thông tin game, roadmap, trạng thái tải game và hướng dẫn hỗ trợ.",
     body: "WEB v1.6 content polish established the player-facing foundation while keeping non-claims explicit: no production auth, no DB persistence, no CMS and no real backend integration.",
     publishedAt: "2026-09-05T06:00:00.000Z",
     status: "published",
@@ -537,8 +537,8 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "visual-responsive-polish-started",
     category: "news",
-    title: "Visual responsive polish starts",
-    summary: "The next web slice focuses on visual hierarchy, responsive page composition, clearer game information, download status and support guidance.",
+    title: "Bắt đầu polish visual và responsive",
+    summary: "Slice web tiếp theo tập trung vào visual hierarchy, bố cục responsive, thông tin game rõ hơn, trạng thái tải game và hỗ trợ.",
     body: "Runtime/browser E2E remains a regression guard. The main product work is visual and responsive polish for the public website while keeping non-claims explicit: no production auth, no DB persistence, no CMS and no real backend integration.",
     publishedAt: "2026-09-05T09:00:00.000Z",
     status: "published",
@@ -549,8 +549,8 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "public-game-info-depth-started",
     category: "news",
-    title: "Public game information gets deeper",
-    summary: "WEB v1.8 expands player-facing lore, beginner guidance, download status, FAQ hỗ trợ and community readiness without claiming production systems.",
+    title: "Thông tin game public được làm sâu hơn",
+    summary: "WEB v1.8 mở rộng lore, hướng dẫn người mới, trạng thái tải game, FAQ hỗ trợ và readiness cộng đồng mà không claim hệ thống production.",
     body: "WEB v1.8 focuses on the actual public website product. It deepens world story chapters, beginner guide steps, download status notes, FAQ hỗ trợ and community readiness while runtime/browser checks remain guardrails only.",
     publishedAt: "2026-09-05T10:00:00.000Z",
     status: "published",
@@ -560,8 +560,8 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "news-guide-detail-pages-started",
     category: "news",
-    title: "News and guide detail pages get deeper",
-    summary: "WEB v1.9 turns list pages into readable detail experiences for news, guide, status and download explanation content.",
+    title: "News và guide detail được làm sâu hơn",
+    summary: "WEB v1.9 biến các trang danh sách thành trải nghiệm detail dễ đọc cho news, guide, status và nội dung giải thích tải game.",
     body: "WEB v1.9 keeps the product focus on public website quality. It adds article detail sections, guide detail steps, status explainers and download explanations while preserving non-claims: no CMS, no production auth, no DB persistence, no live support backend and no public game download artifact.",
     publishedAt: "2026-09-05T11:00:00.000Z",
     status: "published",
@@ -571,7 +571,7 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "status-download-trust-polish-started",
     category: "news",
-    title: "Status and download trust copy gets clearer",
+    title: "Copy trạng thái và download trust rõ hơn",
     summary: "WEB v1.10 focuses on release trust wording, checksum/provenance explanation, status visibility and support expectations without adding backend claims.",
     body: "WEB v1.10 keeps building the public web product. It explains what evidence a real download needs, how status surfaces should be read, and what support can safely promise while public game artifacts, production auth, DB persistence, CMS and live support backend remain unavailable.",
     publishedAt: "2026-09-05T12:00:00.000Z",

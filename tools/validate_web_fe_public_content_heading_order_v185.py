@@ -18,7 +18,7 @@ def check_routes() -> None:
     route_markers = {
         "apps/web/src/app/events/page.tsx": ["lgo-eventspage-stack", "Sự kiện Linh Giới", "Lịch sự kiện tĩnh", "Sự kiện hiện là thông báo định hướng cộng đồng"],
         "apps/web/src/app/patch-notes/page.tsx": ["lgo-patchnotespage-stack", "Ghi chú cập nhật Linh Giới", "Nhật ký cập nhật tĩnh", "Bản ghi hiện là nhật ký phát triển công khai"],
-        "apps/web/src/app/news/page.tsx": ["PageHeader", "title=\"Tin tức\"", "Bản tin public tĩnh", "ContentIaStartCta"],
+        "apps/web/src/app/news/page.tsx": ["lgo-newspage-stack", "Tin tức Linh Giới", "Bản tin công khai", "Bản tin hiện là nhật ký web công khai"],
         "apps/web/src/app/status/page.tsx": ["lgo-status-hero-card", "Trạng thái công khai", "Các hạng mục công khai", "lgo-status-fixture-board"],
     }
     for rel, markers in route_markers.items(): require_text(rel, markers)
