@@ -44,8 +44,8 @@ def check_tests_docs() -> None:
             fail("docs/design/DESIGN-TARGET-REGISTRY.md: /release/tester-pack should not remain under broad Public Service applies-to list")
     for rel in ["docs/execution/specs/WEB-FE-TESTER-PACK-DESIGN-TARGET-DENSITY-v1.129.md", "LGO-WEB-FE-TESTER-PACK-DESIGN-TARGET-DENSITY-REPORT-v1.129.md", "HANDOFF-LGO-WEB-FE-TESTER-PACK-DESIGN-TARGET-DENSITY-v1.129.md"]:
         require_text(rel, ["WEB-FE-TESTER-PACK-DESIGN-TARGET-DENSITY-v1.129", "WEB_CLOSED", "Design Target First", "Base UI/UX Layout", "Public Tester Pack", "browser/e2e", "fold density", "built-in image_gen", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
-    require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-TESTER-PACK-DESIGN-TARGET-DENSITY-v1.129 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.130"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.130", "Design Target First", "Base UI/UX Layout", "browser/e2e"])
+    require_text("docs/execution/WEB-PROJECT-STATE.md", ["WEB-FE-TESTER-PACK-DESIGN-TARGET-DENSITY-v1.129 WEB_CLOSED", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.130"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "Design Target First", "Base UI/UX Layout", "browser/e2e"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-TESTER-PACK-DESIGN-TARGET-DENSITY-v1.129 | WEB-FE | WEB_CLOSED |"])
 def main() -> int:
     check_target(); check_tests_docs()

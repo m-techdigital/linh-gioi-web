@@ -1,3 +1,17 @@
+Current phase: WEB-FE-STATUS-DESIGN-TARGET-DENSITY-v1.130 WEB_CLOSED.
+
+Current decision: v1.130 FE status design target density slice closed. Public `/status` now has a dedicated high-fidelity `Public Status` design target and runtime desktop/mobile browser/e2e guardrails for first-fold maintenance/status density. Entire program is NOT production-complete.
+
+- v1.130 created `status-detailed-design-target-v1130.png` with built-in image_gen and mirrored it under `docs/design/reference`.
+- v1.130 registered `Public Status`, routed `/status` to that page-specific target and kept Public Service as the broader target for remaining service routes.
+- v1.130 compacted desktop `/status` page header, status signal board, status explanation and trust surfaces under `lgo-statuspage-stack` while preserving mobile behavior.
+- v1.130 evidence: RED browser/e2e reproduced missing `Public Status` target attachment; Playwright desktop/mobile status design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
+- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.131.
+
 Current phase: WEB-FE-TESTER-PACK-DESIGN-TARGET-DENSITY-v1.129 WEB_CLOSED.
 
 Current decision: v1.129 FE tester pack design target density slice closed. Public `/release/tester-pack` now has a dedicated high-fidelity `Public Tester Pack` design target and runtime desktop/mobile browser/e2e guardrails for first-fold tester guidance density. Entire program is NOT production-complete.

@@ -69,6 +69,12 @@ const PUBLIC_TESTER_PACK_TARGET = {
   scope: "Public Tester Pack"
 };
 
+const PUBLIC_STATUS_TARGET = {
+  label: "Status detailed design target",
+  href: "/design-reference/status-detailed-design-target-v1130.png",
+  scope: "Public Status"
+};
+
 const PUBLIC_CORE_TARGET = {
   label: "Public Core design target",
   href: "/design-reference/design-atlas-public-core-v195.png",
@@ -98,6 +104,7 @@ function targetForPath(pathname: string) {
   if (pathname === "/release/readiness") return PUBLIC_RELEASE_READINESS_TARGET;
   if (pathname === "/release/tester-pack") return PUBLIC_TESTER_PACK_TARGET;
   if (pathname === "/release") return PUBLIC_RELEASE_TARGET;
+  if (pathname === "/status") return PUBLIC_STATUS_TARGET;
   if (publicServicePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_SERVICE_TARGET;
   if (publicCorePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_CORE_TARGET;
   return PUBLIC_CORE_TARGET;

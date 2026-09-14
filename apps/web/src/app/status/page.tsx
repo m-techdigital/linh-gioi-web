@@ -22,7 +22,7 @@ export default function Page() {
   const entries = localContentRepository.list("maintenance");
   return (
     <WebAppShell>
-      <Stack>
+      <Stack className="lgo-player-facing-stack lgo-statuspage-stack">
         <PageHeader
           badge="Status"
           badgeTone="jade"
@@ -30,18 +30,6 @@ export default function Page() {
           title="Trạng thái / Maintenance"
           description="No CMS. No backend. PROVISIONAL_WEB_FIXTURE only. Status separates public, internal and blocked surfaces before any production monitoring contract exists."
         />
-        <ReleaseReadinessHubCta />
-        <ReleaseSurfaceAlignmentBoard />
-        <PlayerTrustReleaseCta />
-        <TrustJourneyCheckpointBoard />
-        <ContentIaStartCta />
-        <FaqHelpfulnessCta />
-        <RouteContinuityCta />
-        <WorldGameplayLoopCta />
-        <PlayerSafetySupportCta />
-        <AccessibilityReadabilityCta />
-        <PerformanceBudgetCta />
-        <PerceivedLoadSignalBoard />
         <SectionHeading eyebrow="Status fixture entries" title="Trạng thái public tĩnh">No CMS. No backend. PROVISIONAL_WEB_FIXTURE only. Status separates public, internal and blocked surfaces.</SectionHeading>
         <figure className="lgo-status-design-board lgo-panel" aria-label="Status maintenance signal reference art">
           <img
@@ -60,6 +48,18 @@ export default function Page() {
         </figure>
         <StatusExplanationDepth />
         <StatusTrustBoard />
+        <ReleaseReadinessHubCta />
+        <ReleaseSurfaceAlignmentBoard />
+        <PlayerTrustReleaseCta />
+        <TrustJourneyCheckpointBoard />
+        <ContentIaStartCta />
+        <FaqHelpfulnessCta />
+        <RouteContinuityCta />
+        <WorldGameplayLoopCta />
+        <PlayerSafetySupportCta />
+        <AccessibilityReadabilityCta />
+        <PerformanceBudgetCta />
+        <PerceivedLoadSignalBoard />
         <NoSearchBackendNoteBoard />
         <RoadmapDecisionGateBoard />
         <StagedReleaseMessagingBoard />
