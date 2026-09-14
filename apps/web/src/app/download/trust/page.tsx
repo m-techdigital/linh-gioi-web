@@ -25,8 +25,8 @@ export const metadata = { title: "Download trust" };
 export default function DownloadTrustPage() {
   return (
     <WebAppShell>
-      <Stack>
-        <GameCard className="lgo-detail-hero-card">
+      <Stack className="lgo-player-facing-stack lgo-downloadtrustpage-stack">
+        <GameCard className="lgo-detail-hero-card lgo-download-trust-hero-card">
           <StatusBadge tone="gold">WEB v1.11 staged release messaging · WEB v1.10 download trust</StatusBadge>
           <span className="lgo-card-kicker">No fake download · no placeholder checksum · no entitlement claim</span>
           <h1>Download trust / checksum / provenance</h1>
@@ -45,8 +45,11 @@ export default function DownloadTrustPage() {
         <SectionHeading eyebrow="Trust-first download" title="Người chơi cần bằng chứng trước khi tải">
           Runtime/browser/e2e chỉ là guardrail nội bộ. Public download cần artifact thật, SHA256, provenance, known limitations và support expectation.
         </SectionHeading>
-        <ReleaseReadinessHubCta />
-        <OwnerReleaseGateBoard />
+        <div className="lgo-download-trust-first-gates">
+          <ReleaseReadinessHubCta />
+          <OwnerReleaseGateBoard />
+        </div>
+        <DownloadTrustGateBoard />
         <PlayerTrustReleaseCta />
         <ReleaseNarrativeStageBoard />
         <ContentIaStartCta />
@@ -56,7 +59,6 @@ export default function DownloadTrustPage() {
         <PlayerSafetySupportCta />
         <ReleaseTrustDesignBoard />
         <PerformanceBudgetCta />
-        <DownloadTrustGateBoard />
         <ReleaseEvidenceChecklist />
         <DownloadStatusDepth />
         <DownloadExplanationDepth />
@@ -65,8 +67,8 @@ export default function DownloadTrustPage() {
         <RoadmapDecisionGateBoard />
         <StagedReleaseMessagingBoard />
         <DownloadTrustCta />
-              <ClosedTesterInformationPackCta />
-        </Stack>
+        <ClosedTesterInformationPackCta />
+      </Stack>
     </WebAppShell>
   );
 }

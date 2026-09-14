@@ -1,3 +1,17 @@
+Current phase: WEB-FE-DOWNLOAD-TRUST-DESIGN-TARGET-DENSITY-v1.126 WEB_CLOSED.
+
+Current decision: v1.126 FE download trust design target density slice closed. Public `/download/trust` now has a dedicated high-fidelity `Public Download Trust` design target and runtime desktop/mobile browser/e2e guardrails for first-fold trust/checksum/provenance density. Entire program is NOT production-complete.
+
+- v1.126 created `download-trust-detailed-design-target-v1126.png` with built-in image_gen and mirrored it under `docs/design/reference`.
+- v1.126 registered `Public Download Trust`, routed `/download/trust` to that page-specific target and kept Public Service as the broader target for remaining service routes.
+- v1.126 compacted desktop `/download/trust` hero, release readiness CTA, owner gate board and trust gate sequence under `lgo-downloadtrustpage-stack` while preserving mobile behavior.
+- v1.126 evidence: RED browser/e2e reproduced missing `Public Download Trust` target attachment; Playwright desktop/mobile download trust design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
+- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.127.
+
 Current phase: WEB-FE-DOWNLOAD-DESIGN-TARGET-DENSITY-v1.125 WEB_CLOSED.
 
 Current decision: v1.125 FE download design target density slice closed. Public `/download` now has a dedicated high-fidelity `Public Download` design target and runtime desktop/mobile browser/e2e guardrails for first-fold release readiness density. Entire program is NOT production-complete.
