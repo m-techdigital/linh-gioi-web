@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+ERRORS: list[str] = []
+
+def fail(message: str) -> None:
+    ERRORS.append(message)
+
+def read(rel: str) -> str:
+    p = ROOT / rel
+    if not p.is_file():
+        fail(f"missing file: {rel}")
+        return ""
+    return p.read_text(encoding="utf-8")
+
+def require_file(rel: str) -> None:
+    if not (ROOT / rel).is_file():
+        fail(f"missing file: {rel}")
+
+def require_text(rel: str, markers: list[str]) -> None:
+    text = read(rel)
+    for marker in markers:
+        if marker not in text:
+            fail(f"{rel}: missing {marker}")
+
+def check_tests_docs() -> None:
+    for rel in [
+        "tests/e2e/fe-public-expanded-core-route-audit-v1114.spec.ts",
+        "docs/execution/specs/WEB-FE-PUBLIC-EXPANDED-CORE-ROUTE-AUDIT-v1.114.md",
+        "LGO-WEB-FE-PUBLIC-EXPANDED-CORE-ROUTE-AUDIT-REPORT-v1.114.md",
+        "HANDOFF-LGO-WEB-FE-PUBLIC-EXPANDED-CORE-ROUTE-AUDIT-v1.114.md",
+    ]:
+        require_file(rel)
+    require_text("tests/e2e/fe-public-expanded-core-route-audit-v1114.spec.ts", [
+        "expanded public core route audit",
+        "axe-core/axe.min.js",
+        "coreRoutes",
+        "/game/loop",
+        "/classes",
+        "/story",
+        "/journey",
+        "/guides/beginner-training-loop-guide",
+        "/patch-notes",
+        "Design target reference",
+        "Public Core",
+        "serious/critical axe violations",
+        "horizontal overflow",
+        "h1 font-size",
+        "h2 font-size",
+        "nav font-size",
+    ])
+    for rel in [
+        "docs/execution/specs/WEB-FE-PUBLIC-EXPANDED-CORE-ROUTE-AUDIT-v1.114.md",
+        "LGO-WEB-FE-PUBLIC-EXPANDED-CORE-ROUTE-AUDIT-REPORT-v1.114.md",
+        "HANDOFF-LGO-WEB-FE-PUBLIC-EXPANDED-CORE-ROUTE-AUDIT-v1.114.md",
+    ]:
+        require_text(rel, [
+            "WEB-FE-PUBLIC-EXPANDED-CORE-ROUTE-AUDIT-v1.114",
+            "WEB_CLOSED",
+            "Design Target First",
+            "Base UI/UX Layout",
+            "Public Core",
+            "browser/e2e",
+            "No production auth",
+            "No DB persistence",
+            "No real Portal integration",
+            "No real Ops/Admin mutation",
+            "NO_ACCEPTED_BACKEND_CONTRACT",
+        ])
+    require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Core", "Component/state"])
+    require_text("docs/execution/WEB-PROJECT-STATE.md", [
+        "Current phase: WEB-FE-PUBLIC-EXPANDED-CORE-ROUTE-AUDIT-v1.114 WEB_CLOSED",
+        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.115",
+    ])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.115", "Design Target First", "browser/e2e"])
+    require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-PUBLIC-EXPANDED-CORE-ROUTE-AUDIT-v1.114 | WEB-FE | WEB_CLOSED |"])
+
+def main() -> int:
+    check_tests_docs()
+    if ERRORS:
+        print("WEB FE PUBLIC EXPANDED CORE ROUTE AUDIT v1.114 VALIDATION FAIL")
+        for error in ERRORS:
+            print(f"- {error}")
+        return 1
+    print("WEB FE PUBLIC EXPANDED CORE ROUTE AUDIT v1.114 VALIDATION PASS")
+    return 0
+
+if __name__ == "__main__":
+    raise SystemExit(main())

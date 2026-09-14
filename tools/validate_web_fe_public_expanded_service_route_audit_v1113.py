@@ -72,9 +72,8 @@ def check_tests_docs() -> None:
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Service", "Component/state"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         "Current phase: WEB-FE-PUBLIC-EXPANDED-SERVICE-ROUTE-AUDIT-v1.113 WEB_CLOSED",
-        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.114",
     ])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.114", "Design Target First", "browser/e2e"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "Design Target First", "browser/e2e"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-PUBLIC-EXPANDED-SERVICE-ROUTE-AUDIT-v1.113 | WEB-FE | WEB_CLOSED |"])
 
 def main() -> int:
