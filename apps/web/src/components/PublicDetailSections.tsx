@@ -19,6 +19,7 @@ const articleDetailTitles: Record<string, string> = {
   "public-game-info-depth-started": "Bài viết giải thích thông tin game public",
   "news-guide-detail-pages-started": "Bài viết giải thích news và guide detail",
   "status-download-trust-polish-started": "Bài viết giải thích status và download trust",
+  "closed-tester-information-pack-started": "Bài viết giải thích closed tester information pack",
 };
 
 function articleDetailTitle(slug: string) {

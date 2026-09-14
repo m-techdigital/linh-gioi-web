@@ -95,8 +95,8 @@ def main() -> int:
         'Base First',
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.183',
-        'Current FE scope: select `/news/closed-tester-information-pack-started`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.184',
+        'Current FE scope: select `/news/release-readiness-hub-polish-started`',
         'Real Browser UI/UX Layout First',
         'Base UI/UX Layout',
     ])

@@ -582,9 +582,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "closed-tester-information-pack-started",
     category: "news",
-    title: "Closed tester information pack is prepared",
-    summary: "WEB v1.20 explains what a future tester should read, prepare and avoid sharing before any real intake channel exists.",
-    body: "The closed tester information pack keeps the public website useful without opening registration. It gives players a checklist, feedback format, known limitation copy and device report template while preserving boundaries: no tester intake backend, no account entitlement and no collection of secrets or sensitive personal data.",
+    title: "Gói thông tin closed tester đã được chuẩn bị",
+    summary: "WEB v1.20 giải thích người chơi thử nghiệm tương lai nên đọc gì, chuẩn bị gì và tránh chia sẻ gì trước khi có kênh intake thật.",
+    body: "Gói thông tin closed tester giữ web public hữu ích mà không mở đăng ký. Trang giải thích checklist, mẫu feedback an toàn, giới hạn đã biết và mẫu báo cáo thiết bị, đồng thời giữ ranh giới: chưa có backend tuyển tester, chưa có quyền tài khoản và không thu thập bí mật hoặc dữ liệu nhạy cảm.",
     publishedAt: "2026-09-05T23:00:00.000Z",
     status: "published",
     featured: true,
@@ -1001,16 +1001,16 @@ export const contentDetailSections: ContentDetailSection[] = [
   {
     slug: "closed-tester-information-pack-started",
     heading: "Tester pack là guidance, không phải intake",
-    body: "v1.20 gom checklist, safe feedback template, known limitations và device report template vào một route public để chuẩn bị closed-test communication trước khi kênh official tồn tại.",
+    body: "v1.20 gom checklist, mẫu feedback an toàn, giới hạn đã biết và mẫu báo cáo thiết bị vào một route public để chuẩn bị truyền thông closed-test trước khi kênh chính thức tồn tại.",
     playerImpact: "Người chơi biết nên đọc gì và tránh gửi gì trước khi có thông báo tester chính thức.",
-    nonClaim: "No live tester intake, no guaranteed tester slot, no open registration."
+    nonClaim: "Không mở intake tester live, không bảo đảm slot tester và không mở đăng ký công khai."
   },
   {
     slug: "closed-tester-information-pack-started",
     heading: "Privacy boundary được đặt cạnh feedback",
-    body: "Các field feedback chỉ yêu cầu mô tả route, bước tái hiện, expected/actual và device class an toàn; public copy không yêu cầu secrets hoặc dữ liệu nhạy cảm.",
+    body: "Các field feedback chỉ yêu cầu mô tả route, bước tái hiện, kết quả mong đợi/thực tế và nhóm thiết bị an toàn; public copy không yêu cầu secrets hoặc dữ liệu nhạy cảm.",
     playerImpact: "Feedback tương lai dễ triage hơn mà không tạo cảm giác phải chia sẻ tài khoản hoặc token.",
-    nonClaim: "No collection of passwords, tokens, dữ liệu thanh toán or sensitive personal data."
+    nonClaim: "Không thu mật khẩu, token, dữ liệu thanh toán hoặc dữ liệu cá nhân nhạy cảm."
   },
   {
     slug: "release-readiness-hub-polish-started",
