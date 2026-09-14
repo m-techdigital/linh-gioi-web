@@ -7,6 +7,16 @@ import {
 } from "@lgo-web/content";
 import { GameCard, Grid, LinkButton, SectionHeading, StatusBadge } from "@lgo-web/ui";
 
+function supportScopeLabel(scope: string) {
+  if (scope === "static public guidance") return "hướng dẫn tĩnh";
+  if (scope === "auth non-claim") return "chưa claim tài khoản thật";
+  if (scope === "gameplay non-claim") return "chưa claim gameplay live";
+  if (scope === "governance") return "ranh giới backend";
+  if (scope === "privacy-safe issue reporting") return "báo lỗi an toàn";
+  if (scope === "closed-test support non-claim") return "chưa claim hỗ trợ live";
+  return scope;
+}
+
 export function WorldStoryDepth() {
   return (
     <section className="lgo-panel lgo-depth-panel" aria-labelledby="world-story-depth-heading">
@@ -70,11 +80,11 @@ export function DownloadStatusDepth() {
 export function SupportFaqDepth() {
   return (
     <section className="lgo-panel lgo-faq-panel" aria-labelledby="support-faq-depth-heading">
-      <SectionHeading eyebrow="Support FAQ" title="FAQ nói thẳng về tải game, tài khoản, combat và backend contract" />
+      <SectionHeading eyebrow="FAQ nhanh" title="FAQ nói thẳng về tải game, tài khoản, chiến đấu và hợp đồng backend" />
       <div id="support-faq-depth-heading" className="lgo-faq-list">
         {supportFaqs.map((faq) => (
           <article className="lgo-faq-item" key={faq.question}>
-            <StatusBadge tone="jade">{faq.scope}</StatusBadge>
+            <StatusBadge tone="jade">{supportScopeLabel(faq.scope)}</StatusBadge>
             <h3>{faq.question}</h3>
             <p>{faq.answer}</p>
           </article>

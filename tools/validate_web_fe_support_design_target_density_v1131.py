@@ -14,6 +14,10 @@ def require_text(rel: str, markers: list[str]) -> None:
     text = read(rel)
     for marker in markers:
         if marker not in text: fail(f"{rel}: missing {marker}")
+def forbid_text(rel: str, markers: list[str]) -> None:
+    text = read(rel)
+    for marker in markers:
+        if marker in text: fail(f"{rel}: forbidden stale marker {marker}")
 def png_size(rel: str) -> tuple[int, int]:
     path = ROOT / rel
     if not path.is_file(): fail(f"missing file: {rel}"); return (0, 0)
@@ -30,9 +34,10 @@ def check_target() -> None:
     if all((ROOT / rel).is_file() for rel in targets) and (ROOT / targets[0]).read_bytes() != (ROOT / targets[1]).read_bytes(): fail("support detailed target public/docs copies differ")
 def check_tests_docs() -> None:
     for rel in ["tests/e2e/fe-support-design-target-density-v1131.spec.ts", "docs/execution/specs/WEB-FE-SUPPORT-DESIGN-TARGET-DENSITY-v1.131.md", "LGO-WEB-FE-SUPPORT-DESIGN-TARGET-DENSITY-REPORT-v1.131.md", "HANDOFF-LGO-WEB-FE-SUPPORT-DESIGN-TARGET-DENSITY-v1.131.md"]: require_file(rel)
-    require_text("tests/e2e/fe-support-design-target-density-v1131.spec.ts", ["support Vietnamese design target density", "Public Support", "support-detailed-design-target-v1131.png", "support page visible copy should be Vietnamese", "desktop support board enters first fold", "desktop support FAQ stays near first help flow", "support h1 follows target scale"])
+    require_text("tests/e2e/fe-support-design-target-density-v1131.spec.ts", ["support Vietnamese design target density", "Hỗ trợ cộng đồng", "support-detailed-design-target-v1131.png", "support page visible copy should be Vietnamese", "desktop support board enters first fold", "desktop support FAQ stays near first help flow", "support h1 follows target scale"])
     require_text("apps/web/src/app/support/page.tsx", ["lgo-supportpage-stack", "lgo-support-design-board", "support-detailed-design-target-v1131.png", "Hỗ trợ cộng đồng", "Không có hệ thống ticket thật", "supportTopicCards"])
-    require_text("apps/web/src/app/globals.css", ["WEB v1.131 support detailed design target density", ".lgo-supportpage-stack", ".lgo-support-hero-note", ".lgo-support-design-board", ".lgo-support-topic-grid"])
+    require_text("packages/ui/src/service-layout.css", ["Shared support station layout", "lgo-support-hero-note", "lgo-support-topic-board", "lgo-faq-panel"])
+    forbid_text("apps/web/src/app/globals.css", ["WEB v1.131 support detailed design target density"])
     require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_SUPPORT_TARGET", "Thiết kế chi tiết hỗ trợ", "support-detailed-design-target-v1131.png", "Public Support", "pathname === \"/support\""])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Support", "support-detailed-design-target-v1131.png", "WEB-FE-SUPPORT-DETAILED-DESIGN-TARGET-v1.131.png", "Vietnamese", "Design Target First"])
     registry = read("docs/design/DESIGN-TARGET-REGISTRY.md")
@@ -40,9 +45,9 @@ def check_tests_docs() -> None:
         if line.startswith("| Public Service |") and "`/support`" in line:
             fail("docs/design/DESIGN-TARGET-REGISTRY.md: /support should not remain under broad Public Service applies-to list")
     for rel in ["docs/execution/specs/WEB-FE-SUPPORT-DESIGN-TARGET-DENSITY-v1.131.md", "LGO-WEB-FE-SUPPORT-DESIGN-TARGET-DENSITY-REPORT-v1.131.md", "HANDOFF-LGO-WEB-FE-SUPPORT-DESIGN-TARGET-DENSITY-v1.131.md"]:
-        require_text(rel, ["WEB-FE-SUPPORT-DESIGN-TARGET-DENSITY-v1.131", "WEB_CLOSED", "Design Target First", "Base UI/UX Layout", "Public Support", "Vietnamese", "browser/e2e", "built-in image_gen", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
+        require_text(rel, ["WEB-FE-SUPPORT-DESIGN-TARGET-DENSITY-v1.131", "WEB_CLOSED", "Base UI/UX Layout", "Public Support", "Vietnamese", "browser/e2e", "built-in image_gen", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["WEB-FE-SUPPORT-DESIGN-TARGET-DENSITY-v1.131 WEB_CLOSED", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "Design Target First", "Base UI/UX Layout", "browser/e2e", "Vietnamese"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "Real Browser UI/UX Layout First", "Base UI/UX Layout", "browser/e2e", "Vietnamese"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-SUPPORT-DESIGN-TARGET-DENSITY-v1.131 | WEB-FE | WEB_CLOSED |"])
 def main() -> int:
     check_target(); check_tests_docs()

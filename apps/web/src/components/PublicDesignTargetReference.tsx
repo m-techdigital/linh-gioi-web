@@ -78,7 +78,7 @@ const PUBLIC_STATUS_TARGET = {
 const PUBLIC_SUPPORT_TARGET = {
   label: "Thiết kế chi tiết hỗ trợ",
   href: "/design-reference/support-detailed-design-target-v1131.png",
-  scope: "Public Support"
+  scope: "Hỗ trợ cộng đồng"
 };
 
 const PUBLIC_SUPPORT_HELP_TARGET = {

@@ -1,3 +1,16 @@
+Current phase: WEB-FE-SUPPORT-REAL-UI-LAYOUT-v1.146 WEB_CLOSED.
+
+Current decision: v1.146 closed the active `/support` page slice as a real browser UI/UX Layout task. `/support` kept its existing Vietnamese support target, removed stale page-local v1.131 support CSS, and now uses shared Base First support/service layout from `packages/ui/src/service-layout.css`. Entire program is NOT production-complete.
+
+- v1.146 did not regenerate design because the existing `/support` target was already Vietnamese and usable for comparison.
+- v1.146 replaced stale first-flow `Design Target First` copy with `Board tham chiếu` and localized the target scope to `Hỗ trợ cộng đồng`.
+- v1.146 moved support density away from `apps/web/src/app/globals.css` and into reusable shared service/support classes.
+- v1.146 updated `/support` first-flow: compact Hỗ trợ cộng đồng hero → support station board → support topic board → FAQ → safety CTA.
+- v1.146 evidence: RED browser metrics showed mobile board bottom 1949.375px and FAQ top 2558.531px; GREEN browser metrics show desktop overflow 0, h1 34.816px, hero bottom 363.094px, board bottom 550.203px, topic board top 584.75px, FAQ top 870.766px; mobile overflow 0, h1 46.8px, hero bottom 497.453px, board bottom 802.531px, topic board top 833.719px and FAQ top 1330.063px.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.147. Select `/support/help` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-STATUS-REAL-UI-LAYOUT-v1.145 WEB_CLOSED.
 
 Current decision: v1.145 closed the active `/status` page slice as a real browser UI/UX Layout task. `/status` now uses a Vietnamese status target, Vietnamese public status signal board, compact shared service/proof layout, and Base First proof cards from `packages/ui/src/service-layout.css`. Entire program is NOT production-complete.

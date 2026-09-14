@@ -42,10 +42,10 @@ const supportTopicCards = [
 export default function SupportPage() {
   return (
     <WebAppShell>
-      <Stack className="lgo-player-facing-stack lgo-supportpage-stack">
-        <section className="lgo-panel lgo-support-hero">
+      <Stack className="lgo-player-facing-stack lgo-service-compact-proof-page lgo-supportpage-stack">
+        <section className="lgo-panel lgo-detail-hero-card lgo-support-hero">
           <div>
-            <StatusBadge tone="jade">WEB v1.131 · thiết kế hỗ trợ tiếng Việt</StatusBadge>
+            <StatusBadge tone="jade">WEB v1.146 · trạm hỗ trợ cộng đồng</StatusBadge>
             <h1>Hỗ trợ cộng đồng</h1>
             <p className="lgo-hero-lead">
               Đồng hành cùng người chơi bằng hướng dẫn tĩnh, rõ ranh giới: tải game, tài khoản,
@@ -62,7 +62,7 @@ export default function SupportPage() {
           </div>
         </section>
 
-        <figure className="lgo-support-design-board lgo-panel" aria-label="Bảng thiết kế trạm hỗ trợ người chơi">
+        <figure className="lgo-support-design-board lgo-service-proof-board lgo-panel" aria-label="Bảng thiết kế trạm hỗ trợ người chơi">
           <img
             src="/design-reference/support-detailed-design-target-v1131.png"
             alt="Thiết kế tiếng Việt cho trạm hỗ trợ người chơi Linh Giới Online"
@@ -70,7 +70,7 @@ export default function SupportPage() {
             decoding="async"
           />
           <figcaption>
-            <StatusBadge tone="spirit">Design Target First</StatusBadge>
+            <StatusBadge tone="spirit">Board tham chiếu</StatusBadge>
             <strong>Trạm hỗ trợ người chơi phải đọc được ngay bằng tiếng Việt.</strong>
             <span>
               Bảng này là đích đối chiếu cho `/support`: người chơi thấy nhóm hỗ trợ, FAQ nhanh, an toàn dữ liệu
@@ -79,19 +79,21 @@ export default function SupportPage() {
           </figcaption>
         </figure>
 
-        <SectionHeading eyebrow="Trạm hỗ trợ" title="Các nhóm hỗ trợ hiện có">
-          Hướng dẫn hỗ trợ là nội dung tĩnh. Website chưa có ticket thật, chưa tra cứu tài khoản và chưa có thao tác vận hành/admin.
-        </SectionHeading>
-        <Grid className="lgo-support-topic-grid">
-          {supportTopicCards.map((topic) => (
-            <GameCard key={topic.title}>
-              <StatusBadge tone="jade">HƯỚNG DẪN TẠM THỜI</StatusBadge>
-              <h3>{topic.title}</h3>
-              <p>{topic.summary}</p>
-              <p><strong>{topic.action}</strong></p>
-            </GameCard>
-          ))}
-        </Grid>
+        <section className="lgo-panel lgo-service-proof-card-grid lgo-support-topic-board" aria-labelledby="support-topic-heading">
+          <SectionHeading eyebrow="Trạm hỗ trợ" title="Các nhóm hỗ trợ hiện có">
+            Hướng dẫn hỗ trợ là nội dung tĩnh. Website chưa có ticket thật, chưa tra cứu tài khoản và chưa có thao tác vận hành/admin.
+          </SectionHeading>
+          <Grid id="support-topic-heading" className="lgo-support-topic-grid">
+            {supportTopicCards.map((topic) => (
+              <GameCard className="lgo-service-proof-card" key={topic.title}>
+                <StatusBadge tone="jade">Hướng dẫn tạm thời</StatusBadge>
+                <h3>{topic.title}</h3>
+                <p>{topic.summary}</p>
+                <p><strong>{topic.action}</strong></p>
+              </GameCard>
+            ))}
+          </Grid>
+        </section>
 
         <SupportFaqDepth />
         <PlayerSafetySupportCta />

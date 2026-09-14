@@ -409,22 +409,22 @@ export const downloadStatusNotes: DownloadStatusNote[] = [
 export const supportFaqs: SupportFaq[] = [
   {
     question: "Hiện có tải được game không?",
-    answer: "Chưa. Trang Download chỉ hiển thị readiness và blocker cho đến khi có public hoặc closed-testing artifact kèm checksum.",
+    answer: "Chưa. Trang Tải game chỉ hiển thị điều kiện sẵn sàng và blocker cho đến khi có gói public hoặc closed-test kèm checksum.",
     scope: "static public guidance"
   },
   {
     question: "Dev login trong game có phải tài khoản thật không?",
-    answer: "Không. Dev/login gate và account/character prototype không đồng nghĩa với production auth, email/password, OAuth hoặc DB persistence.",
+    answer: "Không. Cổng đăng nhập phát triển và mẫu tài khoản/nhân vật không đồng nghĩa với xác thực production, email/mật khẩu, OAuth hoặc lưu DB thật.",
     scope: "auth non-claim"
   },
   {
-    question: "Có combat, guild, chat hoặc economy chưa?",
-    answer: "Chưa claim trên public web. Các hệ thống này cần milestone/contract riêng trước khi đưa vào nội dung public như tính năng thật.",
+    question: "Có chiến đấu, bang hội, chat hoặc kinh tế chưa?",
+    answer: "Chưa được claim trên web công khai. Các hệ thống này cần milestone/hợp đồng riêng trước khi đưa vào nội dung public như tính năng thật.",
     scope: "gameplay non-claim"
   },
   {
     question: "Vì sao web nhắc nhiều tới contract?",
-    answer: "Vì portal, ops, account, DB và live community cần backend canonical. Web không tự tạo backend giả để lấy cảm giác hoàn chỉnh.",
+    answer: "Vì Portal, Ops, tài khoản, DB và cộng đồng live cần backend canonical. Web không tự tạo backend giả để tạo cảm giác hoàn chỉnh.",
     scope: "governance"
   },
   {
@@ -434,7 +434,7 @@ export const supportFaqs: SupportFaq[] = [
   },
   {
     question: "Closed test có hỗ trợ live không?",
-    answer: "Chưa. Closed-test support chỉ được nói tới khi có artifact, known limitations, support owner và privacy rule được duyệt. Web không claim SLA, ticket backend hoặc account lookup.",
+    answer: "Chưa. Hỗ trợ closed-test chỉ được nói tới khi có gói build, giới hạn đã biết, owner hỗ trợ và quy tắc riêng tư được duyệt. Web không claim SLA, ticket backend hoặc tra cứu tài khoản thật.",
     scope: "closed-test support non-claim"
   }
 ];

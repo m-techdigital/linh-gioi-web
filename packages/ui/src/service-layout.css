@@ -65,6 +65,8 @@
   }
 
   .lgo-service-compact-proof-page .lgo-service-proof-board {
+    align-items: center;
+    display: grid;
     grid-template-columns: minmax(0, .78fr) minmax(220px, .22fr);
     margin-top: -1.45rem;
     padding: .68rem;
@@ -72,12 +74,16 @@
   }
 
   .lgo-service-compact-proof-page .lgo-service-proof-board img {
+    display: block;
     height: 168px;
     max-height: 168px;
     object-fit: fill;
+    width: 100%;
   }
 
   .lgo-service-compact-proof-page .lgo-service-proof-board figcaption {
+    display: grid;
+    gap: .42rem;
     font-size: .76rem;
     line-height: 1.26;
   }
@@ -333,4 +339,207 @@
 
   .lgo-service-compact-proof-page .lgo-service-proof-item p { -webkit-line-clamp: 2; }
   .lgo-service-compact-proof-page .lgo-service-proof-item small { -webkit-line-clamp: 1; }
+}
+
+
+/* Shared support station layout for public service pages. */
+.lgo-service-compact-proof-page .lgo-support-hero-note {
+  align-self: stretch;
+  border: 1px solid rgba(245,200,107,.28);
+  border-radius: 1.15rem;
+  background:
+    radial-gradient(circle at top right, rgba(245,200,107,.14), transparent 12rem),
+    linear-gradient(145deg, rgba(35, 28, 14, .72), rgba(7, 17, 31, .74));
+  box-shadow: inset 0 1px rgba(255,255,255,.06);
+  display: grid;
+  gap: .65rem;
+}
+
+.lgo-service-compact-proof-page .lgo-support-hero-note .lgo-product-first-actions {
+  justify-content: stretch;
+}
+
+.lgo-service-compact-proof-page .lgo-support-hero-note .lgo-link-button {
+  justify-content: center;
+}
+
+@media (min-width: 981px) {
+  .lgo-service-compact-proof-page.lgo-supportpage-stack {
+    gap: clamp(.82rem, 1.45vw, 1.2rem);
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-hero-note {
+    padding: clamp(.68rem, 1vw, .86rem);
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-hero-note p {
+    font-size: .8rem;
+    line-height: 1.28;
+    margin-block: .15rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-hero-note .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .45rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-topic-board .lgo-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lgo-service-compact-proof-page .lgo-faq-panel,
+  .lgo-service-compact-proof-page .lgo-support-expectations,
+  .lgo-service-compact-proof-page .lgo-player-safety-cta {
+    padding: .72rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-faq-panel .lgo-section-heading,
+  .lgo-service-compact-proof-page .lgo-support-expectations .lgo-section-heading {
+    margin-bottom: .5rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-faq-panel .lgo-section-heading h2,
+  .lgo-service-compact-proof-page .lgo-support-expectations .lgo-section-heading h2,
+  .lgo-service-compact-proof-page .lgo-player-safety-cta h2 {
+    font-size: clamp(1.08rem, 1.35vw, 1.3rem);
+    line-height: 1.04;
+  }
+
+  .lgo-service-compact-proof-page .lgo-faq-panel p,
+  .lgo-service-compact-proof-page .lgo-support-expectations p,
+  .lgo-service-compact-proof-page .lgo-player-safety-cta p {
+    font-size: .74rem;
+    line-height: 1.25;
+  }
+
+  .lgo-service-compact-proof-page .lgo-faq-panel .lgo-faq-list,
+  .lgo-service-compact-proof-page .lgo-support-expectation-list {
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lgo-service-compact-proof-page .lgo-faq-item,
+  .lgo-service-compact-proof-page .lgo-support-expectation-item {
+    padding: .56rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-faq-item h3,
+  .lgo-service-compact-proof-page .lgo-support-expectation-item h3 {
+    font-size: .88rem;
+    line-height: 1.04;
+    margin-block: .22rem .14rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-faq-item p,
+  .lgo-service-compact-proof-page .lgo-support-expectation-item p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 720px) {
+  .lgo-service-compact-proof-page.lgo-supportpage-stack {
+    gap: .95rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-hero {
+    padding: .85rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-hero p,
+  .lgo-service-compact-proof-page .lgo-support-hero .lgo-hero-lead {
+    font-size: .82rem;
+    line-height: 1.28;
+    margin-block: .25rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-hero-note {
+    gap: .45rem;
+    padding: .68rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-hero-note p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-hero-note .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .45rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-design-board {
+    gap: .55rem;
+    margin-top: -.45rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-design-board img {
+    max-height: 230px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-design-board figcaption {
+    font-size: .76rem;
+    line-height: 1.24;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-design-board figcaption strong {
+    font-size: .96rem;
+    line-height: 1.04;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-design-board figcaption span {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-topic-board .lgo-section-heading p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .lgo-service-compact-proof-page .lgo-support-topic-board .lgo-grid,
+  .lgo-service-compact-proof-page .lgo-faq-panel .lgo-faq-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .55rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-faq-panel,
+  .lgo-service-compact-proof-page .lgo-support-expectations,
+  .lgo-service-compact-proof-page .lgo-player-safety-cta {
+    padding: .85rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-faq-item,
+  .lgo-service-compact-proof-page .lgo-support-expectation-item {
+    padding: .62rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-faq-item h3,
+  .lgo-service-compact-proof-page .lgo-support-expectation-item h3 {
+    font-size: .84rem;
+    line-height: 1.08;
+  }
+
+  .lgo-service-compact-proof-page .lgo-faq-item p,
+  .lgo-service-compact-proof-page .lgo-support-expectation-item p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    font-size: .7rem;
+    line-height: 1.2;
+  }
 }

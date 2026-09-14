@@ -53,15 +53,16 @@ async function collectSupportMetrics(page): Promise<SupportMetrics> {
 }
 
 test.describe("support Vietnamese design target density", () => {
-  test("/support attaches Public Support target and keeps Vietnamese help flow readable", async ({ page, isMobile }) => {
+  test("/support attaches Hỗ trợ cộng đồng target and keeps Vietnamese help flow readable", async ({ page, isMobile }) => {
     await page.goto(`${web}/support`);
-    await expect(page.getByRole("region", { name: /Design target reference.*Public Support/i })).toBeVisible();
+    await expect(page.getByRole("region", { name: /Design target reference.*Hỗ trợ cộng đồng/i })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Hỗ trợ cộng đồng" })).toBeVisible();
     await expect(page.locator(".lgo-support-hero-note").getByText("Không có hệ thống ticket thật", { exact: false })).toBeVisible();
     const metrics = await collectSupportMetrics(page);
-    expect(metrics.designTargetScope, "Public Support target scope").toContain("Public Support");
+    expect(metrics.designTargetScope, "Hỗ trợ cộng đồng target scope").toContain("Hỗ trợ cộng đồng");
     expect(metrics.designTargetHref, "support design target href").toContain("support-detailed-design-target-v1131.png");
     expect(metrics.englishLeak, "support page visible copy should be Vietnamese").toBe("");
+    expect(metrics.designTargetScope, "stale design-first label should not appear").not.toContain("Design Target First");
     expect(metrics.overflow, "support horizontal overflow").toBeLessThanOrEqual(0);
     expect(metrics.h1Size, "support h1 follows target scale").toBeLessThanOrEqual(isMobile ? 54 : 60);
     if (!isMobile) {
