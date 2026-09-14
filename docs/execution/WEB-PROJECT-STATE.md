@@ -1,3 +1,16 @@
+Current phase: WEB-FE-HOMEPAGE-TARGET-FOLD-DENSITY-v1.119 WEB_CLOSED.
+
+Current decision: v1.119 FE homepage target fold density slice closed. Public `/` now follows the v1.118 `Public Homepage` design target more closely in browser/e2e: desktop first fold shows hero content plus a visible first pillar card instead of a hero-only viewport. Entire program is NOT production-complete.
+
+- v1.119 uses the existing `Public Homepage` target; no new design target was required and no stale target was replaced.
+- v1.119 compacted desktop homepage hero density and first-pillar spacing while preserving mobile behavior.
+- v1.119 evidence: RED desktop browser/e2e reproduced insufficient first-card fold visibility; runtime DOM inspection confirmed a real layout-density issue; Playwright desktop/mobile homepage target fold density PASS 2/2 after fix; dedicated validator and closure checks recorded in report/handoff.
+- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.120.
+
 Current phase: WEB-FE-HOMEPAGE-DETAILED-DESIGN-TARGET-v1.118 WEB_CLOSED.
 
 Current decision: v1.118 FE homepage detailed design target slice closed. Public `/` now has a dedicated high-fidelity Public Homepage design target before further homepage UI changes. Entire program is NOT production-complete.

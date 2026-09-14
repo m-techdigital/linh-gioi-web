@@ -16,7 +16,7 @@ export default function HomePage() {
 
   return (
     <WebAppShell>
-      <Stack className="lgo-player-facing-stack">
+      <Stack className="lgo-player-facing-stack lgo-homepage-stack">
         <section className="lgo-cinematic-hero lgo-cinematic-hero-v123">
           <div className="lgo-cinematic-copy">
             <StatusBadge tone="spirit">2D Side-Scrolling Social Action MMORPG</StatusBadge>

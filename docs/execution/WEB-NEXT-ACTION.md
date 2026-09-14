@@ -3,14 +3,14 @@
 Current task:
 
 ```text
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.119
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.120
 ```
 
 Status: WEB_TASK_CONTINUE.
 
 User direction: continue FE work first, use needed game images from LinhGioiOnline where useful, verify real UI/UX layout in browser/e2e, and obey Design Target First as Priority #1. Every page, section and reusable component must be attached to a design target before implementation. If the current work is not covered by `docs/design/DESIGN-TARGET-REGISTRY.md`, create the design target first. If the target is stale or wrong, replace it and delete or supersede the old target before implementation.
 
-Current FE scope: continue accessibility and interaction audit after v1.118 homepage detailed design target, v1.117 shell keyboard reachability, v1.116 Ops/Admin expanded route audit, v1.115 Portal expanded route audit and v1.96 design-first governance. Focus on the next visible browser/e2e issue across public, Portal and Ops surfaces: keyboard reachability, accessible names, blocked/disabled state clarity, navigation continuity, typography caps, horizontal overflow, mobile readability, fixture boundary clarity and implementation alignment with the registered design target.
+Current FE scope: continue accessibility and interaction audit after v1.119 homepage target fold density, v1.118 homepage detailed design target, v1.117 shell keyboard reachability, v1.116 Ops/Admin expanded route audit, v1.115 Portal expanded route audit and v1.96 design-first governance. Focus on the next visible browser/e2e issue across public, Portal and Ops surfaces: keyboard reachability, accessible names, blocked/disabled state clarity, navigation continuity, typography caps, horizontal overflow, mobile readability, fixture boundary clarity and implementation alignment with the registered design target.
 
 Base UI/UX Layout is mandatory: before adding page-local UI/layout, search shared owners and extend `packages/design-tokens` or `packages/ui` for reusable patterns. App-local duplicates of reusable layout, navigation, cards, panels, forms, tables, alerts, states or typography are forbidden unless the handoff records a concrete one-off reason.
 

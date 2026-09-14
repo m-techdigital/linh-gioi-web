@@ -102,9 +102,9 @@ def check_tests_docs() -> None:
         ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         "Current phase: WEB-FE-HOMEPAGE-DETAILED-DESIGN-TARGET-v1.118 WEB_CLOSED",
-        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.119",
+        "Design Target First",
     ])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.119", "Design Target First", "Base UI/UX Layout", "browser/e2e"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "Design Target First", "Base UI/UX Layout", "browser/e2e"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-HOMEPAGE-DETAILED-DESIGN-TARGET-v1.118 | WEB-FE | WEB_CLOSED |"])
 
 def main() -> int:

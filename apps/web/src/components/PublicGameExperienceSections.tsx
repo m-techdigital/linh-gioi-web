@@ -60,7 +60,7 @@ export function CinematicWorldScene({ compact = false }: { compact?: boolean }) 
 
 export function GamePillarGrid() {
   return (
-    <section className="lgo-experience-section" aria-labelledby="experience-pillars-heading">
+    <section className="lgo-experience-section lgo-home-pillar-section" aria-labelledby="experience-pillars-heading">
       <SectionHeading eyebrow="Ba trụ cột" title="Không chỉ đánh quái — hãy sống trong thế giới này">
         Linh Giới kết hợp đời sống xã hội, action side-scrolling và một hành trình phát triển nhân vật kéo dài qua nhiều vùng đất.
       </SectionHeading>
