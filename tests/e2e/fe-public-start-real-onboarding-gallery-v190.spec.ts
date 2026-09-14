@@ -71,7 +71,7 @@ test.describe("public start real onboarding gallery", () => {
     const metrics = await collectGalleryMetrics(page);
     expect(metrics.gallery, "onboarding gallery metrics").not.toBeNull();
     expect(metrics.gallery?.cardCount, "gallery card count").toBe(3);
-    expect(metrics.gallery?.columnCount, "gallery responsive columns").toBe(isMobile ? 1 : 3);
+    expect(metrics.gallery?.columnCount, "gallery responsive columns").toBe(isMobile ? 2 : 3);
     expect(metrics.pageOverflow, "start onboarding gallery overflow").toBeLessThanOrEqual(0);
     expect(metrics.maxFont, "start onboarding visible font cap").toBeLessThanOrEqual(isMobile ? 48 : 64);
     expect(metrics.gallery?.captionMaxFont ?? 0, "gallery caption font cap").toBeLessThanOrEqual(18);

@@ -116,6 +116,13 @@ If a page already has a usable design target, do not regenerate it. If the targe
 
 A FE/UI page slice cannot close until the implemented page has been rendered in a real browser and compared against its registered design target. The comparison must cover hero composition, visual hierarchy, spacing, typography scale, content order, first-fold density and mobile behavior. Copy-only, label-only, target-only, localization-only, validator-only or density-only changes are not enough to mark a page WEB_CLOSED. If the implementation does not match the target, keep working on that same page; do not move to another page.
 
+
+## Runtime Layout Gate — chống quay lại quy trình cũ
+
+Đối với mọi task FE/UI, bằng chứng chính phải là trang thật trong browser. Trước khi validator/docs/handoff/commit được xem là hợp lệ, task phải có screenshot desktop/mobile mới và browser metrics/e2e chứng minh layout thật đã thay đổi theo mục tiêu page hiện tại. Nếu thay đổi chính của task chỉ là design, dịch text, sửa copy, sửa validator, cập nhật docs hoặc nới test mà không có layout thật được xem lại trong browser, task đó là sai quy trình và phải quay lại page hiện tại ngay.
+
+Không được dùng validator/docs như tiến độ chính. Validator chỉ được chạy sau khi screenshot/browser layout đã được kiểm bằng mắt và đạt nhịp UI/UX chấp nhận được. Nếu screenshot cho thấy page vẫn thô, một màu, quá dài, spacing/font/density xấu hoặc design reference/internal tooling lấn nội dung public, phải tiếp tục sửa layout thật tại shared Base owner trước.
+
 ## Evidence rule
 
 Source inspection alone is not runtime PASS. If runtime/browser/visual gates cannot run in the environment, classify them as not executed or environment limited in the task handoff. Never skip-as-PASS.

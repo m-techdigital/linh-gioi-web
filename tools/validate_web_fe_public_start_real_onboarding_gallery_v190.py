@@ -53,8 +53,8 @@ def check_page_and_css() -> None:
         "/game-art/onboarding/dong-mon-01-initial.png", "/game-art/onboarding/dong-mon-02-gate-focus.png", "/game-art/onboarding/dong-mon-03-dialogue.png",
         "loading=\"lazy\"", "không phải cam kết bản tải công khai", "chưa có backend contract được chấp nhận"
     ])
-    require_text("apps/web/src/app/globals.css", [
-        "WEB v1.90 public start real onboarding screenshot gallery", ".lgo-start-real-screenshot-grid", "repeat(3, minmax(0, 1fr))", "aspect-ratio: 16 / 9", "overflow-wrap: anywhere", "grid-template-columns: 1fr"
+    require_text("packages/ui/src/service-layout.css", [
+        "v1.217 shared start overview layout", ".lgo-start-real-screenshot-grid", "repeat(3, minmax(0, 1fr))", "aspect-ratio: 16 / 9", "overflow-wrap: anywhere", "repeat(2, minmax(0, 1fr))"
     ])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-start-real-onboarding-gallery-v190.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90.md", "LGO-WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-REPORT-v1.90.md", "HANDOFF-LGO-WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90.md"]: require_file(rel)

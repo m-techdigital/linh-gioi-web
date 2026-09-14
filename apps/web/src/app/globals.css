@@ -2489,61 +2489,6 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
 .lgo-experience-hero { overflow-x: clip; }
 
 
-/* WEB v1.90 public start real onboarding screenshot gallery */
-.lgo-start-real-screenshot-panel {
-  display: grid;
-  gap: var(--lgo-space-lg);
-  overflow: hidden;
-}
-
-.lgo-start-real-screenshot-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--lgo-space-md);
-}
-
-.lgo-start-real-screenshot-card {
-  display: grid;
-  gap: .75rem;
-  min-width: 0;
-  margin: 0;
-  border: 1px solid rgba(49,216,232,.18);
-  border-radius: var(--lgo-radius-lg);
-  background: rgba(7,17,31,.68);
-  padding: .75rem;
-  overflow: hidden;
-}
-
-.lgo-start-real-screenshot-card img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  object-fit: cover;
-  border-radius: calc(var(--lgo-radius-lg) - .35rem);
-  border: 1px solid rgba(242,184,75,.18);
-  background: rgba(7,17,31,.72);
-}
-
-.lgo-start-real-screenshot-card figcaption {
-  display: grid;
-  gap: .35rem;
-  color: var(--lgo-color-text-muted);
-  font-size: .9rem;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.lgo-start-real-screenshot-card figcaption strong {
-  color: var(--lgo-color-text-primary);
-  font-size: clamp(1rem, 1.25vw, 1.12rem);
-}
-
-@media (max-width: 760px) {
-  .lgo-start-real-screenshot-grid { grid-template-columns: 1fr; }
-}
-
 /* WEB v1.91 public community real plaza screenshot gallery */
 .lgo-community-real-plaza-panel {
   display: grid;
@@ -2947,127 +2892,6 @@ h3 {
   }
 }
 
-
-/* WEB v1.124 start detailed design target density */
-/* WEB v1.139 start Vietnamese design match */
-.lgo-startpage-stack .lgo-start-hero.lgo-cinematic-hero {
-  border-color: rgba(245, 200, 107, .22);
-  background:
-    radial-gradient(circle at 74% 25%, rgba(49, 216, 232, .18), transparent 24rem),
-    radial-gradient(circle at 22% 78%, rgba(245, 200, 107, .10), transparent 22rem),
-    linear-gradient(145deg, rgba(9, 22, 38, .96), rgba(5, 13, 25, .92));
-}
-
-.lgo-startpage-stack .lgo-onboarding-steps {
-  position: relative;
-  z-index: 2;
-}
-
-.lgo-startpage-stack .lgo-onboarding-steps span {
-  border-color: rgba(245, 200, 107, .22);
-  background: rgba(5, 14, 25, .68);
-}
-
-.lgo-startpage-stack .lgo-onboarding-steps span:first-child {
-  border-color: rgba(53, 198, 163, .62);
-  color: rgba(215, 255, 240, .94);
-  box-shadow: 0 0 22px rgba(53, 198, 163, .14);
-}
-
-@media (min-width: 981px) {
-  .lgo-startpage-stack {
-    gap: clamp(1rem, 1.8vw, 1.65rem);
-  }
-
-  .lgo-startpage-stack .lgo-start-hero {
-    grid-template-columns: minmax(0, .82fr) minmax(420px, 1fr);
-    gap: clamp(1.15rem, 2vw, 2rem);
-    min-height: 420px;
-    padding: clamp(1rem, 1.7vw, 1.65rem);
-  }
-
-  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-scene {
-    min-height: 300px;
-    align-self: stretch;
-  }
-
-  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy {
-    display: grid;
-    align-content: center;
-    gap: .55rem;
-  }
-
-  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy h1,
-  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy p {
-    margin: 0;
-  }
-
-  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy h1 {
-    max-width: 10ch;
-    font-size: clamp(2.65rem, 4.45vw, 4.2rem);
-    line-height: .9;
-  }
-
-  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy p {
-    max-width: 62ch;
-    font-size: clamp(.88rem, .98vw, 1rem);
-    line-height: 1.45;
-  }
-
-  .lgo-startpage-stack .lgo-onboarding-steps {
-    margin-top: .25rem;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: .42rem;
-  }
-
-  .lgo-startpage-stack .lgo-onboarding-steps span {
-    padding: .42rem .56rem;
-    font-size: .69rem;
-    white-space: nowrap;
-  }
-
-  .lgo-startpage-stack .lgo-start-hero .lgo-hero-actions {
-    margin-top: .15rem;
-    gap: .48rem;
-  }
-
-  .lgo-startpage-stack .lgo-start-hero .lgo-link-button {
-    padding: .62rem .8rem;
-    font-size: .84rem;
-  }
-
-  .lgo-startpage-stack .lgo-start-design-board {
-    grid-template-columns: minmax(0, 1.32fr) minmax(15rem, .68fr);
-    gap: clamp(.9rem, 1.5vw, 1.25rem);
-    padding: clamp(.75rem, 1vw, .95rem);
-  }
-
-  .lgo-startpage-stack .lgo-start-design-board img {
-    max-height: 300px;
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
-
-  .lgo-startpage-stack .lgo-start-design-board figcaption {
-    font-size: .88rem;
-    line-height: 1.48;
-  }
-
-  .lgo-startpage-stack .lgo-start-real-screenshot-panel {
-    gap: clamp(.85rem, 1.2vw, 1.15rem);
-    padding: clamp(1.1rem, 2vw, 1.6rem);
-  }
-
-  .lgo-startpage-stack .lgo-start-real-screenshot-panel .lgo-section-heading h2 {
-    font-size: clamp(1.8rem, 2.45vw, 2.45rem);
-    line-height: 1.03;
-  }
-
-  .lgo-startpage-stack .lgo-start-real-screenshot-grid {
-    gap: clamp(.65rem, 1vw, .9rem);
-  }
-}
 
 /* WEB v1.125 download detailed design target density */
 /* WEB v1.140 download Vietnamese design match */
@@ -3943,5 +3767,74 @@ h3 {
     font-size: .72rem;
     line-height: 1.22;
     margin: 0;
+  }
+}
+
+/* WEB v1.217 public design reference must not dominate real page layout. */
+.lgo-public-shell .lgo-design-target-band {
+  margin-top: clamp(.75rem, 1.6vw, 1.25rem);
+}
+
+.lgo-public-shell .lgo-design-target-reference {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: .65rem;
+  border-radius: 1.1rem;
+  padding: .58rem .7rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .18);
+}
+
+.lgo-public-shell .lgo-design-target-reference-copy span {
+  margin-bottom: .1rem;
+  font-size: .58rem;
+  letter-spacing: .07em;
+}
+
+.lgo-public-shell .lgo-design-target-reference-copy strong {
+  font-size: .9rem;
+  line-height: 1.05;
+}
+
+.lgo-public-shell .lgo-design-target-reference-copy p {
+  display: none;
+}
+
+.lgo-public-shell .lgo-design-target-reference-actions {
+  gap: .4rem;
+}
+
+.lgo-public-shell .lgo-design-target-reference-link {
+  min-height: 32px;
+  padding: .38rem .62rem;
+  font-size: .72rem;
+}
+
+.lgo-public-shell .lgo-brand-footer {
+  margin-top: clamp(1rem, 2vw, 1.6rem);
+  padding-block: clamp(1rem, 2vw, 1.6rem);
+}
+
+.lgo-public-shell .lgo-brand-footer-inner {
+  gap: .4rem 1rem;
+}
+
+.lgo-public-shell .lgo-brand-footer p,
+.lgo-public-shell .lgo-brand-footer small {
+  margin-block: .25rem 0;
+  font-size: .78rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 720px) {
+  .lgo-public-shell .lgo-design-target-reference {
+    gap: .45rem;
+    padding: .55rem;
+  }
+
+  .lgo-public-shell .lgo-design-target-reference-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .lgo-public-shell .lgo-design-target-reference-link {
+    min-height: 30px;
   }
 }

@@ -80,9 +80,9 @@ test.describe("start Vietnamese design match v1.139", () => {
       expect(metrics.boardVisibleHeight, "tutorial board remains visible in first fold").toBeGreaterThanOrEqual(90);
       expect(metrics.screenshotTop, "real screenshot panel follows the tutorial board").toBeGreaterThan(metrics.boardTop);
     } else {
-      expect(metrics.heroBottom, "mobile start hero remains readable without extreme sprawl").toBeLessThanOrEqual(1360);
-      expect(metrics.sceneHeight, "mobile start hero keeps the Đông Môn cinematic scene visible").toBeGreaterThanOrEqual(260);
-      expect(metrics.boardTop, "mobile reaches tutorial board without excessive blank space").toBeLessThanOrEqual(1450);
+      expect(metrics.heroBottom, "mobile start hero remains readable without extreme sprawl").toBeLessThanOrEqual(760);
+      expect(metrics.sceneHeight, "mobile start hero keeps the Đông Môn cinematic scene visible").toBeGreaterThanOrEqual(160);
+      expect(metrics.boardTop, "mobile reaches tutorial board without excessive blank space").toBeLessThanOrEqual(900);
     }
   });
 });

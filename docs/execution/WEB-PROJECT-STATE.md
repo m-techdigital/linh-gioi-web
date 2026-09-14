@@ -1,3 +1,22 @@
+Current phase: WEB-FE-START-REAL-UI-LAYOUT-v1.217 WEB_CLOSED.
+
+Current decision: v1.217 closed the active `/start` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Start design target and shared public shell were usable as comparison guardrails; work focused on the rendered page, onboarding first-flow density, real Đông Môn screenshot proof, compact class/route follow-up and Base First CSS ownership. Entire program is NOT production-complete.
+
+- v1.217 did not create or batch a new design target because the existing Public Start board plus shared public shell were sufficient for checking header, footer, menu, shell, route flow and tutorial scenario alignment.
+- v1.217 changed real UI layout: `/start` now keeps hero, tutorial board, real screenshot panel, compact Năm Lộ grid and world route in a reviewable flow without the old tall mobile one-column layout.
+- v1.217 moved the reusable Start overview layout CSS into `packages/ui/src/service-layout.css` and removed stale `/start` page-local design-board/gallery/density blocks from `apps/web/src/app/globals.css`.
+- v1.217 compacted the public design-reference band so it remains a comparison aid but no longer dominates the real public page.
+- v1.217 added Runtime Layout Gate text to `WEB-ACTIVE-GOAL.md` and `AGENTS.md` so validator/docs/design-only work cannot be treated as FE/UI progress.
+- v1.217 referenced AXIRO only for code organization judgment: Base components first, page composition second, CSS owner clarity and no copied code or design.
+- v1.217 kept the page Vietnamese and FE-only: no production auth, no backend integration, no DB persistence, no CMS, no full MMO gameplay, no public download promise and no accepted backend contract.
+- v1.217 final browser/e2e metrics: desktop overflow 0, scrollHeight 2050px, h1/max font 44.8px, heroBottom 463px, sceneHeight 328.41px, designBoardTop 475.48px, screenshotPanelTop 752.66px, classGridTop 1273.17px, routeTop 1586.44px, 3 screenshot columns, 5 class columns; mobile overflow 0, scrollHeight 3080px, h1/max font 37.08px, heroBottom 624.56px, sceneHeight 164px, designBoardTop 649.83px, screenshotPanelTop 912.64px, classGridTop 1522.19px, routeTop 2327.77px, 2 screenshot columns, 2 class columns.
+- v1.217 evidence: RED browser metrics showed desktop page height 3071px and mobile page height 7113px with one-column mobile proof/class flow; GREEN Playwright desktop/mobile 10/10 Start layout/design-board/gallery checks; screenshot review `/tmp/start-desktop-v1217.png` and `/tmp/start-mobile-v1217.png`; source validator `tools/validate_web_fe_start_real_ui_layout_v1217.py`; Web/UI typecheck; Web build; current-state closure validator.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.218.
+Select `/download` as the next single active page. Continue Real Browser UI/UX Layout First, Runtime Layout Gate and Base First; use design target only as a comparison guardrail and do not move past `/download` before browser/e2e, screenshot review, validator, build/typecheck, docs, commit and push.
+
+Historical snapshot follows.
+
 Current phase: WEB-FE-JOURNEY-REAL-UI-LAYOUT-v1.216 WEB_CLOSED.
 
 Current decision: v1.216 closed the active `/journey` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Journey design target and shared public shell were usable as comparison guardrails; work focused on the rendered `/journey` page, first-fold density, session loop rhythm, world route density, compact journey board and Base First CSS ownership. Entire program is NOT production-complete.

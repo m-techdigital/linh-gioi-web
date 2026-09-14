@@ -57,3 +57,9 @@ Hoàn thiện FE theo từng page một cách tuần tự, ưu tiên UI/UX Layou
    - tiếp tục page thật cho đến khi đóng.
 
 Page hiện tại phải theo repo WEB-NEXT-ACTION. Không dùng goal cũ nhắc /game hoặc “Design Target First” làm nguồn điều hướng nữa.
+
+## Runtime Layout Gate — chống quay lại quy trình cũ
+
+Đối với mọi task FE/UI, bằng chứng chính phải là trang thật trong browser. Trước khi validator/docs/handoff/commit được xem là hợp lệ, task phải có screenshot desktop/mobile mới và browser metrics/e2e chứng minh layout thật đã thay đổi theo mục tiêu page hiện tại. Nếu thay đổi chính của task chỉ là design, dịch text, sửa copy, sửa validator, cập nhật docs hoặc nới test mà không có layout thật được xem lại trong browser, task đó là sai quy trình và phải quay lại page hiện tại ngay.
+
+Không được dùng validator/docs như tiến độ chính. Validator chỉ được chạy sau khi screenshot/browser layout đã được kiểm bằng mắt và đạt nhịp UI/UX chấp nhận được. Nếu screenshot cho thấy page vẫn thô, một màu, quá dài, spacing/font/density xấu hoặc design reference/internal tooling lấn nội dung public, phải tiếp tục sửa layout thật tại shared Base owner trước.

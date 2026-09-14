@@ -55,7 +55,7 @@ def main() -> int:
         'desktop hero bottom 401.98px', 'mobile hero bottom 573.80px', 'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.217', 'Current FE scope: select `/start`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.218', 'Current FE scope: select `/download`',
         'Real Browser UI/UX Layout First', 'Base UI/UX Layout', 'CSS must be managed by owner/role'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [

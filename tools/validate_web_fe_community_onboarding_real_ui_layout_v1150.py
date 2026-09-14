@@ -89,13 +89,13 @@ def check_tests_and_docs() -> None:
         ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         "Current phase: WEB-FE-COMMUNITY-ONBOARDING-REAL-UI-LAYOUT-v1.150 WEB_CLOSED",
-        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.217",
+        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.218",
         "Select `/game/loop` as the next single active page",
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-COMMUNITY-ONBOARDING-REAL-UI-LAYOUT-v1.150 | WEB-FE | WEB_CLOSED |"])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.217",
-        "Current FE scope: select `/start`",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.218",
+        "Current FE scope: select `/download`",
         "Real Browser UI/UX Layout First is Priority #1",
         "Base First Stop Gate",
     ])

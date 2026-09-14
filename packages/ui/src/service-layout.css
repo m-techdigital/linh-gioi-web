@@ -2796,8 +2796,8 @@
   }
 
   .lgo-service-compact-proof-page .lgo-gameplay-loop-step > span {
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
     font-size: .72rem;
   }
 
@@ -7658,8 +7658,8 @@
 
   .lgo-journeypage-stack .lgo-session-beat p,
   .lgo-journeypage-stack .lgo-world-route-stop p {
-    -webkit-line-clamp: 3;
-    font-size: .62rem;
+    -webkit-line-clamp: 2;
+    font-size: .6rem;
     line-height: 1.16;
   }
 
@@ -7701,5 +7701,591 @@
 
   .lgo-journeypage-stack .lgo-journey-design-board figcaption strong {
     font-size: .84rem;
+  }
+}
+
+/* v1.217 shared start overview layout for the public tutorial onboarding route. */
+.lgo-startpage-stack {
+  gap: clamp(.68rem, 1.1vw, 1rem);
+}
+
+.lgo-startpage-stack .lgo-start-hero.lgo-cinematic-hero {
+  border-color: rgba(245, 200, 107, .22);
+  background:
+    radial-gradient(circle at 74% 25%, rgba(49, 216, 232, .18), transparent 24rem),
+    radial-gradient(circle at 22% 78%, rgba(245, 200, 107, .10), transparent 22rem),
+    linear-gradient(145deg, rgba(9, 22, 38, .96), rgba(5, 13, 25, .92));
+}
+
+.lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy {
+  display: grid;
+  align-content: center;
+  gap: .46rem;
+}
+
+.lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy h1,
+.lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy p {
+  margin: 0;
+}
+
+.lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy h1 {
+  max-width: 10ch;
+  line-height: .9;
+}
+
+.lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy p {
+  max-width: 62ch;
+  font-size: clamp(.8rem, .92vw, .98rem);
+  line-height: 1.34;
+}
+
+.lgo-startpage-stack .lgo-onboarding-steps {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .34rem;
+  margin-top: .1rem;
+}
+
+.lgo-startpage-stack .lgo-onboarding-steps span {
+  min-width: 0;
+  border-color: rgba(245, 200, 107, .22);
+  background: rgba(5, 14, 25, .68);
+  padding: .34rem .46rem;
+  font-size: .64rem;
+  line-height: 1.12;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lgo-startpage-stack .lgo-onboarding-steps span:first-child {
+  border-color: rgba(53, 198, 163, .62);
+  color: rgba(215, 255, 240, .94);
+  box-shadow: 0 0 22px rgba(53, 198, 163, .14);
+}
+
+.lgo-startpage-stack .lgo-start-hero .lgo-hero-actions {
+  margin-top: .1rem;
+  gap: .42rem;
+}
+
+.lgo-startpage-stack .lgo-start-hero .lgo-link-button {
+  min-height: 38px;
+  padding: .54rem .72rem;
+  font-size: .78rem;
+}
+
+.lgo-startpage-stack .lgo-start-design-board {
+  display: grid;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.lgo-startpage-stack .lgo-start-design-board img {
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: calc(var(--lgo-radius-lg) - .35rem);
+}
+
+.lgo-startpage-stack .lgo-start-design-board figcaption {
+  display: grid;
+  align-content: center;
+  gap: .42rem;
+  color: var(--lgo-color-text-muted);
+  font-size: .74rem;
+  line-height: 1.24;
+}
+
+.lgo-startpage-stack .lgo-start-design-board figcaption strong {
+  color: var(--lgo-color-text-primary);
+  font-size: .96rem;
+  line-height: 1.08;
+}
+
+.lgo-startpage-stack .lgo-start-design-board figcaption span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.lgo-startpage-stack .lgo-start-real-screenshot-panel {
+  display: grid;
+  gap: .74rem;
+  overflow: hidden;
+  padding: .8rem;
+}
+
+.lgo-startpage-stack .lgo-start-real-screenshot-panel .lgo-section-heading {
+  gap: .22rem;
+}
+
+.lgo-startpage-stack .lgo-start-real-screenshot-panel .lgo-section-heading h2 {
+  font-size: clamp(1.36rem, 2vw, 2rem);
+  line-height: 1;
+}
+
+.lgo-startpage-stack .lgo-start-real-screenshot-panel .lgo-section-heading p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: .78rem;
+  line-height: 1.22;
+}
+
+.lgo-startpage-stack .lgo-start-real-screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .58rem;
+}
+
+.lgo-startpage-stack .lgo-start-real-screenshot-card {
+  display: grid;
+  gap: .52rem;
+  min-width: 0;
+  margin: 0;
+  border: 1px solid rgba(49,216,232,.18);
+  border-radius: var(--lgo-radius-lg);
+  background: rgba(7,17,31,.68);
+  padding: .58rem;
+  overflow: hidden;
+}
+
+.lgo-startpage-stack .lgo-start-real-screenshot-card img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  border-radius: calc(var(--lgo-radius-lg) - .35rem);
+  border: 1px solid rgba(242,184,75,.18);
+  background: rgba(7,17,31,.72);
+}
+
+.lgo-startpage-stack .lgo-start-real-screenshot-card figcaption {
+  display: grid;
+  gap: .26rem;
+  color: var(--lgo-color-text-muted);
+  font-size: .66rem;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.lgo-startpage-stack .lgo-start-real-screenshot-card figcaption strong {
+  color: var(--lgo-color-text-primary);
+  font-size: .82rem;
+  line-height: 1.08;
+}
+
+.lgo-startpage-stack .lgo-start-real-screenshot-card figcaption span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.lgo-startpage-stack .lgo-class-path-grid {
+  gap: .55rem;
+}
+
+.lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-path {
+  min-height: 228px;
+  padding: .58rem;
+}
+
+.lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-sigil {
+  height: 96px;
+  margin-bottom: .42rem;
+}
+
+.lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-path h3 {
+  font-size: .9rem;
+  line-height: 1.06;
+}
+
+.lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-tagline,
+.lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-fantasy,
+.lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-loop {
+  font-size: .66rem;
+  line-height: 1.18;
+}
+
+.lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-fantasy,
+.lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-loop {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.lgo-startpage-stack .lgo-world-route-section {
+  gap: .58rem;
+}
+
+.lgo-startpage-stack .lgo-world-route-section .lgo-section-heading {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: .15rem .75rem;
+  align-items: baseline;
+}
+
+.lgo-startpage-stack .lgo-world-route-section .lgo-section-heading h2 {
+  font-size: clamp(1.75rem, 2.35vw, 2.45rem);
+  line-height: 1.02;
+}
+
+.lgo-startpage-stack .lgo-world-route-section .lgo-section-heading p:last-child {
+  grid-column: 1 / -1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  max-width: 88ch;
+  margin: 0;
+  font-size: .76rem;
+  line-height: 1.22;
+}
+
+.lgo-startpage-stack .lgo-world-route {
+  gap: .46rem;
+}
+
+.lgo-startpage-stack .lgo-world-route::before {
+  top: 1.72rem;
+}
+
+.lgo-startpage-stack .lgo-world-route-stop {
+  padding: .5rem;
+}
+
+.lgo-startpage-stack .lgo-route-marker {
+  margin-bottom: .48rem;
+}
+
+.lgo-startpage-stack .lgo-route-marker span {
+  width: 2.45rem;
+  height: 2.45rem;
+  font-size: .72rem;
+}
+
+.lgo-startpage-stack .lgo-world-route-stop h3 {
+  font-size: clamp(.92rem, 1.18vw, 1.06rem);
+  line-height: 1.04;
+  margin: .26rem 0 .28rem;
+}
+
+.lgo-startpage-stack .lgo-world-route-stop p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  font-size: .72rem;
+  line-height: 1.25;
+}
+
+@media (min-width: 981px) {
+  .lgo-startpage-stack .lgo-start-hero {
+    grid-template-columns: minmax(0, .8fr) minmax(380px, 1fr);
+    gap: clamp(.9rem, 1.4vw, 1.25rem);
+    min-height: 356px;
+    padding: clamp(.68rem, 1vw, .92rem);
+  }
+
+  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-scene {
+    min-height: 274px;
+    align-self: stretch;
+  }
+
+  .lgo-startpage-stack .lgo-start-design-board {
+    grid-template-columns: minmax(0, 1.3fr) minmax(13.5rem, .7fr);
+    gap: .68rem;
+    margin-top: -.1rem;
+    padding: .66rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-design-board img {
+    height: 224px;
+    max-height: 224px;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-panel {
+    padding: .68rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-panel .lgo-section-heading p {
+    -webkit-line-clamp: 1;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-card img {
+    aspect-ratio: auto;
+    height: 96px;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-card figcaption {
+    gap: .18rem;
+    font-size: .62rem;
+    line-height: 1.12;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-card figcaption strong {
+    font-size: .76rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-card figcaption span,
+  .lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-fantasy,
+  .lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-loop,
+  .lgo-startpage-stack .lgo-world-route-section .lgo-section-heading p:last-child,
+  .lgo-startpage-stack .lgo-world-route-stop p {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-path {
+    min-height: 184px;
+  }
+
+  .lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-sigil {
+    height: 68px;
+  }
+
+  .lgo-startpage-stack .lgo-world-route-section {
+    gap: .46rem;
+  }
+
+  .lgo-startpage-stack .lgo-world-route-stop {
+    padding: .42rem;
+  }
+
+  .lgo-startpage-stack .lgo-route-marker span {
+    width: 2rem;
+    height: 2rem;
+    font-size: .62rem;
+  }
+
+  .lgo-startpage-stack .lgo-world-route-stop p {
+    font-size: .64rem;
+    line-height: 1.16;
+  }
+}
+
+@media (max-width: 980px) {
+  .lgo-startpage-stack .lgo-start-hero {
+    grid-template-columns: 1fr;
+    gap: .6rem;
+    padding: .88rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy h1 {
+    font-size: clamp(2rem, 7.4vw, 2.45rem);
+  }
+
+  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    font-size: .82rem;
+    line-height: 1.3;
+  }
+
+  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-scene {
+    min-height: 230px;
+  }
+}
+
+@media (max-width: 760px) {
+  .lgo-startpage-stack {
+    gap: .58rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-hero {
+    gap: .42rem;
+    padding: .74rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy {
+    gap: .32rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy h1 {
+    font-size: clamp(1.62rem, 6.5vw, 1.9rem);
+  }
+
+  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy p {
+    -webkit-line-clamp: 2;
+    font-size: .74rem;
+    line-height: 1.2;
+  }
+
+  .lgo-startpage-stack .lgo-onboarding-steps,
+  .lgo-startpage-stack .lgo-start-real-screenshot-grid,
+  .lgo-startpage-stack .lgo-class-path-grid,
+  .lgo-startpage-stack .lgo-world-route {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .46rem;
+  }
+
+  .lgo-startpage-stack .lgo-onboarding-steps {
+    gap: .3rem;
+  }
+
+  .lgo-startpage-stack .lgo-onboarding-steps span {
+    padding: .3rem .34rem;
+    font-size: .54rem;
+  }
+
+  .lgo-startpage-stack .lgo-hero-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lgo-startpage-stack .lgo-link-button {
+    min-height: 34px;
+    padding-inline: .44rem;
+    font-size: .62rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-scene {
+    min-height: 164px;
+    border-radius: 1rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-design-board {
+    grid-template-columns: 1fr;
+    gap: .48rem;
+    padding: .58rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-design-board img {
+    height: 118px;
+    max-height: 118px;
+  }
+
+  .lgo-startpage-stack .lgo-start-design-board figcaption {
+    gap: .32rem;
+    font-size: .64rem;
+    line-height: 1.16;
+  }
+
+  .lgo-startpage-stack .lgo-start-design-board figcaption strong {
+    font-size: .84rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-design-board figcaption span {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-panel {
+    gap: .48rem;
+    padding: .58rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-panel .lgo-section-heading,
+  .lgo-startpage-stack .lgo-world-route-section .lgo-section-heading {
+    display: block;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-panel .lgo-section-heading .lgo-eyebrow,
+  .lgo-startpage-stack .lgo-world-route-section .lgo-section-heading .lgo-eyebrow {
+    margin-bottom: .12rem;
+    font-size: .58rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-panel .lgo-section-heading h2,
+  .lgo-startpage-stack .lgo-world-route-section .lgo-section-heading h2 {
+    font-size: clamp(1.12rem, 5.4vw, 1.42rem);
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-panel .lgo-section-heading p,
+  .lgo-startpage-stack .lgo-world-route-section .lgo-section-heading p {
+    display: none;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-card {
+    gap: .34rem;
+    padding: .46rem;
+    border-radius: .92rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-card img {
+    aspect-ratio: auto;
+    height: 72px;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-card figcaption {
+    font-size: .6rem;
+    line-height: 1.14;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-card figcaption strong {
+    font-size: .76rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-real-screenshot-card figcaption span,
+  .lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-loop {
+    display: none;
+  }
+
+  .lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-path {
+    min-height: 156px;
+    padding: .5rem;
+    border-radius: .92rem;
+  }
+
+  .lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-sigil {
+    height: 50px;
+    margin-bottom: .32rem;
+  }
+
+  .lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-path h3 {
+    font-size: .78rem;
+  }
+
+  .lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-tagline,
+  .lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-fantasy,
+  .lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-loop {
+    font-size: .58rem;
+    line-height: 1.12;
+  }
+
+  .lgo-startpage-stack .lgo-class-path-grid-compact .lgo-class-fantasy {
+    -webkit-line-clamp: 1;
+  }
+
+  .lgo-startpage-stack .lgo-world-route-section {
+    gap: .44rem;
+  }
+
+  .lgo-startpage-stack .lgo-world-route::before {
+    display: none;
+  }
+
+  .lgo-startpage-stack .lgo-world-route-stop {
+    display: block;
+    padding: .42rem;
+  }
+
+  .lgo-startpage-stack .lgo-route-marker {
+    margin-bottom: .28rem;
+  }
+
+  .lgo-startpage-stack .lgo-route-marker span {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: .62rem;
+  }
+
+  .lgo-startpage-stack .lgo-world-route-stop h3 {
+    font-size: .82rem;
+    line-height: 1.04;
+  }
+
+  .lgo-startpage-stack .lgo-world-route-stop p {
+    -webkit-line-clamp: 2;
+    font-size: .6rem;
+    line-height: 1.16;
   }
 }

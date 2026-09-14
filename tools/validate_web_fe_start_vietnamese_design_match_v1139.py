@@ -41,14 +41,14 @@ def check_source():
  forbid('apps/web/src/components/PublicDesignTargetReference.tsx',['Start detailed design target'])
  req('packages/content/src/fixtures.ts',['Slime Bóng Tối'])
  forbid('packages/content/src/fixtures.ts',['Shadow Slime'])
- req('apps/web/src/app/globals.css',['WEB v1.139 start Vietnamese design match','.lgo-startpage-stack .lgo-start-hero.lgo-cinematic-hero','.lgo-startpage-stack .lgo-start-hero .lgo-cinematic-scene','.lgo-startpage-stack .lgo-onboarding-steps'])
+ req('packages/ui/src/service-layout.css',['v1.217 shared start overview layout','.lgo-startpage-stack .lgo-start-hero.lgo-cinematic-hero','.lgo-startpage-stack .lgo-start-hero .lgo-cinematic-scene','.lgo-startpage-stack .lgo-onboarding-steps'])
 def check_docs():
  files=['tests/e2e/fe-start-vietnamese-design-match-v1139.spec.ts','docs/execution/specs/WEB-FE-START-VIETNAMESE-DESIGN-MATCH-v1.139.md','LGO-WEB-FE-START-VIETNAMESE-DESIGN-MATCH-REPORT-v1.139.md','HANDOFF-LGO-WEB-FE-START-VIETNAMESE-DESIGN-MATCH-v1.139.md']
  for f in files: req_file(f)
  req('tests/e2e/fe-start-vietnamese-design-match-v1139.spec.ts',['start Vietnamese design match','Thiết kế chi tiết bắt đầu','Minh họa Linh Thành và khe nứt Âm Giới','desktop start hero uses the shared Đông Môn cinematic scene','tutorial board starts in the opening viewport'])
  for f in files[1:]: req(f,['WEB-FE-START-VIETNAMESE-DESIGN-MATCH-v1.139','WEB_CLOSED','Sequential Page Completion','Just-in-time Design','Design Target First','Layout Match Before Closure','Base UI/UX Layout','Public Start','Vietnamese','game scenario','browser/e2e','built-in imagegen','No production auth','No DB persistence','No real Portal integration','No real Ops/Admin mutation','NO_ACCEPTED_BACKEND_CONTRACT'])
- req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-START-VIETNAMESE-DESIGN-MATCH-v1.139 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.217'])
- req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.217','select `/start` as the next single active page'])
+ req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-START-VIETNAMESE-DESIGN-MATCH-v1.139 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.218'])
+ req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.218','select `/download` as the next single active page'])
  req('docs/execution/WEB-TASK-LEDGER.md',['| WEB-FE-START-VIETNAMESE-DESIGN-MATCH-v1.139 | WEB-FE | WEB_CLOSED |'])
 def main():
  check_target(); check_source(); check_docs()
