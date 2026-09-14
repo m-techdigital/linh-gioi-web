@@ -582,9 +582,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "closed-tester-information-pack-started",
     category: "news",
-    title: "Gói thông tin closed tester đã được chuẩn bị",
-    summary: "WEB v1.20 giải thích người chơi thử nghiệm tương lai nên đọc gì, chuẩn bị gì và tránh chia sẻ gì trước khi có kênh intake thật.",
-    body: "Gói thông tin closed tester giữ web public hữu ích mà không mở đăng ký. Trang giải thích checklist, mẫu feedback an toàn, giới hạn đã biết và mẫu báo cáo thiết bị, đồng thời giữ ranh giới: chưa có backend tuyển tester, chưa có quyền tài khoản và không thu thập bí mật hoặc dữ liệu nhạy cảm.",
+    title: "Gói thông tin người kiểm thử đã sẵn sàng",
+    summary: "WEB v1.20 giải thích người chơi kiểm thử tương lai nên đọc gì, chuẩn bị gì và tránh chia sẻ gì trước khi có kênh đăng ký thật.",
+    body: "Gói thông tin người kiểm thử giữ web public hữu ích mà không mở đăng ký. Trang giải thích danh sách chuẩn bị, mẫu góp ý an toàn, giới hạn đã biết và mẫu báo cáo thiết bị, đồng thời giữ ranh giới: chưa có hệ thống tuyển người kiểm thử, chưa có quyền tài khoản và không thu thập bí mật hoặc dữ liệu nhạy cảm.",
     publishedAt: "2026-09-05T23:00:00.000Z",
     status: "published",
     featured: true,
@@ -1000,17 +1000,17 @@ export const contentDetailSections: ContentDetailSection[] = [
   },
   {
     slug: "closed-tester-information-pack-started",
-    heading: "Tester pack là guidance, không phải intake",
-    body: "v1.20 gom checklist, mẫu feedback an toàn, giới hạn đã biết và mẫu báo cáo thiết bị vào một route public để chuẩn bị truyền thông closed-test trước khi kênh chính thức tồn tại.",
-    playerImpact: "Người chơi biết nên đọc gì và tránh gửi gì trước khi có thông báo tester chính thức.",
-    nonClaim: "Không mở intake tester live, không bảo đảm slot tester và không mở đăng ký công khai."
+    heading: "Gói người kiểm thử là hướng dẫn, không phải kênh đăng ký",
+    body: "v1.20 gom danh sách chuẩn bị, mẫu góp ý an toàn, giới hạn đã biết và mẫu báo cáo thiết bị vào một route public để chuẩn bị truyền thông kiểm thử giới hạn trước khi kênh chính thức tồn tại.",
+    playerImpact: "Người chơi biết nên đọc gì và tránh gửi gì trước khi có thông báo kiểm thử chính thức.",
+    nonClaim: "Không mở kênh đăng ký trực tiếp, không bảo đảm suất kiểm thử và không mở đăng ký công khai."
   },
   {
     slug: "closed-tester-information-pack-started",
-    heading: "Privacy boundary được đặt cạnh feedback",
-    body: "Các field feedback chỉ yêu cầu mô tả route, bước tái hiện, kết quả mong đợi/thực tế và nhóm thiết bị an toàn; public copy không yêu cầu secrets hoặc dữ liệu nhạy cảm.",
-    playerImpact: "Feedback tương lai dễ triage hơn mà không tạo cảm giác phải chia sẻ tài khoản hoặc token.",
-    nonClaim: "Không thu mật khẩu, token, dữ liệu thanh toán hoặc dữ liệu cá nhân nhạy cảm."
+    heading: "Ranh giới riêng tư được đặt cạnh phần góp ý",
+    body: "Các trường góp ý chỉ yêu cầu mô tả route, bước tái hiện, kết quả mong đợi/thực tế và nhóm thiết bị an toàn; nội dung public không yêu cầu bí mật hoặc dữ liệu nhạy cảm.",
+    playerImpact: "Góp ý tương lai dễ phân loại hơn mà không tạo cảm giác phải chia sẻ tài khoản hoặc mã bảo mật.",
+    nonClaim: "Không thu mật khẩu, mã bảo mật, dữ liệu thanh toán hoặc dữ liệu cá nhân nhạy cảm."
   },
   {
     slug: "release-readiness-hub-polish-started",

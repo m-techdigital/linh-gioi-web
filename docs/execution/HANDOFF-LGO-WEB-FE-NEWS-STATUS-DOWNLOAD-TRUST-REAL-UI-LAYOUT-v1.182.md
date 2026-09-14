@@ -30,6 +30,6 @@ Base First / CSS ownership:
 - No News Detail selectors were added to `apps/web/src/app/globals.css`.
 - No broad design batch was created because the existing public target and shared shell were sufficient for comparison.
 
-Next allowed task: `WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.183`, selecting `/news/closed-tester-information-pack-started` as the single active page.
+Next allowed task: `WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.183`, selecting `/news/faq-search-helpfulness-polish-started` as the single active page.
 
 NO_ACCEPTED_BACKEND_CONTRACT retained. No production auth, DB persistence, CMS, live feed, copied game backend, independent business backend, public download artifact or entitlement backend claim was added.

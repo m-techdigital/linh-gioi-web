@@ -87,15 +87,15 @@ def main() -> int:
 
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-VISUAL-RESPONSIVE-REAL-UI-LAYOUT-v1.179 WEB_CLOSED',
-        'Select `/news/closed-tester-information-pack-started`',
+        'Select `/news/faq-search-helpfulness-polish-started`',
         '/tmp/news-visual-responsive-desktop-v1179.png',
         '/tmp/news-visual-responsive-mobile-v1179.png',
         'Real Browser UI/UX Layout First',
         'Base First',
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.196',
-        'Current FE scope: select `/news/closed-tester-information-pack-started`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.197',
+        'Current FE scope: select `/news/faq-search-helpfulness-polish-started`',
         'Real Browser UI/UX Layout First',
         'Base UI/UX Layout',
     ])

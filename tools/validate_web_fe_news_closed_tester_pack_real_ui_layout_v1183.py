@@ -33,7 +33,7 @@ def forbid_text(rel: str, needles: list[str]) -> None:
 
 def main() -> int:
     require_text("apps/web/src/components/PublicDetailSections.tsx", [
-        '"closed-tester-information-pack-started": "Bài viết giải thích closed tester information pack"',
+        '"closed-tester-information-pack-started": "Bài viết giải thích gói thông tin người kiểm thử"',
         'title={articleDetailTitle(slug)}',
         'Trang bài viết mở rộng ngữ cảnh người chơi cần biết',
         'lgo-newsdetail-depth',
@@ -41,13 +41,13 @@ def main() -> int:
     ])
     require_text("packages/content/src/fixtures.ts", [
         'slug: "closed-tester-information-pack-started"',
-        'title: "Gói thông tin closed tester đã được chuẩn bị"',
-        'WEB v1.20 giải thích người chơi thử nghiệm tương lai nên đọc gì, chuẩn bị gì và tránh chia sẻ gì trước khi có kênh intake thật.',
-        'Gói thông tin closed tester giữ web public hữu ích mà không mở đăng ký.',
-        'Tester pack là guidance, không phải intake',
-        'Privacy boundary được đặt cạnh feedback',
-        'Không mở intake tester live, không bảo đảm slot tester và không mở đăng ký công khai.',
-        'Không thu mật khẩu, token, dữ liệu thanh toán hoặc dữ liệu cá nhân nhạy cảm.',
+        'title: "Gói thông tin người kiểm thử đã sẵn sàng"',
+        'WEB v1.20 giải thích người chơi kiểm thử tương lai nên đọc gì, chuẩn bị gì và tránh chia sẻ gì trước khi có kênh đăng ký thật.',
+        'Gói thông tin người kiểm thử giữ web public hữu ích mà không mở đăng ký.',
+        'Gói người kiểm thử là hướng dẫn, không phải kênh đăng ký',
+        'Ranh giới riêng tư được đặt cạnh phần góp ý',
+        'Không mở kênh đăng ký trực tiếp, không bảo đảm suất kiểm thử và không mở đăng ký công khai.',
+        'Không thu mật khẩu, mã bảo mật, dữ liệu thanh toán hoặc dữ liệu cá nhân nhạy cảm.',
     ])
     fixtures = read("packages/content/src/fixtures.ts")
     if fixtures.count('slug: "closed-tester-information-pack-started"') != 3:
@@ -82,8 +82,8 @@ def main() -> int:
 
     require_text("tests/e2e/fe-news-closed-tester-pack-real-ui-layout-v1183.spec.ts", [
         '/news/closed-tester-information-pack-started renders compact Vietnamese closed tester information article flow',
-        'Gói thông tin closed tester đã được chuẩn bị',
-        'Bài viết giải thích closed tester information pack',
+        'Gói thông tin người kiểm thử đã sẵn sàng',
+        'Bài viết giải thích gói thông tin người kiểm thử',
         'toHaveCount(2)',
         'mobile related not pushed by raw body',
         'desktop next steps reachable',
@@ -92,7 +92,7 @@ def main() -> int:
 
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-CLOSED-TESTER-PACK-REAL-UI-LAYOUT-v1.183 WEB_CLOSED',
-        'Select `/news/closed-tester-information-pack-started`',
+        'Select `/news/faq-search-helpfulness-polish-started`',
         '/tmp/news-closed-tester-pack-desktop-v1183.png',
         '/tmp/news-closed-tester-pack-mobile-v1183.png',
         'Real Browser UI/UX Layout First',
@@ -100,8 +100,8 @@ def main() -> int:
         'shared header/menu/footer coherence',
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.196',
-        'Current FE scope: select `/news/closed-tester-information-pack-started`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.197',
+        'Current FE scope: select `/news/faq-search-helpfulness-polish-started`',
         'Design targets must stay synchronized with accepted shared header, footer, menu, shell and navigation layout.',
         'Real Browser UI/UX Layout First',
         'Base UI/UX Layout',

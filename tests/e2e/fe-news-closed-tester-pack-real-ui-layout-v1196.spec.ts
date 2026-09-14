@@ -1,4 +1,4 @@
-// v1.183 coverage: /news/closed-tester-information-pack-started must render as compact Vietnamese closed tester information article, not a raw WEB v1.20 fixture body.
+// v1.196 coverage: /news/closed-tester-information-pack-started must render compact Vietnamese closed tester information pack article with detail cards, not a mixed-English tester-pack fixture.
 import { test, expect, type Page } from "@playwright/test";
 
 const web = process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
@@ -56,8 +56,8 @@ async function collectArticleMetrics(page: Page): Promise<ArticleMetrics> {
   });
 }
 
-test.describe("news closed tester pack real UI layout v1.183", () => {
-  test("/news/closed-tester-information-pack-started renders compact Vietnamese closed tester information article flow", async ({ page, isMobile }) => {
+test.describe("news closed tester pack real UI layout v1.196", () => {
+  test("/news/closed-tester-information-pack-started renders compact Vietnamese closed tester information pack article flow", async ({ page, isMobile }) => {
     await page.goto(`${web}/news/closed-tester-information-pack-started`);
 
     await expect(page.getByRole("heading", { level: 1, name: "Gói thông tin người kiểm thử đã sẵn sàng" })).toBeVisible();
@@ -70,7 +70,7 @@ test.describe("news closed tester pack real UI layout v1.183", () => {
     await expect(page.locator(".lgo-newsdetail-next-steps")).toBeVisible();
 
     const mainText = await page.locator("main").innerText();
-    expect(mainText).not.toMatch(/Closed tester information pack is prepared|WEB v1\.20 explains what a future tester should read|The closed tester information pack keeps the public website useful|without opening registration|no tester intake backend|no account entitlement|No live tester intake|no guaranteed tester slot|no open registration|No collection of passwords|sensitive personal data/i);
+    expect(mainText).not.toMatch(/closed tester|tester pack|guidance|intake|Privacy boundary|feedback|secrets|token|backend tuyển tester|slot tester/i);
 
     const backToNews = page.locator(".lgo-newsdetail-hero-card").getByRole("link", { name: "Tin tức" });
     await backToNews.focus();
@@ -107,6 +107,6 @@ test.describe("news closed tester pack real UI layout v1.183", () => {
       expect(metrics.relatedColumns).toBeGreaterThanOrEqual(2);
     }
 
-    await page.screenshot({ path: `/tmp/news-closed-tester-pack-${isMobile ? "mobile" : "desktop"}-v1183.png`, fullPage: true });
+    await page.screenshot({ path: `/tmp/news-closed-tester-pack-${isMobile ? "mobile" : "desktop"}-v1196.png`, fullPage: true });
   });
 });

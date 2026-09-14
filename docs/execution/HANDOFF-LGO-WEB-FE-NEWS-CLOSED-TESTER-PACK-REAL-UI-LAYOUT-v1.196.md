@@ -1,17 +1,17 @@
-# HANDOFF LGO Web FE News Release Readiness Hub Real UI Layout v1.195
+# HANDOFF LGO Web FE News Closed Tester Pack Real UI Layout v1.196
 
-Task: WEB-FE-NEWS-RELEASE-READINESS-HUB-REAL-UI-LAYOUT-v1.195
+Task: WEB-FE-NEWS-CLOSED-TESTER-PACK-REAL-UI-LAYOUT-v1.196
 
 Status: WEB_CLOSED
 
 Process: Real Browser UI/UX Layout First; Base First; browser/e2e evidence before closure.
 
-Closed page: `/news/release-readiness-hub-polish-started`.
+Closed page: `/news/closed-tester-information-pack-started`.
 
 What changed:
 
-- Refined the current article title/body for release readiness hub expectations in Vietnamese.
-- Refined two current detail sections for release gates and surface alignment promises.
+- Refined the current article title/body for tester information pack expectations in Vietnamese.
+- Refined two current detail sections for no-intake guidance and privacy-safe feedback boundaries.
 - Preserved current-slug article depth title support in `apps/web/src/components/PublicDetailSections.tsx`.
 - Reused the existing design sync guardrail: design target comparison must share the accepted header, footer, menu, shell and navigation; no design batch was needed.
 - Added browser/e2e coverage with desktop/mobile metrics, overflow checks, keyboard focus navigation and screenshot capture after returning from keyboard navigation.
@@ -21,10 +21,10 @@ What changed:
 
 Verification summary:
 
-- Browser/e2e desktop/mobile News Release Readiness Hub real UI layout checks passed.
+- Browser/e2e desktop/mobile News Closed Tester Pack real UI layout checks passed.
 - Source validator passed after docs were updated.
 - Web/UI typechecks, Web build and clean current-state validator are required closure gates for the final commit.
-- Screenshot review paths: `/tmp/news-release-readiness-hub-desktop-v1195.png`, `/tmp/news-release-readiness-hub-mobile-v1195.png`.
+- Screenshot review paths: `/tmp/news-closed-tester-pack-desktop-v1196.png`, `/tmp/news-closed-tester-pack-mobile-v1196.png`.
 
 Base First / CSS ownership:
 
@@ -34,4 +34,4 @@ Base First / CSS ownership:
 
 Next allowed task: `WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.197`, selecting `/news/faq-search-helpfulness-polish-started` as the single active page.
 
-NO_ACCEPTED_BACKEND_CONTRACT retained. No production auth, DB persistence, CMS, live feed, copied game backend, copied AXIRO code, independent business backend, public download, open beta, entitlement, ticket support, checksum placeholder, release backend or production SLA claim was added.
+NO_ACCEPTED_BACKEND_CONTRACT retained. No production auth, DB persistence, CMS, live feed, copied game backend, copied AXIRO code, independent business backend, live tester intake, tester slot guarantee, public signup, password/token/payment/personal-sensitive data collection, tester backend or account entitlement claim was added.
