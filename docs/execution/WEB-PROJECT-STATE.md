@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-PROFESSIONAL-DESIGN-TARGET-v1.94 WEB_CLOSED.
+
+Current decision: v1.94 FE public professional design target slice closed after user clarified that the SVG target was not enough and requested real professional design images for comparison. Continue UI/UX layout work next by matching live pages against this high-fidelity target. Entire program is NOT production-complete.
+
+- v1.94 adds a high-fidelity raster design target PNG for Homepage and Community public surfaces.
+- The target is saved under public assets and docs design reference, so browser/e2e and human visual review can use the same destination image.
+- v1.94 evidence: RED browser/e2e reproduced missing professional design target; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile design-target availability/dimension PASS.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.95.
+
 Current phase: WEB-FE-PUBLIC-HOME-VISUAL-TARGET-v1.93 WEB_CLOSED.
 
 Current decision: v1.93 FE public homepage visual target slice closed after user asked for professional design images saved as destinations for comparison. Continue UI/UX layout work next using saved references before more visual edits. Entire program is NOT production-complete.
