@@ -45,7 +45,8 @@ def check_source() -> None:
     forbid_text("apps/web/src/components/PublicGameExperienceSections.tsx", ["Development art preview", "Modular gear board", "production-final", "class Võ", "art direction"])
     require_text("packages/content/src/fixtures.ts", ["Bản thiết kế đang phát triển · Võ Lv1–30", "Bản thiết kế kỹ năng/hiệu ứng đang phát triển", "không phải key art Lộ hoàn thiện cuối cùng", "không phải ảnh chụp chiến đấu hoàn thiện", "Cấp độ, kỹ năng, trang bị"])
     forbid_text("packages/content/src/fixtures.ts", ["Development art preview", "Skill/VFX development preview", "not production-final", "not a final combat screenshot", "combatIdentity: \"Ranged", "visualSignal: \"Afterimage"])
-    require_text("apps/web/src/app/globals.css", ["WEB v1.137 classes Vietnamese design match", ".lgo-classespage-stack", ".lgo-class-path-grid", ".lgo-class-path"])
+    require_text("packages/ui/src/service-layout.css", ["v1.215 shared classes overview layout for the public Năm Lộ route", ".lgo-classespage-stack", ".lgo-class-path-grid", ".lgo-class-path"])
+    forbid_text("apps/web/src/app/globals.css", ["WEB v1.137 classes Vietnamese design match", "WEB v1.122 classes detailed design target density"])
 def check_tests_docs() -> None:
     for rel in ["tests/e2e/fe-classes-vietnamese-design-match-v1137.spec.ts", "docs/execution/specs/WEB-FE-CLASSES-VIETNAMESE-DESIGN-MATCH-v1.137.md", "LGO-WEB-FE-CLASSES-VIETNAMESE-DESIGN-MATCH-REPORT-v1.137.md", "HANDOFF-LGO-WEB-FE-CLASSES-VIETNAMESE-DESIGN-MATCH-v1.137.md"]:
         require_file(rel)
@@ -54,7 +55,7 @@ def check_tests_docs() -> None:
         require_text(rel, ["WEB-FE-CLASSES-VIETNAMESE-DESIGN-MATCH-v1.137", "WEB_CLOSED", "Sequential Page Completion", "Just-in-time Design", "Design Target First", "Layout Match Before Closure", "Base UI/UX Layout", "Public Classes", "Vietnamese", "browser/e2e", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-CLASSES-VIETNAMESE-DESIGN-MATCH-v1.137 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.138"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.138", "Select `/journey` as the next single active page"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.215", "select `/classes` as the next single active page"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.216", "select `/journey` as the next single active page"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-CLASSES-VIETNAMESE-DESIGN-MATCH-v1.137 | WEB-FE | WEB_CLOSED |"])
 def main() -> int:
     check_target(); check_source(); check_tests_docs()

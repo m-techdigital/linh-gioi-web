@@ -71,12 +71,15 @@ def check_tests_docs() -> None:
         "classes page h1 follows target scale",
     ])
     require_text("apps/web/src/app/classes/page.tsx", ["lgo-classespage-stack", "ClassPathGrid", "ClassIdentityDeck", "ClassArtSpotlight"])
-    require_text("apps/web/src/app/globals.css", [
-        "WEB v1.122 classes detailed design target density",
+    require_text("packages/ui/src/service-layout.css", [
+        "v1.215 shared classes overview layout for the public Năm Lộ route",
         ".lgo-classespage-stack",
         ".lgo-class-path-grid",
         ".lgo-class-identity-card",
     ])
+    globals_css = read("apps/web/src/app/globals.css")
+    if "WEB v1.122 classes detailed design target density" in globals_css or "WEB v1.137 classes Vietnamese design match" in globals_css:
+        fail("apps/web/src/app/globals.css: stale classes page-local density owner remains")
     require_text("apps/web/src/components/PublicDesignTargetReference.tsx", [
         "PUBLIC_CLASSES_TARGET",
         "Thiết kế chi tiết Năm Lộ",

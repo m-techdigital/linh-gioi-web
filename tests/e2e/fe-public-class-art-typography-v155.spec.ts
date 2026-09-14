@@ -36,6 +36,7 @@ test.describe("public class art typography scale", () => {
   test("class art display type stays decorative without overwhelming the viewport", async ({ page, isMobile }) => {
     await page.goto("/classes");
     await expect(page.getByRole("heading", { name: "Chọn cách bạn nhìn và bảo vệ thế giới", exact: true })).toBeVisible();
+    await page.locator(".lgo-classespage-expanded-evidence > summary").click();
     await page.getByRole("heading", { name: /Một Lộ được mở như một bộ nhận diện/ }).scrollIntoViewIfNeeded();
 
     const metrics = await collectMetrics(page);

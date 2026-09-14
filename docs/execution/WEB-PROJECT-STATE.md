@@ -1,3 +1,21 @@
+Current phase: WEB-FE-CLASSES-REAL-UI-LAYOUT-v1.215 WEB_CLOSED.
+
+Current decision: v1.215 closed the active `/classes` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Classes design target and shared public shell were usable as comparison guardrails; work focused on the rendered `/classes` page, first-fold density, typography scale, class card rhythm, mobile two-column flow, shared disclosure proof grouping and Base First CSS ownership. Entire program is NOT production-complete.
+
+- v1.215 did not create or batch a new design target because the existing Public Classes board plus shared public shell were sufficient for checking header, footer, menu, shell, route flow and Năm Lộ game scenario alignment.
+- v1.215 changed real UI layout: `/classes` now keeps the first-flow to hero and the Năm Lộ class grid, while identity deck, Võ art board and class philosophy proof sit behind the shared native disclosure.
+- v1.215 moved the reusable classes overview layout CSS into `packages/ui/src/service-layout.css` and removed stale `/classes` page-local density blocks from `apps/web/src/app/globals.css`.
+- v1.215 referenced AXIRO only for code organization judgment: Base components first, page composition second, CSS owner clarity and no copied code or design.
+- v1.215 kept the page Vietnamese and FE-only: no production auth, no backend integration, no DB persistence, no CMS, no full MMO gameplay, no public download promise and no accepted backend contract.
+- v1.215 explicitly checked rendered screenshots against the Public Classes design board and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.215 final browser/e2e metrics: desktop overflow 0, h1/max font 51.20px, hero bottom 402.09px, class grid top 459.69px, class grid bottom 738.45px, first card visible height 260.31px, disclosure top 755.08px, scrollHeight 1295px, 5 class columns, 1 disclosure; mobile overflow 0, h1/max font 36px, hero bottom 574.36px, class grid top 613.34px, class grid bottom 1270.06px, first card visible height 214px, disclosure top 1280.59px, scrollHeight 2007px, 2 class columns, 1 disclosure.
+- v1.215 evidence: RED baseline from browser metrics showed mobile page height 8455px with identity/art/philosophy expanded and desktop proof flow 4317px; GREEN Playwright desktop/mobile 10/10 classes layout/design/art checks; screenshot review `/tmp/classes-desktop-v1215.png` and `/tmp/classes-mobile-v1215.png`; source validator `tools/validate_web_fe_classes_real_ui_layout_v1215.py`; Web/UI typecheck; Web build; current-state closure validator.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.216.
+Select `/journey` as the next single active page. Continue Real Browser UI/UX Layout First and Base First; use design target only as a comparison guardrail and do not move past `/journey` before browser/e2e, screenshot review, validator, build/typecheck, docs, commit and push.
+
+Historical snapshot follows.
+
 Current phase: WEB-FE-STORY-REAL-UI-LAYOUT-v1.214 WEB_CLOSED.
 
 Current decision: v1.214 closed the active `/story` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Story design target and shared public shell were sufficient as comparison guardrails; work focused on the rendered `/story` page, first-flow density, mobile typography, compact chapter cards, native disclosure grouping for secondary story proof and Base First shared CSS ownership. Entire program is NOT production-complete.

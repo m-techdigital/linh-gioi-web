@@ -25,20 +25,31 @@ export default function ClassesPage() {
         />
 
         <ClassPathGrid />
-        <ClassIdentityDeck />
-        <ClassArtSpotlight />
 
-        <section className="lgo-path-philosophy">
-          <p className="lgo-eyebrow">Triết lý Năm Lộ</p>
-          <h2>Cùng một thân cơ sở — khác biệt đến từ Lộ, trang bị, chuyển động và nhịp chiến đấu</h2>
-          <p>
-            Nhân vật nam/nữ dùng thân cơ sở chung; mỗi Lộ được thể hiện qua lớp trang bị, vũ khí, dáng nhận diện, hiệu ứng kỹ năng và nhịp hành động. Cách này giữ tự do phối trang phục và tiến trình phát triển mà không khóa người chơi vào một thân riêng cho từng Lộ.
-          </p>
-          <div className="lgo-hero-actions">
-            <LinkButton href="/story" tone="shadow">Xem năm Lộ trong cốt truyện</LinkButton>
-            <LinkButton href="/game" tone="spirit">Khám phá thế giới</LinkButton>
+        <details className="lgo-service-disclosure-stack lgo-classespage-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và chiều sâu Năm Lộ</span>
+            <small>
+              Giữ identity deck, art board Võ và triết lý thân cơ sở nhưng không ép toàn bộ proof board vào first-flow `/classes`.
+            </small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <ClassIdentityDeck />
+            <ClassArtSpotlight />
+
+            <section className="lgo-path-philosophy">
+              <p className="lgo-eyebrow">Triết lý Năm Lộ</p>
+              <h2>Cùng một thân cơ sở — khác biệt đến từ Lộ, trang bị, chuyển động và nhịp chiến đấu</h2>
+              <p>
+                Nhân vật nam/nữ dùng thân cơ sở chung; mỗi Lộ được thể hiện qua lớp trang bị, vũ khí, dáng nhận diện, hiệu ứng kỹ năng và nhịp hành động. Cách này giữ tự do phối trang phục và tiến trình phát triển mà không khóa người chơi vào một thân riêng cho từng Lộ.
+              </p>
+              <div className="lgo-hero-actions">
+                <LinkButton href="/story" tone="shadow">Xem năm Lộ trong cốt truyện</LinkButton>
+                <LinkButton href="/game" tone="spirit">Khám phá thế giới</LinkButton>
+              </div>
+            </section>
           </div>
-        </section>
+        </details>
       </Stack>
     </WebAppShell>
   );

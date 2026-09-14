@@ -50,9 +50,10 @@ test.describe("public class art spotlight loading", () => {
   test("class art images stay explicit eager without layout overflow", async ({ page, isMobile }) => {
     await page.goto("/classes");
     await expect(page.getByRole("heading", { name: "Chọn cách bạn nhìn và bảo vệ thế giới", exact: true })).toBeVisible();
+    await page.locator(".lgo-classespage-expanded-evidence > summary").click();
     await page.getByRole("heading", { name: /Một Lộ được mở như một bộ nhận diện/ }).scrollIntoViewIfNeeded();
-    await expect(page.getByRole("img", { name: "Bảng thiết kế modular của class Võ gồm gương mặt, trang phục, phụ kiện và vũ khí" })).toBeVisible();
-    await expect(page.getByRole("img", { name: "Bảng hiệu ứng kỹ năng đang phát triển cho class Võ" })).toBeVisible();
+    await expect(page.getByRole("img", { name: "Bảng thiết kế nhiều lớp của Lộ Võ gồm gương mặt, trang phục, phụ kiện và vũ khí" })).toBeVisible();
+    await expect(page.getByRole("img", { name: "Bảng hiệu ứng kỹ năng đang phát triển cho Lộ Võ" })).toBeVisible();
     await page.waitForFunction(() =>
       Array.from(document.querySelectorAll<HTMLImageElement>(".lgo-class-art-spotlight img"))
         .every((image) => image.complete && image.naturalWidth > 0 && image.naturalHeight > 0)
