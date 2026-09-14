@@ -105,7 +105,7 @@ def main() -> int:
 
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-GUIDE-DETAIL-REAL-UI-LAYOUT-v1.181 WEB_CLOSED',
-        'Select `/patch-notes`',
+        'Select `/release`',
         '/tmp/news-guide-detail-desktop-v1181.png',
         '/tmp/news-guide-detail-mobile-v1181.png',
         'Real Browser UI/UX Layout First',
@@ -113,8 +113,8 @@ def main() -> int:
         'shared header/menu/footer coherence',
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.199',
-        'Current FE scope: select `/patch-notes`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.200',
+        'Current FE scope: select `/release`',
         'Design targets must stay synchronized with accepted shared header, footer, menu, shell and navigation layout.',
         'Real Browser UI/UX Layout First',
         'Base UI/UX Layout',

@@ -47,8 +47,8 @@ def check_tests_docs() -> None:
     for rel in ["docs/execution/specs/WEB-FE-COMMUNITY-REAL-UI-LAYOUT-v1.149.md", "LGO-WEB-FE-COMMUNITY-REAL-UI-LAYOUT-REPORT-v1.149.md", "HANDOFF-LGO-WEB-FE-COMMUNITY-REAL-UI-LAYOUT-v1.149.md"]:
         require_file(rel)
         require_text(rel, ["WEB-FE-COMMUNITY-REAL-UI-LAYOUT-v1.149", "WEB_CLOSED", "/community", "Real Browser UI/UX Layout First", "Base First", "service-layout.css", "browser/e2e", "screenshot", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
-    require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-COMMUNITY-REAL-UI-LAYOUT-v1.149 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.199"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.199", "Real Browser UI/UX Layout First is Priority #1", "Base UI/UX Layout", "CSS must be managed by owner/role"])
+    require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-COMMUNITY-REAL-UI-LAYOUT-v1.149 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.200"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.200", "Real Browser UI/UX Layout First is Priority #1", "Base UI/UX Layout", "CSS must be managed by owner/role"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-COMMUNITY-REAL-UI-LAYOUT-v1.149 | WEB-FE | WEB_CLOSED |"])
 
 def main() -> int:

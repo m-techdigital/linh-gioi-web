@@ -1,3 +1,21 @@
+Current phase: WEB-FE-PATCH-NOTES-REAL-UI-LAYOUT-v1.199 WEB_CLOSED.
+
+Current decision: v1.199 closed the active `/patch-notes` page slice as a real browser UI/UX Layout task. The existing public core/service design target and shared public shell were sufficient for comparison after checking header/footer/menu coherence; work focused on the rendered Patch Notes page, release-note boundary clarity, compact proof-card rhythm, keyboard navigation and shared Base First service layout. Entire program is NOT production-complete.
+
+- v1.199 did not create a design batch because the existing public core/service target and registered route target were enough for comparison after checking shared shell coherence.
+- v1.199 browser/e2e confirmed `/patch-notes` already used the shared compact service proof layout and did not need page-local CSS or a component fork.
+- v1.199 kept the page Vietnamese and release-scenario safe: static release-note direction only, no CMS, no production release, no launcher update, no live release backend and no accepted backend changelog contract.
+- v1.199 reused the shared service layout in `packages/ui/src/service-layout.css`; no current-page selectors were added to `apps/web/src/app/globals.css`.
+- v1.199 explicitly checked rendered screenshots against the public core/service target and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.199 final browser/e2e metrics: desktop hero bottom 403.92px, board top 417.03px, first card top 532.95px, action band top 686.09px, scrollHeight 1383px, h1/max font 37.76px, 2 patch cards, 2 desktop grid columns, overflow 0; mobile hero bottom 454.22px, board top 464.13px, first card top 605.41px, action band top 895.80px, scrollHeight 1750px, h1/max font 27.52px, 2 patch cards, 1 mobile grid column, overflow 0.
+- v1.199 evidence: browser/e2e desktop/mobile v1.199; screenshot review `/tmp/patch-notes-desktop-v1199.png` and `/tmp/patch-notes-mobile-v1199.png`; source validator; Web/UI checks; Web build; clean current-state closure validator.
+- AXIRO reference remains organizational only: shared base/layout/style owners and separated style primitives. No AXIRO code was copied.
+- Design target sync rule remains recorded: design targets must stay synchronized with shared header, footer, menu, shell and navigation; if a current target diverges, only the smallest current-page target area may be corrected before returning to browser layout.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.200. Select `/release` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-EVENTS-REAL-UI-LAYOUT-v1.198 WEB_CLOSED.
 
 Current decision: v1.198 closed the active `/events` page slice as a real browser UI/UX Layout task. The existing public core design target and shared public shell were sufficient as the comparison guardrail after checking shared header/menu/footer/menu coherence; work focused on the rendered Events page, static community-event guidance, compact proof-card rhythm, keyboard navigation and shared Base First service layout. Entire program is NOT production-complete.
