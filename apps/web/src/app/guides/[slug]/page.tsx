@@ -30,14 +30,15 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
 
   const isGateEntryGuide = entry.slug === "gate-entry-guide";
   const isBeginnerTrainingLoopGuide = entry.slug === "beginner-training-loop-guide";
-  const isCompactGuideFlow = isGateEntryGuide || isBeginnerTrainingLoopGuide;
+  const isDownloadReadinessGuide = entry.slug === "download-readiness-guide";
+  const isCompactGuideFlow = isGateEntryGuide || isBeginnerTrainingLoopGuide || isDownloadReadinessGuide;
 
   return (
     <WebAppShell>
-      <Stack className={`lgo-player-facing-stack lgo-service-compact-proof-page lgo-guidedetailpage-stack${isCompactGuideFlow ? " lgo-guideflowpage-stack" : ""}${isGateEntryGuide ? " lgo-gateentrypage-stack" : ""}${isBeginnerTrainingLoopGuide ? " lgo-traininglooppage-stack" : ""}`}>
-        <GameCard className={`lgo-detail-hero-card lgo-guide-detail-hero-card${isCompactGuideFlow ? " lgo-guide-flow-hero-card" : ""}${isGateEntryGuide ? " lgo-gate-entry-hero-card" : ""}${isBeginnerTrainingLoopGuide ? " lgo-training-loop-hero-card" : ""}`}>
-          <StatusBadge tone="jade">{isGateEntryGuide ? "Cổng Linh nhập môn" : isBeginnerTrainingLoopGuide ? "Luyện tập nhập môn" : "WEB v1.155 · hướng dẫn gameplay"}</StatusBadge>
-          <span className="lgo-card-kicker">{isGateEntryGuide ? "Guide tĩnh · chưa có bản đồ live · chưa có nhiệm vụ tài khoản" : isBeginnerTrainingLoopGuide ? "Guide tĩnh · chưa có combat/reward · chưa có tiến trình tài khoản" : "Guide tĩnh · chưa có hệ thống wiki · chưa có tiến trình tài khoản"}</span>
+      <Stack className={`lgo-player-facing-stack lgo-service-compact-proof-page lgo-guidedetailpage-stack${isCompactGuideFlow ? " lgo-guideflowpage-stack" : ""}${isGateEntryGuide ? " lgo-gateentrypage-stack" : ""}${isBeginnerTrainingLoopGuide ? " lgo-traininglooppage-stack" : ""}${isDownloadReadinessGuide ? " lgo-downloadreadinesspage-stack" : ""}`}>
+        <GameCard className={`lgo-detail-hero-card lgo-guide-detail-hero-card${isCompactGuideFlow ? " lgo-guide-flow-hero-card" : ""}${isGateEntryGuide ? " lgo-gate-entry-hero-card" : ""}${isBeginnerTrainingLoopGuide ? " lgo-training-loop-hero-card" : ""}${isDownloadReadinessGuide ? " lgo-download-readiness-hero-card" : ""}`}>
+          <StatusBadge tone="jade">{isGateEntryGuide ? "Cổng Linh nhập môn" : isBeginnerTrainingLoopGuide ? "Luyện tập nhập môn" : isDownloadReadinessGuide ? "Tin cậy tải game" : "WEB v1.155 · hướng dẫn gameplay"}</StatusBadge>
+          <span className="lgo-card-kicker">{isGateEntryGuide ? "Guide tĩnh · chưa có bản đồ live · chưa có nhiệm vụ tài khoản" : isBeginnerTrainingLoopGuide ? "Guide tĩnh · chưa có combat/reward · chưa có tiến trình tài khoản" : isDownloadReadinessGuide ? "Guide tĩnh · chưa có public build · chưa có entitlement" : "Guide tĩnh · chưa có hệ thống wiki · chưa có tiến trình tài khoản"}</span>
           <h1>{entry.title}</h1>
           <p className="lgo-hero-lead">{entry.summary}</p>
           <p>{entry.body}</p>

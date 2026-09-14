@@ -2941,6 +2941,52 @@
   }
 }
 
+
+/* Download readiness guide composes compact guide-flow base for proof-before-download reading. */
+.lgo-downloadreadinesspage-stack .lgo-download-readiness-hero-card {
+  border-color: rgba(245,200,107,.38);
+  background:
+    radial-gradient(circle at top left, rgba(245,200,107,.14), transparent 15rem),
+    radial-gradient(circle at bottom right, rgba(53,198,163,.12), transparent 17rem),
+    linear-gradient(145deg, rgba(13,27,46,.95), rgba(7,17,31,.90));
+}
+
+.lgo-downloadreadinesspage-stack .lgo-guide-detail-depth {
+  border-color: rgba(245,200,107,.28);
+}
+
+.lgo-downloadreadinesspage-stack .lgo-guide-detail-step {
+  border-color: rgba(245,200,107,.24);
+  background: linear-gradient(145deg, rgba(39,31,12,.64), rgba(7,17,31,.80));
+}
+
+@media (min-width: 981px) {
+  .lgo-downloadreadinesspage-stack .lgo-guide-detail-steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lgo-downloadreadinesspage-stack .lgo-guide-detail-step {
+    grid-template-columns: 2.2rem 1fr;
+    padding: .58rem;
+  }
+
+  .lgo-downloadreadinesspage-stack .lgo-guide-detail-step > span {
+    width: 2rem;
+    height: 2rem;
+    font-size: .76rem;
+  }
+
+  .lgo-downloadreadinesspage-stack .lgo-guide-detail-step h3 {
+    font-size: .9rem;
+  }
+
+  .lgo-downloadreadinesspage-stack .lgo-guide-detail-step p,
+  .lgo-downloadreadinesspage-stack .lgo-guide-detail-step small {
+    font-size: .72rem;
+    line-height: 1.22;
+  }
+}
+
 /* Shared guide index layout for public guide/library pages. */
 .lgo-guidespage-stack {
   gap: 1rem;

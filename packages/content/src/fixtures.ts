@@ -654,9 +654,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "download-readiness-guide",
     category: "guides",
-    title: "Download readiness guide",
-    summary: "A player-facing explanation of why a real build link requires checksum, release notes and owner approval.",
-    body: "This guide explains the public download gate without creating a fake launcher, entitlement flow or production release promise.",
+    title: "Sẵn sàng tải game đúng bằng chứng",
+    summary: "Guide giúp người chơi hiểu vì sao link tải thật cần gói build, checksum, ghi chú phát hành, known limitations và owner approval trước khi xuất hiện trên web.",
+    body: "Đây là hướng dẫn public tĩnh cho cổng tải game. Nó không tạo launcher giả, entitlement, open registration, account gate hoặc lời hứa phát hành production khi artifact chưa được duyệt.",
     publishedAt: "2026-09-05T11:10:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -1335,11 +1335,35 @@ export const guideDetailSteps: GuideDetailStep[] = [
   },
   {
     slug: "download-readiness-guide",
+    step: "01",
+    title: "Xác nhận gói build thật",
+    action: "Chỉ coi Download là sẵn sàng khi có file build đúng nền tảng, đúng phiên bản, đúng dung lượng và được owner duyệt.",
+    expectedResult: "Người chơi không bị dẫn tới nút tải placeholder hoặc file chưa xác minh.",
+    blockedScope: "Chưa có public build artifact hoặc launcher production."
+  },
+  {
+    slug: "download-readiness-guide",
+    step: "02",
+    title: "Đặt checksum cạnh link tải",
+    action: "Hiển thị checksum của đúng artifact sau khi kiểm provenance, để người chơi có thể đối chiếu file tải.",
+    expectedResult: "Download trust dựa trên bằng chứng kỹ thuật, không dựa vào copy marketing.",
+    blockedScope: "Chưa có checksum thật, provenance hoặc artifact verification."
+  },
+  {
+    slug: "download-readiness-guide",
     step: "03",
-    title: "Chỉ tải khi có artifact thật",
-    action: "Kiểm tra release artifact, checksum, provenance, known limitations và owner approval.",
-    expectedResult: "Trang Download không tạo nút tải giả hoặc entitlement giả.",
-    blockedScope: "No public game download artifact, no portal entitlement backend."
+    title: "Đọc ghi chú phát hành trước",
+    action: "Gắn release note, known limitations và rollback/support expectation cạnh CTA tải game.",
+    expectedResult: "Người chơi biết giới hạn build trước khi cài, đặc biệt khi closed test chưa mở rộng.",
+    blockedScope: "Chưa có release note được duyệt, support SLA hoặc closed-test intake live."
+  },
+  {
+    slug: "download-readiness-guide",
+    step: "04",
+    title: "Giữ entitlement ở trạng thái khóa",
+    action: "Nếu chưa có backend account/entitlement được chấp nhận, chỉ dẫn người chơi đọc /status và /download/trust thay vì đăng ký giả.",
+    expectedResult: "Trang tải game minh bạch về blocker và không hứa quyền chơi khi hợp đồng backend chưa sẵn sàng.",
+    blockedScope: "Chưa có portal entitlement, account gate, open registration hoặc backend contract accepted."
   },
   {
     slug: "support-and-community-guide",
