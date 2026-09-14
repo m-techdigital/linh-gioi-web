@@ -21,7 +21,7 @@ export function PublicSiteShell({ children }: { children: ReactNode }) {
           <Container className="lgo-brand-footer-inner">
             <div>
               <strong>Linh Giới Online</strong>
-              <p>2D Social Action MMORPG · Một thế giới để chiến đấu, trưởng thành và thuộc về.</p>
+              <p>MMORPG hành động cộng đồng 2D · Một thế giới để chiến đấu, trưởng thành và thuộc về.</p>
             </div>
             <div className="lgo-footer-links">
               <a href="/download">Trạng thái chơi</a><a href="/status">Trạng thái</a><a href="/roadmap">Roadmap</a><a href="/support">Hỗ trợ</a>

@@ -80,6 +80,14 @@ Design Target First is Priority #1 for FE/UI work. Every page, section and reusa
 
 Reusable UI/UX layout belongs in `packages/design-tokens` and `packages/ui` first. Before adding page-local layout, search for a shared owner and extend the shared Base UI/UX Layout when the pattern can be reused across public web, Portal or Ops. Page-local implementations are allowed only when the handoff records why the pattern is truly one-off.
 
+## Sequential Page Completion rule
+
+FE/UI work must be completed page by page. Start from the selected page, attach or create only the design target needed for that page or section, implement that page against the target, run source/runtime/browser/visual evidence, update docs/handoff, commit and push, and only then move to the next page. Do not create broad multi-page design batches or edit unrelated pages in the same slice. If shared Base UI/UX Layout changes are needed, limit them to reusable primitives required by the current page and record that reason in the handoff.
+
+## Just-in-time Design rule
+
+Design Target First means just-in-time design for the current page or component, not designing the whole site upfront. Each page must have a concrete target before code changes for that page. Public visible design copy must be Vietnamese unless an owner-approved route-specific exception is recorded. If a design is stale, English-heavy, or no longer matches the intended UI/UX direction, replace or supersede that target within the current page slice before implementation.
+
 ## Evidence rule
 
 Source inspection alone is not runtime PASS. If runtime/browser/visual gates cannot run in the environment, classify them as not executed or environment limited in the task handoff. Never skip-as-PASS.

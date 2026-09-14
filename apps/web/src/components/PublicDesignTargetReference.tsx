@@ -4,7 +4,7 @@ import { DesignTargetReference } from "@lgo-web/ui";
 import { usePathname } from "next/navigation";
 
 const PUBLIC_HOMEPAGE_TARGET = {
-  label: "Homepage detailed design target",
+  label: "Thiết kế chi tiết trang chủ",
   href: "/design-reference/homepage-detailed-design-target-v1118.png",
   scope: "Public Homepage"
 };
@@ -105,7 +105,7 @@ const PUBLIC_SERVICE_TARGET = {
   scope: "Public Service"
 };
 
-const COMPONENT_STATE_TARGET = { label: "Component/state design target", href: "/design-reference/design-atlas-components-v195.png" };
+const COMPONENT_STATE_TARGET = { label: "Thiết kế component/trạng thái", href: "/design-reference/design-atlas-components-v195.png" };
 
 const publicCorePrefixes = ["/game", "/classes", "/story", "/journey", "/start", "/guides", "/news", "/events", "/patch-notes"];
 const publicServicePrefixes = ["/download", "/release", "/status", "/support", "/community", "/performance", "/accessibility", "/roadmap"];

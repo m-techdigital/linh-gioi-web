@@ -19,7 +19,7 @@ export default function HomePage() {
       <Stack className="lgo-player-facing-stack lgo-homepage-stack">
         <section className="lgo-cinematic-hero lgo-cinematic-hero-v123">
           <div className="lgo-cinematic-copy">
-            <StatusBadge tone="spirit">2D Side-Scrolling Social Action MMORPG</StatusBadge>
+            <StatusBadge tone="spirit">MMORPG hành động cộng đồng 2D</StatusBadge>
             <p className="lgo-hero-kicker">LINH GIỚI ONLINE</p>
             <h1>Sống một đời khác trong Linh Giới</h1>
             <p className="lgo-hero-lead">
@@ -31,11 +31,11 @@ export default function HomePage() {
               <LinkButton href="/story" tone="shadow">Bắt đầu câu chuyện</LinkButton>
             </div>
             <SpiritRouteBreadcrumb />
-            <div className="lgo-hero-signals" aria-label="Game identity">
-              <span>HD 2D anime</span><i />
-              <span>Social hub</span><i />
-              <span>Action combat</span><i />
-              <span>World events</span>
+            <div className="lgo-hero-signals" aria-label="Bản sắc trò chơi">
+              <span>Đồ họa 2D sắc nét</span><i />
+              <span>Trung tâm cộng đồng</span><i />
+              <span>Chiến đấu hành động</span><i />
+              <span>Sự kiện thế giới</span>
             </div>
           </div>
           <CinematicWorldScene />

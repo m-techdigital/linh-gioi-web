@@ -17,7 +17,7 @@ test.describe("design target action link group", () => {
       await page.goto(item.url);
       const region = page.getByRole("region", { name: new RegExp(`Design target reference.*${item.scope.source}`, "i") });
       await expect(region).toBeVisible();
-      const group = region.getByRole("group", { name: new RegExp(`Design targets.*${item.scope.source}`, "i") });
+      const group = region.getByRole("group", { name: new RegExp(`Các design đích.*${item.scope.source}`, "i") });
       await expect(group).toBeVisible();
       await expect(group.getByRole("link", { name: /design target.*opens in a new tab/i })).toHaveCount(2);
     });

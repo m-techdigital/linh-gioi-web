@@ -30,7 +30,7 @@ def check_shared_ui() -> None:
         "export function DesignTargetReference",
         "role=\"region\"",
         "Design target reference —",
-        "Design Target First",
+        "Theo design đích",
         "lgo-design-target-reference-link",
     ])
     require_text("packages/ui/src/index.ts", [

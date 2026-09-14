@@ -8,7 +8,7 @@ test.describe("homepage detailed design target", () => {
   test("homepage exposes the detailed target and keeps hero comparable", async ({ page, isMobile }) => {
     await page.goto(`${web}/`);
     await expect(page.getByRole("region", { name: /Design target reference.*Public Homepage/i })).toBeVisible();
-    const targetLink = page.getByRole("link", { name: /Homepage detailed design target.*Public Homepage.*opens in a new tab/i });
+    const targetLink = page.getByRole("link", { name: /Thiết kế chi tiết trang chủ.*Public Homepage.*mở trong tab mới/i });
     await expect(targetLink).toHaveAttribute("href", targetPath);
     await expect(page.locator("main h1").first()).toBeVisible();
     await expect(page.locator(".lgo-cinematic-hero")).toBeVisible();

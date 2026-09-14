@@ -31,7 +31,7 @@ test.describe("design target link new-tab accessibility", () => {
       await expect(region).toBeVisible();
 
       for (const targetName of item.targetNames) {
-        const link = region.getByRole("link", { name: new RegExp(`${targetName}.*opens in a new tab`, "i") });
+        const link = region.getByRole("link", { name: new RegExp(`${targetName}.*mở trong tab mới`, "i") });
         await expect(link, `${item.surface} ${targetName} accessible new-tab name`).toBeVisible();
         await expect(link).toHaveAttribute("target", "_blank");
         await expect(link).toHaveAttribute("rel", /noreferrer/);

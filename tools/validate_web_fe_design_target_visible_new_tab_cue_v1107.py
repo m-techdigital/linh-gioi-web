@@ -30,7 +30,7 @@ def check_source() -> None:
         "aria-hidden=\"true\"",
         "↗",
         "designTargetNewTabLabel",
-        "opens in a new tab",
+        "mở trong tab mới",
     ])
 
 def check_tests_docs() -> None:
@@ -45,7 +45,7 @@ def check_tests_docs() -> None:
         "design target visible new-tab cue",
         "lgo-design-target-reference-link-cue",
         "↗",
-        "opens in a new tab",
+        "mở trong tab mới",
     ])
     for rel in [
         "docs/execution/specs/WEB-FE-DESIGN-TARGET-VISIBLE-NEW-TAB-CUE-v1.107.md",

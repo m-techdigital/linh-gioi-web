@@ -50,7 +50,7 @@ def main() -> int:
     require_text("apps/web/src/app/story/page.tsx", "Vết Nứt Đông Môn", "NarrativeChapterGrid")
     require_text("apps/web/src/app/journey/page.tsx", "20 phút", "SessionLoopRail")
     require_text("apps/web/src/components/PublicNavigation.tsx", "/classes", "/story", "Lộ", "Cốt truyện")
-    require_text("apps/web/src/app/layout.tsx", "2D Side-Scrolling Social Action MMORPG", "Linh Thành")
+    require_text("apps/web/src/app/layout.tsx", "MMORPG hành động cộng đồng 2D", "Linh Thành")
     require_text("apps/web/src/app/sitemap.ts", '"/classes"', '"/story"')
     require_text("apps/web/src/app/globals.css", "WEB v1.22 public game experience", "lgo-cinematic-hero", "lgo-class-path-grid", "lgo-world-route")
 

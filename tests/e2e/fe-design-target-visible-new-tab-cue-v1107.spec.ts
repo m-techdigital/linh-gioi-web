@@ -17,7 +17,7 @@ test.describe("design target visible new-tab cue", () => {
       await page.goto(item.url);
       const region = page.getByRole("region", { name: new RegExp(`Design target reference.*${item.scope.source}`, "i") });
       await expect(region).toBeVisible();
-      const links = region.getByRole("link", { name: /design target.*opens in a new tab/i });
+      const links = region.getByRole("link", { name: /design target.*mở trong tab mới/i });
       await expect(links).toHaveCount(2);
 
       for (const link of await links.all()) {

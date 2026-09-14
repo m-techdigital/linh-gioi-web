@@ -481,7 +481,7 @@ export type DesignTargetReferenceProps = {
 };
 
 function designTargetNewTabLabel(label: string, scope: string) {
-  return `${label} for ${scope} — opens in a new tab`;
+  return `${label} cho ${scope} — mở trong tab mới`;
 }
 
 export function DesignTargetReference({ label, href, scope, note, className, companionTargets = [] }: DesignTargetReferenceProps) {
@@ -495,11 +495,11 @@ export function DesignTargetReference({ label, href, scope, note, className, com
       aria-describedby={note ? noteId : undefined}
     >
       <div className="lgo-design-target-reference-copy">
-        <span>Design Target First</span>
+        <span>Theo design đích</span>
         <strong>{scope}</strong>
         {note ? <p id={noteId}>{note}</p> : null}
       </div>
-      <div className="lgo-design-target-reference-actions" role="group" aria-label={`Design targets — ${scope}`}>
+      <div className="lgo-design-target-reference-actions" role="group" aria-label={`Các design đích — ${scope}`}>
         <a className="lgo-design-target-reference-link" href={href} target="_blank" rel="noopener noreferrer" aria-label={designTargetNewTabLabel(label, scope)}>
           <span>{label}</span>
           <span className="lgo-design-target-reference-link-cue" aria-hidden="true">↗</span>

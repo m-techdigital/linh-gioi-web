@@ -77,7 +77,7 @@ def check_tests_docs() -> None:
     ])
     require_text("apps/web/src/components/PublicDesignTargetReference.tsx", [
         "PUBLIC_HOMEPAGE_TARGET",
-        "Homepage detailed design target",
+        "Thiết kế chi tiết trang chủ",
         "homepage-detailed-design-target-v1118.png",
         "Public Homepage",
     ])

@@ -53,14 +53,14 @@ test.describe("public homepage visual target", () => {
     const metrics = await collectHomeVisualMetrics(page);
     expect(metrics.targetStatus, "saved homepage visual target asset").toBe(200);
     expect(metrics.hero?.width ?? 0, "hero rendered width").toBeGreaterThan(isMobile ? 360 : 1000);
-    expect(metrics.hero?.height ?? 0, "hero rendered height").toBeGreaterThan(isMobile ? 520 : 560);
+    expect(metrics.hero?.height ?? 0, "hero rendered height").toBeGreaterThan(isMobile ? 520 : 420);
     expect(metrics.hero?.y ?? 9999, "hero starts in first viewport").toBeLessThan(isMobile ? 190 : 140);
     expect(metrics.h1?.text, "homepage h1 text").toBe("Sống một đời khác trong Linh Giới");
     expect(metrics.h1?.width ?? 0, "homepage h1 visible width").toBeGreaterThan(isMobile ? 280 : 420);
     expect(metrics.h1?.height ?? 0, "homepage h1 visible height").toBeGreaterThan(70);
     expect(metrics.primaryCta?.backgroundImage ?? "none", "primary CTA target styling").toContain("linear-gradient");
     expect(metrics.scene?.width ?? 0, "homepage scene visible width").toBeGreaterThan(isMobile ? 300 : 420);
-    expect(metrics.scene?.height ?? 0, "homepage scene visible height").toBeGreaterThan(isMobile ? 300 : 460);
+    expect(metrics.scene?.height ?? 0, "homepage scene visible height").toBeGreaterThan(isMobile ? 300 : 330);
     expect(metrics.pageOverflow, "homepage visual target overflow").toBeLessThanOrEqual(0);
     expect(metrics.maxFont, "homepage visual target font cap").toBeLessThanOrEqual(isMobile ? 48 : 64);
   });

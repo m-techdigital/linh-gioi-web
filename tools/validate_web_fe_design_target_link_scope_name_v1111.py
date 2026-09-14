@@ -27,7 +27,7 @@ def require_text(rel: str, markers: list[str]) -> None:
 def check_source() -> None:
     require_text("packages/ui/src/primitives.tsx", [
         "function designTargetNewTabLabel(label: string, scope: string)",
-        "for ${scope} — opens in a new tab",
+        "cho ${scope} — mở trong tab mới",
         "aria-label={designTargetNewTabLabel(label, scope)}",
         "aria-label={designTargetNewTabLabel(target.label, scope)}",
         "DesignTargetReference",
@@ -47,7 +47,7 @@ def check_tests_docs() -> None:
         "Public Core",
         "Player Portal",
         "Ops/Admin",
-        "opens in a new tab",
+        "mở trong tab mới",
     ])
     for rel in [
         "docs/execution/specs/WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-v1.111.md",

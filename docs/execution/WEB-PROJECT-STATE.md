@@ -1,3 +1,17 @@
+Current phase: WEB-FE-HOMEPAGE-VIETNAMESE-FIRST-FLOW-v1.134 WEB_CLOSED.
+
+Current decision: v1.134 restarted FE/UI UX layout completion from the homepage and closed the first sequential page slice. Public Homepage now has refreshed Vietnamese first-flow visible copy, a refreshed homepage design target with Vietnamese footer label, and shared design-target reference labels needed by the homepage translated through Base UI/UX Layout. Entire program is NOT production-complete.
+
+- sequential page completion is now mandatory: finish one page slice with design target, implementation, browser/e2e, docs, commit and push before moving to another page.
+- Just-in-time Design is mandatory: create or replace only the target needed for the current page/section/component; do not design broad multi-page batches upfront.
+- v1.134 refreshed `homepage-detailed-design-target-v1118.png` with built-in image_gen and mirrored it under `docs/design/reference`.
+- v1.134 translated homepage first-flow labels and the shared design target reference cue used by the homepage to Vietnamese.
+- v1.134 evidence: RED browser/e2e reproduced stale English homepage target label; Playwright desktop/mobile homepage Vietnamese first-flow PASS after fix; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.135.
+
+
 Current phase: WEB-FE-SUPPORT-SAFETY-DESIGN-TARGET-DENSITY-v1.133 WEB_CLOSED.
 
 Current decision: v1.133 FE support safety design target density slice closed. Public `/support/safety` now has a dedicated high-fidelity Vietnamese `Public Support Safety` design target and runtime desktop/mobile browser/e2e guardrails for safe-reporting density. Entire program is NOT production-complete.

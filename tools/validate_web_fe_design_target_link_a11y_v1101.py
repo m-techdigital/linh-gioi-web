@@ -27,7 +27,7 @@ def require_text(rel: str, markers: list[str]) -> None:
 def check_source() -> None:
     require_text("packages/ui/src/primitives.tsx", [
         "function designTargetNewTabLabel",
-        "opens in a new tab",
+        "mở trong tab mới",
         "aria-label={designTargetNewTabLabel(label, scope)}",
         "aria-label={designTargetNewTabLabel(target.label, scope)}",
         "target=\"_blank\"",
@@ -37,7 +37,7 @@ def check_source() -> None:
     require_text("apps/web/src/components/PublicDesignTargetReference.tsx", [
         "Public Core design target",
         "Public Service design target",
-        "Component/state design target",
+        "Thiết kế component/trạng thái",
         "companionTargets",
     ])
     require_text("apps/portal/src/app/layout.tsx", ["Player Portal design target", "Component/state design target"])
@@ -53,7 +53,7 @@ def check_tests_docs() -> None:
         require_file(rel)
     require_text("tests/e2e/fe-design-target-link-a11y-v1101.spec.ts", [
         "design target link new-tab accessibility",
-        "opens in a new tab",
+        "mở trong tab mới",
         "target",
         "_blank",
         "noreferrer",

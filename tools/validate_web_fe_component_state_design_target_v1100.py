@@ -59,7 +59,7 @@ def check_source() -> None:
     ])
     require_text("packages/ui/src/index.ts", ["DesignTargetReferenceLink", "DesignTargetReferenceProps"])
     require_text("apps/web/src/components/PublicDesignTargetReference.tsx", [
-        "Component/state design target",
+        "Thiết kế component/trạng thái",
         "/design-reference/design-atlas-components-v195.png",
         "companionTargets",
     ])

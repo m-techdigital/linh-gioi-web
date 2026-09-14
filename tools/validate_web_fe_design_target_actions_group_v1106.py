@@ -28,7 +28,7 @@ def check_source() -> None:
     require_text("packages/ui/src/primitives.tsx", [
         "lgo-design-target-reference-actions",
         "role=\"group\"",
-        "aria-label={`Design targets — ${scope}`}",
+        "aria-label={`Các design đích — ${scope}`}",
         "DesignTargetReference",
         "companionTargets",
     ])
@@ -44,7 +44,7 @@ def check_tests_docs() -> None:
     require_text("tests/e2e/fe-design-target-actions-group-v1106.spec.ts", [
         "design target action link group",
         "getByRole(\"group\"",
-        "Design targets",
+        "Các design đích",
         "toHaveCount(2)",
     ])
     for rel in [
