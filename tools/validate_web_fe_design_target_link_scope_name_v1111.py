@@ -70,9 +70,8 @@ def check_tests_docs() -> None:
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Component/state", "Public Core", "Player Portal", "Ops/Admin"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         "Current phase: WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-v1.111 WEB_CLOSED",
-        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.112",
     ])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.112", "Design Target First", "browser/e2e"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "Design Target First", "browser/e2e"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-v1.111 | WEB-FE | WEB_CLOSED |"])
 
 def main() -> int:

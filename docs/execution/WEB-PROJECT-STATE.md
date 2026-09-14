@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-DOWNLOAD-NAV-SECTION-v1.112 WEB_CLOSED.
+
+Current decision: v1.112 FE public download navigation section slice closed. Public `/download/trust` now keeps `Trạng thái chơi` marked current through shared `RouteAwareLink` section matching while staying attached to the v1.95 Public Service design target. Entire program is NOT production-complete.
+
+- v1.112 updates public nav composition only; shared `RouteAwareLink` section behavior already existed and no duplicate route-state code was added.
+- v1.112 uses existing v1.95 Public Service and Component/state design targets; no new design target was required and no stale target was replaced.
+- v1.112 evidence: RED browser/e2e reproduced missing `/download/trust` current state; Playwright desktop/mobile download-section nav PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.113.
+
 Current phase: WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-v1.111 WEB_CLOSED.
 
 Current decision: v1.111 FE design-target scoped link-name slice closed. Public, Portal and Ops Design Target First primary and companion links now include the active surface scope in their accessible names while preserving visible labels and registered v1.95 visual targets. Entire program is NOT production-complete.

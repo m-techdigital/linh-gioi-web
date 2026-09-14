@@ -20,7 +20,7 @@ export function PublicNavigation() {
       <div className="lgo-brand-links" role="region" aria-label="Public primary route links" tabIndex={0}>
         {primaryItems.map((item) => <RouteAwareLink href={item.href} currentWhen="section" key={item.href}>{item.label}</RouteAwareLink>)}
       </div>
-      <RouteAwareLink className="lgo-nav-play" href="/download" currentWhen="exact">Trạng thái chơi</RouteAwareLink>
+      <RouteAwareLink className="lgo-nav-play" href="/download" currentWhen="section">Trạng thái chơi</RouteAwareLink>
     </nav>
   );
 }

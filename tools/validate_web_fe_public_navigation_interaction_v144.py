@@ -51,7 +51,6 @@ def check_public_navigation() -> None:
     require_text("apps/web/src/components/PublicNavigation.tsx", [
         "RouteAwareLink",
         "currentWhen=\"section\"",
-        "currentWhen=\"exact\"",
         "lgo-nav-play",
     ])
     css = require_text("apps/web/src/app/globals.css", [
