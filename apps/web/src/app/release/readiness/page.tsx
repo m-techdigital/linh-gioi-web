@@ -21,7 +21,7 @@ export const metadata = { title: "Release readiness" };
 export default function ReleaseReadinessPage() {
   return (
     <WebAppShell>
-      <Stack>
+      <Stack className="lgo-player-facing-stack lgo-releasereadinesspage-stack">
         <GameCard className="lgo-detail-hero-card lgo-release-readiness-hero-card">
           <StatusBadge tone="gold">WEB v1.19 release readiness hub</StatusBadge>
           <span className="lgo-card-kicker">Owner gates · tester expectation · Download/Status/Support alignment · No public build</span>
@@ -54,11 +54,11 @@ export default function ReleaseReadinessPage() {
         <SectionHeading eyebrow="Readiness before conversion" title="Release clarity phải đi trước mọi CTA nhạy cảm">
           v1.19 tập trung vào product web: owner gates, tester expectation copy, download/status/support alignment và release route clarity.
         </SectionHeading>
+        <ReleaseReadinessHubBoard />
+        <OwnerReleaseGateBoard />
         <ContentIaStartCta />
         <FaqHelpfulnessCta />
         <RouteContinuityCta />
-        <ReleaseReadinessHubBoard />
-        <OwnerReleaseGateBoard />
         <TesterExpectationCopyBoard />
         <FaqDiscoveryGroupBoard />
         <ClosedTesterChecklistBoard />
@@ -69,8 +69,8 @@ export default function ReleaseReadinessPage() {
         <PlayerTrustReleaseCta />
         <DownloadTrustCta />
         <PlayerSafetySupportCta />
-              <ClosedTesterInformationPackCta />
-        </Stack>
+        <ClosedTesterInformationPackCta />
+      </Stack>
     </WebAppShell>
   );
 }

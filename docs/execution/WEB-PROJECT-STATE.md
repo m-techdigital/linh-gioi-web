@@ -1,3 +1,17 @@
+Current phase: WEB-FE-RELEASE-READINESS-DESIGN-TARGET-DENSITY-v1.128 WEB_CLOSED.
+
+Current decision: v1.128 FE release readiness design target density slice closed. Public `/release/readiness` now has a dedicated high-fidelity `Public Release Readiness` design target and runtime desktop/mobile browser/e2e guardrails for first-fold readiness/owner-gate density. Entire program is NOT production-complete.
+
+- v1.128 created `release-readiness-detailed-design-target-v1128.png` with built-in image_gen and mirrored it under `docs/design/reference`.
+- v1.128 registered `Public Release Readiness`, routed `/release/readiness` to that page-specific target and kept Public Service as the broader target for remaining service routes.
+- v1.128 compacted desktop `/release/readiness` hero, production board, readiness hub and owner gates under `lgo-releasereadinesspage-stack` while preserving mobile behavior.
+- v1.128 evidence: RED browser/e2e reproduced missing `Public Release Readiness` target attachment; Playwright desktop/mobile release readiness design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
+- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.129.
+
 Current phase: WEB-FE-RELEASE-DESIGN-TARGET-DENSITY-v1.127 WEB_CLOSED.
 
 Current decision: v1.127 FE release design target density slice closed. Public `/release` now has a dedicated high-fidelity `Public Release` design target and runtime desktop/mobile browser/e2e guardrails for first-fold release narrative density. Entire program is NOT production-complete.
