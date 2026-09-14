@@ -13,7 +13,7 @@ export const metadata = { title: "Cốt truyện" };
 export default function StoryPage() {
   return (
     <WebAppShell>
-      <Stack className="lgo-player-facing-stack">
+      <Stack className="lgo-player-facing-stack lgo-storypage-stack">
         <PublicPlayerHero
           className="lgo-cinematic-hero lgo-story-hero"
           copyClassName="lgo-cinematic-copy"
@@ -28,6 +28,9 @@ export default function StoryPage() {
           ]}
           visual={<CinematicWorldScene compact />}
         />
+
+        <div id="chapters"><NarrativeChapterGrid /></div>
+        <StoryArcTimeline />
 
         <figure className="lgo-story-fracture-design-board lgo-panel" aria-label="Dong Mon fracture story concept reference art">
           <img
@@ -44,9 +47,6 @@ export default function StoryPage() {
             </span>
           </figcaption>
         </figure>
-
-        <div id="chapters"><NarrativeChapterGrid /></div>
-        <StoryArcTimeline />
         <ShadowInvasionFeature />
       </Stack>
     </WebAppShell>

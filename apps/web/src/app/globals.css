@@ -3649,3 +3649,112 @@ h3 {
     margin-top: -.75rem;
   }
 }
+
+
+/* WEB v1.121 story detailed design target density */
+@media (min-width: 981px) {
+  .lgo-player-facing-stack.lgo-storypage-stack {
+    gap: clamp(1rem, 1.9vw, 2.25rem);
+  }
+
+  .lgo-storypage-stack .lgo-story-hero {
+    min-height: min(430px, calc(100vh - 300px));
+    gap: clamp(1.25rem, 2.6vw, 3rem);
+    padding: clamp(.9rem, 2.4vw, 2rem) 0;
+  }
+
+  .lgo-storypage-stack .lgo-cinematic-scene {
+    min-height: 335px;
+  }
+
+  .lgo-storypage-stack .lgo-cinematic-copy {
+    display: grid;
+    gap: .6rem;
+    align-content: center;
+  }
+
+  .lgo-storypage-stack .lgo-cinematic-copy p,
+  .lgo-storypage-stack .lgo-cinematic-copy h1 {
+    margin: 0;
+  }
+
+  .lgo-storypage-stack .lgo-cinematic-copy h1 {
+    max-width: 14ch;
+    font-size: clamp(2.1rem, 3.45vw, 3rem);
+    line-height: .98;
+  }
+
+  .lgo-storypage-stack .lgo-cinematic-copy .lgo-hero-lead {
+    font-size: clamp(.92rem, .98vw, 1rem);
+    line-height: 1.48;
+  }
+
+  .lgo-storypage-stack .lgo-hero-actions {
+    margin-top: .15rem;
+    gap: .45rem;
+  }
+
+  .lgo-storypage-stack .lgo-link-button {
+    padding: .62rem .82rem;
+    font-size: .84rem;
+  }
+
+  .lgo-storypage-stack .lgo-story-fracture-design-board {
+    grid-template-columns: minmax(0, 1.3fr) minmax(14rem, .7fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .lgo-storypage-stack .lgo-story-fracture-design-board img {
+    aspect-ratio: 16 / 9;
+    max-height: 235px;
+    object-fit: cover;
+  }
+
+  .lgo-storypage-stack .lgo-story-fracture-design-board figcaption {
+    gap: .45rem;
+    font-size: .84rem;
+    line-height: 1.42;
+  }
+
+  .lgo-storypage-stack .lgo-story-fracture-design-board figcaption strong {
+    font-size: clamp(.98rem, 1.05vw, 1.08rem);
+  }
+
+  .lgo-storypage-stack #chapters {
+    margin-top: -1.25rem;
+  }
+
+  .lgo-storypage-stack #chapters .lgo-experience-section {
+    gap: .55rem;
+  }
+
+  .lgo-storypage-stack #chapters .lgo-section-heading {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: .2rem .85rem;
+    align-items: baseline;
+  }
+
+  .lgo-storypage-stack #chapters .lgo-section-heading .lgo-eyebrow,
+  .lgo-storypage-stack #chapters .lgo-section-heading h2,
+  .lgo-storypage-stack #chapters .lgo-section-heading p {
+    margin: 0;
+  }
+
+  .lgo-storypage-stack #chapters .lgo-section-heading h2 {
+    font-size: clamp(1.1rem, 1.42vw, 1.42rem);
+  }
+
+  .lgo-storypage-stack #chapters .lgo-section-heading p:last-child {
+    grid-column: 1 / -1;
+    max-width: 76ch;
+    font-size: .88rem;
+    line-height: 1.34;
+  }
+
+  .lgo-storypage-stack .lgo-narrative-chapter {
+    min-height: 250px;
+    padding: 1rem;
+  }
+}
