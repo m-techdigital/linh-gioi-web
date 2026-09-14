@@ -1,3 +1,16 @@
+Current phase: WEB-FE-SHELL-KEYBOARD-REACHABILITY-v1.117 WEB_CLOSED.
+
+Current decision: v1.117 FE shell keyboard reachability slice closed. Public Core, Player Portal and Ops/Admin shells now have desktop/mobile browser/e2e guardrail coverage for skip-link focus flow, nav keyboard focus, Design Target First link focus, readable nav typography and horizontal overflow. Entire program is NOT production-complete.
+
+- v1.117 fixed a real Public shell keyboard gap by making `PublicNavigation` nav focusable and giving `.lgo-brand-nav:focus-visible` a visible outline.
+- v1.117 uses existing v1.95 Public Core, Player Portal, Ops/Admin and Component/state design targets; no new design target was required and no stale target was replaced.
+- v1.117 evidence: RED browser/e2e reproduced Public Core nav focus failure; Playwright desktop/mobile shell keyboard reachability PASS 6/6 after fix; dedicated validator and closure checks recorded in report/handoff.
+- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.118.
+
 Current phase: WEB-FE-OPS-EXPANDED-ROUTE-AUDIT-v1.116 WEB_CLOSED.
 
 Current decision: v1.116 FE Ops/Admin expanded route audit slice closed. Twelve Ops/Admin routes now have desktop/mobile browser/e2e guardrail coverage for registered design-target attachment, readable layout caps, horizontal overflow and serious/critical axe cleanliness. Entire program is NOT production-complete.

@@ -12,7 +12,7 @@ const primaryItems = [
 
 export function PublicNavigation() {
   return (
-    <nav className="lgo-brand-nav" aria-label="Linh Giới Online public navigation">
+    <nav className="lgo-brand-nav" aria-label="Linh Giới Online public navigation" tabIndex={0}>
       <a className="lgo-brand-mark" href="/" aria-label="Linh Giới Online — Trang chủ">
         <span className="lgo-brand-sigil" aria-hidden="true">界</span>
         <span><strong>Linh Giới</strong><small>ONLINE</small></span>
