@@ -499,7 +499,7 @@ export function DesignTargetReference({ label, href, scope, note, className, com
         <strong>{scope}</strong>
         {note ? <p id={noteId}>{note}</p> : null}
       </div>
-      <div className="lgo-design-target-reference-actions">
+      <div className="lgo-design-target-reference-actions" role="group" aria-label={`Design targets — ${scope}`}>
         <a className="lgo-design-target-reference-link" href={href} target="_blank" rel="noopener noreferrer" aria-label={designTargetNewTabLabel(label)}>
           {label}
         </a>

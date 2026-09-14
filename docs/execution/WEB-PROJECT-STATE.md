@@ -1,3 +1,14 @@
+Current phase: WEB-FE-DESIGN-TARGET-ACTIONS-GROUP-v1.106 WEB_CLOSED.
+
+Current decision: v1.106 FE design-target actions group slice closed. Public, Portal and Ops Design Target First primary/companion links now sit inside a named `role="group"` action set while preserving registered v1.95 visual targets. Entire program is NOT production-complete.
+
+- v1.106 updates shared `DesignTargetReference` in `packages/ui` instead of app-local action grouping.
+- v1.106 uses existing v1.95 Component/state, Public Core/Public Service, Player Portal and Ops/Admin design targets; no new design target was required and no stale target was replaced.
+- v1.106 evidence: RED browser/e2e reproduced missing named action group; Playwright desktop/mobile action-group PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.107.
+
 Current phase: WEB-FE-DESIGN-TARGET-REGION-DESCRIPTION-v1.105 WEB_CLOSED.
 
 Current decision: v1.105 FE design-target region description slice closed. Public, Portal and Ops Design Target First regions now connect their visible comparison notes through `aria-describedby` while preserving registered v1.95 visual targets. Entire program is NOT production-complete.
