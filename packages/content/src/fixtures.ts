@@ -195,7 +195,7 @@ export const publicRoadmapItems: PublicRoadmapItem[] = [
     version: "v1.16",
     title: "Performance / copy / asset budget polish",
     status: "current",
-    summary: "Turns performance budget into player-facing copy discipline: lighter route composition, CSS-only visuals, perceived-load clarity and mobile reading density without Core Web Vitals certification."
+    summary: "Turns performance budget into player-facing copy discipline: lighter route composition, hiệu ứng CSS nhẹs, perceived-load clarity and mobile reading density without chứng nhận Web Vitals."
   },
   {
     version: "v1.17",
@@ -793,8 +793,8 @@ export const contentEntries: ContentEntry[] = [
     slug: "performance-copy-asset-budget-polish-started",
     category: "news",
     title: "Performance and copy budget get a public polish pass",
-    summary: "WEB v1.16 makes the public website lighter to read: copy budgets, CSS-only visual budget, static route composition and perceived load expectations are visible to players.",
-    body: "This update keeps product focus on the public web. It does not claim Core Web Vitals PASS, production monitoring, CDN deployment, bundle analysis certification or image CDN integration. Runtime/browser/e2e remains a guardrail only.",
+    summary: "WEB v1.16 makes the public website lighter to read: copy budgets, hiệu ứng CSS nhẹ budget, static route composition and perceived load expectations are visible to players.",
+    body: "This update keeps product focus on the public web. It does not claim Web Vitals PASS, production monitoring, CDN deployment, bundle analysis certification or image CDN integration. Runtime/browser/e2e remains a guardrail only.",
     publishedAt: "2026-09-05T21:40:00.000Z",
     status: "published",
     featured: true,
@@ -803,9 +803,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "performance-copy-budget-guide",
     category: "guides",
-    title: "Performance copy budget guide",
-    summary: "Guide giúp người chơi và reviewer hiểu vì sao web dùng copy ngắn, CSS-only visual, static routes và non-claim gần CTA nhạy cảm.",
-    body: "Đọc /performance để hiểu cách public web giữ route nhẹ, card dễ scan, visual không phụ thuộc ảnh nặng và trạng thái tải game không bị trình bày như sẵn sàng phát hành. Đây là guidance/source discipline, không phải Lighthouse hoặc Core Web Vitals certification.",
+    title: "Giữ web nhẹ và rõ",
+    summary: "Guide giúp người chơi và reviewer hiểu vì sao web dùng nội dung ngắn, hiệu ứng CSS nhẹ, route tĩnh và ranh giới rõ cạnh CTA nhạy cảm.",
+    body: "Đọc trang Hiệu năng để hiểu cách public web giữ route nhẹ, thẻ dễ quét, visual không phụ thuộc ảnh nặng và trạng thái tải game không bị trình bày như đã sẵn sàng phát hành.",
     publishedAt: "2026-09-05T21:45:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -1293,6 +1293,39 @@ export const guideDetailSteps: GuideDetailStep[] = [
     action: "Kiểm tra ranh giới về tải game, tài khoản, chiến đấu, hỗ trợ và cộng đồng trước khi hiểu một CTA là hệ thống vận hành.",
     expectedResult: "Người chơi biết đâu là hướng dẫn public tĩnh và đâu là gate chờ backend/game owner duyệt.",
     blockedScope: "Chưa có public build, production auth, combat live, ticket live hoặc backend contract accepted."
+  },
+
+  {
+    slug: "performance-copy-budget-guide",
+    step: "01",
+    title: "Giữ nội dung ngắn",
+    action: "Đọc mỗi card theo ý chính trước, dùng câu ngắn và nhãn rõ để không biến trang public thành tài liệu vận hành dài.",
+    expectedResult: "Người chơi hiểu trạng thái chính mà không phải đọc nhiều đoạn giải thích kỹ thuật.",
+    blockedScope: "Chưa có CMS production, cá nhân hóa nội dung hoặc editorial backend."
+  },
+  {
+    slug: "performance-copy-budget-guide",
+    step: "02",
+    title: "Ưu tiên visual nhẹ",
+    action: "Dùng theme, gradient và layout CSS trong shared UI trước khi thêm ảnh nặng hoặc asset mới cho một guide tĩnh.",
+    expectedResult: "Trang vẫn có phân cấp thị giác nhưng không phụ thuộc tải ảnh lớn để hiểu nội dung chính.",
+    blockedScope: "Chưa có CDN ảnh production, bundle analysis chứng nhận hoặc image pipeline vận hành."
+  },
+  {
+    slug: "performance-copy-budget-guide",
+    step: "03",
+    title: "Giữ route tĩnh dễ kiểm",
+    action: "Ưu tiên route tĩnh, fixture rõ ranh giới và CTA dẫn đúng trạng thái thay vì tạo flow backend giả.",
+    expectedResult: "Reviewer kiểm được source, browser và build mà không nhầm thành hệ thống live.",
+    blockedScope: "Chưa có production monitoring, server analytics hoặc backend contract accepted."
+  },
+  {
+    slug: "performance-copy-budget-guide",
+    step: "04",
+    title: "Đặt ranh giới cạnh CTA",
+    action: "Với tải game, tài khoản, hỗ trợ hoặc trạng thái phát hành, đặt non-claim gần CTA để người chơi không hiểu nhầm readiness.",
+    expectedResult: "CTA vẫn hữu ích nhưng không biến thành lời hứa tải game, đăng nhập hoặc hỗ trợ production.",
+    blockedScope: "Chưa có public build, entitlement, production auth, ticket live hoặc deployment claim."
   },
 
   {
@@ -1794,7 +1827,7 @@ export const publicContentHubs: PublicContentHub[] = [
       { label: "Download trust", href: "/download/trust", reason: "Biết vì sao chưa có nút tải và cần checksum/provenance." },
       { label: "Roadmap", href: "/roadmap", reason: "Xem gate nào ready/planned/blocked." },
       { label: "Dễ đọc", href: "/accessibility", reason: "Kiểm tra heading, scan aid và focus order." },
-      { label: "Hiệu năng", href: "/performance", reason: "Hiểu copy budget, CSS-only visual budget và perceived load." }
+      { label: "Hiệu năng", href: "/performance", reason: "Hiểu copy budget, hiệu ứng CSS nhẹ budget và perceived load." }
     ],
     readerOutcome: "Người chơi hiểu public web đang source-ready nhưng chưa có public game download artifact.",
     nonClaim: "No public game download artifact, no production auth, no DB persistence."
@@ -2242,7 +2275,7 @@ export const performanceCopyBudgetPrinciples: PerformanceCopyBudgetPrinciple[] =
     title: "Copy nhẹ trước, hiệu ứng sau",
     playerBenefit: "Người chơi hiểu trạng thái game trong vài dòng đầu thay vì bị ngập bởi đoạn dài hoặc thuật ngữ runtime.",
     implementationNote: "Hero, CTA bands and card groups keep summary-first copy, short labels and nearby non-claims for download/account/support surfaces.",
-    nonClaim: "No Lighthouse score certification, no Core Web Vitals measured PASS."
+    nonClaim: "No báo cáo đo hiệu năng score certification, no PASS đo Web Vitals."
   },
   {
     id: "css-only-visual-budget",
@@ -2255,7 +2288,7 @@ export const performanceCopyBudgetPrinciples: PerformanceCopyBudgetPrinciple[] =
     id: "static-route-composition",
     title: "Route public ưu tiên static composition",
     playerBenefit: "Các trang hướng dẫn, status, download trust và onboarding mở rõ ràng ngay cả khi chưa có backend thật.",
-    implementationNote: "Use file-backed typed content and static routes; do not introduce client-heavy personalization or backend fetching for public copy.",
+    implementationNote: "Use file-backed typed content and route tĩnh; do not introduce client-heavy personalization or backend fetching for public copy.",
     nonClaim: "No CMS, no live personalization, no backend recommendation engine."
   },
   {
@@ -2271,9 +2304,9 @@ export const staticRouteCompositionRules: StaticRouteCompositionRule[] = [
   {
     route: "/performance",
     staticSurface: "Performance/copy budget hub is a static product page backed by typed fixtures.",
-    copyBudget: "Explain copy weight, CSS-only visuals, static route composition and mobile density in short cards.",
+    copyBudget: "Explain copy weight, hiệu ứng CSS nhẹs, static route composition and mobile density in short cards.",
     cssAssetRule: "Use existing token-driven panels and badges; no new bitmap hero or remote media dependency.",
-    fallbackMessage: "No Core Web Vitals measured PASS or production monitoring claim."
+    fallbackMessage: "No PASS đo Web Vitals or production monitoring claim."
   },
   {
     route: "/download/trust",
@@ -2392,9 +2425,9 @@ export const routeContinuityBridges: RouteContinuityBridge[] = [
     fromRoute: "public route cluster",
     toRoute: "/performance",
     playerQuestion: "Vì sao các trang dùng copy ngắn và không nhồi ảnh lớn?",
-    bridgeCopy: "Performance hub giải thích copy budget, CSS-only visuals và mobile reading density để route continuity không biến thành trang nặng.",
+    bridgeCopy: "Performance hub giải thích copy budget, hiệu ứng CSS nhẹs và mobile reading density để route continuity không biến thành trang nặng.",
     ctaLabel: "Đọc performance/copy budget",
-    conversionBoundary: "No Core Web Vitals measured PASS, no Lighthouse certification, no image CDN claim."
+    conversionBoundary: "No PASS đo Web Vitals, no báo cáo đo hiệu năng certification, no image CDN claim."
   }
 ];
 
