@@ -857,9 +857,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "release-readiness-hub-polish-started",
     category: "news",
-    title: "Release readiness hub gets clearer",
-    summary: "WEB v1.19 groups owner gates, tester expectations and download/status/support alignment into a dedicated release readiness hub.",
-    body: "WEB v1.19 keeps building the public web product. It adds a /release/readiness hub so players and reviewers can see which release gates are public, internal or blocked before any download, test, support or community CTA is treated as real.",
+    title: "Release readiness hub rõ ràng hơn",
+    summary: "WEB v1.19 gom owner gates, kỳ vọng tester và sự đồng bộ Download/Status/Support vào một hub readiness riêng.",
+    body: "WEB v1.19 làm rõ /release/readiness để người chơi và reviewer thấy gate nào public, gate nào nội bộ hoặc bị chặn trước khi download, test, support hay CTA cộng đồng được xem là thật.",
     publishedAt: "2026-09-05T23:05:00.000Z",
     status: "published",
     featured: true,
@@ -1015,16 +1015,16 @@ export const contentDetailSections: ContentDetailSection[] = [
   {
     slug: "release-readiness-hub-polish-started",
     heading: "Release readiness hub gom gate quan trọng về một chỗ",
-    body: "WEB v1.19 thêm /release/readiness để người chơi thấy rõ owner gates, tester expectations và sự đồng bộ giữa Download, Status, Support trước khi có public build.",
+    body: "WEB v1.19 thêm /release/readiness để người chơi thấy rõ owner gates, kỳ vọng tester và sự đồng bộ giữa Download, Status, Support trước khi có public build.",
     playerImpact: "Người chơi không bị dẫn từ release narrative sang download/test mà thiếu điều kiện chứng minh.",
-    nonClaim: "No public download, no open beta, no entitlement automation."
+    nonClaim: "Không có public download, không mở beta công khai và không có tự động cấp quyền."
   },
   {
     slug: "release-readiness-hub-polish-started",
     heading: "Download, Status và Support phải cùng nói một sự thật",
-    body: "Release readiness làm rõ mỗi surface cần nói gì, link tới đâu và mâu thuẫn nào phải tránh trước khi mở tester expectation.",
+    body: "Release readiness làm rõ mỗi surface cần nói gì, link tới đâu và mâu thuẫn nào phải tránh trước khi mở kỳ vọng tester.",
     playerImpact: "Người chơi hiểu blocker tại đúng route thay vì suy diễn từ CTA hoặc build guardrail.",
-    nonClaim: "No fake ticket, no placeholder checksum, no sẵn sàng phát hành claim."
+    nonClaim: "Không có ticket giả, không có checksum placeholder và không claim sẵn sàng phát hành."
   },
   {
     slug: "route-continuity-conversion-polish-started",
