@@ -2878,3 +2878,345 @@
     font-size: .64rem;
   }
 }
+
+/* Shared public game-information depth layout; moved from app globals for Base First ownership. */
+.lgo-depth-panel,
+.lgo-guide-panel,
+.lgo-download-depth,
+.lgo-faq-panel {
+  display: grid;
+  gap: var(--lgo-space-lg);
+}
+
+.lgo-story-chapters {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--lgo-space-md);
+}
+
+.lgo-story-chapter,
+.lgo-guide-step,
+.lgo-faq-item {
+  border: 1px solid rgba(49,216,232,.18);
+  border-radius: var(--lgo-radius-lg);
+  background: linear-gradient(145deg, rgba(9,29,52,.62), rgba(7,17,31,.66));
+  padding: var(--lgo-space-lg);
+}
+
+.lgo-story-chapter small,
+.lgo-guide-step small {
+  display: block;
+  margin-top: var(--lgo-space-sm);
+  color: var(--lgo-color-warm-gold);
+  line-height: 1.55;
+}
+
+.lgo-guide-steps,
+.lgo-faq-list {
+  display: grid;
+  gap: var(--lgo-space-md);
+}
+
+.lgo-guide-step {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: var(--lgo-space-md);
+  align-items: start;
+}
+
+.lgo-guide-step > span {
+  display: inline-grid;
+  place-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: var(--lgo-radius-pill);
+  background: linear-gradient(135deg, var(--lgo-color-jade), var(--lgo-color-spirit-cyan));
+  color: #07111f;
+  font-weight: 900;
+}
+
+.lgo-depth-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--lgo-space-lg);
+  border: 1px solid rgba(53,198,163,.28);
+  border-radius: var(--lgo-radius-xl);
+  padding: var(--lgo-space-xl);
+  background:
+    radial-gradient(circle at top left, rgba(53,198,163,.16), transparent 18rem),
+    linear-gradient(135deg, rgba(49,216,232,.10), rgba(245,200,107,.08));
+}
+
+@media (max-width: 980px) {
+  .lgo-story-chapters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lgo-depth-cta { align-items: stretch; flex-direction: column; }
+}
+
+@media (max-width: 620px) {
+  .lgo-story-chapters { grid-template-columns: 1fr; }
+  .lgo-guide-step { grid-template-columns: 1fr; }
+}
+
+/* Shared compact beginner guide page layout. */
+.lgo-beginnerpage-stack {
+  gap: .95rem;
+}
+
+.lgo-beginner-hero-card {
+  padding: clamp(1rem, 2.2vw, 1.55rem);
+}
+
+.lgo-beginner-hero-card h1 {
+  font-size: clamp(2.05rem, 4vw, 3.45rem);
+  line-height: .94;
+  max-width: 13ch;
+}
+
+.lgo-beginner-hero-card .lgo-hero-lead,
+.lgo-beginner-hero-card p {
+  max-width: 78ch;
+}
+
+@media (min-width: 981px) {
+  .lgo-beginnerpage-stack {
+    gap: .78rem;
+  }
+
+  .lgo-beginner-hero-card {
+    gap: .52rem;
+  }
+
+  .lgo-beginner-hero-card .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 43rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-depth-panel,
+  .lgo-beginnerpage-stack .lgo-guide-panel,
+  .lgo-beginnerpage-stack .lgo-download-depth,
+  .lgo-beginnerpage-stack .lgo-faq-panel {
+    gap: .62rem;
+    padding: .8rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-section-heading {
+    margin-bottom: 0;
+  }
+
+  .lgo-beginnerpage-stack .lgo-section-heading h2 {
+    font-size: clamp(1.08rem, 1.34vw, 1.3rem);
+    line-height: 1.04;
+  }
+
+  .lgo-beginnerpage-stack .lgo-section-heading p {
+    font-size: .76rem;
+    line-height: 1.28;
+  }
+
+  .lgo-beginnerpage-stack .lgo-story-chapters,
+  .lgo-beginnerpage-stack .lgo-download-depth .lgo-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: .52rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-faq-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: .5rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-guide-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .55rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-story-chapter,
+  .lgo-beginnerpage-stack .lgo-guide-step,
+  .lgo-beginnerpage-stack .lgo-download-depth .lgo-card,
+  .lgo-beginnerpage-stack .lgo-faq-item {
+    gap: .32rem;
+    padding: .58rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-guide-step {
+    grid-template-columns: 2.2rem 1fr;
+  }
+
+  .lgo-beginnerpage-stack .lgo-guide-step > span {
+    width: 2rem;
+    height: 2rem;
+    font-size: .78rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-story-chapter h3,
+  .lgo-beginnerpage-stack .lgo-guide-step h3,
+  .lgo-beginnerpage-stack .lgo-download-depth h3,
+  .lgo-beginnerpage-stack .lgo-faq-item h3 {
+    font-size: .88rem;
+    line-height: 1.04;
+    margin-block: .24rem .14rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-story-chapter p,
+  .lgo-beginnerpage-stack .lgo-story-chapter small,
+  .lgo-beginnerpage-stack .lgo-guide-step p,
+  .lgo-beginnerpage-stack .lgo-guide-step small,
+  .lgo-beginnerpage-stack .lgo-download-depth p,
+  .lgo-beginnerpage-stack .lgo-faq-item p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: .7rem;
+    line-height: 1.22;
+  }
+
+  .lgo-beginnerpage-stack .lgo-story-chapter p,
+  .lgo-beginnerpage-stack .lgo-guide-step p,
+  .lgo-beginnerpage-stack .lgo-download-depth p,
+  .lgo-beginnerpage-stack .lgo-faq-item p {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-beginnerpage-stack .lgo-story-chapter small,
+  .lgo-beginnerpage-stack .lgo-guide-step small {
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .lgo-beginnerpage-stack {
+    gap: .74rem;
+  }
+
+  .lgo-beginner-hero-card {
+    gap: .48rem;
+    padding: .9rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-beginner-hero-card h1 {
+    font-size: clamp(1.9rem, 7.2vw, 2.05rem);
+  }
+
+  .lgo-beginner-hero-card .lgo-hero-lead,
+  .lgo-beginner-hero-card p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: .86rem;
+    line-height: 1.32;
+  }
+
+  .lgo-beginner-hero-card .lgo-hero-lead {
+    -webkit-line-clamp: 3;
+  }
+
+  .lgo-beginner-hero-card .lgo-guide-detail-boundary {
+    -webkit-line-clamp: 3;
+  }
+
+  .lgo-beginner-hero-card .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .4rem;
+  }
+
+  .lgo-beginner-hero-card .lgo-link-button {
+    min-height: 32px;
+    padding-block: .28rem;
+    padding-inline: .38rem;
+    font-size: .66rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-depth-panel,
+  .lgo-beginnerpage-stack .lgo-guide-panel,
+  .lgo-beginnerpage-stack .lgo-download-depth,
+  .lgo-beginnerpage-stack .lgo-faq-panel {
+    gap: .5rem;
+    padding: .68rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-section-heading h2 {
+    font-size: 1.02rem;
+    line-height: 1.06;
+  }
+
+  .lgo-beginnerpage-stack .lgo-section-heading p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: .72rem;
+    line-height: 1.22;
+  }
+
+  .lgo-beginnerpage-stack .lgo-story-chapters,
+  .lgo-beginnerpage-stack .lgo-guide-steps,
+  .lgo-beginnerpage-stack .lgo-download-depth .lgo-grid,
+  .lgo-beginnerpage-stack .lgo-faq-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .46rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-story-chapter,
+  .lgo-beginnerpage-stack .lgo-guide-step,
+  .lgo-beginnerpage-stack .lgo-download-depth .lgo-card,
+  .lgo-beginnerpage-stack .lgo-faq-item {
+    border-radius: 1rem;
+    gap: .26rem;
+    padding: .5rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-guide-step {
+    grid-template-columns: 1.7rem 1fr;
+  }
+
+  .lgo-beginnerpage-stack .lgo-guide-step > span {
+    width: 1.55rem;
+    height: 1.55rem;
+    font-size: .66rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-status-badge,
+  .lgo-beginnerpage-stack .lgo-card-kicker {
+    font-size: .6rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-story-chapter h3,
+  .lgo-beginnerpage-stack .lgo-guide-step h3,
+  .lgo-beginnerpage-stack .lgo-download-depth h3,
+  .lgo-beginnerpage-stack .lgo-faq-item h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: .8rem;
+    line-height: 1.06;
+    margin-block: .18rem .1rem;
+  }
+
+  .lgo-beginnerpage-stack .lgo-story-chapter p,
+  .lgo-beginnerpage-stack .lgo-story-chapter small,
+  .lgo-beginnerpage-stack .lgo-guide-step p,
+  .lgo-beginnerpage-stack .lgo-guide-step small,
+  .lgo-beginnerpage-stack .lgo-download-depth p,
+  .lgo-beginnerpage-stack .lgo-faq-item p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: .66rem;
+    line-height: 1.17;
+  }
+
+  .lgo-beginnerpage-stack .lgo-story-chapter p,
+  .lgo-beginnerpage-stack .lgo-guide-step p,
+  .lgo-beginnerpage-stack .lgo-download-depth p,
+  .lgo-beginnerpage-stack .lgo-faq-item p {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-beginnerpage-stack .lgo-story-chapter small,
+  .lgo-beginnerpage-stack .lgo-guide-step small {
+    -webkit-line-clamp: 1;
+  }
+}

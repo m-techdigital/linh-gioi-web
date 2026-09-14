@@ -1,3 +1,16 @@
+Current phase: WEB-FE-GUIDES-BEGINNER-REAL-UI-LAYOUT-v1.157 WEB_CLOSED.
+
+Current decision: v1.157 closed the active `/guides/beginner` page slice as a real browser UI/UX Layout task. The existing beginner-guide direction remained the design guardrail; work focused on the rendered beginner guide, first-fold density, Vietnamese game-scenario labels and shared Base First layout. Entire program is NOT production-complete.
+
+- v1.157 did not create a new design batch because the existing beginner-guide direction was sufficient for comparison after minimal Vietnamese alignment in the rendered page.
+- v1.157 replaced the tall v1.8 raw information flow with a compact hero, world-story cards, four beginner steps, download status and FAQ.
+- v1.157 moved reusable game-information depth CSS out of `apps/web/src/app/globals.css` and into shared `packages/ui/src/service-layout.css`.
+- v1.157 evidence: browser/e2e desktop/mobile v1.157; source validator; Web/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/guides-beginner-desktop-v1157.png` and `/tmp/guides-beginner-mobile-v1157.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.158. Select `/guides/gate-entry-guide` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-GUIDES-INDEX-REAL-UI-LAYOUT-v1.156 WEB_CLOSED.
 
 Current decision: v1.156 closed the active `/guides` page slice as a real browser UI/UX Layout task. The existing public guide/index direction remained the design guardrail; work focused on the rendered guide index, first-fold structure, Vietnamese scenario labels and shared Base First layout. Entire program is NOT production-complete.
