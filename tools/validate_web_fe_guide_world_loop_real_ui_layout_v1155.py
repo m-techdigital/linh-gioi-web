@@ -53,11 +53,11 @@ def main() -> int:
 
     require_text("packages/content/src/fixtures.ts", [
         "slug: \"world-gameplay-loop-guide\"",
-        "title: \"Vòng lặp thế giới: từ Spirit Gate tới Training Stone\"",
+        "title: \"Vòng lặp thế giới nhập môn\"",
         "hướng dẫn công khai tĩnh",
         "cơ sở dữ liệu nhiệm vụ",
         "hệ thống tiến trình vận hành",
-        "Chưa có sát thương chiến đấu",
+        "sát thương chiến đấu",
         "Chưa có trạng thái nhiệm vụ lưu trữ",
         "Chưa có artifact công khai",
     ])
@@ -96,7 +96,7 @@ def main() -> int:
 
     require_text("tests/e2e/fe-guide-world-loop-real-ui-layout-v1155.spec.ts", [
         "/guides/world-gameplay-loop-guide starts with compact guide content",
-        "Vòng lặp thế giới: từ Spirit Gate tới Training Stone",
+        "Vòng lặp thế giới nhập môn",
         "CTA headings should not precede guide content",
         "desktop hero compact",
         "mobile hero compact",
@@ -111,8 +111,8 @@ def main() -> int:
         "/tmp/guide-world-loop-mobile-v1155.png",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.165",
-        "Current FE scope: select `/guides/world-gameplay-loop-guide`",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.166",
+        "Current FE scope: select `/guides/player-safety-support-guide`",
         "Real Browser UI/UX Layout First",
         "Base UI/UX Layout",
     ])

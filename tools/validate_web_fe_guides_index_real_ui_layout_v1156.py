@@ -90,8 +90,8 @@ def main() -> int:
         "Real Browser UI/UX Layout First",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.165",
-        "Current FE scope: select `/guides/world-gameplay-loop-guide`",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.166",
+        "Current FE scope: select `/guides/player-safety-support-guide`",
         "Real Browser UI/UX Layout First",
         "Base UI/UX Layout",
     ])

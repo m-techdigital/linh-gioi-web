@@ -58,16 +58,16 @@ test.describe("world gameplay guide real UI layout v1.155", () => {
   test("/guides/world-gameplay-loop-guide starts with compact guide content", async ({ page, isMobile }) => {
     await page.goto(`${web}/guides/world-gameplay-loop-guide`);
 
-    await expect(page.getByRole("heading", { level: 1, name: "Vòng lặp thế giới: từ Spirit Gate tới Training Stone" })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1, name: "Vòng lặp thế giới nhập môn" })).toBeVisible();
     await expect(page.getByRole("heading", { level: 2, name: "Các bước guide có kết quả mong đợi và phạm vi tạm khóa" })).toBeVisible();
-    await expect(page.getByRole("heading", { level: 3, name: "Vào Spirit Gate bằng kỳ vọng đúng" })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 3, name: "Vào Cổng Linh" })).toBeVisible();
 
     const metrics = await collect(page);
-    expect(metrics.firstHeadings[0]).toEqual({ tag: "h1", text: "Vòng lặp thế giới: từ Spirit Gate tới Training Stone" });
+    expect(metrics.firstHeadings[0]).toEqual({ tag: "h1", text: "Vòng lặp thế giới nhập môn" });
     expect(metrics.firstHeadings.map((heading) => heading.text).slice(0, 3), "CTA headings should not precede guide content").not.toContain("Trước khi mời test hoặc mở tải game, hãy đọc gate owner và đồng bộ bề mặt.");
     expect(metrics.overflow, "horizontal overflow").toBeLessThanOrEqual(0);
     expect(metrics.maxFont, "visible font cap").toBeLessThanOrEqual(isMobile ? 32 : 56);
-    expect(metrics.firstFlowText, "old English/backend labels should not drive first-flow").not.toMatch(/World loop:|Guide detail helps|live guide\/wiki backend|quest database|combat tutorial|live progression system|wiki backend/);
+    expect(metrics.firstFlowText, "old English/backend labels should not drive first-flow").not.toMatch(/World loop:|Spirit Gate|Gate Keeper|Training Stone|Guide detail helps|live guide\/wiki backend|quest database|combat tutorial|live progression system|wiki backend/);
 
     if (isMobile) {
       expect(metrics.h1Font, "mobile h1 scale").toBeLessThanOrEqual(32);
@@ -84,7 +84,7 @@ test.describe("world gameplay guide real UI layout v1.155", () => {
       expect(metrics.detailTop, "desktop detail follows hero").toBeLessThanOrEqual(525);
       expect(metrics.detailBottom, "desktop detail compact").toBeLessThanOrEqual(1100);
       expect(metrics.worldCtaTop, "desktop world CTA follows guide proof").toBeGreaterThan(metrics.detailTop);
-      expect(metrics.detailColumns, "desktop guide steps split into two columns").toBe(2);
+      expect(metrics.detailColumns, "desktop guide steps split into compact four columns").toBe(4);
     }
   });
 });
