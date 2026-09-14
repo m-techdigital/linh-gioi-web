@@ -26,42 +26,40 @@ def require_text(rel: str, markers: list[str]) -> None:
 
 def check_source() -> None:
     require_text("packages/ui/src/primitives.tsx", [
-        "DesignTargetReference",
-        "target=\"_blank\"",
-        "rel=\"noopener noreferrer\"",
+        "function designTargetNewTabLabel(label: string, scope: string)",
+        "for ${scope} — opens in a new tab",
         "aria-label={designTargetNewTabLabel(label, scope)}",
         "aria-label={designTargetNewTabLabel(target.label, scope)}",
+        "DesignTargetReference",
     ])
-    if 'rel="noreferrer"' in read("packages/ui/src/primitives.tsx"):
-        fail("packages/ui/src/primitives.tsx: old rel=\"noreferrer\" remains")
 
 def check_tests_docs() -> None:
     for rel in [
-        "tests/e2e/fe-design-target-link-rel-v1103.spec.ts",
-        "docs/execution/specs/WEB-FE-DESIGN-TARGET-LINK-REL-v1.103.md",
-        "LGO-WEB-FE-DESIGN-TARGET-LINK-REL-REPORT-v1.103.md",
-        "HANDOFF-LGO-WEB-FE-DESIGN-TARGET-LINK-REL-v1.103.md",
+        "tests/e2e/fe-design-target-link-scope-name-v1111.spec.ts",
+        "docs/execution/specs/WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-v1.111.md",
+        "LGO-WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-REPORT-v1.111.md",
+        "HANDOFF-LGO-WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-v1.111.md",
     ]:
         require_file(rel)
-    require_text("tests/e2e/fe-design-target-link-rel-v1103.spec.ts", [
-        "design target new-tab rel safety",
-        "noopener",
-        "noreferrer",
-        "target",
-        "_blank",
+    require_text("tests/e2e/fe-design-target-link-scope-name-v1111.spec.ts", [
+        "design target link scoped accessible names",
+        "toHaveAccessibleName",
+        "Public Core",
+        "Player Portal",
+        "Ops/Admin",
         "opens in a new tab",
     ])
     for rel in [
-        "docs/execution/specs/WEB-FE-DESIGN-TARGET-LINK-REL-v1.103.md",
-        "LGO-WEB-FE-DESIGN-TARGET-LINK-REL-REPORT-v1.103.md",
-        "HANDOFF-LGO-WEB-FE-DESIGN-TARGET-LINK-REL-v1.103.md",
+        "docs/execution/specs/WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-v1.111.md",
+        "LGO-WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-REPORT-v1.111.md",
+        "HANDOFF-LGO-WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-v1.111.md",
     ]:
         require_text(rel, [
-            "WEB-FE-DESIGN-TARGET-LINK-REL-v1.103",
+            "WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-v1.111",
             "WEB_CLOSED",
             "Design Target First",
             "Base UI/UX Layout",
-            "noopener noreferrer",
+            "accessible name",
             "browser/e2e",
             "No production auth",
             "No DB persistence",
@@ -71,21 +69,21 @@ def check_tests_docs() -> None:
         ])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Component/state", "Public Core", "Player Portal", "Ops/Admin"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
-        "Current phase: WEB-FE-DESIGN-TARGET-LINK-REL-v1.103 WEB_CLOSED",
-        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.104",
+        "Current phase: WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-v1.111 WEB_CLOSED",
+        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.112",
     ])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["Design Target First", "browser/e2e"])
-    require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-DESIGN-TARGET-LINK-REL-v1.103 | WEB-FE | WEB_CLOSED |"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.112", "Design Target First", "browser/e2e"])
+    require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-v1.111 | WEB-FE | WEB_CLOSED |"])
 
 def main() -> int:
     check_source()
     check_tests_docs()
     if ERRORS:
-        print("WEB FE DESIGN TARGET LINK REL v1.103 VALIDATION FAIL")
+        print("WEB FE DESIGN TARGET LINK SCOPE NAME v1.111 VALIDATION FAIL")
         for error in ERRORS:
             print(f"- {error}")
         return 1
-    print("WEB FE DESIGN TARGET LINK REL v1.103 VALIDATION PASS")
+    print("WEB FE DESIGN TARGET LINK SCOPE NAME v1.111 VALIDATION PASS")
     return 0
 
 if __name__ == "__main__":

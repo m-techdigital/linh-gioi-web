@@ -1,3 +1,14 @@
+Current phase: WEB-FE-DESIGN-TARGET-LINK-SCOPE-NAME-v1.111 WEB_CLOSED.
+
+Current decision: v1.111 FE design-target scoped link-name slice closed. Public, Portal and Ops Design Target First primary and companion links now include the active surface scope in their accessible names while preserving visible labels and registered v1.95 visual targets. Entire program is NOT production-complete.
+
+- v1.111 updates shared `DesignTargetReference` in `packages/ui` instead of app-local accessible-name overrides.
+- v1.111 uses existing v1.95 Component/state, Public Core/Public Service, Player Portal and Ops/Admin design targets; no new design target was required and no stale target was replaced.
+- v1.111 evidence: RED browser/e2e reproduced unscoped companion link accessible names; Playwright desktop/mobile scoped-link-name PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.112.
+
 Current phase: WEB-FE-DESIGN-TARGET-TRANSITION-PARITY-v1.110 WEB_CLOSED.
 
 Current decision: v1.110 FE design-target transition parity slice closed. Public, Portal and Ops Design Target First links now share default transition timing while preserving visible focus outlines, cue spacing and reduced-motion behavior. Entire program is NOT production-complete.

@@ -28,8 +28,8 @@ def check_source() -> None:
     require_text("packages/ui/src/primitives.tsx", [
         "function designTargetNewTabLabel",
         "opens in a new tab",
-        "aria-label={designTargetNewTabLabel(label)}",
-        "aria-label={designTargetNewTabLabel(target.label)}",
+        "aria-label={designTargetNewTabLabel(label, scope)}",
+        "aria-label={designTargetNewTabLabel(target.label, scope)}",
         "target=\"_blank\"",
         "rel=\"noopener noreferrer\"",
         "DesignTargetReference",
