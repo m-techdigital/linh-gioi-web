@@ -49,16 +49,16 @@ def check_assets() -> None:
             fail(f"manifest {asset_id}: expected 1280x720 dimensions")
 def check_page_and_css() -> None:
     require_text("apps/web/src/app/start/page.tsx", [
-        "onboardingScreenshots", "Dong Mon onboarding real screenshots", "Ảnh thật từ tutorial Đông Môn",
+        "onboardingScreenshots", "Ảnh thật tuyến hướng dẫn Đông Môn", "Ảnh thật từ tutorial Đông Môn",
         "/game-art/onboarding/dong-mon-01-initial.png", "/game-art/onboarding/dong-mon-02-gate-focus.png", "/game-art/onboarding/dong-mon-03-dialogue.png",
-        "loading=\"lazy\"", "không phải public build/download claim", "chưa có accepted backend contract"
+        "loading=\"lazy\"", "không phải cam kết bản tải công khai", "chưa có backend contract được chấp nhận"
     ])
     require_text("apps/web/src/app/globals.css", [
         "WEB v1.90 public start real onboarding screenshot gallery", ".lgo-start-real-screenshot-grid", "repeat(3, minmax(0, 1fr))", "aspect-ratio: 16 / 9", "overflow-wrap: anywhere", "grid-template-columns: 1fr"
     ])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-start-real-onboarding-gallery-v190.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90.md", "LGO-WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-REPORT-v1.90.md", "HANDOFF-LGO-WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90.md"]: require_file(rel)
-    require_text("tests/e2e/fe-public-start-real-onboarding-gallery-v190.spec.ts", ["/start", "Ảnh thật từ tutorial Đông Môn", "Dong Mon onboarding initial spawn screenshot", "columnCount", "pageOverflow", "maxFont", "naturalWidth"])
+    require_text("tests/e2e/fe-public-start-real-onboarding-gallery-v190.spec.ts", ["/start", "Ảnh thật từ tutorial Đông Môn", "Ảnh xuất hiện ban đầu tại Đông Môn", "columnCount", "pageOverflow", "maxFont", "naturalWidth"])
     for rel in ["docs/execution/specs/WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90.md", "LGO-WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-REPORT-v1.90.md", "HANDOFF-LGO-WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90.md"]:
         require_text(rel, ["WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90", "WEB_CLOSED", "browser/e2e", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90 WEB_CLOSED", "WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90"])

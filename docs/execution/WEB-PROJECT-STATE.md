@@ -1,3 +1,17 @@
+Current phase: WEB-FE-START-VIETNAMESE-DESIGN-MATCH-v1.139 WEB_CLOSED.
+
+Current decision: v1.139 closed the active `/start` page slice after refreshing the Public Start design target to Vietnamese and matching the implemented page in browser. `/start` now follows the target scenario more closely: Đông Môn cinematic hero, tutorial step rail, localized gameplay-loop board and delayed real onboarding screenshots. Entire program is NOT production-complete.
+
+- v1.139 refreshed `start-detailed-design-target-v1124.png` with built-in imagegen and mirrored it under `docs/design/reference`.
+- v1.139 translated Public Start target/page labels, tutorial board labels and onboarding screenshot labels to Vietnamese.
+- v1.139 reused the shared `CinematicWorldScene` in `/start` instead of creating duplicate page-local visual code.
+- v1.139 evidence: RED browser/e2e reproduced stale English target label and missing shared Đông Môn scene; Playwright desktop/mobile `/start` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: 1280x720 hero 420, scene 374.5, board top 566.031, board visible 153.969, overflow 0.
+- Design must follow the Linh Giới game scenario and stay coherent with accepted targets; stale, English-heavy or scenario-wrong targets must be replaced before implementation.
+- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.140. Select `/download` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-JOURNEY-VIETNAMESE-DESIGN-MATCH-v1.138 WEB_CLOSED.
 
 Current decision: v1.138 closed the active `/journey` page slice after refreshing the Public Journey design target to Vietnamese and matching the implemented page in browser. `/journey` now follows the target structure: hero, immediate 20-minute journey loop, world route and delayed reference/boundary board. Entire program is NOT production-complete.

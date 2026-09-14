@@ -2672,7 +2672,7 @@ export const gameExperiencePillars: GameExperiencePillar[] = [
     id: "action",
     title: "Chiến đấu có nhịp và chuyển động",
     tagline: "Action",
-    summary: "Side-scrolling combat đặt walk, run, jump, dash, combo và skill vào cùng một nhịp đọc rõ ràng, từ Shadow Slime đến boss và world event."
+    summary: "Side-scrolling combat đặt walk, run, jump, dash, combo và skill vào cùng một nhịp đọc rõ ràng, từ Slime Bóng Tối đến boss và world event."
   },
   {
     id: "progression",
@@ -2770,7 +2770,7 @@ export const worldRouteStops: WorldRouteStop[] = [
     order: "03",
     name: "Linh Lâm",
     kind: "field",
-    summary: "Vùng ngoài thành nơi Shadow Slime, linh khí bất ổn và dấu vết đầu tiên của Âm Giới bắt đầu xuất hiện.",
+    summary: "Vùng ngoài thành nơi Slime Bóng Tối, linh khí bất ổn và dấu vết đầu tiên của Âm Giới bắt đầu xuất hiện.",
     mood: "Rừng ẩm, linh quang xanh ngọc xen những vùng tím bất thường; đẹp nhưng không còn hoàn toàn thuộc về thế giới này.",
     playerPromise: "Có không gian để side-scrolling action, exploration và đọc môi trường cùng tồn tại trong một nhịp chơi.",
     signatureActivity: "Theo dấu linh khí, xử lý quái ngoài thành, khám phá lối phụ và nhận các mảnh thông tin dẫn sâu hơn vào bí ẩn portal.",
@@ -2802,7 +2802,7 @@ export const narrativeChapters: NarrativeChapter[] = [
   {
     chapter: "Chương 01",
     title: "Vết Nứt Đông Môn",
-    hook: "Linh khí ngoài thành dao động, Shadow Slime xuất hiện và một mảnh Âm Giới đặt câu hỏi đầu tiên.",
+    hook: "Linh khí ngoài thành dao động, Slime Bóng Tối xuất hiện và một mảnh Âm Giới đặt câu hỏi đầu tiên.",
     playerRole: "Rời Linh Thành, điều tra Linh Lâm và trở về với bằng chứng rằng sự bất thường không còn là chuyện nhỏ.",
     openingImage: "Một buổi tối bình thường ở Đông Môn bị cắt đôi bởi vệt tím trên bầu trời; linh phù quanh cổng thành lần lượt sáng lên.",
     stakes: "Nếu đây không phải hiện tượng đơn lẻ, tuyến ngoài thành — và những người vẫn sống nhờ nó — đang là lớp phòng thủ đầu tiên của Linh Thành.",

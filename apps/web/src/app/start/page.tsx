@@ -1,5 +1,5 @@
 import { SectionHeading, Stack, StatusBadge } from "@lgo-web/ui";
-import { ClassPathGrid, WorldRouteJourney } from "../../components/PublicGameExperienceSections";
+import { CinematicWorldScene, ClassPathGrid, WorldRouteJourney } from "../../components/PublicGameExperienceSections";
 import { PublicPlayerHero } from "../../components/PublicPlayerHero";
 import { WebAppShell } from "../../components/WebAppShell";
 
@@ -9,21 +9,21 @@ export const metadata = { title: "Bắt đầu" };
 const onboardingScreenshots = [
   {
     src: "/game-art/onboarding/dong-mon-01-initial.png",
-    alt: "Dong Mon onboarding initial spawn screenshot",
-    title: "01 · Spawn tại Đông Môn",
-    caption: "Ảnh runtime từ LinhGioiOnline dùng làm reference đọc route, không phải public build/download claim."
+    alt: "Ảnh xuất hiện ban đầu tại Đông Môn",
+    title: "01 · Xuất hiện tại Đông Môn",
+    caption: "Ảnh runtime từ LinhGioiOnline dùng làm tham chiếu đọc tuyến, không phải cam kết bản tải công khai."
   },
   {
     src: "/game-art/onboarding/dong-mon-02-gate-focus.png",
-    alt: "Dong Mon onboarding gate focus screenshot",
-    title: "02 · Focus vào Người Giữ Cổng",
+    alt: "Ảnh nhấn vào cổng Đông Môn",
+    title: "02 · Chú ý Người Giữ Cổng",
     caption: "Khung hình cho thấy điểm neo hướng dẫn đầu tiên trước khi người chơi kỳ vọng hệ thống account thật."
   },
   {
     src: "/game-art/onboarding/dong-mon-03-dialogue.png",
-    alt: "Dong Mon onboarding dialogue screenshot",
-    title: "03 · Dialogue hướng dẫn",
-    caption: "Dialogue là bằng chứng visual cho tutorial flow; nội dung web vẫn là static/demo khi chưa có accepted backend contract."
+    alt: "Ảnh hội thoại hướng dẫn tại Đông Môn",
+    title: "03 · Hội thoại hướng dẫn",
+    caption: "Hội thoại là bằng chứng hình ảnh cho tuyến hướng dẫn; nội dung web vẫn là tham chiếu tĩnh khi chưa có backend contract được chấp nhận."
   }
 ];
 
@@ -32,15 +32,17 @@ export default function StartPage() {
     <WebAppShell>
       <Stack className="lgo-player-facing-stack lgo-startpage-stack">
         <PublicPlayerHero
-          className="lgo-start-hero"
+          className="lgo-start-hero lgo-cinematic-hero"
+          copyClassName="lgo-cinematic-copy"
+          visual={<CinematicWorldScene compact />}
           badge="Người Thức Tỉnh"
           badgeTone="spirit"
           kicker="BẮT ĐẦU TẠI LINH THÀNH — ĐÔNG MÔN"
-          title="Học cách di chuyển. Chọn nhịp chiến đấu. Mở cánh cửa vào thành."
-          lead="Tutorial đưa bạn tới Người Giữ Cổng, Bia Luyện, walk/run/jump/dash, skill class và Shadow Slime trước khi mở Linh Thành. Nó dạy bằng hành động thay vì dồn tất cả hệ thống vào một màn hình hướng dẫn."
+          title="Bắt đầu"
+          lead="Học cách di chuyển, làm quen với Người Giữ Cổng, vượt qua Bia Luyện, thử kỹ năng Lộ và đối mặt Slime Bóng Tối trước khi mở lối vào Linh Thành."
           detail={(
-            <div className="lgo-onboarding-steps" aria-label="Tutorial flow">
-              <span>01 · Người Giữ Cổng</span><span>02 · Bia Luyện</span><span>03 · Move / Jump / Dash</span><span>04 · Class Skill</span><span>05 · Shadow Slime</span><span>06 · Mở Linh Thành</span>
+            <div className="lgo-onboarding-steps" aria-label="Tuyến hướng dẫn tân thủ">
+              <span>01 · Người Giữ Cổng</span><span>02 · Bia Luyện</span><span>03 · Di chuyển / Nhảy / Lướt nhanh</span><span>04 · Kỹ năng Lộ</span><span>05 · Slime Bóng Tối</span><span>06 · Mở Linh Thành</span>
             </div>
           )}
           actions={[
@@ -50,25 +52,25 @@ export default function StartPage() {
           ]}
         />
 
-        <figure className="lgo-start-design-board lgo-panel" aria-label="Start tutorial gameplay loop reference art">
+        <figure className="lgo-start-design-board lgo-panel" aria-label="Bảng tham chiếu tuyến bắt đầu">
           <img
             src="/game-art/design-boards/start-tutorial-gameplay-loop.svg"
-            alt="Start tutorial gameplay loop board"
+            alt="Bảng tuyến hướng dẫn bắt đầu"
             loading="eager"
           />
           <figcaption>
-            <StatusBadge tone="spirit">Game reference art</StatusBadge>
-            <strong>Start route dạy bằng vòng chơi nhỏ, không mở download hay account backend.</strong>
+            <StatusBadge tone="spirit">Ảnh tham chiếu trò chơi</StatusBadge>
+            <strong>Tuyến bắt đầu dạy bằng vòng chơi nhỏ, không mở tải game hay backend tài khoản.</strong>
             <span>
-              Board này dùng visual thật từ LinhGioiOnline để nối tutorial, class skill, Shadow Slime và cổng Linh Thành
-              thành một hành trình đọc rõ trước khi có public build, login hoặc entitlement flow.
+              Board này dùng visual thật từ LinhGioiOnline để nối hướng dẫn, kỹ năng Lộ, Slime Bóng Tối và cổng Linh Thành
+              thành một hành trình đọc rõ trước khi có bản tải công khai, đăng nhập hoặc quyền truy cập thật.
             </span>
           </figcaption>
         </figure>
 
-        <section className="lgo-start-real-screenshot-panel lgo-panel" aria-label="Dong Mon onboarding real screenshots">
-          <SectionHeading eyebrow="Real onboarding screenshots" title="Ảnh thật từ tutorial Đông Môn">
-            Ba khung hình được copy từ LinhGioiOnline để web có cảm giác sản phẩm thật hơn, nhưng vẫn chỉ là visual reference tĩnh khi chưa có public build, login hoặc entitlement backend.
+        <section className="lgo-start-real-screenshot-panel lgo-panel" aria-label="Ảnh thật tuyến hướng dẫn Đông Môn">
+          <SectionHeading eyebrow="Ảnh hướng dẫn thật" title="Ảnh thật từ tutorial Đông Môn">
+            Ba khung hình được copy từ LinhGioiOnline để web có cảm giác sản phẩm thật hơn, nhưng vẫn chỉ là tham chiếu hình ảnh tĩnh khi chưa có bản tải công khai, đăng nhập hoặc backend quyền truy cập.
           </SectionHeading>
           <div className="lgo-start-real-screenshot-grid">
             {onboardingScreenshots.map((screenshot) => (

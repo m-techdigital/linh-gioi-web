@@ -4086,41 +4086,98 @@ h3 {
 }
 
 /* WEB v1.124 start detailed design target density */
+/* WEB v1.139 start Vietnamese design match */
+.lgo-startpage-stack .lgo-start-hero.lgo-cinematic-hero {
+  border-color: rgba(245, 200, 107, .22);
+  background:
+    radial-gradient(circle at 74% 25%, rgba(49, 216, 232, .18), transparent 24rem),
+    radial-gradient(circle at 22% 78%, rgba(245, 200, 107, .10), transparent 22rem),
+    linear-gradient(145deg, rgba(9, 22, 38, .96), rgba(5, 13, 25, .92));
+}
+
+.lgo-startpage-stack .lgo-onboarding-steps {
+  position: relative;
+  z-index: 2;
+}
+
+.lgo-startpage-stack .lgo-onboarding-steps span {
+  border-color: rgba(245, 200, 107, .22);
+  background: rgba(5, 14, 25, .68);
+}
+
+.lgo-startpage-stack .lgo-onboarding-steps span:first-child {
+  border-color: rgba(53, 198, 163, .62);
+  color: rgba(215, 255, 240, .94);
+  box-shadow: 0 0 22px rgba(53, 198, 163, .14);
+}
+
 @media (min-width: 981px) {
   .lgo-startpage-stack {
-    gap: clamp(1.1rem, 2.4vw, 2.2rem);
+    gap: clamp(1rem, 1.8vw, 1.65rem);
   }
 
   .lgo-startpage-stack .lgo-start-hero {
-    padding: clamp(1.45rem, 3vw, 2.55rem);
+    grid-template-columns: minmax(0, .82fr) minmax(420px, 1fr);
+    gap: clamp(1.15rem, 2vw, 2rem);
+    min-height: 420px;
+    padding: clamp(1rem, 1.7vw, 1.65rem);
+  }
+
+  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-scene {
+    min-height: 300px;
+    align-self: stretch;
+  }
+
+  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy {
+    display: grid;
+    align-content: center;
+    gap: .55rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy h1,
+  .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy p {
+    margin: 0;
   }
 
   .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy h1 {
-    max-width: 17ch;
-    font-size: clamp(2.45rem, 3.55vw, 3.45rem);
-    line-height: .94;
+    max-width: 10ch;
+    font-size: clamp(2.65rem, 4.45vw, 4.2rem);
+    line-height: .9;
   }
 
   .lgo-startpage-stack .lgo-start-hero .lgo-cinematic-copy p {
-    max-width: 70ch;
-    font-size: clamp(.9rem, 1vw, 1rem);
-    line-height: 1.48;
+    max-width: 62ch;
+    font-size: clamp(.88rem, .98vw, 1rem);
+    line-height: 1.45;
   }
 
   .lgo-startpage-stack .lgo-onboarding-steps {
-    margin-top: 1rem;
-    gap: .45rem;
+    margin-top: .25rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .42rem;
   }
 
   .lgo-startpage-stack .lgo-onboarding-steps span {
-    padding: .45rem .65rem;
-    font-size: .72rem;
+    padding: .42rem .56rem;
+    font-size: .69rem;
+    white-space: nowrap;
+  }
+
+  .lgo-startpage-stack .lgo-start-hero .lgo-hero-actions {
+    margin-top: .15rem;
+    gap: .48rem;
+  }
+
+  .lgo-startpage-stack .lgo-start-hero .lgo-link-button {
+    padding: .62rem .8rem;
+    font-size: .84rem;
   }
 
   .lgo-startpage-stack .lgo-start-design-board {
-    grid-template-columns: minmax(0, 1.25fr) minmax(15rem, .75fr);
-    gap: clamp(1rem, 2vw, 1.55rem);
-    padding: clamp(.85rem, 1.2vw, 1.05rem);
+    grid-template-columns: minmax(0, 1.32fr) minmax(15rem, .68fr);
+    gap: clamp(.9rem, 1.5vw, 1.25rem);
+    padding: clamp(.75rem, 1vw, .95rem);
   }
 
   .lgo-startpage-stack .lgo-start-design-board img {

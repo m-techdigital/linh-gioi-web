@@ -31,9 +31,9 @@ def check_target() -> None:
 def check_tests_docs() -> None:
     for rel in ["tests/e2e/fe-start-design-target-density-v1124.spec.ts", "docs/execution/specs/WEB-FE-START-DESIGN-TARGET-DENSITY-v1.124.md", "LGO-WEB-FE-START-DESIGN-TARGET-DENSITY-REPORT-v1.124.md", "HANDOFF-LGO-WEB-FE-START-DESIGN-TARGET-DENSITY-v1.124.md"]: require_file(rel)
     require_text("tests/e2e/fe-start-design-target-density-v1124.spec.ts", ["start design target density", "Public Start", "start-detailed-design-target-v1124.png", "desktop start tutorial board enters first fold", "desktop start tutorial board visible in first fold", "desktop real screenshot panel starts near target board", "start page h1 follows target scale"])
-    require_text("apps/web/src/app/start/page.tsx", ["lgo-startpage-stack", "lgo-start-design-board", "lgo-start-real-screenshot-panel", "ClassPathGrid", "WorldRouteJourney"])
+    require_text("apps/web/src/app/start/page.tsx", ["lgo-startpage-stack", "lgo-start-design-board", "lgo-start-real-screenshot-panel", "CinematicWorldScene", "ClassPathGrid", "WorldRouteJourney"])
     require_text("apps/web/src/app/globals.css", ["WEB v1.124 start detailed design target density", ".lgo-startpage-stack", ".lgo-start-design-board", ".lgo-start-real-screenshot-panel"])
-    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_START_TARGET", "Start detailed design target", "start-detailed-design-target-v1124.png", "Public Start", "pathname === \"/start\""])
+    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_START_TARGET", "Thiết kế chi tiết bắt đầu", "start-detailed-design-target-v1124.png", "Public Start", "pathname === \"/start\""])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Start", "start-detailed-design-target-v1124.png", "WEB-FE-START-DETAILED-DESIGN-TARGET-v1.124.png", "Design Target First"])
     registry = read("docs/design/DESIGN-TARGET-REGISTRY.md")
     if "| Public Core | `apps/web/public/design-reference/design-atlas-public-core-v195.png` | `/start`" in registry: fail("docs/design/DESIGN-TARGET-REGISTRY.md: /start should not remain under broad Public Core applies-to list")

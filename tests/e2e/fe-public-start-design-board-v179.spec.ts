@@ -22,7 +22,7 @@ async function collectStartBoardMetrics(page: Page): Promise<StartBoardMetrics> 
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const image = document.querySelector<HTMLImageElement>('img[alt="Start tutorial gameplay loop board"]');
+    const image = document.querySelector<HTMLImageElement>('img[alt="Bảng tuyến hướng dẫn bắt đầu"]');
     const caption = image?.closest("figure")?.querySelector("figcaption");
     return {
       pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -41,8 +41,8 @@ async function collectStartBoardMetrics(page: Page): Promise<StartBoardMetrics> 
 test.describe("public start design board", () => {
   test("/start renders the tutorial gameplay-loop visual without mobile overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/start`);
-    await expect(page.getByRole("heading", { name: "Học cách di chuyển. Chọn nhịp chiến đấu. Mở cánh cửa vào thành." })).toBeVisible();
-    await expect(page.getByRole("img", { name: "Start tutorial gameplay loop board" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Bắt đầu" })).toBeVisible();
+    await expect(page.getByRole("img", { name: "Bảng tuyến hướng dẫn bắt đầu" })).toBeVisible();
 
     const metrics = await collectStartBoardMetrics(page);
     expect(metrics.board, "start board metrics").not.toBeNull();

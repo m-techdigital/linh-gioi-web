@@ -34,7 +34,7 @@ const PUBLIC_JOURNEY_TARGET = {
 };
 
 const PUBLIC_START_TARGET = {
-  label: "Start detailed design target",
+  label: "Thiết kế chi tiết bắt đầu",
   href: "/design-reference/start-detailed-design-target-v1124.png",
   scope: "Public Start"
 };

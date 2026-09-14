@@ -5,15 +5,15 @@ const web = process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
 
 const screenshots = [
   {
-    alt: "Dong Mon onboarding initial spawn screenshot",
+    alt: "Ảnh xuất hiện ban đầu tại Đông Môn",
     src: "/game-art/onboarding/dong-mon-01-initial.png",
   },
   {
-    alt: "Dong Mon onboarding gate focus screenshot",
+    alt: "Ảnh nhấn vào cổng Đông Môn",
     src: "/game-art/onboarding/dong-mon-02-gate-focus.png",
   },
   {
-    alt: "Dong Mon onboarding dialogue screenshot",
+    alt: "Ảnh hội thoại hướng dẫn tại Đông Môn",
     src: "/game-art/onboarding/dong-mon-03-dialogue.png",
   },
 ];
@@ -36,7 +36,7 @@ async function collectGalleryMetrics(page: Page): Promise<GalleryMetrics> {
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const gallery = document.querySelector<HTMLElement>('[aria-label="Dong Mon onboarding real screenshots"]');
+    const gallery = document.querySelector<HTMLElement>('[aria-label="Ảnh thật tuyến hướng dẫn Đông Môn"]');
     const cards = Array.from(gallery?.querySelectorAll<HTMLElement>("figure") ?? []);
     const captions = Array.from(gallery?.querySelectorAll<HTMLElement>("figcaption") ?? []);
     const firstTop = cards[0]?.getBoundingClientRect().top ?? 0;

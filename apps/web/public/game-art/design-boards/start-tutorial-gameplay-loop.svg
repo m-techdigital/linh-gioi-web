@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
-  <title id="title">Core Gameplay Loop</title>
-  <desc id="desc">Prepared M1 offline combat loop reference</desc>
+  <title id="title">Vòng chơi hướng dẫn</title>
+  <desc id="desc">Tham chiếu tuyến Đông Môn tĩnh trước backend</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#121829"/>
@@ -28,21 +28,21 @@
     </style>
   </defs>
   <rect width="1440" height="900" fill="url(#bg)"/>
-  <text x="72" y="86" class="title">Core Gameplay Loop</text>
-  <text x="72" y="124" class="subtitle">Prepared M1 offline combat loop reference</text>
+  <text x="72" y="86" class="title">Vòng chơi hướng dẫn</text>
+  <text x="72" y="124" class="subtitle">Tham chiếu tuyến Đông Môn tĩnh trước backend</text>
 
   <circle cx="720" cy="440" r="250" fill="none" stroke="#4fd1c5" stroke-width="8" stroke-dasharray="18 16"/>
-  <rect x="600" y="160" width="240" height="92" class="card"/><text x="650" y="215" class="label">Explore</text>
-  <rect x="950" y="360" width="240" height="92" class="card2"/><text x="1015" y="415" class="label">Encounter</text>
-  <rect x="600" y="630" width="240" height="92" class="card3"/><text x="657" y="685" class="label">Reward</text>
-  <rect x="250" y="360" width="240" height="92" class="card"/><text x="305" y="415" class="label">Recover</text>
-  <text x="565" y="410" class="small">attack</text><text x="826" y="410" class="small">resolve</text><text x="620" y="552" class="small">loot/xp placeholder</text><text x="430" y="410" class="small">safe state</text>
+  <rect x="600" y="160" width="240" height="92" class="card"/><text x="650" y="215" class="label">Khám phá</text>
+  <rect x="950" y="360" width="240" height="92" class="card2"/><text x="1015" y="415" class="label">Chạm trán</text>
+  <rect x="600" y="630" width="240" height="92" class="card3"/><text x="657" y="685" class="label">Nhận thưởng</text>
+  <rect x="250" y="360" width="240" height="92" class="card"/><text x="305" y="415" class="label">Hồi phục</text>
+  <text x="565" y="410" class="small">ra đòn</text><text x="826" y="410" class="small">kết thúc</text><text x="620" y="552" class="small">phần thưởng mẫu</text><text x="430" y="410" class="small">trạng thái an toàn</text>
   <path d="M810 245 C930 270 1000 315 1040 360" fill="none" class="line"/>
   <path d="M1030 452 C990 560 910 625 830 655" fill="none" class="line"/>
   <path d="M610 675 C500 635 420 555 380 452" fill="none" class="line"/>
   <path d="M380 360 C420 260 515 205 600 195" fill="none" class="line"/>
   <rect x="425" y="360" width="590" height="128" class="muted"/>
-  <text x="482" y="410" class="label">M1 target</text><text x="482" y="445" class="small">One deterministic offline encounter with visible combat state and no persistence.</text>
+  <text x="482" y="410" class="label">Mục tiêu M1</text><text x="482" y="445" class="small">Một trận tĩnh có trạng thái chiến đấu rõ, không lưu dữ liệu.</text>
 
-  <text x="72" y="854" class="tiny">Linh Giới Online — planning/reference SVG, non-production art, generated for execution governance.</text>
+  <text x="72" y="854" class="tiny">Linh Giới Online — SVG tham chiếu quản trị, không phải art sản phẩm cuối.</text>
 </svg>
