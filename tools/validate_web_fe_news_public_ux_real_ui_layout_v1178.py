@@ -84,15 +84,15 @@ def main() -> int:
 
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-PUBLIC-UX-REAL-UI-LAYOUT-v1.178 WEB_CLOSED',
-        'Select `/news/world-gameplay-loop-depth-started`',
+        'Select `/news/player-safety-support-faq-polish-started`',
         '/tmp/news-public-ux-desktop-v1178.png',
         '/tmp/news-public-ux-mobile-v1178.png',
         'Real Browser UI/UX Layout First',
         'Base First',
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.189',
-        'Current FE scope: select `/news/world-gameplay-loop-depth-started`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.190',
+        'Current FE scope: select `/news/player-safety-support-faq-polish-started`',
         'Real Browser UI/UX Layout First',
         'Base UI/UX Layout',
     ])

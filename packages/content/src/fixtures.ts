@@ -728,9 +728,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "world-gameplay-loop-depth-started",
     category: "news",
-    title: "World loop và kỳ vọng gameplay được làm rõ",
-    summary: "WEB v1.13 làm rõ hành trình Spirit Gate, Gate Keeper, Training Stone, route đọc tiếp và boundary gameplay để người chơi không nhầm content web với combat release.",
-    body: "Bản cập nhật này tập trung vào nội dung game public: loop người chơi mới, kỳ vọng hiện tại, đường nối từ guide sang world và các scope boundary trước khi có combat/economy/backend contract thật.",
+    title: "World loop và kỳ vọng gameplay rõ hơn",
+    summary: "WEB v1.13 làm rõ hành trình Spirit Gate, Gate Keeper, Training Stone, route đọc tiếp và ranh giới gameplay để người chơi không nhầm nội dung web với combat release.",
+    body: "Bản cập nhật này tập trung vào nội dung game public: vòng lặp người chơi mới, kỳ vọng hiện tại, đường nối từ guide sang world và ranh giới phạm vi trước khi có combat, economy hoặc backend contract thật.",
     publishedAt: "2026-09-05T15:20:00.000Z",
     status: "published",
     featured: true,
@@ -1099,16 +1099,16 @@ export const contentDetailSections: ContentDetailSection[] = [
   {
     slug: "world-gameplay-loop-depth-started",
     heading: "Gameplay loop được mô tả theo cảm giác người chơi, không theo log tooling",
-    body: "WEB v1.13 diễn giải hành trình từ Spirit Gate tới Gate Keeper và Training Stone như một loop đọc/hiểu/chuẩn bị feedback cho người mới.",
-    playerImpact: "Người chơi hiểu bước hiện tại là guided world loop explanation, chưa phải combat release, economy release hoặc MMO live service.",
-    nonClaim: "No combat damage, HP, loot, inventory/economy, quest DB or live world server claim."
+    body: "WEB v1.13 diễn giải hành trình từ Spirit Gate tới Gate Keeper và Training Stone như một vòng đọc, hiểu và chuẩn bị phản hồi cho người mới.",
+    playerImpact: "Người chơi hiểu bước hiện tại là giải thích vòng lặp thế giới có hướng dẫn, chưa phải phát hành chiến đấu, kinh tế hoặc dịch vụ MMO live.",
+    nonClaim: "Không có sát thương chiến đấu, máu nhân vật, vật phẩm rơi, túi đồ/kinh tế, cơ sở dữ liệu nhiệm vụ hoặc claim máy chủ thế giới live."
   },
   {
     slug: "world-gameplay-loop-depth-started",
     heading: "Route-level copy nối guide, world và trust pages",
-    body: "Start, Game, Guides, Download Trust, Status và Support được nối bằng nội dung giải thích loop và boundary để người chơi biết đọc gì tiếp theo.",
-    playerImpact: "Người mới không bị đưa thẳng tới download/account; họ đi qua world loop, guide và release trust trước.",
-    nonClaim: "No fake download CTA, no production auth, no backend recommendation engine."
+    body: "Start, Game, Guides, Download Trust, Status và Support được nối bằng nội dung giải thích vòng lặp và boundary để người chơi biết đọc gì tiếp theo.",
+    playerImpact: "Người mới không bị đưa thẳng tới tải game hoặc tài khoản; họ đi qua world loop, guide và release trust trước.",
+    nonClaim: "Không có CTA tải game giả, không có xác thực vận hành và không có hệ thống gợi ý backend."
   },
   {
     slug: "player-trust-release-narrative-started",

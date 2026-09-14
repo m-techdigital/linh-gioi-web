@@ -49,8 +49,8 @@ def check_tests_docs() -> None:
     for rel in ["docs/execution/specs/WEB-FE-SUPPORT-HELP-REAL-UI-LAYOUT-v1.147.md", "LGO-WEB-FE-SUPPORT-HELP-REAL-UI-LAYOUT-REPORT-v1.147.md", "HANDOFF-LGO-WEB-FE-SUPPORT-HELP-REAL-UI-LAYOUT-v1.147.md"]:
         require_file(rel)
         require_text(rel, ["WEB-FE-SUPPORT-HELP-REAL-UI-LAYOUT-v1.147", "WEB_CLOSED", "/support/help", "Real Browser UI/UX Layout First", "Base First", "service-layout.css", "browser/e2e", "screenshot", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
-    require_text("docs/execution/WEB-PROJECT-STATE.md", ["WEB-FE-SUPPORT-HELP-REAL-UI-LAYOUT-v1.147 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.189", "Select `/community` as the next single active page"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.189", "Current FE scope: select `/news/world-gameplay-loop-depth-started`", "Real Browser UI/UX Layout First is Priority #1", "Base UI/UX Layout", "CSS must be managed by owner/role"])
+    require_text("docs/execution/WEB-PROJECT-STATE.md", ["WEB-FE-SUPPORT-HELP-REAL-UI-LAYOUT-v1.147 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.190", "Select `/community` as the next single active page"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.190", "Current FE scope: select `/news/player-safety-support-faq-polish-started`", "Real Browser UI/UX Layout First is Priority #1", "Base UI/UX Layout", "CSS must be managed by owner/role"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-SUPPORT-HELP-REAL-UI-LAYOUT-v1.147 | WEB-FE | WEB_CLOSED |"])
 
 def main() -> int:
