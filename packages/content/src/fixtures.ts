@@ -879,9 +879,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "closed-tester-information-pack-guide",
     category: "guides",
-    title: "Closed tester information pack guide",
-    summary: "Cách đọc tester checklist, safe feedback template, known limitations và device report fields mà không hiểu nhầm là signup form.",
-    body: "Tester pack là static guidance. Trang giúp tester tương lai chuẩn bị feedback và thông tin thiết bị an toàn, tránh password, token, dữ liệu thanh toán, private account data và sensitive personal data. Trang này không mở registration, không bảo đảm access và không bật account entitlement.",
+    title: "Chuẩn bị gói thông tin closed tester",
+    summary: "Guide giúp người chơi đọc checklist tester, mẫu feedback an toàn, giới hạn đã biết và thông tin thiết bị cần chuẩn bị mà không hiểu nhầm thành form đăng ký.",
+    body: "Bắt đầu từ gói thông tin tester để biết nên ghi nhận bước tái hiện, mức độ lỗi, thiết bị và giới hạn hiện tại như thế nào. Trang này là nội dung public tĩnh, không mở đăng ký, không cấp quyền test và không thu mật khẩu, token hoặc dữ liệu nhạy cảm.",
     publishedAt: "2026-09-05T23:05:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -1103,34 +1103,34 @@ export const guideDetailSteps: GuideDetailStep[] = [
   {
     slug: "closed-tester-information-pack-guide",
     step: "01",
-    title: "Đọc tester pack như hướng dẫn chuẩn bị",
-    action: "Mở /release/tester-pack để xem checklist, feedback template, known limitations và device report template.",
-    expectedResult: "Người chơi hiểu đây là static guidance, không phải form đăng ký hoặc invite.",
-    blockedScope: "No live tester intake, no open registration, no entitlement automation."
+    title: "Đọc tester pack như checklist chuẩn bị",
+    action: "Mở /release/tester-pack để xem checklist, mẫu feedback an toàn, giới hạn đã biết và trường thông tin thiết bị cần chuẩn bị.",
+    expectedResult: "Người chơi hiểu đây là hướng dẫn tĩnh, không phải form đăng ký hoặc lời mời test.",
+    blockedScope: "Chưa có tiếp nhận tester live, đăng ký mở hoặc tự động cấp quyền."
   },
   {
     slug: "closed-tester-information-pack-guide",
     step: "02",
-    title: "Chuẩn bị feedback không chứa dữ liệu nhạy cảm",
-    action: "Dùng safe feedback template: summary, steps, expected/actual và severity gợi ý.",
-    expectedResult: "Feedback dễ đọc hơn mà không thu password, token, dữ liệu thanh toán hoặc private account data.",
-    blockedScope: "No secure ticket inbox, no account lookup, no collection backend."
+    title: "Giữ feedback an toàn",
+    action: "Dùng mẫu feedback an toàn: tóm tắt, bước tái hiện, kết quả mong đợi/thực tế và mức độ lỗi gợi ý.",
+    expectedResult: "Feedback dễ đọc hơn mà không thu mật khẩu, token, dữ liệu thanh toán hoặc dữ liệu tài khoản riêng.",
+    blockedScope: "Chưa có hộp ticket bảo mật, tra cứu tài khoản hoặc backend thu thập."
   },
   {
     slug: "closed-tester-information-pack-guide",
     step: "03",
-    title: "Đối chiếu known limitations",
-    action: "Đọc limitation notes để biết public build, tester access, support và gameplay scope đang ở trạng thái nào.",
-    expectedResult: "Tester tương lai không kỳ vọng open beta, reward/economy hoặc combat/live world promise.",
-    blockedScope: "No public build, no reward/economy promise, no live world claim."
+    title: "Đối chiếu giới hạn đã biết",
+    action: "Đọc ghi chú giới hạn để biết bản build công khai, quyền tester, hỗ trợ và phạm vi gameplay đang ở trạng thái nào.",
+    expectedResult: "Tester tương lai không kỳ vọng thử nghiệm mở, phần thưởng/kinh tế hoặc cam kết chiến đấu/thế giới live.",
+    blockedScope: "Chưa có bản build công khai, cam kết phần thưởng/kinh tế hoặc thế giới live."
   },
   {
     slug: "closed-tester-information-pack-guide",
     step: "04",
-    title: "Quay lại Release Readiness trước mọi CTA",
-    action: "Đi từ /release/tester-pack về /release/readiness, /download/trust và /support/safety để kiểm tra gate còn blocked.",
-    expectedResult: "Người chơi hiểu cần owner-approved channel trước khi gửi feedback thật.",
-    blockedScope: "No owner sign-off bypass, no guaranteed tester slot, no production support SLA."
+    title: "Quay lại readiness trước mọi CTA",
+    action: "Đi từ /release/tester-pack về /release/readiness, /download/trust và /support/safety để kiểm tra cổng nào còn khóa.",
+    expectedResult: "Người chơi hiểu cần kênh được owner phê duyệt trước khi gửi feedback thật.",
+    blockedScope: "Chưa có bỏ qua phê duyệt owner, suất tester bảo đảm hoặc SLA hỗ trợ production."
   },
   {
     slug: "player-trust-release-guide",

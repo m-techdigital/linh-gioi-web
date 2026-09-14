@@ -1,3 +1,18 @@
+Current phase: WEB-FE-GUIDES-CLOSED-TESTER-INFORMATION-PACK-REAL-UI-LAYOUT-v1.172 WEB_CLOSED.
+
+Current decision: v1.172 closed the active `/guides/closed-tester-information-pack-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Closed Tester Information Pack guide, tester pack → feedback an toàn → giới hạn đã biết → readiness gate flow, Vietnamese public copy and shared Base First guide-flow layout. Entire program is NOT production-complete.
+
+- v1.172 did not create a design batch because the existing guide-detail direction was sufficient for comparison after minimal current-page scenario correction in the rendered page.
+- v1.172 browser baseline/e2e showed generic guide badge, English title/copy labels, missing compact guide-flow classes and stale tester-pack CTA copy.
+- v1.172 replaced the stale first-flow with Vietnamese tester pack → feedback an toàn → giới hạn đã biết → readiness gate expectations and four compact closed tester steps.
+- v1.172 reused the shared compact guide-flow base in `packages/ui/src/service-layout.css`, added only the current page closed-tester-pack visual theme there, and corrected repeated tester CTA copy in its shared component owner while keeping current page CSS out of `apps/web/src/app/globals.css`.
+- v1.172 final browser/e2e metrics: desktop hero bottom 424.38px, detail top 436.84px, first step top 688.23px, world CTA top 861.22px, route CTA top 1013.27px, action band top 2160.52px, scrollHeight 2877px, h1 42.88px, 4 desktop columns, overflow 0; mobile hero bottom 568.38px, detail top 578.28px, first step top 740.72px, world CTA top 1274.55px, route CTA top 1537.14px, action band top 3392.91px, scrollHeight 4422px, h1 27.52px, overflow 0.
+- v1.172 evidence: browser/e2e desktop/mobile v1.172; source validator; Web/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/guides-closed-tester-information-pack-desktop-v1172.png` and `/tmp/guides-closed-tester-information-pack-mobile-v1172.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.173. Select `/guides/faq-search-helpfulness-guide` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-GUIDES-RELEASE-READINESS-HUB-REAL-UI-LAYOUT-v1.171 WEB_CLOSED.
 
 Current decision: v1.171 closed the active `/guides/release-readiness-hub-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Release Readiness Hub guide, Sẵn sàng phát hành → cổng phê duyệt → Tải game/Trạng thái/Hỗ trợ → closed test có điều kiện flow, Vietnamese public copy and shared Base First guide-flow layout. Entire program is NOT production-complete.
