@@ -8,7 +8,7 @@ export const metadata = { title: "Hành trình người chơi" };
 export default function JourneyPage() {
   return (
     <WebAppShell>
-      <Stack className="lgo-player-facing-stack">
+      <Stack className="lgo-player-facing-stack lgo-journeypage-stack">
         <PublicPlayerHero
           className="lgo-journey-hero"
           badge="Player journey"
