@@ -82,6 +82,9 @@ Base First is mandatory before adding or changing FE/UI layout. Reusable UI/UX l
 
 For every FE/UI slice, check similar pages and shared package owners before editing the route. If two pages need the same shell, hero, proof board, card grid, route map, CTA, status badge, form, table, focus pattern, responsive density, or CSS rhythm, create or extend a base class/component first and let the page consume it. A page-local class may only compose the shared base or express a truly route-specific difference. Do not continue implementation while a duplicate UI/UX Layout pattern is being built separately.
 
+
+Mandatory stop condition: if implementation starts creating a layout, component, interaction state, card pattern, board pattern, CTA pattern, responsive spacing rule, typography scale, or CSS block that looks similar to an existing page or will likely be reused by another page, stop page-local work and extract/extend the base first. The page may resume only after the shared owner exists in `packages/ui` or `packages/design-tokens`, or the handoff records a concrete reason that the pattern is truly one-off. This rule overrides convenience, speed, and page-local iteration.
+
 ## CSS Ownership and File-Size rule
 
 CSS must be managed by owner and role. Theme primitives and variables belong in `packages/design-tokens`; reusable component/layout styles belong with `packages/ui`; app-level route composition may only keep thin scoped selectors required by the current page. Do not keep appending repeated page-specific blocks to `apps/web/src/app/globals.css` when a pattern is reusable or already exists elsewhere. If a CSS block starts duplicating another page or growing a route-specific pattern, extract or consolidate it into a base class/shared component before continuing. Validators and handoffs must record whether a page-local CSS addition is one-off or why it was not moved to base.
