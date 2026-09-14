@@ -2345,36 +2345,53 @@ export const playerTrustSignals: PlayerTrustSignal[] = [
 
 export const releaseNarrativeStages: ReleaseNarrativeStage[] = [
   {
-    stage: "Content-ready public web",
+    stage: "M0 — Sẵn sàng nội dung",
     visibility: "public",
-    playerMessage: "Website đã giúp người chơi hiểu game, world loop, download trust, support safety và roadmap.",
-    requiredProof: "Source validators, static build and route-level copy review.",
+    playerMessage: "Website đã giúp người chơi hiểu thế giới, vòng chơi, tin cậy tải game, hỗ trợ an toàn và roadmap.",
+    requiredProof: "Validator nguồn, static build và review copy theo từng route.",
     nextSafeRoute: "/start",
-    nonClaim: "No public build, no account portal, no production backend."
+    nonClaim: "Không claim build public, account portal hoặc backend production."
   },
   {
-    stage: "Closed-test preparation",
+    stage: "Kiểm tra tin cậy",
     visibility: "internal",
-    playerMessage: "Owner chuẩn bị artifact, checksum, known limitations, tester scope và support expectation.",
-    requiredProof: "Release package, SHA256, manifest, limitations, rollback note and owner approval.",
+    playerMessage: "Owner chuẩn bị gói build, SHA256, giới hạn đã biết, phạm vi tester và kỳ vọng hỗ trợ.",
+    requiredProof: "Gói phát hành, SHA256, manifest, giới hạn, ghi chú rollback và phê duyệt owner.",
     nextSafeRoute: "/download/trust",
-    nonClaim: "No public download, no open beta, no entitlement automation."
+    nonClaim: "Không tải công khai, không open beta, không tự động cấp quyền truy cập."
   },
   {
-    stage: "Limited closed test",
+    stage: "Điều kiện closed test",
     visibility: "blocked",
     playerMessage: "Chỉ mở khi có build được duyệt và kênh feedback an toàn; web chưa được tự bật CTA tham gia.",
-    requiredProof: "Accepted tester process, support intake and privacy/moderation boundaries.",
+    requiredProof: "Quy trình tester được duyệt, support intake và ranh giới privacy/moderation.",
     nextSafeRoute: "/support/safety",
-    nonClaim: "No live support ticket, no account recovery, no production SLA."
+    nonClaim: "Không ticket hỗ trợ live, không khôi phục tài khoản, không SLA production."
+  },
+
+  {
+    stage: "Contract backend",
+    visibility: "blocked",
+    playerMessage: "Dịch vụ, DB, giám sát và cảnh báo cần contract owner-approved trước khi web claim hệ thống thật.",
+    requiredProof: "Accepted Auth/API/DB/RBAC/audit contract, monitoring plan và rehearsal vận hành.",
+    nextSafeRoute: "/release/readiness",
+    nonClaim: "Không claim production auth, DB persistence hoặc entitlement automation."
   },
   {
-    stage: "Public download candidate",
+    stage: "Owner phê duyệt",
     visibility: "blocked",
-    playerMessage: "Public download chỉ xuất hiện khi release evidence đã đủ và status page ghi rõ giới hạn.",
-    requiredProof: "Public artifact, checksum, provenance, release note, known limitations, rollback/support plan and owner sign-off.",
+    playerMessage: "Owner phải xác nhận Download, Status, Support và Community cùng nói đúng trạng thái build.",
+    requiredProof: "Go / No-Go decision, risk assessment và sign-off bởi product owner.",
+    nextSafeRoute: "/roadmap",
+    nonClaim: "Không silent launch, không open beta copy, không bypass owner sign-off."
+  },
+  {
+    stage: "M1 — Closed test có điều kiện",
+    visibility: "blocked",
+    playerMessage: "Ứng viên tải công khai chỉ xuất hiện khi bằng chứng phát hành đã đủ và status page ghi rõ giới hạn.",
+    requiredProof: "Gói public, SHA256, nguồn gốc, release note, giới hạn đã biết, kế hoạch rollback/hỗ trợ và owner sign-off.",
     nextSafeRoute: "/status",
-    nonClaim: "No production launch, no payment/economy, no public game download artifact today."
+    nonClaim: "Không launch production, không payment/economy, hôm nay chưa có gói tải game công khai."
   }
 ];
 

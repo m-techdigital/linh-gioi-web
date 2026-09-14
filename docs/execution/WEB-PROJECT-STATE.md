@@ -1,3 +1,17 @@
+Current phase: WEB-FE-RELEASE-VIETNAMESE-DESIGN-MATCH-v1.142 WEB_CLOSED.
+
+Current decision: v1.142 closed the active `/release` page slice after refreshing the Public Release design target to Vietnamese and matching the implemented page in browser. `/release` now follows the target release-stage scenario more closely: compact Hành trình phát hành hero, M0 → M1 board, six proof-before-promise stage cards and delayed readiness follow-up. Entire program is NOT production-complete.
+
+- v1.142 refreshed `release-detailed-design-target-v1127.png` with built-in imagegen and mirrored it under `docs/design/reference`.
+- v1.142 translated Public Release target/page labels and the visible M0 → M1 design-board SVG to Vietnamese.
+- v1.142 reworked `/release` first-flow under `.lgo-releasepage-stack`: hero → M0/M1 board → proof stage cards → readiness follow-up.
+- v1.142 evidence: RED browser/e2e reproduced stale English target label; Playwright desktop/mobile `/release` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: 1280x720 hero 360.922, board top 356.125, board bottom 537.875, stages top 561.875, overflow 0.
+- Design must follow the Linh Giới game scenario and stay coherent with accepted targets; stale, English-heavy or scenario-wrong targets must be replaced before implementation.
+- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.143. Select `/release/readiness` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-DOWNLOAD-TRUST-VIETNAMESE-DESIGN-MATCH-v1.141 WEB_CLOSED.
 
 Current decision: v1.141 closed the active `/download/trust` page slice after refreshing the Public Download Trust design target to Vietnamese and matching the implemented page in browser. `/download/trust` now follows the target trust-gate scenario more closely: compact trust hero, immediate cổng kiểm tin tải game board, six Vietnamese release-evidence gates and delayed readiness/owner follow-up. Entire program is NOT production-complete.

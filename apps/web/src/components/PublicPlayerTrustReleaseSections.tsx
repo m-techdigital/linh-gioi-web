@@ -15,8 +15,8 @@ function toneForTrust(value: string) {
 export function PlayerTrustSignalBoard() {
   return (
     <section className="lgo-panel lgo-player-trust-board" aria-labelledby="player-trust-signal-heading">
-      <SectionHeading eyebrow="WEB v1.18 player trust" title="Niềm tin của người chơi bắt đầu từ proof-before-claim">
-        Player trust không phải một banner marketing. Mỗi câu hỏi về download, status, support hoặc closed test cần có câu trả lời thật và bằng chứng cần có trước khi claim.
+      <SectionHeading eyebrow="WEB v1.18 niềm tin người chơi" title="Niềm tin của người chơi bắt đầu từ bằng chứng trước claim">
+        Niềm tin không phải một banner marketing. Mỗi câu hỏi về tải game, trạng thái, hỗ trợ hoặc closed test cần có câu trả lời thật và bằng chứng trước khi claim.
       </SectionHeading>
       <Grid id="player-trust-signal-heading">
         {playerTrustSignals.map((signal, index) => (
@@ -35,9 +35,9 @@ export function PlayerTrustSignalBoard() {
 
 export function ReleaseNarrativeStageBoard() {
   return (
-    <section className="lgo-panel lgo-release-narrative-board" aria-labelledby="release-narrative-heading">
-      <SectionHeading eyebrow="Staged release narrative" title="Từ content-ready tới closed test phải đi qua từng stage rõ ràng">
-        Website public có thể trông đầy đủ hơn, nhưng release narrative phải nói rõ stage hiện tại, proof còn thiếu và route an toàn để đọc tiếp.
+    <section className="lgo-panel lgo-release-narrative-board lgo-release-narrative-stage-board" aria-labelledby="release-narrative-heading">
+      <SectionHeading eyebrow="Bằng chứng trước lời hứa" title="Hành trình phát hành: từ sẵn sàng nội dung tới closed test">
+        Website public có thể trông đầy đủ hơn, nhưng hành trình phát hành phải nói rõ stage hiện tại, bằng chứng còn thiếu và route an toàn để đọc tiếp. Không claim open beta khi chưa qua cổng M0 → M1.
       </SectionHeading>
       <div id="release-narrative-heading" className="lgo-release-narrative-list">
         {releaseNarrativeStages.map((stage) => (
@@ -60,8 +60,8 @@ export function ReleaseNarrativeStageBoard() {
 export function ClosedTestReadinessBoard() {
   return (
     <section className="lgo-panel lgo-closed-test-readiness-board" aria-labelledby="closed-test-readiness-heading">
-      <SectionHeading eyebrow="Closed-test readiness" title="Closed test cần đủ điều kiện riêng trước khi mở kỳ vọng tham gia">
-        Closed test không đồng nghĩa public launch. Web chỉ được giải thích readiness, không tự mở registration, entitlement hoặc reward/economy claim.
+      <SectionHeading eyebrow="Readiness closed test" title="Closed test cần đủ điều kiện riêng trước khi mở kỳ vọng tham gia">
+        Closed test không đồng nghĩa public launch. Web chỉ được giải thích readiness, không tự mở đăng ký, quyền truy cập hoặc reward/economy claim.
       </SectionHeading>
       <Grid id="closed-test-readiness-heading">
         {closedTestReadinessChecks.map((item) => (
@@ -81,7 +81,7 @@ export function ClosedTestReadinessBoard() {
 export function TrustJourneyCheckpointBoard() {
   return (
     <section className="lgo-panel lgo-trust-journey-board" aria-labelledby="trust-journey-heading">
-      <SectionHeading eyebrow="Download / status / support journey" title="Mỗi route trả lời một câu hỏi niềm tin trước khi dẫn đi tiếp">
+      <SectionHeading eyebrow="Hành trình Download / Status / Support" title="Mỗi route trả lời một câu hỏi niềm tin trước khi dẫn đi tiếp">
         Người chơi không nên phải đoán stage. Release hub nối Download Trust, Status, Support Safety và Community Onboarding bằng boundary rõ ràng.
       </SectionHeading>
       <div id="trust-journey-heading" className="lgo-trust-journey-list">
@@ -103,16 +103,16 @@ export function TrustJourneyCheckpointBoard() {
 
 export function PlayerTrustReleaseCta() {
   return (
-    <section className="lgo-detail-next-steps lgo-player-trust-release-cta" aria-label="Player trust release narrative next steps">
+    <section className="lgo-detail-next-steps lgo-player-trust-release-cta" aria-label="Bước tiếp theo hành trình phát hành">
       <div>
-        <StatusBadge tone="gold">WEB v1.18 player trust / release narrative</StatusBadge>
+        <StatusBadge tone="gold">WEB v1.18 niềm tin / hành trình phát hành</StatusBadge>
         <h2>Trước khi có public build, web phải kể rõ câu chuyện release theo bằng chứng.</h2>
-        <p>Release hub giải thích stage hiện tại, closed-test readiness và lộ trình đọc Download Trust → Status → Support Safety mà không mở funnel giả.</p>
+        <p>Release hub giải thích stage hiện tại, readiness closed test và lộ trình đọc Tin cậy tải game → Trạng thái → Hỗ trợ an toàn mà không mở funnel giả.</p>
       </div>
       <div className="lgo-product-first-actions">
-        <LinkButton href="/release" tone="gold">Release narrative</LinkButton>
-        <LinkButton href="/download/trust" tone="spirit">Download trust</LinkButton>
-        <LinkButton href="/support/safety" tone="jade">Safety support</LinkButton>
+        <LinkButton href="/release" tone="gold">Hành trình phát hành</LinkButton>
+        <LinkButton href="/download/trust" tone="spirit">Tin cậy tải game</LinkButton>
+        <LinkButton href="/support/safety" tone="jade">Hỗ trợ an toàn</LinkButton>
       </div>
     </section>
   );

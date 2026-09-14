@@ -33,9 +33,9 @@ def check_release_narrative_board() -> None:
     require_text("apps/web/src/app/release/page.tsx", [
         "lgo-release-narrative-design-board",
         "/game-art/design-boards/release-narrative-m0-to-m1-gate.svg",
-        "Release narrative M0 to M1 gate board",
+        "Bảng thiết kế cổng M0 tới M1",
         "loading=\"eager\"",
-        "Game reference art",
+        "Ảnh tham chiếu game",
         "không phải nút mở beta",
     ])
     require_text("apps/web/src/app/globals.css", [

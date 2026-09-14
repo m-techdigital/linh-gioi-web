@@ -36,7 +36,7 @@ def check_tests_docs() -> None:
     if page.find("<ReleaseReadinessHubCta />") > page.find("<ReleaseReadinessHubBoard />"):
         fail("apps/web/src/app/release/page.tsx: ReleaseReadinessHubCta should stay before the detailed readiness board")
     require_text("apps/web/src/app/globals.css", ["WEB v1.127 release detailed design target density", ".lgo-releasepage-stack", ".lgo-release-narrative-hero-card", ".lgo-release-narrative-design-board", ".lgo-release-readiness-cta"])
-    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_RELEASE_TARGET", "Release detailed design target", "release-detailed-design-target-v1127.png", "Public Release", "pathname === \"/release\""])
+    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_RELEASE_TARGET", "Thiết kế chi tiết phát hành", "release-detailed-design-target-v1127.png", "Public Release", "pathname === \"/release\""])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Release", "release-detailed-design-target-v1127.png", "WEB-FE-RELEASE-DETAILED-DESIGN-TARGET-v1.127.png", "Design Target First"])
     registry = read("docs/design/DESIGN-TARGET-REGISTRY.md")
     for line in registry.splitlines():

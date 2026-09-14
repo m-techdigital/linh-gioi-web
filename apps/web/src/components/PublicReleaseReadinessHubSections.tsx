@@ -110,7 +110,7 @@ export function ReleaseReadinessHubCta() {
       </div>
       <div className="lgo-product-first-actions">
         <LinkButton href="/release/readiness" tone="gold">Readiness phát hành</LinkButton>
-        <LinkButton href="/release" tone="spirit">Release narrative</LinkButton>
+        <LinkButton href="/release" tone="spirit">Hành trình phát hành</LinkButton>
         <LinkButton href="/download/trust" tone="jade">Tin cậy tải game</LinkButton>
       </div>
     </section>

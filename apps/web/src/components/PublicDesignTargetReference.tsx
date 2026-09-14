@@ -52,7 +52,7 @@ const PUBLIC_DOWNLOAD_TRUST_TARGET = {
 };
 
 const PUBLIC_RELEASE_TARGET = {
-  label: "Release detailed design target",
+  label: "Thiết kế chi tiết phát hành",
   href: "/design-reference/release-detailed-design-target-v1127.png",
   scope: "Public Release"
 };

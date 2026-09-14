@@ -5794,3 +5794,126 @@ h3 {
     line-height: 1.28;
   }
 }
+
+
+/* WEB v1.142 release Vietnamese design match */
+@media (min-width: 981px) {
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card {
+    padding: clamp(.62rem, 1vw, .88rem);
+    gap: clamp(.7rem, 1.15vw, 1rem);
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card h1 {
+    font-size: clamp(2.12rem, 2.75vw, 2.78rem);
+    max-width: 18ch;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card .lgo-hero-lead,
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card p {
+    font-size: .82rem;
+    line-height: 1.28;
+    margin-block: .36rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card .lgo-product-first-actions {
+    padding: .64rem;
+    gap: .42rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-design-board {
+    margin-top: -1.9rem;
+    padding: clamp(.55rem, .85vw, .72rem);
+    grid-template-columns: minmax(0, .7fr) minmax(230px, .3fr);
+    gap: clamp(.55rem, .9vw, .75rem);
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-design-board img {
+    max-height: 158px;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-design-board figcaption {
+    font-size: .76rem;
+    line-height: 1.25;
+  }
+
+  .lgo-releasepage-stack > .lgo-section-heading {
+    margin-top: -1rem;
+    min-height: 0;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board {
+    margin-top: -1.1rem;
+    padding: clamp(.68rem, 1vw, .86rem);
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board .lgo-section-heading {
+    margin-bottom: .58rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board .lgo-section-heading h2 {
+    font-size: clamp(1.12rem, 1.45vw, 1.38rem);
+    line-height: 1.04;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board .lgo-section-heading p {
+    font-size: .78rem;
+    line-height: 1.28;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-list {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: .55rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-item {
+    display: grid;
+    align-content: start;
+    gap: .42rem;
+    padding: .62rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-item h3 {
+    font-size: clamp(.92rem, 1vw, 1.02rem);
+    line-height: 1.06;
+    margin-block: .32rem .24rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-item p {
+    font-size: .72rem;
+    line-height: 1.25;
+    margin-block: .25rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-item small {
+    font-size: .66rem;
+    line-height: 1.22;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-item .lgo-link-button {
+    min-height: 32px;
+    padding-block: .32rem;
+    font-size: .72rem;
+  }
+}
+
+/* WEB v1.142 release proof heading compact fold alignment */
+@media (min-width: 981px) {
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board .lgo-section-heading {
+    display: grid;
+    grid-template-columns: minmax(190px, .28fr) minmax(0, 1fr);
+    align-items: end;
+    gap: .75rem;
+    margin-bottom: .42rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board .lgo-section-heading h2 {
+    font-size: clamp(1.05rem, 1.25vw, 1.22rem);
+    line-height: 1.02;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board .lgo-section-heading p {
+    font-size: .72rem;
+    line-height: 1.22;
+    margin: 0;
+  }
+}
