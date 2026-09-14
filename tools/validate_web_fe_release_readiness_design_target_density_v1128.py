@@ -36,7 +36,7 @@ def check_tests_docs() -> None:
     if page.find("<OwnerReleaseGateBoard />") > page.find("<ContentIaStartCta />"):
         fail("apps/web/src/app/release/readiness/page.tsx: OwnerReleaseGateBoard should stay directly in the early proof flow")
     require_text("apps/web/src/app/globals.css", ["WEB v1.128 release readiness detailed design target density", ".lgo-releasereadinesspage-stack", ".lgo-release-readiness-hero-card", ".lgo-release-readiness-design-board", ".lgo-release-readiness-hub-board", ".lgo-owner-release-gate-board"])
-    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_RELEASE_READINESS_TARGET", "Release readiness detailed design target", "release-readiness-detailed-design-target-v1128.png", "Public Release Readiness", "pathname === \"/release/readiness\""])
+    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_RELEASE_READINESS_TARGET", "Thiết kế chi tiết sẵn sàng phát hành", "release-readiness-detailed-design-target-v1128.png", "Public Release Readiness", "pathname === \"/release/readiness\""])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Release Readiness", "release-readiness-detailed-design-target-v1128.png", "WEB-FE-RELEASE-READINESS-DETAILED-DESIGN-TARGET-v1.128.png", "Design Target First"])
     registry = read("docs/design/DESIGN-TARGET-REGISTRY.md")
     for line in registry.splitlines():
@@ -45,7 +45,7 @@ def check_tests_docs() -> None:
     for rel in ["docs/execution/specs/WEB-FE-RELEASE-READINESS-DESIGN-TARGET-DENSITY-v1.128.md", "LGO-WEB-FE-RELEASE-READINESS-DESIGN-TARGET-DENSITY-REPORT-v1.128.md", "HANDOFF-LGO-WEB-FE-RELEASE-READINESS-DESIGN-TARGET-DENSITY-v1.128.md"]:
         require_text(rel, ["WEB-FE-RELEASE-READINESS-DESIGN-TARGET-DENSITY-v1.128", "WEB_CLOSED", "Design Target First", "Base UI/UX Layout", "Public Release Readiness", "browser/e2e", "fold density", "built-in image_gen", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["WEB-FE-RELEASE-READINESS-DESIGN-TARGET-DENSITY-v1.128 WEB_CLOSED", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.129"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "Design Target First", "Base UI/UX Layout", "browser/e2e"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "Real Browser UI/UX Layout First", "Base UI/UX Layout", "browser/e2e"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-RELEASE-READINESS-DESIGN-TARGET-DENSITY-v1.128 | WEB-FE | WEB_CLOSED |"])
 def main() -> int:
     check_target(); check_tests_docs()

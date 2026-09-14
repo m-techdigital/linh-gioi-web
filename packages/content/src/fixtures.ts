@@ -1154,7 +1154,7 @@ export const guideDetailSteps: GuideDetailStep[] = [
     title: "Xác nhận trạng thái và support boundary",
     action: "Mở /status và /support/safety để biết public/internal/blocked surfaces và cách chuẩn bị feedback an toàn.",
     expectedResult: "Người chơi biết báo lỗi/góp ý thế nào mà không gửi secrets hoặc dữ liệu nhạy cảm.",
-    blockedScope: "No secure ticket inbox, no account lookup, no production support SLA."
+    blockedScope: "Chưa có ticket inbox an toàn, chưa tra cứu tài khoản, chưa SLA hỗ trợ production."
   },
   {
     slug: "player-trust-release-guide",
@@ -1523,7 +1523,7 @@ export const communityFeedbackChannels: CommunityFeedbackChannel[] = [
     nextGate: "Public build artifact plus checksum/provenance and owner approval."
   },
   {
-    channel: "Bug report readiness",
+    channel: "Báo lỗi readiness",
     currentMode: "planned",
     whatToShare: "Khi có build test: thiết bị, bước tái hiện, ảnh/log nếu được hướng dẫn.",
     whatNotToShare: "Không upload secrets, payment data, account recovery data hoặc private backend logs.",
@@ -2116,7 +2116,7 @@ export const staticRouteCompositionRules: StaticRouteCompositionRule[] = [
     staticSurface: "Support safety is guidance-only until approved ticket/support backend exists.",
     copyBudget: "Issue paths stay privacy-first and avoid collecting secrets or account recovery data.",
     cssAssetRule: "Support boards stay text/card-based and do not embed external form widgets.",
-    fallbackMessage: "No secure ticket inbox, no account lookup, no production support SLA."
+    fallbackMessage: "Chưa có ticket inbox an toàn, chưa tra cứu tài khoản, chưa SLA hỗ trợ production."
   }
 ];
 
@@ -2198,7 +2198,7 @@ export const routeContinuityBridges: RouteContinuityBridge[] = [
     playerQuestion: "Tôi nên báo lỗi/góp ý thế nào khi chưa có ticket backend?",
     bridgeCopy: "Status cần nối tới Support Safety để người chơi biết chuẩn bị bug report an toàn và không gửi dữ liệu nhạy cảm.",
     ctaLabel: "Báo lỗi an toàn",
-    conversionBoundary: "No secure ticket inbox, no account lookup, no production support SLA."
+    conversionBoundary: "Chưa có ticket inbox an toàn, chưa tra cứu tài khoản, chưa SLA hỗ trợ production."
   },
   {
     id: "support-safety-to-community-onboarding",
@@ -2465,36 +2465,36 @@ export const releaseReadinessHubItems: ReleaseReadinessHubItem[] = [
     title: "Stage hiện tại phải rõ trước CTA",
     route: "/release/readiness",
     playerQuestion: "Hiện giờ đã tới giai đoạn tải hoặc test chưa?",
-    readinessAnswer: "Chưa. Public web đang ở stage giải thích readiness và owner gates trước khi public artifact hoặc closed-test invite tồn tại.",
-    ownerEvidence: "Release artifact, SHA256, manifest, limitation note, support path and owner sign-off.",
-    blockedClaim: "No public build, no open beta, no entitlement automation."
+    readinessAnswer: "Chưa. Public web đang ở stage giải thích readiness và cổng owner trước khi có artifact tải game hoặc lời mời closed test.",
+    ownerEvidence: "Artifact phát hành, SHA256, manifest, ghi chú giới hạn, đường hỗ trợ và owner phê duyệt.",
+    blockedClaim: "Chưa có bản tải công khai, chưa open beta, chưa tự động cấp quyền tài khoản."
   },
   {
     id: "download-proof-chain",
-    title: "Download cần proof chain",
+    title: "Tải game cần chuỗi bằng chứng",
     route: "/download/trust",
     playerQuestion: "Link tải thật cần gì?",
-    readinessAnswer: "Download chỉ được hiển thị khi có artifact được duyệt, checksum, provenance, limitation note và rollback/support wording.",
-    ownerEvidence: "Accepted artifact + SHA256 sidecar + provenance note + known limitations + rollback/support owner.",
-    blockedClaim: "No fake download CTA, no placeholder checksum, no launcher promise."
+    readinessAnswer: "Tải game chỉ được hiển thị khi có artifact được duyệt, checksum, nguồn gốc file, ghi chú giới hạn và wording rollback/hỗ trợ.",
+    ownerEvidence: "Artifact được chấp nhận + SHA256 đi kèm + ghi chú nguồn gốc + giới hạn đã biết + owner rollback/hỗ trợ.",
+    blockedClaim: "Không CTA tải giả, không checksum placeholder, không hứa launcher."
   },
   {
     id: "tester-expectation-safe",
-    title: "Tester expectation phải an toàn",
+    title: "Kỳ vọng tester phải an toàn",
     route: "/support/safety",
     playerQuestion: "Tôi cần chuẩn bị gì nếu được mời test?",
     readinessAnswer: "Chuẩn bị mô tả thiết bị, lỗi, bước tái hiện và feedback không chứa secrets; không gửi account/private data khi chưa có kênh chính thức.",
-    ownerEvidence: "Tester scope, privacy boundary, intake channel, triage owner and known limitation copy.",
-    blockedClaim: "No secure ticket inbox, no account lookup, no production support SLA."
+    ownerEvidence: "Phạm vi tester, ranh giới privacy, kênh tiếp nhận, owner triage và copy giới hạn đã biết.",
+    blockedClaim: "Chưa có ticket inbox an toàn, chưa tra cứu tài khoản, chưa SLA hỗ trợ production."
   },
   {
     id: "status-support-alignment",
-    title: "Status và Support phải đồng bộ",
+    title: "Trạng thái và Hỗ trợ phải đồng bộ",
     route: "/status",
     playerQuestion: "Nếu Status nói blocked thì Support có được nhận ticket thật không?",
     readinessAnswer: "Không. Status và Support phải cùng nói một sự thật: guidance hiện là static, support intake/ticket backend còn blocked.",
-    ownerEvidence: "Aligned status surface, support FAQ, safety boundary and owner-approved next action.",
-    blockedClaim: "No contradiction between status, download and support copy."
+    ownerEvidence: "Bề mặt trạng thái đồng bộ, FAQ hỗ trợ, ranh giới an toàn và next action đã được owner duyệt.",
+    blockedClaim: "Không mâu thuẫn giữa copy trạng thái, tải game và hỗ trợ."
   }
 ];
 
@@ -2525,7 +2525,7 @@ export const ownerReleaseGates: OwnerReleaseGate[] = [
   },
   {
     gate: "Owner phê duyệt",
-    owner: "AXIRO/LGO release owner",
+    owner: "Owner phát hành AXIRO/LGO",
     currentState: "blocked",
     proofRequired: "Phê duyệt rõ ràng rằng copy Download, Status, Support và Community khớp trạng thái gói build.",
     playerVisibleRule: "Không chuyển từ wording readiness sang wording phát hành trước khi được phê duyệt.",
@@ -2543,13 +2543,13 @@ export const testerExpectationCopy: TesterExpectationCopy[] = [
   {
     topic: "Tài khoản và quyền truy cập",
     playerExpectation: "Không tự tạo account hoặc đòi entitlement nếu chưa có thông báo owner-approved.",
-    copyOnWeb: "Account/entitlement cần backend contract riêng; hiện chỉ là release readiness explanation.",
+    copyOnWeb: "Tài khoản/quyền truy cập cần contract backend riêng; hiện chỉ là giải thích readiness phát hành.",
     supportBoundary: "No production auth, no account lookup, no entitlement automation."
   },
   {
-    topic: "Bug report",
+    topic: "Báo lỗi",
     playerExpectation: "Gửi mô tả ngắn, route/screen, bước tái hiện, expected/actual và severity nếu có kênh chính thức.",
-    copyOnWeb: "Bug report guidance phải bảo vệ privacy trước khi có secure support system.",
+    copyOnWeb: "Báo lỗi guidance phải bảo vệ privacy trước khi có secure support system.",
     supportBoundary: "No live ticket backend or production SLA."
   },
   {

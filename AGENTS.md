@@ -72,13 +72,17 @@ Web contract records live under `packages/contracts` after contract sync begins.
 - Duplicate component owners are forbidden.
 
 
-## Design Target First rule
+## Design Target Guardrail rule
 
-Design Target First is Priority #1 for FE/UI work. Every page, section and reusable component must be attached to a design target before implementation. If the current task has no matching design target, create or replace the design target first, save it under the project design-reference paths, register it in `docs/design/DESIGN-TARGET-REGISTRY.md`, and only then implement the page/component. If a design target becomes misleading or no longer matches the desired UI/UX direction, delete or supersede obsolete design targets in the same task so future work cannot compare against the wrong destination.
+Real Browser UI/UX Layout First is Priority #1 for FE/UI work. A design target is only a guardrail for comparison, not the primary deliverable and not a reason to delay browser implementation. For the selected page, first check whether a usable target already exists. If it exists, use it and move to the rendered page. If it is missing or blocks comparison because it is stale, English-heavy or wrong for the game scenario, make the smallest correction needed, save/register that target, and immediately continue to page UI/UX Layout work. Do not regenerate, redesign, batch-design, or localize design assets beyond what is necessary to compare and implement the current page.
 
 ## Base UI/UX Layout rule
 
-Reusable UI/UX layout belongs in `packages/design-tokens` and `packages/ui` first. Before adding page-local layout, search for a shared owner and extend the shared Base UI/UX Layout when the pattern can be reused across public web, Portal or Ops. Page-local implementations are allowed only when the handoff records why the pattern is truly one-off.
+Base First is mandatory before adding or changing FE/UI layout. Reusable UI/UX layout, components, interaction states and style primitives belong in `packages/design-tokens` and `packages/ui` first. Before adding page-local layout, search for an existing shared owner and extend the shared Base UI/UX Layout when the pattern can be reused across public web, Portal or Ops. Similar layouts must not be rebuilt separately per page. Page-local implementations are allowed only when the handoff records why the pattern is truly one-off.
+
+## CSS Ownership and File-Size rule
+
+CSS must be managed by owner and role. Theme primitives and variables belong in `packages/design-tokens`; reusable component/layout styles belong with `packages/ui`; app-level route composition may only keep thin scoped selectors required by the current page. Do not keep appending repeated page-specific blocks to `apps/web/src/app/globals.css` when a pattern is reusable or already exists elsewhere. If a CSS block starts duplicating another page or growing a route-specific pattern, extract or consolidate it into a base class/shared component before continuing. Validators and handoffs must record whether a page-local CSS addition is one-off or why it was not moved to base.
 
 ## Sequential Page Completion rule
 
@@ -86,12 +90,21 @@ FE/UI work must be completed page by page. Start from the selected page, attach 
 
 ## Just-in-time Design rule
 
-Design Target First means just-in-time design for the current page or component, not designing the whole site upfront. Each page must have a concrete target before code changes for that page. Public visible design copy must be Vietnamese unless an owner-approved route-specific exception is recorded. If a design is stale, English-heavy, or no longer matches the intended UI/UX direction, replace or supersede that target within the current page slice before implementation.
+Design target work is just-in-time and minimal for the current page or component. Each page should have a concrete comparison target, but once a target is usable the agent must stop design work and implement the real rendered UI. Public visible design copy should be Vietnamese unless an owner-approved route-specific exception is recorded, but localization-only work is never page completion. If a design is stale, English-heavy, or no longer matches the intended UI/UX direction, replace or supersede only the smallest target area needed to unblock browser UI work.
 
+
+
+## Real UI/Layout First rule
+
+For FE/UI page slices, the main deliverable is the rendered page UI/UX Layout in the browser, not the design artifact itself. A minimal, Vietnamese, scenario-correct target is only a comparison aid. Once the target is good enough to compare against, stop iterating on design and move immediately to the real page: layout, spacing, typography scale, visual hierarchy, first-fold density, responsive behavior and accessibility. Do not spend the slice on broad redesign, image iteration, or English-to-Vietnamese cleanup except where it directly blocks comparing or implementing the current page.
+
+## Design Anti-Drift rule
+
+If a page already has a usable design target, do not regenerate it. If the target is stale, English-heavy, or wrong for the game scenario, make the smallest target correction needed for the current page, then implement the browser UI. Validators and e2e tests for page slices must prioritize real layout evidence: DOM order, fold metrics, overflow, font scale, card density, keyboard/focus behavior and screenshot review. Text assertions should be limited to critical Vietnamese route labels and scenario boundaries, not used as a substitute for UI/UX Layout completion.
 
 ## Layout Match Before Closure rule
 
-A FE/UI page slice cannot close until the implemented page has been rendered in a real browser and compared against its registered design target. The comparison must cover hero composition, visual hierarchy, spacing, typography scale, content order, first-fold density and mobile behavior. Copy-only, label-only, validator-only or density-only changes are not enough to mark a page WEB_CLOSED. If the implementation does not match the target, keep working on that same page; do not move to another page.
+A FE/UI page slice cannot close until the implemented page has been rendered in a real browser and compared against its registered design target. The comparison must cover hero composition, visual hierarchy, spacing, typography scale, content order, first-fold density and mobile behavior. Copy-only, label-only, target-only, localization-only, validator-only or density-only changes are not enough to mark a page WEB_CLOSED. If the implementation does not match the target, keep working on that same page; do not move to another page.
 
 ## Evidence rule
 

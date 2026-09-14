@@ -22,7 +22,7 @@ async function collectReadinessBoardMetrics(page: Page): Promise<ReadinessBoardM
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const image = document.querySelector<HTMLImageElement>('img[alt="Release readiness production board"]');
+    const image = document.querySelector<HTMLImageElement>('img[alt="Bảng cổng readiness phát hành"]');
     const caption = image?.closest("figure")?.querySelector("figcaption");
     return {
       pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -41,8 +41,8 @@ async function collectReadinessBoardMetrics(page: Page): Promise<ReadinessBoardM
 test.describe("public release readiness design board", () => {
   test("/release/readiness renders the production-board visual without mobile overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/release/readiness`);
-    await expect(page.getByRole("heading", { name: "Release readiness: đọc gate trước khi kỳ vọng bản test" })).toBeVisible();
-    await expect(page.getByRole("img", { name: "Release readiness production board" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Sẵn sàng phát hành" })).toBeVisible();
+    await expect(page.getByRole("img", { name: "Bảng cổng readiness phát hành" })).toBeVisible();
 
     const metrics = await collectReadinessBoardMetrics(page);
     expect(metrics.board, "release readiness board metrics").not.toBeNull();

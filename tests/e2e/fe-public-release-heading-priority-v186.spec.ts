@@ -3,8 +3,8 @@ import { test, expect, type Page } from "@playwright/test";
 
 const web = process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
 const routes = [
-  { path: "/release", title: "Release narrative: từ content-ready tới closed test" },
-  { path: "/release/readiness", title: "Release readiness: đọc gate trước khi kỳ vọng bản test" },
+  { path: "/release", title: "Hành trình phát hành" },
+  { path: "/release/readiness", title: "Sẵn sàng phát hành" },
   { path: "/release/tester-pack", title: "Closed tester information: chuẩn bị đúng, không gửi nhầm dữ liệu" },
 ];
 

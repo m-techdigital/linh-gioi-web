@@ -40,11 +40,12 @@ def check_governance() -> None:
         "NO_ACCEPTED_BACKEND_CONTRACT",
     ])
     require_text("AGENTS.md", [
-        "Design Target First rule",
-        "must be attached to a design target before implementation",
-        "create or replace the design target first",
-        "delete or supersede obsolete design targets",
+        "Design Target Guardrail rule",
+        "Real Browser UI/UX Layout First is Priority #1",
+        "A design target is only a guardrail for comparison",
+        "Do not regenerate, redesign, batch-design, or localize design assets beyond what is necessary",
         "Base UI/UX Layout rule",
+        "CSS Ownership and File-Size rule",
     ])
 
 def check_registry() -> None:

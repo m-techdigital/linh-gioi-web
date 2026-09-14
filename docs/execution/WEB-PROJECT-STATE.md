@@ -1,3 +1,16 @@
+Current phase: WEB-FE-RELEASE-READINESS-REAL-UI-LAYOUT-v1.143 WEB_CLOSED.
+
+Current decision: v1.143 closed the active `/release/readiness` page slice as a real browser UI/UX Layout task. `/release/readiness` now prioritizes rendered layout over design iteration: compact Sẵn sàng phát hành hero, blocked-readiness seal, readiness board, readiness hub and owner gates. Entire program is NOT production-complete.
+
+- v1.143 changed governance: Real Browser UI/UX Layout First supersedes Design Target First; design target work is only a minimal comparison guardrail.
+- v1.143 added Base First/CSS ownership guardrails: similar layouts must be consolidated into `packages/design-tokens` or `packages/ui`, and repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- v1.143 moved reusable compact service/proof layout to `packages/ui/src/service-layout.css` and imported it in the web app layout.
+- v1.143 updated `/release/readiness` first-flow under `.lgo-service-compact-proof-page`: hero → readiness board → readiness hub → owner gates.
+- v1.143 evidence: RED browser/e2e reproduced stale heading/layout and mobile owner gate distance 2352.39px after hub; GREEN Playwright desktop/mobile PASS 2/2 after Base First layout fix; screenshot metrics reviewed: 1280x720 overflow 0, h1 34.816px, hero bottom 391.5, board top 386.859, board bottom 575.609, hub top 598.156.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.144. Select `/release/tester-pack` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-RELEASE-VIETNAMESE-DESIGN-MATCH-v1.142 WEB_CLOSED.
 
 Current decision: v1.142 closed the active `/release` page slice after refreshing the Public Release design target to Vietnamese and matching the implemented page in browser. `/release` now follows the target release-stage scenario more closely: compact Hành trình phát hành hero, M0 → M1 board, six proof-before-promise stage cards and delayed readiness follow-up. Entire program is NOT production-complete.
@@ -7,7 +20,9 @@ Current decision: v1.142 closed the active `/release` page slice after refreshin
 - v1.142 reworked `/release` first-flow under `.lgo-releasepage-stack`: hero → M0/M1 board → proof stage cards → readiness follow-up.
 - v1.142 evidence: RED browser/e2e reproduced stale English target label; Playwright desktop/mobile `/release` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: 1280x720 hero 360.922, board top 356.125, board bottom 537.875, stages top 561.875, overflow 0.
 - Design must follow the Linh Giới game scenario and stay coherent with accepted targets; stale, English-heavy or scenario-wrong targets must be replaced before implementation.
-- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- Real UI/Layout First is now mandatory: after the smallest target correction needed for comparison, stop design iteration and prioritize rendered browser layout, spacing, typography, first-fold density, responsiveness and accessibility. Localization-only or target-only work cannot close a page.
+- Base First/CSS ownership is mandatory: similar UI/UX Layout patterns must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated CSS must not keep inflating `apps/web/src/app/globals.css` without a one-off reason in handoff.
+- Sequential Page Completion, Real Browser UI/UX Layout First, minimal design-target guardrail, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
 Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.143. Select `/release/readiness` as the next single active page and complete it fully before moving onward.
@@ -21,7 +36,7 @@ Current decision: v1.141 closed the active `/download/trust` page slice after re
 - v1.141 reworked `/download/trust` first-flow under `.lgo-downloadtrustpage-stack`: hero → trust gate board → why/readiness → owner gates.
 - v1.141 evidence: RED browser/e2e reproduced stale English target label; Playwright desktop/mobile `/download/trust` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: 1280x720 hero 416.328, trust gate top 421.922, first gates top 1160.734, overflow 0.
 - Design must follow the Linh Giới game scenario and stay coherent with accepted targets; stale, English-heavy or scenario-wrong targets must be replaced before implementation.
-- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- Sequential Page Completion, Real Browser UI/UX Layout First, minimal design-target guardrail, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
 Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.142. Select `/release` as the next single active page and complete it fully before moving onward.
@@ -35,7 +50,7 @@ Current decision: v1.140 closed the active `/download` page slice after refreshi
 - v1.140 reworked `/download` first-flow under `.lgo-downloadpage-stack`: hero → readiness board → official channels → deeper trust/detail sections.
 - v1.140 evidence: RED browser/e2e reproduced stale English target label; Playwright desktop/mobile `/download` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: 1280x720 hero 319.266, gate 250, readiness top 434.422, channels top 701.953, overflow 0.
 - Design must follow the Linh Giới game scenario and stay coherent with accepted targets; stale, English-heavy or scenario-wrong targets must be replaced before implementation.
-- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- Sequential Page Completion, Real Browser UI/UX Layout First, minimal design-target guardrail, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
 Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.141. Select `/download/trust` as the next single active page and complete it fully before moving onward.
@@ -49,7 +64,7 @@ Current decision: v1.139 closed the active `/start` page slice after refreshing 
 - v1.139 reused the shared `CinematicWorldScene` in `/start` instead of creating duplicate page-local visual code.
 - v1.139 evidence: RED browser/e2e reproduced stale English target label and missing shared Đông Môn scene; Playwright desktop/mobile `/start` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: 1280x720 hero 420, scene 374.5, board top 566.031, board visible 153.969, overflow 0.
 - Design must follow the Linh Giới game scenario and stay coherent with accepted targets; stale, English-heavy or scenario-wrong targets must be replaced before implementation.
-- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- Sequential Page Completion, Real Browser UI/UX Layout First, minimal design-target guardrail, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
 Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.140. Select `/download` as the next single active page and complete it fully before moving onward.
@@ -62,7 +77,7 @@ Current decision: v1.138 closed the active `/journey` page slice after refreshin
 - v1.138 translated Public Journey target/page labels and 20-minute loop labels to Vietnamese.
 - v1.138 reordered `/journey` first-flow under `.lgo-journeypage-stack`: hero → session loop → world route → reference board.
 - v1.138 evidence: RED browser/e2e reproduced stale English label and session loop top 712.641px; Playwright desktop/mobile `/journey` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: 1280x720 hero 400.406px, session top 611.609, first card visible 108.391, overflow 0.
-- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- Sequential Page Completion, Real Browser UI/UX Layout First, minimal design-target guardrail, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
 Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.139. Select `/start` as the next single active page and complete it fully before moving onward.
@@ -75,7 +90,7 @@ Current decision: v1.137 closed the active `/classes` page slice after reviewing
 - v1.137 translated Public Classes target/page labels and class art fixture labels used by `/classes`.
 - v1.137 compacted desktop `/classes` first-flow under `.lgo-classespage-stack`: hero → compact Năm Lộ heading → first class-card row → identity deck → Võ art board.
 - v1.137 evidence: RED browser/e2e reproduced only 92.266px of the first class card visible at 1280x720; Playwright desktop/mobile `/classes` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: 1280x720 hero 360.375px, class grid top 569.828, first card visible 150.172, overflow 0.
-- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- Sequential Page Completion, Real Browser UI/UX Layout First, minimal design-target guardrail, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
 Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.138. Select `/journey` as the next single active page and complete it fully before moving onward.
@@ -88,7 +103,7 @@ Current decision: v1.136 closed the active `/story` page slice after refreshing 
 - v1.136 translated visible Public Story labels and chapter labels to Vietnamese.
 - v1.136 reworked desktop `/story` hero into a poster-style overlay and compacted chapter card density under `.lgo-storypage-stack`.
 - v1.136 evidence: RED browser/e2e reproduced stale English label and insufficient first-fold chapter visibility; Playwright desktop/mobile `/story` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: hero 385.234px, chapters top 519.594, first card top 559.75, first card visible 367.188, overflow 0.
-- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- Sequential Page Completion, Real Browser UI/UX Layout First, minimal design-target guardrail, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
 Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.137. Select `/classes` as the next single active page and complete it fully before moving onward.
@@ -101,7 +116,7 @@ Current decision: v1.135 closed the active `/game` page slice after browser/e2e 
 - v1.135 removed the old wireframe/reference board from `/game` first-flow product UI and replaced it with route/atlas layout that follows the game scenario.
 - v1.135 translated visible design/page labels for Public Game World to Vietnamese, including route-kind labels shared by route and atlas components.
 - v1.135 evidence: RED browser/e2e reproduced route gap 347.625px after hero; Playwright desktop/mobile `/game` Vietnamese first-flow/layout PASS 2/2 after fix; screenshot metrics reviewed: hero 430px, route top 557.875, atlas top 820.141, overflow 0.
-- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- Sequential Page Completion, Real Browser UI/UX Layout First, minimal design-target guardrail, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
 Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.136. Select `/story` as the next single active page and complete it fully before moving onward.
@@ -129,7 +144,7 @@ Current decision: v1.133 FE support safety design target density slice closed. P
 - v1.133 compacted desktop `/support/safety` hero, design board, sensitive-data checklist, safety principles and issue routing under `lgo-supportsafetypage-stack` while preserving mobile behavior.
 - v1.133 evidence: RED browser/e2e reproduced missing `Public Support Safety` target attachment; Playwright desktop/mobile support safety design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
 - Vietnamese design targets remain mandatory for new public FE work unless a route-specific owner-approved exception is recorded. Existing English-heavy targets must be replaced when their page is revisited.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -144,7 +159,7 @@ Current decision: v1.132 FE support help design target density slice closed. Pub
 - v1.132 compacted desktop `/support/help` hero, design board, route cards, FAQ discovery and issue routing under `lgo-supporthelppage-stack` while preserving mobile behavior.
 - v1.132 evidence: RED browser/e2e reproduced missing `Public Support Help` target attachment; Playwright desktop/mobile support help design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
 - Vietnamese design targets remain mandatory for new public FE work unless a route-specific owner-approved exception is recorded. Existing English-heavy targets must be replaced when their page is revisited.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -159,7 +174,7 @@ Current decision: v1.131 FE support design target density slice closed. Public `
 - v1.131 compacted desktop `/support` hero, support boundary note, design board, topic cards and FAQ/safety path under `lgo-supportpage-stack` while preserving mobile behavior.
 - v1.131 evidence: RED browser/e2e reproduced missing `Public Support` target attachment; Playwright desktop/mobile support design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
 - Vietnamese design targets are mandatory for new public FE work unless a route-specific owner-approved exception is recorded. Existing English-heavy targets must be replaced when their page is revisited.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -173,7 +188,7 @@ Current decision: v1.130 FE status design target density slice closed. Public `/
 - v1.130 registered `Public Status`, routed `/status` to that page-specific target and kept Public Service as the broader target for remaining service routes.
 - v1.130 compacted desktop `/status` page header, status signal board, status explanation and trust surfaces under `lgo-statuspage-stack` while preserving mobile behavior.
 - v1.130 evidence: RED browser/e2e reproduced missing `Public Status` target attachment; Playwright desktop/mobile status design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -187,7 +202,7 @@ Current decision: v1.129 FE tester pack design target density slice closed. Publ
 - v1.129 registered `Public Tester Pack`, routed `/release/tester-pack` to that page-specific target and kept Public Service as the broader target for remaining service routes.
 - v1.129 compacted desktop `/release/tester-pack` hero, production board, checklist and safe feedback template under `lgo-testerpackpage-stack` while preserving mobile behavior.
 - v1.129 evidence: RED browser/e2e reproduced missing `Public Tester Pack` target attachment; Playwright desktop/mobile tester pack design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -201,7 +216,7 @@ Current decision: v1.128 FE release readiness design target density slice closed
 - v1.128 registered `Public Release Readiness`, routed `/release/readiness` to that page-specific target and kept Public Service as the broader target for remaining service routes.
 - v1.128 compacted desktop `/release/readiness` hero, production board, readiness hub and owner gates under `lgo-releasereadinesspage-stack` while preserving mobile behavior.
 - v1.128 evidence: RED browser/e2e reproduced missing `Public Release Readiness` target attachment; Playwright desktop/mobile release readiness design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -215,7 +230,7 @@ Current decision: v1.127 FE release design target density slice closed. Public `
 - v1.127 registered `Public Release`, routed `/release` to that page-specific target and kept Public Service as the broader target for remaining service routes.
 - v1.127 compacted desktop `/release` hero, M0→M1 board, proof heading and release readiness CTA under `lgo-releasepage-stack` while preserving mobile behavior.
 - v1.127 evidence: RED browser/e2e reproduced missing `Public Release` target attachment; Playwright desktop/mobile release design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -229,7 +244,7 @@ Current decision: v1.126 FE download trust design target density slice closed. P
 - v1.126 registered `Public Download Trust`, routed `/download/trust` to that page-specific target and kept Public Service as the broader target for remaining service routes.
 - v1.126 compacted desktop `/download/trust` hero, release readiness CTA, owner gate board and trust gate sequence under `lgo-downloadtrustpage-stack` while preserving mobile behavior.
 - v1.126 evidence: RED browser/e2e reproduced missing `Public Download Trust` target attachment; Playwright desktop/mobile download trust design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -243,7 +258,7 @@ Current decision: v1.125 FE download design target density slice closed. Public 
 - v1.125 registered `Public Download`, routed `/download` to that page-specific target and kept Public Service as the broader target for remaining service routes.
 - v1.125 compacted desktop `/download` hero, sealed gate and readiness checklist under `lgo-downloadpage-stack` while preserving mobile behavior.
 - v1.125 evidence: RED browser/e2e reproduced missing `Public Download` target attachment; Playwright desktop/mobile download design target density PASS 2/2 after fix; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -257,7 +272,7 @@ Current decision: v1.124 FE start design target density slice closed. Public `/s
 - v1.124 registered `Public Start`, routed `/start` to that page-specific target and left Public Core as a broad fallback for public patterns outside page-specific targets.
 - v1.124 compacted desktop `/start` hero, tutorial steps, start board and screenshot panel spacing under `lgo-startpage-stack` while preserving mobile behavior.
 - v1.124 evidence: RED browser/e2e reproduced missing `Public Start` target attachment; Playwright desktop/mobile start design target density PASS 2/2 after fix; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -271,7 +286,7 @@ Current decision: v1.123 FE journey design target density slice closed. Public `
 - v1.123 registered `Public Journey`, routed `/journey` to that page-specific target and kept Public Core as the broader target for remaining public core routes.
 - v1.123 compacted desktop `/journey` hero, route-flow board and session-loop spacing under `lgo-journeypage-stack` while preserving mobile behavior.
 - v1.123 evidence: RED browser/e2e reproduced missing `Public Journey` target attachment; Playwright desktop/mobile journey design target density PASS 2/2 after fix; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -285,7 +300,7 @@ Current decision: v1.122 FE classes design target density slice closed. Public `
 - v1.122 registered `Public Classes`, routed `/classes` to that page-specific target and kept Public Core as the broader target for remaining public core routes.
 - v1.122 compacted desktop `/classes` hero, first class-card heading and class-card grid under `lgo-classespage-stack` while preserving mobile behavior.
 - v1.122 evidence: RED browser/e2e reproduced missing `Public Classes` target attachment; Playwright desktop/mobile classes design target density PASS 2/2 after fix; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -299,7 +314,7 @@ Current decision: v1.121 FE story design target density slice closed. Public `/s
 - v1.121 registered `Public Story`, routed `/story` to that page-specific target and kept Public Core as the broader target for remaining public core routes.
 - v1.121 reordered `/story` to match the target: hero, chapters, story arc, then reference art; desktop density is scoped under `lgo-storypage-stack` while preserving mobile behavior.
 - v1.121 evidence: RED desktop browser/e2e reproduced first chapter card not visible in the first fold; Playwright desktop/mobile story design target density PASS 2/2 after fix; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -313,7 +328,7 @@ Current decision: v1.120 FE game world design target density slice closed. Publi
 - v1.120 registered `Public Game World`, routed `/game` to that page-specific target and kept Public Core as the broader target for the remaining public core routes.
 - v1.120 compacted desktop `/game` hero/design-board/route spacing under `lgo-gamepage-stack` while preserving mobile behavior.
 - v1.120 evidence: RED desktop browser/e2e reproduced the game design board starting below target first-fold density; Playwright desktop/mobile game world design target density PASS 2/2 after fix; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -326,7 +341,7 @@ Current decision: v1.119 FE homepage target fold density slice closed. Public `/
 - v1.119 uses the existing `Public Homepage` target; no new design target was required and no stale target was replaced.
 - v1.119 compacted desktop homepage hero density and first-pillar spacing while preserving mobile behavior.
 - v1.119 evidence: RED desktop browser/e2e reproduced insufficient first-card fold visibility; runtime DOM inspection confirmed a real layout-density issue; Playwright desktop/mobile homepage target fold density PASS 2/2 after fix; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -339,7 +354,7 @@ Current decision: v1.118 FE homepage detailed design target slice closed. Public
 - v1.118 created `homepage-detailed-design-target-v1118.png` with built-in image_gen and mirrored it under `docs/design/reference`.
 - v1.118 registered `Public Homepage` in the Design Target First registry and updated `/` to expose the page-specific target instead of only the broad Public Core atlas.
 - v1.118 evidence: RED browser/e2e reproduced missing Public Homepage target attachment; Playwright desktop/mobile homepage detailed design target PASS 4/4 after attachment; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -352,7 +367,7 @@ Current decision: v1.117 FE shell keyboard reachability slice closed. Public Cor
 - v1.117 fixed a real Public shell keyboard gap by making `PublicNavigation` nav focusable and giving `.lgo-brand-nav:focus-visible` a visible outline.
 - v1.117 uses existing v1.95 Public Core, Player Portal, Ops/Admin and Component/state design targets; no new design target was required and no stale target was replaced.
 - v1.117 evidence: RED browser/e2e reproduced Public Core nav focus failure; Playwright desktop/mobile shell keyboard reachability PASS 6/6 after fix; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -365,7 +380,7 @@ Current decision: v1.116 FE Ops/Admin expanded route audit slice closed. Twelve 
 - v1.116 changes test/evidence only; no production source changed and no duplicate route/layout owner was added.
 - v1.116 uses existing v1.95 Ops/Admin and Component/state design targets; no new design target was required and no stale target was replaced.
 - v1.116 evidence: Playwright desktop/mobile expanded Ops/Admin route audit PASS 24/24; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 
@@ -378,7 +393,7 @@ Current decision: v1.115 FE Portal expanded route audit slice closed. Twelve Pla
 - v1.115 changes test/evidence only; no production source changed and no duplicate route/layout owner was added.
 - v1.115 uses existing v1.95 Player Portal and Component/state design targets; no new design target was required and no stale target was replaced.
 - v1.115 evidence: Playwright desktop/mobile expanded Portal route audit PASS 24/24; dedicated validator and closure checks recorded in report/handoff.
-- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Real Browser UI/UX Layout First supersedes Design Target First: use or minimally correct the selected page target only enough for comparison, then implement and verify the rendered page layout in browser.
 - Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
 - No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
 

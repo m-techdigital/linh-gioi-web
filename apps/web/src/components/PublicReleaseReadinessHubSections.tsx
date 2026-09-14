@@ -13,21 +13,28 @@ function toneForState(value: string) {
   return "shadow" as const;
 }
 
+function labelForState(value: string) {
+  if (value === "ready-copy") return "ĐANG DUYỆT";
+  if (value === "planned") return "ĐANG LÊN KẾ HOẠCH";
+  if (value === "blocked") return "BỊ CHẶN";
+  return value;
+}
+
 export function ReleaseReadinessHubBoard() {
   return (
-    <section className="lgo-panel lgo-release-readiness-hub-board" aria-labelledby="release-readiness-hub-heading">
-      <SectionHeading eyebrow="WEB v1.19 readiness phát hành" title="Một hub để đọc gate phát hành trước mọi CTA nhạy cảm">
-        Readiness phát hành không phải nút tải hay đăng ký test. Đây là bản đồ bằng chứng trước claim cho Download, Status, Support và Community.
+    <section className="lgo-panel lgo-release-readiness-hub-board lgo-service-proof-card-grid" aria-labelledby="release-readiness-hub-heading">
+      <SectionHeading eyebrow="Cổng readiness" title="Đọc gate phát hành trước mọi CTA nhạy cảm">
+        Chưa sẵn sàng phát hành. Đây là bản đồ bằng chứng trước lời hứa cho Tải game, Trạng thái, Hỗ trợ và Cộng đồng.
       </SectionHeading>
       <Grid id="release-readiness-hub-heading">
         {releaseReadinessHubItems.map((item) => (
-          <GameCard className="lgo-release-readiness-card" key={item.id}>
+          <GameCard className="lgo-release-readiness-card lgo-service-proof-card" key={item.id}>
             <StatusBadge tone="gold">{item.title}</StatusBadge>
             <h3>{item.playerQuestion}</h3>
             <p>{item.readinessAnswer}</p>
             <p><strong>Bằng chứng owner:</strong> {item.ownerEvidence}</p>
             <small>{item.blockedClaim}</small>
-            <LinkButton href={item.route} tone="spirit">Đọc surface liên quan</LinkButton>
+            <LinkButton href={item.route} tone="spirit">Đọc bề mặt liên quan</LinkButton>
           </GameCard>
         ))}
       </Grid>
@@ -37,14 +44,14 @@ export function ReleaseReadinessHubBoard() {
 
 export function OwnerReleaseGateBoard() {
   return (
-    <section className="lgo-panel lgo-owner-release-gate-board" aria-labelledby="owner-release-gate-heading">
-      <SectionHeading eyebrow="Gate owner" title="Không chuyển wording sang phát hành nếu gate owner chưa có bằng chứng">
-        Mỗi gate cần owner, bằng chứng và quy tắc người chơi nhìn thấy. Đây là cách giữ website đáng tin trước closed test hoặc gói build công khai.
+    <section className="lgo-panel lgo-owner-release-gate-board lgo-service-proof-card-grid" aria-labelledby="owner-release-gate-heading">
+      <SectionHeading eyebrow="Cổng owner" title="Không chuyển sang wording phát hành nếu owner chưa duyệt">
+        Mọi vùng trọng yếu cần owner review trước khi mở kỳ vọng test. Đây là cách giữ website đáng tin trước closed test hoặc gói build công khai.
       </SectionHeading>
       <Grid id="owner-release-gate-heading">
         {ownerReleaseGates.map((gate) => (
-          <GameCard className="lgo-owner-release-gate-card" key={gate.gate}>
-            <StatusBadge tone={toneForState(gate.currentState)}>{gate.currentState}</StatusBadge>
+          <GameCard className="lgo-owner-release-gate-card lgo-service-proof-card" key={gate.gate}>
+            <StatusBadge tone={toneForState(gate.currentState)}>{labelForState(gate.currentState)}</StatusBadge>
             <h3>{gate.gate}</h3>
             <p><strong>Owner:</strong> {gate.owner}</p>
             <p><strong>Bằng chứng:</strong> {gate.proofRequired}</p>
@@ -60,8 +67,8 @@ export function OwnerReleaseGateBoard() {
 export function TesterExpectationCopyBoard() {
   return (
     <section className="lgo-panel lgo-tester-expectation-board" aria-labelledby="tester-expectation-heading">
-      <SectionHeading eyebrow="Tester expectation copy" title="Closed-test wording phải bảo vệ người chơi trước khi có intake thật">
-        Tester copy chỉ nên nói cách chuẩn bị và giới hạn hiện tại, không hứa entitlement, account recovery, reward hoặc SLA.
+      <SectionHeading eyebrow="Kỳ vọng tester" title="Wording closed test phải bảo vệ người chơi trước intake thật">
+        Copy tester chỉ nên nói cách chuẩn bị và giới hạn hiện tại, không hứa quyền truy cập, khôi phục tài khoản, reward hoặc SLA.
       </SectionHeading>
       <Grid id="tester-expectation-heading">
         {testerExpectationCopy.map((item) => (
@@ -80,8 +87,8 @@ export function TesterExpectationCopyBoard() {
 export function ReleaseSurfaceAlignmentBoard() {
   return (
     <section className="lgo-panel lgo-release-surface-alignment-board" aria-labelledby="release-surface-alignment-heading">
-      <SectionHeading eyebrow="Download / Status / Support alignment" title="Các surface phải cùng nói một sự thật release">
-        Người chơi tin website hơn khi Download, Status, Support và Community cùng dẫn về readiness hub và không mâu thuẫn với nhau.
+      <SectionHeading eyebrow="Download / Status / Support" title="Các bề mặt phải cùng nói một sự thật phát hành">
+        Người chơi tin website hơn khi Tải game, Trạng thái, Hỗ trợ và Cộng đồng cùng dẫn về cổng readiness và không mâu thuẫn với nhau.
       </SectionHeading>
       <div id="release-surface-alignment-heading" className="lgo-release-surface-list">
         {releaseSurfaceAlignment.map((surface) => (
@@ -92,7 +99,7 @@ export function ReleaseSurfaceAlignmentBoard() {
               <p><strong>Phải nói:</strong> {surface.mustSay}</p>
               <small>{surface.contradictionToAvoid}</small>
             </div>
-            <LinkButton href={surface.mustLinkTo} tone="gold">Hub readiness</LinkButton>
+            <LinkButton href={surface.mustLinkTo} tone="gold">Cổng readiness</LinkButton>
           </article>
         ))}
       </div>
@@ -109,7 +116,7 @@ export function ReleaseReadinessHubCta() {
         <p>Hub readiness phát hành gom bằng chứng, kỳ vọng tester và đồng bộ Download/Status/Support mà không mở CTA phát hành giả.</p>
       </div>
       <div className="lgo-product-first-actions">
-        <LinkButton href="/release/readiness" tone="gold">Readiness phát hành</LinkButton>
+        <LinkButton href="/release/readiness" tone="gold">Sẵn sàng phát hành</LinkButton>
         <LinkButton href="/release" tone="spirit">Hành trình phát hành</LinkButton>
         <LinkButton href="/download/trust" tone="jade">Tin cậy tải game</LinkButton>
       </div>

@@ -33,10 +33,10 @@ def check_readiness_board() -> None:
     require_text("apps/web/src/app/release/readiness/page.tsx", [
         "lgo-release-readiness-design-board",
         "/game-art/design-boards/release-readiness-production-board.svg",
-        "Release readiness production board",
+        "Bảng cổng readiness phát hành",
         "loading=\"eager\"",
-        "Game reference art",
-        "without claiming a public build",
+        "Ảnh tham chiếu game",
+        "Không mở funnel giả",
     ])
     require_text("apps/web/src/app/globals.css", [
         "WEB v1.71 public release readiness production-board visual",
@@ -56,7 +56,7 @@ def check_tests_and_docs() -> None:
         require_file(rel)
     require_text("tests/e2e/fe-public-release-readiness-design-board-v171.spec.ts", [
         "/release/readiness",
-        "Release readiness production board",
+        "Bảng cổng readiness phát hành",
         "/game-art/design-boards/release-readiness-production-board.svg",
         "loading",
         "naturalWidth",

@@ -58,7 +58,7 @@ const PUBLIC_RELEASE_TARGET = {
 };
 
 const PUBLIC_RELEASE_READINESS_TARGET = {
-  label: "Release readiness detailed design target",
+  label: "Thiết kế chi tiết sẵn sàng phát hành",
   href: "/design-reference/release-readiness-detailed-design-target-v1128.png",
   scope: "Public Release Readiness"
 };

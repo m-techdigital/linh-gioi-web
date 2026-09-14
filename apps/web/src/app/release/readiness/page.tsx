@@ -16,44 +16,44 @@ import {
 } from "../../../components/PublicReleaseReadinessHubSections";
 import { WebAppShell } from "../../../components/WebAppShell";
 
-export const metadata = { title: "Release readiness" };
+export const metadata = { title: "Sẵn sàng phát hành" };
 
 export default function ReleaseReadinessPage() {
   return (
     <WebAppShell>
-      <Stack className="lgo-player-facing-stack lgo-releasereadinesspage-stack">
+      <Stack className="lgo-player-facing-stack lgo-releasereadinesspage-stack lgo-service-compact-proof-page">
         <GameCard className="lgo-detail-hero-card lgo-release-readiness-hero-card">
-          <StatusBadge tone="gold">WEB v1.19 release readiness hub</StatusBadge>
-          <span className="lgo-card-kicker">Owner gates · tester expectation · Download/Status/Support alignment · No public build</span>
-          <h1>Release readiness: đọc gate trước khi kỳ vọng bản test</h1>
+          <StatusBadge tone="gold">WEB v1.19 sẵn sàng phát hành</StatusBadge>
+          <span className="lgo-card-kicker">Cổng owner · kỳ vọng tester · Download/Status/Support · chưa có public build</span>
+          <h1>Sẵn sàng phát hành</h1>
           <p className="lgo-hero-lead">
-            Trang này gom các điều kiện cần có trước khi website được phép nói về public download, closed test, tester intake hoặc support thật.
+            Trước kỳ vọng test phải có đủ bằng chứng. Linh Giới Online chưa mở bản tải công khai,
+            chưa cấp quyền tài khoản và chưa có backend production được duyệt.
           </p>
           <p>
-            Mục tiêu là giúp người chơi và reviewer hiểu stage hiện tại: web có thể đã đủ nội dung để giải thích release, nhưng chưa tự biến thành launch, account entitlement hoặc ticket backend.
+            Page này gom các gate cần đóng trước khi website được phép nói về tải game, closed test,
+            tester intake hoặc hỗ trợ thật: bằng chứng trước lời hứa, cùng một sự thật trên mọi bề mặt.
           </p>
-          <div className="lgo-product-first-actions">
-            <LinkButton href="/download/trust" tone="gold">Download trust</LinkButton>
-            <LinkButton href="/status" tone="spirit">Status</LinkButton>
-            <LinkButton href="/support/safety" tone="jade">Safety support</LinkButton>
+          <div className="lgo-product-first-actions lgo-service-status-actions">
+            <span className="lgo-service-status-seal">Chưa sẵn sàng phát hành<br /><small>NO_ACCEPTED_BACKEND_CONTRACT</small></span>
+            <LinkButton href="/download/trust" tone="gold">Tin cậy tải game</LinkButton>
+            <LinkButton href="/status" tone="spirit">Trạng thái</LinkButton>
+            <LinkButton href="/support/safety" tone="jade">Hỗ trợ an toàn</LinkButton>
           </div>
         </GameCard>
-        <figure className="lgo-release-readiness-design-board lgo-panel" aria-label="Release readiness production board">
+        <figure className="lgo-release-readiness-design-board lgo-service-proof-board lgo-panel" aria-label="Bảng cổng readiness phát hành">
           <img
             src="/game-art/design-boards/release-readiness-production-board.svg"
-            alt="Release readiness production board"
+            alt="Bảng cổng readiness phát hành"
             loading="eager"
             decoding="async"
           />
           <figcaption>
-            <StatusBadge tone="spirit">Game reference art</StatusBadge>
-            <strong>Production gate before tester expectation</strong>
-            <span>Small LinhGioiOnline production-board asset that visualizes owner gates without claiming a public build, entitlement, ticket backend or production launch.</span>
+            <StatusBadge tone="spirit">Ảnh tham chiếu game</StatusBadge>
+            <strong>Cổng readiness trước kỳ vọng tester</strong>
+            <span>Board LinhGioiOnline mô tả cổng owner, NO_ACCEPTED_BACKEND_CONTRACT và nguyên tắc Không mở funnel giả trước khi có bằng chứng phát hành.</span>
           </figcaption>
         </figure>
-        <SectionHeading eyebrow="Readiness before conversion" title="Release clarity phải đi trước mọi CTA nhạy cảm">
-          v1.19 tập trung vào product web: owner gates, tester expectation copy, download/status/support alignment và release route clarity.
-        </SectionHeading>
         <ReleaseReadinessHubBoard />
         <OwnerReleaseGateBoard />
         <ContentIaStartCta />
