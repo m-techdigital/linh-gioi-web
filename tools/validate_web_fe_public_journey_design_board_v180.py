@@ -18,7 +18,7 @@ def check_journey_board() -> None:
     require_file("apps/web/public/game-art/design-boards/journey-session-route-flow.svg")
     svg = read("apps/web/public/game-art/design-boards/journey-session-route-flow.svg")
     if "<svg" not in svg or len(svg) > 12000: fail("journey-session-route-flow.svg should be a small SVG reference-art asset")
-    require_text("apps/web/src/app/journey/page.tsx", ["lgo-journey-design-board", "/game-art/design-boards/journey-session-route-flow.svg", "Journey session route flow board", "loading=\"eager\"", "Game reference art", "không phải account hay guild backend"])
+    require_text("apps/web/src/app/journey/page.tsx", ["lgo-journey-design-board", "/game-art/design-boards/journey-session-route-flow.svg", "Bảng tuyến hành trình một phiên chơi", "loading=\"eager\"", "Ảnh tham chiếu trò chơi", "không phải backend tài khoản hay bang hội"])
     require_text("apps/web/src/app/globals.css", ["WEB v1.80 public journey session route-flow board", ".lgo-journey-design-board", ".lgo-journey-design-board img", "grid-template-columns: 1fr", "overflow-wrap: anywhere"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-journey-design-board-v180.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-JOURNEY-DESIGN-BOARD-v1.80.md", "LGO-WEB-FE-PUBLIC-JOURNEY-DESIGN-BOARD-REPORT-v1.80.md", "HANDOFF-LGO-WEB-FE-PUBLIC-JOURNEY-DESIGN-BOARD-v1.80.md"]: require_file(rel)

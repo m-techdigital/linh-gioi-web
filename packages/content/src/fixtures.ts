@@ -2830,11 +2830,11 @@ export const narrativeChapters: NarrativeChapter[] = [
 
 export const sampleSessionBeats: SessionBeat[] = [
   { time: "00–03", title: "Gặp nhau ở Linh Thành", summary: "Vào game, chào bạn bè, đọc hoạt động đang diễn ra và chọn việc muốn làm trong phiên." },
-  { time: "03–06", title: "Nhận mục tiêu", summary: "Chọn Daily hoặc tuyến phiêu lưu, chuẩn bị Lộ/trang bị và rời hub qua một cổng khu vực." },
+  { time: "03–06", title: "Rời Đông Môn", summary: "Chọn nhiệm vụ ngày hoặc tuyến phiêu lưu, chuẩn bị Lộ/trang bị và bước qua cửa ngõ ngoài thành." },
   { time: "06–12", title: "Tiến vào Linh Lâm", summary: "Di chuyển, chiến đấu, tương tác với môi trường và theo dấu linh khí bất thường." },
-  { time: "12–16", title: "Đối mặt tiểu thủ lĩnh", summary: "Một cao trào ngắn kiểm tra nhịp di chuyển, kỹ năng và khả năng đọc dấu hiệu tấn công." },
+  { time: "12–16", title: "Khám phá Cổ Di Tích", summary: "Một cao trào ngắn kiểm tra nhịp di chuyển, kỹ năng và khả năng đọc dấu hiệu từ tàn tích cổ." },
   { time: "16–18", title: "Nhận phần thưởng", summary: "Thu vật phẩm/nguyên liệu/tiến trình và quyết định giữ, dùng hay chuẩn bị cho mục tiêu kế tiếp." },
-  { time: "18–20", title: "Trở về Linh Thành", summary: "Đổi trang phục, gặp bang hội/bạn bè, sắp xếp tiến trình và kết thúc phiên ở nơi có cảm giác thuộc về." }
+  { time: "18–20", title: "Trở về Linh Thành mạnh hơn", summary: "Đổi trang phục, gặp bang hội/bạn bè, sắp xếp tiến trình và kết thúc phiên ở nơi có cảm giác thuộc về." }
 ];
 
 export const publicGameArtAssets: PublicGameArtAsset[] = [

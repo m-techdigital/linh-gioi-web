@@ -11,40 +11,40 @@ export default function JourneyPage() {
       <Stack className="lgo-player-facing-stack lgo-journeypage-stack">
         <PublicPlayerHero
           className="lgo-journey-hero"
-          badge="Player journey"
+          badge="Hành trình người chơi"
           badgeTone="jade"
           kicker="MỘT PHIÊN CHƠI · NHIỀU LÝ DO ĐỂ TRỞ LẠI"
           title="20 phút không chỉ để đánh quái"
-          lead="Vào Linh Thành, gặp bạn bè, chọn mục tiêu, đi Linh Lâm, chiến đấu, nhận item rồi quay lại thành để đổi trang phục, gặp guild và chuẩn bị cho lần lên đường kế tiếp."
+          lead="Vào Linh Thành, gặp bạn bè, chọn mục tiêu, rời Đông Môn, đi Linh Lâm, nhận chiến lợi rồi quay lại thành để đổi trang phục, gặp bang hội và chuẩn bị cho lần lên đường kế tiếp."
           actions={[
             { href: "/game", label: "Xem tuyến thế giới", tone: "spirit" },
             { href: "/classes", label: "Chọn Lộ", tone: "gold" }
           ]}
           visual={(
             <div className="lgo-journey-cycle" aria-hidden="true">
-              <span>Social</span><span>Adventure</span><span>Reward</span><span>Upgrade</span><i />
+              <span>Hội ngộ</span><span>Phiêu lưu</span><span>Chiến lợi</span><span>Mạnh hơn</span><i />
             </div>
           )}
         />
 
-        <figure className="lgo-journey-design-board lgo-panel" aria-label="Journey session route flow reference art">
+        <SessionLoopRail />
+        <WorldRouteJourney />
+
+        <figure className="lgo-journey-design-board lgo-panel" aria-label="Bảng tham chiếu vòng hành trình">
           <img
             src="/game-art/design-boards/journey-session-route-flow.svg"
-            alt="Journey session route flow board"
+            alt="Bảng tuyến hành trình một phiên chơi"
             loading="eager"
           />
           <figcaption>
-            <StatusBadge tone="jade">Game reference art</StatusBadge>
-            <strong>Journey là vòng route có nhịp, không phải account hay guild backend.</strong>
+            <StatusBadge tone="jade">Ảnh tham chiếu trò chơi</StatusBadge>
+            <strong>Hành trình là vòng trải nghiệm có nhịp, không phải backend tài khoản hay bang hội.</strong>
             <span>
-              Board này dùng visual thật từ LinhGioiOnline để nối social, adventure, reward và upgrade thành một phiên đọc rõ,
-              without claiming live guild, account persistence, inventory or party backend.
+              Board này dùng visual thật từ LinhGioiOnline để nối hội ngộ, phiêu lưu, chiến lợi và mạnh hơn thành một phiên đọc rõ,
+              không claim bang hội live, lưu tài khoản, kho đồ hoặc tổ đội backend.
             </span>
           </figcaption>
         </figure>
-
-        <SessionLoopRail />
-        <WorldRouteJourney />
       </Stack>
     </WebAppShell>
   );

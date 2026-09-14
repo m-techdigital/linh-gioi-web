@@ -60,9 +60,9 @@ test.describe("journey design target density", () => {
     expect(metrics.h1Size, "journey page h1 follows target scale").toBeLessThanOrEqual(isMobile ? 54 : 60);
     if (!isMobile) {
       expect(metrics.heroHeight, "desktop journey hero leaves room for route-flow board").toBeLessThanOrEqual(540);
-      expect(metrics.designBoardTop, "desktop journey board enters first fold").toBeLessThanOrEqual(665);
-      expect(metrics.designBoardVisibleHeight, "desktop journey board visible in first fold").toBeGreaterThanOrEqual(90);
-      expect(metrics.sessionTop, "desktop session loop starts near target board").toBeLessThanOrEqual(1180);
+      expect(metrics.sessionTop, "desktop session loop enters first fold").toBeLessThanOrEqual(690);
+      expect(metrics.sessionVisibleHeight, "desktop first session card visible in first fold").toBeGreaterThanOrEqual(90);
+      expect(metrics.designBoardTop, "desktop reference board follows session and route").toBeGreaterThan(metrics.sessionTop);
     } else {
       expect(metrics.heroBottom, "mobile journey hero does not force extreme blank fold").toBeLessThanOrEqual(1450);
     }

@@ -28,7 +28,7 @@ const PUBLIC_CLASSES_TARGET = {
 };
 
 const PUBLIC_JOURNEY_TARGET = {
-  label: "Journey detailed design target",
+  label: "Thiết kế chi tiết hành trình",
   href: "/design-reference/journey-detailed-design-target-v1123.png",
   scope: "Public Journey"
 };

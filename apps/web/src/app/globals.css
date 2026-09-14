@@ -5649,3 +5649,50 @@ h3 {
     font-size: clamp(1.32rem, 1.68vw, 1.68rem);
   }
 }
+
+/* WEB v1.138 journey Vietnamese design match: place the 20-minute loop directly after the hero like the refreshed target. */
+@media (min-width: 981px) {
+  .lgo-journeypage-stack {
+    gap: clamp(.75rem, 1.85vw, 1.55rem);
+  }
+
+  .lgo-journeypage-stack .lgo-journey-hero {
+    padding: clamp(1.25rem, 2.55vw, 2.25rem);
+  }
+
+  .lgo-journeypage-stack .lgo-journey-hero .lgo-cinematic-copy h1 {
+    font-size: clamp(3.05rem, 4.75vw, 4.7rem);
+  }
+
+  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) {
+    gap: clamp(.45rem, .78vw, .7rem);
+  }
+
+  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading {
+    display: grid;
+    grid-template-columns: minmax(17rem, .3fr) minmax(0, 1fr);
+    align-items: end;
+    column-gap: clamp(.9rem, 1.5vw, 1.2rem);
+    row-gap: .2rem;
+    max-width: none;
+  }
+
+  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading .lgo-eyebrow {
+    grid-column: 1 / -1;
+    margin-bottom: -.15rem;
+    font-size: .62rem;
+  }
+
+  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading h2 {
+    max-width: 18ch;
+    font-size: clamp(1.32rem, 1.68vw, 1.68rem);
+    line-height: 1;
+  }
+
+  .lgo-journeypage-stack .lgo-experience-section:nth-of-type(2) .lgo-section-heading p:last-child {
+    margin: 0;
+    max-width: none;
+    font-size: .78rem;
+    line-height: 1.28;
+  }
+}

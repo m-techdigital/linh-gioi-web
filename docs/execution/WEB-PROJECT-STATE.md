@@ -1,3 +1,16 @@
+Current phase: WEB-FE-JOURNEY-VIETNAMESE-DESIGN-MATCH-v1.138 WEB_CLOSED.
+
+Current decision: v1.138 closed the active `/journey` page slice after refreshing the Public Journey design target to Vietnamese and matching the implemented page in browser. `/journey` now follows the target structure: hero, immediate 20-minute journey loop, world route and delayed reference/boundary board. Entire program is NOT production-complete.
+
+- v1.138 refreshed `journey-detailed-design-target-v1123.png` with built-in imagegen and mirrored it under `docs/design/reference`.
+- v1.138 translated Public Journey target/page labels and 20-minute loop labels to Vietnamese.
+- v1.138 reordered `/journey` first-flow under `.lgo-journeypage-stack`: hero → session loop → world route → reference board.
+- v1.138 evidence: RED browser/e2e reproduced stale English label and session loop top 712.641px; Playwright desktop/mobile `/journey` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: 1280x720 hero 400.406px, session top 611.609, first card visible 108.391, overflow 0.
+- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.139. Select `/start` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-CLASSES-VIETNAMESE-DESIGN-MATCH-v1.137 WEB_CLOSED.
 
 Current decision: v1.137 closed the active `/classes` page slice after reviewing the registered Public Classes design target and matching the implemented page in browser. The target remains valid because it is Vietnamese, coherent with the Linh Giới Năm Lộ scenario, and visually aligned with the accepted dark fantasy direction. `/classes` now uses Vietnamese page/target labels, removes stale English first-flow labels, and keeps the five class cards visible in the desktop first fold. Entire program is NOT production-complete.
