@@ -824,9 +824,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "route-continuity-conversion-guide",
     category: "guides",
-    title: "Route continuity and safe conversion guide",
-    summary: "Guide giúp reviewer và người chơi hiểu cách đi từ Start sang World Loop, Download Trust, Status và Support mà không bị dẫn tới CTA giả.",
-    body: "Dùng /journey để xem route continuity map. Mỗi CTA phải nói rõ nó mở thông tin gì, khi nào an toàn để dùng, và không được ngầm hứa download, account, ticket hoặc payment thật khi backend/release artifacts chưa tồn tại.",
+    title: "Đi tiếp đúng luồng đọc",
+    summary: "Guide giúp người chơi đi theo Bắt đầu → Vòng lặp thế giới → Tin cậy tải game → Trạng thái → Hỗ trợ mà không hiểu nhầm CTA thành quyền tải, tài khoản hoặc hỗ trợ live.",
+    body: "Dùng guide này để biết CTA nào chỉ là đường đọc tiếp, CTA nào phải chờ artifact, backend hoặc owner gate. Đây là hướng dẫn public tĩnh, không phải conversion funnel production.",
     publishedAt: "2026-09-05T22:10:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -1168,33 +1168,33 @@ export const guideDetailSteps: GuideDetailStep[] = [
     slug: "route-continuity-conversion-guide",
     step: "01",
     title: "Bắt đầu từ câu hỏi người chơi",
-    action: "Mở /journey hoặc /start để chọn câu hỏi: hiểu game, kiểm tra tải, xem status, báo lỗi hay đọc roadmap.",
-    expectedResult: "Người chơi được dẫn tới route phù hợp trước khi chạm vào CTA nhạy cảm.",
-    blockedScope: "No personalized recommendation backend or account-aware routing."
+    action: "Mở trang Bắt đầu hoặc bản đồ hành trình để chọn nhu cầu: hiểu game, kiểm tải, xem trạng thái, báo lỗi hay đọc roadmap.",
+    expectedResult: "Người chơi đi vào route phù hợp trước khi chạm CTA nhạy cảm.",
+    blockedScope: "Chưa có gợi ý cá nhân hóa, định tuyến theo tài khoản hoặc phân quyền theo nhân vật."
   },
   {
     slug: "route-continuity-conversion-guide",
     step: "02",
-    title: "Đi qua Download Trust trước mọi download CTA",
-    action: "Nếu muốn tải game, đọc /download/trust để biết artifact, checksum, provenance và owner approval cần gì.",
-    expectedResult: "Không còn hiểu nhầm rằng web đã có launcher/public build chỉ vì có Download route.",
-    blockedScope: "No public game artifact, no placeholder checksum, no entitlement backend."
+    title: "Đi qua vòng lặp thế giới",
+    action: "Đọc vòng lặp thế giới để hiểu Cổng Linh, Người Gác Cổng và Đá Luyện Tập trước khi kỳ vọng tải game hoặc combat live.",
+    expectedResult: "Người chơi hiểu web đang mô tả cảm nhận thế giới, chưa mở bản phát hành chơi thật.",
+    blockedScope: "Chưa có combat live, nhiệm vụ, loot, economy hoặc tiến trình tài khoản."
   },
   {
     slug: "route-continuity-conversion-guide",
     step: "03",
-    title: "Support phải giữ privacy boundary",
-    action: "Nếu muốn báo lỗi, mở /support/safety để biết nên chuẩn bị mô tả, bước tái hiện, ảnh/log nào và không gửi bí mật.",
-    expectedResult: "Feedback hữu ích hơn nhưng không tạo ticket/support backend giả.",
-    blockedScope: "No secure inbox, no account lookup, no SLA or moderation dashboard."
+    title: "Kiểm gate tải game và trạng thái",
+    action: "Nếu muốn tải game, đọc Tin cậy tải game và Trạng thái để biết artifact, checksum, owner gate và blocker hiện tại.",
+    expectedResult: "CTA tải game không bị hiểu nhầm thành launcher, quyền tải hoặc cam kết release.",
+    blockedScope: "Chưa có public build, checksum thật, entitlement backend hoặc deployment claim."
   },
   {
     slug: "route-continuity-conversion-guide",
     step: "04",
-    title: "Đóng vòng đọc bằng Status và Community Onboarding",
-    action: "Sau khi hiểu blocker, đọc /status và /community/onboarding để biết stage hiện tại và kỳ vọng cộng đồng.",
-    expectedResult: "Người chơi hiểu public/internal/blocked surfaces trước khi chờ closed test hoặc góp ý.",
-    blockedScope: "No live forum/chat/guild backend or production deployment."
+    title: "Đóng vòng bằng hỗ trợ an toàn",
+    action: "Khi gặp blocker, đọc Hỗ trợ an toàn để chuẩn bị mô tả lỗi và biết dữ liệu nào không nên gửi.",
+    expectedResult: "Người chơi biết cách góp ý an toàn mà không kỳ vọng ticket live, tra cứu tài khoản hoặc SLA production.",
+    blockedScope: "Chưa có inbox bảo mật, lookup tài khoản, moderation dashboard hoặc kênh hỗ trợ live."
   },
   {
     slug: "world-gameplay-loop-guide",
