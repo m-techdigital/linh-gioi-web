@@ -16,8 +16,8 @@ function toneForState(value: string) {
 export function ReleaseReadinessHubBoard() {
   return (
     <section className="lgo-panel lgo-release-readiness-hub-board" aria-labelledby="release-readiness-hub-heading">
-      <SectionHeading eyebrow="WEB v1.19 release readiness" title="Một hub để đọc release gates trước mọi CTA nhạy cảm">
-        Release readiness không phải nút tải hay đăng ký test. Đây là bản đồ proof-before-claim cho Download, Status, Support và Community.
+      <SectionHeading eyebrow="WEB v1.19 readiness phát hành" title="Một hub để đọc gate phát hành trước mọi CTA nhạy cảm">
+        Readiness phát hành không phải nút tải hay đăng ký test. Đây là bản đồ bằng chứng trước claim cho Download, Status, Support và Community.
       </SectionHeading>
       <Grid id="release-readiness-hub-heading">
         {releaseReadinessHubItems.map((item) => (
@@ -25,7 +25,7 @@ export function ReleaseReadinessHubBoard() {
             <StatusBadge tone="gold">{item.title}</StatusBadge>
             <h3>{item.playerQuestion}</h3>
             <p>{item.readinessAnswer}</p>
-            <p><strong>Owner evidence:</strong> {item.ownerEvidence}</p>
+            <p><strong>Bằng chứng owner:</strong> {item.ownerEvidence}</p>
             <small>{item.blockedClaim}</small>
             <LinkButton href={item.route} tone="spirit">Đọc surface liên quan</LinkButton>
           </GameCard>
@@ -38,8 +38,8 @@ export function ReleaseReadinessHubBoard() {
 export function OwnerReleaseGateBoard() {
   return (
     <section className="lgo-panel lgo-owner-release-gate-board" aria-labelledby="owner-release-gate-heading">
-      <SectionHeading eyebrow="Owner gates" title="Không chuyển wording sang release nếu gate owner chưa có proof">
-        Mỗi gate cần owner, proof và player-visible rule. Đây là cách giữ website đáng tin trước closed test hoặc public artifact.
+      <SectionHeading eyebrow="Gate owner" title="Không chuyển wording sang phát hành nếu gate owner chưa có bằng chứng">
+        Mỗi gate cần owner, bằng chứng và quy tắc người chơi nhìn thấy. Đây là cách giữ website đáng tin trước closed test hoặc gói build công khai.
       </SectionHeading>
       <Grid id="owner-release-gate-heading">
         {ownerReleaseGates.map((gate) => (
@@ -47,8 +47,8 @@ export function OwnerReleaseGateBoard() {
             <StatusBadge tone={toneForState(gate.currentState)}>{gate.currentState}</StatusBadge>
             <h3>{gate.gate}</h3>
             <p><strong>Owner:</strong> {gate.owner}</p>
-            <p><strong>Proof:</strong> {gate.proofRequired}</p>
-            <p><strong>Public rule:</strong> {gate.playerVisibleRule}</p>
+            <p><strong>Bằng chứng:</strong> {gate.proofRequired}</p>
+            <p><strong>Quy tắc public:</strong> {gate.playerVisibleRule}</p>
             <small>{gate.mustNotSkip}</small>
           </GameCard>
         ))}
@@ -92,7 +92,7 @@ export function ReleaseSurfaceAlignmentBoard() {
               <p><strong>Phải nói:</strong> {surface.mustSay}</p>
               <small>{surface.contradictionToAvoid}</small>
             </div>
-            <LinkButton href={surface.mustLinkTo} tone="gold">Readiness hub</LinkButton>
+            <LinkButton href={surface.mustLinkTo} tone="gold">Hub readiness</LinkButton>
           </article>
         ))}
       </div>
@@ -102,16 +102,16 @@ export function ReleaseSurfaceAlignmentBoard() {
 
 export function ReleaseReadinessHubCta() {
   return (
-    <section className="lgo-detail-next-steps lgo-release-readiness-cta" aria-label="Release readiness next steps">
+    <section className="lgo-detail-next-steps lgo-release-readiness-cta" aria-label="Bước tiếp theo readiness phát hành">
       <div>
-        <StatusBadge tone="gold">WEB v1.19 release readiness hub</StatusBadge>
-        <h2>Trước khi mời test hoặc mở download, hãy đọc owner gates và surface alignment.</h2>
-        <p>Release readiness hub gom bằng chứng, tester expectation và Download/Status/Support alignment mà không mở CTA release giả.</p>
+        <StatusBadge tone="gold">WEB v1.19 hub readiness phát hành</StatusBadge>
+        <h2>Trước khi mời test hoặc mở tải game, hãy đọc gate owner và đồng bộ bề mặt.</h2>
+        <p>Hub readiness phát hành gom bằng chứng, kỳ vọng tester và đồng bộ Download/Status/Support mà không mở CTA phát hành giả.</p>
       </div>
       <div className="lgo-product-first-actions">
-        <LinkButton href="/release/readiness" tone="gold">Release readiness</LinkButton>
+        <LinkButton href="/release/readiness" tone="gold">Readiness phát hành</LinkButton>
         <LinkButton href="/release" tone="spirit">Release narrative</LinkButton>
-        <LinkButton href="/download/trust" tone="jade">Download trust</LinkButton>
+        <LinkButton href="/download/trust" tone="jade">Tin cậy tải game</LinkButton>
       </div>
     </section>
   );

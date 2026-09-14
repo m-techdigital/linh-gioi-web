@@ -36,7 +36,7 @@ def check_target() -> None:
     if all((ROOT / rel).is_file() for rel in targets) and (ROOT / targets[0]).read_bytes() != (ROOT / targets[1]).read_bytes(): fail("homepage target public/docs copies differ")
 def check_source() -> None:
     require_text("AGENTS.md", ["Sequential Page Completion rule", "Just-in-time Design rule", "commit and push", "Do not create broad multi-page design batches"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["start again from the homepage", "complete one page at a time", "DESIGN_TARGET_ATTACH_OR_CREATE just-in-time", "COMMIT_PUSH", "Do not move to another page before CLOSED"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["complete one page at a time", "DESIGN_TARGET_ATTACH_OR_CREATE just-in-time", "COMMIT_PUSH", "Do not move to another page before CLOSED"])
     require_text("apps/web/src/app/page.tsx", ["MMORPG hành động cộng đồng 2D", "Bản sắc trò chơi", "Đồ họa 2D sắc nét", "Trung tâm cộng đồng", "Chiến đấu hành động", "Sự kiện thế giới"])
     forbid_text("apps/web/src/app/page.tsx", ["2D Side-Scrolling Social Action MMORPG", "Social hub", "Action combat", "World events", "Game identity"])
     require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_HOMEPAGE_TARGET", "Thiết kế chi tiết trang chủ", "homepage-detailed-design-target-v1118.png", "Public Homepage", "Thiết kế component/trạng thái"])

@@ -1337,63 +1337,79 @@ export const guideDetailSteps: GuideDetailStep[] = [
 
 export const downloadTrustGates: DownloadTrustGate[] = [
   {
-    id: "artifact-exists",
-    title: "Có artifact build thật",
+    id: "goi-build-that",
+    title: "Có gói build thật",
     status: "blocked",
-    evidenceRequired: "Accepted game build archive, platform target, version, file size and owner approval.",
-    playerFacingCopy: "Hiện chưa có file tải public; trang Download chỉ giải thích điều kiện mở tải.",
-    mustNotClaim: "Không ghi nút tải ngay, chơi ngay, launcher ready hoặc public release ready."
+    evidenceRequired: "File build game đã được owner duyệt, đúng nền tảng, đúng phiên bản, có dung lượng và ghi chú phát hành.",
+    playerFacingCopy: "Hiện chưa có file tải công khai; trang Download chỉ giải thích điều kiện mở tải.",
+    mustNotClaim: "Không ghi nút tải ngay, chơi ngay, launcher sẵn sàng hoặc phát hành công khai sẵn sàng."
   },
   {
-    id: "checksum-visible",
-    title: "Checksum hiển thị cạnh link tải",
+    id: "sha256-hien-thi",
+    title: "SHA256 hiển thị cạnh link tải",
     status: "planned",
-    evidenceRequired: "SHA256 sidecar generated from the exact public artifact and verified after upload.",
-    playerFacingCopy: "Khi có build, checksum sẽ được hiển thị để người chơi kiểm tra file tải.",
-    mustNotClaim: "Không tạo checksum giả hoặc hash placeholder như thể đã có build."
+    evidenceRequired: "Mã SHA256 tạo từ đúng file public cuối cùng và được kiểm tra lại sau khi upload.",
+    playerFacingCopy: "Khi có build, SHA256 sẽ được hiển thị để người chơi kiểm tra file tải.",
+    mustNotClaim: "Không tạo SHA256 giả hoặc hash placeholder như thể đã có build."
   },
   {
-    id: "provenance-readable",
-    title: "Provenance đọc được bởi người chơi",
+    id: "nguon-goc-ro-rang",
+    title: "Nguồn gốc đọc được bởi người chơi",
     status: "planned",
-    evidenceRequired: "Release source, build command, platform, timestamp, limitations and rollback note.",
-    playerFacingCopy: "Release note phải nói rõ build đến từ đâu, dùng cho ai và còn giới hạn gì.",
-    mustNotClaim: "Không biến internal runtime pass thành public release readiness."
+    evidenceRequired: "Nguồn phát hành, lệnh build, nền tảng, thời điểm tạo và ghi chú rollback.",
+    playerFacingCopy: "Release note phải nói rõ build đến từ đâu, dùng cho ai và được tạo khi nào.",
+    mustNotClaim: "Không biến runtime pass nội bộ thành readiness phát hành công khai."
   },
   {
-    id: "support-ready",
-    title: "Support expectation đã sẵn sàng",
+    id: "gioi-han-da-biet",
+    title: "Giới hạn đã biết đặt cạnh CTA",
+    status: "planned",
+    evidenceRequired: "Danh sách tính năng chưa có, phạm vi test, lỗi đã biết và đường rollback.",
+    playerFacingCopy: "Người chơi đọc được build này có gì, chưa có gì và không nên kỳ vọng phần nào.",
+    mustNotClaim: "Không hứa full MMO, combat/economy/social live hoặc open beta khi chưa được duyệt."
+  },
+  {
+    id: "ky-vong-ho-tro",
+    title: "Kỳ vọng hỗ trợ đã sẵn sàng",
     status: "blocked",
-    evidenceRequired: "Known issues, account limitations, contact path and no-ticket-backend disclosure.",
-    playerFacingCopy: "Người chơi biết hỏi ở đâu và biết web chưa có ticket/account lookup backend.",
-    mustNotClaim: "Không hứa hỗ trợ tài khoản, refund, entitlement hoặc moderation live khi backend chưa có."
+    evidenceRequired: "Lỗi đã biết, giới hạn tài khoản, kênh liên hệ và disclosure rằng chưa có ticket backend.",
+    playerFacingCopy: "Người chơi biết hỏi ở đâu và biết web chưa có backend ticket hoặc tra cứu tài khoản.",
+    mustNotClaim: "Không hứa hỗ trợ tài khoản, refund, quyền truy cập hoặc moderation live khi backend chưa có."
+  },
+  {
+    id: "phe-duyet-owner",
+    title: "Phê duyệt chủ sở hữu",
+    status: "blocked",
+    evidenceRequired: "Owner xác nhận Download, Status, Support và Community cùng nói đúng trạng thái build.",
+    playerFacingCopy: "Chỉ khi owner duyệt, trang mới chuyển từ giải thích điều kiện sang mở tải thật.",
+    mustNotClaim: "Không launch âm thầm, không mở beta giả và không bỏ qua chữ ký owner."
   }
 ];
 
 export const releaseEvidenceRequirements: ReleaseEvidenceRequirement[] = [
   {
-    label: "Build artifact",
-    owner: "Game release owner",
-    requiredEvidence: "Exact artifact filename, platform, size, created timestamp and owner approval.",
-    publicDisplayRule: "Chỉ hiển thị CTA tải khi artifact tồn tại và đã qua checksum/provenance review."
+    label: "Gói build",
+    owner: "Owner phát hành game",
+    requiredEvidence: "Tên file build chính xác, nền tảng, dung lượng, thời điểm tạo và phê duyệt owner.",
+    publicDisplayRule: "Chỉ hiển thị CTA tải khi gói build tồn tại và đã qua review SHA256/nguồn gốc."
   },
   {
-    label: "SHA256 checksum",
-    owner: "Release packaging owner",
-    requiredEvidence: "SHA256 sidecar produced from the final downloadable archive and verified after upload.",
-    publicDisplayRule: "Checksum phải nằm cạnh download link; không dùng placeholder hash."
+    label: "SHA256",
+    owner: "Owner đóng gói phát hành",
+    requiredEvidence: "Mã SHA256 tạo từ file tải cuối cùng và được kiểm tra lại sau khi upload.",
+    publicDisplayRule: "SHA256 phải nằm cạnh link tải; không dùng hash placeholder."
   },
   {
-    label: "Known limitations",
-    owner: "Product/content owner",
-    requiredEvidence: "Readable list of unavailable systems: production auth, DB, combat/economy/social where applicable.",
-    publicDisplayRule: "Player copy must say what works and what is not included in the build."
+    label: "Giới hạn đã biết",
+    owner: "Owner sản phẩm/nội dung",
+    requiredEvidence: "Danh sách dễ đọc về hệ thống chưa có: xác thực production, DB, combat/economy/social nếu liên quan.",
+    publicDisplayRule: "Copy cho người chơi phải nói phần nào dùng được và phần nào chưa nằm trong build."
   },
   {
-    label: "Rollback/support note",
-    owner: "Support owner",
-    requiredEvidence: "Where to report issues, what support cannot inspect, and how to revert/remove a test build.",
-    publicDisplayRule: "Support expectations must be visible before download access is offered."
+    label: "Ghi chú rollback/hỗ trợ",
+    owner: "Owner hỗ trợ",
+    requiredEvidence: "Nơi báo lỗi, phần hỗ trợ không thể kiểm tra và cách rollback/gỡ build test.",
+    publicDisplayRule: "Kỳ vọng hỗ trợ phải hiển thị trước khi mở quyền tải."
   }
 ];
 
@@ -1406,18 +1422,18 @@ export const statusTrustSurfaces: StatusTrustSurface[] = [
     forbiddenClaim: "No production deployment or live CMS claim."
   },
   {
-    surface: "Download artifact",
+    surface: "Gói tải game",
     visibility: "blocked",
-    sourceOfTruth: "Accepted game build artifact plus checksum/provenance packet",
-    currentTruth: "No public game download artifact is accepted yet.",
-    forbiddenClaim: "No fake download, no launcher-ready or release-ready claim."
+    sourceOfTruth: "Gói build game đã được duyệt cùng gói SHA256/nguồn gốc",
+    currentTruth: "Hiện chưa có gói tải game công khai được duyệt.",
+    forbiddenClaim: "Không tải giả, không claim launcher sẵn sàng hoặc release-ready."
   },
   {
-    surface: "Account / portal entitlement",
+    surface: "Tài khoản / quyền Portal",
     visibility: "blocked",
-    sourceOfTruth: "Accepted backend Auth/API/DB/RBAC/audit contract from canonical game backend",
-    currentTruth: "Portal pages remain UX shell / fixture-only and cannot grant access.",
-    forbiddenClaim: "No production auth, no DB persistence, no real account lookup."
+    sourceOfTruth: "Contract Auth/API/DB/RBAC/audit đã được duyệt từ game backend canonical",
+    currentTruth: "Portal vẫn là UX shell / fixture-only và không cấp quyền truy cập thật.",
+    forbiddenClaim: "Không claim xác thực production, DB persistence hoặc tra cứu tài khoản thật."
   },
   {
     surface: "Runtime/browser guardrails",
@@ -2467,36 +2483,36 @@ export const releaseReadinessHubItems: ReleaseReadinessHubItem[] = [
 
 export const ownerReleaseGates: OwnerReleaseGate[] = [
   {
-    gate: "Release artifact",
-    owner: "Game/release owner",
+    gate: "Gói phát hành",
+    owner: "Owner game/phát hành",
     currentState: "blocked",
-    proofRequired: "Build artifact, SHA256 sidecar, manifest, version note and rollback instruction.",
-    playerVisibleRule: "Show not-available copy until artifact proof exists.",
-    mustNotSkip: "No placeholder file or fake checksum."
+    proofRequired: "Gói build, SHA256, manifest, version note và hướng dẫn rollback.",
+    playerVisibleRule: "Hiển thị copy chưa có tải cho đến khi bằng chứng gói build tồn tại.",
+    mustNotSkip: "Không dùng file placeholder hoặc SHA256 giả."
   },
   {
-    gate: "Known limitations",
-    owner: "Product/gameplay owner",
+    gate: "Giới hạn đã biết",
+    owner: "Owner sản phẩm/gameplay",
     currentState: "ready-copy",
-    proofRequired: "Accepted limitation note tied to exact artifact and stage.",
-    playerVisibleRule: "Place limitation copy near release/test CTA.",
-    mustNotSkip: "No full MMO, combat/economy or live world promise."
+    proofRequired: "Ghi chú giới hạn đã duyệt, gắn với đúng gói build và stage.",
+    playerVisibleRule: "Đặt copy giới hạn gần CTA phát hành/test.",
+    mustNotSkip: "Không hứa full MMO, combat/economy hoặc live world."
   },
   {
-    gate: "Tester intake",
-    owner: "Community/support owner",
+    gate: "Tiếp nhận tester",
+    owner: "Owner cộng đồng/hỗ trợ",
     currentState: "planned",
-    proofRequired: "Official intake channel, privacy boundary, triage process and response expectation.",
-    playerVisibleRule: "Explain what to prepare, not where to submit secrets.",
-    mustNotSkip: "No secure ticket inbox or account recovery promise."
+    proofRequired: "Kênh tiếp nhận chính thức, ranh giới privacy, quy trình triage và kỳ vọng phản hồi.",
+    playerVisibleRule: "Giải thích cần chuẩn bị gì, không yêu cầu gửi secrets.",
+    mustNotSkip: "Không hứa secure ticket inbox hoặc khôi phục tài khoản."
   },
   {
-    gate: "Owner sign-off",
+    gate: "Owner phê duyệt",
     owner: "AXIRO/LGO release owner",
     currentState: "blocked",
-    proofRequired: "Explicit approval that Download, Status, Support and Community copy agree with the artifact state.",
-    playerVisibleRule: "Do not switch from readiness wording to release wording before sign-off.",
-    mustNotSkip: "No silent public launch or open beta copy."
+    proofRequired: "Phê duyệt rõ ràng rằng copy Download, Status, Support và Community khớp trạng thái gói build.",
+    playerVisibleRule: "Không chuyển từ wording readiness sang wording phát hành trước khi được phê duyệt.",
+    mustNotSkip: "Không launch công khai âm thầm hoặc dùng copy open beta."
   }
 ];
 

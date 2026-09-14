@@ -46,7 +46,7 @@ const PUBLIC_DOWNLOAD_TARGET = {
 };
 
 const PUBLIC_DOWNLOAD_TRUST_TARGET = {
-  label: "Download trust detailed design target",
+  label: "Thiết kế chi tiết tin cậy tải game",
   href: "/design-reference/download-trust-detailed-design-target-v1126.png",
   scope: "Public Download Trust"
 };

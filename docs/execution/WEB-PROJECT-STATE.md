@@ -1,3 +1,17 @@
+Current phase: WEB-FE-DOWNLOAD-TRUST-VIETNAMESE-DESIGN-MATCH-v1.141 WEB_CLOSED.
+
+Current decision: v1.141 closed the active `/download/trust` page slice after refreshing the Public Download Trust design target to Vietnamese and matching the implemented page in browser. `/download/trust` now follows the target trust-gate scenario more closely: compact trust hero, immediate cổng kiểm tin tải game board, six Vietnamese release-evidence gates and delayed readiness/owner follow-up. Entire program is NOT production-complete.
+
+- v1.141 refreshed `download-trust-detailed-design-target-v1126.png` with built-in imagegen and mirrored it under `docs/design/reference`.
+- v1.141 translated Public Download Trust target/page labels, trust components and release gate fixture labels to Vietnamese.
+- v1.141 reworked `/download/trust` first-flow under `.lgo-downloadtrustpage-stack`: hero → trust gate board → why/readiness → owner gates.
+- v1.141 evidence: RED browser/e2e reproduced stale English target label; Playwright desktop/mobile `/download/trust` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: 1280x720 hero 416.328, trust gate top 421.922, first gates top 1160.734, overflow 0.
+- Design must follow the Linh Giới game scenario and stay coherent with accepted targets; stale, English-heavy or scenario-wrong targets must be replaced before implementation.
+- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.142. Select `/release` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-DOWNLOAD-VIETNAMESE-DESIGN-MATCH-v1.140 WEB_CLOSED.
 
 Current decision: v1.140 closed the active `/download` page slice after refreshing the Public Download design target to Vietnamese and matching the implemented page in browser. `/download` now follows the target release-gate scenario more closely: sealed public gate hero, five readiness gates, official channel cards and delayed trust/detail sections. Entire program is NOT production-complete.

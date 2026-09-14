@@ -20,36 +20,36 @@ import { PlayerTrustReleaseCta, ReleaseNarrativeStageBoard } from "../../../comp
 import { PerformanceBudgetCta, StaticRouteCompositionBoard } from "../../../components/PublicPerformanceBudgetSections";
 import { ReleaseReadinessHubCta, OwnerReleaseGateBoard } from "../../../components/PublicReleaseReadinessHubSections";
 
-export const metadata = { title: "Download trust" };
+export const metadata = { title: "Tin cậy tải game" };
 
 export default function DownloadTrustPage() {
   return (
     <WebAppShell>
       <Stack className="lgo-player-facing-stack lgo-downloadtrustpage-stack">
         <GameCard className="lgo-detail-hero-card lgo-download-trust-hero-card">
-          <StatusBadge tone="gold">WEB v1.11 staged release messaging · WEB v1.10 download trust</StatusBadge>
-          <span className="lgo-card-kicker">No fake download · no placeholder checksum · no entitlement claim</span>
-          <h1>Download trust / checksum / provenance</h1>
+          <StatusBadge tone="gold">Cổng kiểm tin tải game · Không mở link khi chưa có build thật</StatusBadge>
+          <span className="lgo-card-kicker">Không tải giả · không SHA256 giả · không claim quyền truy cập</span>
+          <h1>Tin cậy tải game</h1>
           <p className="lgo-hero-lead">
-            Trang này giải thích vì sao Linh Giới Online chưa hiển thị link tải public, và bằng chứng nào phải có trước khi download CTA được mở.
+            Trang này giải thích vì sao Linh Giới Online chưa hiển thị link tải công khai, và bằng chứng nào phải có trước khi CTA tải game được mở.
           </p>
           <p>
-            Đây là static public guidance. No public game download artifact, no production auth, no DB persistence,
-            no real portal entitlement and no production deployment are claimed.
+            Đây là hướng dẫn public tĩnh. Hiện chưa có gói tải game công khai, chưa có xác thực production,
+            chưa có DB persistence, chưa có quyền Portal thật và chưa claim triển khai production.
           </p>
           <div className="lgo-product-first-actions">
             <LinkButton href="/download" tone="gold">Trạng thái tải game</LinkButton>
-            <LinkButton href="/guides/release-trust-and-checksum-guide" tone="jade">Release trust guide</LinkButton>
+            <LinkButton href="/guides/release-trust-and-checksum-guide" tone="jade">Hướng dẫn tin cậy phát hành</LinkButton>
           </div>
         </GameCard>
-        <SectionHeading eyebrow="Trust-first download" title="Người chơi cần bằng chứng trước khi tải">
-          Runtime/browser/e2e chỉ là guardrail nội bộ. Public download cần artifact thật, SHA256, provenance, known limitations và support expectation.
+        <DownloadTrustGateBoard />
+        <SectionHeading eyebrow="Tin cậy trước khi tải" title="Vì sao cần trang này">
+          Runtime/browser/e2e chỉ là guardrail nội bộ. Tải công khai cần gói phát hành thật, SHA256, nguồn gốc, giới hạn đã biết và kỳ vọng hỗ trợ.
         </SectionHeading>
         <div className="lgo-download-trust-first-gates">
           <ReleaseReadinessHubCta />
           <OwnerReleaseGateBoard />
         </div>
-        <DownloadTrustGateBoard />
         <PlayerTrustReleaseCta />
         <ReleaseNarrativeStageBoard />
         <ContentIaStartCta />

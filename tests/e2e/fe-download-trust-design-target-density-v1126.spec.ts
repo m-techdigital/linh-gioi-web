@@ -57,11 +57,10 @@ test.describe("download trust design target density", () => {
     expect(metrics.overflow, "download trust horizontal overflow").toBeLessThanOrEqual(0);
     expect(metrics.h1Size, "download trust h1 follows target scale").toBeLessThanOrEqual(isMobile ? 54 : 60);
     if (!isMobile) {
-      expect(metrics.heroBottom, "desktop trust hero leaves space for release readiness").toBeLessThanOrEqual(510);
-      expect(metrics.readinessTop, "desktop release readiness enters first fold").toBeLessThanOrEqual(620);
-      expect(metrics.ownerGateTop, "desktop owner gate follows target board density").toBeLessThanOrEqual(770);
-      expect(metrics.ownerGateVisibleHeight, "desktop owner gate visible in first fold").toBeGreaterThanOrEqual(90);
-      expect(metrics.trustGateTop, "desktop trust gate board stays near the target sequence").toBeLessThanOrEqual(1700);
+      expect(metrics.heroBottom, "desktop trust hero leaves space for trust gate").toBeLessThanOrEqual(510);
+      expect(metrics.trustGateTop, "desktop trust gate enters first fold").toBeLessThanOrEqual(520);
+      expect(metrics.readinessTop, "desktop release readiness follows after trust board").toBeGreaterThan(metrics.trustGateTop);
+      expect(metrics.ownerGateTop, "desktop owner gate follows after trust board").toBeLessThanOrEqual(1300);
     } else {
       expect(metrics.heroBottom, "mobile trust hero does not force extreme blank fold").toBeLessThanOrEqual(1450);
     }

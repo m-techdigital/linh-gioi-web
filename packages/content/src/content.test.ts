@@ -113,8 +113,8 @@ it("keeps WEB v1.18 player trust/release narrative bounded", () => {
 it("keeps WEB v1.19 release readiness hub bounded", () => {
   expect(releaseReadinessHubItems.length).toBeGreaterThanOrEqual(4);
   expect(releaseReadinessHubItems.map((item) => item.route)).toContain("/release/readiness");
-  expect(ownerReleaseGates.map((item) => item.gate)).toContain("Release artifact");
-  expect(ownerReleaseGates.every((item) => item.mustNotSkip.includes("No "))).toBe(true);
+  expect(ownerReleaseGates.map((item) => item.gate)).toContain("Gói phát hành");
+  expect(ownerReleaseGates.every((item) => item.mustNotSkip.includes("No ") || item.mustNotSkip.includes("Không "))).toBe(true);
   expect(testerExpectationCopy.every((item) => item.supportBoundary.includes("No "))).toBe(true);
   expect(releaseSurfaceAlignment.map((item) => item.mustLinkTo)).toContain("/release/readiness");
 });

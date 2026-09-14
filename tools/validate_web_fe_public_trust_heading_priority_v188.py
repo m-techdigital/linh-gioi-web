@@ -19,10 +19,10 @@ def require_order(rel: str, first: str, second: str) -> None:
     a, b = text.find(first), text.find(second)
     if a < 0 or b < 0 or a > b: fail(f"{rel}: expected {first} before {second}")
 def check_routes() -> None:
-    require_order("apps/web/src/app/download/trust/page.tsx", "<h1>Download trust / checksum / provenance</h1>", "<ReleaseReadinessHubCta />")
+    require_order("apps/web/src/app/download/trust/page.tsx", "<h1>Tin cậy tải game</h1>", "<DownloadTrustGateBoard />")
     require_order("apps/web/src/app/roadmap/page.tsx", "<h1>Roadmap phát triển web</h1>", "<ReleaseReadinessHubCta />")
     require_order("apps/web/src/app/community/onboarding/page.tsx", "<h1>Community / roadmap onboarding</h1>", "<ReleaseReadinessHubCta />")
-    require_text("apps/web/src/app/download/trust/page.tsx", ["No public game download artifact", "no production auth", "no real portal entitlement"])
+    require_text("apps/web/src/app/download/trust/page.tsx", ["chưa có gói tải game công khai", "chưa có xác thực production", "chưa có quyền Portal thật"])
     require_text("apps/web/src/app/roadmap/page.tsx", ["WEB-08 remains blocked", "no production auth is claimed here"])
     require_text("apps/web/src/app/community/onboarding/page.tsx", ["No live community/chat/forum/guild backend", "no fake waitlist"])
 def check_tests_and_docs() -> None:

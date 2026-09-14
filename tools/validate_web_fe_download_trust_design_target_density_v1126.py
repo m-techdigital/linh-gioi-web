@@ -30,13 +30,13 @@ def check_target() -> None:
     if all((ROOT / rel).is_file() for rel in targets) and (ROOT / targets[0]).read_bytes() != (ROOT / targets[1]).read_bytes(): fail("download trust detailed target public/docs copies differ")
 def check_tests_docs() -> None:
     for rel in ["tests/e2e/fe-download-trust-design-target-density-v1126.spec.ts", "docs/execution/specs/WEB-FE-DOWNLOAD-TRUST-DESIGN-TARGET-DENSITY-v1.126.md", "LGO-WEB-FE-DOWNLOAD-TRUST-DESIGN-TARGET-DENSITY-REPORT-v1.126.md", "HANDOFF-LGO-WEB-FE-DOWNLOAD-TRUST-DESIGN-TARGET-DENSITY-v1.126.md"]: require_file(rel)
-    require_text("tests/e2e/fe-download-trust-design-target-density-v1126.spec.ts", ["download trust design target density", "Public Download Trust", "download-trust-detailed-design-target-v1126.png", "desktop release readiness enters first fold", "desktop owner gate follows target board density", "desktop trust gate board stays near the target sequence", "download trust h1 follows target scale"])
+    require_text("tests/e2e/fe-download-trust-design-target-density-v1126.spec.ts", ["download trust design target density", "Public Download Trust", "download-trust-detailed-design-target-v1126.png", "desktop trust gate enters first fold", "desktop owner gate follows after trust board", "download trust h1 follows target scale"])
     require_text("apps/web/src/app/download/trust/page.tsx", ["lgo-downloadtrustpage-stack", "lgo-download-trust-hero-card", "lgo-download-trust-first-gates", "DownloadTrustGateBoard", "OwnerReleaseGateBoard"])
     page = read("apps/web/src/app/download/trust/page.tsx")
     if page.find("<DownloadTrustGateBoard />") > page.find("<PerformanceBudgetCta />"):
         fail("apps/web/src/app/download/trust/page.tsx: DownloadTrustGateBoard should stay near the first trust gates")
     require_text("apps/web/src/app/globals.css", ["WEB v1.126 download trust detailed design target density", ".lgo-downloadtrustpage-stack", ".lgo-download-trust-hero-card", ".lgo-download-trust-first-gates", ".lgo-owner-release-gate-board", ".lgo-trust-panel"])
-    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_DOWNLOAD_TRUST_TARGET", "Download trust detailed design target", "download-trust-detailed-design-target-v1126.png", "Public Download Trust", "pathname === \"/download/trust\""])
+    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_DOWNLOAD_TRUST_TARGET", "Thiết kế chi tiết tin cậy tải game", "download-trust-detailed-design-target-v1126.png", "Public Download Trust", "pathname === \"/download/trust\""])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Download Trust", "download-trust-detailed-design-target-v1126.png", "WEB-FE-DOWNLOAD-TRUST-DETAILED-DESIGN-TARGET-v1.126.png", "Design Target First"])
     registry = read("docs/design/DESIGN-TARGET-REGISTRY.md")
     for line in registry.splitlines():

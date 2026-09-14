@@ -33,10 +33,10 @@ def check_download_trust_board() -> None:
     require_text("apps/web/src/components/PublicTrustSections.tsx", [
         "ReleaseTrustDesignBoard",
         "/game-art/design-boards/release-trust-gate.svg",
-        "Release trust gate design board",
+        "Bảng thiết kế cổng tin cậy phát hành",
         "loading=\"eager\"",
-        "Game reference art",
-        "copied from LinhGioiOnline docs",
+        "Ảnh tham chiếu game",
+        "tài liệu LinhGioiOnline",
     ])
     require_text("apps/web/src/app/download/trust/page.tsx", [
         "ReleaseTrustDesignBoard",

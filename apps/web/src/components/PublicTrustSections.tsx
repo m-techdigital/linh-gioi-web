@@ -15,8 +15,8 @@ function toneForTrust(value: string) {
 export function DownloadTrustGateBoard() {
   return (
     <section className="lgo-panel lgo-trust-panel" aria-labelledby="download-trust-gates-heading">
-      <SectionHeading eyebrow="WEB v1.10 download trust" title="Download CTA chỉ mở khi có bằng chứng thật">
-        Trang Download phải ưu tiên niềm tin của người chơi: artifact, checksum, provenance, limitations và support expectation rõ ràng trước khi có link tải.
+      <SectionHeading eyebrow="Cổng kiểm tin tải game" title="CTA tải game chỉ mở khi có bằng chứng thật">
+        Trang Download phải ưu tiên niềm tin của người chơi: gói build, SHA256, nguồn gốc, giới hạn đã biết và kỳ vọng hỗ trợ rõ ràng trước khi có link tải.
       </SectionHeading>
       <Grid id="download-trust-gates-heading">
         {downloadTrustGates.map((gate) => (
@@ -36,17 +36,17 @@ export function DownloadTrustGateBoard() {
 
 export function ReleaseTrustDesignBoard() {
   return (
-    <figure className="lgo-release-trust-board lgo-panel" aria-label="Release trust gate design board">
+    <figure className="lgo-release-trust-board lgo-panel" aria-label="Bảng thiết kế cổng tin cậy phát hành">
       <img
         src="/game-art/design-boards/release-trust-gate.svg"
-        alt="Release trust gate design board"
+        alt="Bảng thiết kế cổng tin cậy phát hành"
         loading="eager"
         decoding="async"
       />
       <figcaption>
-        <StatusBadge tone="spirit">Game reference art</StatusBadge>
-        <strong>Gate review before public download</strong>
-        <span>Small reference board copied from LinhGioiOnline docs; it visualizes the release gate without claiming a downloadable build.</span>
+        <StatusBadge tone="spirit">Ảnh tham chiếu game</StatusBadge>
+        <strong>Kiểm gate trước khi tải công khai</strong>
+        <span>Bảng tham chiếu nhỏ từ tài liệu LinhGioiOnline; mô tả cổng phát hành mà không claim có build tải được.</span>
       </figcaption>
     </figure>
   );
@@ -55,14 +55,14 @@ export function ReleaseTrustDesignBoard() {
 export function ReleaseEvidenceChecklist() {
   return (
     <section className="lgo-panel lgo-release-evidence" aria-labelledby="release-evidence-heading">
-      <SectionHeading eyebrow="Release evidence" title="Bằng chứng phải hiện cạnh download, không nằm trong log nội bộ" />
+      <SectionHeading eyebrow="Bằng chứng phát hành" title="Bằng chứng phải hiện cạnh nút tải, không nằm trong log nội bộ" />
       <div id="release-evidence-heading" className="lgo-release-evidence-list">
         {releaseEvidenceRequirements.map((item) => (
           <article className="lgo-release-evidence-item" key={item.label}>
             <span className="lgo-card-kicker">{item.owner}</span>
             <h3>{item.label}</h3>
             <p>{item.requiredEvidence}</p>
-            <p><strong>Public rule:</strong> {item.publicDisplayRule}</p>
+            <p><strong>Quy tắc public:</strong> {item.publicDisplayRule}</p>
           </article>
         ))}
       </div>
@@ -73,15 +73,15 @@ export function ReleaseEvidenceChecklist() {
 export function StatusTrustBoard() {
   return (
     <section className="lgo-panel lgo-status-trust" aria-labelledby="status-trust-heading">
-      <SectionHeading eyebrow="WEB v1.10 status trust" title="Mỗi status surface có source-of-truth và forbidden claim riêng">
-        Status không được biến guardrail kỹ thuật thành release readiness. Public, internal và blocked surfaces phải đọc được ngay.
+      <SectionHeading eyebrow="WEB v1.10 tin cậy trạng thái" title="Mỗi bề mặt trạng thái có nguồn sự thật và claim bị cấm riêng">
+        Status không được biến guardrail kỹ thuật thành readiness phát hành. Các bề mặt public, nội bộ và bị chặn phải đọc được ngay.
       </SectionHeading>
       <Grid id="status-trust-heading">
         {statusTrustSurfaces.map((surface) => (
           <GameCard key={surface.surface} className="lgo-status-trust-card">
             <StatusBadge tone={toneForTrust(surface.visibility)}>{surface.visibility}</StatusBadge>
             <h3>{surface.surface}</h3>
-            <p><strong>Source of truth:</strong> {surface.sourceOfTruth}</p>
+            <p><strong>Nguồn sự thật:</strong> {surface.sourceOfTruth}</p>
             <p>{surface.currentTruth}</p>
             <small>{surface.forbiddenClaim}</small>
           </GameCard>
@@ -94,7 +94,7 @@ export function StatusTrustBoard() {
 export function PlayerSupportExpectationBoard() {
   return (
     <section className="lgo-panel lgo-support-expectations" aria-labelledby="support-expectations-heading">
-      <SectionHeading eyebrow="Support expectation" title="Người chơi biết hôm nay nhận được gì và chưa có gì" />
+      <SectionHeading eyebrow="Kỳ vọng hỗ trợ" title="Người chơi biết hôm nay nhận được gì và chưa có gì" />
       <div id="support-expectations-heading" className="lgo-support-expectation-list">
         {playerSupportExpectations.map((item) => (
           <article className="lgo-support-expectation-item" key={item.topic}>
@@ -111,18 +111,18 @@ export function PlayerSupportExpectationBoard() {
 
 export function DownloadTrustCta() {
   return (
-    <section className="lgo-trust-cta" aria-label="Download trust next steps">
+    <section className="lgo-trust-cta" aria-label="Bước tiếp theo về tin cậy tải game">
       <Stack>
-        <StatusBadge tone="spirit">WEB v1.10 product trust</StatusBadge>
+        <StatusBadge tone="spirit">WEB v1.10 niềm tin sản phẩm</StatusBadge>
         <h2>Download/status copy phải đáng tin trước khi web có release thật.</h2>
         <p>
-          Runtime/browser/e2e chỉ giúp chống regression. Người chơi cần thấy artifact, checksum, provenance,
-          limitations và support boundary trước khi có bất kỳ link tải nào.
+          Runtime/browser/e2e chỉ giúp chống regression. Người chơi cần thấy gói build, SHA256, nguồn gốc,
+          giới hạn và ranh giới hỗ trợ trước khi có bất kỳ link tải nào.
         </p>
         <div className="lgo-product-first-actions">
-          <LinkButton href="/download" tone="gold">Download status</LinkButton>
-          <LinkButton href="/guides/release-trust-and-checksum-guide" tone="jade">Checksum guide</LinkButton>
-          <LinkButton href="/status" tone="spirit">Status surfaces</LinkButton>
+          <LinkButton href="/download" tone="gold">Trạng thái tải game</LinkButton>
+          <LinkButton href="/guides/release-trust-and-checksum-guide" tone="jade">Hướng dẫn SHA256</LinkButton>
+          <LinkButton href="/status" tone="spirit">Bề mặt trạng thái</LinkButton>
         </div>
       </Stack>
     </section>
