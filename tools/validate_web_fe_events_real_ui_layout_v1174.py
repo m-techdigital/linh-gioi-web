@@ -91,15 +91,15 @@ def main() -> int:
 
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-EVENTS-REAL-UI-LAYOUT-v1.174 WEB_CLOSED',
-        'Select `/support`',
+        'Select `/support/help`',
         '/tmp/events-desktop-v1174.png',
         '/tmp/events-mobile-v1174.png',
         'Real Browser UI/UX Layout First',
         'Base First',
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.204',
-        'Current FE scope: select `/support`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.205',
+        'Current FE scope: select `/support/help`',
         'Real Browser UI/UX Layout First',
         'Base UI/UX Layout',
     ])

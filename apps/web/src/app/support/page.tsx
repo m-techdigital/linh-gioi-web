@@ -98,38 +98,44 @@ export default function SupportPage() {
         <SupportFaqDepth />
         <PlayerSafetySupportCta />
         <PlayerSupportExpectationBoard />
-        <FaqHelpfulnessCta />
-        <PlayerTrustReleaseCta />
-        <ContentIaStartCta />
-        <RouteContinuityCta />
-        <WorldGameplayLoopCta />
-        <AccessibilityReadabilityCta />
-        <FaqDiscoveryGroupBoard />
-        <FaqHelpfulnessPromptBoard />
-        <IssueCategoryRouteBoard />
-        <NoSearchBackendNoteBoard />
-        <PlayerSafetyPrinciplesBoard />
-        <SupportIssuePathBoard />
-        <CommunityFeedbackGuidance />
-        <CommunityConductBoard />
-        <FocusOrderBoard />
-
-        <section className="lgo-panel lgo-support-community-principles">
-          <SectionHeading eyebrow="Cộng đồng" title="Nguyên tắc hỗ trợ người chơi" />
-          <Grid>
-            {communityPrinciples.map((item) => (
-              <GameCard key={item.title}>
-                <h3>{item.title}</h3>
-                <p>{item.summary}</p>
-              </GameCard>
-            ))}
-          </Grid>
-        </section>
-
-        <EmptyState title="Chưa có hệ thống ticket thật">
-          Quy trình ticket, khôi phục tài khoản, phân quyền vận hành và audit log chỉ mở khi có hợp đồng backend/API/RBAC được chấp nhận.
-        </EmptyState>
-        <ClosedTesterInformationPackCta />
+        <details className="lgo-service-disclosure-stack lgo-support-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>Giữ đủ helpfulness, trust, content IA, route continuity, safety, community và closed tester nhưng không ép toàn bộ proof board vào first-flow hỗ trợ.</small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <FaqHelpfulnessCta />
+            <PlayerTrustReleaseCta />
+            <ContentIaStartCta />
+            <RouteContinuityCta />
+            <WorldGameplayLoopCta />
+            <AccessibilityReadabilityCta />
+            <FaqDiscoveryGroupBoard />
+            <FaqHelpfulnessPromptBoard />
+            <IssueCategoryRouteBoard />
+            <NoSearchBackendNoteBoard />
+            <PlayerSafetyPrinciplesBoard />
+            <SupportIssuePathBoard />
+            <CommunityFeedbackGuidance />
+            <CommunityConductBoard />
+            <FocusOrderBoard />
+            <section className="lgo-panel lgo-support-community-principles">
+              <SectionHeading eyebrow="Cộng đồng" title="Nguyên tắc hỗ trợ người chơi" />
+              <Grid>
+                {communityPrinciples.map((item) => (
+                  <GameCard key={item.title}>
+                    <h3>{item.title}</h3>
+                    <p>{item.summary}</p>
+                  </GameCard>
+                ))}
+              </Grid>
+            </section>
+            <EmptyState title="Chưa có hệ thống ticket thật">
+              Quy trình ticket, khôi phục tài khoản, phân quyền vận hành và audit log chỉ mở khi có hợp đồng backend/API/RBAC được chấp nhận.
+            </EmptyState>
+            <ClosedTesterInformationPackCta />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );

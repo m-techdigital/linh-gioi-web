@@ -545,6 +545,126 @@
 }
 
 
+
+/* Support station composes the shared compact proof/disclosure layout for the current public support page. */
+@media (min-width: 981px) {
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-hero {
+    align-items: center;
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 350px);
+    padding: clamp(.72rem, 1.15vw, .94rem);
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-hero h1 {
+    max-width: 14ch;
+    font-size: clamp(2.08rem, 2.75vw, 2.72rem);
+    line-height: .94;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-hero .lgo-hero-lead,
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-hero p {
+    font-size: .8rem;
+    line-height: 1.26;
+    margin-block: .28rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-design-board {
+    margin-top: -1.45rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-topic-board {
+    margin-top: -.25rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-faq-panel .lgo-faq-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-player-safety-cta {
+    align-items: center;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, .32fr);
+    gap: .75rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-player-safety-cta .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .45rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-expanded-evidence {
+    margin-top: -.35rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .lgo-service-compact-proof-page.lgo-supportpage-stack {
+    gap: .72rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-hero {
+    gap: .48rem;
+    padding: .78rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-hero h1 {
+    font-size: clamp(1.82rem, 7vw, 2.02rem);
+    line-height: .96;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack h2 {
+    font-size: clamp(1.14rem, 5.6vw, 1.54rem);
+    line-height: 1.08;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack h3 {
+    font-size: clamp(.88rem, 4.5vw, 1rem);
+    line-height: 1.08;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-hero .lgo-hero-lead,
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-hero p {
+    font-size: .78rem;
+    line-height: 1.24;
+    margin-block: .18rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-design-board {
+    margin-top: 0;
+    padding: .64rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-design-board img {
+    max-height: 180px;
+    object-fit: contain;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-topic-board,
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-faq-panel,
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-player-safety-cta,
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-expectations {
+    padding: .68rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-topic-board .lgo-grid,
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-faq-panel .lgo-faq-list,
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-expectation-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .48rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-player-safety-cta .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .45rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-faq-item p,
+  .lgo-service-compact-proof-page.lgo-supportpage-stack .lgo-support-expectation-item p {
+    -webkit-line-clamp: 2;
+  }
+}
+
 /* Shared support/help FAQ route-map layout. */
 .lgo-service-compact-proof-page .lgo-support-help-route-grid {
   display: grid;
