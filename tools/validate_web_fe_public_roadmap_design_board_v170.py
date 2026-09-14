@@ -33,13 +33,13 @@ def check_roadmap_board() -> None:
     require_text("apps/web/src/app/roadmap/page.tsx", [
         "lgo-roadmap-design-board",
         "/game-art/design-boards/public-roadmap-flow.svg",
-        "Public roadmap flow design board",
+        "Bảng luồng roadmap public Linh Giới",
         "loading=\"eager\"",
-        "Game reference art",
-        "without claiming production auth",
+        "Board tham chiếu",
+        "không công bố đăng nhập vận hành",
     ])
-    require_text("apps/web/src/app/globals.css", [
-        "WEB v1.70 public roadmap real reference-art board",
+    require_text("packages/ui/src/service-layout.css", [
+        "Shared roadmap page layout for public planning gate surfaces",
         ".lgo-roadmap-design-board",
         ".lgo-roadmap-design-board img",
         "grid-template-columns: 1fr",
@@ -56,7 +56,7 @@ def check_tests_and_docs() -> None:
         require_file(rel)
     require_text("tests/e2e/fe-public-roadmap-design-board-v170.spec.ts", [
         "/roadmap",
-        "Public roadmap flow design board",
+        "Bảng luồng roadmap public Linh Giới",
         "/game-art/design-boards/public-roadmap-flow.svg",
         "loading",
         "naturalWidth",

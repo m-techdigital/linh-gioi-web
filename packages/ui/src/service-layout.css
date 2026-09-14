@@ -1782,3 +1782,194 @@
     overflow: hidden;
   }
 }
+
+/* Shared roadmap page layout for public planning gate surfaces. */
+.lgo-roadmappage-stack {
+  gap: 1.05rem;
+}
+
+.lgo-roadmappage-stack .lgo-detail-hero-card {
+  padding: clamp(1rem, 2.2vw, 1.55rem);
+}
+
+.lgo-roadmappage-stack .lgo-detail-hero-card h1 {
+  font-size: clamp(2.1rem, 4.1vw, 3.5rem);
+  line-height: .92;
+}
+
+.lgo-roadmappage-stack .lgo-detail-hero-card p {
+  max-width: 74ch;
+}
+
+.lgo-roadmap-design-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(17rem, .9fr);
+  align-items: center;
+  gap: .95rem;
+  overflow: hidden;
+  padding: .9rem;
+}
+
+.lgo-roadmap-design-board img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 240px;
+  height: auto;
+  border: 1px solid rgba(49,216,232,.20);
+  border-radius: var(--lgo-radius-lg);
+  background: rgba(7,17,31,.72);
+  object-fit: contain;
+}
+
+.lgo-roadmap-design-board figcaption {
+  display: grid;
+  gap: .55rem;
+  color: var(--lgo-color-text-muted);
+  font-size: .9rem;
+  line-height: 1.45;
+}
+
+.lgo-roadmap-design-board figcaption strong {
+  color: var(--lgo-color-text-primary);
+  font-size: clamp(1rem, 1.4vw, 1.22rem);
+  line-height: 1.18;
+}
+
+.lgo-roadmap-design-board figcaption span {
+  overflow-wrap: anywhere;
+}
+
+.lgo-roadmap-route-board,
+.lgo-roadmap-list-board {
+  display: grid;
+  gap: .85rem;
+  padding: .95rem;
+}
+
+.lgo-roadmap-route-board .lgo-section-heading,
+.lgo-roadmap-list-board .lgo-section-heading {
+  margin: 0;
+}
+
+.lgo-roadmap-step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+}
+
+.lgo-roadmap-step-card {
+  display: grid;
+  align-content: start;
+  gap: .5rem;
+  min-width: 0;
+  border: 1px solid rgba(153,246,228,.18);
+  border-radius: var(--lgo-radius-lg);
+  background: rgba(7,17,31,.62);
+  padding: .8rem;
+}
+
+.lgo-roadmap-step-card h2 {
+  margin: 0;
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  line-height: 1.12;
+}
+
+.lgo-roadmap-step-card p {
+  margin: 0;
+  color: var(--lgo-color-text-muted);
+  font-size: .86rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 960px) {
+  .lgo-roadmap-design-board {
+    grid-template-columns: 1fr;
+  }
+
+  .lgo-roadmap-step-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .lgo-roadmappage-stack {
+    gap: .92rem;
+  }
+
+  .lgo-roadmappage-stack .lgo-detail-hero-card {
+    padding: .85rem;
+  }
+
+  .lgo-roadmappage-stack .lgo-detail-hero-card h1 {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+
+  .lgo-roadmappage-stack .lgo-detail-hero-card p,
+  .lgo-roadmappage-stack .lgo-detail-hero-card .lgo-hero-lead {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    font-size: .8rem;
+    line-height: 1.24;
+    margin-block: .22rem;
+  }
+
+  .lgo-roadmappage-stack .lgo-detail-hero-card .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .45rem;
+  }
+
+  .lgo-roadmappage-stack .lgo-detail-hero-card .lgo-link-button {
+    min-height: 34px;
+    padding-inline: .55rem;
+    font-size: .72rem;
+  }
+
+  .lgo-roadmap-design-board,
+  .lgo-roadmap-route-board,
+  .lgo-roadmap-list-board {
+    padding: .72rem;
+  }
+
+  .lgo-roadmap-design-board {
+    gap: .55rem;
+  }
+
+  .lgo-roadmap-design-board img {
+    max-height: 160px;
+  }
+
+  .lgo-roadmap-design-board figcaption,
+  .lgo-roadmap-step-card p {
+    font-size: .72rem;
+    line-height: 1.22;
+  }
+
+  .lgo-roadmap-design-board figcaption strong {
+    font-size: .96rem;
+    line-height: 1.08;
+  }
+
+  .lgo-roadmap-step-grid {
+    gap: .55rem;
+  }
+
+  .lgo-roadmap-step-card {
+    gap: .3rem;
+    padding: .58rem;
+  }
+
+  .lgo-roadmap-step-card h2 {
+    font-size: .86rem;
+  }
+
+  .lgo-roadmap-route-board .lgo-section-heading p,
+  .lgo-roadmap-step-card p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}

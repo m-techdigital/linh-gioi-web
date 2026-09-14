@@ -25,7 +25,7 @@ async function collectRoadmapBoardMetrics(page: Page): Promise<RoadmapBoardMetri
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const image = document.querySelector<HTMLImageElement>('img[alt="Public roadmap flow design board"]');
+    const image = document.querySelector<HTMLImageElement>('img[alt="Bảng luồng roadmap public Linh Giới"]');
     const rect = image?.getBoundingClientRect();
     const caption = image?.closest("figure")?.querySelector("figcaption");
     return {
@@ -49,7 +49,7 @@ test.describe("public roadmap design board", () => {
   test("/roadmap renders the real roadmap flow board without mobile overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/roadmap`);
     await expect(page.getByRole("heading", { name: "Roadmap phát triển web" })).toBeVisible();
-    await expect(page.getByRole("img", { name: "Public roadmap flow design board" })).toBeVisible();
+    await expect(page.getByRole("img", { name: "Bảng luồng roadmap public Linh Giới" })).toBeVisible();
 
     const metrics = await collectRoadmapBoardMetrics(page);
     expect(metrics.board, "roadmap flow board metrics").not.toBeNull();

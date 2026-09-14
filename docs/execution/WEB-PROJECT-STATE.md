@@ -1,3 +1,16 @@
+Current phase: WEB-FE-ROADMAP-REAL-UI-LAYOUT-v1.153 WEB_CLOSED.
+
+Current decision: v1.153 closed the active `/roadmap` page slice as a real browser UI/UX Layout task. The existing roadmap board remained the design guardrail; work focused on the rendered page, first-flow hierarchy, Vietnamese game-scenario boundaries and shared Base First layout. Entire program is NOT production-complete.
+
+- v1.153 did not create a new design batch because the existing roadmap board was sufficient for comparison after minimal Vietnamese alignment in the rendered page.
+- v1.153 replaced the old English-heavy first-flow with Vietnamese `Roadmap phát triển web`, a compact boundary, the roadmap flow board and a three-step roadmap gate path.
+- v1.153 moved roadmap board/layout CSS out of `apps/web/src/app/globals.css` and into shared `packages/ui/src/service-layout.css`.
+- v1.153 evidence: browser/e2e desktop/mobile v1.153 and historical v1.70 roadmap-board compatibility; source validator; Web/content/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/roadmap-desktop-v1153.png` and `/tmp/roadmap-mobile-v1153.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.154. Select `/game/loop` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-ACCESSIBILITY-REAL-UI-LAYOUT-v1.152 WEB_CLOSED.
 
 Current decision: v1.152 closed the active `/accessibility` page slice as a real browser UI/UX Layout task. The existing Public Service design target remained the guardrail; work focused on the rendered page and shared Base First layout. Entire program is NOT production-complete.

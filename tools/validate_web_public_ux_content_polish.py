@@ -82,7 +82,7 @@ def main() -> int:
     for text in ["Download readiness checklist", "No public production download is available"]:
         require_text("apps/web/src/app/download/page.tsx", text)
 
-    for text in ["Roadmap phát triển web", "WEB-08", "no production auth"]:
+    for text in ["Roadmap phát triển web", "WEB-08", "không công bố xác thực vận hành"]:
         require_text("apps/web/src/app/roadmap/page.tsx", text)
 
     for text in ["Cộng đồng Linh Giới", "Chưa có chat, forum, guild"]:
