@@ -561,8 +561,8 @@ export const contentEntries: ContentEntry[] = [
     slug: "news-guide-detail-pages-started",
     category: "news",
     title: "News và guide detail được làm sâu hơn",
-    summary: "WEB v1.9 biến các trang danh sách thành trải nghiệm detail dễ đọc cho news, guide, status và nội dung giải thích tải game.",
-    body: "WEB v1.9 keeps the product focus on public website quality. It adds article detail sections, guide detail steps, status explainers and download explanations while preserving non-claims: no CMS, no production auth, no DB persistence, no live support backend and no public game download artifact.",
+    summary: "WEB v1.9 biến trang danh sách thành trải nghiệm detail dễ đọc cho tin tức, hướng dẫn, trạng thái và tải game.",
+    body: "WEB v1.9 làm sâu các trang detail public: bài news có ngữ cảnh, guide có bước đọc tiếp, trạng thái có giải thích và tải game có ranh giới rõ. Nội dung vẫn là web public tĩnh, không mở CMS, DB, hỗ trợ live hoặc artifact tải game thật.",
     publishedAt: "2026-09-05T11:00:00.000Z",
     status: "published",
     featured: true,
@@ -939,6 +939,20 @@ export const downloadBuilds: DownloadBuild[] = [
 
 
 export const contentDetailSections: ContentDetailSection[] = [
+  {
+    slug: "news-guide-detail-pages-started",
+    heading: "Detail page giải thích sâu hơn summary",
+    body: "Bài viết này ghi lại lý do các trang tin và guide cần có section chi tiết, tác động với người chơi và ranh giới không tuyên bố quá phạm vi ngay trong page thật.",
+    playerImpact: "Người chơi không chỉ đọc tiêu đề; họ thấy nên đọc route nào tiếp theo và vì sao chưa có backend, CMS hoặc hỗ trợ live.",
+    nonClaim: "Không mở CMS, không có workflow biên tập backend và không có dữ liệu live support."
+  },
+  {
+    slug: "news-guide-detail-pages-started",
+    heading: "News, guide, status và download phải cùng nhịp đọc",
+    body: "News detail dùng chung hero, detail cards, related news và next-step CTA để liên kết các route public mà không biến nội dung thành log kỹ thuật.",
+    playerImpact: "Người chơi chuyển từ tin tức sang hướng dẫn, trạng thái hoặc tải game với cùng một rhythm UI trên desktop/mobile.",
+    nonClaim: "Không công bố artifact tải game, không mở xác thực vận hành chính thức và không tạo quyền tải game."
+  },
 
   {
     slug: "public-game-info-depth-started",
@@ -1060,13 +1074,6 @@ export const contentDetailSections: ContentDetailSection[] = [
     body: "Governance web yêu cầu mỗi page đi theo shell public đã chấp nhận, dùng Base First cho layout lặp lại và chỉ sửa design target vừa đủ khi nó lệch UI chung.",
     playerImpact: "Người chơi thấy cùng một header, menu, footer và nhịp đọc trên các trang public thay vì mỗi route một kiểu trình bày.",
     nonClaim: "Không tính tiến độ design-only, không sao chép game backend, không tạo owner component trùng lặp."
-  },
-  {
-    slug: "news-guide-detail-pages-started",
-    heading: "Detail page là nơi giải thích sâu, không chỉ lặp summary",
-    body: "WEB v1.9 bổ sung section chi tiết, impact cho người chơi, và non-claim ngay trong từng bài viết/guide để public copy rõ hơn.",
-    playerImpact: "Mỗi bài tin/guide có ngữ cảnh, việc cần làm tiếp và boundary rõ để tránh hiểu nhầm là đã có release/live service.",
-    nonClaim: "No CMS, no backend editorial workflow, no live announcement scheduler."
   },
   {
     slug: "status-download-trust-polish-started",

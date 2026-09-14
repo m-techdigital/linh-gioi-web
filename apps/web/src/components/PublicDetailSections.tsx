@@ -17,6 +17,7 @@ const articleDetailTitles: Record<string, string> = {
   "public-ux-content-polish-started": "Bài viết giải thích polish UX public",
   "visual-responsive-polish-started": "Bài viết giải thích visual và responsive",
   "public-game-info-depth-started": "Bài viết giải thích thông tin game public",
+  "news-guide-detail-pages-started": "Bài viết giải thích news và guide detail",
 };
 
 function articleDetailTitle(slug: string) {

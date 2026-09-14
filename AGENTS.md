@@ -77,6 +77,7 @@ Web contract records live under `packages/contracts` after contract sync begins.
 ## Design Target Guardrail rule
 
 Real Browser UI/UX Layout First is Priority #1 for FE/UI work. A design target is only a guardrail for comparison, not the primary deliverable and not a reason to delay browser implementation. For the selected page, first check whether a usable target already exists. If it exists, use it and move to the rendered page. If it is missing or blocks comparison because it is stale, English-heavy or wrong for the game scenario, make the smallest correction needed, save/register that target, and immediately continue to page UI/UX Layout work. Do not regenerate, redesign, batch-design, or localize design assets beyond what is necessary to compare and implement the current page.
+Design targets must stay synchronized with the accepted common UI/UX layout: shared header, footer, menu, shell and navigation patterns. If a target diverges from those common patterns, supersede only the smallest current-page target area needed, then return to browser layout work.
 
 ## Base UI/UX Layout rule
 
