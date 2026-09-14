@@ -1,3 +1,14 @@
+Current phase: WEB-FE-DESIGN-TARGET-CUE-SPACING-v1.108 WEB_CLOSED.
+
+Current decision: v1.108 FE design-target cue spacing slice closed. Public, Portal and Ops Design Target First links now keep a visible gap between labels and the `↗` cue while preserving registered v1.95 visual targets. Entire program is NOT production-complete.
+
+- v1.108 updates shared public/workspace Design Target First link styles instead of page-local spacing overrides.
+- v1.108 uses existing v1.95 Component/state, Public Core/Public Service, Player Portal and Ops/Admin design targets; no new design target was required and no stale target was replaced.
+- v1.108 evidence: RED browser/e2e reproduced missing computed cue gap; Playwright desktop/mobile cue spacing PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.109.
+
 Current phase: WEB-FE-DESIGN-TARGET-VISIBLE-NEW-TAB-CUE-v1.107 WEB_CLOSED.
 
 Current decision: v1.107 FE design-target visible new-tab cue slice closed. Public, Portal and Ops Design Target First links now show a visible `↗` cue while preserving accessible new-tab labels and registered v1.95 visual targets. Entire program is NOT production-complete.

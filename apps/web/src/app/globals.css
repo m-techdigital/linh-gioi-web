@@ -63,6 +63,7 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: .4rem;
   font-weight: 800;
   background: rgba(49,216,232,0.12);
   color: var(--lgo-color-text-primary);
@@ -3415,6 +3416,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: .4rem;
   min-height: 44px;
   border: 1px solid rgba(49, 216, 232, .42);
   border-radius: var(--lgo-radius-pill);

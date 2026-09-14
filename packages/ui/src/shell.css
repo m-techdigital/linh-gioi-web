@@ -410,6 +410,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: .4rem;
   min-height: 44px;
   border: 1px solid rgba(49, 216, 232, .42);
   border-radius: var(--lgo-radius-pill);
