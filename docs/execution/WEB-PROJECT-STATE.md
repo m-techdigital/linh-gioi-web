@@ -1,3 +1,20 @@
+Current phase: WEB-FE-NEWS-PLAYER-SAFETY-SUPPORT-REAL-UI-LAYOUT-v1.190 WEB_CLOSED.
+
+Current decision: v1.190 closed the active `/news/player-safety-support-faq-polish-started` page slice as a real browser UI/UX Layout task. The existing public core design target and shared public shell were sufficient as the comparison guardrail after checking shared header/menu/footer/menu coherence; work focused on the rendered News Detail article, player safety support FAQ context, compact article rhythm, related-news grid, keyboard navigation and shared Base First detail layout. Entire program is NOT production-complete.
+
+- v1.190 did not create a design batch because the existing public core target and registered route target were enough for comparison after checking shared shell coherence.
+- v1.190 browser/e2e RED showed the detail page still used generic article detail behavior and had no current two-card safety support depth.
+- v1.190 completed the page with current-slug detail heading, two compact detail cards and Vietnamese non-claims without live support ticket, account lookup, moderation dashboard, backend integration, secure inbox, live moderation, production SLA or download entitlement claims.
+- v1.190 reused the shared News Detail layout in `packages/ui/src/service-layout.css`; no current-page selectors were added to `apps/web/src/app/globals.css`.
+- v1.190 explicitly checked rendered screenshots against the public core design target/shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.190 final browser/e2e metrics: desktop hero bottom 449px, depth top 460px, first depth card top 603px, related top 834px, next steps top 1169px, scrollHeight 1822px, h1/max font 42.48px, 2 desktop related columns, overflow 0; mobile hero bottom 454px, depth top 464px, first depth card top 622px, related top 1071px, next steps top 1586px, scrollHeight 2494px, h1/max font 27.52px, 1 mobile related column, overflow 0.
+- v1.190 evidence: browser/e2e desktop/mobile v1.190; screenshot review `/tmp/news-player-safety-support-desktop-v1190.png` and `/tmp/news-player-safety-support-mobile-v1190.png`; source validator; Web/UI checks; Web build; clean current-state closure validator.
+- Design target sync rule remains recorded: design targets must stay synchronized with shared header, footer, menu, shell and navigation; if a current target diverges, only the smallest current-page target area may be corrected before returning to browser layout.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.191. Select `/news/accessibility-readability-polish-started` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-NEWS-WORLD-GAMEPLAY-LOOP-REAL-UI-LAYOUT-v1.189 WEB_CLOSED.
 
 Current decision: v1.189 closed the active `/news/world-gameplay-loop-depth-started` page slice as a real browser UI/UX Layout task. The existing public core design target and shared public shell were sufficient as the comparison guardrail after checking shared header/menu/footer/menu coherence; work focused on the rendered News Detail article, world gameplay loop context, compact article rhythm, related-news grid, keyboard navigation and shared Base First detail layout. Entire program is NOT production-complete.

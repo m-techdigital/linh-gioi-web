@@ -751,7 +751,7 @@ export const contentEntries: ContentEntry[] = [
     category: "news",
     title: "FAQ an toàn và hỗ trợ rõ hơn",
     summary: "WEB v1.14 tập trung vào wording an toàn người chơi, chất lượng FAQ hỗ trợ, báo lỗi an toàn dữ liệu và kỳ vọng hỗ trợ thử nghiệm.",
-    body: "WEB v1.14 giữ trọng tâm ở website public. Slice này thêm hub an toàn/hỗ trợ, hướng dẫn báo lỗi an toàn dữ liệu, kỳ vọng hỗ trợ thử nghiệm và ranh giới cộng đồng mà không claim ticket live, tra cứu tài khoản, moderation dashboard hoặc backend integration.",
+    body: "WEB v1.14 giữ trọng tâm ở website public. Slice này thêm hub an toàn/hỗ trợ, hướng dẫn báo lỗi an toàn dữ liệu, kỳ vọng hỗ trợ thử nghiệm và ranh giới cộng đồng mà không tuyên bố có ticket hỗ trợ trực tiếp, tra cứu account, dashboard điều phối hoặc tích hợp backend.",
     publishedAt: "2026-09-05T14:00:00.000Z",
     status: "published",
     featured: true,
@@ -1095,6 +1095,20 @@ export const contentDetailSections: ContentDetailSection[] = [
     body: "Trang trạng thái không gom browser guardrail với readiness phát hành; mỗi surface cần nguồn xác thực và claim bị chặn riêng.",
     playerImpact: "Người đọc hiểu cái gì đang public, cái gì chỉ là kiểm thử nội bộ, và cái gì bị chặn bởi backend hoặc artifact phát hành.",
     nonClaim: "Browser/e2e chỉ là bằng chứng guardrail, không phải readiness phát hành public."
+  },
+  {
+    slug: "player-safety-support-faq-polish-started",
+    heading: "FAQ an toàn đặt ranh giới hỗ trợ trước kỳ vọng ticket",
+    body: "WEB v1.14 gom các câu hỏi về báo lỗi an toàn, dữ liệu riêng tư, hỗ trợ thử nghiệm và kênh cộng đồng thành một luồng đọc rõ cho người chơi mới.",
+    playerImpact: "Người chơi biết cách chuẩn bị mô tả lỗi và che dữ liệu nhạy cảm trước khi có kênh hỗ trợ vận hành thật.",
+    nonClaim: "Không có ticket hỗ trợ trực tiếp, không tra cứu account, không có dashboard điều phối và không có tích hợp backend."
+  },
+  {
+    slug: "player-safety-support-faq-polish-started",
+    heading: "Hỗ trợ thử nghiệm nói rõ điều gì đang bị chặn",
+    body: "Bài viết nối Support, Support Safety, Status và Download Trust để người chơi hiểu hỗ trợ hiện là hướng dẫn public tĩnh, không phải hệ thống xử lý yêu cầu thật.",
+    playerImpact: "Người chơi không gửi nhầm thông tin cá nhân hoặc kỳ vọng phản hồi SLA khi chưa có owner-approved support channel.",
+    nonClaim: "Không có hộp thư bảo mật, không có live moderation, không có SLA production và không có quyền tải game."
   },
   {
     slug: "world-gameplay-loop-depth-started",
