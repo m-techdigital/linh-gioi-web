@@ -1,5 +1,5 @@
 import { contentDetailSections, localContentRepository } from "@lgo-web/content";
-import { GameCard, Grid, LinkButton, SectionHeading, Stack, StatusBadge } from "@lgo-web/ui";
+import { GameCard, Grid, LinkButton, PageHeader, SectionHeading, Stack, StatusBadge } from "@lgo-web/ui";
 import { WebAppShell } from "../../components/WebAppShell";
 import { ContentIaStartCta } from "../../components/PublicContentHubSections";
 
@@ -10,8 +10,15 @@ export default function NewsPage() {
   return (
     <WebAppShell>
       <Stack>
+        <PageHeader
+          badge="News"
+          badgeTone="jade"
+          eyebrow="WEB v1.12 content IA hub · WEB v1.9 news detail UX"
+          title="Tin tức"
+          description="News list is now a route into deeper public explanations, not just short fixture cards. No CMS and no backend API integration."
+        />
         <ContentIaStartCta />
-        <SectionHeading eyebrow="WEB v1.12 content IA hub · WEB v1.9 news detail UX" title="Tin tức">News list is now a route into deeper public explanations, not just short fixture cards. No CMS and no backend API integration.</SectionHeading>
+        <SectionHeading eyebrow="Fixture entries" title="Bản tin public tĩnh">News list remains file-backed until a CMS contract exists.</SectionHeading>
         <Grid>
           {entries.map((entry) => (
             <GameCard key={entry.slug}>

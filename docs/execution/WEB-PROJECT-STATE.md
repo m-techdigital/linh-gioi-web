@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-CONTENT-HEADING-ORDER-v1.85 WEB_CLOSED.
+
+Current decision: v1.85 FE public content heading-order slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.85 adds first-heading h1 order to `/events`, `/patch-notes`, `/news` and `/status`.
+- The selected content/status routes now start main content with exactly one visible page h1 while keeping fixture/no-backend/CMS non-claims explicit.
+- v1.85 evidence: RED browser/e2e reproduced missing or misordered page h1 headings; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile heading-order/font-size/overflow PASS; visual metric review completed with pageOverflow 0.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.86.
+
 Current phase: WEB-FE-PUBLIC-STORY-FRACTURE-DESIGN-BOARD-v1.84 WEB_CLOSED.
 
 Current decision: v1.84 FE public story fracture design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
