@@ -644,12 +644,12 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "beginner-training-loop-guide",
     category: "guides",
-    title: "Beginner training loop guide",
-    summary: "A player-facing explanation of the current non-combat flow: enter world, meet the Gate Keeper and interact with the Training Stone.",
-    body: "This guide describes current public-facing direction only. It does not claim production quest persistence, combat, rewards, inventory or backend integration.",
+    title: "Vòng luyện tập nhập môn",
+    summary: "Guide giúp người chơi mới đi qua vòng luyện tập hiện tại: vào thế giới, gặp Gate Keeper, đọc vai trò Training Stone và biết nên kiểm tra trạng thái tải game ở đâu.",
+    body: "Đây là hướng dẫn public tĩnh cho flow non-combat đang hiển thị trên web. Nó không công bố quest persistence, sát thương, phần thưởng, inventory, kinh tế hoặc backend tiến trình thật.",
     publishedAt: "2026-09-05T08:00:00.000Z",
     status: "published",
-    tags: [PROVISIONAL_WEB_FIXTURE]
+    tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
   },
   {
     slug: "download-readiness-guide",
@@ -1303,11 +1303,35 @@ export const guideDetailSteps: GuideDetailStep[] = [
   },
   {
     slug: "beginner-training-loop-guide",
+    step: "01",
+    title: "Bắt đầu từ thế giới hiện tại",
+    action: "Đọc /game để hiểu Cổng Linh là điểm vào và flow hiện tại vẫn là hướng dẫn kỳ vọng cho người chơi mới.",
+    expectedResult: "Người chơi biết mình đang xem onboarding public, không phải bản đồ nhiệm vụ production.",
+    blockedScope: "Chưa có bản đồ live, nhiệm vụ tài khoản hoặc quest persistence."
+  },
+  {
+    slug: "beginner-training-loop-guide",
     step: "02",
-    title: "Theo luồng luyện tập ngắn",
-    action: "Đọc các bước beginner guide: kiểm tra download, hiểu thế giới, theo dõi roadmap và gửi phản hồi đúng kênh.",
-    expectedResult: "Người chơi biết bản hiện tại là guided training loop/non-combat explanation, không phải combat release.",
-    blockedScope: "No combat damage, no loot, no inventory/economy."
+    title: "Gặp Gate Keeper trước khi luyện",
+    action: "Dùng Gate Keeper như mốc giải thích phạm vi: đọc boundary trước khi mong đợi combat, loot hoặc build tải game.",
+    expectedResult: "Người chơi hiểu vì sao web nói rõ non-combat trước khi giới thiệu Training Stone.",
+    blockedScope: "Chưa có combat damage, loot, inventory hoặc economy."
+  },
+  {
+    slug: "beginner-training-loop-guide",
+    step: "03",
+    title: "Đọc Training Stone như hướng luyện tập",
+    action: "Xem Training Stone là điểm hướng dẫn thao tác và kỳ vọng, chưa phải hệ thống progression vận hành.",
+    expectedResult: "Người chơi nắm được vòng luyện tập ngắn mà không hiểu nhầm thành nhân vật đã lưu tiến trình.",
+    blockedScope: "Chưa có character save, reward persistence hoặc account progression backend."
+  },
+  {
+    slug: "beginner-training-loop-guide",
+    step: "04",
+    title: "Kiểm tra status và download trust",
+    action: "Sau khi đọc flow luyện tập, đi tới /status và /download/trust để biết build public, checksum và owner gate đang ở trạng thái nào.",
+    expectedResult: "Người chơi đi tiếp theo luồng proof-before-download thay vì tìm nút tải hoặc đăng ký giả.",
+    blockedScope: "Chưa có public build, launcher, entitlement hoặc open registration."
   },
   {
     slug: "download-readiness-guide",

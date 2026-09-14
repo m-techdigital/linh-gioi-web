@@ -1,3 +1,16 @@
+Current phase: WEB-FE-GUIDES-BEGINNER-TRAINING-LOOP-REAL-UI-LAYOUT-v1.159 WEB_CLOSED.
+
+Current decision: v1.159 closed the active `/guides/beginner-training-loop-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Beginner Training Loop guide, first-fold density, Vietnamese onboarding/training scenario and shared Base First layout. Entire program is NOT production-complete.
+
+- v1.159 did not create a new design batch because the existing guide-detail direction was sufficient for comparison after minimal current-page scenario correction in the rendered page.
+- v1.159 replaced the English placeholder first-flow with Vietnamese Cổng Linh → Gate Keeper → Training Stone expectations and four compact training steps.
+- v1.159 introduced the shared compact guide-flow base in `packages/ui/src/service-layout.css` and let both compact guide-detail variants compose it, while keeping current page CSS out of `apps/web/src/app/globals.css`.
+- v1.159 evidence: browser/e2e desktop/mobile v1.159; source validator; Web/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/guides-beginner-training-loop-desktop-v1159.png` and `/tmp/guides-beginner-training-loop-mobile-v1159.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.160. Select `/guides/download-readiness-guide` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-GUIDES-GATE-ENTRY-REAL-UI-LAYOUT-v1.158 WEB_CLOSED.
 
 Current decision: v1.158 closed the active `/guides/gate-entry-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Gate Entry guide, first-fold density, Vietnamese Cổng Linh scenario and shared Base First layout. Entire program is NOT production-complete.

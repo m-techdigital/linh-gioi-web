@@ -2599,6 +2599,139 @@
 
 
 
+/* Compact guide-flow detail variant shared by sequential guide pages that start with training/onboarding steps. */
+.lgo-guideflowpage-stack {
+  gap: .78rem;
+}
+
+.lgo-guide-flow-hero-card {
+  border-color: rgba(49,216,232,.34);
+}
+
+.lgo-guideflowpage-stack .lgo-detail-hero-card h1 {
+  max-width: 12ch;
+}
+
+.lgo-guideflowpage-stack .lgo-detail-next-steps,
+.lgo-guideflowpage-stack .lgo-action-band {
+  padding: .86rem;
+}
+
+.lgo-guideflowpage-stack .lgo-detail-next-steps {
+  gap: .68rem;
+}
+
+.lgo-guideflowpage-stack .lgo-detail-next-steps h2,
+.lgo-guideflowpage-stack .lgo-action-band h2 {
+  font-size: clamp(1.02rem, 1.45vw, 1.28rem);
+  line-height: 1.08;
+}
+
+.lgo-guideflowpage-stack .lgo-detail-next-steps p,
+.lgo-guideflowpage-stack .lgo-action-band p {
+  font-size: .82rem;
+  line-height: 1.32;
+}
+
+@media (min-width: 981px) {
+  .lgo-guideflowpage-stack .lgo-detail-hero-card h1 {
+    font-size: clamp(2.05rem, 3.35vw, 3rem);
+  }
+
+  .lgo-guideflowpage-stack .lgo-guide-detail-step p,
+  .lgo-guideflowpage-stack .lgo-guide-detail-step small,
+  .lgo-guideflowpage-stack .lgo-detail-next-steps p,
+  .lgo-guideflowpage-stack .lgo-action-band p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .lgo-guideflowpage-stack .lgo-guide-detail-step p,
+  .lgo-guideflowpage-stack .lgo-guide-detail-step small,
+  .lgo-guideflowpage-stack .lgo-detail-next-steps p,
+  .lgo-guideflowpage-stack .lgo-action-band p {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-guideflowpage-stack .lgo-detail-next-steps {
+    grid-template-columns: minmax(0, 1fr) minmax(13rem, max-content);
+  }
+}
+
+@media (max-width: 760px) {
+  .lgo-guideflowpage-stack {
+    gap: .62rem;
+  }
+
+  .lgo-guideflowpage-stack .lgo-detail-hero-card {
+    padding: .72rem;
+  }
+
+  .lgo-guideflowpage-stack .lgo-detail-hero-card h1 {
+    font-size: clamp(1.72rem, 7vw, 1.92rem);
+  }
+
+  .lgo-guideflowpage-stack .lgo-detail-hero-card .lgo-hero-lead,
+  .lgo-guideflowpage-stack .lgo-detail-hero-card > p:not(.lgo-guide-detail-boundary),
+  .lgo-guideflowpage-stack .lgo-guide-detail-boundary {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-guideflowpage-stack .lgo-detail-hero-card .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .34rem;
+  }
+
+  .lgo-guideflowpage-stack .lgo-detail-hero-card .lgo-link-button,
+  .lgo-guideflowpage-stack .lgo-detail-next-steps .lgo-link-button,
+  .lgo-guideflowpage-stack .lgo-action-band .lgo-link-button {
+    justify-content: center;
+    min-height: 31px;
+    padding-block: .28rem;
+    padding-inline: .38rem;
+    font-size: .68rem;
+    text-align: center;
+  }
+
+  .lgo-guideflowpage-stack .lgo-guide-detail-depth {
+    padding: .56rem;
+  }
+
+  .lgo-guideflowpage-stack .lgo-guide-detail-depth .lgo-section-heading h2 {
+    font-size: clamp(1.02rem, 5.1vw, 1.18rem);
+    line-height: 1.08;
+  }
+
+  .lgo-guideflowpage-stack .lgo-guide-detail-step {
+    gap: .4rem;
+    padding: .46rem;
+  }
+
+  .lgo-guideflowpage-stack .lgo-guide-detail-step h3 {
+    font-size: .82rem;
+  }
+
+  .lgo-guideflowpage-stack .lgo-guide-detail-step p,
+  .lgo-guideflowpage-stack .lgo-guide-detail-step small,
+  .lgo-guideflowpage-stack .lgo-detail-next-steps p,
+  .lgo-guideflowpage-stack .lgo-action-band p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    font-size: .7rem;
+    line-height: 1.21;
+  }
+
+  .lgo-guideflowpage-stack .lgo-detail-next-steps,
+  .lgo-guideflowpage-stack .lgo-action-band {
+    gap: .5rem;
+    padding: .62rem;
+  }
+}
+
 /* Gate Entry guide page composes the shared detail base with a denser first-read flow. */
 .lgo-gateentrypage-stack {
   gap: .82rem;
@@ -2759,6 +2892,52 @@
     padding-block: .3rem;
     padding-inline: .5rem;
     font-size: .7rem;
+  }
+}
+
+
+/* Beginner training loop guide composes compact guide-flow base for the current sequential page. */
+.lgo-traininglooppage-stack .lgo-training-loop-hero-card {
+  border-color: rgba(53,198,163,.36);
+  background:
+    radial-gradient(circle at top left, rgba(53,198,163,.15), transparent 15rem),
+    radial-gradient(circle at bottom right, rgba(49,216,232,.11), transparent 17rem),
+    linear-gradient(145deg, rgba(13,27,46,.95), rgba(7,17,31,.90));
+}
+
+.lgo-traininglooppage-stack .lgo-guide-detail-depth {
+  border-color: rgba(53,198,163,.28);
+}
+
+.lgo-traininglooppage-stack .lgo-guide-detail-step {
+  border-color: rgba(53,198,163,.24);
+  background: linear-gradient(145deg, rgba(8,34,43,.72), rgba(7,17,31,.78));
+}
+
+@media (min-width: 981px) {
+  .lgo-traininglooppage-stack .lgo-guide-detail-steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lgo-traininglooppage-stack .lgo-guide-detail-step {
+    grid-template-columns: 2.2rem 1fr;
+    padding: .58rem;
+  }
+
+  .lgo-traininglooppage-stack .lgo-guide-detail-step > span {
+    width: 2rem;
+    height: 2rem;
+    font-size: .76rem;
+  }
+
+  .lgo-traininglooppage-stack .lgo-guide-detail-step h3 {
+    font-size: .9rem;
+  }
+
+  .lgo-traininglooppage-stack .lgo-guide-detail-step p,
+  .lgo-traininglooppage-stack .lgo-guide-detail-step small {
+    font-size: .72rem;
+    line-height: 1.22;
   }
 }
 
