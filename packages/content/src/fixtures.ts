@@ -485,24 +485,29 @@ export const supportTopics: SupportTopic[] = [
 
 export const downloadReadiness: DownloadReadiness[] = [
   {
-    label: "Public release artifact",
+    label: "Gói phát hành",
     status: "blocked",
-    detail: "No accepted public production build artifact exists yet."
+    detail: "Chưa có gói build công khai được chủ sở hữu chấp nhận."
   },
   {
-    label: "Closed testing channel",
+    label: "SHA256",
     status: "planned",
-    detail: "Reserved for future owner-approved testing packages and checksum display."
+    detail: "Mã kiểm tra sẽ hiển thị cùng gói build khi có bản phát hành thật."
   },
   {
-    label: "Runtime/browser web checks",
-    status: "done",
-    detail: "The web source has verified browser matrix coverage; this does not equal game release readiness."
-  },
-  {
-    label: "Backend contract sync",
+    label: "Phê duyệt chủ sở hữu",
     status: "blocked",
-    detail: "Real portal/download entitlement requires accepted game backend Auth/API/DB contract."
+    detail: "Cần kiểm tra phiên bản cuối, ghi chú rollback và nội dung thông báo chính thức."
+  },
+  {
+    label: "Giới hạn đã biết",
+    status: "planned",
+    detail: "Các giới hạn của bản phát hành phải được công bố minh bạch trước khi mở tải."
+  },
+  {
+    label: "Sẵn sàng hỗ trợ",
+    status: "planned",
+    detail: "Đội ngũ hỗ trợ và kênh hướng dẫn phải sẵn sàng trước khi mở cổng public."
   }
 ];
 
@@ -920,15 +925,15 @@ export const contentEntries: ContentEntry[] = [
 export const downloadBuilds: DownloadBuild[] = [
   {
     channel: "coming-soon",
-    title: "Public launcher/build",
+    title: "Launcher / gói build công khai",
     status: "not-available",
-    note: "No public production download is available from this web repo. Download links require a separately accepted release artifact."
+    note: "Chưa có bản tải công khai từ web repo này. Link tải cần gói phát hành được chấp nhận riêng."
   },
   {
     channel: "closed-testing",
-    title: "Closed testing build",
+    title: "Gói kiểm thử giới hạn",
     status: "limited-internal",
-    note: "Closed testing distribution is a placeholder and not a live download claim."
+    note: "Phân phối kiểm thử giới hạn chỉ là trạng thái dự kiến, không phải cam kết tải thật đang mở."
   }
 ];
 

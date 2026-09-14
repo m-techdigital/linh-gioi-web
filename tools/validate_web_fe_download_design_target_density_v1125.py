@@ -33,7 +33,7 @@ def check_tests_docs() -> None:
     require_text("tests/e2e/fe-download-design-target-density-v1125.spec.ts", ["download design target density", "Public Download", "download-detailed-design-target-v1125.png", "desktop readiness list enters first fold", "desktop readiness list visible in first fold", "desktop status depth starts near target board", "download page h1 follows target scale"])
     require_text("apps/web/src/app/download/page.tsx", ["lgo-downloadpage-stack", "lgo-download-readiness-target-panel", "lgo-readiness-list", "DownloadStatusDepth"])
     require_text("apps/web/src/app/globals.css", ["WEB v1.125 download detailed design target density", ".lgo-downloadpage-stack", ".lgo-download-readiness-target-panel", ".lgo-readiness-list"])
-    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_DOWNLOAD_TARGET", "Download detailed design target", "download-detailed-design-target-v1125.png", "Public Download", "pathname === \"/download\""])
+    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_DOWNLOAD_TARGET", "Thiết kế chi tiết tải game", "download-detailed-design-target-v1125.png", "Public Download", "pathname === \"/download\""])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Download", "download-detailed-design-target-v1125.png", "WEB-FE-DOWNLOAD-DETAILED-DESIGN-TARGET-v1.125.png", "Design Target First"])
     registry = read("docs/design/DESIGN-TARGET-REGISTRY.md")
     if "| Public Service | `apps/web/public/design-reference/design-atlas-public-service-v195.png` | `/download`," in registry: fail("docs/design/DESIGN-TARGET-REGISTRY.md: /download should not remain under broad Public Service applies-to list")

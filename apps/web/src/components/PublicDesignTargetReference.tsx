@@ -40,7 +40,7 @@ const PUBLIC_START_TARGET = {
 };
 
 const PUBLIC_DOWNLOAD_TARGET = {
-  label: "Download detailed design target",
+  label: "Thiết kế chi tiết tải game",
   href: "/design-reference/download-detailed-design-target-v1125.png",
   scope: "Public Download"
 };

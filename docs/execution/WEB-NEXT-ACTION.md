@@ -3,14 +3,14 @@
 Current task:
 
 ```text
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.140
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.141
 ```
 
 Status: WEB_TASK_CONTINUE.
 
 User direction: continue FE work first, start again from the homepage, complete one page at a time, and use browser/e2e plus screenshot review for real UI/UX layout verification. Design Target First remains Priority #1, but design is just-in-time: use or refresh only the target for the current page. New public FE design targets and visible public copy must use Vietnamese unless a route-specific owner-approved exception is recorded. Design must follow the Linh Giới game scenario and stay coherent with already accepted page targets; if a target is stale, English-heavy, visually inconsistent, or wrong for the game scenario, replace/supersede it inside the current page slice before implementation.
 
-Current FE scope: select `/download` as the next single active page after v1.139 `/start` closure. Complete `/download` fully before any other page: confirm the registered Public Download target, refresh it if it no longer matches the game scenario or Vietnamese UI direction, implement only `/download` UI/UX Layout and required shared Base UI/UX Layout, run source/runtime/browser/e2e evidence, perform screenshot/design-target comparison, update docs/handoff/ledger, commit and push.
+Current FE scope: select `/download/trust` as the next single active page after v1.140 `/download` closure. Complete `/download/trust` fully before any other page: confirm the registered Public Download Trust target, refresh it if it no longer matches the game scenario or Vietnamese UI direction, implement only `/download/trust` UI/UX Layout and required shared Base UI/UX Layout, run source/runtime/browser/e2e evidence, perform screenshot/design-target comparison, update docs/handoff/ledger, commit and push.
 
 Layout Match Before Closure is mandatory: after attaching or refreshing a design target, the selected page must be rendered in a real browser and compared against that target before handoff. A page is not closed until its UI/UX Layout follows the target structure for hero composition, visual hierarchy, spacing, typography scale, content order, first-fold density and mobile behavior. Copy-only or label-only fixes are not enough to close a page.
 

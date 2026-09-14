@@ -1,3 +1,17 @@
+Current phase: WEB-FE-DOWNLOAD-VIETNAMESE-DESIGN-MATCH-v1.140 WEB_CLOSED.
+
+Current decision: v1.140 closed the active `/download` page slice after refreshing the Public Download design target to Vietnamese and matching the implemented page in browser. `/download` now follows the target release-gate scenario more closely: sealed public gate hero, five readiness gates, official channel cards and delayed trust/detail sections. Entire program is NOT production-complete.
+
+- v1.140 refreshed `download-detailed-design-target-v1125.png` with built-in imagegen and mirrored it under `docs/design/reference`.
+- v1.140 translated Public Download target/page labels, readiness gates and build/channel labels to Vietnamese.
+- v1.140 reworked `/download` first-flow under `.lgo-downloadpage-stack`: hero → readiness board → official channels → deeper trust/detail sections.
+- v1.140 evidence: RED browser/e2e reproduced stale English target label; Playwright desktop/mobile `/download` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: 1280x720 hero 319.266, gate 250, readiness top 434.422, channels top 701.953, overflow 0.
+- Design must follow the Linh Giới game scenario and stay coherent with accepted targets; stale, English-heavy or scenario-wrong targets must be replaced before implementation.
+- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.141. Select `/download/trust` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-START-VIETNAMESE-DESIGN-MATCH-v1.139 WEB_CLOSED.
 
 Current decision: v1.139 closed the active `/start` page slice after refreshing the Public Start design target to Vietnamese and matching the implemented page in browser. `/start` now follows the target scenario more closely: Đông Môn cinematic hero, tutorial step rail, localized gameplay-loop board and delayed real onboarding screenshots. Entire program is NOT production-complete.

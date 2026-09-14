@@ -86,7 +86,7 @@ def main() -> int:
     require_text("apps/web/src/app/sitemap.ts", "localContentRepository")
     for phrase in ["LCP <= 2.5s", "INP <= 200ms", "CLS <= 0.1", "SOURCE_READY_METRICS_UNVERIFIED"]:
         require_text("docs/execution/WEB-PERFORMANCE-BUDGET.md", phrase)
-    require_text("apps/web/src/app/download/page.tsx", "No public production download is available")
+    require_text("apps/web/src/app/download/page.tsx", "Bản tải công khai hiện chưa mở")
     return finish("WEB PUBLIC RC")
 
 if __name__ == "__main__":
