@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-EXPANDED-SERVICE-ROUTE-AUDIT-v1.113 WEB_CLOSED.
+
+Current decision: v1.113 FE public expanded service route audit slice closed. Eight Public Service routes now have desktop/mobile browser/e2e guardrail coverage for registered design-target attachment, readable layout caps, horizontal overflow and serious/critical axe cleanliness. Entire program is NOT production-complete.
+
+- v1.113 changes test/evidence only; no production source changed and no duplicate route/layout owner was added.
+- v1.113 uses existing v1.95 Public Service and Component/state design targets; no new design target was required and no stale target was replaced.
+- v1.113 evidence: Playwright desktop/mobile expanded service route audit PASS 16/16; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.114.
+
 Current phase: WEB-FE-PUBLIC-DOWNLOAD-NAV-SECTION-v1.112 WEB_CLOSED.
 
 Current decision: v1.112 FE public download navigation section slice closed. Public `/download/trust` now keeps `Trạng thái chơi` marked current through shared `RouteAwareLink` section matching while staying attached to the v1.95 Public Service design target. Entire program is NOT production-complete.
