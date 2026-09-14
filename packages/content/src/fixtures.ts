@@ -707,7 +707,7 @@ export const contentEntries: ContentEntry[] = [
     category: "news",
     title: "Content hub và lộ trình đọc được làm rõ",
     summary: "WEB v1.12 gom các trang quan trọng thành trang Bắt đầu để người chơi mới biết đọc gì trước, đi đâu tiếp và không hiểu nhầm trạng thái release.",
-    body: "Bản cập nhật này tập trung vào information architecture của public website: trang Bắt đầu, nhóm route theo nhu cầu, câu hỏi người chơi mới và đường dẫn tới guide/news/download/status/community. Runtime/browser/e2e vẫn chỉ là guardrail, không phải nội dung chính.",
+    body: "Bản cập nhật này tập trung vào information architecture của public website: trang Bắt đầu, nhóm route theo nhu cầu, câu hỏi người chơi mới và đường dẫn tới guide/news/download/status/community. Kiểm tra trình duyệt chỉ là bằng chứng layout, không phải lời hứa vận hành backend.",
     publishedAt: "2026-09-05T14:00:00.000Z",
     status: "published",
     featured: true,
@@ -1042,10 +1042,17 @@ export const contentDetailSections: ContentDetailSection[] = [
   },
   {
     slug: "content-ia-hub-polish-started",
-    heading: "trang Bắt đầu biến website thành hành trình đọc có thứ tự",
+    heading: "Trang Bắt đầu biến website thành hành trình đọc có thứ tự",
     body: "WEB v1.12 thêm một hub trung tâm để người chơi mới chọn mục tiêu: hiểu game, kiểm tra tải game, xem roadmap, đọc guide hoặc biết cách góp ý.",
     playerImpact: "Người chơi không phải đoán nên đọc News, Guides, Download hay Status trước; mỗi nhóm route có mục đích và boundary rõ.",
-    nonClaim: "No CMS, no live personalization, no account-aware recommendation backend."
+    nonClaim: "Không có CMS, không cá nhân hóa live và không có recommendation backend theo tài khoản."
+  },
+  {
+    slug: "content-ia-hub-polish-started",
+    heading: "Route được nhóm theo câu hỏi người chơi mới",
+    body: "Hub gom các lối đọc như hiểu game, đọc hướng dẫn, kiểm tra tải game, xem trạng thái và theo dõi cộng đồng để CTA dẫn tới thông tin đúng trước khi có hành động release thật.",
+    playerImpact: "Người chơi thấy bước tiếp theo an toàn ngay trong bài viết, thay vì nhảy vào download, portal hoặc support khi các phần đó chưa có contract thật.",
+    nonClaim: "Không có CMS, không có feed live, không có portal account và không có backend gợi ý cá nhân."
   },
   {
     slug: "community-roadmap-onboarding-started",

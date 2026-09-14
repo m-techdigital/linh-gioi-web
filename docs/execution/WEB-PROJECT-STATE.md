@@ -1,3 +1,19 @@
+Current phase: WEB-FE-NEWS-CONTENT-IA-HUB-REAL-UI-LAYOUT-v1.187 WEB_CLOSED.
+
+Current decision: v1.187 closed the active `/news/content-ia-hub-polish-started` page slice as a real browser UI/UX Layout task. The existing public core design target and shared public shell were sufficient as the comparison guardrail after checking shared header/menu/footer/menu coherence; work focused on the rendered News Detail article, content IA hub context, compact article rhythm, related-news grid, keyboard navigation and shared Base First detail layout. Entire program is NOT production-complete.
+
+- v1.187 did not create a design batch because the existing public core target and registered route target were enough for comparison after checking shared shell coherence.
+- v1.187 browser/e2e RED first exposed an invalid regex in the new test; after fixing the test, RED correctly showed the detail page still used the generic article detail title and lacked the current two-card content IA flow.
+- v1.187 completed the page with current-slug detail heading, two compact detail cards, Vietnamese content IA non-claims and browser-safe article body without CMS, live personalization, account-aware recommendation, portal, feed live or backend recommendation claims.
+- v1.187 reused the shared News Detail layout in `packages/ui/src/service-layout.css`; no current-page selectors were added to `apps/web/src/app/globals.css`.
+- v1.187 final browser/e2e metrics: desktop hero bottom 449px, depth top 460px, first depth card top 603px, related top 820px, next steps top 1155px, scrollHeight 1808px, h1/max font 42.48px, 2 desktop related columns, overflow 0; mobile hero bottom 454px, depth top 464px, first depth card top 622px, related top 1071px, next steps top 1586px, scrollHeight 2494px, h1/max font 27.52px, 1 mobile related column, overflow 0.
+- v1.187 evidence: browser/e2e desktop/mobile v1.187; screenshot review `/tmp/news-content-ia-hub-desktop-v1187.png` and `/tmp/news-content-ia-hub-mobile-v1187.png`; source validator; Web/UI checks; Web build; clean current-state closure validator.
+- Design target sync rule remains recorded: design targets must stay synchronized with shared header, footer, menu, shell and navigation; if a current target diverges, only the smallest current-page target area may be corrected before returning to browser layout.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.188. Select `/news/community-roadmap-onboarding-started` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-NEWS-ROUTE-CONTINUITY-REAL-UI-LAYOUT-v1.186 WEB_CLOSED.
 
 Current decision: v1.186 closed the active `/news/route-continuity-conversion-polish-started` page slice as a real browser UI/UX Layout task. The existing public core design target and shared public shell were sufficient as the comparison guardrail after checking shared header/menu/footer/menu coherence; work focused on the rendered News Detail article, route continuity context, compact article rhythm, related-news grid, keyboard navigation and shared Base First detail layout. Entire program is NOT production-complete.

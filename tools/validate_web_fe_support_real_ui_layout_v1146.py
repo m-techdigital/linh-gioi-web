@@ -49,8 +49,8 @@ def check_tests_docs() -> None:
     for rel in ["docs/execution/specs/WEB-FE-SUPPORT-REAL-UI-LAYOUT-v1.146.md", "LGO-WEB-FE-SUPPORT-REAL-UI-LAYOUT-REPORT-v1.146.md", "HANDOFF-LGO-WEB-FE-SUPPORT-REAL-UI-LAYOUT-v1.146.md"]:
         require_file(rel)
         require_text(rel, ["WEB-FE-SUPPORT-REAL-UI-LAYOUT-v1.146", "WEB_CLOSED", "/support", "Real Browser UI/UX Layout First", "Base First", "service-layout.css", "browser/e2e", "screenshot", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
-    require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-SUPPORT-REAL-UI-LAYOUT-v1.146 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.187", "Select `/support/help` as the next single active page"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.187", "Current FE scope: select `/news/content-ia-hub-polish-started`", "Real Browser UI/UX Layout First is Priority #1", "Base UI/UX Layout", "CSS must be managed by owner/role"])
+    require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-SUPPORT-REAL-UI-LAYOUT-v1.146 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.188", "Select `/support/help` as the next single active page"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.188", "Current FE scope: select `/news/community-roadmap-onboarding-started`", "Real Browser UI/UX Layout First is Priority #1", "Base UI/UX Layout", "CSS must be managed by owner/role"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-SUPPORT-REAL-UI-LAYOUT-v1.146 | WEB-FE | WEB_CLOSED |"])
 
 def main() -> int:
