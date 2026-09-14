@@ -846,9 +846,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "player-trust-release-guide",
     category: "guides",
-    title: "Player trust: từ content-ready tới closed test",
-    summary: "Guide giúp người chơi hiểu staged release, checksum/provenance, closed-test gates, status/support boundaries và vì sao chưa có public download.",
-    body: "Bắt đầu từ /release để đọc trust narrative, sau đó kiểm tra /download/trust, /status và /support/safety. Guide này không mở download, account entitlement, support ticket hay production release claim.",
+    title: "Tin cậy trước khi chờ bản test",
+    summary: "Guide giúp người chơi đọc đúng lộ trình content-ready → chuẩn bị closed test → kiểm chứng tải game → trạng thái hỗ trợ mà không hiểu nhầm thành bản phát hành công khai.",
+    body: "Bắt đầu từ trang Phát hành, sau đó kiểm Tin cậy tải game, Trạng thái và Hỗ trợ an toàn. Guide này chỉ là nội dung public tĩnh, không mở quyền tải, đăng ký test, ticket support hoặc cam kết production.",
     publishedAt: "2026-09-05T16:35:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -1135,34 +1135,34 @@ export const guideDetailSteps: GuideDetailStep[] = [
   {
     slug: "player-trust-release-guide",
     step: "01",
-    title: "Đọc stage hiện tại trước",
-    action: "Mở /release để xem content-ready, closed-test preparation, limited closed test và public download candidate khác nhau thế nào.",
-    expectedResult: "Người chơi hiểu public web đã rõ hơn nhưng chưa phải sẵn sàng phát hành.",
-    blockedScope: "No public build, no open beta, no production launch."
+    title: "Đọc stage phát hành hiện tại",
+    action: "Mở trang Phát hành để phân biệt content-ready, chuẩn bị closed test, test giới hạn và ứng viên tải công khai.",
+    expectedResult: "Người chơi hiểu web đã rõ lộ trình nhưng chưa phải bản phát hành sẵn sàng chơi.",
+    blockedScope: "Chưa có bản build công khai, thử nghiệm mở hoặc phát hành production."
   },
   {
     slug: "player-trust-release-guide",
     step: "02",
-    title: "Kiểm tra proof-before-claim",
-    action: "Đi tới /download/trust để xem artifact, SHA256, provenance, known limitations và owner approval cần có gì.",
-    expectedResult: "Download CTA chỉ được hiểu là điều kiện release, không phải link tải thật.",
-    blockedScope: "No fake download button, no placeholder checksum, no launcher promise."
+    title: "Kiểm chứng trước khi tin CTA tải",
+    action: "Đọc Tin cậy tải game để biết artifact, checksum, nguồn gốc build, giới hạn đã biết và owner approval cần có gì.",
+    expectedResult: "CTA tải game được hiểu là điều kiện cần kiểm chứng, không phải link tải thật.",
+    blockedScope: "Chưa có nút tải thật, checksum thật, launcher hoặc quyền tải theo tài khoản."
   },
   {
     slug: "player-trust-release-guide",
     step: "03",
-    title: "Xác nhận trạng thái và support boundary",
-    action: "Mở /status và /support/safety để biết public/internal/blocked surfaces và cách chuẩn bị feedback an toàn.",
-    expectedResult: "Người chơi biết báo lỗi/góp ý thế nào mà không gửi secrets hoặc dữ liệu nhạy cảm.",
-    blockedScope: "Chưa có ticket inbox an toàn, chưa tra cứu tài khoản, chưa SLA hỗ trợ production."
+    title: "Xem trạng thái và ranh giới hỗ trợ",
+    action: "Mở Trạng thái và Hỗ trợ an toàn để biết phần nào public, internal, blocked và cách chuẩn bị feedback không chứa dữ liệu nhạy cảm.",
+    expectedResult: "Người chơi biết báo lỗi/góp ý an toàn trước khi có ticket live hoặc tra cứu tài khoản.",
+    blockedScope: "Chưa có ticket inbox an toàn, tra cứu tài khoản hoặc SLA hỗ trợ production."
   },
   {
     slug: "player-trust-release-guide",
     step: "04",
-    title: "Theo dõi closed-test readiness",
-    action: "Đọc closed-test checks để biết build artifact, limitations, feedback protocol và status/support alignment còn thiếu gì.",
-    expectedResult: "Người chơi chờ đúng stage thay vì kỳ vọng open registration hoặc entitlement automation.",
-    blockedScope: "No open registration, no reward/economy promise, no automated entitlement."
+    title: "Theo dõi điều kiện closed test",
+    action: "Đọc checklist test giới hạn để biết build artifact, giới hạn, giao thức feedback và trạng thái hỗ trợ còn thiếu gì.",
+    expectedResult: "Người chơi chờ đúng stage thay vì kỳ vọng đăng ký mở, quyền vào test tự động hoặc phần thưởng.",
+    blockedScope: "Chưa có đăng ký mở, đảm bảo suất test, phần thưởng/kinh tế hoặc cấp quyền tự động."
   },
   {
     slug: "route-continuity-conversion-guide",

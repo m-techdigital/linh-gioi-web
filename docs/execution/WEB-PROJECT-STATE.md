@@ -1,3 +1,18 @@
+Current phase: WEB-FE-GUIDES-PLAYER-TRUST-RELEASE-REAL-UI-LAYOUT-v1.170 WEB_CLOSED.
+
+Current decision: v1.170 closed the active `/guides/player-trust-release-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Player Trust Release guide, Phát hành → Tin cậy tải game → Trạng thái → Hỗ trợ an toàn flow, Vietnamese public copy and shared Base First guide-flow layout. Entire program is NOT production-complete.
+
+- v1.170 did not create a design batch because the existing guide-detail direction was sufficient for comparison after minimal current-page scenario correction in the rendered page.
+- v1.170 browser baseline showed generic guide badge, English title/copy labels, missing compact guide-flow classes, desktop h1 55.2px, desktop page 4387px, mobile hero 751.72px and mobile page 7318px.
+- v1.170 replaced the stale first-flow with Vietnamese phát hành hiện tại → kiểm chứng CTA tải → trạng thái/hỗ trợ → điều kiện closed test expectations and four compact player-trust steps.
+- v1.170 reused the shared compact guide-flow base in `packages/ui/src/service-layout.css` and added only the current page player-trust-release visual theme there, while keeping current page CSS out of `apps/web/src/app/globals.css`.
+- v1.170 final browser/e2e metrics: desktop hero bottom 434px, detail top 446.47px, first step top 714.33px, world CTA top 887.31px, route CTA top 1041.42px, player trust CTA top 1217.64px, action band top 2213.42px, scrollHeight 2949px, h1 48px, 4 desktop columns, overflow 0; mobile hero bottom 568.38px, detail top 578.28px, first step top 740.72px, world CTA top 1274.55px, route CTA top 1537.14px, player trust CTA top 1817.34px, action band top 3392.91px, scrollHeight 4422px, h1 27.52px, overflow 0.
+- v1.170 evidence: browser/e2e desktop/mobile v1.170; source validator; Web/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/guides-player-trust-release-desktop-v1170.png` and `/tmp/guides-player-trust-release-mobile-v1170.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.171. Select `/guides/release-readiness-hub-guide` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-GUIDES-ROUTE-CONTINUITY-CONVERSION-REAL-UI-LAYOUT-v1.169 WEB_CLOSED.
 
 Current decision: v1.169 closed the active `/guides/route-continuity-conversion-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Route Continuity Conversion guide, Bắt đầu → Vòng lặp thế giới → Tin cậy tải game → Trạng thái → Hỗ trợ flow, Vietnamese public copy and shared Base First guide-flow layout. Entire program is NOT production-complete.
