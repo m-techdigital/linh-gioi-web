@@ -684,9 +684,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "community-roadmap-onboarding-started",
     category: "news",
-    title: "Community / roadmap onboarding được làm rõ",
+    title: "Onboarding cộng đồng và roadmap rõ hơn",
     summary: "WEB v1.11 nối homepage, community, roadmap, support và staged release messaging để người chơi biết đi đâu và kỳ vọng gì.",
-    body: "Bản cập nhật public web này tập trung vào hành trình người chơi mới: đọc thế giới, kiểm tra download trust, xem roadmap gates và hiểu cách gửi phản hồi trước khi có live community backend.",
+    body: "Bản cập nhật public web này tập trung vào hành trình người chơi mới: đọc thế giới, kiểm tra download trust, xem roadmap gates và hiểu cách gửi phản hồi khi cộng đồng vẫn là hướng dẫn tĩnh.",
     publishedAt: "2026-09-05T13:00:00.000Z",
     status: "published",
     featured: true,
@@ -1056,17 +1056,17 @@ export const contentDetailSections: ContentDetailSection[] = [
   },
   {
     slug: "community-roadmap-onboarding-started",
-    heading: "Community / roadmap onboarding nối các trang public",
+    heading: "Onboarding cộng đồng nối các trang public",
     body: "Homepage, Community, Roadmap, Support, Status và Download trust được kết nối thành một hành trình đọc có thứ tự thay vì các trang rời rạc.",
     playerImpact: "Người chơi biết đọc gì trước, hiểu điều kiện test/download và không nhầm roadmap với lời hứa release.",
-    nonClaim: "No live community backend, no fake waitlist, no production account."
+    nonClaim: "Không có community backend live, không có waitlist giả và không có tài khoản production."
   },
   {
     slug: "community-roadmap-onboarding-started",
-    heading: "Staged release messaging giữ kỳ vọng an toàn",
+    heading: "Thông điệp phát hành theo giai đoạn giữ kỳ vọng an toàn",
     body: "Mỗi stage nói rõ public/internal/blocked để tách content-ready, artifact-ready và backend-connected readiness.",
     playerImpact: "Người chơi thấy trạng thái thật thay vì bị dẫn tới download hoặc portal chưa tồn tại.",
-    nonClaim: "No public game download artifact, no portal entitlement, no CMS."
+    nonClaim: "Không có artifact tải game public, không có entitlement portal và không có CMS."
   },
   {
     slug: "web-program-control-tower",

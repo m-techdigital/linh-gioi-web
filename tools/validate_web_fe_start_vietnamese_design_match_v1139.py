@@ -47,8 +47,8 @@ def check_docs():
  for f in files: req_file(f)
  req('tests/e2e/fe-start-vietnamese-design-match-v1139.spec.ts',['start Vietnamese design match','Thiết kế chi tiết bắt đầu','Minh họa Linh Thành và khe nứt Âm Giới','desktop start hero uses the shared Đông Môn cinematic scene','tutorial board starts in the opening viewport'])
  for f in files[1:]: req(f,['WEB-FE-START-VIETNAMESE-DESIGN-MATCH-v1.139','WEB_CLOSED','Sequential Page Completion','Just-in-time Design','Design Target First','Layout Match Before Closure','Base UI/UX Layout','Public Start','Vietnamese','game scenario','browser/e2e','built-in imagegen','No production auth','No DB persistence','No real Portal integration','No real Ops/Admin mutation','NO_ACCEPTED_BACKEND_CONTRACT'])
- req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-START-VIETNAMESE-DESIGN-MATCH-v1.139 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.188'])
- req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.188','select `/news/community-roadmap-onboarding-started` as the next single active page'])
+ req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-START-VIETNAMESE-DESIGN-MATCH-v1.139 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.189'])
+ req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.189','select `/news/world-gameplay-loop-depth-started` as the next single active page'])
  req('docs/execution/WEB-TASK-LEDGER.md',['| WEB-FE-START-VIETNAMESE-DESIGN-MATCH-v1.139 | WEB-FE | WEB_CLOSED |'])
 def main():
  check_target(); check_source(); check_docs()

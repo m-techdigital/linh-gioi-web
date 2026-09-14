@@ -24,6 +24,7 @@ const articleDetailTitles: Record<string, string> = {
   "player-trust-release-narrative-started": "Bài viết giải thích player trust và release narrative",
   "route-continuity-conversion-polish-started": "Bài viết giải thích route continuity và conversion-safe",
   "content-ia-hub-polish-started": "Bài viết giải thích content IA và hub bắt đầu",
+  "community-roadmap-onboarding-started": "Bài viết giải thích community onboarding và roadmap",
 };
 
 function articleDetailTitle(slug: string) {

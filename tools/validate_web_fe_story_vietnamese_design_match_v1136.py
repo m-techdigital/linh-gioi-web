@@ -49,7 +49,7 @@ def check_tests_docs() -> None:
         require_text(rel, ["WEB-FE-STORY-VIETNAMESE-DESIGN-MATCH-v1.136", "WEB_CLOSED", "Sequential Page Completion", "Just-in-time Design", "Design Target First", "Layout Match Before Closure", "Base UI/UX Layout", "Public Story", "Vietnamese", "browser/e2e", "built-in imagegen", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-STORY-VIETNAMESE-DESIGN-MATCH-v1.136 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.137"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.137", "Select `/classes` as the next single active page"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.188", "select `/news/community-roadmap-onboarding-started` as the next single active page"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.189", "select `/news/world-gameplay-loop-depth-started` as the next single active page"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-STORY-VIETNAMESE-DESIGN-MATCH-v1.136 | WEB-FE | WEB_CLOSED |"])
 def main() -> int:
     check_target(); check_source(); check_tests_docs()
