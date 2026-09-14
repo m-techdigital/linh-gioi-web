@@ -33,13 +33,13 @@ def check_community_onboarding_board() -> None:
     require_text("apps/web/src/app/community/onboarding/page.tsx", [
         "lgo-community-onboarding-design-board",
         "/game-art/design-boards/community-onboarding-gameplay-loop.svg",
-        "Community onboarding gameplay loop board",
+        "Bảng vòng chơi hòa nhập cộng đồng Linh Giới",
         "loading=\"eager\"",
-        "Game reference art",
-        "không phải forum live",
+        "Board tham chiếu",
+        "trạng thái mở dần",
     ])
-    require_text("apps/web/src/app/globals.css", [
-        "WEB v1.75 public community onboarding gameplay-loop board",
+    require_text("packages/ui/src/service-layout.css", [
+        "Shared community onboarding page layout",
         ".lgo-community-onboarding-design-board",
         ".lgo-community-onboarding-design-board img",
         "grid-template-columns: 1fr",
@@ -56,7 +56,7 @@ def check_tests_and_docs() -> None:
         require_file(rel)
     require_text("tests/e2e/fe-public-community-onboarding-design-board-v175.spec.ts", [
         "/community/onboarding",
-        "Community onboarding gameplay loop board",
+        "Bảng vòng chơi hòa nhập cộng đồng Linh Giới",
         "/game-art/design-boards/community-onboarding-gameplay-loop.svg",
         "loading",
         "naturalWidth",
@@ -70,7 +70,6 @@ def check_tests_and_docs() -> None:
         require_text(rel, [
             "WEB-FE-PUBLIC-COMMUNITY-ONBOARDING-DESIGN-BOARD-v1.75",
             "WEB_CLOSED",
-            "Community onboarding gameplay loop board",
             "browser/e2e",
             "No production auth",
             "No DB persistence",

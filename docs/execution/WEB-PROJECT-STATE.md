@@ -1,3 +1,16 @@
+Current phase: WEB-FE-COMMUNITY-ONBOARDING-REAL-UI-LAYOUT-v1.150 WEB_CLOSED.
+
+Current decision: v1.150 closed the active `/community/onboarding` page slice as a real browser UI/UX Layout task. The existing Public Service design target remained the guardrail; work focused on the rendered page and shared Base First layout. Entire program is NOT production-complete.
+
+- v1.150 did not create a new design batch because the registered Public Service target was sufficient for comparison.
+- v1.150 replaced the old English first-flow with Vietnamese `Hòa nhập cộng đồng Linh Giới`, a compact boundary, the gameplay-loop board and a three-step reading path.
+- v1.150 moved community onboarding board/layout CSS out of `apps/web/src/app/globals.css` and into shared `packages/ui/src/service-layout.css`.
+- v1.150 evidence: browser/e2e desktop/mobile v1.150 and historical v1.75 onboarding-board compatibility; source validator; Web/content/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/community-onboarding-desktop-v1150.png` and `/tmp/community-onboarding-mobile-v1150.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.151. Select `/performance` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-COMMUNITY-REAL-UI-LAYOUT-v1.149 WEB_CLOSED.
 
 Current decision: v1.149 closed the active `/community` page slice as a real browser UI/UX Layout task. `/community` now has its own Vietnamese community design target, registered under Public Community, and uses shared Base First community layout from `packages/ui/src/service-layout.css`. Entire program is NOT production-complete.

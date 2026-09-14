@@ -12,46 +12,86 @@ import { WebAppShell } from "../../../components/WebAppShell";
 import { ContentIaStartCta } from "../../../components/PublicContentHubSections";
 import { ReleaseReadinessHubCta, TesterExpectationCopyBoard } from "../../../components/PublicReleaseReadinessHubSections";
 
-export const metadata = { title: "Community onboarding" };
+const onboardingSteps = [
+  {
+    badge: "Bước 1",
+    title: "Kiểm tra trạng thái",
+    text: "Xem trạng thái website, gói tải và phạm vi thử nghiệm trước khi tham gia cộng đồng.",
+    href: "/status",
+    action: "Xem trạng thái",
+  },
+  {
+    badge: "Bước 2",
+    title: "Đọc mốc mở dần",
+    text: "Nắm rõ những phần đang chuẩn bị, những phần chưa mở và cách theo dõi cập nhật.",
+    href: "/roadmap",
+    action: "Xem lộ trình",
+  },
+  {
+    badge: "Bước 3",
+    title: "Quay lại cộng đồng",
+    text: "Dùng trang cộng đồng làm điểm gom quy tắc ứng xử, phản hồi an toàn và hướng dẫn tham gia.",
+    href: "/community",
+    action: "Về cộng đồng",
+  },
+];
+
+export const metadata = { title: "Hòa nhập cộng đồng" };
 
 export default function CommunityOnboardingPage() {
   return (
     <WebAppShell>
-      <Stack>
-        <GameCard className="lgo-detail-hero-card">
-          <StatusBadge tone="jade">WEB v1.11 community onboarding</StatusBadge>
-          <span className="lgo-card-kicker">No live forum · no ticket backend · no fake waitlist</span>
-          <h1>Community / roadmap onboarding</h1>
+      <Stack className="lgo-player-facing-stack lgo-service-compact-proof-page lgo-community-onboardingpage-stack">
+        <GameCard className="lgo-detail-hero-card lgo-community-onboarding-hero-card">
+          <StatusBadge tone="jade">WEB v1.150 · hòa nhập cộng đồng</StatusBadge>
+          <span className="lgo-card-kicker">Chưa có diễn đàn · chưa có bang hội · chưa có danh sách chờ</span>
+          <h1>Hòa nhập cộng đồng Linh Giới</h1>
           <p className="lgo-hero-lead">
-            Trang này nối community, roadmap, status và download trust thành một hành trình đọc rõ ràng cho người chơi mới và reviewer.
+            Trang này gom thứ tự đọc cho người chơi mới: kiểm tra trạng thái, hiểu mốc mở dần, rồi quay lại cộng đồng để theo dõi phản hồi an toàn.
           </p>
           <p>
-            Đây là static public guidance. No live community/chat/forum/guild backend, no production auth,
-            no DB persistence, no ticket backend, no public download artifact and no CMS are claimed.
+            Đây là hướng dẫn tĩnh cho website. Chưa mở trò chuyện, diễn đàn, bang hội, đăng nhập thật, dữ liệu tài khoản,
+            phiếu hỗ trợ hoặc danh sách chờ công khai.
           </p>
           <div className="lgo-product-first-actions">
-            <LinkButton href="/community" tone="jade">Cộng đồng</LinkButton>
-            <LinkButton href="/download/trust" tone="gold">Download trust</LinkButton>
+            <LinkButton href="/community" tone="jade">Về cộng đồng</LinkButton>
+            <LinkButton href="/status" tone="gold">Xem trạng thái</LinkButton>
+            <LinkButton href="/roadmap" tone="neutral">Xem lộ trình</LinkButton>
           </div>
         </GameCard>
-        <figure className="lgo-community-onboarding-design-board lgo-panel" aria-label="Community onboarding gameplay loop reference art">
+
+        <figure className="lgo-community-onboarding-design-board lgo-panel" aria-label="Bảng vòng chơi hòa nhập cộng đồng">
           <img
             src="/game-art/design-boards/community-onboarding-gameplay-loop.svg"
-            alt="Community onboarding gameplay loop board"
+            alt="Bảng vòng chơi hòa nhập cộng đồng Linh Giới"
             loading="eager"
           />
           <figcaption>
-            <StatusBadge tone="jade">Game reference art</StatusBadge>
-            <strong>Onboarding bắt đầu bằng vòng chơi và gate đọc, không phải forum live.</strong>
+            <StatusBadge tone="jade">Board tham chiếu</StatusBadge>
+            <strong>Hòa nhập bắt đầu từ vòng chơi, trạng thái mở dần và quy tắc an toàn.</strong>
             <span>
-              Board này dùng visual thật từ LinhGioiOnline để nối guide, status, roadmap và community expectation
-              thành một hành trình static trước khi có forum, guild chat, ticket backend hoặc waitlist thật.
+              Board này dùng hình vòng chơi từ LinhGioiOnline để nối hướng dẫn, trạng thái, lộ trình và kỳ vọng cộng đồng
+              trước khi các kênh tương tác thật được mở.
             </span>
           </figcaption>
         </figure>
-        <SectionHeading eyebrow="Player reading path" title="Đi theo thứ tự để không hiểu nhầm trạng thái release">
-          Người chơi nên đọc status/download trust trước, rồi roadmap gates, support/community expectation và guide onboarding.
-        </SectionHeading>
+
+        <section className="lgo-community-onboarding-route-board lgo-panel">
+          <SectionHeading eyebrow="Luồng đọc đề xuất" title="Đi theo thứ tự để không hiểu nhầm trạng thái mở">
+            Người chơi nên kiểm tra trạng thái trước, đọc lộ trình mở dần, rồi quay lại cộng đồng để nắm quy tắc tham gia.
+          </SectionHeading>
+          <div className="lgo-community-onboarding-step-grid">
+            {onboardingSteps.map((step) => (
+              <article key={step.href} className="lgo-community-onboarding-step-card">
+                <StatusBadge tone="jade">{step.badge}</StatusBadge>
+                <h2>{step.title}</h2>
+                <p>{step.text}</p>
+                <LinkButton href={step.href} tone="neutral">{step.action}</LinkButton>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <ReleaseReadinessHubCta />
         <TesterExpectationCopyBoard />
         <PlayerTrustReleaseCta />
@@ -62,8 +102,8 @@ export default function CommunityOnboardingPage() {
         <RoadmapDecisionGateBoard />
         <CommunityFeedbackGuidance />
         <StagedReleaseMessagingBoard />
-              <ClosedTesterInformationPackCta />
-        </Stack>
+        <ClosedTesterInformationPackCta />
+      </Stack>
     </WebAppShell>
   );
 }

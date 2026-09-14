@@ -22,7 +22,7 @@ async function collectCommunityOnboardingBoardMetrics(page: Page): Promise<Commu
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const image = document.querySelector<HTMLImageElement>('img[alt="Community onboarding gameplay loop board"]');
+    const image = document.querySelector<HTMLImageElement>('img[alt="Bảng vòng chơi hòa nhập cộng đồng Linh Giới"]');
     const caption = image?.closest("figure")?.querySelector("figcaption");
     return {
       pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -41,8 +41,8 @@ async function collectCommunityOnboardingBoardMetrics(page: Page): Promise<Commu
 test.describe("public community onboarding design board", () => {
   test("/community/onboarding renders the gameplay-loop visual without mobile overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/community/onboarding`);
-    await expect(page.getByRole("heading", { name: "Community / roadmap onboarding" })).toBeVisible();
-    await expect(page.getByRole("img", { name: "Community onboarding gameplay loop board" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Hòa nhập cộng đồng Linh Giới" })).toBeVisible();
+    await expect(page.getByRole("img", { name: "Bảng vòng chơi hòa nhập cộng đồng Linh Giới" })).toBeVisible();
 
     const metrics = await collectCommunityOnboardingBoardMetrics(page);
     expect(metrics.board, "community onboarding board metrics").not.toBeNull();

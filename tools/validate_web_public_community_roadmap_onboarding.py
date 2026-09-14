@@ -98,7 +98,7 @@ def main() -> int:
     page_expectations = {
         "apps/web/src/app/page.tsx": ["WEB v1.11 community roadmap onboarding", "CommunityOnboardingPathBoard", "CommunityRoadmapOnboardingCta"],
         "apps/web/src/app/community/page.tsx": ["WEB v1.149 · cộng đồng", "CommunityFeedbackGuidance", "community/onboarding"],
-        "apps/web/src/app/community/onboarding/page.tsx": ["WEB v1.11 community onboarding", "RoadmapDecisionGateBoard", "StagedReleaseMessagingBoard"],
+        "apps/web/src/app/community/onboarding/page.tsx": ["WEB v1.150 · hòa nhập cộng đồng", "RoadmapDecisionGateBoard", "StagedReleaseMessagingBoard"],
         "apps/web/src/app/roadmap/page.tsx": ["WEB v1.11 roadmap decision gates", "RoadmapDecisionGateBoard", "StagedReleaseMessagingBoard"],
         "apps/web/src/app/support/page.tsx": ["WEB v1.11 community feedback guidance", "CommunityFeedbackGuidance"],
         "apps/web/src/app/status/page.tsx": ["WEB v1.11 staged release messaging", "StagedReleaseMessagingBoard"],

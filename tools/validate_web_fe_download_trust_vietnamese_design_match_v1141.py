@@ -50,8 +50,8 @@ def check_docs():
  for f in files: req_file(f)
  req('tests/e2e/fe-download-trust-vietnamese-design-match-v1141.spec.ts',['download trust Vietnamese design match','Thiết kế chi tiết tin cậy tải game','Có gói build thật','Phê duyệt chủ sở hữu','trustGateTop','firstGatesTop'])
  for f in files[1:]: req(f,['WEB-FE-DOWNLOAD-TRUST-VIETNAMESE-DESIGN-MATCH-v1.141','WEB_CLOSED','Sequential Page Completion','Just-in-time Design','Design Target First','Layout Match Before Closure','Base UI/UX Layout','Public Download Trust','Vietnamese','game scenario','browser/e2e','screenshot','No production auth','No DB persistence','No real Portal integration','No real Ops/Admin mutation','NO_ACCEPTED_BACKEND_CONTRACT'])
- req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-DOWNLOAD-TRUST-VIETNAMESE-DESIGN-MATCH-v1.141 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.150'])
- req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.150','select `/community/onboarding` as the next single active page'])
+ req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-DOWNLOAD-TRUST-VIETNAMESE-DESIGN-MATCH-v1.141 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.151'])
+ req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.151','select `/performance` as the next single active page'])
  req('docs/execution/WEB-TASK-LEDGER.md',['| WEB-FE-DOWNLOAD-TRUST-VIETNAMESE-DESIGN-MATCH-v1.141 | WEB-FE | WEB_CLOSED |'])
 def main():
  check_target(); check_source(); check_docs()
