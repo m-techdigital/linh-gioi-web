@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-HOME-VISUAL-TARGET-v1.93 WEB_CLOSED.
+
+Current decision: v1.93 FE public homepage visual target slice closed after user asked for professional design images saved as destinations for comparison. Continue UI/UX layout work next using saved references before more visual edits. Entire program is NOT production-complete.
+
+- v1.93 adds a saved 1440x900 homepage visual target SVG under public assets and docs design reference.
+- The live homepage now has browser/e2e guardrails proving the hero, h1, primary CTA and cinematic scene render visible boxes in the first viewport.
+- v1.93 evidence: RED browser/e2e reproduced missing design reference; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile design-reference/hero-box/font-size/overflow PASS.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.94.
+
 Current phase: WEB-FE-PUBLIC-VISUAL-ATMOSPHERE-v1.92 WEB_CLOSED.
 
 Current decision: v1.92 FE public visual atmosphere/layout slice closed after user feedback that the website looked too raw, too monochrome and visually poor. Continue UI/UX layout work next before adding more content. Entire program is NOT production-complete.
