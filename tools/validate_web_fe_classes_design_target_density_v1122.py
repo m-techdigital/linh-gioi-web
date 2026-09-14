@@ -79,7 +79,7 @@ def check_tests_docs() -> None:
     ])
     require_text("apps/web/src/components/PublicDesignTargetReference.tsx", [
         "PUBLIC_CLASSES_TARGET",
-        "Classes detailed design target",
+        "Thiết kế chi tiết Năm Lộ",
         "classes-detailed-design-target-v1122.png",
         "Public Classes",
         "pathname === \"/classes\"",

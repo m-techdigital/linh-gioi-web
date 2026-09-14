@@ -22,7 +22,7 @@ const PUBLIC_STORY_TARGET = {
 };
 
 const PUBLIC_CLASSES_TARGET = {
-  label: "Classes detailed design target",
+  label: "Thiết kế chi tiết Năm Lộ",
   href: "/design-reference/classes-detailed-design-target-v1122.png",
   scope: "Public Classes"
 };

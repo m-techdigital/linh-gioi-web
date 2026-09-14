@@ -5,7 +5,7 @@ import { getWorldRouteKindLabel } from "./worldRouteLabels";
 export function ClassIdentityDeck() {
   return (
     <section className="lgo-experience-section lgo-class-identity-section" aria-labelledby="class-identity-heading">
-      <SectionHeading eyebrow="Class identity" title="Năm Lộ — năm cách đọc cùng một thế giới">
+      <SectionHeading eyebrow="Bản sắc Năm Lộ" title="Năm Lộ — năm cách đọc cùng một thế giới">
         Chọn Lộ không chỉ đổi bộ kỹ năng. Nó đổi nhịp bạn bước vào trận, điều bạn chú ý trong câu chuyện và cách đồng đội cảm nhận sự hiện diện của bạn.
       </SectionHeading>
       <div className="lgo-class-identity-deck" id="class-identity-heading">
@@ -23,7 +23,7 @@ export function ClassIdentityDeck() {
             <dl>
               <div><dt>Nhịp chiến đấu</dt><dd>{path.battleRhythm}</dd></div>
               <div><dt>Cách nhìn thế giới</dt><dd>{path.worldLens}</dd></div>
-              <div><dt>Fantasy trong tổ đội</dt><dd>{path.teamFantasy}</dd></div>
+              <div><dt>Vai trò trong tổ đội</dt><dd>{path.teamFantasy}</dd></div>
             </dl>
             <div className="lgo-class-signature-verbs" aria-label={`Động từ nhận diện của ${path.name}`}>
               {path.signatureVerbs.map((verb) => <span key={verb}>{verb}</span>)}

@@ -2678,7 +2678,7 @@ export const gameExperiencePillars: GameExperiencePillar[] = [
     id: "progression",
     title: "Lớn lên theo cách của bạn",
     tagline: "Progression",
-    summary: "Level, skill, trang bị, ngoại hình, linh thú và lựa chọn class tạo nên một hành trình dài, nhưng không tách khỏi đời sống xã hội của Linh Thành."
+    summary: "Cấp độ, kỹ năng, trang bị, ngoại hình, linh thú và lựa chọn Lộ tạo nên một hành trình dài, nhưng không tách khỏi đời sống xã hội của Linh Thành."
   }
 ];
 
@@ -2688,8 +2688,8 @@ export const classPaths: ClassPath[] = [
     name: "Võ",
     role: "Áp sát · phản đòn",
     fantasy: "Đứng vững ở tuyến đầu, dùng nhịp tay và thời điểm để bẻ gãy áp lực của đối thủ.",
-    combatIdentity: "Combo cận chiến, phá giáp, stagger và phản đòn đúng thời điểm.",
-    visualSignal: "Cam · vàng · bụi lực · shockwave",
+    combatIdentity: "Chuỗi đòn cận chiến, phá giáp, làm choáng nhịp và phản đòn đúng thời điểm.",
+    visualSignal: "Cam · vàng · bụi lực · sóng chấn",
     battleRhythm: "Tiến vào tầm nguy hiểm, đọc đòn đối phương rồi đổi phòng thủ thành một nhịp phản công nặng và dứt khoát.",
     worldLens: "Nhìn mọi biến cố qua câu hỏi: ai đang cần được bảo vệ ngay lúc này?",
     teamFantasy: "Là người đứng lại khi cả đội cần một điểm tựa — giữ tuyến, phá thế và mở khoảng trống cho đồng đội.",
@@ -2698,10 +2698,10 @@ export const classPaths: ClassPath[] = [
   {
     id: "kiem",
     name: "Kiếm",
-    role: "Cơ động · combo",
+    role: "Cơ động · nối đòn",
     fantasy: "Lướt qua chiến trường bằng những đường kiếm chính xác, nhanh và khó đoán.",
-    combatIdentity: "Tốc độ, counter, mobility, air combo và nhịp kết liễu sắc gọn.",
-    visualSignal: "Afterimage · sword trail · kiếm khí",
+    combatIdentity: "Tốc độ, phản kích, đổi vị trí, chuỗi đòn trên không và nhịp kết liễu sắc gọn.",
+    visualSignal: "Dư ảnh · vệt kiếm · kiếm khí",
     battleRhythm: "Không đứng yên quá lâu: đổi góc, nối chuỗi, đưa đối thủ vào nhịp của mình rồi kết thúc trước khi thế trận kịp đảo chiều.",
     worldLens: "Xem dị biến như một dấu vết cần truy đến tận nguồn, không chỉ một mối nguy cần dập tắt.",
     teamFantasy: "Là mũi nhọn cơ động của tổ đội — tiếp cận mục tiêu khó, cắt nhịp nguy hiểm và truy đuổi khi trận tuyến vỡ ra.",
@@ -2712,8 +2712,8 @@ export const classPaths: ClassPath[] = [
     name: "Pháp",
     role: "Nguyên tố · khống chế",
     fantasy: "Định hình chiến trường bằng linh thuật và các vùng tác động có chủ ý.",
-    combatIdentity: "Ranged, elemental, AoE, barrier và control theo vùng.",
-    visualSignal: "Hỏa · băng · lôi · barrier · gravity",
+    combatIdentity: "Tầm xa, nguyên tố, vùng tác động, kết giới và khống chế theo khu vực.",
+    visualSignal: "Hỏa · băng · lôi · kết giới · trọng lực",
     battleRhythm: "Đọc vị trí và thời điểm trước khi ra tay: dựng vùng nguy hiểm, khóa đường di chuyển rồi bùng nổ khi đối thủ đã bước vào thế trận.",
     worldLens: "Mỗi portal là một hiện tượng phải được giải nghĩa — quy luật nào đang bị bẻ cong và vì sao?",
     teamFantasy: "Là người định hình không gian chiến đấu: ép quái rời vị trí tốt, bảo vệ vùng an toàn và tạo thời cơ cho cả đội.",
@@ -2724,8 +2724,8 @@ export const classPaths: ClassPath[] = [
     name: "Cơ",
     role: "Cơ giới · triển khai",
     fantasy: "Pha công nghệ vào linh lực, biến chiến trường thành một mạng lưới thiết bị và hỏa lực.",
-    combatIdentity: "Ranged weapon, turret, mine, drone, cannon và deployable.",
-    visualSignal: "Drone · rail shot · cơ khí Neo-Asian",
+    combatIdentity: "Vũ khí tầm xa, ụ triển khai, mìn, thiết bị bay, pháo và công cụ đặt trước.",
+    visualSignal: "Thiết bị bay · phát bắn ray · cơ khí Á Đông mới",
     battleRhythm: "Chuẩn bị trước một bước: đặt thiết bị, khóa góc bắn, tạo chuỗi hỏa lực rồi liên tục tái bố trí theo biến động của trận đấu.",
     worldLens: "Đo thứ người khác chỉ cảm nhận: cường độ linh lực, dao động portal và dấu vết vật lý của một thế giới đang chồng lên thế giới này.",
     teamFantasy: "Là bộ não chiến thuật thực địa — biến địa hình thành lợi thế và giữ nhịp ổn định khi cuộc chiến kéo dài.",
@@ -2736,8 +2736,8 @@ export const classPaths: ClassPath[] = [
     name: "Linh",
     role: "Triệu hồi · hỗ trợ",
     fantasy: "Lắng nghe linh giới, gọi trợ lực từ những thực thể bên kia và giữ nhịp cho cả đội.",
-    combatIdentity: "Summon, heal, buff, shield, purification và bind/debuff.",
-    visualSignal: "Jade · linh phù · summon · purification",
+    combatIdentity: "Triệu hồi, hồi phục, cường hóa, khiên hộ thể, thanh tẩy và trói/giảm lực.",
+    visualSignal: "Ngọc bích · linh phù · triệu hồi · thanh tẩy",
     battleRhythm: "Quan sát toàn đội và nhịp nguy hiểm: triệu hồi đúng lúc, giữ lớp bảo hộ, thanh tẩy sai lệch và trói những mục tiêu cần bị chặn.",
     worldLens: "Nghe thấy điều khe nứt đang nói — những tiếng vọng, linh thể và ký ức mà bốn Lộ khác khó tiếp cận trực tiếp.",
     teamFantasy: "Là mạch nối của tổ đội: giữ mọi người sống sót, tăng sức mạnh đúng thời điểm và biến thế giới vô hình thành lợi thế hữu hình.",
@@ -2762,8 +2762,8 @@ export const worldRouteStops: WorldRouteStop[] = [
     kind: "gate",
     summary: "Cửa ngõ nhập môn: Người Giữ Cổng, Bia Luyện và những bài học đầu tiên về di chuyển, dash và kỹ năng môn phái.",
     mood: "Ranh giới giữa an toàn và chưa biết — cổng thành phía sau, rừng và linh khí bất ổn phía trước.",
-    playerPromise: "Bước ra khỏi hub và cảm nhận class của mình qua chuyển động, tương tác và những nguy hiểm đầu tiên.",
-    signatureActivity: "Training, gặp Gate Keeper, học nhịp di chuyển và nhận dấu hiệu đầu tiên rằng vùng ngoài thành không còn bình thường.",
+    playerPromise: "Bước ra khỏi hub và cảm nhận Lộ của mình qua chuyển động, tương tác và những nguy hiểm đầu tiên.",
+    signatureActivity: "Luyện tập, gặp Người Giữ Cổng, học nhịp di chuyển và nhận dấu hiệu đầu tiên rằng vùng ngoài thành không còn bình thường.",
     narrativePressure: "Một vết nứt nhỏ ở đây là điểm khởi đầu cho chuỗi biến cố đủ lớn để chạm tới toàn Linh Thành."
   },
   {
@@ -2847,7 +2847,7 @@ export const publicGameArtAssets: PublicGameArtAsset[] = [
     role: "world-concept",
     publicLabel: "Ý tưởng thế giới · Đông Môn",
     sourceSha256: "6dc7313b27f2b00eb93c0fa8dd0a1f3793c9f7a4f406439068959664cf75ea1a",
-    notFinalArt: "Concept art for public world direction; không phải ảnh gameplay hoặc môi trường hoàn thiện cuối cùng."
+    notFinalArt: "Ý tưởng mỹ thuật dùng cho hướng thế giới công khai; không phải ảnh gameplay hoặc môi trường hoàn thiện cuối cùng."
   },
   {
     id: "vo-lv1-starter-development-art",
@@ -2856,9 +2856,9 @@ export const publicGameArtAssets: PublicGameArtAsset[] = [
     upstreamStatus: "APPROVED_RUNTIME_ART",
     webStatus: "WEB_REFERENCE_APPROVED",
     role: "class-development-preview",
-    publicLabel: "Development art preview · Võ Lv1–30",
+    publicLabel: "Bản thiết kế đang phát triển · Võ Lv1–30",
     sourceSha256: "1008388e9401cd58e0e602e77e88cbd4169d1899e18466e400b278506a720089",
-    notFinalArt: "Approved runtime source art with refinement still in progress; not production-final class key art."
+    notFinalArt: "Ảnh nguồn runtime đã được duyệt để tham chiếu, vẫn còn tinh chỉnh; không phải key art Lộ hoàn thiện cuối cùng."
   },
   {
     id: "vo-lv1-skill-development-art",
@@ -2867,9 +2867,9 @@ export const publicGameArtAssets: PublicGameArtAsset[] = [
     upstreamStatus: "APPROVED_RUNTIME_ART",
     webStatus: "WEB_REFERENCE_APPROVED",
     role: "skill-development-preview",
-    publicLabel: "Skill/VFX development preview",
+    publicLabel: "Bản thiết kế kỹ năng/hiệu ứng đang phát triển",
     sourceSha256: "224bdeec4b411723e32d3cc4958066f1601b5f43ec38a4af7b19daf671becd46",
-    notFinalArt: "Approved runtime source art used as a development preview; not a final combat screenshot."
+    notFinalArt: "Ảnh nguồn runtime đã được duyệt để xem trước hướng phát triển; không phải ảnh chụp chiến đấu hoàn thiện."
   }
 ];
 
@@ -2897,7 +2897,7 @@ export const homeDiscoveryMoments: HomeDiscoveryMoment[] = [
   {
     id: "story-shadow-invasion",
     kind: "story",
-    sourceRef: "Chapter 03",
+    sourceRef: "Chương 03",
     eyebrow: "Một biến cố để cùng nhớ",
     href: "/story",
     actionLabel: "Đi vào cốt truyện",

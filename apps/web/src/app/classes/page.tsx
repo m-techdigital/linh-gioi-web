@@ -29,10 +29,10 @@ export default function ClassesPage() {
         <ClassArtSpotlight />
 
         <section className="lgo-path-philosophy">
-          <p className="lgo-eyebrow">Class philosophy</p>
-          <h2>Cùng một body base — khác biệt đến từ Lộ, trang bị, animation và cách chiến đấu</h2>
+          <p className="lgo-eyebrow">Triết lý Năm Lộ</p>
+          <h2>Cùng một thân cơ sở — khác biệt đến từ Lộ, trang bị, chuyển động và nhịp chiến đấu</h2>
           <p>
-            Nhân vật nam/nữ dùng base chung; class được thể hiện qua layer trang bị, vũ khí, silhouette, skill/VFX và nhịp hành động. Điều đó giữ tính mix-and-match cho thời trang và progression mà không khóa người chơi vào một body riêng cho từng class.
+            Nhân vật nam/nữ dùng thân cơ sở chung; mỗi Lộ được thể hiện qua lớp trang bị, vũ khí, dáng nhận diện, hiệu ứng kỹ năng và nhịp hành động. Cách này giữ tự do phối trang phục và tiến trình phát triển mà không khóa người chơi vào một thân riêng cho từng Lộ.
           </p>
           <div className="lgo-hero-actions">
             <LinkButton href="/story" tone="shadow">Xem năm Lộ trong cốt truyện</LinkButton>

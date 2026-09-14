@@ -1,3 +1,16 @@
+Current phase: WEB-FE-CLASSES-VIETNAMESE-DESIGN-MATCH-v1.137 WEB_CLOSED.
+
+Current decision: v1.137 closed the active `/classes` page slice after reviewing the registered Public Classes design target and matching the implemented page in browser. The target remains valid because it is Vietnamese, coherent with the Linh Giới Năm Lộ scenario, and visually aligned with the accepted dark fantasy direction. `/classes` now uses Vietnamese page/target labels, removes stale English first-flow labels, and keeps the five class cards visible in the desktop first fold. Entire program is NOT production-complete.
+
+- v1.137 retained `classes-detailed-design-target-v1122.png` after design review instead of replacing a still-valid target.
+- v1.137 translated Public Classes target/page labels and class art fixture labels used by `/classes`.
+- v1.137 compacted desktop `/classes` first-flow under `.lgo-classespage-stack`: hero → compact Năm Lộ heading → first class-card row → identity deck → Võ art board.
+- v1.137 evidence: RED browser/e2e reproduced only 92.266px of the first class card visible at 1280x720; Playwright desktop/mobile `/classes` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: 1280x720 hero 360.375px, class grid top 569.828, first card visible 150.172, overflow 0.
+- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.138. Select `/journey` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-STORY-VIETNAMESE-DESIGN-MATCH-v1.136 WEB_CLOSED.
 
 Current decision: v1.136 closed the active `/story` page slice after refreshing the Public Story design target to Vietnamese and reviewing the implemented page in browser against that target. `/story` now follows the target structure more closely: cinematic Vết Nứt Đông Môn hero, immediate opening chapter cards, Vietnamese story labels and delayed boundary/reference board after the first-flow content. Entire program is NOT production-complete.

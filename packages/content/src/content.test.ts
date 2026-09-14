@@ -164,8 +164,8 @@ it("keeps WEB v1.24 public art provenance and claims bounded", () => {
   ]);
   expect(publicGameArtAssets.some((item) => item.upstreamStatus === "DRAFT_OWNER_REVIEW")).toBe(true);
   expect(publicGameArtAssets.some((item) => item.upstreamStatus === "APPROVED_RUNTIME_ART")).toBe(true);
-  expect(publicGameArtAssets.every((item) => item.notFinalArt.includes("not"))).toBe(true);
-  expect(publicGameArtAssets.some((item) => item.notFinalArt.includes("gameplay screenshot"))).toBe(true);
+  expect(publicGameArtAssets.every((item) => item.notFinalArt.includes("không phải"))).toBe(true);
+  expect(publicGameArtAssets.some((item) => item.notFinalArt.includes("ảnh gameplay"))).toBe(true);
 });
 
 it("keeps WEB v1.25 class/world/story depth complete and balanced", () => {

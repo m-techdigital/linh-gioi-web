@@ -115,10 +115,10 @@ export function ClassArtSpotlight() {
   return (
     <section className="lgo-class-art-spotlight" aria-labelledby="vo-development-art-heading">
       <div className="lgo-class-art-spotlight-copy">
-        <span className="lgo-card-kicker">Development art preview · Võ</span>
+        <span className="lgo-card-kicker">Bản thiết kế đang phát triển · Võ</span>
         <h2 id="vo-development-art-heading">Một Lộ được mở như một bộ nhận diện — không phải một tấm poster duy nhất</h2>
         <p>
-          Võ cho thấy cách Linh Giới xây class bằng nhiều lớp có thể thay đổi: gương mặt, trang bị rời, đai, giày, vũ khí và VFX. Website dùng board này như một lát cắt art direction để kể về tính modular của nhân vật, không xem đây là key art production-final.
+          Võ cho thấy cách Linh Giới xây Lộ bằng nhiều lớp có thể thay đổi: gương mặt, trang bị rời, đai, giày, vũ khí và hiệu ứng kỹ năng. Website dùng bảng này như một lát cắt định hướng mỹ thuật để kể về cấu trúc nhân vật theo lớp, không xem đây là ảnh đại diện hoàn thiện cuối cùng.
         </p>
         <div className="lgo-class-art-note">
           <strong>{voStarterArt.publicLabel}</strong>
@@ -134,20 +134,20 @@ export function ClassArtSpotlight() {
           <div className="lgo-class-art-frame">
             <Image
               src={voStarterArt.webPath}
-              alt="Bảng thiết kế modular của class Võ gồm gương mặt, trang phục, phụ kiện và vũ khí"
+              alt="Bảng thiết kế nhiều lớp của Lộ Võ gồm gương mặt, trang phục, phụ kiện và vũ khí"
               width={1280}
               height={1280}
               sizes="(max-width: 720px) 92vw, 620px"
               loading="eager"
             />
           </div>
-          <figcaption>Modular gear board · Võ</figcaption>
+          <figcaption>Bảng trang bị nhiều lớp · Võ</figcaption>
         </figure>
         <figure className="lgo-class-art-board lgo-class-art-board-skill">
           <div className="lgo-class-art-frame">
             <Image
               src={voSkillArt.webPath}
-              alt="Bảng hiệu ứng kỹ năng đang phát triển cho class Võ"
+              alt="Bảng hiệu ứng kỹ năng đang phát triển cho Lộ Võ"
               width={820}
               height={820}
               sizes="(max-width: 720px) 50vw, 260px"
