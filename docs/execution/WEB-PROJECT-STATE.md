@@ -1,3 +1,20 @@
+Current phase: WEB-FE-PERFORMANCE-REAL-UI-LAYOUT-v1.209 WEB_CLOSED.
+
+Current decision: v1.209 closed the active `/performance` page slice as a real browser UI/UX Layout task. The existing Vietnamese performance HUD design board and shared public service shell were sufficient for comparison; work focused on the rendered performance route, first-flow density, desktop hero typography, mobile route-card grid density, disclosure grouping for secondary evidence and Base First shared CSS ownership. Entire program is NOT production-complete.
+
+- v1.209 did not create or batch a new design target because the existing performance HUD board plus Public Service design reference were usable for checking header, footer, menu, shell, route flow and game scenario alignment.
+- v1.209 changed real UI layout: `/performance` now keeps the first-flow to hero, performance design board and top-page budget route board, while copy budget, static route composition, perceived load, mobile density, trust, route continuity, accessibility, content hub, world loop, download trust, safety and closed tester proof boards are grouped behind the shared native disclosure.
+- v1.209 extended the existing performance shared layout in `packages/ui/src/service-layout.css`; no current-page CSS was added to `apps/web/src/app/globals.css`.
+- v1.209 kept the page Vietnamese and FE-only: no Core Web Vitals production PASS claim, no Lighthouse certification, no image CDN claim, no production monitoring, no production auth, no DB persistence and no accepted backend contract.
+- v1.209 explicitly checked rendered screenshots against the performance HUD design board and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.209 final browser/e2e metrics: desktop hero bottom 378.28px, design top 391.23px, design bottom 606.27px, route top 637.63px, disclosure top 1046.22px, scrollHeight 1618px, h1 font 33.54px, max heading font 34.56px, 3 step columns, 1 disclosure, 3 expanded top-level boards, overflow 0; mobile hero bottom 514.86px, design top 520.78px, design bottom 820.69px, route top 845.02px, disclosure top 1569.61px, scrollHeight 2328px, h1 font 29.12px, max heading font 32.00px, 2 step columns, 1 disclosure, 3 expanded top-level boards, overflow 0.
+- v1.209 evidence: browser/e2e desktop/mobile v1.209; screenshot review `/tmp/performance-desktop-v1209.png` and `/tmp/performance-mobile-v1209.png`; source validator `tools/validate_web_fe_performance_real_ui_layout_v1209.py`; Web/UI typecheck; Web build; current-state closure validator.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.210.
+Select `/accessibility` as the next single active page. Continue Real Browser UI/UX Layout First and Base First; use design target only as a comparison guardrail and do not move past `/accessibility` before browser/e2e, screenshot review, validator, build/typecheck, docs, commit and push.
+
+Historical snapshot follows.
+
 Current phase: WEB-FE-COMMUNITY-ONBOARDING-REAL-UI-LAYOUT-v1.208 WEB_CLOSED.
 
 Current decision: v1.208 closed the active `/community/onboarding` page slice as a real browser UI/UX Layout task. The existing Vietnamese onboarding gameplay-loop design board and shared public shell were sufficient for comparison; work focused on the rendered onboarding route, first-flow density, mobile typography, route-card grid density, disclosure grouping for secondary evidence and Base First shared CSS ownership. Entire program is NOT production-complete.

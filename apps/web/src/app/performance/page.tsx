@@ -89,19 +89,30 @@ export default function PerformanceBudgetPage() {
           </div>
         </section>
 
-        <PerformanceCopyBudgetPrincipleBoard />
-        <StaticRouteCompositionBoard />
-        <PerceivedLoadSignalBoard />
-        <MobileDensityBudgetBoard />
-        <PlayerTrustReleaseCta />
-        <RouteContinuityCta />
-        <PerformanceBudgetCta />
-        <AccessibilityReadabilityCta />
-        <ContentIaStartCta />
-        <WorldGameplayLoopCta />
-        <DownloadTrustCta />
-        <PlayerSafetySupportCta />
-        <ClosedTesterInformationPackCta />
+        <details className="lgo-service-disclosure-stack lgo-performance-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>
+              Giữ đủ copy budget, static route composition, perceived load, mobile density, trust, route continuity,
+              accessibility, content hub, world loop, download trust, safety và closed tester nhưng không ép toàn bộ proof board vào first-flow hiệu năng.
+            </small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <PerformanceCopyBudgetPrincipleBoard />
+            <StaticRouteCompositionBoard />
+            <PerceivedLoadSignalBoard />
+            <MobileDensityBudgetBoard />
+            <PlayerTrustReleaseCta />
+            <RouteContinuityCta />
+            <PerformanceBudgetCta />
+            <AccessibilityReadabilityCta />
+            <ContentIaStartCta />
+            <WorldGameplayLoopCta />
+            <DownloadTrustCta />
+            <PlayerSafetySupportCta />
+            <ClosedTesterInformationPackCta />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );
