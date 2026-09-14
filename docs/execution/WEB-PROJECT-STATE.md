@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-VISUAL-ATMOSPHERE-v1.92 WEB_CLOSED.
+
+Current decision: v1.92 FE public visual atmosphere/layout slice closed after user feedback that the website looked too raw, too monochrome and visually poor. Continue UI/UX layout work next before adding more content. Entire program is NOT production-complete.
+
+- v1.92 adds layered ambient public-shell backgrounds, sticky glass navigation, stronger panel/card depth, accent lines and tone-specific button gradients.
+- The change focuses on visual hierarchy and atmosphere rather than content volume, while preserving existing no-backend/no-production claims.
+- v1.92 evidence: RED browser/e2e reproduced missing ambient shell layer; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile visual-layer/font-size/overflow PASS.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.93.
+
 Current phase: WEB-FE-PUBLIC-COMMUNITY-REAL-PLAZA-GALLERY-v1.91 WEB_CLOSED.
 
 Current decision: v1.91 FE public community real plaza screenshot gallery slice closed; continue FE/browser UI work next and keep using real LinhGioiOnline images where useful. Entire program is NOT production-complete.
