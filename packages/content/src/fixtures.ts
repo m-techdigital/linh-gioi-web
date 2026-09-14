@@ -695,9 +695,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "community-roadmap-onboarding-guide",
     category: "guides",
-    title: "Cách theo dõi roadmap và tham gia cộng đồng đúng kỳ vọng",
-    summary: "Guide giúp người chơi mới hiểu status, roadmap, feedback và staged release mà không nhầm với live forum hoặc account portal.",
-    body: "Đi theo thứ tự: đọc status/download trust, xem roadmap decision gates, hiểu cộng đồng hiện là static guidance, rồi chờ release artifact hoặc owner announcement trước khi tham gia test.",
+    title: "Lộ trình cộng đồng đúng kỳ vọng",
+    summary: "Guide giúp người chơi mới hiểu trạng thái, lộ trình, phản hồi và phát hành theo giai đoạn mà không nhầm với diễn đàn live hoặc cổng tài khoản.",
+    body: "Đi theo thứ tự: đọc Trạng thái chơi và Tin cậy tải game, xem các mốc quyết định trên lộ trình, hiểu cộng đồng hiện là hướng dẫn tĩnh, rồi chờ thông báo chủ sở hữu trước khi tham gia test.",
     publishedAt: "2026-09-05T13:10:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -1256,26 +1256,34 @@ export const guideDetailSteps: GuideDetailStep[] = [
   {
     slug: "community-roadmap-onboarding-guide",
     step: "01",
-    title: "Xem public status trước",
-    action: "Mở Status và Download trust để biết build, account, support và community đang ở mức nào.",
-    expectedResult: "Người chơi hiểu đâu là public info, đâu là internal guardrail và đâu là blocked dependency.",
-    blockedScope: "No public game download artifact, no production auth, no live support backend."
+    title: "Xem trạng thái công khai trước",
+    action: "Mở Trạng thái chơi và Tin cậy tải game để biết gói build, tài khoản, hỗ trợ và cộng đồng đang ở mức nào.",
+    expectedResult: "Người chơi hiểu đâu là thông tin công khai, đâu là guardrail nội bộ và đâu là phụ thuộc đang tạm khóa.",
+    blockedScope: "Chưa có gói tải game công khai, auth production hoặc support backend live."
   },
   {
     slug: "community-roadmap-onboarding-guide",
     step: "02",
-    title: "Đọc roadmap decision gates",
-    action: "Mở Roadmap để xem gate nào ready, planned hoặc blocked trước khi kỳ vọng tính năng mới.",
-    expectedResult: "Người chơi hiểu WEB-08/backend contract là điều kiện trước portal/account/ops thật.",
-    blockedScope: "No DB persistence, no real portal integration, no ops/admin mutation."
+    title: "Đọc mốc quyết định lộ trình",
+    action: "Mở Lộ trình để xem gate nào đã sẵn sàng, dự kiến hoặc tạm khóa trước khi kỳ vọng tính năng mới.",
+    expectedResult: "Người chơi hiểu hợp đồng backend WEB-08 là điều kiện trước portal, tài khoản hoặc ops thật.",
+    blockedScope: "Chưa có DB persistence, portal integration thật hoặc ops/admin mutation."
   },
   {
     slug: "community-roadmap-onboarding-guide",
     step: "03",
     title: "Góp ý đúng phạm vi",
-    action: "Dùng Community/Support như static guidance để góp ý nội dung, UX, wording và test readiness.",
-    expectedResult: "Feedback không bị trộn với account recovery, payment, entitlement hoặc moderation live system.",
-    blockedScope: "No forum/chat/guild backend, no ticket backend, no account lookup."
+    action: "Dùng Community/Support như hướng dẫn tĩnh để góp ý nội dung, UX, wording và mức sẵn sàng test.",
+    expectedResult: "Phản hồi không bị trộn với khôi phục tài khoản, thanh toán, quyền tải hoặc moderation live.",
+    blockedScope: "Chưa có forum/chat/guild backend, ticket backend hoặc tra cứu tài khoản."
+  },
+  {
+    slug: "community-roadmap-onboarding-guide",
+    step: "04",
+    title: "Chờ thông báo chủ sở hữu",
+    action: "Theo dõi Lộ trình, Trạng thái chơi và Cộng đồng để biết khi nào có gói build, đợt test hoặc kênh phản hồi được duyệt.",
+    expectedResult: "Người chơi không tự suy diễn ngày mở test, quyền tải hoặc lời mời tài khoản khi chưa có thông báo chính thức.",
+    blockedScope: "Chưa có lịch test được duyệt, quyền tải, tài khoản production hoặc moderation live."
   },
   {
     slug: "gate-entry-guide",
