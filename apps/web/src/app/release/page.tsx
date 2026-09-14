@@ -23,7 +23,7 @@ export const metadata = { title: "Release narrative / player trust" };
 export default function ReleaseNarrativePage() {
   return (
     <WebAppShell>
-      <Stack>
+      <Stack className="lgo-player-facing-stack lgo-releasepage-stack">
         <GameCard className="lgo-detail-hero-card lgo-release-narrative-hero-card">
           <StatusBadge tone="gold">WEB v1.18 player trust / staged release narrative</StatusBadge>
           <span className="lgo-card-kicker">No public build · no open beta · no entitlement funnel</span>
@@ -60,10 +60,10 @@ export default function ReleaseNarrativePage() {
         <SectionHeading eyebrow="Player trust first" title="Release wording phải chứng minh trước, rồi mới hứa sau">
           v1.18 tập trung vào product web: player trust, closed-test readiness, staged release messaging và route clarity giữa download/status/support.
         </SectionHeading>
+        <ReleaseReadinessHubCta />
         <ContentIaStartCta />
         <FaqHelpfulnessCta />
         <RouteContinuityCta />
-        <ReleaseReadinessHubCta />
         <ReleaseReadinessHubBoard />
         <OwnerReleaseGateBoard />
         <PlayerTrustSignalBoard />
@@ -76,8 +76,8 @@ export default function ReleaseNarrativePage() {
         <PlayerSafetySupportCta />
         <AccessibilityReadabilityCta />
         <PerformanceBudgetCta />
-              <ClosedTesterInformationPackCta />
-        </Stack>
+        <ClosedTesterInformationPackCta />
+      </Stack>
     </WebAppShell>
   );
 }

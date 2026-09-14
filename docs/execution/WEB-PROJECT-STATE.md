@@ -1,3 +1,17 @@
+Current phase: WEB-FE-RELEASE-DESIGN-TARGET-DENSITY-v1.127 WEB_CLOSED.
+
+Current decision: v1.127 FE release design target density slice closed. Public `/release` now has a dedicated high-fidelity `Public Release` design target and runtime desktop/mobile browser/e2e guardrails for first-fold release narrative density. Entire program is NOT production-complete.
+
+- v1.127 created `release-detailed-design-target-v1127.png` with built-in image_gen and mirrored it under `docs/design/reference`.
+- v1.127 registered `Public Release`, routed `/release` to that page-specific target and kept Public Service as the broader target for remaining service routes.
+- v1.127 compacted desktop `/release` hero, M0→M1 board, proof heading and release readiness CTA under `lgo-releasepage-stack` while preserving mobile behavior.
+- v1.127 evidence: RED browser/e2e reproduced missing `Public Release` target attachment; Playwright desktop/mobile release design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
+- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.128.
+
 Current phase: WEB-FE-DOWNLOAD-TRUST-DESIGN-TARGET-DENSITY-v1.126 WEB_CLOSED.
 
 Current decision: v1.126 FE download trust design target density slice closed. Public `/download/trust` now has a dedicated high-fidelity `Public Download Trust` design target and runtime desktop/mobile browser/e2e guardrails for first-fold trust/checksum/provenance density. Entire program is NOT production-complete.

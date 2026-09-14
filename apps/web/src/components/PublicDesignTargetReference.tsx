@@ -51,6 +51,12 @@ const PUBLIC_DOWNLOAD_TRUST_TARGET = {
   scope: "Public Download Trust"
 };
 
+const PUBLIC_RELEASE_TARGET = {
+  label: "Release detailed design target",
+  href: "/design-reference/release-detailed-design-target-v1127.png",
+  scope: "Public Release"
+};
+
 const PUBLIC_CORE_TARGET = {
   label: "Public Core design target",
   href: "/design-reference/design-atlas-public-core-v195.png",
@@ -77,6 +83,7 @@ function targetForPath(pathname: string) {
   if (pathname === "/start") return PUBLIC_START_TARGET;
   if (pathname === "/download/trust") return PUBLIC_DOWNLOAD_TRUST_TARGET;
   if (pathname === "/download") return PUBLIC_DOWNLOAD_TARGET;
+  if (pathname === "/release") return PUBLIC_RELEASE_TARGET;
   if (publicServicePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_SERVICE_TARGET;
   if (publicCorePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_CORE_TARGET;
   return PUBLIC_CORE_TARGET;
