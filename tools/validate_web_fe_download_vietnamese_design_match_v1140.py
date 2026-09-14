@@ -45,8 +45,8 @@ def check_docs():
  for f in files: req_file(f)
  req('tests/e2e/fe-download-vietnamese-design-match-v1140.spec.ts',['download Vietnamese design match','Thiết kế chi tiết tải game','release readiness panel starts in the opening viewport','channel cards follow readiness in the design-led first flow'])
  for f in files[1:]: req(f,['WEB-FE-DOWNLOAD-VIETNAMESE-DESIGN-MATCH-v1.140','WEB_CLOSED','Sequential Page Completion','Just-in-time Design','Design Target First','Layout Match Before Closure','Base UI/UX Layout','Public Download','Vietnamese','game scenario','browser/e2e','built-in imagegen','No production auth','No DB persistence','No real Portal integration','No real Ops/Admin mutation','NO_ACCEPTED_BACKEND_CONTRACT'])
- req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-DOWNLOAD-VIETNAMESE-DESIGN-MATCH-v1.140 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.210'])
- req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.210','select `/accessibility` as the next single active page'])
+ req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-DOWNLOAD-VIETNAMESE-DESIGN-MATCH-v1.140 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.211'])
+ req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.211','select `/roadmap` as the next single active page'])
  req('docs/execution/WEB-TASK-LEDGER.md',['| WEB-FE-DOWNLOAD-VIETNAMESE-DESIGN-MATCH-v1.140 | WEB-FE | WEB_CLOSED |'])
 def main():
  check_target(); check_source(); check_docs()

@@ -3,12 +3,12 @@
 Status: WEB_TASK_CONTINUE
 
 Next task:
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.210
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.211
 
 Objective:
-Continue the sequential Real Browser UI/UX Layout pass for the next single public accessibility page after v1.209 `/performance` closure. The work must stay page-scoped, Base First and browser-evidence driven.
+Continue the sequential Real Browser UI/UX Layout pass for the next single public roadmap page after v1.210 `/accessibility` closure. The work must stay page-scoped, Base First and browser-evidence driven.
 
-Current FE scope: select `/accessibility` as the next single active page after v1.209 `/performance` closure. Complete `/accessibility` fully before any other page: confirm the registered public route target, apply only the minimal target correction needed if it blocks comparison, then prioritize the real Accessibility UI/UX Layout in browser. Required work is first-fold structure, visual hierarchy, spacing, typography scale, card density, mobile behavior, keyboard/focus/accessibility, screenshot/design-target comparison, docs/handoff/ledger, commit and push.
+Current FE scope: select `/roadmap` as the next single active page after v1.210 `/accessibility` closure. Complete `/roadmap` fully before any other page: confirm the registered public route target, apply only the minimal target correction needed if it blocks comparison, then prioritize the real Roadmap UI/UX Layout in browser. Required work is first-fold structure, visual hierarchy, spacing, typography scale, card density, mobile behavior, keyboard/focus/accessibility, screenshot/design-target comparison, docs/handoff/ledger, commit and push.
 
 Mandatory execution rules:
 
@@ -16,12 +16,12 @@ Mandatory execution rules:
    Use design target only as the comparison guardrail. If the existing target is usable, stop design work and fix the rendered page. If the target is missing or blocks comparison because it is stale, English-heavy, wrong for the game scenario, or diverges from shared header/footer/menu/shell/navigation, make the smallest current-page target correction and immediately return to browser layout.
 
 2. Base UI/UX Layout First is mandatory.
-   Before adding page-local layout, component or CSS, inspect sibling release/service/support/community/performance pages, `packages/ui` and `packages/design-tokens`. Reusable hero, proof board, card grid, CTA, form, table, status badge, route map, typography rhythm, responsive density, focus state or CSS block must be extracted or extended in shared owners first.
+   Before adding page-local layout, component or CSS, inspect sibling release/service/support/community/performance/accessibility pages, `packages/ui` and `packages/design-tokens`. Reusable hero, proof board, card grid, CTA, form, table, status badge, route map, typography rhythm, responsive density, focus state or CSS block must be extracted or extended in shared owners first.
 
 3. CSS must be managed by owner/role.
    Theme/tokens belong in `packages/design-tokens`; reusable component/layout style belongs in `packages/ui`; app/page code should compose base classes and keep only real route-specific differences. Do not inflate `apps/web/src/app/globals.css` with repeated current-page blocks.
 
-4. Do not move past `/accessibility` until closure evidence exists:
+4. Do not move past `/roadmap` until closure evidence exists:
    - render page in browser/e2e;
    - e2e or browser metrics for desktop/mobile;
    - screenshot/visual review against the design target and shared shell;
@@ -39,11 +39,11 @@ Mandatory execution rules:
    - multiple pages at once.
 
 6. If execution drifts, stop and reset to this page:
-   - return to `/accessibility`;
+   - return to `/roadmap`;
    - inspect the rendered browser layout;
    - check Base First owners;
    - modify shared base if a pattern repeats;
-   - continue until `/accessibility` is closed.
+   - continue until `/roadmap` is closed.
 
 Non-claims: FE-only until accepted game backend contracts exist; no independent backend, no production auth, no DB persistence, no CMS, no production deployment, no payment/shop/economy.
 

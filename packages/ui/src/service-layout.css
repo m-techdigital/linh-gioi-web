@@ -1904,15 +1904,15 @@
 
 /* Shared accessibility page layout for public readability/focus surfaces. */
 .lgo-accessibilitypage-stack {
-  gap: 1.05rem;
+  gap: clamp(.82rem, 1.45vw, 1.2rem);
 }
 
 .lgo-accessibilitypage-stack .lgo-detail-hero-card {
-  padding: clamp(1rem, 2.2vw, 1.55rem);
+  padding: clamp(.86rem, 1.35vw, 1.1rem);
 }
 
 .lgo-accessibilitypage-stack .lgo-detail-hero-card h1 {
-  font-size: clamp(2.1rem, 4.1vw, 3.5rem);
+  font-size: clamp(2rem, 3.25vw, 3.08rem);
   line-height: .92;
 }
 
@@ -1924,15 +1924,16 @@
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(17rem, .9fr);
   align-items: center;
-  gap: .95rem;
+  gap: .72rem;
   overflow: hidden;
-  padding: .9rem;
+  margin-top: -.35rem;
+  padding: .72rem;
 }
 
 .lgo-accessibility-design-board img {
   width: 100%;
   max-width: 100%;
-  max-height: 240px;
+  max-height: 190px;
   height: auto;
   border: 1px solid rgba(49,216,232,.20);
   border-radius: var(--lgo-radius-lg);
@@ -1960,8 +1961,9 @@
 
 .lgo-accessibility-route-board {
   display: grid;
-  gap: .85rem;
-  padding: .95rem;
+  gap: .62rem;
+  margin-top: -.2rem;
+  padding: .72rem;
 }
 
 .lgo-accessibility-route-board .lgo-section-heading {
@@ -1971,18 +1973,18 @@
 .lgo-accessibility-step-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: .75rem;
+  gap: .52rem;
 }
 
 .lgo-accessibility-step-card {
   display: grid;
   align-content: start;
-  gap: .5rem;
+  gap: .34rem;
   min-width: 0;
   border: 1px solid rgba(153,246,228,.18);
   border-radius: var(--lgo-radius-lg);
   background: rgba(7,17,31,.62);
-  padding: .8rem;
+  padding: .56rem;
 }
 
 .lgo-accessibility-step-card h2 {
@@ -1992,10 +1994,18 @@
 }
 
 .lgo-accessibility-step-card p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   margin: 0;
   color: var(--lgo-color-text-muted);
-  font-size: .86rem;
-  line-height: 1.35;
+  font-size: .74rem;
+  line-height: 1.22;
+}
+
+.lgo-accessibilitypage-stack .lgo-accessibility-expanded-evidence {
+  margin-top: -.35rem;
 }
 
 @media (max-width: 960px) {
@@ -2004,21 +2014,23 @@
   }
 
   .lgo-accessibility-step-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 720px) {
   .lgo-accessibilitypage-stack {
-    gap: .92rem;
+    gap: .72rem;
   }
 
   .lgo-accessibilitypage-stack .lgo-detail-hero-card {
-    padding: .85rem;
+    gap: .48rem;
+    padding: .78rem;
   }
 
   .lgo-accessibilitypage-stack .lgo-detail-hero-card h1 {
-    font-size: clamp(2rem, 10vw, 2.75rem);
+    font-size: clamp(1.82rem, 7vw, 2.02rem);
+    line-height: .96;
   }
 
   .lgo-accessibilitypage-stack .lgo-detail-hero-card p,
@@ -2054,7 +2066,7 @@
   }
 
   .lgo-accessibility-design-board img {
-    max-height: 160px;
+    max-height: 144px;
   }
 
   .lgo-accessibility-design-board figcaption,
@@ -2069,7 +2081,8 @@
   }
 
   .lgo-accessibility-step-grid {
-    gap: .55rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .5rem;
   }
 
   .lgo-accessibility-step-card {

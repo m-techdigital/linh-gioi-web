@@ -105,8 +105,8 @@ def main() -> int:
         "Real Browser UI/UX Layout First",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.210",
-        "Current FE scope: select `/accessibility`",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.211",
+        "Current FE scope: select `/roadmap`",
         "Real Browser UI/UX Layout First",
         "Base UI/UX Layout",
     ])

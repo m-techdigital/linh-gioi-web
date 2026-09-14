@@ -88,19 +88,30 @@ export default function AccessibilityReadabilityPage() {
           </div>
         </section>
 
-        <AccessibilityReadabilityPrincipleBoard />
-        <RouteReadabilityBoard />
-        <MobileScannabilityBoard />
-        <FocusOrderBoard />
-        <MobileDensityBudgetBoard />
-        <PlayerTrustReleaseCta />
-        <PerformanceBudgetCta />
-        <AccessibilityReadabilityCta />
-        <ContentIaStartCta />
-        <RouteContinuityCta />
-        <DownloadTrustCta />
-        <PlayerSafetySupportCta />
-        <ClosedTesterInformationPackCta />
+        <details className="lgo-service-disclosure-stack lgo-accessibility-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>
+              Giữ đủ readability principle, route readability, mobile scannability, focus order, mobile density,
+              trust, performance, content hub, route continuity, download trust, safety và closed tester nhưng không ép toàn bộ proof board vào first-flow dễ đọc.
+            </small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <AccessibilityReadabilityPrincipleBoard />
+            <RouteReadabilityBoard />
+            <MobileScannabilityBoard />
+            <FocusOrderBoard />
+            <MobileDensityBudgetBoard />
+            <PlayerTrustReleaseCta />
+            <PerformanceBudgetCta />
+            <AccessibilityReadabilityCta />
+            <ContentIaStartCta />
+            <RouteContinuityCta />
+            <DownloadTrustCta />
+            <PlayerSafetySupportCta />
+            <ClosedTesterInformationPackCta />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );
