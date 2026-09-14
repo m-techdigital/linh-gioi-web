@@ -64,13 +64,13 @@ def main() -> int:
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-ROUTE-CONTINUITY-REAL-UI-LAYOUT-v1.186 WEB_CLOSED',
-        'Select `/status`',
+        'Select `/support`',
         '/tmp/news-route-continuity-desktop-v1186.png', '/tmp/news-route-continuity-mobile-v1186.png',
         'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.203',
-        'Current FE scope: select `/status`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.204',
+        'Current FE scope: select `/support`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
         '| WEB-FE-NEWS-ROUTE-CONTINUITY-REAL-UI-LAYOUT-v1.186 | WEB-FE | WEB_CLOSED | 7258f8d |',

@@ -1,3 +1,21 @@
+Current phase: WEB-FE-STATUS-REAL-UI-LAYOUT-v1.203 WEB_CLOSED.
+
+Current decision: v1.203 closed the active `/status` page slice as a real browser UI/UX Layout task. The existing public Status design target and shared shell were sufficient for comparison; work focused on the rendered Status page, first-fold density, mobile typography, primary status proof hierarchy, keyboard/focus evidence and Base First shared disclosure/compact proof layout. Entire program is NOT production-complete.
+
+- v1.203 did not create a design batch because the registered Trạng thái công khai target already matched the shared header, footer, menu and shell well enough for comparison.
+- v1.203 changed real UI layout: `/status` now keeps the first-flow to hero, status signal design board, public status fixture, explanation depth and trust board, while secondary route proof boards are grouped behind the shared native disclosure.
+- v1.203 added status-specific composition rules to `packages/ui/src/service-layout.css`, reusing `lgo-service-compact-proof-page`, `lgo-service-disclosure-stack` and `lgo-service-disclosure-body` rather than adding new current-page CSS to `apps/web/src/app/globals.css`.
+- v1.203 kept the page Vietnamese and status-scenario safe: no CMS, no live uptime claim, no monitoring backend, no production auth, no DB persistence and no accepted backend contract.
+- v1.203 explicitly checked rendered screenshots against the Trạng thái công khai target and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.203 final browser/e2e metrics: desktop hero bottom 384.22px, design top 376.89px, design bottom 568.64px, fixture top 596.50px, explanation top 739.19px, trust top 1015.41px, disclosure top 1340.34px, scrollHeight 1896px, h1/max font 34.56px, 4 explanation columns, 4 trust columns, 1 disclosure, 5 expanded top-level boards, overflow 0; mobile hero bottom 514.39px, design top 525.91px, design bottom 895.58px, fixture top 923.09px, explanation top 1232.17px, trust top 1698.11px, disclosure top 2205.36px, scrollHeight 2948px, h1/max font 29.12px, 2 explanation columns, 2 trust columns, 1 disclosure, 5 expanded top-level boards, overflow 0.
+- v1.203 evidence: browser/e2e desktop/mobile v1.203; screenshot review `/tmp/status-desktop-v1203.png` and `/tmp/status-mobile-v1203.png`; source validator; Web/UI checks; Web build; clean current-state closure validator.
+- AXIRO reference remains organizational only: shared base/layout/style owners and separated style primitives. No AXIRO code was copied.
+- Design target sync rule remains recorded: design targets must stay synchronized with shared header, footer, menu, shell and navigation; if a current target diverges, only the smallest current-page target area may be corrected before returning to browser layout.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.204. Select `/support` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-RELEASE-TESTER-PACK-REAL-UI-LAYOUT-v1.202 WEB_CLOSED.
 
 Current decision: v1.202 closed the active `/release/tester-pack` page slice as a real browser UI/UX Layout task. The existing public closed tester target and shared shell were sufficient for comparison; work focused on the rendered tester-pack page, mobile typography, first-flow density, checklist hierarchy, keyboard/focus evidence and Base First shared disclosure/compact proof layout. Entire program is NOT production-complete.

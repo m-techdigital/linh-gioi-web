@@ -48,11 +48,11 @@ def main() -> int:
         '/tmp/patch-notes-${isMobile ? "mobile" : "desktop"}-v1199.png'
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
-        'Current phase: WEB-FE-PATCH-NOTES-REAL-UI-LAYOUT-v1.199 WEB_CLOSED', 'Select `/status`',
+        'Current phase: WEB-FE-PATCH-NOTES-REAL-UI-LAYOUT-v1.199 WEB_CLOSED', 'Select `/support`',
         '/tmp/patch-notes-desktop-v1199.png', '/tmp/patch-notes-mobile-v1199.png', 'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.203', 'Current FE scope: select `/status`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.204', 'Current FE scope: select `/support`',
         'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [

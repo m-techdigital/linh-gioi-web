@@ -70,22 +70,30 @@ export default function Page() {
         </section>
         <StatusExplanationDepth />
         <StatusTrustBoard />
-        <ReleaseReadinessHubCta />
-        <ReleaseSurfaceAlignmentBoard />
-        <PlayerTrustReleaseCta />
-        <TrustJourneyCheckpointBoard />
-        <ContentIaStartCta />
-        <FaqHelpfulnessCta />
-        <RouteContinuityCta />
-        <WorldGameplayLoopCta />
-        <PlayerSafetySupportCta />
-        <AccessibilityReadabilityCta />
-        <PerformanceBudgetCta />
-        <PerceivedLoadSignalBoard />
-        <NoSearchBackendNoteBoard />
-        <RoadmapDecisionGateBoard />
-        <StagedReleaseMessagingBoard />
-        <ClosedTesterInformationPackCta />
+        <details className="lgo-service-disclosure-stack lgo-status-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>Giữ đủ readiness, trust journey, support, accessibility, performance và onboarding nhưng không ép toàn bộ proof board vào first-flow trạng thái.</small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <ReleaseReadinessHubCta />
+            <ReleaseSurfaceAlignmentBoard />
+            <PlayerTrustReleaseCta />
+            <TrustJourneyCheckpointBoard />
+            <ContentIaStartCta />
+            <FaqHelpfulnessCta />
+            <RouteContinuityCta />
+            <WorldGameplayLoopCta />
+            <PlayerSafetySupportCta />
+            <AccessibilityReadabilityCta />
+            <PerformanceBudgetCta />
+            <PerceivedLoadSignalBoard />
+            <NoSearchBackendNoteBoard />
+            <RoadmapDecisionGateBoard />
+            <StagedReleaseMessagingBoard />
+            <ClosedTesterInformationPackCta />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );
