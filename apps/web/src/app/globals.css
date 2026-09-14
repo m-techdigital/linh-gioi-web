@@ -3363,3 +3363,83 @@ h2,
 h3 {
   text-shadow: 0 2px 22px rgba(49, 216, 232, .12);
 }
+
+/* WEB v1.97 public design target attachment */
+.lgo-design-target-band {
+  margin-top: clamp(2.25rem, 5vw, 4rem);
+}
+
+.lgo-design-target-reference {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid rgba(245, 200, 107, .28);
+  border-radius: var(--lgo-radius-xl);
+  padding: clamp(1rem, 2.2vw, 1.35rem);
+  background:
+    radial-gradient(circle at top left, rgba(245, 200, 107, .14), transparent 18rem),
+    linear-gradient(135deg, rgba(49, 216, 232, .10), rgba(122, 75, 217, .08)),
+    rgba(7, 17, 31, .82);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, .26);
+}
+
+.lgo-design-target-reference-copy {
+  min-width: 0;
+}
+
+.lgo-design-target-reference-copy span {
+  display: inline-flex;
+  margin-bottom: .35rem;
+  color: var(--lgo-color-warm-gold);
+  font-size: .76rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.lgo-design-target-reference-copy strong {
+  display: block;
+  font-family: var(--lgo-font-display);
+  font-size: clamp(1.1rem, 1.7vw, 1.45rem);
+  line-height: 1.12;
+}
+
+.lgo-design-target-reference-copy p {
+  margin: .35rem 0 0;
+  font-size: clamp(.92rem, 1vw, 1rem);
+  line-height: 1.55;
+}
+
+.lgo-design-target-reference-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border: 1px solid rgba(49, 216, 232, .42);
+  border-radius: var(--lgo-radius-pill);
+  padding: .75rem 1rem;
+  color: var(--lgo-color-text-primary);
+  background: rgba(49, 216, 232, .10);
+  text-decoration: none;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.lgo-design-target-reference-link:hover,
+.lgo-design-target-reference-link:focus-visible {
+  outline: 2px solid rgba(245, 200, 107, .56);
+  outline-offset: 3px;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 720px) {
+  .lgo-design-target-reference {
+    grid-template-columns: 1fr;
+  }
+  .lgo-design-target-reference-link {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+}

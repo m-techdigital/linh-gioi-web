@@ -1,6 +1,7 @@
 import { Container, LgoThemeProvider } from "@lgo-web/ui";
 import type { ReactNode } from "react";
 import { PublicNavigation } from "./PublicNavigation";
+import { PublicDesignTargetReference } from "./PublicDesignTargetReference";
 
 export function PublicSiteShell({ children }: { children: ReactNode }) {
   return (
@@ -13,6 +14,9 @@ export function PublicSiteShell({ children }: { children: ReactNode }) {
         <main id="main-content" className="lgo-main" tabIndex={-1}>
           <Container>{children}</Container>
         </main>
+        <aside className="lgo-design-target-band">
+          <Container><PublicDesignTargetReference /></Container>
+        </aside>
         <footer className="lgo-brand-footer">
           <Container className="lgo-brand-footer-inner">
             <div>

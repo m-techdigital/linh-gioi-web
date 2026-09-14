@@ -458,3 +458,26 @@ export function LoadingState({ label = "Đang tải" }: { label?: string }) {
 export function ErrorState({ title = "Không thể tải dữ liệu", children }: { title?: string; children?: ReactNode }) {
   return <div className="lgo-state lgo-state-error" role="alert"><strong>{title}</strong>{children ? <p>{children}</p> : null}</div>;
 }
+
+export type DesignTargetReferenceProps = {
+  label: string;
+  href: string;
+  scope: string;
+  note?: ReactNode;
+  className?: string;
+};
+
+export function DesignTargetReference({ label, href, scope, note, className }: DesignTargetReferenceProps) {
+  return (
+    <aside className={cx("lgo-design-target-reference", className)} role="region" aria-label="Design target reference">
+      <div className="lgo-design-target-reference-copy">
+        <span>Design Target First</span>
+        <strong>{scope}</strong>
+        {note ? <p>{note}</p> : null}
+      </div>
+      <a className="lgo-design-target-reference-link" href={href} target="_blank" rel="noreferrer">
+        {label}
+      </a>
+    </aside>
+  );
+}

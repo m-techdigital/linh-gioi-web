@@ -88,10 +88,10 @@ def check_docs_and_current_state() -> None:
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         "Current phase: WEB-FE-DESIGN-FIRST-GOVERNANCE-v1.96 WEB_CLOSED",
         "Design Target First",
-        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.97",
+        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.97",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
         "Design Target First",
         "design target",
         "Base UI/UX Layout",

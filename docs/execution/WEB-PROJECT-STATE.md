@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-DESIGN-TARGET-ATTACHMENT-v1.97 WEB_CLOSED.
+
+Current decision: v1.97 FE public design-target attachment slice closed. Public routes now expose a compact runtime Design Target First band linked to the registered Public Core or Public Service atlas, implemented through shared Base UI/UX Layout in packages/ui. Entire program is NOT production-complete.
+
+- v1.97 adds shared `DesignTargetReference` in `packages/ui` and route-to-design mapping in `apps/web`.
+- v1.97 uses existing v1.95 Public Core and Public Service design atlas targets; no new design target was required and no stale target was replaced.
+- v1.97 evidence: RED browser/e2e reproduced missing design-target region; Playwright desktop/mobile design-target attachment PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.98.
+
 Current phase: WEB-FE-DESIGN-FIRST-GOVERNANCE-v1.96 WEB_CLOSED.
 
 Current decision: v1.96 FE design-first governance slice closed after user made design images the primary source of truth for UI/UX implementation. Continue UI work only after attaching each page, section or reusable component to a registered design target or creating/replacing the target first. Entire program is NOT production-complete.
