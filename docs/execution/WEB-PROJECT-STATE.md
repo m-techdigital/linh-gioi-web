@@ -1,3 +1,16 @@
+Current phase: WEB-FE-COMMUNITY-REAL-UI-LAYOUT-v1.149 WEB_CLOSED.
+
+Current decision: v1.149 closed the active `/community` page slice as a real browser UI/UX Layout task. `/community` now has its own Vietnamese community design target, registered under Public Community, and uses shared Base First community layout from `packages/ui/src/service-layout.css`. Entire program is NOT production-complete.
+
+- v1.149 created `community-detailed-design-target-v1149.png` because `/community` only had the broad Public Service atlas and needed a concrete page target for comparison.
+- v1.149 used the target only as a guardrail, then repaired the real browser page.
+- v1.149 updated `/community` first-flow: compact Cộng đồng Linh Giới hero → community board → Hòa nhập/Quy tắc/Phản hồi cards → Linh Thành screenshots.
+- v1.149 evidence: RED browser metrics showed desktop h1 64px, first-flow leaked chat/forum/guild/No CMS/Real feedback, plaza top 1055.641, onboarding top 2387.266; mobile hero bottom 15080.172 due broad stack measurement, plaza top 1891.484, onboarding top 4372.531, first-flow leaked chat/forum/guild/backend labels; GREEN browser metrics show desktop overflow 0, h1 34.816px, hero bottom 373.125, board top 372.484, board bottom 564.234, focus top 593.188, focus bottom 871.375, plaza top 889.922, onboarding top 1957.422; mobile overflow 0, h1 39px, hero bottom 542.797, board top 550.797, board bottom 847.875, focus top 879.063, focus bottom 1487.297, plaza top 1502.484, onboarding top 3574.563.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.150. Select `/community/onboarding` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-SUPPORT-SAFETY-REAL-UI-LAYOUT-v1.148 WEB_CLOSED.
 
 Current decision: v1.148 closed the active `/support/safety` page slice as a real browser UI/UX Layout task. `/support/safety` kept its existing Vietnamese support-safety target, removed stale support-safety CSS from `apps/web/src/app/globals.css`, and now uses shared Base First safe-reporting layout from `packages/ui/src/service-layout.css`. Entire program is NOT production-complete.

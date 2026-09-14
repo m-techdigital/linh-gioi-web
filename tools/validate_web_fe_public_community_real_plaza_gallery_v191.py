@@ -47,16 +47,16 @@ def check_assets() -> None:
             fail(f"manifest {asset_id}: expected 640x480 dimensions")
 def check_page_and_css() -> None:
     require_text("apps/web/src/app/community/page.tsx", [
-        "communityPlazaScreenshots", "Linh Thanh community plaza real screenshots", "Ảnh thật từ Linh Thành community plaza",
+        "communityPlazaScreenshots", "Ảnh thật quảng trường Linh Thành", "Ảnh thật từ quảng trường Linh Thành",
         "/game-art/community/linh-thanh-plaza-npc-preview.png", "/game-art/community/linh-thanh-plaza-target-selector.png",
-        "loading=\"lazy\"", "không claim chat, forum, guild hoặc ticket backend", "chưa mở chat, forum, guild, friend list, ticket backend hoặc moderation backend"
+        "loading=\"lazy\"", "chưa mở trò chuyện, diễn đàn, bang hội hoặc hệ thống phiếu hỗ trợ", "chưa mở trò chuyện, diễn đàn, bang hội, danh sách bạn bè, phiếu hỗ trợ hoặc điều phối thật"
     ])
     require_text("apps/web/src/app/globals.css", [
         "WEB v1.91 public community real plaza screenshot gallery", ".lgo-community-real-plaza-grid", "repeat(2, minmax(0, 1fr))", "aspect-ratio: 4 / 3", "overflow-wrap: anywhere", "grid-template-columns: 1fr"
     ])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-community-real-plaza-gallery-v191.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-COMMUNITY-REAL-PLAZA-GALLERY-v1.91.md", "LGO-WEB-FE-PUBLIC-COMMUNITY-REAL-PLAZA-GALLERY-REPORT-v1.91.md", "HANDOFF-LGO-WEB-FE-PUBLIC-COMMUNITY-REAL-PLAZA-GALLERY-v1.91.md"]: require_file(rel)
-    require_text("tests/e2e/fe-public-community-real-plaza-gallery-v191.spec.ts", ["/community", "Ảnh thật từ Linh Thành community plaza", "Linh Thanh plaza NPC preview screenshot", "columnCount", "pageOverflow", "maxFont", "naturalWidth"])
+    require_text("tests/e2e/fe-public-community-real-plaza-gallery-v191.spec.ts", ["/community", "Ảnh thật từ quảng trường Linh Thành", "Ảnh quảng trường Linh Thành với nhân vật hướng dẫn", "columnCount", "pageOverflow", "maxFont", "naturalWidth"])
     for rel in ["docs/execution/specs/WEB-FE-PUBLIC-COMMUNITY-REAL-PLAZA-GALLERY-v1.91.md", "LGO-WEB-FE-PUBLIC-COMMUNITY-REAL-PLAZA-GALLERY-REPORT-v1.91.md", "HANDOFF-LGO-WEB-FE-PUBLIC-COMMUNITY-REAL-PLAZA-GALLERY-v1.91.md"]:
         require_text(rel, ["WEB-FE-PUBLIC-COMMUNITY-REAL-PLAZA-GALLERY-v1.91", "WEB_CLOSED", "browser/e2e", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-PUBLIC-COMMUNITY-REAL-PLAZA-GALLERY-v1.91 WEB_CLOSED", "WEB-FE-PUBLIC-COMMUNITY-REAL-PLAZA-GALLERY-v1.91"])

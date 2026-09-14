@@ -24,7 +24,7 @@ def check_routes() -> None:
     require_order("apps/web/src/app/game/loop/page.tsx", "<h1>World gameplay loop</h1>", "<PlayerTrustReleaseCta />")
     require_order("apps/web/src/app/performance/page.tsx", "<h1>Performance, copy và asset budget cho public web</h1>", "<PlayerTrustReleaseCta />")
     require_text("apps/web/src/app/accessibility/page.tsx", ["No formal WCAG audit", "no legal compliance claim", "no personal settings backend"])
-    require_text("apps/web/src/app/community/page.tsx", ["Chưa có chat, forum, guild", "ticket backend", "live community backend"])
+    require_text("apps/web/src/app/community/page.tsx", ["Chưa có trò chuyện · chưa có diễn đàn · chưa có bang hội", "chưa mở trò chuyện, diễn đàn, bang hội", "điều phối thật"])
     require_text("apps/web/src/app/game/loop/page.tsx", ["without claiming live combat", "inventory persistence", "account integration"])
     require_text("apps/web/src/app/performance/page.tsx", ["No Core Web Vitals measured PASS", "no Lighthouse certification", "no image CDN claim"])
 def check_tests_and_docs() -> None:

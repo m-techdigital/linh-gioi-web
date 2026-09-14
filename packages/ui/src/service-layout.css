@@ -999,3 +999,222 @@
     gap: .55rem;
   }
 }
+
+/* Shared community page layout for public service/community surfaces. */
+.lgo-service-compact-proof-page .lgo-community-focus-grid {
+  display: grid;
+  gap: .62rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+
+.lgo-service-compact-proof-page .lgo-community-focus-card {
+  display: grid;
+  gap: .45rem;
+}
+
+@media (min-width: 981px) {
+  .lgo-service-compact-proof-page.lgo-communitypage-stack {
+    gap: clamp(.82rem, 1.45vw, 1.2rem);
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card h1 {
+    max-width: 14ch;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-design-board {
+    margin-top: -1.2rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-focus-board {
+    margin-top: -.35rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-focus-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .5rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-focus-card {
+    gap: .34rem;
+    padding: .56rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-focus-card h3,
+  .lgo-service-compact-proof-page .lgo-onboarding-card h3,
+  .lgo-service-compact-proof-page .lgo-feedback-channel h3,
+  .lgo-service-compact-proof-page .lgo-community-conduct-item h3 {
+    font-size: .9rem;
+    line-height: 1.05;
+    margin-block: .2rem .12rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-focus-card p,
+  .lgo-service-compact-proof-page .lgo-onboarding-card p,
+  .lgo-service-compact-proof-page .lgo-onboarding-card small,
+  .lgo-service-compact-proof-page .lgo-feedback-channel p,
+  .lgo-service-compact-proof-page .lgo-feedback-channel small,
+  .lgo-service-compact-proof-page .lgo-community-conduct-item p,
+  .lgo-service-compact-proof-page .lgo-community-conduct-item small {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-size: .72rem;
+    line-height: 1.22;
+    overflow: hidden;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-focus-card p,
+  .lgo-service-compact-proof-page .lgo-onboarding-card p,
+  .lgo-service-compact-proof-page .lgo-feedback-channel p,
+  .lgo-service-compact-proof-page .lgo-community-conduct-item p {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-service-compact-proof-page .lgo-onboarding-card small,
+  .lgo-service-compact-proof-page .lgo-feedback-channel small,
+  .lgo-service-compact-proof-page .lgo-community-conduct-item small {
+    -webkit-line-clamp: 1;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-real-plaza-panel,
+  .lgo-service-compact-proof-page .lgo-onboarding-paths,
+  .lgo-service-compact-proof-page .lgo-feedback-guidance,
+  .lgo-service-compact-proof-page .lgo-community-conduct-board {
+    padding: .72rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-real-plaza-grid {
+    gap: .56rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-real-plaza-card img {
+    max-height: 180px;
+    object-fit: cover;
+  }
+
+  .lgo-service-compact-proof-page .lgo-feedback-channel-list,
+  .lgo-service-compact-proof-page .lgo-community-conduct-list {
+    gap: .5rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .lgo-service-compact-proof-page.lgo-communitypage-stack {
+    gap: .95rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card {
+    padding: .85rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card h1 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card p,
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card .lgo-hero-lead {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    font-size: .8rem;
+    line-height: 1.24;
+    margin-block: .22rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .45rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-communitypage-stack .lgo-detail-hero-card .lgo-link-button {
+    min-height: 34px;
+    padding-inline: .55rem;
+    font-size: .72rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-design-board {
+    gap: .55rem;
+    margin-top: -.45rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-design-board img {
+    max-height: 176px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-design-board figcaption {
+    font-size: .76rem;
+    line-height: 1.24;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-design-board figcaption strong {
+    font-size: .96rem;
+    line-height: 1.04;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-design-board figcaption span,
+  .lgo-service-compact-proof-page .lgo-community-focus-board .lgo-section-heading p,
+  .lgo-service-compact-proof-page .lgo-community-real-plaza-panel .lgo-section-heading p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-focus-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .55rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-real-plaza-grid {
+    grid-template-columns: 1fr;
+    gap: .48rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-focus-card,
+  .lgo-service-compact-proof-page .lgo-onboarding-card,
+  .lgo-service-compact-proof-page .lgo-feedback-channel,
+  .lgo-service-compact-proof-page .lgo-community-conduct-item {
+    gap: .28rem;
+    padding: .62rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-focus-card h3,
+  .lgo-service-compact-proof-page .lgo-onboarding-card h3,
+  .lgo-service-compact-proof-page .lgo-feedback-channel h3,
+  .lgo-service-compact-proof-page .lgo-community-conduct-item h3 {
+    font-size: .84rem;
+    line-height: 1.08;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-focus-card p,
+  .lgo-service-compact-proof-page .lgo-onboarding-card p,
+  .lgo-service-compact-proof-page .lgo-onboarding-card small,
+  .lgo-service-compact-proof-page .lgo-feedback-channel p,
+  .lgo-service-compact-proof-page .lgo-feedback-channel small,
+  .lgo-service-compact-proof-page .lgo-community-conduct-item p,
+  .lgo-service-compact-proof-page .lgo-community-conduct-item small {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    font-size: .7rem;
+    line-height: 1.2;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-focus-card p {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-service-compact-proof-page .lgo-community-real-plaza-card img {
+    max-height: 108px;
+    object-fit: cover;
+  }
+}

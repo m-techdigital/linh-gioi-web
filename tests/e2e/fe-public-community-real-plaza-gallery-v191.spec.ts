@@ -5,11 +5,11 @@ const web = process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
 
 const screenshots = [
   {
-    alt: "Linh Thanh plaza NPC preview screenshot",
+    alt: "Ảnh quảng trường Linh Thành với nhân vật hướng dẫn",
     src: "/game-art/community/linh-thanh-plaza-npc-preview.png",
   },
   {
-    alt: "Linh Thanh plaza target selector screenshot",
+    alt: "Ảnh chọn mục tiêu trong quảng trường Linh Thành",
     src: "/game-art/community/linh-thanh-plaza-target-selector.png",
   },
 ];
@@ -32,7 +32,7 @@ async function collectGalleryMetrics(page: Page): Promise<GalleryMetrics> {
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const gallery = document.querySelector<HTMLElement>('[aria-label="Linh Thanh community plaza real screenshots"]');
+    const gallery = document.querySelector<HTMLElement>('[aria-label="Ảnh thật quảng trường Linh Thành"]');
     const cards = Array.from(gallery?.querySelectorAll<HTMLElement>("figure") ?? []);
     const captions = Array.from(gallery?.querySelectorAll<HTMLElement>("figcaption") ?? []);
     const firstTop = cards[0]?.getBoundingClientRect().top ?? 0;
@@ -59,7 +59,7 @@ async function collectGalleryMetrics(page: Page): Promise<GalleryMetrics> {
 test.describe("public community real plaza gallery", () => {
   test("/community uses real Linh Thanh plaza screenshots without backend claims or layout overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/community`);
-    await expect(page.getByRole("heading", { level: 2, name: "Ảnh thật từ Linh Thành community plaza" })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 2, name: "Ảnh thật từ quảng trường Linh Thành" })).toBeVisible();
     for (const screenshot of screenshots) {
       await expect(page.getByRole("img", { name: screenshot.alt })).toBeVisible();
     }

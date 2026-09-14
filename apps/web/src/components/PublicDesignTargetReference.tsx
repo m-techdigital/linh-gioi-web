@@ -93,6 +93,12 @@ const PUBLIC_SUPPORT_SAFETY_TARGET = {
   scope: "Hỗ trợ an toàn"
 };
 
+const PUBLIC_COMMUNITY_TARGET = {
+  label: "Thiết kế chi tiết cộng đồng",
+  href: "/design-reference/community-detailed-design-target-v1149.png",
+  scope: "Cộng đồng Linh Giới"
+};
+
 const PUBLIC_CORE_TARGET = {
   label: "Public Core design target",
   href: "/design-reference/design-atlas-public-core-v195.png",
@@ -126,6 +132,7 @@ function targetForPath(pathname: string) {
   if (pathname === "/support/help") return PUBLIC_SUPPORT_HELP_TARGET;
   if (pathname === "/support/safety") return PUBLIC_SUPPORT_SAFETY_TARGET;
   if (pathname === "/support") return PUBLIC_SUPPORT_TARGET;
+  if (pathname === "/community") return PUBLIC_COMMUNITY_TARGET;
   if (publicServicePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_SERVICE_TARGET;
   if (publicCorePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_CORE_TARGET;
   return PUBLIC_CORE_TARGET;
