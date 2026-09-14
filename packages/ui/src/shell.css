@@ -460,3 +460,15 @@
     justify-content: stretch;
   }
 }
+
+/* WEB v1.109 workspace reduced motion for design target links */
+@media (prefers-reduced-motion: reduce) {
+  .lgo-workspace-shell .lgo-design-target-reference-link {
+    transition: none;
+  }
+
+  .lgo-workspace-shell .lgo-design-target-reference-link:hover,
+  .lgo-workspace-shell .lgo-design-target-reference-link:focus-visible {
+    transform: none;
+  }
+}
