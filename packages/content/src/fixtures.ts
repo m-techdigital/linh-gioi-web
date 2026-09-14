@@ -868,9 +868,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "release-readiness-hub-guide",
     category: "guides",
-    title: "Release readiness hub guide",
-    summary: "Guide giúp người chơi đọc release readiness, owner gates, tester expectations và alignment giữa Download, Status, Support trước khi kỳ vọng bản test.",
-    body: "Bắt đầu từ /release/readiness để xem gate nào đã có copy, gate nào còn planned/blocked và vì sao public download hoặc closed test không được claim khi artifact, checksum, support intake và owner sign-off chưa đủ.",
+    title: "Kiểm sẵn sàng trước lời mời test",
+    summary: "Guide giúp người chơi đọc đúng cổng phát hành, phê duyệt, kỳ vọng kiểm thử và liên kết Tải game · Trạng thái · Hỗ trợ trước khi chờ bản test.",
+    body: "Bắt đầu từ trang Sẵn sàng phát hành để xem cổng nào đã có bằng chứng, cổng nào còn chờ hoặc bị khóa và vì sao tải game hoặc closed test chưa được xác nhận khi artifact, checksum, kênh hỗ trợ và phê duyệt còn thiếu.",
     publishedAt: "2026-09-05T23:10:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -1071,34 +1071,34 @@ export const guideDetailSteps: GuideDetailStep[] = [
   {
     slug: "release-readiness-hub-guide",
     step: "01",
-    title: "Mở release readiness hub trước",
-    action: "Đọc /release/readiness để xem release stage, owner gates và tester expectations trước khi tìm download hoặc closed test.",
-    expectedResult: "Người chơi hiểu website đang chuẩn bị release messaging chứ chưa mở build public.",
-    blockedScope: "No public download, no open beta, no entitlement automation."
+    title: "Mở readiness hub trước",
+    action: "Đọc trang Sẵn sàng phát hành để xem stage phát hành, cổng phê duyệt và kỳ vọng kiểm thử trước khi tìm tải game hoặc closed test.",
+    expectedResult: "Người chơi hiểu website đang chuẩn bị thông điệp phát hành, chưa mở bản build công khai.",
+    blockedScope: "Chưa có download công khai, thử nghiệm mở hoặc cấp quyền tự động."
   },
   {
     slug: "release-readiness-hub-guide",
     step: "02",
-    title: "Kiểm tra owner gate",
-    action: "Đối chiếu artifact, checksum, known limitations, support intake và status copy với bảng Owner Release Gates.",
-    expectedResult: "Reviewer biết gate nào cần bằng chứng trước khi chuyển sang tester-facing copy.",
-    blockedScope: "No owner sign-off bypass, no placeholder checksum, no fake test invite."
+    title: "Kiểm bằng chứng cổng phê duyệt",
+    action: "Đối chiếu artifact, checksum, giới hạn đã biết, kênh hỗ trợ và trạng thái với bảng cổng phê duyệt.",
+    expectedResult: "Reviewer biết cổng nào cần bằng chứng trước khi chuyển sang copy cho người kiểm thử.",
+    blockedScope: "Chưa có bypass phê duyệt, checksum thật hoặc lời mời test thật."
   },
   {
     slug: "release-readiness-hub-guide",
     step: "03",
-    title: "Đọc Download, Status và Support như một bộ",
-    action: "Đi qua /download/trust, /status và /support/safety để tránh mâu thuẫn giữa CTA, blocker và support expectation.",
+    title: "Đọc Tải game · Trạng thái · Hỗ trợ như một bộ",
+    action: "Đi qua Tin cậy tải game, Trạng thái và Hỗ trợ an toàn để tránh mâu thuẫn giữa CTA, blocker và kỳ vọng hỗ trợ.",
     expectedResult: "Public copy không hứa bản tải, tài khoản hoặc ticket khi các surface đó còn blocked.",
-    blockedScope: "No production support SLA, no account lookup, no live ticket backend."
+    blockedScope: "Chưa có SLA hỗ trợ production, tra cứu tài khoản hoặc ticket backend live."
   },
   {
     slug: "release-readiness-hub-guide",
     step: "04",
-    title: "Chỉ hiểu closed test là stage có điều kiện",
-    action: "Dùng tester expectation copy để biết closed test cần scope, limitation, feedback path và owner approval riêng.",
-    expectedResult: "Người chơi chờ thông báo đúng stage, không hiểu nhầm thành open registration hoặc launch.",
-    blockedScope: "No open registration, no reward/economy promise, no production launch."
+    title: "Hiểu closed test là stage có điều kiện",
+    action: "Đọc kỳ vọng kiểm thử để biết closed test cần phạm vi, giới hạn, đường feedback và phê duyệt riêng.",
+    expectedResult: "Người chơi chờ thông báo đúng stage, không hiểu nhầm thành đăng ký mở hoặc launch.",
+    blockedScope: "Chưa có đăng ký mở, phần thưởng/kinh tế hoặc phát hành production."
   },
   {
     slug: "closed-tester-information-pack-guide",
