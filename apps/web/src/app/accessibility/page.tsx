@@ -21,7 +21,6 @@ export default function AccessibilityReadabilityPage() {
   return (
     <WebAppShell>
       <Stack>
-        <PlayerTrustReleaseCta />
         <GameCard className="lgo-detail-hero-card lgo-readable-hero-card">
           <StatusBadge tone="spirit">WEB v1.15 accessibility / readability polish</StatusBadge>
           <span className="lgo-card-kicker">No formal WCAG audit · no legal compliance claim · no personal settings backend</span>
@@ -41,6 +40,7 @@ export default function AccessibilityReadabilityPage() {
             <LinkButton href="/performance" tone="gold">Hiệu năng/copy budget</LinkButton>
           </div>
         </GameCard>
+        <PlayerTrustReleaseCta />
         <figure className="lgo-accessibility-design-board lgo-panel" aria-label="Accessibility readability route map reference art">
           <img
             src="/game-art/design-boards/accessibility-readability-route-map.svg"

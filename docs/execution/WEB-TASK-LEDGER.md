@@ -1,3 +1,4 @@
+| WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-v1.89 | WEB-FE | WEB_CLOSED | 666850e | Public remaining-route first-heading priority | RED browser/e2e route CTA h2 before h1; v1.89 validator; Web typecheck; Playwright desktop/mobile heading/font-size/overflow; Web build; visual metrics reviewed | Codex local | 2026-09-14 | 2026-09-14 | WEB_CLOSED; FE-only; NO_ACCEPTED_BACKEND_CONTRACT retained | WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.90 |
 # WEB-TASK-LEDGER
 
 | Task ID | Phase | Status | Source baseline | Output artifact | Evidence | Owner | Started | Closed | Final decision | Next allowed step |

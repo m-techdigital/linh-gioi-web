@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-v1.89 WEB_CLOSED.
+
+Current decision: v1.89 FE public remaining-route heading-priority slice closed; continue FE/browser UI work next, including real image/design usage from LinhGioiOnline where useful. Entire program is NOT production-complete.
+
+- v1.89 moves the shared release CTA below the page h1 on `/accessibility`, `/community`, `/game/loop` and `/performance`.
+- The selected public routes now start main content with exactly one visible h1 while keeping no-audit/no-community-backend/no-live-combat/no-performance-certification non-claims explicit.
+- v1.89 evidence: RED browser/e2e reproduced CTA h2 headings before route h1; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile heading-order/font-size/overflow PASS; visual metric review completed with pageOverflow 0.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.90.
+
 Current phase: WEB-FE-PUBLIC-TRUST-HEADING-PRIORITY-v1.88 WEB_CLOSED.
 
 Current decision: v1.88 FE public trust heading-priority slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

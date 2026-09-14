@@ -22,7 +22,6 @@ export default function PerformanceBudgetPage() {
   return (
     <WebAppShell>
       <Stack>
-        <PlayerTrustReleaseCta />
         <GameCard className="lgo-detail-hero-card lgo-performance-hero-card">
           <StatusBadge tone="jade">WEB v1.16 performance / copy / asset budget polish</StatusBadge>
           <span className="lgo-card-kicker">No Core Web Vitals measured PASS · no Lighthouse certification · no image CDN claim</span>
@@ -42,6 +41,7 @@ export default function PerformanceBudgetPage() {
             <LinkButton href="/download/trust" tone="gold">Download trust</LinkButton>
           </div>
         </GameCard>
+        <PlayerTrustReleaseCta />
         <figure className="lgo-performance-design-board lgo-panel" aria-label="Performance copy budget HUD reference art">
           <img
             src="/game-art/design-boards/performance-copy-budget-hud.svg"

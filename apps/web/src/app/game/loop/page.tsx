@@ -22,7 +22,6 @@ export default function WorldGameplayLoopPage() {
   return (
     <WebAppShell>
       <Stack>
-        <PlayerTrustReleaseCta />
         <SpiritPanel className="lgo-hero-panel">
           <StatusBadge tone="spirit">WEB v1.13 world/gameplay loop depth</StatusBadge>
           <h1>World gameplay loop</h1>
@@ -36,6 +35,7 @@ export default function WorldGameplayLoopPage() {
             <LinkButton href="/status" tone="gold">Status</LinkButton>
           </div>
         </SpiritPanel>
+        <PlayerTrustReleaseCta />
         <figure className="lgo-game-loop-design-board lgo-panel" aria-label="World gameplay loop reference art">
           <img
             src="/game-art/design-boards/world-gameplay-loop-board.svg"

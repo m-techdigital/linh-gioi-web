@@ -18,7 +18,6 @@ export default function CommunityPage() {
   return (
     <WebAppShell>
       <Stack>
-        <PlayerTrustReleaseCta />
         <SpiritPanel>
           <StatusBadge tone="jade">WEB v1.14 player safety support · WEB v1.12 content IA hub · WEB v1.11 community onboarding · WEB v1.8 community readiness</StatusBadge>
           <h1>Cộng đồng Linh Giới</h1>
@@ -27,6 +26,7 @@ export default function CommunityPage() {
             Chưa có chat, forum, guild, friend list, ticket backend hoặc live community backend.
           </p>
         </SpiritPanel>
+        <PlayerTrustReleaseCta />
         <SectionHeading eyebrow="Community readiness" title="Những gì web có thể nói ngay" />
         <Grid>
           <GameCard>
