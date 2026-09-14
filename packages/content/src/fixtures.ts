@@ -664,9 +664,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "support-and-community-guide",
     category: "guides",
-    title: "Support and community readiness guide",
-    summary: "A static guide for support expectations, feedback channels and community boundaries before live systems exist.",
-    body: "This guide prepares public copy and player expectations while ticket, moderation, chat, guild and forum backends remain contract-blocked.",
+    title: "Hỗ trợ và cộng đồng đúng kỳ vọng",
+    summary: "Guide giúp người chơi hiểu support hiện là hướng dẫn tĩnh, feedback cần đúng phạm vi, còn ticket, moderation, chat, guild và forum live vẫn bị khóa bởi backend contract.",
+    body: "Nội dung này chuẩn bị kỳ vọng cho cộng đồng trước closed test: đọc FAQ, gửi phản hồi an toàn, theo dõi roadmap/status và không hiểu nhầm web thành hệ thống hỗ trợ hoặc cộng đồng live.",
     publishedAt: "2026-09-05T11:20:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -1367,11 +1367,35 @@ export const guideDetailSteps: GuideDetailStep[] = [
   },
   {
     slug: "support-and-community-guide",
+    step: "01",
+    title: "Đọc FAQ trước khi gửi phản hồi",
+    action: "Bắt đầu từ /support/help để xem câu hỏi thường gặp, trạng thái tải game và boundary trước khi mô tả lỗi.",
+    expectedResult: "Người chơi không gửi trùng vấn đề đã được giải thích trong trạng thái public hiện tại.",
+    blockedScope: "Chưa có ticket inbox live hoặc SLA hỗ trợ production."
+  },
+  {
+    slug: "support-and-community-guide",
+    step: "02",
+    title: "Gửi phản hồi an toàn",
+    action: "Chỉ chuẩn bị mô tả lỗi, thiết bị, bước tái hiện và ảnh cần thiết; không gửi mật khẩu, token hoặc dữ liệu nhạy cảm.",
+    expectedResult: "Feedback có thể dùng cho closed test tương lai mà không thu thập dữ liệu rủi ro.",
+    blockedScope: "Chưa có secure upload, account lookup hoặc ticket backend."
+  },
+  {
+    slug: "support-and-community-guide",
+    step: "03",
+    title: "Theo dõi cộng đồng như kênh thông báo",
+    action: "Đọc Community/Roadmap như thông tin định hướng và decision gates, không hiểu nhầm thành chat/forum/guild live.",
+    expectedResult: "Người chơi biết nơi theo dõi tin mới nhưng không kỳ vọng moderation hay guild vận hành.",
+    blockedScope: "Chưa có chat, forum, guild, moderation backend hoặc RBAC/audit contract."
+  },
+  {
+    slug: "support-and-community-guide",
     step: "04",
     title: "Gửi phản hồi theo trạng thái thật",
-    action: "Dùng Support/Community như static guidance cho tới khi có API/RBAC/audit contract.",
+    action: "Dùng Support/Community như static guidance cho tới khi có API/RBAC/audit contract được chấp nhận.",
     expectedResult: "Người chơi hiểu ticket, moderation, chat/forum/guild chưa phải live system.",
-    blockedScope: "No live support ticket, no moderation backend, no community chat/forum/guild backend."
+    blockedScope: "Chưa có live support ticket, moderation backend hoặc community backend."
   },
   {
     slug: "release-trust-and-checksum-guide",

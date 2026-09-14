@@ -1,3 +1,16 @@
+Current phase: WEB-FE-GUIDES-SUPPORT-COMMUNITY-REAL-UI-LAYOUT-v1.161 WEB_CLOSED.
+
+Current decision: v1.161 closed the active `/guides/support-and-community-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Support and Community guide, safe-feedback first-flow, Vietnamese FAQ/feedback/ticket scenario and shared Base First layout. Entire program is NOT production-complete.
+
+- v1.161 did not create a new design batch because the existing guide-detail direction was sufficient for comparison after minimal current-page scenario correction in the rendered page.
+- v1.161 replaced the English placeholder first-flow with Vietnamese FAQ → safe feedback → community update → support boundary expectations and four compact safe-feedback steps.
+- v1.161 reused the shared compact guide-flow base in `packages/ui/src/service-layout.css` and added only the current page support/community visual theme there, while keeping current page CSS out of `apps/web/src/app/globals.css`.
+- v1.161 evidence: browser/e2e desktop/mobile v1.161; source validator; Web/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/guides-support-community-desktop-v1161.png` and `/tmp/guides-support-community-mobile-v1161.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.162. Select `/guides/release-trust-and-checksum-guide` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-GUIDES-DOWNLOAD-READINESS-REAL-UI-LAYOUT-v1.160 WEB_CLOSED.
 
 Current decision: v1.160 closed the active `/guides/download-readiness-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Download Readiness guide, proof-before-download first-flow, Vietnamese release artifact/checksum scenario and shared Base First layout. Entire program is NOT production-complete.
