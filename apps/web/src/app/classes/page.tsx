@@ -9,7 +9,7 @@ export const metadata = { title: "Năm Lộ" };
 export default function ClassesPage() {
   return (
     <WebAppShell>
-      <Stack className="lgo-player-facing-stack">
+      <Stack className="lgo-player-facing-stack lgo-classespage-stack">
         <PublicPlayerHero
           className="lgo-paths-hero"
           badge="Võ · Kiếm · Pháp · Cơ · Linh"

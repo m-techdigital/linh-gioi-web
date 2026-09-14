@@ -107,10 +107,10 @@ def check_tests_docs() -> None:
             "NO_ACCEPTED_BACKEND_CONTRACT",
         ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
-        "Current phase: WEB-FE-STORY-DESIGN-TARGET-DENSITY-v1.121 WEB_CLOSED",
-        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.122",
+        "WEB-FE-STORY-DESIGN-TARGET-DENSITY-v1.121 WEB_CLOSED",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.122",
     ])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.122", "Design Target First", "Base UI/UX Layout", "browser/e2e"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "Design Target First", "Base UI/UX Layout", "browser/e2e"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-STORY-DESIGN-TARGET-DENSITY-v1.121 | WEB-FE | WEB_CLOSED |"])
 
 def main() -> int:

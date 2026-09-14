@@ -3758,3 +3758,97 @@ h3 {
     padding: 1rem;
   }
 }
+
+/* WEB v1.122 classes detailed design target density */
+@media (min-width: 981px) {
+  .lgo-classespage-stack {
+    gap: clamp(1.1rem, 2.35vw, 2.15rem);
+  }
+
+  .lgo-classespage-stack .lgo-paths-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+    gap: clamp(1.6rem, 3vw, 2.8rem);
+    padding: clamp(1.45rem, 3vw, 2.55rem);
+  }
+
+  .lgo-classespage-stack .lgo-paths-hero .lgo-cinematic-copy h1 {
+    max-width: 14ch;
+    font-size: clamp(3.4rem, 5.4vw, 5.2rem);
+    line-height: .93;
+  }
+
+  .lgo-classespage-stack .lgo-paths-hero .lgo-cinematic-copy p {
+    max-width: 64ch;
+    font-size: clamp(.95rem, 1.05vw, 1.08rem);
+    line-height: 1.62;
+  }
+
+  .lgo-classespage-stack .lgo-five-path-orbit {
+    width: clamp(250px, 22vw, 320px);
+    height: clamp(250px, 22vw, 320px);
+  }
+
+
+  .lgo-classespage-stack > .lgo-experience-section:nth-child(2) {
+    gap: clamp(.65rem, 1vw, .95rem);
+  }
+
+  .lgo-classespage-stack > .lgo-experience-section:nth-child(2) .lgo-section-heading {
+    max-width: 980px;
+  }
+
+  .lgo-classespage-stack > .lgo-experience-section:nth-child(2) .lgo-section-heading h2 {
+    font-size: clamp(1.7rem, 2.25vw, 2.3rem);
+    line-height: 1.02;
+    margin-bottom: .35rem;
+  }
+
+  .lgo-classespage-stack > .lgo-experience-section:nth-child(2) .lgo-section-heading p {
+    max-width: 84ch;
+    font-size: .9rem;
+    line-height: 1.42;
+  }
+
+  .lgo-classespage-stack .lgo-class-path-grid {
+    gap: clamp(.65rem, 1vw, .95rem);
+  }
+
+  .lgo-classespage-stack .lgo-class-path {
+    min-height: clamp(270px, 29vw, 330px);
+    padding: clamp(.85rem, 1.2vw, 1.15rem);
+  }
+
+  .lgo-classespage-stack .lgo-class-emblem {
+    width: clamp(5.5rem, 7vw, 7.2rem);
+    height: clamp(5.5rem, 7vw, 7.2rem);
+    margin-bottom: clamp(.75rem, 1.2vw, 1.15rem);
+  }
+
+  .lgo-classespage-stack .lgo-class-emblem-core {
+    width: 2.9rem;
+    height: 2.9rem;
+    font-size: 1.12rem;
+  }
+
+  .lgo-classespage-stack .lgo-class-copy h3 {
+    font-size: clamp(1.32rem, 1.8vw, 1.62rem);
+  }
+
+  .lgo-classespage-stack .lgo-class-copy p {
+    font-size: .86rem;
+    line-height: 1.48;
+  }
+
+  .lgo-classespage-stack .lgo-class-copy small {
+    display: block;
+    margin-top: .5rem;
+  }
+
+  .lgo-classespage-stack .lgo-class-identity-card {
+    min-height: 360px;
+  }
+
+  .lgo-classespage-stack .lgo-class-art-spotlight {
+    min-height: 540px;
+  }
+}
