@@ -51,69 +51,70 @@ def check_runtime_gate() -> None:
         ])
 
 def check_source_layout() -> None:
-    require_order("apps/web/src/app/download/page.tsx", [
-        "lgo-download-player-hero",
-        "lgo-download-readiness-target-panel",
-        "lgo-download-channel-section",
-        "<DownloadStatusDepth />",
+    require_order("apps/web/src/app/download/trust/page.tsx", [
+        "lgo-download-trust-hero-card",
         "<DownloadTrustGateBoard />",
+        "Tin cậy trước khi tải",
+        "lgo-download-trust-first-gates",
         "<ReleaseEvidenceChecklist />",
-        "lgo-download-expanded-evidence",
+        "<DownloadStatusDepth />",
+        "<DownloadTrustCta />",
+        "lgo-download-trust-secondary",
     ])
-    require_text("apps/web/src/app/download/page.tsx", [
-        "Trạng thái chơi & tải game",
-        "Bản tải công khai hiện chưa mở",
+    require_text("apps/web/src/app/download/trust/page.tsx", [
+        "Tin cậy tải game",
+        "Không tải giả",
+        "không SHA256 giả",
         "Bằng chứng phụ và tuyến liên quan",
-        "không ép toàn bộ proof board vào luồng tải game chính",
+        "không ép toàn bộ proof board vào luồng tin cậy tải game chính",
     ])
     css = require_text("packages/ui/src/service-layout.css", [
-        "v1.218 shared download availability layout",
-        ".lgo-downloadpage-stack",
-        ".lgo-download-player-hero",
-        ".lgo-download-readiness-target-panel",
-        ".lgo-download-channel-section",
-        ".lgo-download-depth",
+        "v1.219 shared download trust layout",
+        ".lgo-downloadtrustpage-stack",
+        ".lgo-download-trust-hero-card",
+        ".lgo-download-trust-first-gates",
+        ".lgo-owner-release-gate-board",
         ".lgo-trust-panel",
         ".lgo-release-evidence",
-        ".lgo-download-expanded-evidence",
+        ".lgo-download-depth",
+        ".lgo-download-trust-secondary",
+        "grid-template-columns: repeat(6, minmax(0, 1fr));",
         "grid-template-columns: repeat(2, minmax(0, 1fr));",
     ])
-    if css.count("v1.218 shared download availability layout") != 1:
-        fail("packages/ui/src/service-layout.css: expected one v1.218 download owner block")
+    if css.count("v1.219 shared download trust layout") != 1:
+        fail("packages/ui/src/service-layout.css: expected one v1.219 download trust owner block")
     forbid_text("apps/web/src/app/globals.css", [
-        "WEB v1.125 download detailed design target density",
-        "WEB v1.140 download Vietnamese design match",
-        ".lgo-downloadpage-stack .lgo-download-player-hero",
+        "WEB v1.126 download trust detailed design target density",
+        "WEB v1.141 download trust Vietnamese design match",
+        ".lgo-downloadtrustpage-stack .lgo-trust-panel",
     ])
 
 def check_evidence() -> None:
-    require_file("tests/e2e/fe-download-real-ui-layout-v1218.spec.ts")
-    require_text("tests/e2e/fe-download-real-ui-layout-v1218.spec.ts", [
-        "download real UI layout v1.218",
-        "/tmp/download-desktop-v1218.png",
-        "/tmp/download-mobile-v1218.png",
+    require_file("tests/e2e/fe-download-trust-real-ui-layout-v1219.spec.ts")
+    require_text("tests/e2e/fe-download-trust-real-ui-layout-v1219.spec.ts", [
+        "download trust real UI layout v1.219",
+        "/tmp/download-trust-desktop-v1219.png",
+        "/tmp/download-trust-mobile-v1219.png",
         "scrollHeight",
-        "heroBottom",
-        "releaseChecklistTop",
-        "desktop release evidence remains in reviewable flow",
-        "mobile release evidence remains in reviewable flow",
-        "readinessColumns",
-        "channelColumns",
+        "trustGateTop",
+        "ownerGateColumns",
+        "releaseEvidenceTop",
+        "secondaryTop",
         "Bỏ qua menu",
     ])
     for rel in [
-        "docs/execution/specs/WEB-FE-DOWNLOAD-REAL-UI-LAYOUT-v1.218.md",
-        "docs/execution/LGO-WEB-FE-DOWNLOAD-REAL-UI-LAYOUT-REPORT-v1.218.md",
-        "docs/execution/HANDOFF-LGO-WEB-FE-DOWNLOAD-REAL-UI-LAYOUT-v1.218.md",
+        "docs/execution/specs/WEB-FE-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.219.md",
+        "docs/execution/LGO-WEB-FE-DOWNLOAD-TRUST-REAL-UI-LAYOUT-REPORT-v1.219.md",
+        "docs/execution/HANDOFF-LGO-WEB-FE-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.219.md",
     ]:
         require_text(rel, [
-            "WEB-FE-DOWNLOAD-REAL-UI-LAYOUT-v1.218",
+            "WEB-FE-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.219",
             "WEB_CLOSED",
             "Real Browser UI/UX Layout First",
             "Runtime Layout Gate",
             "Base First",
-            "desktop scrollHeight 2074px",
-            "mobile scrollHeight 2935px",
+            "desktop scrollHeight 2209px",
+            "mobile scrollHeight 3204px",
             "packages/ui/src/service-layout.css",
             "No production auth",
             "No DB persistence",
@@ -122,9 +123,9 @@ def check_evidence() -> None:
 
 def check_state() -> None:
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
-        "Current phase: WEB-FE-DOWNLOAD-REAL-UI-LAYOUT-v1.218 WEB_CLOSED",
-        "desktop scrollHeight 2074px",
-        "mobile scrollHeight 2935px",
+        "Current phase: WEB-FE-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.219 WEB_CLOSED",
+        "desktop scrollHeight 2209px",
+        "mobile scrollHeight 3204px",
         "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
@@ -135,7 +136,7 @@ def check_state() -> None:
         "Base UI/UX Layout",
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
-        "| WEB-FE-DOWNLOAD-REAL-UI-LAYOUT-v1.218 | WEB-FE | WEB_CLOSED |",
+        "| WEB-FE-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.219 | WEB-FE | WEB_CLOSED |",
         "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220",
     ])
 
@@ -145,11 +146,11 @@ def main() -> int:
     check_evidence()
     check_state()
     if ERRORS:
-        print("WEB FE DOWNLOAD REAL UI LAYOUT v1.218 VALIDATION FAIL")
+        print("WEB FE DOWNLOAD TRUST REAL UI LAYOUT v1.219 VALIDATION FAIL")
         for error in ERRORS:
             print(f"- {error}")
         return 1
-    print("WEB FE DOWNLOAD REAL UI LAYOUT v1.218 VALIDATION PASS")
+    print("WEB FE DOWNLOAD TRUST REAL UI LAYOUT v1.219 VALIDATION PASS")
     return 0
 
 if __name__ == "__main__":

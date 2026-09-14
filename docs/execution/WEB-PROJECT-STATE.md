@@ -1,3 +1,20 @@
+Current phase: WEB-FE-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.219 WEB_CLOSED.
+
+Current decision: v1.219 closed the active `/download/trust` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Download Trust design target and shared public shell were usable as comparison guardrails; work focused on the rendered page, trust-gate first-flow, owner evidence density, release evidence, status depth, collapsed secondary proof boards and Base First CSS ownership. Entire program is NOT production-complete.
+
+- v1.219 did not create or batch a new design target because the existing Public Download Trust board plus shared public shell were sufficient for checking header, footer, menu, shell, route flow and checksum/provenance scenario alignment.
+- v1.219 changed real UI layout: `/download/trust` now keeps hero, trust gate, owner readiness, release evidence, status depth, trust CTA and secondary proof disclosure in a reviewable flow without the old huge always-expanded proof chain.
+- v1.219 moved the active Download Trust layout CSS into `packages/ui/src/service-layout.css` and removed stale `/download/trust` v1.126/v1.141 layout blocks from `apps/web/src/app/globals.css`.
+- v1.219 kept the design target Vietnamese and scenario-correct as a comparison guardrail only; no design-only, translation-only, validator-only or docs-only work was used as page progress.
+- v1.219 kept the page FE-only: no production auth, no backend integration, no DB persistence, no CMS, no real launcher build, no real SHA256 artifact, no account entitlement, no public download promise and no accepted backend contract.
+- v1.219 final browser/e2e metrics: desktop overflow 0, desktop scrollHeight 2209px, h1/max font 35.2px, heroBottom 393px, trustGateTop 401.33px, trustGateBottom 690.83px, firstGatesTop 812.17px, ownerGateTop 812.17px, releaseEvidenceTop 1112.06px, statusDepthTop 1317.91px, secondaryTop 1876.55px, designBandTop 2012.45px, 6 trust columns, 2 first-gate columns, 4 owner-gate columns, 4 release-evidence columns; mobile overflow 0, mobile scrollHeight 3204px, h1 26.37px, max font 32px, heroBottom 369.67px, trustGateTop 378.63px, trustGateBottom 855.66px, firstGatesTop 888.66px, ownerGateTop 1145.08px, releaseEvidenceTop 1511.92px, statusDepthTop 1820.23px, secondaryTop 2768.45px, designBandTop 2946.92px, 2 trust columns, 2 owner-gate columns, 2 release-evidence columns.
+- v1.219 evidence: RED browser metrics showed desktop scrollHeight 13079px and mobile scrollHeight 28482px with all secondary trust proof boards expanded in the main flow; GREEN Playwright desktop/mobile 6/6 Download Trust layout/design-match checks; screenshot review `/tmp/download-trust-desktop-v1219.png` and `/tmp/download-trust-mobile-v1219.png`; source validator `tools/validate_web_fe_download_trust_real_ui_layout_v1219.py`; Web/UI typecheck; Web build; current-state closure validator.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220.
+Select `/release` as the next single active page. Continue Real Browser UI/UX Layout First, Runtime Layout Gate and Base First; use design target only as a comparison guardrail and do not move past `/release` before browser/e2e, screenshot review, validator, build/typecheck, docs, commit and push.
+
+Historical snapshot follows.
+
 Current phase: WEB-FE-DOWNLOAD-REAL-UI-LAYOUT-v1.218 WEB_CLOSED.
 
 Current decision: v1.218 closed the active `/download` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Download design target and shared public shell were usable as comparison guardrails; work focused on the rendered page, first-fold availability flow, release-gate density, trust/evidence rhythm, disclosure of secondary proof boards and Base First CSS ownership. Entire program is NOT production-complete.

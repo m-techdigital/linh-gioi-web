@@ -35,7 +35,7 @@ def check_tests_docs() -> None:
     page = read("apps/web/src/app/download/trust/page.tsx")
     if page.find("<DownloadTrustGateBoard />") > page.find("<PerformanceBudgetCta />"):
         fail("apps/web/src/app/download/trust/page.tsx: DownloadTrustGateBoard should stay near the first trust gates")
-    require_text("apps/web/src/app/globals.css", ["WEB v1.126 download trust detailed design target density", ".lgo-downloadtrustpage-stack", ".lgo-download-trust-hero-card", ".lgo-download-trust-first-gates", ".lgo-owner-release-gate-board", ".lgo-trust-panel"])
+    require_text("packages/ui/src/service-layout.css", ["v1.219 shared download trust layout", ".lgo-downloadtrustpage-stack", ".lgo-download-trust-hero-card", ".lgo-download-trust-first-gates", ".lgo-owner-release-gate-board", ".lgo-trust-panel"])
     require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_DOWNLOAD_TRUST_TARGET", "Thiết kế chi tiết tin cậy tải game", "download-trust-detailed-design-target-v1126.png", "Public Download Trust", "pathname === \"/download/trust\""])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Download Trust", "download-trust-detailed-design-target-v1126.png", "WEB-FE-DOWNLOAD-TRUST-DETAILED-DESIGN-TARGET-v1.126.png", "Design Target First"])
     registry = read("docs/design/DESIGN-TARGET-REGISTRY.md")

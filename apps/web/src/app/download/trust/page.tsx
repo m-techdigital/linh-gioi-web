@@ -50,24 +50,35 @@ export default function DownloadTrustPage() {
           <ReleaseReadinessHubCta />
           <OwnerReleaseGateBoard />
         </div>
-        <PlayerTrustReleaseCta />
-        <ReleaseNarrativeStageBoard />
-        <ContentIaStartCta />
-        <FaqHelpfulnessCta />
-        <RouteContinuityCta />
-        <WorldGameplayLoopCta />
-        <PlayerSafetySupportCta />
-        <ReleaseTrustDesignBoard />
-        <PerformanceBudgetCta />
         <ReleaseEvidenceChecklist />
         <DownloadStatusDepth />
-        <DownloadExplanationDepth />
-        <StatusTrustBoard />
-        <StaticRouteCompositionBoard />
-        <RoadmapDecisionGateBoard />
-        <StagedReleaseMessagingBoard />
         <DownloadTrustCta />
-        <ClosedTesterInformationPackCta />
+
+        <details className="lgo-service-disclosure-stack lgo-download-trust-secondary">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>
+              Giữ đủ hướng dẫn, route continuity, performance, roadmap và hỗ trợ tester nhưng không ép toàn bộ proof board vào luồng tin cậy tải game chính.
+            </small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <PlayerTrustReleaseCta />
+            <ReleaseNarrativeStageBoard />
+            <ContentIaStartCta />
+            <FaqHelpfulnessCta />
+            <RouteContinuityCta />
+            <WorldGameplayLoopCta />
+            <PlayerSafetySupportCta />
+            <ReleaseTrustDesignBoard />
+            <PerformanceBudgetCta />
+            <DownloadExplanationDepth />
+            <StatusTrustBoard />
+            <StaticRouteCompositionBoard />
+            <RoadmapDecisionGateBoard />
+            <StagedReleaseMessagingBoard />
+            <ClosedTesterInformationPackCta />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );

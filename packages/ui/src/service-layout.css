@@ -8639,3 +8639,330 @@
     padding: .56rem;
   }
 }
+
+
+/* v1.219 shared download trust layout for the public checksum/provenance route. */
+.lgo-downloadtrustpage-stack {
+  gap: clamp(.66rem, 1.1vw, 1rem);
+}
+
+.lgo-downloadtrustpage-stack .lgo-download-trust-hero-card {
+  display: grid;
+  align-items: center;
+  border-color: rgba(245, 200, 107, .24);
+  background:
+    radial-gradient(circle at 78% 18%, rgba(245, 200, 107, .14), transparent 18rem),
+    radial-gradient(circle at 20% 82%, rgba(49, 216, 232, .16), transparent 20rem),
+    linear-gradient(145deg, rgba(9, 23, 38, .94), rgba(6, 15, 27, .88));
+}
+
+.lgo-downloadtrustpage-stack .lgo-download-trust-hero-card h1,
+.lgo-downloadtrustpage-stack .lgo-download-trust-hero-card p {
+  margin: 0;
+}
+
+.lgo-downloadtrustpage-stack .lgo-download-trust-hero-card h1 {
+  max-width: 13ch;
+  line-height: .92;
+}
+
+.lgo-downloadtrustpage-stack .lgo-download-trust-hero-card .lgo-status-badge,
+.lgo-downloadtrustpage-stack .lgo-download-trust-hero-card .lgo-card-kicker {
+  font-size: .68rem;
+}
+
+.lgo-downloadtrustpage-stack .lgo-download-trust-hero-card .lgo-hero-lead,
+.lgo-downloadtrustpage-stack .lgo-download-trust-hero-card p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 72ch;
+  font-size: clamp(.72rem, .86vw, .88rem);
+  line-height: 1.22;
+}
+
+.lgo-downloadtrustpage-stack .lgo-download-trust-hero-card .lgo-hero-lead {
+  -webkit-line-clamp: 2;
+}
+
+.lgo-downloadtrustpage-stack .lgo-download-trust-hero-card p:not(.lgo-hero-lead) {
+  -webkit-line-clamp: 2;
+}
+
+.lgo-downloadtrustpage-stack .lgo-download-trust-hero-card .lgo-product-first-actions {
+  display: grid;
+  gap: .42rem;
+  border: 1px solid rgba(245, 200, 107, .34);
+  border-radius: var(--lgo-radius-xl);
+  background:
+    radial-gradient(circle at 50% 16%, rgba(49, 216, 232, .2), transparent 8rem),
+    linear-gradient(145deg, rgba(7, 17, 31, .88), rgba(13, 27, 46, .72));
+  box-shadow: var(--lgo-shadow-gold-glow);
+}
+
+.lgo-downloadtrustpage-stack .lgo-download-trust-hero-card .lgo-link-button {
+  min-height: 34px;
+  padding: .42rem .62rem;
+  font-size: .72rem;
+}
+
+.lgo-downloadtrustpage-stack > .lgo-section-heading {
+  display: grid;
+  align-items: end;
+  margin-top: -.18rem;
+}
+
+.lgo-downloadtrustpage-stack > .lgo-section-heading h2,
+.lgo-downloadtrustpage-stack .lgo-trust-panel .lgo-section-heading h2,
+.lgo-downloadtrustpage-stack .lgo-owner-release-gate-board .lgo-section-heading h2,
+.lgo-downloadtrustpage-stack .lgo-release-evidence .lgo-section-heading h2,
+.lgo-downloadtrustpage-stack .lgo-download-depth .lgo-section-heading h2 {
+  font-size: clamp(1.08rem, 1.48vw, 1.42rem);
+  line-height: 1.04;
+}
+
+.lgo-downloadtrustpage-stack > .lgo-section-heading p,
+.lgo-downloadtrustpage-stack .lgo-trust-panel .lgo-section-heading p,
+.lgo-downloadtrustpage-stack .lgo-owner-release-gate-board .lgo-section-heading p,
+.lgo-downloadtrustpage-stack .lgo-release-evidence .lgo-section-heading p,
+.lgo-downloadtrustpage-stack .lgo-download-depth .lgo-section-heading p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: .72rem;
+  line-height: 1.18;
+}
+
+.lgo-download-trust-first-gates {
+  display: grid;
+  align-items: stretch;
+  gap: .56rem;
+}
+
+.lgo-downloadtrustpage-stack .lgo-trust-panel,
+.lgo-downloadtrustpage-stack .lgo-owner-release-gate-board,
+.lgo-downloadtrustpage-stack .lgo-release-evidence,
+.lgo-downloadtrustpage-stack .lgo-download-depth {
+  display: grid;
+  gap: .52rem;
+  padding: .62rem;
+}
+
+.lgo-downloadtrustpage-stack .lgo-release-readiness-cta {
+  display: grid;
+  align-content: start;
+  gap: .52rem;
+  padding: .62rem;
+}
+
+.lgo-downloadtrustpage-stack .lgo-release-readiness-cta h2 {
+  font-size: clamp(1.04rem, 1.35vw, 1.28rem);
+  line-height: 1.04;
+}
+
+.lgo-downloadtrustpage-stack .lgo-release-readiness-cta p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: .72rem;
+  line-height: 1.18;
+}
+
+.lgo-downloadtrustpage-stack .lgo-release-readiness-cta .lgo-product-first-actions {
+  display: grid;
+  gap: .38rem;
+}
+
+.lgo-downloadtrustpage-stack .lgo-release-readiness-cta .lgo-link-button {
+  min-height: 32px;
+  padding-block: .32rem;
+  font-size: .68rem;
+}
+
+.lgo-downloadtrustpage-stack .lgo-trust-panel .lgo-grid,
+.lgo-downloadtrustpage-stack .lgo-owner-release-gate-board .lgo-grid,
+.lgo-downloadtrustpage-stack .lgo-release-evidence-list,
+.lgo-downloadtrustpage-stack .lgo-download-depth .lgo-grid {
+  display: grid;
+  gap: .42rem;
+}
+
+.lgo-downloadtrustpage-stack .lgo-trust-card,
+.lgo-downloadtrustpage-stack .lgo-owner-release-gate-card,
+.lgo-downloadtrustpage-stack .lgo-release-evidence-item,
+.lgo-downloadtrustpage-stack .lgo-download-depth .lgo-card {
+  padding: .46rem;
+}
+
+.lgo-downloadtrustpage-stack .lgo-trust-card h3,
+.lgo-downloadtrustpage-stack .lgo-owner-release-gate-card h3,
+.lgo-downloadtrustpage-stack .lgo-release-evidence-item h3,
+.lgo-downloadtrustpage-stack .lgo-download-depth .lgo-card h3 {
+  font-size: .76rem;
+  line-height: 1.04;
+  margin: .22rem 0 .14rem;
+}
+
+.lgo-downloadtrustpage-stack .lgo-trust-card p,
+.lgo-downloadtrustpage-stack .lgo-trust-card small,
+.lgo-downloadtrustpage-stack .lgo-owner-release-gate-card p,
+.lgo-downloadtrustpage-stack .lgo-owner-release-gate-card small,
+.lgo-downloadtrustpage-stack .lgo-release-evidence-item p,
+.lgo-downloadtrustpage-stack .lgo-download-depth .lgo-card p,
+.lgo-downloadtrustpage-stack .lgo-download-depth .lgo-card small {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: .56rem;
+  line-height: 1.14;
+}
+
+.lgo-downloadtrustpage-stack .lgo-trust-card p:nth-of-type(n+2),
+.lgo-downloadtrustpage-stack .lgo-owner-release-gate-card p:nth-of-type(n+2),
+.lgo-downloadtrustpage-stack .lgo-release-evidence-item p:nth-of-type(n+2) {
+  -webkit-line-clamp: 1;
+}
+
+.lgo-downloadtrustpage-stack .lgo-download-trust-secondary {
+  margin-top: -.05rem;
+}
+
+@media (min-width: 981px) {
+  .lgo-downloadtrustpage-stack .lgo-download-trust-hero-card {
+    grid-template-columns: minmax(0, 1fr) minmax(230px, 310px);
+    gap: .72rem;
+    min-height: 286px;
+    padding: .62rem;
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-download-trust-hero-card h1 {
+    font-size: clamp(2.02rem, 2.75vw, 2.62rem);
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-download-trust-hero-card .lgo-product-first-actions {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    align-self: center;
+    padding: .56rem;
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-trust-panel {
+    margin-top: -.36rem;
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-trust-panel .lgo-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .lgo-downloadtrustpage-stack > .lgo-section-heading {
+    grid-template-columns: minmax(180px, .27fr) minmax(0, 1fr);
+    gap: .58rem;
+  }
+
+  .lgo-download-trust-first-gates {
+    grid-template-columns: minmax(0, .42fr) minmax(0, 1fr);
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-owner-release-gate-board .lgo-grid,
+  .lgo-downloadtrustpage-stack .lgo-release-evidence-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-download-depth .lgo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .lgo-downloadtrustpage-stack {
+    gap: .56rem;
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-download-trust-hero-card {
+    grid-template-columns: 1fr;
+    gap: .4rem;
+    padding: .62rem;
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-download-trust-hero-card h1 {
+    font-size: clamp(1.58rem, 6.4vw, 1.88rem);
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-download-trust-hero-card .lgo-hero-lead,
+  .lgo-downloadtrustpage-stack .lgo-download-trust-hero-card p {
+    font-size: .7rem;
+    line-height: 1.16;
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-download-trust-hero-card .lgo-product-first-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: .48rem;
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-download-trust-hero-card .lgo-link-button {
+    min-height: 32px;
+    padding-inline: .38rem;
+    font-size: .58rem;
+  }
+
+  .lgo-downloadtrustpage-stack > .lgo-section-heading {
+    display: block;
+  }
+
+  .lgo-downloadtrustpage-stack > .lgo-section-heading p,
+  .lgo-downloadtrustpage-stack .lgo-trust-panel .lgo-section-heading p,
+  .lgo-downloadtrustpage-stack .lgo-owner-release-gate-board .lgo-section-heading p,
+  .lgo-downloadtrustpage-stack .lgo-release-evidence .lgo-section-heading p,
+  .lgo-downloadtrustpage-stack .lgo-download-depth .lgo-section-heading p {
+    display: none;
+  }
+
+  .lgo-download-trust-first-gates {
+    grid-template-columns: 1fr;
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-trust-panel,
+  .lgo-downloadtrustpage-stack .lgo-owner-release-gate-board,
+  .lgo-downloadtrustpage-stack .lgo-release-evidence,
+  .lgo-downloadtrustpage-stack .lgo-download-depth,
+  .lgo-downloadtrustpage-stack .lgo-release-readiness-cta {
+    gap: .42rem;
+    padding: .52rem;
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-trust-panel .lgo-grid,
+  .lgo-downloadtrustpage-stack .lgo-owner-release-gate-board .lgo-grid,
+  .lgo-downloadtrustpage-stack .lgo-release-evidence-list,
+  .lgo-downloadtrustpage-stack .lgo-download-depth .lgo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .38rem;
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-trust-card,
+  .lgo-downloadtrustpage-stack .lgo-owner-release-gate-card,
+  .lgo-downloadtrustpage-stack .lgo-release-evidence-item,
+  .lgo-downloadtrustpage-stack .lgo-download-depth .lgo-card {
+    padding: .42rem;
+    border-radius: .9rem;
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-trust-card h3,
+  .lgo-downloadtrustpage-stack .lgo-owner-release-gate-card h3,
+  .lgo-downloadtrustpage-stack .lgo-release-evidence-item h3,
+  .lgo-downloadtrustpage-stack .lgo-download-depth .lgo-card h3 {
+    font-size: .7rem;
+  }
+
+  .lgo-downloadtrustpage-stack .lgo-trust-card p,
+  .lgo-downloadtrustpage-stack .lgo-trust-card small,
+  .lgo-downloadtrustpage-stack .lgo-owner-release-gate-card p,
+  .lgo-downloadtrustpage-stack .lgo-owner-release-gate-card small,
+  .lgo-downloadtrustpage-stack .lgo-release-evidence-item p,
+  .lgo-downloadtrustpage-stack .lgo-download-depth .lgo-card p,
+  .lgo-downloadtrustpage-stack .lgo-download-depth .lgo-card small {
+    font-size: .54rem;
+  }
+}

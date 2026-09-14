@@ -51,7 +51,7 @@ def main() -> int:
         '/tmp/events-desktop-v1198.png', '/tmp/events-mobile-v1198.png', 'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.219', 'Current FE scope: select `/download/trust`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220', 'Current FE scope: select `/release`',
         'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [

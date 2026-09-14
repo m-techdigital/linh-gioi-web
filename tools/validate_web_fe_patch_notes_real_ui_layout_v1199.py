@@ -52,7 +52,7 @@ def main() -> int:
         '/tmp/patch-notes-desktop-v1199.png', '/tmp/patch-notes-mobile-v1199.png', 'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.219', 'Current FE scope: select `/download/trust`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220', 'Current FE scope: select `/release`',
         'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
