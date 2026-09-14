@@ -1,3 +1,16 @@
+Current phase: WEB-FE-GUIDES-INDEX-REAL-UI-LAYOUT-v1.156 WEB_CLOSED.
+
+Current decision: v1.156 closed the active `/guides` page slice as a real browser UI/UX Layout task. The existing public guide/index direction remained the design guardrail; work focused on the rendered guide index, first-fold structure, Vietnamese scenario labels and shared Base First layout. Entire program is NOT production-complete.
+
+- v1.156 did not create a new design batch because the existing guide/index target direction was sufficient for comparison after minimal Vietnamese alignment in the rendered page.
+- v1.156 replaced the raw long guide list with a compact hero, reading map, featured world-loop guide, primary guide grid and archive grid.
+- v1.156 added shared guide-index layout CSS in `packages/ui/src/service-layout.css` and kept `apps/web/src/app/globals.css` from growing with guide-index route CSS.
+- v1.156 evidence: browser/e2e desktop/mobile v1.156; source validator; Web/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/guides-index-desktop-v1156.png` and `/tmp/guides-index-mobile-v1156.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.157. Select `/guides/beginner` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-GUIDE-WORLD-LOOP-REAL-UI-LAYOUT-v1.155 WEB_CLOSED.
 
 Current decision: v1.155 closed the active `/guides/world-gameplay-loop-guide` page slice as a real browser UI/UX Layout task. The existing guide/detail target and current gameplay-loop scenario remained the design guardrail; work focused on the rendered guide page, first-heading order, Vietnamese scenario boundaries and shared Base First layout. Entire program is NOT production-complete.
