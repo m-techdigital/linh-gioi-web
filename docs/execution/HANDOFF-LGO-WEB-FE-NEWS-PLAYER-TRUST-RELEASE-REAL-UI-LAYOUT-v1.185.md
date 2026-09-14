@@ -6,7 +6,7 @@ Status: WEB_CLOSED
 
 Process: Real Browser UI/UX Layout First; Base First; browser/e2e evidence before closure.
 
-Closed page: `/news/faq-search-helpfulness-polish-started`.
+Closed page: `/events`.
 
 What changed:
 

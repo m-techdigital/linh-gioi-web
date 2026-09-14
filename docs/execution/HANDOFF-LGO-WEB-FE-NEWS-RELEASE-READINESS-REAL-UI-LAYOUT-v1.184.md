@@ -6,7 +6,7 @@ Status: WEB_CLOSED
 
 Process: Real Browser UI/UX Layout First; Base First; browser/e2e evidence before closure.
 
-Closed page: `/news/faq-search-helpfulness-polish-started`.
+Closed page: `/events`.
 
 What changed:
 
@@ -30,6 +30,6 @@ Base First / CSS ownership:
 - No News Detail selectors were added to `apps/web/src/app/globals.css`.
 - No broad design batch was created because the existing public target and shared shell were sufficient for comparison.
 
-Next allowed task: `WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.185`, selecting `/news/faq-search-helpfulness-polish-started` as the single active page.
+Next allowed task: `WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.185`, selecting `/events` as the single active page.
 
 NO_ACCEPTED_BACKEND_CONTRACT retained. No production auth, DB persistence, CMS, live feed, copied game backend, independent business backend, public download, open beta, entitlement, fake ticket or checksum placeholder claim was added.

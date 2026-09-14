@@ -891,9 +891,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "faq-search-helpfulness-polish-started",
     category: "news",
-    title: "FAQ search and helpfulness polish starts",
-    summary: "WEB v1.21 improves FAQ discovery, helpfulness grouping and support route clarity without adding a fake search backend.",
-    body: "WEB v1.21 keeps building the public web product. It adds a dedicated support help route, groups common questions by player intent, explains issue-category routing and states that search is static guidance only until a real backend/search contract exists.",
+    title: "FAQ dễ tìm và hữu ích hơn",
+    summary: "WEB v1.21 giúp người chơi tìm FAQ đúng nhóm, hiểu bước tiếp theo và nhận hỗ trợ tĩnh rõ ràng mà không tạo backend tìm kiếm giả.",
+    body: "WEB v1.21 làm rõ /support/help, nhóm câu hỏi theo nhu cầu người chơi, giải thích route theo loại vấn đề và nhắc rằng tìm kiếm hiện chỉ là chỉ dẫn tĩnh cho đến khi có hợp đồng backend tìm kiếm được chấp nhận.",
     publishedAt: "2026-09-05T23:55:00.000Z",
     status: "published",
     featured: true,
@@ -1011,6 +1011,20 @@ export const contentDetailSections: ContentDetailSection[] = [
     body: "Các trường góp ý chỉ yêu cầu mô tả route, bước tái hiện, kết quả mong đợi/thực tế và nhóm thiết bị an toàn; nội dung public không yêu cầu bí mật hoặc dữ liệu nhạy cảm.",
     playerImpact: "Góp ý tương lai dễ phân loại hơn mà không tạo cảm giác phải chia sẻ tài khoản hoặc mã bảo mật.",
     nonClaim: "Không thu mật khẩu, mã bảo mật, dữ liệu thanh toán hoặc dữ liệu cá nhân nhạy cảm."
+  },
+  {
+    slug: "faq-search-helpfulness-polish-started",
+    heading: "FAQ được nhóm theo nhu cầu người chơi",
+    body: "WEB v1.21 gom câu hỏi theo mục tiêu như tải game, phát hành, an toàn, gói kiểm thử, hiệu năng và ranh giới tài khoản để người chơi chọn đúng nhánh đọc.",
+    playerImpact: "Người chơi không phải đoán từ khóa kỹ thuật; họ đi thẳng tới nhóm câu hỏi phù hợp với vấn đề đang gặp.",
+    nonClaim: "Không có backend tìm kiếm, hộp chat tự động hoặc tra cứu tài khoản thật."
+  },
+  {
+    slug: "faq-search-helpfulness-polish-started",
+    heading: "Bước tiếp theo hữu ích nhưng không giả hệ thống hỗ trợ",
+    body: "Trang hỗ trợ giải thích route theo loại vấn đề và giữ CTA ở mức đọc tiếp, trạng thái hoặc hướng dẫn an toàn cho đến khi có hợp đồng hỗ trợ thật.",
+    playerImpact: "Người chơi thấy nên đọc gì tiếp theo mà không hiểu nhầm thành phiếu hỗ trợ, hộp chat hoặc cam kết phản hồi production.",
+    nonClaim: "Không có tuyến phiếu hỗ trợ, không có hộp chat live và không có SLA hỗ trợ production."
   },
   {
     slug: "release-readiness-hub-polish-started",

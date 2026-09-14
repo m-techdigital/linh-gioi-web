@@ -3,14 +3,14 @@
 Current task:
 
 ```text
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.197
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.198
 ```
 
 Status: WEB_TASK_CONTINUE.
 
 User direction: continue FE work first, complete one page at a time, and use browser/e2e plus screenshot review for real UI/UX layout verification. Real Browser UI/UX Layout First is Priority #1; design target work is only a pre-implementation guardrail and the deliverable is the real rendered UI/UX Layout. Use or refresh only the target for the current page, make the smallest Vietnamese/game-scenario correction needed for comparison, then stop design work and implement the browser page. New public FE design targets and visible public copy must use Vietnamese unless a route-specific owner-approved exception is recorded, but localization alone is not page completion. Design must follow the Linh Giới game scenario and stay coherent with already accepted page targets; if a target is stale, English-heavy, visually inconsistent, or wrong for the game scenario, replace/supersede it inside the current page slice only enough to unblock UI work.
 
-Current FE scope: select `/news/faq-search-helpfulness-polish-started` as the next single active page after v1.196 `/news/closed-tester-information-pack-started` closure. Complete `/news/faq-search-helpfulness-polish-started` fully before any other page: confirm the registered public route target, apply only the minimal target correction needed if it blocks comparison, then prioritize the real News Detail UI/UX Layout in browser. Required work is first-fold structure, visual hierarchy, spacing, typography scale, card density, mobile behavior, keyboard/focus/accessibility, screenshot/design-target comparison, docs/handoff/ledger, commit and push.
+Current FE scope: select `/events` as the next single active page after v1.197 `/news/faq-search-helpfulness-polish-started` closure. Complete `/events` fully before any other page: confirm the registered public route target, apply only the minimal target correction needed if it blocks comparison, then prioritize the real Events UI/UX Layout in browser. Required work is first-fold structure, visual hierarchy, spacing, typography scale, card density, mobile behavior, keyboard/focus/accessibility, screenshot/design-target comparison, docs/handoff/ledger, commit and push.
 
 Layout Match Before Closure is mandatory: after attaching or minimally correcting a design target, the selected page must be rendered in a real browser and compared against that target before handoff. A page is not closed until its UI/UX Layout follows the target structure for hero composition, visual hierarchy, spacing, typography scale, content order, first-fold density and mobile behavior. Copy-only, label-only, target-only, localization-only or validator-only fixes are not enough to close a page.
 

@@ -6,7 +6,7 @@ Status: WEB_CLOSED
 
 Process: Real Browser UI/UX Layout First; Base First; browser/e2e evidence before closure.
 
-The `/news/faq-search-helpfulness-polish-started` page was completed as a real browser UI/UX Layout slice. The page uses the shared compact News Detail base from `packages/ui/src/service-layout.css`, with no route CSS added to `apps/web/src/app/globals.css`. The existing public core design target remained usable because its header, menu, footer, shell and navigation match the accepted common UI/UX layout; no design batch was created.
+The `/events` page was completed as a real browser UI/UX Layout slice. The page uses the shared compact News Detail base from `packages/ui/src/service-layout.css`, with no route CSS added to `apps/web/src/app/globals.css`. The existing public core design target remained usable because its header, menu, footer, shell and navigation match the accepted common UI/UX layout; no design batch was created.
 
 Baseline browser/e2e review found the selected detail page rendered the shared article layout, but the current article h1/body/non-claims were still English and the page had no current-slug detail title mapping. The fix added the current page title mapping and converted only the current visible closed tester information article copy and detail non-claims to Vietnamese while preserving the existing shared layout.
 
