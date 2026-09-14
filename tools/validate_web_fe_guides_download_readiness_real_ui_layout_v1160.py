@@ -55,7 +55,7 @@ def main() -> int:
         'checksum',
         'owner approval',
         'Chưa có public build artifact hoặc launcher production.',
-        'Chưa có checksum thật, provenance hoặc artifact verification.',
+        'Chưa có checksum thật, nguồn gốc file hoặc xác minh gói build.',
         'Chưa có release note được duyệt, support SLA hoặc closed-test intake live.',
         'Chưa có portal entitlement, account gate, open registration hoặc backend contract accepted.',
     ])
@@ -98,8 +98,8 @@ def main() -> int:
         'Base First',
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.162',
-        'Current FE scope: select `/guides/release-trust-and-checksum-guide`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.163',
+        'Current FE scope: select `/guides/community-roadmap-onboarding-guide`',
         'Real Browser UI/UX Layout First',
         'Base UI/UX Layout',
     ])

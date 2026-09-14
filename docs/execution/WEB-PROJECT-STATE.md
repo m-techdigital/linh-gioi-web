@@ -1,3 +1,18 @@
+Current phase: WEB-FE-GUIDES-RELEASE-TRUST-REAL-UI-LAYOUT-v1.162 WEB_CLOSED.
+
+Current decision: v1.162 closed the active `/guides/release-trust-and-checksum-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Release Trust guide, artifact/checksum/provenance/owner-approval proof flow, Vietnamese public copy and shared Base First guide-flow layout. Entire program is NOT production-complete.
+
+- v1.162 did not create a design batch because the existing guide-detail direction was sufficient for comparison after minimal current-page scenario correction in the rendered page.
+- v1.162 browser baseline showed placeholder English first-flow, missing compact guide-flow classes, 3 guide steps, desktop action band around 3136px, mobile action band around 5635px and mobile page around 7136px.
+- v1.162 replaced the placeholder first-flow with Vietnamese gói build → checksum → giới hạn build → trạng thái/hỗ trợ expectations and four compact proof-before-download steps.
+- v1.162 reused the shared compact guide-flow base in `packages/ui/src/service-layout.css` and added only the current page release-trust visual theme there, while keeping current page CSS out of `apps/web/src/app/globals.css`.
+- v1.162 final browser/e2e metrics: desktop hero bottom 464.67px, detail top 477.14px, world CTA top 885.67px, action band top 2184.97px, scrollHeight 2902px, h1 42.88px, 4 desktop columns, overflow 0; mobile hero bottom 594.23px, detail top 604.14px, world CTA top 1286.86px, action band top 3405.22px, scrollHeight 4435px, h1 27.52px, overflow 0.
+- v1.162 evidence: browser/e2e desktop/mobile v1.162; source validator; Web/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/guides-release-trust-desktop-v1162.png` and `/tmp/guides-release-trust-mobile-v1162.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.163. Select `/guides/community-roadmap-onboarding-guide` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-GUIDES-SUPPORT-COMMUNITY-REAL-UI-LAYOUT-v1.161 WEB_CLOSED.
 
 Current decision: v1.161 closed the active `/guides/support-and-community-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Support and Community guide, safe-feedback first-flow, Vietnamese FAQ/feedback/ticket scenario and shared Base First layout. Entire program is NOT production-complete.

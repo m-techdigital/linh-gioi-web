@@ -1,3 +1,4 @@
+| WEB-FE-GUIDES-RELEASE-TRUST-REAL-UI-LAYOUT-v1.162 | WEB-FE | WEB_CLOSED | 619d5a0 | Public Release Trust Guide real browser UI layout and Base First guide-flow CSS | RED browser baseline placeholder English, missing compact guide-flow classes, 3 guide steps, mobile action band ~5635px and page ~7136px; GREEN Playwright desktop/mobile 2/2 release trust guide layout checks; screenshot review hero→artifact/checksum proof steps→world loop CTA; v1.162 validator; Web/UI typecheck/build; current-state closure validator | Codex local | 2026-09-14 | 2026-09-14 | WEB_CLOSED; Real Browser UI/UX Layout First; Base First service-layout.css; FE-only; NO_ACCEPTED_BACKEND_CONTRACT retained | WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.163 |
 # WEB-TASK-LEDGER
 
 | Task ID | Phase | Status | Source baseline | Output artifact | Evidence | Owner | Started | Closed | Final decision | Next allowed step |

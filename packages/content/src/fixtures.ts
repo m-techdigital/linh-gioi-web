@@ -674,9 +674,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "release-trust-and-checksum-guide",
     category: "guides",
-    title: "Release trust and checksum guide",
-    summary: "A player-facing guide that explains why build artifact, checksum, provenance, known limitations and owner approval must exist before a download CTA appears.",
-    body: "This guide turns release trust into readable public copy. It does not create a launcher, entitlement, account gate, CMS workflow, support ticket backend or production deployment claim.",
+    title: "Tin cậy phát hành và checksum",
+    summary: "Guide giúp người chơi hiểu vì sao mọi link tải phải đi kèm gói build thật, checksum, nguồn gốc file, giới hạn đã biết và phê duyệt chủ sở hữu.",
+    body: "Nội dung này biến tin cậy phát hành thành flow đọc công khai: kiểm file build, đối chiếu checksum, đọc nguồn gốc/giới hạn và chỉ tin CTA tải khi chủ sở hữu đã duyệt đủ bằng chứng.",
     publishedAt: "2026-09-05T12:10:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -1347,7 +1347,7 @@ export const guideDetailSteps: GuideDetailStep[] = [
     title: "Đặt checksum cạnh link tải",
     action: "Hiển thị checksum của đúng artifact sau khi kiểm provenance, để người chơi có thể đối chiếu file tải.",
     expectedResult: "Download trust dựa trên bằng chứng kỹ thuật, không dựa vào copy marketing.",
-    blockedScope: "Chưa có checksum thật, provenance hoặc artifact verification."
+    blockedScope: "Chưa có checksum thật, nguồn gốc file hoặc xác minh gói build."
   },
   {
     slug: "download-readiness-guide",
@@ -1400,26 +1400,34 @@ export const guideDetailSteps: GuideDetailStep[] = [
   {
     slug: "release-trust-and-checksum-guide",
     step: "01",
-    title: "Xác nhận artifact trước CTA",
-    action: "Chỉ hiển thị download CTA khi có file build thật, version, platform, size và approval.",
+    title: "Xác nhận gói build trước nút tải",
+    action: "Chỉ hiển thị CTA tải khi có file build thật, phiên bản, nền tảng, dung lượng và phê duyệt chủ sở hữu.",
     expectedResult: "Người chơi không bị dẫn tới nút tải giả hoặc placeholder nguy hiểm.",
-    blockedScope: "No public game download artifact."
+    blockedScope: "Chưa có gói tải game công khai được duyệt."
   },
   {
     slug: "release-trust-and-checksum-guide",
     step: "02",
     title: "Đặt checksum cạnh link tải",
-    action: "Hiển thị SHA256 của đúng artifact public sau khi verify upload.",
-    expectedResult: "Người chơi có thể kiểm tra file tải thay vì tin vào copy marketing.",
-    blockedScope: "No placeholder checksum or unverified hash."
+    action: "Hiển thị SHA256 của đúng gói build sau khi kiểm upload/nguồn gốc file, không dùng hash mẫu.",
+    expectedResult: "Người chơi có thể đối chiếu file tải thay vì tin vào copy marketing.",
+    blockedScope: "Chưa có checksum thật, nguồn gốc file hoặc xác minh gói build."
   },
   {
     slug: "release-trust-and-checksum-guide",
     step: "03",
-    title: "Nói rõ giới hạn build",
-    action: "Viết release note có known limitations, support expectation và rollback path.",
+    title: "Nói rõ giới hạn bản build",
+    action: "Viết ghi chú phát hành có giới hạn đã biết, kỳ vọng hỗ trợ và hướng rollback trước khi mở test.",
     expectedResult: "Closed testing có thể bắt đầu minh bạch khi owner duyệt artifact.",
-    blockedScope: "No production auth, no DB persistence, no payment/shop/economy."
+    blockedScope: "Chưa claim production auth, DB persistence, payment/shop/economy."
+  },
+  {
+    slug: "release-trust-and-checksum-guide",
+    step: "04",
+    title: "Đồng bộ trạng thái và hỗ trợ",
+    action: "Liên kết Trạng thái chơi, Tin cậy tải game và FAQ hỗ trợ để người chơi biết gate nào còn tạm khóa hoặc dự kiến.",
+    expectedResult: "Người chơi hiểu bản phát hành chưa sẵn sàng nếu thiếu gói build, checksum, kênh hỗ trợ hoặc phê duyệt chủ sở hữu.",
+    blockedScope: "Chưa có quyền tải, launcher, ticket backend hoặc claim triển khai production."
   }
 ];
 
