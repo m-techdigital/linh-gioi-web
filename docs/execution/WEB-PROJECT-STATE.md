@@ -1,3 +1,22 @@
+Current phase: WEB-FE-RELEASE-REAL-UI-LAYOUT-v1.200 WEB_CLOSED.
+
+Current decision: v1.200 closed the active `/release` page slice as a real browser UI/UX Layout task. The existing Public Release design target and shared shell were sufficient for comparison; work focused on the rendered Release page, mobile typography, first-flow density, stage-card layout and Base First shared disclosure pattern. Entire program is NOT production-complete.
+
+- v1.200 did not create a design batch because the registered Public Release target was enough for comparison after checking shared shell coherence.
+- v1.200 changed real UI layout: `/release` now composes the shared compact proof-page rhythm, and long secondary proof boards are behind a native disclosure instead of forcing every board into the default page height.
+- v1.200 added the reusable `lgo-service-disclosure-stack` / `lgo-service-disclosure-body` pattern and release mobile density rules in `packages/ui/src/service-layout.css`.
+- v1.200 did not add new current-page CSS to `apps/web/src/app/globals.css`; existing historical release globals remain as legacy page evidence while the new v1.200 improvements are shared UI-owned.
+- v1.200 kept the page Vietnamese and release-scenario safe: no public build, no open beta, no entitlement, no production backend, no accepted backend changelog contract and no release launcher claim.
+- v1.200 explicitly checked rendered screenshots against the Public Release target and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.200 final browser/e2e metrics: desktop hero bottom 391.50px, board top 379.66px, board bottom 561.41px, stage top 579.95px, first stage top 723.83px, readiness top 1061.61px, disclosure top 1237.91px, scrollHeight 1764px, h1/max font 34.82px, 6 stage cards, 6 desktop columns, overflow 0; mobile hero bottom 546.94px, board top 618.94px, board bottom 1133.72px, stage top 1184.13px, first stage top 1407.28px, readiness top 2127.41px, disclosure top 2676.08px, scrollHeight 3402px, h1/max font 30.28px, 6 stage cards, 2 mobile columns, overflow 0.
+- v1.200 evidence: browser/e2e desktop/mobile v1.200; screenshot review `/tmp/release-desktop-v1200.png` and `/tmp/release-mobile-v1200.png`; source validator; Web/UI checks; Web build; clean current-state closure validator.
+- AXIRO reference remains organizational only: shared base/layout/style owners and separated style primitives. No AXIRO code was copied.
+- Design target sync rule remains recorded: design targets must stay synchronized with shared header, footer, menu, shell and navigation; if a current target diverges, only the smallest current-page target area may be corrected before returning to browser layout.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.201. Select `/release/readiness` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-PATCH-NOTES-REAL-UI-LAYOUT-v1.199 WEB_CLOSED.
 
 Current decision: v1.199 closed the active `/patch-notes` page slice as a real browser UI/UX Layout task. The existing public core/service design target and shared public shell were sufficient for comparison after checking header/footer/menu coherence; work focused on the rendered Patch Notes page, release-note boundary clarity, compact proof-card rhythm, keyboard navigation and shared Base First service layout. Entire program is NOT production-complete.

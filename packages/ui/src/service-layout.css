@@ -4806,3 +4806,187 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Shared disclosure stack for long public evidence pages.
+   Lets a current page keep detailed proof boards available without forcing every secondary board into the first reading flow. */
+.lgo-service-disclosure-stack {
+  border: 1px solid rgba(245, 200, 107, .28);
+  border-radius: var(--lgo-radius-xl);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(49, 216, 232, .12), transparent 14rem),
+    linear-gradient(145deg, rgba(10, 24, 42, .84), rgba(11, 16, 35, .9));
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .18);
+  overflow: hidden;
+}
+
+.lgo-service-disclosure-stack > summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  list-style: none;
+  padding: clamp(.85rem, 1.3vw, 1.05rem);
+}
+
+.lgo-service-disclosure-stack > summary::-webkit-details-marker {
+  display: none;
+}
+
+.lgo-service-disclosure-stack > summary span {
+  color: var(--lgo-color-text-primary);
+  font-size: clamp(1.05rem, 1.4vw, 1.28rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.lgo-service-disclosure-stack > summary small {
+  color: var(--lgo-color-text-muted);
+  font-size: .78rem;
+  line-height: 1.3;
+  max-width: 52ch;
+  text-align: right;
+}
+
+.lgo-service-disclosure-stack > summary::after {
+  color: var(--lgo-color-warm-gold);
+  content: "Mở";
+  flex: 0 0 auto;
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.lgo-service-disclosure-stack[open] > summary::after {
+  content: "Thu gọn";
+}
+
+.lgo-service-disclosure-body {
+  display: grid;
+  gap: clamp(.78rem, 1.4vw, 1.1rem);
+  padding: 0 clamp(.85rem, 1.3vw, 1.05rem) clamp(.9rem, 1.4vw, 1.15rem);
+}
+
+@media (max-width: 980px) {
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-detail-hero-card h1 {
+    font-size: clamp(1.86rem, 7.35vw, 2.14rem);
+    line-height: .96;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page h2 {
+    font-size: clamp(1.22rem, 6.35vw, 1.9rem);
+    line-height: 1.08;
+  }
+
+  .lgo-service-disclosure-stack > summary {
+    align-items: flex-start;
+    display: grid;
+  }
+
+  .lgo-service-disclosure-stack > summary small {
+    max-width: none;
+    text-align: left;
+  }
+}
+
+@media (min-width: 981px) {
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-narrative-stage-board {
+    margin-top: -1rem;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-expanded-evidence {
+    margin-top: -.35rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-detail-hero-card {
+    gap: .52rem;
+    padding: .85rem;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-detail-hero-card .lgo-card-kicker {
+    font-size: .68rem;
+    letter-spacing: .08em;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-detail-hero-card .lgo-hero-lead,
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-detail-hero-card p {
+    font-size: .78rem;
+    line-height: 1.24;
+    margin-block: .22rem;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-detail-hero-card .lgo-product-first-actions {
+    gap: .4rem;
+    padding: .52rem;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-detail-hero-card .lgo-link-button {
+    min-height: 34px;
+    padding-block: .34rem;
+    font-size: .78rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-narrative-design-board {
+    margin-bottom: -.35rem;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-narrative-stage-board {
+    padding: .72rem;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-narrative-stage-board .lgo-section-heading {
+    margin-bottom: .5rem;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-narrative-stage-board .lgo-section-heading p {
+    font-size: .76rem;
+    line-height: 1.24;
+  }
+}
+
+@media (max-width: 980px) {
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-narrative-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .55rem;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-narrative-item {
+    gap: .28rem;
+    padding: .58rem;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-narrative-item h3 {
+    font-size: .88rem;
+    line-height: 1.06;
+    margin-block: .22rem .16rem;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-narrative-item p,
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-narrative-item small {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: .68rem;
+    line-height: 1.18;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-narrative-item p {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-narrative-item small {
+    -webkit-line-clamp: 1;
+  }
+
+  .lgo-releasepage-stack.lgo-service-compact-proof-page .lgo-release-narrative-item .lgo-link-button {
+    min-height: 32px;
+    padding-block: .3rem;
+    font-size: .68rem;
+  }
+}

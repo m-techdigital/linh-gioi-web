@@ -23,7 +23,7 @@ export const metadata = { title: "Hành trình phát hành" };
 export default function ReleaseNarrativePage() {
   return (
     <WebAppShell>
-      <Stack className="lgo-player-facing-stack lgo-releasepage-stack">
+      <Stack className="lgo-player-facing-stack lgo-service-compact-proof-page lgo-releasepage-stack">
         <GameCard className="lgo-detail-hero-card lgo-release-narrative-hero-card">
           <StatusBadge tone="gold">WEB v1.18 hành trình phát hành</StatusBadge>
           <span className="lgo-card-kicker">Không build public · không open beta · không funnel quyền truy cập</span>
@@ -59,21 +59,29 @@ export default function ReleaseNarrativePage() {
         </figure>
         <ReleaseNarrativeStageBoard />
         <ReleaseReadinessHubCta />
-        <ContentIaStartCta />
-        <FaqHelpfulnessCta />
-        <RouteContinuityCta />
-        <ReleaseReadinessHubBoard />
-        <OwnerReleaseGateBoard />
-        <PlayerTrustSignalBoard />
-        <ClosedTestReadinessBoard />
-        <TrustJourneyCheckpointBoard />
-        <PlayerTrustReleaseCta />
-        <DownloadTrustCta />
-        <WorldGameplayLoopCta />
-        <PlayerSafetySupportCta />
-        <AccessibilityReadabilityCta />
-        <PerformanceBudgetCta />
-        <ClosedTesterInformationPackCta />
+        <details className="lgo-service-disclosure-stack lgo-release-expanded-evidence">
+          <summary>
+            <span>Chi tiết bằng chứng mở rộng</span>
+            <small>Readiness, owner gate, niềm tin người chơi và các route liên quan</small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <ContentIaStartCta />
+            <FaqHelpfulnessCta />
+            <RouteContinuityCta />
+            <ReleaseReadinessHubBoard />
+            <OwnerReleaseGateBoard />
+            <PlayerTrustSignalBoard />
+            <ClosedTestReadinessBoard />
+            <TrustJourneyCheckpointBoard />
+            <PlayerTrustReleaseCta />
+            <DownloadTrustCta />
+            <WorldGameplayLoopCta />
+            <PlayerSafetySupportCta />
+            <AccessibilityReadabilityCta />
+            <PerformanceBudgetCta />
+            <ClosedTesterInformationPackCta />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );
