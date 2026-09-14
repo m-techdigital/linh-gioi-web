@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-TRUST-HEADING-PRIORITY-v1.88 WEB_CLOSED.
+
+Current decision: v1.88 FE public trust heading-priority slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.88 moves CTA sections below the page h1 on `/download/trust`, `/roadmap` and `/community/onboarding`.
+- The selected trust/onboarding routes now start main content with exactly one visible h1 while keeping no-download/no-community-backend/no-waitlist non-claims explicit.
+- v1.88 evidence: RED browser/e2e reproduced CTA h2 headings before trust h1; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile heading-order/font-size/overflow PASS; visual metric review completed with pageOverflow 0.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.89.
+
 Current phase: WEB-FE-PUBLIC-SUPPORT-HEADING-PRIORITY-v1.87 WEB_CLOSED.
 
 Current decision: v1.87 FE public support heading-priority slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

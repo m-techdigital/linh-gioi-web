@@ -26,11 +26,6 @@ export default function RoadmapPage() {
   return (
     <WebAppShell>
       <Stack>
-        <ReleaseReadinessHubCta />
-        <OwnerReleaseGateBoard />
-        <PlayerTrustReleaseCta />
-        <ReleaseNarrativeStageBoard />
-        <RouteContinuityCta />
         <SpiritPanel>
           <StatusBadge tone="gold">WEB v1.16 performance/copy budget · WEB v1.15 readability · WEB v1.14 player safety support · WEB v1.13 world gameplay loop depth</StatusBadge>
           <h1>Roadmap phát triển web</h1>
@@ -52,6 +47,11 @@ export default function RoadmapPage() {
           </figcaption>
         </figure>
         <SectionHeading eyebrow="Plan" title="Tập trung sản phẩm trước, tooling chỉ làm guardrail" />
+        <ReleaseReadinessHubCta />
+        <OwnerReleaseGateBoard />
+        <PlayerTrustReleaseCta />
+        <ReleaseNarrativeStageBoard />
+        <RouteContinuityCta />
         <Grid>
           {publicRoadmapItems.map((item) => (
             <GameCard key={item.version}>

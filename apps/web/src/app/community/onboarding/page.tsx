@@ -18,12 +18,6 @@ export default function CommunityOnboardingPage() {
   return (
     <WebAppShell>
       <Stack>
-        <ReleaseReadinessHubCta />
-        <TesterExpectationCopyBoard />
-        <PlayerTrustReleaseCta />
-        <ReleaseNarrativeStageBoard />
-        <ContentIaStartCta />
-        <RouteContinuityCta />
         <GameCard className="lgo-detail-hero-card">
           <StatusBadge tone="jade">WEB v1.11 community onboarding</StatusBadge>
           <span className="lgo-card-kicker">No live forum · no ticket backend · no fake waitlist</span>
@@ -58,6 +52,12 @@ export default function CommunityOnboardingPage() {
         <SectionHeading eyebrow="Player reading path" title="Đi theo thứ tự để không hiểu nhầm trạng thái release">
           Người chơi nên đọc status/download trust trước, rồi roadmap gates, support/community expectation và guide onboarding.
         </SectionHeading>
+        <ReleaseReadinessHubCta />
+        <TesterExpectationCopyBoard />
+        <PlayerTrustReleaseCta />
+        <ReleaseNarrativeStageBoard />
+        <ContentIaStartCta />
+        <RouteContinuityCta />
         <CommunityOnboardingPathBoard />
         <RoadmapDecisionGateBoard />
         <CommunityFeedbackGuidance />
