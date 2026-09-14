@@ -56,20 +56,28 @@ export default function ReleaseReadinessPage() {
         </figure>
         <ReleaseReadinessHubBoard />
         <OwnerReleaseGateBoard />
-        <ContentIaStartCta />
-        <FaqHelpfulnessCta />
-        <RouteContinuityCta />
-        <TesterExpectationCopyBoard />
-        <FaqDiscoveryGroupBoard />
-        <ClosedTesterChecklistBoard />
-        <ReleaseSurfaceAlignmentBoard />
-        <ReleaseNarrativeStageBoard />
-        <TrustJourneyCheckpointBoard />
-        <ReleaseReadinessHubCta />
-        <PlayerTrustReleaseCta />
-        <DownloadTrustCta />
-        <PlayerSafetySupportCta />
-        <ClosedTesterInformationPackCta />
+        <details className="lgo-service-disclosure-stack lgo-release-readiness-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>Giữ đủ Content IA, FAQ, closed tester, trust journey và support nhưng không ép toàn bộ proof board vào first-flow readiness.</small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <ContentIaStartCta />
+            <FaqHelpfulnessCta />
+            <RouteContinuityCta />
+            <TesterExpectationCopyBoard />
+            <FaqDiscoveryGroupBoard />
+            <ClosedTesterChecklistBoard />
+            <ReleaseSurfaceAlignmentBoard />
+            <ReleaseNarrativeStageBoard />
+            <TrustJourneyCheckpointBoard />
+            <ReleaseReadinessHubCta />
+            <PlayerTrustReleaseCta />
+            <DownloadTrustCta />
+            <PlayerSafetySupportCta />
+            <ClosedTesterInformationPackCta />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );

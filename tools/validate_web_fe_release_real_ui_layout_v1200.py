@@ -47,15 +47,15 @@ def main() -> int:
         'details:not([open]) .lgo-service-disclosure-body', '/tmp/release-${isMobile ? "mobile" : "desktop"}-v1200.png'
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
-        'Current phase: WEB-FE-RELEASE-REAL-UI-LAYOUT-v1.200 WEB_CLOSED', 'Select `/release/readiness`',
+        'Current phase: WEB-FE-RELEASE-REAL-UI-LAYOUT-v1.200 WEB_CLOSED', 'Select `/release/tester-pack`',
         '/tmp/release-desktop-v1200.png', '/tmp/release-mobile-v1200.png', 'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.201', 'Current FE scope: select `/release/readiness`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.202', 'Current FE scope: select `/release/tester-pack`',
         'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
-        '| WEB-FE-RELEASE-REAL-UI-LAYOUT-v1.200 | WEB-FE | WEB_CLOSED | 42bd32d |',
+        '| WEB-FE-RELEASE-REAL-UI-LAYOUT-v1.200 | WEB-FE | WEB_CLOSED | a74fb66 |',
         'Playwright desktop/mobile 2/2 release real UI layout checks', 'NO_ACCEPTED_BACKEND_CONTRACT retained'
     ])
     for rel in [

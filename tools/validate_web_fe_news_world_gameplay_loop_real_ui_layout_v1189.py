@@ -60,13 +60,13 @@ def main() -> int:
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-WORLD-GAMEPLAY-LOOP-REAL-UI-LAYOUT-v1.189 WEB_CLOSED',
-        'Select `/release/readiness`',
+        'Select `/release/tester-pack`',
         '/tmp/news-world-gameplay-loop-desktop-v1189.png', '/tmp/news-world-gameplay-loop-mobile-v1189.png',
         'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.201',
-        'Current FE scope: select `/release/readiness`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.202',
+        'Current FE scope: select `/release/tester-pack`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
         '| WEB-FE-NEWS-WORLD-GAMEPLAY-LOOP-REAL-UI-LAYOUT-v1.189 | WEB-FE | WEB_CLOSED | aa0ebce |',
