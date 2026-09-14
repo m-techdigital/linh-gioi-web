@@ -1,3 +1,18 @@
+Current phase: WEB-FE-GUIDES-START-HERE-REAL-UI-LAYOUT-v1.164 WEB_CLOSED.
+
+Current decision: v1.164 closed the active `/guides/start-here-content-hub-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Start Here guide, first-reading route selection flow, Vietnamese public copy and shared Base First guide-flow layout. Entire program is NOT production-complete.
+
+- v1.164 did not create a design batch because the existing guide-detail direction was sufficient for comparison after minimal current-page scenario correction in the rendered page.
+- v1.164 browser baseline showed generic guide badge, mixed English Start/download trust/roadmap/status/support/community copy, missing compact guide-flow classes, 3 guide steps, desktop action band around 3217px, mobile hero around 614px and page around 7209px.
+- v1.164 replaced the mixed-English first-flow with Vietnamese Bắt đầu → nhóm trang phù hợp → kiểm ranh giới → đường dẫn an toàn expectations and four compact route-selection steps.
+- v1.164 reused the shared compact guide-flow base in `packages/ui/src/service-layout.css` and added only the current page start-hub visual theme there, while keeping current page CSS out of `apps/web/src/app/globals.css`.
+- v1.164 final browser/e2e metrics: desktop hero bottom 424.38px, detail top 436.84px, world CTA top 861.22px, action band top 2160.52px, scrollHeight 2877px, h1 42.88px, 4 desktop columns, overflow 0; mobile hero bottom 568.38px, detail top 578.28px, world CTA top 1274.55px, action band top 3392.91px, scrollHeight 4422px, h1 27.52px, overflow 0.
+- v1.164 evidence: browser/e2e desktop/mobile v1.164; source validator; Web/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/guides-start-here-desktop-v1164.png` and `/tmp/guides-start-here-mobile-v1164.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.165. Select `/guides/world-gameplay-loop-guide` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-GUIDES-COMMUNITY-ROADMAP-REAL-UI-LAYOUT-v1.163 WEB_CLOSED.
 
 Current decision: v1.163 closed the active `/guides/community-roadmap-onboarding-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Community Roadmap guide, status/roadmap/community expectation flow, Vietnamese public copy and shared Base First guide-flow layout. Entire program is NOT production-complete.

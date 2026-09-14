@@ -717,9 +717,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "start-here-content-hub-guide",
     category: "guides",
-    title: "Start here: cách đọc website Linh Giới Online",
-    summary: "Guide giúp người chơi mới dùng Start hub để chọn đúng trang: thế giới, download trust, roadmap, status, support hoặc community.",
-    body: "Hãy bắt đầu từ /start, chọn đúng mục tiêu đọc, rồi kiểm tra non-claim trước khi kỳ vọng release, account hoặc backend thật.",
+    title: "Bắt đầu đọc web Linh Giới",
+    summary: "Guide giúp người chơi mới dùng trang Bắt đầu để chọn đúng hướng đọc: thế giới, tin cậy tải game, lộ trình, trạng thái, hỗ trợ hoặc cộng đồng.",
+    body: "Hãy bắt đầu từ /start, chọn mục tiêu đọc rõ ràng, rồi kiểm tra ranh giới trước khi kỳ vọng phát hành, tài khoản hoặc backend thật.",
     publishedAt: "2026-09-05T14:10:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -1232,26 +1232,34 @@ export const guideDetailSteps: GuideDetailStep[] = [
   {
     slug: "start-here-content-hub-guide",
     step: "01",
-    title: "Bắt đầu từ Start hub",
-    action: "Mở /start để chọn đúng nhu cầu: tìm hiểu game, kiểm tra download, xem roadmap hay đọc guide.",
+    title: "Bắt đầu từ trang Bắt đầu",
+    action: "Mở /start để chọn đúng nhu cầu: tìm hiểu game, kiểm tra tải game, xem lộ trình hoặc đọc hướng dẫn.",
     expectedResult: "Người chơi có đường đọc ngắn và không phải tự ghép thông tin từ nhiều trang rời rạc.",
-    blockedScope: "No personalized account route, no backend recommendation, no CMS navigation."
+    blockedScope: "Chưa có route tài khoản cá nhân, gợi ý từ máy chủ hoặc điều hướng CMS."
   },
   {
     slug: "start-here-content-hub-guide",
     step: "02",
-    title: "Đi theo route group phù hợp",
-    action: "Nếu muốn tải game, đi Download/Download trust; nếu muốn hiểu game, đi Thế giới/Beginner guide; nếu muốn theo dõi tiến độ, đi Roadmap/Status.",
+    title: "Đi theo nhóm trang phù hợp",
+    action: "Nếu muốn tải game, đọc Tải game/Tin cậy tải game; nếu muốn hiểu game, đọc Thế giới/Guide nhập môn; nếu muốn theo dõi tiến độ, đọc Lộ trình/Trạng thái.",
     expectedResult: "Người chơi hiểu mỗi trang giải quyết một nhu cầu rõ ràng thay vì bị lẫn giữa marketing, status và tooling.",
-    blockedScope: "No public download artifact, no production auth, no live support ticket."
+    blockedScope: "Chưa có gói tải công khai, xác thực production hoặc ticket hỗ trợ live."
   },
   {
     slug: "start-here-content-hub-guide",
     step: "03",
-    title: "Kiểm tra non-claim trước khi kỳ vọng release",
-    action: "Đọc các badge và non-claim trong từng hub để biết phần nào là static public content, phần nào blocked bởi backend/release artifact.",
-    expectedResult: "Người chơi biết website đang phát triển thật nhưng chưa hứa production services.",
-    blockedScope: "No DB persistence, no real portal integration, no live community backend."
+    title: "Kiểm tra ranh giới trước kỳ vọng phát hành",
+    action: "Đọc badge và ranh giới trong từng hub để biết phần nào là nội dung công khai tĩnh, phần nào còn bị khóa bởi backend hoặc gói phát hành.",
+    expectedResult: "Người chơi biết website đang phát triển thật nhưng chưa hứa dịch vụ production.",
+    blockedScope: "Chưa có lưu DB, tích hợp portal thật hoặc community backend live."
+  },
+  {
+    slug: "start-here-content-hub-guide",
+    step: "04",
+    title: "Đi tiếp bằng đường dẫn an toàn",
+    action: "Sau khi chọn hướng đọc, đi tới Trạng thái chơi, Tin cậy tải game hoặc FAQ hỗ trợ để kiểm chứng kỳ vọng trước khi chờ test.",
+    expectedResult: "Người chơi biết bước đọc kế tiếp mà không bị dẫn tới nút tải, đăng nhập hoặc lời hứa release giả.",
+    blockedScope: "Chưa có nút tải thật, đăng nhập production, quyền tải hoặc lịch test được duyệt."
   },
   {
     slug: "community-roadmap-onboarding-guide",
