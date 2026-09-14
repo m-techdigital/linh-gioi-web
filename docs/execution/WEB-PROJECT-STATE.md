@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-COMMUNITY-REAL-PLAZA-GALLERY-v1.91 WEB_CLOSED.
+
+Current decision: v1.91 FE public community real plaza screenshot gallery slice closed; continue FE/browser UI work next and keep using real LinhGioiOnline images where useful. Entire program is NOT production-complete.
+
+- v1.91 copies two lightweight Linh Thanh plaza PNG screenshots from the sibling LinhGioiOnline repo into `apps/web/public/game-art/community`.
+- `/community` now presents those screenshots as static reference art with accessible names, compact captions, desktop 2-column layout and mobile 1-column layout.
+- v1.91 evidence: RED browser/e2e reproduced missing real community plaza gallery; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow/column-layout PASS; visual metric review completed with pageOverflow 0.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.92.
+
 Current phase: WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90 WEB_CLOSED.
 
 Current decision: v1.90 FE public start real onboarding screenshot gallery slice closed; continue FE/browser UI work next and keep using real LinhGioiOnline images where useful. Entire program is NOT production-complete.

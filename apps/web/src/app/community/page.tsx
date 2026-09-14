@@ -14,6 +14,22 @@ import { AccessibilityReadabilityCta } from "../../components/PublicAccessibilit
 
 export const metadata = { title: "Cộng đồng" };
 
+
+const communityPlazaScreenshots = [
+  {
+    src: "/game-art/community/linh-thanh-plaza-npc-preview.png",
+    alt: "Linh Thanh plaza NPC preview screenshot",
+    title: "NPC và bảng hướng dẫn ở Linh Thành",
+    caption: "Ảnh runtime từ LinhGioiOnline để gợi cảm giác plaza cộng đồng; không claim chat, forum, guild hoặc ticket backend."
+  },
+  {
+    src: "/game-art/community/linh-thanh-plaza-target-selector.png",
+    alt: "Linh Thanh plaza target selector screenshot",
+    title: "Target selector trong khu quảng trường",
+    caption: "Khung hình minh họa cách người chơi đọc NPC/local interaction; community flow trên web vẫn là static guidance."
+  }
+];
+
 export default function CommunityPage() {
   return (
     <WebAppShell>
@@ -42,6 +58,24 @@ export default function CommunityPage() {
             <p>Hiện là static guidance. Real feedback/ticket flow cần accepted API/RBAC/audit contract.</p>
           </GameCard>
         </Grid>
+
+        <section className="lgo-community-real-plaza-panel lgo-panel" aria-label="Linh Thanh community plaza real screenshots">
+          <SectionHeading eyebrow="Real plaza screenshots" title="Ảnh thật từ Linh Thành community plaza">
+            Hai khung hình thật từ LinhGioiOnline giúp route cộng đồng có chất liệu game rõ hơn, nhưng chưa mở chat, forum, guild, friend list, ticket backend hoặc moderation backend.
+          </SectionHeading>
+          <div className="lgo-community-real-plaza-grid">
+            {communityPlazaScreenshots.map((screenshot) => (
+              <figure key={screenshot.src} className="lgo-community-real-plaza-card">
+                <img src={screenshot.src} alt={screenshot.alt} loading="lazy" />
+                <figcaption>
+                  <strong>{screenshot.title}</strong>
+                  <span>{screenshot.caption}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+
 
         <CommunityReadinessDepth />
 

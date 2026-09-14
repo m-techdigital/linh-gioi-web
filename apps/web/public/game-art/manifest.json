@@ -1,5 +1,5 @@
 {
-  "version": "v1.90",
+  "version": "v1.91",
   "policy": "web editorial derivatives from audited project-source art; labels remain non-final/non-gameplay where applicable",
   "assets": [
     {
@@ -64,6 +64,28 @@
       "derivativeSha256": "42f3a914a7adc4ade12fa519ccd4059c69c182ebe54da232b6b5c26c66d96c13",
       "upstreamStatus": "LOCAL_RUNTIME_SCREENSHOT_REFERENCE",
       "claim": "STATIC_ONBOARDING_SCREENSHOT_REFERENCE"
+    },
+    {
+      "id": "linh-thanh-community-plaza-npc-preview",
+      "webPath": "game-art/community/linh-thanh-plaza-npc-preview.png",
+      "width": 640,
+      "height": 480,
+      "sourcePath": "/Users/minhdc/Projects/LinhGioiOnline/build/2d-onboarding-visual.previous-copy/png-review/13-plaza-npc-preview.png",
+      "sourceSha256": "597320c25ab6c3030d5e5f623fe5292b4e5c63c5ed603e7e403d5d9232e1d605",
+      "derivativeSha256": "597320c25ab6c3030d5e5f623fe5292b4e5c63c5ed603e7e403d5d9232e1d605",
+      "upstreamStatus": "LOCAL_RUNTIME_SCREENSHOT_REFERENCE",
+      "claim": "STATIC_COMMUNITY_SCREENSHOT_REFERENCE"
+    },
+    {
+      "id": "linh-thanh-community-plaza-target-selector",
+      "webPath": "game-art/community/linh-thanh-plaza-target-selector.png",
+      "width": 640,
+      "height": 480,
+      "sourcePath": "/Users/minhdc/Projects/LinhGioiOnline/build/2d-onboarding-visual.previous-copy/png-review/12-plaza-target-selector.png",
+      "sourceSha256": "3f0d367fdb58076fa0792381f1aa4a79108916e58aa8abe401866fa60acd95ff",
+      "derivativeSha256": "3f0d367fdb58076fa0792381f1aa4a79108916e58aa8abe401866fa60acd95ff",
+      "upstreamStatus": "LOCAL_RUNTIME_SCREENSHOT_REFERENCE",
+      "claim": "STATIC_COMMUNITY_SCREENSHOT_REFERENCE"
     }
   ]
 }

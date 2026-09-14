@@ -63,7 +63,7 @@ def check_tests_and_docs() -> None:
         require_text(rel, ["WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90", "WEB_CLOSED", "browser/e2e", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90 WEB_CLOSED", "WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-PUBLIC-START-REAL-ONBOARDING-GALLERY-v1.90 | WEB-FE | WEB_CLOSED |"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.91", "browser/e2e"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "browser/e2e"])
 def main() -> int:
     check_assets(); check_page_and_css(); check_tests_and_docs()
     if ERRORS:
