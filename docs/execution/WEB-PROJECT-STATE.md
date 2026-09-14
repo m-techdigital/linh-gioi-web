@@ -1,3 +1,18 @@
+Current phase: WEB-FE-GUIDES-ACCESSIBILITY-READABILITY-REAL-UI-LAYOUT-v1.167 WEB_CLOSED.
+
+Current decision: v1.167 closed the active `/guides/accessibility-readability-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Accessibility Readability guide, quét tiêu đề → trang Bắt đầu → đọc mobile theo thẻ → đọc ranh giới expectation flow, Vietnamese public copy and shared Base First guide-flow layout. Entire program is NOT production-complete.
+
+- v1.167 did not create a design batch because the existing guide-detail direction was sufficient for comparison after minimal current-page scenario correction in the rendered page.
+- v1.167 browser baseline showed generic guide badge, mixed English Start hub/headings/mobile cards/safety-download boundaries/formal audit copy, missing compact guide-flow classes, no guide detail board, desktop h1 51.2px, mobile hero 723.14px and page 6507px.
+- v1.167 replaced the mixed-English first-flow with Vietnamese tiêu đề → trang Bắt đầu → thẻ mobile → ranh giới expectations and four compact readability steps.
+- v1.167 reused the shared compact guide-flow base in `packages/ui/src/service-layout.css` and added only the current page accessibility-readability visual theme there, while keeping current page CSS out of `apps/web/src/app/globals.css`.
+- v1.167 final browser/e2e metrics: desktop hero bottom 424.38px, detail top 436.84px, world CTA top 861.22px, route CTA top 1013.27px, action band top 2160.52px, scrollHeight 2877px, h1 42.88px, 4 desktop columns, overflow 0; mobile hero bottom 568.38px, detail top 578.28px, first step top 740.72px, world CTA top 1274.55px, action band top 3392.91px, scrollHeight 4422px, h1 27.52px, overflow 0.
+- v1.167 evidence: browser/e2e desktop/mobile v1.167; source validator; Web/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/guides-accessibility-readability-desktop-v1167.png` and `/tmp/guides-accessibility-readability-mobile-v1167.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.168. Select `/guides/performance-copy-budget-guide` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-GUIDES-PLAYER-SAFETY-SUPPORT-REAL-UI-LAYOUT-v1.166 WEB_CLOSED.
 
 Current decision: v1.166 closed the active `/guides/player-safety-support-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Player Safety Support guide, FAQ hỗ trợ → báo lỗi an toàn → cộng đồng đúng phạm vi → kiểm trạng thái flow, Vietnamese public copy and shared Base First guide-flow layout. Entire program is NOT production-complete.

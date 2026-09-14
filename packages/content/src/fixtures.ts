@@ -706,8 +706,8 @@ export const contentEntries: ContentEntry[] = [
     slug: "content-ia-hub-polish-started",
     category: "news",
     title: "Content hub và lộ trình đọc được làm rõ",
-    summary: "WEB v1.12 gom các trang quan trọng thành Start hub để người chơi mới biết đọc gì trước, đi đâu tiếp và không hiểu nhầm trạng thái release.",
-    body: "Bản cập nhật này tập trung vào information architecture của public website: Start hub, nhóm route theo nhu cầu, câu hỏi người chơi mới và đường dẫn tới guide/news/download/status/community. Runtime/browser/e2e vẫn chỉ là guardrail, không phải nội dung chính.",
+    summary: "WEB v1.12 gom các trang quan trọng thành trang Bắt đầu để người chơi mới biết đọc gì trước, đi đâu tiếp và không hiểu nhầm trạng thái release.",
+    body: "Bản cập nhật này tập trung vào information architecture của public website: trang Bắt đầu, nhóm route theo nhu cầu, câu hỏi người chơi mới và đường dẫn tới guide/news/download/status/community. Runtime/browser/e2e vẫn chỉ là guardrail, không phải nội dung chính.",
     publishedAt: "2026-09-05T14:00:00.000Z",
     status: "published",
     featured: true,
@@ -782,9 +782,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "accessibility-readability-guide",
     category: "guides",
-    title: "Cách đọc web Linh Giới Online dễ hơn",
-    summary: "Guide giúp người chơi mới dùng headings, Start hub, skip link, mobile cards và safety/download boundaries để đọc nhanh hơn.",
-    body: "Bắt đầu từ /start hoặc /accessibility, dùng headings để scan từng route, ưu tiên CTA đầu trang, đọc boundary trước khi kỳ vọng download, account, combat hoặc live support. Đây là accessibility/readability guidance, không phải formal audit certification.",
+    title: "Đọc web Linh Giới dễ hơn",
+    summary: "Guide giúp người chơi dùng tiêu đề, trang Bắt đầu, skip link, thẻ mobile và ranh giới an toàn/tải game để đọc nhanh hơn.",
+    body: "Bắt đầu từ trang Bắt đầu hoặc trang Dễ đọc, quét tiêu đề từng route, ưu tiên CTA đầu trang và đọc ranh giới trước khi kỳ vọng tải game, tài khoản, chiến đấu hoặc hỗ trợ live.",
     publishedAt: "2026-09-05T21:05:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -983,7 +983,7 @@ export const contentDetailSections: ContentDetailSection[] = [
   },
   {
     slug: "content-ia-hub-polish-started",
-    heading: "Start hub biến website thành hành trình đọc có thứ tự",
+    heading: "trang Bắt đầu biến website thành hành trình đọc có thứ tự",
     body: "WEB v1.12 thêm một hub trung tâm để người chơi mới chọn mục tiêu: hiểu game, kiểm tra tải game, xem roadmap, đọc guide hoặc biết cách góp ý.",
     playerImpact: "Người chơi không phải đoán nên đọc News, Guides, Download hay Status trước; mỗi nhóm route có mục đích và boundary rõ.",
     nonClaim: "No CMS, no live personalization, no account-aware recommendation backend."
@@ -1260,6 +1260,39 @@ export const guideDetailSteps: GuideDetailStep[] = [
     action: "Quay lại Trạng thái, Tin cậy tải game và Hỗ trợ để biết gate nào còn tạm khóa trước khi chờ phản hồi chính thức.",
     expectedResult: "Người chơi hiểu hỗ trợ hiện là hướng dẫn public an toàn, không phải hệ thống ticket vận hành.",
     blockedScope: "Chưa có live support ticket, moderation dashboard, quyền tải, xác thực production hoặc backend contract accepted."
+  },
+
+  {
+    slug: "accessibility-readability-guide",
+    step: "01",
+    title: "Quét tiêu đề trước",
+    action: "Đọc h1, h2 và các nhãn trạng thái để biết trang đang nói về tải game, trạng thái, hướng dẫn hay hỗ trợ.",
+    expectedResult: "Người chơi chọn đúng nhánh đọc trước khi bấm CTA hoặc kỳ vọng hệ thống live.",
+    blockedScope: "Chưa có audit pháp lý, chứng nhận WCAG hoặc personalization theo tài khoản."
+  },
+  {
+    slug: "accessibility-readability-guide",
+    step: "02",
+    title: "Dùng trang Bắt đầu",
+    action: "Nếu chưa biết đi đâu, quay lại trang Bắt đầu để chọn nhóm đọc theo tải game, trạng thái, vòng lặp thế giới hoặc hỗ trợ.",
+    expectedResult: "Người chơi không phải đọc toàn bộ site theo thứ tự tuyến tính hoặc đoán đường dẫn.",
+    blockedScope: "Chưa có recommendation backend, CMS điều hướng cá nhân hóa hoặc account route production."
+  },
+  {
+    slug: "accessibility-readability-guide",
+    step: "03",
+    title: "Đọc trên mobile theo thẻ",
+    action: "Ưu tiên thẻ đầu trang, CTA chính và các board compact; bỏ qua phần chưa liên quan sau khi đã hiểu ranh giới.",
+    expectedResult: "Mobile không bị cảm giác dài, rối hoặc phải cuộn quá sâu trước khi thấy bước tiếp theo.",
+    blockedScope: "Chưa có app native, tùy biến font theo tài khoản hoặc preference sync backend."
+  },
+  {
+    slug: "accessibility-readability-guide",
+    step: "04",
+    title: "Đọc ranh giới trước kỳ vọng live",
+    action: "Kiểm tra ranh giới về tải game, tài khoản, chiến đấu, hỗ trợ và cộng đồng trước khi hiểu một CTA là hệ thống vận hành.",
+    expectedResult: "Người chơi biết đâu là hướng dẫn public tĩnh và đâu là gate chờ backend/game owner duyệt.",
+    blockedScope: "Chưa có public build, production auth, combat live, ticket live hoặc backend contract accepted."
   },
 
   {
@@ -1755,7 +1788,7 @@ export const publicContentHubs: PublicContentHub[] = [
     title: "Bắt đầu trong 1 phút",
     audience: "Người chơi mới chưa biết Linh Giới Online đang ở trạng thái nào",
     summary: "Đọc nhanh game là gì, có thể tải chưa, và nên xem trang nào tiếp theo trước khi kỳ vọng tài khoản hoặc build thật.",
-    primaryRoute: { label: "Start hub", href: "/start", reason: "Một điểm vào gom các route quan trọng theo nhu cầu người đọc." },
+    primaryRoute: { label: "trang Bắt đầu", href: "/start", reason: "Một điểm vào gom các route quan trọng theo nhu cầu người đọc." },
     secondaryRoutes: [
       { label: "Thế giới", href: "/game", reason: "Hiểu Spirit Gate, Gate Keeper và Training Stone." },
       { label: "Download trust", href: "/download/trust", reason: "Biết vì sao chưa có nút tải và cần checksum/provenance." },
@@ -1816,7 +1849,7 @@ export const playerEntryQuestions: PlayerEntryQuestion[] = [
   {
     question: "Tôi mới nghe tới game, nên đọc gì trước?",
     recommendedRoute: "/start",
-    answer: "Bắt đầu ở Start hub để chọn đúng nhánh: hiểu game, kiểm tra download, xem roadmap hoặc đọc support/community.",
+    answer: "Bắt đầu ở trang Bắt đầu để chọn đúng nhánh: hiểu game, kiểm tra download, xem roadmap hoặc đọc support/community.",
     avoidExpectation: "Không cần tìm portal/account hoặc download link khi release artifact chưa được duyệt."
   },
   {
@@ -1840,7 +1873,7 @@ export const playerEntryQuestions: PlayerEntryQuestion[] = [
   {
     question: "Tôi đọc trên mobile thấy nhiều route quá thì sao?",
     recommendedRoute: "/accessibility",
-    answer: "Đọc accessibility/readability hub để biết cách dùng Start hub, heading, scan aid, CTA đầu trang và boundary copy.",
+    answer: "Đọc accessibility/readability hub để biết cách dùng trang Bắt đầu, heading, scan aid, CTA đầu trang và boundary copy.",
     avoidExpectation: "Không claim formal WCAG audit, legal compliance certification hoặc personal accessibility settings backend."
   }
 ];
@@ -1948,7 +1981,7 @@ export const guideWorldNavigationLinks: GuideWorldNavigationLink[] = [
   {
     from: "/start",
     to: "/game/loop",
-    reason: "Start hub đưa người chơi mới tới loop explanation trước khi tìm download hoặc account.",
+    reason: "trang Bắt đầu đưa người chơi mới tới loop explanation trước khi tìm download hoặc account.",
     safeExpectation: "Read-first onboarding; no account-aware personalization."
   },
   {
@@ -2294,7 +2327,7 @@ export const mobileDensityBudgets: MobileDensityBudget[] = [
     failureToAvoid: "Không biến homepage thành changelog kỹ thuật dài trên mobile."
   },
   {
-    surface: "Start hub",
+    surface: "trang Bắt đầu",
     densityTarget: "Câu hỏi người chơi mới phải dẫn tới route đúng trong một lượt đọc.",
     treatment: "Use entry questions, route groups and CTA bands instead of long prose blocks.",
     failureToAvoid: "Không bắt người chơi nhớ toàn bộ roadmap trước khi biết nên mở trang nào."
@@ -2314,7 +2347,7 @@ export const routeContinuityBridges: RouteContinuityBridge[] = [
     fromRoute: "/start",
     toRoute: "/game/loop",
     playerQuestion: "Game này chơi như thế nào trước khi có bản tải public?",
-    bridgeCopy: "Đi từ Start hub sang World Loop để hiểu Spirit Gate, Gate Keeper và Training Stone như một hành trình đọc/game expectation an toàn.",
+    bridgeCopy: "Đi từ trang Bắt đầu sang World Loop để hiểu Spirit Gate, Gate Keeper và Training Stone như một hành trình đọc/game expectation an toàn.",
     ctaLabel: "Hiểu world loop",
     conversionBoundary: "No combat release, no live world server, no account-aware progression."
   },
@@ -2400,7 +2433,7 @@ export const journeyFrictionChecks: JourneyFrictionCheck[] = [
   {
     route: "/start",
     possibleConfusion: "Người chơi thấy quá nhiều route và không biết bắt đầu từ game, download hay support.",
-    clarification: "Start hub ưu tiên câu hỏi người chơi, sau đó mới tới route groups và trust/status surfaces.",
+    clarification: "trang Bắt đầu ưu tiên câu hỏi người chơi, sau đó mới tới route groups và trust/status surfaces.",
     nextBestRoute: "/journey",
     nonClaim: "No personalized recommendation backend."
   },
