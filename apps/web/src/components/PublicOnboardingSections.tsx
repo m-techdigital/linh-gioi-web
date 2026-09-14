@@ -7,8 +7,8 @@ import {
 import { GameCard, Grid, LinkButton, SectionHeading, StatusBadge } from "@lgo-web/ui";
 
 function toneForStatus(status: string) {
-  if (status === "ready" || status === "public" || status === "static-guidance") return "jade" as const;
-  if (status === "planned" || status === "internal") return "gold" as const;
+  if (status === "ready" || status === "public" || status === "công khai" || status === "static-guidance") return "jade" as const;
+  if (status === "planned" || status === "internal" || status === "nội bộ") return "gold" as const;
   return "shadow" as const;
 }
 
@@ -80,7 +80,7 @@ export function StagedReleaseMessagingBoard() {
   return (
     <section className="lgo-panel lgo-staged-release" aria-labelledby="staged-release-messaging-heading">
       <SectionHeading eyebrow="Staged release messaging" title="Thông điệp public phải đi theo từng stage">
-        Không nhảy từ web content-ready sang release-ready. Mỗi stage giữ public copy, owner checklist và non-claim riêng.
+        Không nhảy từ web content-ready sang sẵn sàng phát hành. Mỗi stage giữ public copy, owner checklist và non-claim riêng.
       </SectionHeading>
       <Grid id="staged-release-messaging-heading">
         {stagedReleaseMessages.map((message) => (

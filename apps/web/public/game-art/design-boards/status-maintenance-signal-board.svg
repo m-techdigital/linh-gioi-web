@@ -1,45 +1,67 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
-  <title id="title">Mobile HUD Wireframe</title>
-  <desc id="desc">Thumb-first combat HUD planning reference</desc>
+  <title id="title">Board tín hiệu trạng thái công khai</title>
+  <desc id="desc">Bảng tham chiếu tiếng Việt cho trang trạng thái tĩnh: công khai, nội bộ, tạm khóa và các non-claim về CMS/backend/monitoring.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#121829"/>
-      <stop offset="55%" stop-color="#18263b"/>
+      <stop offset="0%" stop-color="#101827"/>
+      <stop offset="52%" stop-color="#14263c"/>
       <stop offset="100%" stop-color="#10251f"/>
     </linearGradient>
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity="0.28"/>
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000000" flood-opacity="0.32"/>
     </filter>
     <style>
-      .title { font: 800 44px Inter, Arial, sans-serif; fill: #f7fafc; }
-      .subtitle { font: 500 20px Inter, Arial, sans-serif; fill: #b8c7d9; }
-      .label { font: 700 20px Inter, Arial, sans-serif; fill: #f7fafc; }
-      .small { font: 500 15px Inter, Arial, sans-serif; fill: #d8e2ed; }
+      .title { font: 800 46px Georgia, 'Times New Roman', serif; fill: #fff4d4; letter-spacing: .4px; }
+      .subtitle { font: 500 20px Inter, Arial, sans-serif; fill: #bfd1e2; }
+      .label { font: 750 22px Inter, Arial, sans-serif; fill: #f7fafc; }
+      .small { font: 500 15px Inter, Arial, sans-serif; fill: #dce7f2; }
       .tiny { font: 500 13px Inter, Arial, sans-serif; fill: #aebed0; }
       .card { fill: #20324d; stroke: #4fd1c5; stroke-width: 2; rx: 24; filter: url(#shadow); }
       .card2 { fill: #26344f; stroke: #f6ad55; stroke-width: 2; rx: 24; filter: url(#shadow); }
-      .card3 { fill: #1f3a32; stroke: #68d391; stroke-width: 2; rx: 24; filter: url(#shadow); }
-      .muted { fill: #1a2539; stroke: #6b7280; stroke-width: 1.5; rx: 18; }
+      .card3 { fill: #2b2736; stroke: #fc8181; stroke-width: 2; rx: 24; filter: url(#shadow); }
+      .muted { fill: #1a2539; stroke: #718096; stroke-width: 1.5; rx: 18; }
       .line { stroke: #94a3b8; stroke-width: 4; stroke-linecap: round; }
-      .dash { stroke: #f6ad55; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 10 10; }
-      .accent { fill: #4fd1c5; }
-      .warn { fill: #f6ad55; }
-      .ok { fill: #68d391; }
+      .green { fill: #35c6a3; }
+      .blue { fill: #63b3ed; }
+      .red { fill: #fc8181; }
+      .gold { fill: #f6ad55; }
     </style>
   </defs>
   <rect width="1440" height="900" fill="url(#bg)"/>
-  <text x="72" y="86" class="title">Mobile HUD Wireframe</text>
-  <text x="72" y="124" class="subtitle">Thumb-first combat HUD planning reference</text>
+  <text x="72" y="86" class="title">Tín hiệu trạng thái công khai</text>
+  <text x="72" y="124" class="subtitle">Fixture tĩnh · không CMS · không backend · không giám sát production</text>
 
-  <rect x="310" y="150" width="820" height="560" rx="38" fill="#0b1220" stroke="#e2e8f0" stroke-width="6"/>
-  <rect x="350" y="190" width="310" height="72" class="muted"/><text x="380" y="235" class="small">Player HP / resource</text>
-  <rect x="780" y="190" width="310" height="72" class="muted"/><text x="810" y="235" class="small">Enemy HP / status</text>
-  <rect x="390" y="300" width="660" height="250" rx="20" fill="#132033" stroke="#4fd1c5" stroke-width="2"/><text x="610" y="430" class="label">Combat View</text>
-  <circle cx="470" cy="620" r="58" class="card"/><text x="444" y="628" class="small">Move</text>
-  <circle cx="930" cy="612" r="52" class="card2"/><text x="905" y="620" class="small">Skill</text>
-  <circle cx="1030" cy="600" r="68" class="card3"/><text x="1000" y="608" class="small">Attack</text>
-  <rect x="610" y="585" width="220" height="64" class="muted"/><text x="644" y="625" class="small">Cooldown bar</text>
-  <rect x="360" y="735" width="720" height="72" class="muted"/><text x="398" y="780" class="small">Rule: wireframe only; production UI must consume design tokens and pass Unity runtime.</text>
+  <rect x="76" y="180" width="380" height="520" class="muted"/>
+  <text x="118" y="232" class="label">Trang trạng thái</text>
+  <text x="118" y="276" class="small">Hiển thị thông tin public hiện tại</text>
+  <text x="118" y="304" class="small">về website, cộng đồng, cửa hàng</text>
+  <text x="118" y="332" class="small">và sự kiện ở mức nội dung tĩnh.</text>
+  <circle cx="176" cy="450" r="34" class="green" opacity=".9"/>
+  <circle cx="266" cy="450" r="34" class="blue" opacity=".9"/>
+  <circle cx="356" cy="450" r="34" class="red" opacity=".9"/>
+  <text x="118" y="570" class="tiny">Không đọc uptime thật. Không có incident backend.</text>
+  <text x="118" y="600" class="tiny">Không kết nối tài khoản hoặc máy chủ game.</text>
 
-  <text x="72" y="854" class="tiny">Linh Giới Online — planning/reference SVG, non-production art, generated for execution governance.</text>
+  <rect x="505" y="180" width="255" height="520" class="card"/>
+  <text x="560" y="236" class="label">Công khai</text>
+  <polygon points="632,312 690,420 632,528 574,420" fill="#35c6a3" opacity=".9"/>
+  <text x="548" y="604" class="small">Nội dung hiển thị</text>
+  <text x="548" y="632" class="small">cho tất cả người dùng.</text>
+
+  <rect x="815" y="180" width="255" height="520" class="card2"/>
+  <text x="879" y="236" class="label">Nội bộ</text>
+  <polygon points="942,312 1000,420 942,528 884,420" fill="#63b3ed" opacity=".9"/>
+  <text x="858" y="604" class="small">Nội dung owner đọc,</text>
+  <text x="858" y="632" class="small">không hiển thị ở page.</text>
+
+  <rect x="1125" y="180" width="238" height="520" class="card3"/>
+  <text x="1182" y="236" class="label">Tạm khóa</text>
+  <polygon points="1244,312 1302,420 1244,528 1186,420" fill="#fc8181" opacity=".9"/>
+  <line x1="1200" y1="360" x2="1288" y2="488" stroke="#111827" stroke-width="12" stroke-linecap="round" opacity=".75"/>
+  <text x="1168" y="604" class="small">Tạm ẩn, chưa đủ bằng chứng</text>
+  <text x="1168" y="632" class="small">hoặc chưa có contract.</text>
+
+  <rect x="92" y="752" width="1256" height="72" rx="22" fill="#0f1a2b" stroke="#d7b36a" stroke-width="1.5" opacity=".92"/>
+  <text x="122" y="796" class="small">Luồng đúng: giải thích bề mặt public → nêu boundary fixture → dẫn về readiness/support. Không claim live server health, production monitoring, CMS, backend, đăng nhập hoặc thanh toán.</text>
+  <text x="72" y="856" class="tiny">Linh Giới Online — board tham chiếu FE cho /status, chỉ dùng demo tĩnh, chưa có monitoring backend.</text>
 </svg>

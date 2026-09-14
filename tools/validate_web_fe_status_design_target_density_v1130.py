@@ -30,13 +30,13 @@ def check_target() -> None:
     if all((ROOT / rel).is_file() for rel in targets) and (ROOT / targets[0]).read_bytes() != (ROOT / targets[1]).read_bytes(): fail("status detailed target public/docs copies differ")
 def check_tests_docs() -> None:
     for rel in ["tests/e2e/fe-status-design-target-density-v1130.spec.ts", "docs/execution/specs/WEB-FE-STATUS-DESIGN-TARGET-DENSITY-v1.130.md", "LGO-WEB-FE-STATUS-DESIGN-TARGET-DENSITY-REPORT-v1.130.md", "HANDOFF-LGO-WEB-FE-STATUS-DESIGN-TARGET-DENSITY-v1.130.md"]: require_file(rel)
-    require_text("tests/e2e/fe-status-design-target-density-v1130.spec.ts", ["status design target density", "Public Status", "status-detailed-design-target-v1130.png", "desktop status board enters first fold", "desktop status explanation follows signal board", "desktop status trust board stays near status proof flow", "status h1 follows target scale"])
+    require_text("tests/e2e/fe-status-design-target-density-v1130.spec.ts", ["status design target density", "Trạng thái công khai", "status-detailed-design-target-v1130.png", "desktop status board enters first fold", "desktop status explanation follows signal board", "desktop status trust board stays near status proof flow", "status h1 follows target scale"])
     require_text("apps/web/src/app/status/page.tsx", ["lgo-statuspage-stack", "lgo-status-design-board", "StatusExplanationDepth", "StatusTrustBoard", "ReleaseReadinessHubCta"])
     page = read("apps/web/src/app/status/page.tsx")
     if page.find("<ReleaseReadinessHubCta />") < page.find("<StatusTrustBoard />"):
         fail("apps/web/src/app/status/page.tsx: ReleaseReadinessHubCta should stay after status proof flow")
-    require_text("apps/web/src/app/globals.css", ["WEB v1.130 status detailed design target density", ".lgo-statuspage-stack", ".lgo-page-header", ".lgo-status-design-board", ".lgo-status-trust"])
-    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_STATUS_TARGET", "Thiết kế chi tiết trạng thái", "status-detailed-design-target-v1130.png", "Public Status", "pathname === \"/status\""])
+    require_text("packages/ui/src/service-layout.css", ["lgo-service-compact-proof-page", "lgo-service-proof-board", "lgo-service-proof-card-grid", "lgo-service-proof-card"])
+    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_STATUS_TARGET", "Thiết kế chi tiết trạng thái", "status-detailed-design-target-v1130.png", "Trạng thái công khai", "pathname === \"/status\""])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Status", "status-detailed-design-target-v1130.png", "WEB-FE-STATUS-DETAILED-DESIGN-TARGET-v1.130.png", "Design Target First"])
     registry = read("docs/design/DESIGN-TARGET-REGISTRY.md")
     for line in registry.splitlines():

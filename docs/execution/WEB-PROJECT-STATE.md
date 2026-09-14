@@ -1,3 +1,16 @@
+Current phase: WEB-FE-STATUS-REAL-UI-LAYOUT-v1.145 WEB_CLOSED.
+
+Current decision: v1.145 closed the active `/status` page slice as a real browser UI/UX Layout task. `/status` now uses a Vietnamese status target, Vietnamese public status signal board, compact shared service/proof layout, and Base First proof cards from `packages/ui/src/service-layout.css`. Entire program is NOT production-complete.
+
+- v1.145 corrected only the current status design target because the existing target was English-heavy and blocked comparison.
+- v1.145 replaced the stale status HUD SVG with a Vietnamese Board tín hiệu trạng thái công khai.
+- v1.145 moved status density away from page-local v1.130 CSS in `apps/web/src/app/globals.css` and into reusable shared service/proof classes.
+- v1.145 updated `/status` first-flow: compact Trạng thái công khai hero → status signal board → public fixture cards → status explainers → trust surfaces.
+- v1.145 evidence: RED browser metrics showed English leaks and stale Maintenance/Status labels; GREEN browser metrics after fix show desktop overflow 0, h1 34.816px, hero bottom 486.797px, board top 482.156px, board bottom 673.906px, fixture top 708.453px, fixture board bottom 835.281px, explainers top 853.828px, trust top 1126.859px; mobile overflow 0 and h1 46.8px.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.146. Select `/support` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-TESTER-PACK-REAL-UI-LAYOUT-v1.144 WEB_CLOSED.
 
 Current decision: v1.144 closed the active `/release/tester-pack` page slice as a real browser UI/UX Layout task. `/release/tester-pack` now uses a Vietnamese tester-pack target, Vietnamese closed tester board, compact shared service/proof layout, and Base First proof list/card density from `packages/ui/src/service-layout.css`. Entire program is NOT production-complete.

@@ -12,6 +12,15 @@ function toneForTrust(value: string) {
   return "shadow" as const;
 }
 
+function vietnameseTrustLabel(value: string) {
+  if (value === "public") return "công khai";
+  if (value === "internal") return "nội bộ";
+  if (value === "blocked") return "tạm khóa";
+  if (value === "ready") return "sẵn sàng";
+  if (value === "planned") return "đã lên kế hoạch";
+  return value;
+}
+
 export function DownloadTrustGateBoard() {
   return (
     <section className="lgo-panel lgo-trust-panel" aria-labelledby="download-trust-gates-heading">
@@ -72,14 +81,14 @@ export function ReleaseEvidenceChecklist() {
 
 export function StatusTrustBoard() {
   return (
-    <section className="lgo-panel lgo-status-trust" aria-labelledby="status-trust-heading">
-      <SectionHeading eyebrow="WEB v1.10 tin cậy trạng thái" title="Mỗi bề mặt trạng thái có nguồn sự thật và claim bị cấm riêng">
-        Status không được biến guardrail kỹ thuật thành readiness phát hành. Các bề mặt public, nội bộ và bị chặn phải đọc được ngay.
+    <section className="lgo-panel lgo-service-proof-card-grid lgo-status-trust" aria-labelledby="status-trust-heading">
+      <SectionHeading eyebrow="Tin cậy trạng thái" title="Mỗi bề mặt có nguồn sự thật và claim bị cấm riêng">
+        Trạng thái không được biến guardrail kỹ thuật thành readiness phát hành. Các bề mặt công khai, nội bộ và tạm khóa phải đọc được ngay.
       </SectionHeading>
       <Grid id="status-trust-heading">
         {statusTrustSurfaces.map((surface) => (
-          <GameCard key={surface.surface} className="lgo-status-trust-card">
-            <StatusBadge tone={toneForTrust(surface.visibility)}>{surface.visibility}</StatusBadge>
+          <GameCard key={surface.surface} className="lgo-service-proof-card lgo-status-trust-card">
+            <StatusBadge tone={toneForTrust(surface.visibility)}>{vietnameseTrustLabel(surface.visibility)}</StatusBadge>
             <h3>{surface.surface}</h3>
             <p><strong>Nguồn sự thật:</strong> {surface.sourceOfTruth}</p>
             <p>{surface.currentTruth}</p>

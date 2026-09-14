@@ -22,9 +22,9 @@ async function collectStatusMetrics(page): Promise<StatusMetrics> {
       const r = node.getBoundingClientRect();
       return { top: r.top, bottom: r.bottom, height: r.height };
     };
-    const header = rect(".lgo-statuspage-stack .lgo-page-header");
+    const header = rect(".lgo-statuspage-stack .lgo-status-hero-card");
     const board = rect(".lgo-statuspage-stack .lgo-status-design-board");
-    const explanation = rect(".lgo-statuspage-stack .lgo-status-explanation, .lgo-statuspage-stack .lgo-detail-section");
+    const explanation = rect(".lgo-statuspage-stack .lgo-status-explainers");
     const trust = rect(".lgo-statuspage-stack .lgo-status-trust");
     const h1 = document.querySelector<HTMLElement>("main h1");
     const designTarget = document.querySelector<HTMLElement>(".lgo-design-target-reference");
@@ -44,22 +44,22 @@ async function collectStatusMetrics(page): Promise<StatusMetrics> {
 }
 
 test.describe("status design target density", () => {
-  test("/status attaches Public Status target and keeps status trust signals readable", async ({ page, isMobile }) => {
+  test("/status attaches Trạng thái công khai target and keeps status trust signals readable", async ({ page, isMobile }) => {
     await page.goto(`${web}/status`);
-    await expect(page.getByRole("region", { name: /Design target reference.*Public Status/i })).toBeVisible();
+    await expect(page.getByText("Thiết kế chi tiết trạng thái")).toBeVisible();
     const metrics = await collectStatusMetrics(page);
-    expect(metrics.designTargetScope, "Public Status target scope").toContain("Public Status");
+    expect(metrics.designTargetScope, "Trạng thái công khai target scope").toContain("Trạng thái công khai");
     expect(metrics.designTargetHref, "status design target href").toContain("status-detailed-design-target-v1130.png");
     expect(metrics.overflow, "status horizontal overflow").toBeLessThanOrEqual(0);
     expect(metrics.h1Size, "status h1 follows target scale").toBeLessThanOrEqual(isMobile ? 54 : 60);
     if (!isMobile) {
-      expect(metrics.headerBottom, "desktop status header leaves space for signal board").toBeLessThanOrEqual(500);
-      expect(metrics.boardTop, "desktop status board enters first fold").toBeLessThanOrEqual(760);
-      expect(metrics.boardBottom, "desktop status board remains compact").toBeLessThanOrEqual(1050);
-      expect(metrics.explanationTop, "desktop status explanation follows signal board").toBeLessThanOrEqual(1280);
-      expect(metrics.trustTop, "desktop status trust board stays near status proof flow").toBeLessThanOrEqual(1850);
+      expect(metrics.headerBottom, "desktop status hero leaves space for signal board").toBeLessThanOrEqual(500);
+      expect(metrics.boardTop, "desktop status board enters first fold").toBeLessThanOrEqual(520);
+      expect(metrics.boardBottom, "desktop status board remains compact").toBeLessThanOrEqual(720);
+      expect(metrics.explanationTop, "desktop status explanation follows signal board").toBeLessThanOrEqual(900);
+      expect(metrics.trustTop, "desktop status trust board stays near status proof flow").toBeLessThanOrEqual(1220);
     } else {
-      expect(metrics.headerBottom, "mobile status header does not force extreme blank fold").toBeLessThanOrEqual(1450);
+      expect(metrics.headerBottom, "mobile status hero does not force extreme blank fold").toBeLessThanOrEqual(900);
     }
   });
 });

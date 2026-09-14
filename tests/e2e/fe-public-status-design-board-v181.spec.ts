@@ -22,7 +22,7 @@ async function collectStatusBoardMetrics(page: Page): Promise<StatusBoardMetrics
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const image = document.querySelector<HTMLImageElement>('img[alt="Status maintenance signal board"]');
+    const image = document.querySelector<HTMLImageElement>('img[alt="Board tín hiệu trạng thái công khai"]');
     const caption = image?.closest("figure")?.querySelector("figcaption");
     return {
       pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -41,8 +41,8 @@ async function collectStatusBoardMetrics(page: Page): Promise<StatusBoardMetrics
 test.describe("public status design board", () => {
   test("/status renders the maintenance signal visual without mobile overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/status`);
-    await expect(page.getByRole("heading", { name: "Trạng thái / Maintenance" })).toBeVisible();
-    await expect(page.getByRole("img", { name: "Status maintenance signal board" })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1, name: "Trạng thái công khai", exact: true })).toBeVisible();
+    await expect(page.getByRole("img", { name: "Board tín hiệu trạng thái công khai" })).toBeVisible();
 
     const metrics = await collectStatusBoardMetrics(page);
     expect(metrics.board, "status board metrics").not.toBeNull();

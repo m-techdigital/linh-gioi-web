@@ -201,7 +201,7 @@ export const publicRoadmapItems: PublicRoadmapItem[] = [
     version: "v1.17",
     title: "Route continuity / conversion-safe polish",
     status: "current",
-    summary: "Connects Start, Game Loop, Download Trust, Status, Support Safety and Performance through safe next-step CTAs without fake conversion or release-ready claims."
+    summary: "Connects Start, Game Loop, Download Trust, Status, Support Safety and Performance through safe next-step CTAs without fake conversion or sẵn sàng phát hành claims."
   },
   {
     version: "v1.18",
@@ -624,8 +624,8 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "spirit-gate-maintenance-placeholder",
     category: "maintenance",
-    title: "Maintenance status is local fixture only",
-    summary: "Status and maintenance pages are prepared for future operations content but are not wired to live infrastructure.",
+    title: "Trạng thái bảo trì chỉ là fixture local",
+    summary: "Trang trạng thái và bảo trì chuẩn bị nội dung vận hành tương lai nhưng chưa nối hạ tầng live.",
     body: "No production deployment or ops mutation is claimed by this fixture.",
     publishedAt: "2026-09-05T03:00:00.000Z",
     status: "published",
@@ -805,7 +805,7 @@ export const contentEntries: ContentEntry[] = [
     category: "guides",
     title: "Performance copy budget guide",
     summary: "Guide giúp người chơi và reviewer hiểu vì sao web dùng copy ngắn, CSS-only visual, static routes và non-claim gần CTA nhạy cảm.",
-    body: "Đọc /performance để hiểu cách public web giữ route nhẹ, card dễ scan, visual không phụ thuộc ảnh nặng và trạng thái tải game không bị trình bày như release-ready. Đây là guidance/source discipline, không phải Lighthouse hoặc Core Web Vitals certification.",
+    body: "Đọc /performance để hiểu cách public web giữ route nhẹ, card dễ scan, visual không phụ thuộc ảnh nặng và trạng thái tải game không bị trình bày như sẵn sàng phát hành. Đây là guidance/source discipline, không phải Lighthouse hoặc Core Web Vitals certification.",
     publishedAt: "2026-09-05T21:45:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
@@ -965,7 +965,7 @@ export const contentDetailSections: ContentDetailSection[] = [
     heading: "Download, Status và Support phải cùng nói một sự thật",
     body: "Release readiness làm rõ mỗi surface cần nói gì, link tới đâu và mâu thuẫn nào phải tránh trước khi mở tester expectation.",
     playerImpact: "Người chơi hiểu blocker tại đúng route thay vì suy diễn từ CTA hoặc build guardrail.",
-    nonClaim: "No fake ticket, no placeholder checksum, no release-ready claim."
+    nonClaim: "No fake ticket, no placeholder checksum, no sẵn sàng phát hành claim."
   },
   {
     slug: "route-continuity-conversion-polish-started",
@@ -1137,7 +1137,7 @@ export const guideDetailSteps: GuideDetailStep[] = [
     step: "01",
     title: "Đọc stage hiện tại trước",
     action: "Mở /release để xem content-ready, closed-test preparation, limited closed test và public download candidate khác nhau thế nào.",
-    expectedResult: "Người chơi hiểu public web đã rõ hơn nhưng chưa phải release-ready.",
+    expectedResult: "Người chơi hiểu public web đã rõ hơn nhưng chưa phải sẵn sàng phát hành.",
     blockedScope: "No public build, no open beta, no production launch."
   },
   {
@@ -1415,18 +1415,18 @@ export const releaseEvidenceRequirements: ReleaseEvidenceRequirement[] = [
 
 export const statusTrustSurfaces: StatusTrustSurface[] = [
   {
-    surface: "Public website",
+    surface: "Website công khai",
     visibility: "public",
-    sourceOfTruth: "File-backed typed public content in the web repo",
-    currentTruth: "Pages can describe game direction, roadmap, guide and download blockers.",
-    forbiddenClaim: "No production deployment or live CMS claim."
+    sourceOfTruth: "Nội dung công khai typed/file-backed trong web repo",
+    currentTruth: "Các trang có thể mô tả hướng game, roadmap, hướng dẫn và blocker tải game.",
+    forbiddenClaim: "Không claim deployment production hoặc CMS live."
   },
   {
     surface: "Gói tải game",
     visibility: "blocked",
     sourceOfTruth: "Gói build game đã được duyệt cùng gói SHA256/nguồn gốc",
     currentTruth: "Hiện chưa có gói tải game công khai được duyệt.",
-    forbiddenClaim: "Không tải giả, không claim launcher sẵn sàng hoặc release-ready."
+    forbiddenClaim: "Không tải giả, không claim launcher hoặc sẵn sàng phát hành."
   },
   {
     surface: "Tài khoản / quyền Portal",
@@ -1436,11 +1436,11 @@ export const statusTrustSurfaces: StatusTrustSurface[] = [
     forbiddenClaim: "Không claim xác thực production, DB persistence hoặc tra cứu tài khoản thật."
   },
   {
-    surface: "Runtime/browser guardrails",
+    surface: "Guardrail runtime/browser",
     visibility: "internal",
-    sourceOfTruth: "Local/preseeded Node, pnpm and Playwright evidence",
-    currentTruth: "Useful for regression protection after product copy changes.",
-    forbiddenClaim: "Runtime PASS must not be marketed as game release readiness."
+    sourceOfTruth: "Bằng chứng Node, pnpm và Playwright local/preseeded",
+    currentTruth: "Hữu ích để chống regression sau khi đổi copy sản phẩm.",
+    forbiddenClaim: "Runtime PASS không được quảng bá như trạng thái sẵn sàng phát hành game."
   }
 ];
 
@@ -1593,7 +1593,7 @@ export const stagedReleaseMessages: StagedReleaseMessage[] = [
     visibility: "blocked",
     playerCopy: "Khi build được duyệt, trang Download mới có link, SHA256, provenance và hướng dẫn cài đặt rõ ràng.",
     ownerChecklist: "Verify artifact upload, sidecar SHA, rollback note and owner approval before CTA.",
-    nonClaim: "No placeholder checksum, no release-ready claim before artifact evidence."
+    nonClaim: "No placeholder checksum, no sẵn sàng phát hành claim before artifact evidence."
   },
   {
     stage: "Backend-connected portal",
@@ -2020,7 +2020,7 @@ export const mobileScannabilityRules: MobileScannabilityRule[] = [
     surface: "Hero / CTA",
     mobileNeed: "CTA phải full-width, nhìn thấy lựa chọn chính và không lẫn với claim kỹ thuật.",
     contentTreatment: "CTA groups được stack, summary-first copy và non-claim band nằm gần nội dung nhạy cảm.",
-    failureToAvoid: "Không biến runtime/browser evidence thành CTA release-ready."
+    failureToAvoid: "Không biến runtime/browser evidence thành CTA sẵn sàng phát hành."
   },
   {
     surface: "Cards / long guides",
@@ -2137,7 +2137,7 @@ export const perceivedLoadSignals: PerceivedLoadSignal[] = [
     surface: "Download/status routes",
     playerFeeling: "Tin được vì blocker nằm cạnh CTA, không bị giấu cuối trang.",
     copyTreatment: "Use explicit trust gates, SHA/provenance requirements and no-download wording.",
-    mustAvoid: "Do not show fake release-ready language or placeholder checksum."
+    mustAvoid: "Do not show fake sẵn sàng phát hành language or placeholder checksum."
   }
 ];
 
@@ -2323,7 +2323,7 @@ export const playerTrustSignals: PlayerTrustSignal[] = [
     playerQuestion: "Nếu website nhìn đã khá đầy đủ, release đã gần xong chưa?",
     trustAnswer: "Status page tách public content readiness, internal runtime guardrails và blocked backend/release gates.",
     proofBeforeClaim: "Public status wording must identify source-of-truth and blocked surfaces next to CTA copy.",
-    forbiddenShortcut: "No release-ready claim from web polish, browser matrix or static route build."
+    forbiddenShortcut: "No sẵn sàng phát hành claim from web polish, browser matrix or static route build."
   },
   {
     id: "support-before-intake",
@@ -2446,7 +2446,7 @@ export const trustJourneyCheckpoints: TrustJourneyCheckpoint[] = [
     trustQuestion: "Public, internal và blocked khác nhau thế nào?",
     answerOnPage: "Status tách public copy, internal guardrail và blocked backend/release surfaces.",
     nextRoute: "/support/safety",
-    boundary: "No release-ready claim from runtime/browser checks."
+    boundary: "No sẵn sàng phát hành claim from runtime/browser checks."
   },
   {
     route: "/support/safety",
@@ -2571,9 +2571,9 @@ export const releaseSurfaceAlignment: ReleaseSurfaceAlignment[] = [
   {
     surface: "Status",
     route: "/status",
-    mustSay: "Public/internal/blocked surfaces khác nhau và runtime guardrail không phải release readiness.",
+    mustSay: "Bề mặt công khai/nội bộ/tạm khóa khác nhau và guardrail runtime không phải readiness phát hành.",
     mustLinkTo: "/release/readiness",
-    contradictionToAvoid: "Không dùng build/test PASS để claim open beta hoặc release-ready."
+    contradictionToAvoid: "Không dùng build/test PASS để claim open beta hoặc sẵn sàng phát hành."
   },
   {
     surface: "Support",
@@ -2676,24 +2676,24 @@ export const downloadExplainers: DownloadExplainer[] = [
 
 export const statusExplainers: StatusExplainer[] = [
   {
-    label: "Public website",
+    label: "Website công khai",
     visibility: "public",
-    detail: "Các trang public đang phát triển nội dung, bố cục, game info, guide và download explanation."
+    detail: "Các trang công khai đang phát triển nội dung, bố cục, thông tin game, hướng dẫn và giải thích tải game."
   },
   {
-    label: "Game release artifact",
+    label: "Gói phát hành game",
     visibility: "blocked",
-    detail: "Chưa có public build/checksum được duyệt, nên status không được ghi release-ready."
+    detail: "Chưa có build/checksum công khai được duyệt, nên trạng thái không được ghi là sẵn sàng phát hành."
   },
   {
-    label: "Portal/Ops backend",
+    label: "Backend Portal/Ops",
     visibility: "blocked",
-    detail: "Real account portal, ops mutation, support ticket và audit cần accepted backend contract."
+    detail: "Portal tài khoản thật, thao tác Ops, ticket hỗ trợ và audit cần contract backend đã được duyệt."
   },
   {
-    label: "Runtime/browser guardrails",
+    label: "Guardrail runtime/browser",
     visibility: "internal",
-    detail: "Dùng để chống regression sau khi đổi nội dung web; không phải nội dung chính và không thay thế product readiness."
+    detail: "Dùng để chống regression sau khi đổi nội dung web; không phải nội dung chính và không thay thế readiness sản phẩm."
   }
 ];
 

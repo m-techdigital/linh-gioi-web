@@ -12,6 +12,15 @@ function toneForStatus(status: string) {
   return "shadow" as const;
 }
 
+function vietnameseStatusLabel(status: string) {
+  if (status === "public") return "công khai";
+  if (status === "internal") return "nội bộ";
+  if (status === "blocked") return "tạm khóa";
+  if (status === "ready") return "sẵn sàng";
+  if (status === "planned") return "đã lên kế hoạch";
+  return status;
+}
+
 export function ArticleDetailDepth({ slug }: { slug: string }) {
   const sections = contentDetailSections.filter((section) => section.slug === slug);
   if (sections.length === 0) return null;
@@ -84,14 +93,14 @@ export function DownloadExplanationDepth() {
 
 export function StatusExplanationDepth() {
   return (
-    <section className="lgo-panel lgo-status-explainers" aria-labelledby="status-explainers-heading">
-      <SectionHeading eyebrow="WEB v1.9 status transparency" title="Status public phải tách rõ public, internal và blocked">
-        Status page không được biến runtime guardrail thành release readiness hoặc live service claim.
+    <section className="lgo-panel lgo-service-proof-card-grid lgo-status-explainers" aria-labelledby="status-explainers-heading">
+      <SectionHeading eyebrow="Minh bạch trạng thái" title="Tách rõ công khai, nội bộ và tạm khóa">
+        Trang trạng thái không được biến guardrail kỹ thuật thành readiness phát hành hoặc claim live service.
       </SectionHeading>
       <Grid id="status-explainers-heading">
         {statusExplainers.map((item) => (
-          <GameCard key={item.label}>
-            <StatusBadge tone={toneForStatus(item.visibility)}>{item.visibility}</StatusBadge>
+          <GameCard className="lgo-service-proof-card" key={item.label}>
+            <StatusBadge tone={toneForStatus(item.visibility)}>{vietnameseStatusLabel(item.visibility)}</StatusBadge>
             <h3>{item.label}</h3>
             <p>{item.detail}</p>
           </GameCard>

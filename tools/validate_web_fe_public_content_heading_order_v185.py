@@ -19,7 +19,7 @@ def check_routes() -> None:
         "apps/web/src/app/events/page.tsx": ["PageHeader", "title=\"Sự kiện\"", "PROVISIONAL_WEB_FIXTURE · No CMS · No backend", "Danh sách sự kiện tĩnh"],
         "apps/web/src/app/patch-notes/page.tsx": ["PageHeader", "title=\"Patch notes\"", "PROVISIONAL_WEB_FIXTURE · No CMS · No backend", "Ghi chú phát triển tĩnh"],
         "apps/web/src/app/news/page.tsx": ["PageHeader", "title=\"Tin tức\"", "Bản tin public tĩnh", "ContentIaStartCta"],
-        "apps/web/src/app/status/page.tsx": ["PageHeader", "title=\"Trạng thái / Maintenance\"", "Status fixture entries", "Trạng thái public tĩnh"],
+        "apps/web/src/app/status/page.tsx": ["lgo-status-hero-card", "Trạng thái công khai", "Các hạng mục công khai", "lgo-status-fixture-board"],
     }
     for rel, markers in route_markers.items(): require_text(rel, markers)
 def check_tests_and_docs() -> None:

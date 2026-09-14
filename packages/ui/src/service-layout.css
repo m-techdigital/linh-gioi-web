@@ -87,11 +87,12 @@
   }
 
   .lgo-service-compact-proof-page .lgo-service-proof-card-grid {
-    padding: .72rem;
+    gap: .46rem;
+    padding: .62rem;
   }
 
   .lgo-service-compact-proof-page .lgo-service-proof-card-grid .lgo-section-heading {
-    margin-bottom: .55rem;
+    margin-bottom: .34rem;
   }
 
   .lgo-service-compact-proof-page .lgo-service-proof-card-grid .lgo-section-heading h2 {
@@ -110,14 +111,44 @@
     gap: .48rem;
   }
 
+  .lgo-service-compact-proof-page .lgo-service-proof-brief-board {
+    align-items: start;
+    display: grid;
+    grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  }
+
+  .lgo-service-compact-proof-page .lgo-service-proof-brief-board .lgo-section-heading {
+    margin-bottom: 0;
+  }
+
+  .lgo-service-compact-proof-page .lgo-service-proof-brief-board .lgo-grid {
+    grid-template-columns: 1fr;
+  }
+
   .lgo-service-compact-proof-page .lgo-service-proof-card {
-    padding: .56rem;
+    gap: .22rem;
+    padding: .5rem;
   }
 
   .lgo-service-compact-proof-page .lgo-service-proof-card h3 {
-    font-size: .92rem;
-    line-height: 1.04;
-    margin-block: .25rem .2rem;
+    font-size: .88rem;
+    line-height: 1.02;
+    margin-block: .18rem .12rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-service-proof-card p,
+  .lgo-service-compact-proof-page .lgo-service-proof-card small {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .lgo-service-compact-proof-page .lgo-service-proof-card p {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-service-compact-proof-page .lgo-service-proof-card small {
+    -webkit-line-clamp: 1;
   }
 
   .lgo-service-compact-proof-page .lgo-service-proof-card .lgo-link-button {

@@ -72,7 +72,7 @@ const PUBLIC_TESTER_PACK_TARGET = {
 const PUBLIC_STATUS_TARGET = {
   label: "Thiết kế chi tiết trạng thái",
   href: "/design-reference/status-detailed-design-target-v1130.png",
-  scope: "Public Status"
+  scope: "Trạng thái công khai"
 };
 
 const PUBLIC_SUPPORT_TARGET = {
