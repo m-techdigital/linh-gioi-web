@@ -181,9 +181,9 @@ export const publicRoadmapItems: PublicRoadmapItem[] = [
   },
   {
     version: "v1.14",
-    title: "Player safety / support FAQ polish",
+    title: "Player safety / FAQ hỗ trợ polish",
     status: "current",
-    summary: "Clarifies player safety wording, privacy-safe issue reporting, closed-test support expectations and community conduct without ticket/moderation backend claims."
+    summary: "Clarifies player safety wording, privacy-safe issue reporting, hỗ trợ thử nghiệm expectations and community conduct without ticket/moderation backend claims."
   },
   {
     version: "v1.15",
@@ -435,7 +435,7 @@ export const supportFaqs: SupportFaq[] = [
   {
     question: "Closed test có hỗ trợ live không?",
     answer: "Chưa. Hỗ trợ closed-test chỉ được nói tới khi có gói build, giới hạn đã biết, owner hỗ trợ và quy tắc riêng tư được duyệt. Web không claim SLA, ticket backend hoặc tra cứu tài khoản thật.",
-    scope: "closed-test support non-claim"
+    scope: "hỗ trợ thử nghiệm non-claim"
   }
 ];
 
@@ -550,8 +550,8 @@ export const contentEntries: ContentEntry[] = [
     slug: "public-game-info-depth-started",
     category: "news",
     title: "Public game information gets deeper",
-    summary: "WEB v1.8 expands player-facing lore, beginner guidance, download status, support FAQ and community readiness without claiming production systems.",
-    body: "WEB v1.8 focuses on the actual public website product. It deepens world story chapters, beginner guide steps, download status notes, support FAQ and community readiness while runtime/browser checks remain guardrails only.",
+    summary: "WEB v1.8 expands player-facing lore, beginner guidance, download status, FAQ hỗ trợ and community readiness without claiming production systems.",
+    body: "WEB v1.8 focuses on the actual public website product. It deepens world story chapters, beginner guide steps, download status notes, FAQ hỗ trợ and community readiness while runtime/browser checks remain guardrails only.",
     publishedAt: "2026-09-05T10:00:00.000Z",
     status: "published",
     featured: true,
@@ -749,9 +749,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "player-safety-support-faq-polish-started",
     category: "news",
-    title: "Player safety and support FAQ get clearer",
-    summary: "WEB v1.14 focuses on player safety wording, support FAQ quality, privacy-safe issue reporting and closed-test support expectations.",
-    body: "WEB v1.14 keeps the product focus on the public website. It adds a safety/support hub, issue reporting guidance, closed-test support expectations and community conduct clarity without claiming live tickets, account lookup, moderation dashboard or backend integration.",
+    title: "FAQ an toàn và hỗ trợ rõ hơn",
+    summary: "WEB v1.14 tập trung vào wording an toàn người chơi, chất lượng FAQ hỗ trợ, báo lỗi an toàn dữ liệu và kỳ vọng hỗ trợ thử nghiệm.",
+    body: "WEB v1.14 giữ trọng tâm ở website public. Slice này thêm hub an toàn/hỗ trợ, hướng dẫn báo lỗi an toàn dữ liệu, kỳ vọng hỗ trợ thử nghiệm và ranh giới cộng đồng mà không claim ticket live, tra cứu tài khoản, moderation dashboard hoặc backend integration.",
     publishedAt: "2026-09-05T14:00:00.000Z",
     status: "published",
     featured: true,
@@ -760,9 +760,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "player-safety-support-guide",
     category: "guides",
-    title: "Hướng dẫn an toàn và hỗ trợ cho người chơi mới",
-    summary: "Cách đọc support FAQ, chuẩn bị bug report an toàn, hiểu closed-test support và tránh gửi thông tin nhạy cảm khi chưa có backend thật.",
-    body: "Guide này giúp người chơi mới biết nên đọc đâu, chuẩn bị thông tin gì khi báo lỗi, dữ liệu nào không nên gửi, và vì sao web chưa có ticket/account/moderation backend thật.",
+    title: "An toàn và hỗ trợ cho người chơi mới",
+    summary: "Guide giúp người chơi đọc FAQ hỗ trợ, chuẩn bị báo lỗi an toàn, hiểu phạm vi hỗ trợ thử nghiệm và tránh gửi thông tin nhạy cảm khi chưa có backend thật.",
+    body: "Hãy đi theo luồng Hỗ trợ → Báo lỗi an toàn → Cộng đồng → Trạng thái trước khi kỳ vọng ticket live, tra cứu tài khoản hoặc moderation vận hành.",
     publishedAt: "2026-09-05T14:05:00.000Z",
     status: "published",
     featured: true,
@@ -1230,6 +1230,39 @@ export const guideDetailSteps: GuideDetailStep[] = [
   },
 
   {
+    slug: "player-safety-support-guide",
+    step: "01",
+    title: "Đọc FAQ hỗ trợ trước",
+    action: "Bắt đầu từ FAQ hỗ trợ để hiểu trạng thái tải game, ranh giới tài khoản và những câu hỏi đã có câu trả lời công khai.",
+    expectedResult: "Người chơi không gửi trùng vấn đề đã được giải thích trong trạng thái public hiện tại.",
+    blockedScope: "Chưa có ticket inbox live, SLA hỗ trợ production hoặc tra cứu tài khoản."
+  },
+  {
+    slug: "player-safety-support-guide",
+    step: "02",
+    title: "Chuẩn bị báo lỗi an toàn",
+    action: "Chỉ chuẩn bị thiết bị, bước tái hiện, ảnh cần thiết và mô tả lỗi; không gửi mật khẩu, token hoặc dữ liệu nhạy cảm.",
+    expectedResult: "Feedback đủ hữu ích cho closed test tương lai nhưng không thu thập dữ liệu rủi ro.",
+    blockedScope: "Chưa có secure upload, account lookup, ticket backend hoặc chính sách lưu trữ production."
+  },
+  {
+    slug: "player-safety-support-guide",
+    step: "03",
+    title: "Theo dõi cộng đồng đúng phạm vi",
+    action: "Dùng Community/Roadmap như kênh thông báo và góp ý tĩnh, không hiểu nhầm thành chat, forum, guild hoặc moderation live.",
+    expectedResult: "Người chơi biết nơi theo dõi tin mới mà không kỳ vọng moderation hay guild vận hành.",
+    blockedScope: "Chưa có chat, forum, guild, moderation backend hoặc RBAC/audit contract."
+  },
+  {
+    slug: "player-safety-support-guide",
+    step: "04",
+    title: "Kiểm trạng thái trước khi chờ phản hồi",
+    action: "Quay lại Trạng thái, Tin cậy tải game và Hỗ trợ để biết gate nào còn tạm khóa trước khi chờ phản hồi chính thức.",
+    expectedResult: "Người chơi hiểu hỗ trợ hiện là hướng dẫn public an toàn, không phải hệ thống ticket vận hành.",
+    blockedScope: "Chưa có live support ticket, moderation dashboard, quyền tải, xác thực production hoặc backend contract accepted."
+  },
+
+  {
     slug: "start-here-content-hub-guide",
     step: "01",
     title: "Bắt đầu từ trang Bắt đầu",
@@ -1689,7 +1722,7 @@ export const stagedReleaseMessages: StagedReleaseMessage[] = [
   {
     stage: "Public information site",
     visibility: "public",
-    playerCopy: "Bạn có thể đọc thế giới, roadmap, guides, download trust và support FAQ ngay trên web.",
+    playerCopy: "Bạn có thể đọc thế giới, roadmap, guides, download trust và FAQ hỗ trợ ngay trên web.",
     ownerChecklist: "Copy không được hứa download, account, DB, combat/economy/social live system.",
     nonClaim: "No public game download artifact, no production auth, no CMS."
   },
@@ -1697,7 +1730,7 @@ export const stagedReleaseMessages: StagedReleaseMessage[] = [
     stage: "Closed testing preparation",
     visibility: "internal",
     playerCopy: "Closed testing sẽ chỉ được nói tới khi có build thật, checksum, known limitations và kênh hỗ trợ được duyệt.",
-    ownerChecklist: "Chuẩn bị release note, support expectation, privacy-safe bug report guidance.",
+    ownerChecklist: "Chuẩn bị release note, support expectation, privacy-safe báo lỗi guidance.",
     nonClaim: "No fake waitlist, no portal entitlement, no live support backend."
   },
   {
@@ -2308,7 +2341,7 @@ export const routeContinuityBridges: RouteContinuityBridge[] = [
     fromRoute: "/status",
     toRoute: "/support/safety",
     playerQuestion: "Tôi nên báo lỗi/góp ý thế nào khi chưa có ticket backend?",
-    bridgeCopy: "Status cần nối tới Support Safety để người chơi biết chuẩn bị bug report an toàn và không gửi dữ liệu nhạy cảm.",
+    bridgeCopy: "Status cần nối tới Support Safety để người chơi biết chuẩn bị báo lỗi an toàn và không gửi dữ liệu nhạy cảm.",
     ctaLabel: "Báo lỗi an toàn",
     conversionBoundary: "Chưa có ticket inbox an toàn, chưa tra cứu tài khoản, chưa SLA hỗ trợ production."
   },
@@ -2350,7 +2383,7 @@ export const conversionSafeCtas: ConversionSafeCta[] = [
   {
     surface: "Support and Safety",
     primaryAction: "Đọc safety support",
-    supportingAction: "Chuẩn bị bug report an toàn / Đọc community onboarding",
+    supportingAction: "Chuẩn bị báo lỗi an toàn / Đọc community onboarding",
     safeWhen: "Safe when CTA teaches what to prepare and what not to share without collecting user data.",
     mustNotImply: "Must not imply ticket backend, secure inbox, account lookup, moderation dashboard or SLA."
   },
@@ -2533,7 +2566,7 @@ export const closedTestReadinessChecks: ClosedTestReadinessCheck[] = [
     check: "Status and support alignment",
     currentState: "planned",
     playerExpectation: "Download, Status và Support nói cùng một sự thật về stage hiện tại.",
-    ownerGate: "Update status trust surfaces and support FAQ in the same release package.",
+    ownerGate: "Update status trust surfaces and FAQ hỗ trợ in the same release package.",
     mustNotPromise: "No production SLA, no instant fix, no automated entitlement."
   }
 ];

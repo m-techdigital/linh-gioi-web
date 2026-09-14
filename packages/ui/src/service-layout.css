@@ -3217,6 +3217,52 @@
 }
 
 
+/* Player safety support guide composes compact guide-flow base for FAQ → safe report → community scope reading. */
+.lgo-playersafetypage-stack .lgo-player-safety-guide-hero-card {
+  border-color: rgba(122,75,217,.42);
+  background:
+    radial-gradient(circle at top left, rgba(122,75,217,.17), transparent 15rem),
+    radial-gradient(circle at bottom right, rgba(53,198,163,.13), transparent 17rem),
+    linear-gradient(145deg, rgba(13,27,46,.95), rgba(7,17,31,.90));
+}
+
+.lgo-playersafetypage-stack .lgo-guide-detail-depth {
+  border-color: rgba(122,75,217,.30);
+}
+
+.lgo-playersafetypage-stack .lgo-guide-detail-step {
+  border-color: rgba(122,75,217,.26);
+  background: linear-gradient(145deg, rgba(26,18,48,.70), rgba(7,17,31,.80));
+}
+
+@media (min-width: 981px) {
+  .lgo-playersafetypage-stack .lgo-guide-detail-steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lgo-playersafetypage-stack .lgo-guide-detail-step {
+    grid-template-columns: 2.2rem 1fr;
+    padding: .58rem;
+  }
+
+  .lgo-playersafetypage-stack .lgo-guide-detail-step > span {
+    width: 2rem;
+    height: 2rem;
+    font-size: .76rem;
+  }
+
+  .lgo-playersafetypage-stack .lgo-guide-detail-step h3 {
+    font-size: .9rem;
+  }
+
+  .lgo-playersafetypage-stack .lgo-guide-detail-step p,
+  .lgo-playersafetypage-stack .lgo-guide-detail-step small {
+    font-size: .72rem;
+    line-height: 1.22;
+  }
+}
+
+
 /* Shared guide index layout for public guide/library pages. */
 .lgo-guidespage-stack {
   gap: 1rem;
