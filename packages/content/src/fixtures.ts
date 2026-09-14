@@ -771,9 +771,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "accessibility-readability-polish-started",
     category: "news",
-    title: "Accessibility and readability polish starts",
-    summary: "WEB v1.15 improves heading clarity, mobile scannability, focus order and reading comfort across the public website.",
-    body: "WEB v1.15 keeps building the actual public website. It adds accessibility/readability guidance, route-level scan aids, mobile reading rules and focus-order expectations while avoiding any formal WCAG audit, legal compliance or production support claim.",
+    title: "Dễ đọc và dễ tiếp cận hơn",
+    summary: "WEB v1.15 làm rõ tiêu đề, nhịp đọc mobile, thứ tự focus và độ thoải mái khi đọc các route public.",
+    body: "WEB v1.15 tiếp tục hoàn thiện website public thật. Slice này gom hướng dẫn dễ đọc, mốc quét nội dung theo route, quy tắc đọc trên mobile và kỳ vọng focus order mà không tuyên bố audit WCAG chính thức, pháp lý accessibility, hỗ trợ production hoặc tích hợp backend.",
     publishedAt: "2026-09-05T21:00:00.000Z",
     status: "published",
     featured: true,
@@ -1109,6 +1109,20 @@ export const contentDetailSections: ContentDetailSection[] = [
     body: "Bài viết nối Support, Support Safety, Status và Download Trust để người chơi hiểu hỗ trợ hiện là hướng dẫn public tĩnh, không phải hệ thống xử lý yêu cầu thật.",
     playerImpact: "Người chơi không gửi nhầm thông tin cá nhân hoặc kỳ vọng phản hồi SLA khi chưa có owner-approved support channel.",
     nonClaim: "Không có hộp thư bảo mật, không có live moderation, không có SLA production và không có quyền tải game."
+  },
+  {
+    slug: "accessibility-readability-polish-started",
+    heading: "Nhịp đọc ưu tiên tiêu đề, khoảng thở và focus",
+    body: "Bài viết gom heading rõ, đoạn ngắn, thứ tự tab và CTA dễ quét để người chơi đọc được nội dung public mà không bị đẩy vào trang quá dài hoặc chữ quá dày.",
+    playerImpact: "Người chơi mới có thể quét hero, detail cards, tin liên quan và bước tiếp theo trên desktop/mobile mà không mất phương hướng.",
+    nonClaim: "Không tuyên bố audit WCAG chính thức, chứng nhận pháp lý accessibility, production SLA hoặc hỗ trợ backend."
+  },
+  {
+    slug: "accessibility-readability-polish-started",
+    heading: "Mobile và keyboard giữ cùng một đường đọc",
+    body: "Luồng đọc nối Start, Accessibility, Guides và News bằng cùng shell public, focus state rõ và density card gọn để mỗi route giữ cấu trúc quen thuộc.",
+    playerImpact: "Người chơi dùng mobile hoặc bàn phím vẫn thấy header, menu, footer, hero và các card theo cùng nhịp UI đã được chấp nhận.",
+    nonClaim: "Không mở tính năng tài khoản, không kiểm thử thiết bị hỗ trợ chính thức và không thay thế kiểm định accessibility chuyên sâu."
   },
   {
     slug: "world-gameplay-loop-depth-started",

@@ -59,13 +59,13 @@ def main() -> int:
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-PLAYER-SAFETY-SUPPORT-REAL-UI-LAYOUT-v1.190 WEB_CLOSED',
-        'Select `/news/accessibility-readability-polish-started`',
+        'Select `/news/performance-copy-asset-budget-polish-started`',
         '/tmp/news-player-safety-support-desktop-v1190.png', '/tmp/news-player-safety-support-mobile-v1190.png',
         'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.191',
-        'Current FE scope: select `/news/accessibility-readability-polish-started`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.192',
+        'Current FE scope: select `/news/performance-copy-asset-budget-polish-started`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
         '| WEB-FE-NEWS-PLAYER-SAFETY-SUPPORT-REAL-UI-LAYOUT-v1.190 | WEB-FE | WEB_CLOSED | 1d9abc1 |',

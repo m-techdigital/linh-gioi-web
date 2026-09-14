@@ -27,6 +27,7 @@ const articleDetailTitles: Record<string, string> = {
   "community-roadmap-onboarding-started": "Bài viết giải thích community onboarding và roadmap",
   "world-gameplay-loop-depth-started": "Bài viết giải thích world loop và boundary gameplay",
   "player-safety-support-faq-polish-started": "Bài viết giải thích an toàn người chơi và FAQ hỗ trợ",
+  "accessibility-readability-polish-started": "Bài viết giải thích khả năng tiếp cận và dễ đọc",
 };
 
 function articleDetailTitle(slug: string) {
