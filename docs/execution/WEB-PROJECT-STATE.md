@@ -1,3 +1,16 @@
+Current phase: WEB-FE-HOMEPAGE-DETAILED-DESIGN-TARGET-v1.118 WEB_CLOSED.
+
+Current decision: v1.118 FE homepage detailed design target slice closed. Public `/` now has a dedicated high-fidelity Public Homepage design target before further homepage UI changes. Entire program is NOT production-complete.
+
+- v1.118 created `homepage-detailed-design-target-v1118.png` with built-in image_gen and mirrored it under `docs/design/reference`.
+- v1.118 registered `Public Homepage` in the Design Target First registry and updated `/` to expose the page-specific target instead of only the broad Public Core atlas.
+- v1.118 evidence: RED browser/e2e reproduced missing Public Homepage target attachment; Playwright desktop/mobile homepage detailed design target PASS 4/4 after attachment; dedicated validator and closure checks recorded in report/handoff.
+- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.119.
+
 Current phase: WEB-FE-SHELL-KEYBOARD-REACHABILITY-v1.117 WEB_CLOSED.
 
 Current decision: v1.117 FE shell keyboard reachability slice closed. Public Core, Player Portal and Ops/Admin shells now have desktop/mobile browser/e2e guardrail coverage for skip-link focus flow, nav keyboard focus, Design Target First link focus, readable nav typography and horizontal overflow. Entire program is NOT production-complete.
