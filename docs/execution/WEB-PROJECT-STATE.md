@@ -1,3 +1,18 @@
+Current phase: WEB-FE-SUPPORT-DESIGN-TARGET-DENSITY-v1.131 WEB_CLOSED.
+
+Current decision: v1.131 FE support design target density slice closed. Public `/support` now has a dedicated high-fidelity Vietnamese `Public Support` design target and runtime desktop/mobile browser/e2e guardrails for first-flow support station density. Entire program is NOT production-complete.
+
+- v1.131 created `support-detailed-design-target-v1131.png` with built-in image_gen and mirrored it under `docs/design/reference`.
+- v1.131 registered `Public Support`, routed `/support` to that page-specific target and kept Public Service as the broader target for remaining support/service routes.
+- v1.131 compacted desktop `/support` hero, support boundary note, design board, topic cards and FAQ/safety path under `lgo-supportpage-stack` while preserving mobile behavior.
+- v1.131 evidence: RED browser/e2e reproduced missing `Public Support` target attachment; Playwright desktop/mobile support design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
+- Vietnamese design targets are mandatory for new public FE work unless a route-specific owner-approved exception is recorded. Existing English-heavy targets must be replaced when their page is revisited.
+- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.132.
+
 Current phase: WEB-FE-STATUS-DESIGN-TARGET-DENSITY-v1.130 WEB_CLOSED.
 
 Current decision: v1.130 FE status design target density slice closed. Public `/status` now has a dedicated high-fidelity `Public Status` design target and runtime desktop/mobile browser/e2e guardrails for first-fold maintenance/status density. Entire program is NOT production-complete.

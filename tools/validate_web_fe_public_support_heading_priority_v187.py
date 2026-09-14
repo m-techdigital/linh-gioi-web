@@ -22,7 +22,7 @@ def check_routes() -> None:
     require_order("apps/web/src/app/support/page.tsx", "<h1>Hỗ trợ cộng đồng</h1>", "<PlayerTrustReleaseCta />")
     require_order("apps/web/src/app/support/help/page.tsx", "<h1>FAQ Help: tìm đúng câu trả lời trước khi gửi feedback</h1>", "<FaqHelpfulnessCta />")
     require_order("apps/web/src/app/support/safety/page.tsx", "<h1>Safety support cho người chơi mới</h1>", "<ReleaseReadinessHubCta />")
-    require_text("apps/web/src/app/support/page.tsx", ["No real ticket backend", "account lookup", "ops/admin mutation"])
+    require_text("apps/web/src/app/support/page.tsx", ["Không có hệ thống ticket thật", "tra cứu tài khoản", "thao tác vận hành/admin"])
     require_text("apps/web/src/app/support/help/page.tsx", ["không phải live search", "ticket system", "sensitive-data intake"])
     require_text("apps/web/src/app/support/safety/page.tsx", ["No live ticket", "no account lookup", "moderation backend"])
 def check_tests_and_docs() -> None:
