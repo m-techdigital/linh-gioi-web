@@ -538,8 +538,8 @@ export const contentEntries: ContentEntry[] = [
     slug: "visual-responsive-polish-started",
     category: "news",
     title: "Bắt đầu polish visual và responsive",
-    summary: "Slice web tiếp theo tập trung vào visual hierarchy, bố cục responsive, thông tin game rõ hơn, trạng thái tải game và hỗ trợ.",
-    body: "Runtime/browser E2E remains a regression guard. The main product work is visual and responsive polish for the public website while keeping non-claims explicit: no production auth, no DB persistence, no CMS and no real backend integration.",
+    summary: "Slice này làm rõ visual hierarchy, responsive, thông tin game, trạng thái tải và hỗ trợ.",
+    body: "Slice visual responsive nén lại hierarchy, nhịp đọc, bố cục mobile/desktop và trạng thái tải/hỗ trợ. Browser/e2e chỉ kiểm layout; không claim production, không mở CMS, DB hoặc backend thật.",
     publishedAt: "2026-09-05T09:00:00.000Z",
     status: "published",
     featured: true,
@@ -939,6 +939,21 @@ export const downloadBuilds: DownloadBuild[] = [
 
 
 export const contentDetailSections: ContentDetailSection[] = [
+
+  {
+    slug: "visual-responsive-polish-started",
+    heading: "Thứ bậc thị giác giúp người chơi đọc đúng trọng tâm",
+    body: "Slice này đặt lại nhịp hero, card và CTA để thông tin game, trạng thái tải và hỗ trợ dễ quét hơn trên first-fold mà không biến trang tin thành log kỹ thuật.",
+    playerImpact: "Người chơi nhìn thấy nội dung quan trọng trước, hiểu trạng thái web public và không bị lẫn giữa polish giao diện với readiness production.",
+    nonClaim: "Không tuyên bố vận hành chính thức, không có CMS, không có DB và không có backend live."
+  },
+  {
+    slug: "visual-responsive-polish-started",
+    heading: "Responsive polish phải giữ cùng shell public",
+    body: "Trang detail dùng lại header, menu, footer, card rhythm và related-news flow chung để desktop/mobile cùng một trải nghiệm đọc, chỉ khác mật độ phù hợp màn hình.",
+    playerImpact: "Người chơi trên mobile vẫn đọc được bài, related news và bước tiếp theo trong một cột rõ ràng, không bị phình font hoặc tràn ngang.",
+    nonClaim: "Không dùng e2e, ảnh chụp hoặc validator để thay thế việc hoàn thiện layout thật trong trình duyệt."
+  },
 
   {
     slug: "public-ux-content-polish-started",

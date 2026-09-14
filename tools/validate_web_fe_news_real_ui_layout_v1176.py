@@ -57,7 +57,7 @@ def main() -> int:
         'title: "Bắt đầu polish visual và responsive"',
         'Repo web độc lập của Linh Giới Online đã có governance',
         'Slice web trước tập trung vào hierarchy trang chủ',
-        'Slice web tiếp theo tập trung vào visual hierarchy',
+        'Slice này làm rõ visual hierarchy',
     ])
     forbid_text("packages/content/src/fixtures.ts", [
         'title: "Web program control tower established"',
@@ -98,8 +98,8 @@ def main() -> int:
         'Base First',
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.179',
-        'Current FE scope: select `/news/visual-responsive-polish-started`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.180',
+        'Current FE scope: select `/news/public-game-info-depth-started`',
         'Real Browser UI/UX Layout First',
         'Base UI/UX Layout',
     ])

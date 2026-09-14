@@ -15,6 +15,7 @@ function toneForStatus(status: string) {
 const articleDetailTitles: Record<string, string> = {
   "web-program-control-tower": "Bài viết giải thích governance web độc lập",
   "public-ux-content-polish-started": "Bài viết giải thích polish UX public",
+  "visual-responsive-polish-started": "Bài viết giải thích visual và responsive",
 };
 
 function articleDetailTitle(slug: string) {
@@ -37,7 +38,7 @@ export function ArticleDetailDepth({ slug }: { slug: string }) {
   return (
     <section className="lgo-panel lgo-article-depth lgo-newsdetail-depth" aria-labelledby="article-detail-depth-heading">
       <SectionHeading eyebrow="Chi tiết bài viết" title={articleDetailTitle(slug)}>
-        Detail page mở rộng ngữ cảnh người chơi cần biết, tác động thực tế và ranh giới non-claim phải giữ.
+        Trang bài viết mở rộng ngữ cảnh người chơi cần biết, tác động thực tế và ranh giới không tuyên bố quá phạm vi phải giữ.
       </SectionHeading>
       <div id="article-detail-depth-heading" className="lgo-article-depth-grid lgo-newsdetail-depth-grid">
         {sections.map((section) => (
@@ -125,7 +126,7 @@ export function DetailPageNextSteps() {
       <div>
         <StatusBadge tone="spirit">Nội dung public tĩnh</StatusBadge>
         <h2>Tin tức, hướng dẫn, tải game và trạng thái đang được làm sâu theo hướng người chơi đọc được ngay.</h2>
-        <p>Browser/e2e là bằng chứng kiểm layout; nội dung vẫn là web public rõ ràng, không claim backend production.</p>
+        <p>Kiểm tra trình duyệt/e2e là bằng chứng layout; nội dung vẫn là web public rõ ràng, không tuyên bố backend production.</p>
       </div>
       <div className="lgo-product-first-actions">
         <LinkButton href="/news" tone="spirit">Tin tức</LinkButton>
