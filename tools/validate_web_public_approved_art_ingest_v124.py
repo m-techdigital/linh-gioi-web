@@ -31,7 +31,7 @@ def require_text(rel: str, *needles: str) -> None:
 def main() -> int:
     require_text("packages/content/src/fixtures.ts", "publicGameArtAssets", "WEB_REFERENCE_APPROVED", "notFinalArt")
     require_text("packages/content/src/index.ts", "publicGameArtAssets", "PublicGameArtAsset")
-    require_text("apps/web/src/components/PublicGameExperienceSections.tsx", "lgo-world-concept-art", "World concept", "ClassArtSpotlight")
+    require_text("apps/web/src/components/PublicGameExperienceSections.tsx", "lgo-world-concept-art", "Ý tưởng thế giới", "ClassArtSpotlight")
     require_text("apps/web/src/app/classes/page.tsx", "ClassArtSpotlight")
     require_text("apps/web/src/app/globals.css", "WEB v1.24 approved art ingest", "lgo-world-concept-art", "lgo-class-art-spotlight")
 

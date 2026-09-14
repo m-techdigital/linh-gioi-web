@@ -70,15 +70,16 @@ def check_tests_docs() -> None:
         "desktop world route starts near first target board",
         "game page h1 follows target scale",
     ])
-    require_text("apps/web/src/app/game/page.tsx", ["lgo-gamepage-stack", "lgo-game-world-design-board"])
+    require_text("apps/web/src/app/game/page.tsx", ["lgo-gamepage-stack", "WorldRouteJourney", "WorldAtlasStories", "lgo-game-world-boundary"])
     require_text("apps/web/src/app/globals.css", [
-        "WEB v1.120 game world detailed design target density",
+        "WEB v1.120/v1.135 game world detailed design target density",
         ".lgo-gamepage-stack",
-        ".lgo-game-world-design-board",
+        ".lgo-world-route-section",
+        ".lgo-world-atlas-section",
     ])
     require_text("apps/web/src/components/PublicDesignTargetReference.tsx", [
         "PUBLIC_GAME_WORLD_TARGET",
-        "Game world detailed design target",
+        "Thiết kế chi tiết thế giới",
         "game-world-detailed-design-target-v1120.png",
         "Public Game World",
     ])

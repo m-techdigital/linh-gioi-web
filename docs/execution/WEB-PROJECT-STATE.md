@@ -1,3 +1,16 @@
+Current phase: WEB-FE-GAME-WORLD-VIETNAMESE-FIRST-FLOW-v1.135 WEB_CLOSED.
+
+Current decision: v1.135 closed the active `/game` page slice after browser/e2e and screenshot review against the registered Public Game World design target. `/game` now follows the target structure more closely: cinematic hero, immediate Linh Thành → Đông Môn → Linh Lâm → Cổ Di Tích → Âm Giới route strip, first-flow world atlas preview, and Vietnamese boundary messaging after the design-led flow. Entire program is NOT production-complete.
+
+- v1.135 refreshed `game-world-detailed-design-target-v1120.png` with built-in image_gen and mirrored it under `docs/design/reference`.
+- v1.135 removed the old wireframe/reference board from `/game` first-flow product UI and replaced it with route/atlas layout that follows the game scenario.
+- v1.135 translated visible design/page labels for Public Game World to Vietnamese, including route-kind labels shared by route and atlas components.
+- v1.135 evidence: RED browser/e2e reproduced route gap 347.625px after hero; Playwright desktop/mobile `/game` Vietnamese first-flow/layout PASS 2/2 after fix; screenshot metrics reviewed: hero 430px, route top 557.875, atlas top 820.141, overflow 0.
+- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.136. Select `/story` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-HOMEPAGE-VIETNAMESE-FIRST-FLOW-v1.134 WEB_CLOSED.
 
 Current decision: v1.134 restarted FE/UI UX layout completion from the homepage and closed the first sequential page slice. Public Homepage now has refreshed Vietnamese first-flow visible copy, a refreshed homepage design target with Vietnamese footer label, and shared design-target reference labels needed by the homepage translated through Base UI/UX Layout. Entire program is NOT production-complete.

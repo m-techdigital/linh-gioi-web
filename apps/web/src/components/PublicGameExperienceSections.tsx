@@ -8,6 +8,7 @@ import {
   worldRouteStops
 } from "@lgo-web/content";
 import { GameCard, Grid, LinkButton, SectionHeading, StatusBadge } from "@lgo-web/ui";
+import { getWorldRouteKindLabel } from "./worldRouteLabels";
 
 const worldConceptArt = publicGameArtAssets.find((asset) => asset.id === "dong-mon-world-concept")!;
 const voStarterArt = publicGameArtAssets.find((asset) => asset.id === "vo-lv1-starter-development-art")!;
@@ -38,7 +39,7 @@ export function CinematicWorldScene({ compact = false }: { compact?: boolean }) 
           sizes={compact ? "(max-width: 900px) 100vw, 680px" : "(max-width: 900px) 100vw, 58vw"}
         />
       </div>
-      <span className="lgo-art-status-chip lgo-world-concept-chip">World concept · Đông Môn</span>
+      <span className="lgo-art-status-chip lgo-world-concept-chip">Ý tưởng thế giới · Đông Môn</span>
       <div className="lgo-hero-atmosphere" aria-hidden="true"><i /><i /><i /></div>
       <div className="lgo-scene-sky" aria-hidden="true" />
       <div className="lgo-scene-moon" aria-hidden="true" />
@@ -202,7 +203,7 @@ export function WorldRouteJourney() {
               {index < worldRouteStops.length - 1 ? <i aria-hidden="true" /> : null}
             </div>
             <div>
-              <span className="lgo-card-kicker">{stop.kind}</span>
+              <span className="lgo-card-kicker">{getWorldRouteKindLabel(stop.kind)}</span>
               <h3>{stop.name}</h3>
               <p>{stop.summary}</p>
             </div>

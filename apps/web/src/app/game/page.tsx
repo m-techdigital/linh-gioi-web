@@ -18,7 +18,7 @@ export default function GamePage() {
         <PublicPlayerHero
           className="lgo-cinematic-hero lgo-cinematic-hero-inner"
           copyClassName="lgo-cinematic-copy"
-          badge="World of Linh Giới"
+          badge="Thế giới Linh Giới"
           badgeTone="spirit"
           kicker="LINH THÀNH · VÀ NHỮNG VÙNG ĐẤT BÊN NGOÀI"
           title="Một thế giới có nơi để trở về"
@@ -30,41 +30,35 @@ export default function GamePage() {
           visual={<CinematicWorldScene compact />}
         />
 
-        <figure className="lgo-game-world-design-board lgo-panel" aria-label="Game world atlas hub reference art">
-          <img
-            src="/game-art/design-boards/game-world-atlas-hub.svg"
-            alt="Game world atlas hub board"
-            loading="eager"
-          />
-          <figcaption>
-            <StatusBadge tone="spirit">Game reference art</StatusBadge>
-            <strong>World atlas là route map public, không phải live open-world backend.</strong>
-            <span>
-              Board này dùng visual thật từ LinhGioiOnline để nối Linh Thành, Đông Môn, Linh Lâm và các realm cao hơn
-              without claiming live map streaming, account position, quest state or production world server.
-            </span>
-          </figcaption>
-        </figure>
-
         <WorldRouteJourney />
         <WorldAtlasStories />
+
+        <aside className="lgo-game-world-boundary lgo-panel" aria-label="Giới hạn bản đồ thế giới công khai">
+          <StatusBadge tone="spirit">Lộ trình công khai</StatusBadge>
+          <strong>Bản đồ thế giới là lộ trình khám phá công khai, chưa phải bản đồ mở hoặc máy chủ thế giới thật.</strong>
+          <span>
+            Trang này dùng hình ảnh và kịch bản thế giới LinhGioiOnline để nối Linh Thành, Đông Môn, Linh Lâm,
+            Cổ Di Tích và Âm Giới mà không hứa có truyền bản đồ thời gian thực, vị trí tài khoản, trạng thái nhiệm vụ
+            hoặc máy chủ thế giới chính thức.
+          </span>
+        </aside>
         <GamePillarGrid />
 
         <section className="lgo-world-fantasy-panel">
           <div>
-            <p className="lgo-eyebrow">World structure</p>
-            <h2>Zone Network thay vì một open world phẳng</h2>
+            <p className="lgo-eyebrow">Cấu trúc thế giới</p>
+            <h2>Mạng vùng thay vì một thế giới mở phẳng</h2>
             <p>
-              Thế giới được tổ chức thành các node và tuyến vùng: Linh Thành, các cổng Đông/Tây/Nam/Bắc, khu dân cư, thương phố, học viện, training field, Linh Lâm, Cổ Di Tích và các realm cao hơn. Mỗi nơi có vai trò xã hội, phiêu lưu hoặc cốt truyện riêng.
+              Thế giới được tổ chức thành các điểm vùng và tuyến khám phá: Linh Thành, các cổng Đông/Tây/Nam/Bắc, khu dân cư, thương phố, học viện, sân luyện, Linh Lâm, Cổ Di Tích và các cõi cao hơn. Mỗi nơi có vai trò xã hội, phiêu lưu hoặc cốt truyện riêng.
             </p>
           </div>
-          <div className="lgo-world-layer-stack" aria-label="2D parallax layers">
-            <span>Sky / Fog</span>
-            <span>Far Background</span>
-            <span>Mid Background</span>
-            <span>Near Background</span>
-            <span>Gameplay Plane</span>
-            <span>Foreground</span>
+          <div className="lgo-world-layer-stack" aria-label="Các lớp parallax 2D">
+            <span>Bầu trời / Sương</span>
+            <span>Nền xa</span>
+            <span>Nền giữa</span>
+            <span>Nền gần</span>
+            <span>Mặt phẳng chơi</span>
+            <span>Tiền cảnh</span>
           </div>
         </section>
 

@@ -2760,7 +2760,7 @@ export const worldRouteStops: WorldRouteStop[] = [
     order: "02",
     name: "Đông Môn",
     kind: "gate",
-    summary: "Cửa ngõ nhập môn: Người Giữ Cổng, Bia Luyện và những bài học đầu tiên về di chuyển, dash và skill class.",
+    summary: "Cửa ngõ nhập môn: Người Giữ Cổng, Bia Luyện và những bài học đầu tiên về di chuyển, dash và kỹ năng môn phái.",
     mood: "Ranh giới giữa an toàn và chưa biết — cổng thành phía sau, rừng và linh khí bất ổn phía trước.",
     playerPromise: "Bước ra khỏi hub và cảm nhận class của mình qua chuyển động, tương tác và những nguy hiểm đầu tiên.",
     signatureActivity: "Training, gặp Gate Keeper, học nhịp di chuyển và nhận dấu hiệu đầu tiên rằng vùng ngoài thành không còn bình thường.",
@@ -2845,7 +2845,7 @@ export const publicGameArtAssets: PublicGameArtAsset[] = [
     upstreamStatus: "DRAFT_OWNER_REVIEW",
     webStatus: "WEB_REFERENCE_APPROVED",
     role: "world-concept",
-    publicLabel: "World concept · Đông Môn",
+    publicLabel: "Ý tưởng thế giới · Đông Môn",
     sourceSha256: "6dc7313b27f2b00eb93c0fa8dd0a1f3793c9f7a4f406439068959664cf75ea1a",
     notFinalArt: "Concept art for public world direction; not a gameplay screenshot or production-final environment."
   },

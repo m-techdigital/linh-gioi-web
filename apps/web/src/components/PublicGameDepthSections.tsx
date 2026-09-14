@@ -1,5 +1,6 @@
 import { classPaths, narrativeChapters, worldRouteStops } from "@lgo-web/content";
 import { SectionHeading } from "@lgo-web/ui";
+import { getWorldRouteKindLabel } from "./worldRouteLabels";
 
 export function ClassIdentityDeck() {
   return (
@@ -37,7 +38,7 @@ export function ClassIdentityDeck() {
 export function WorldAtlasStories() {
   return (
     <section className="lgo-experience-section lgo-world-atlas-section" aria-labelledby="world-atlas-heading">
-      <SectionHeading eyebrow="World atlas" title="Mỗi nơi trong Linh Giới phải cho bạn một cảm giác khác">
+      <SectionHeading eyebrow="Bản đồ thế giới" title="Mỗi nơi trong Linh Giới phải cho bạn một cảm giác khác">
         Tuyến mở đầu không chỉ tăng độ khó. Nó dịch chuyển từ cảm giác thuộc về, sang tò mò, bất an, khám phá lịch sử rồi cuối cùng là một hiểm họa đủ lớn để kéo cả cộng đồng vào cuộc.
       </SectionHeading>
       <div className="lgo-world-atlas-stories" id="world-atlas-heading">
@@ -48,7 +49,7 @@ export function WorldAtlasStories() {
             </div>
             <div className="lgo-world-atlas-copy">
               <header>
-                <span className="lgo-card-kicker">{stop.kind}</span>
+                <span className="lgo-card-kicker">{getWorldRouteKindLabel(stop.kind)}</span>
                 <h3>{stop.name}</h3>
                 <small>{index === 0 ? "Nơi để trở về" : index === worldRouteStops.length - 1 ? "Nơi hai thế giới va vào nhau" : "Một bước xa hơn khỏi vùng an toàn"}</small>
               </header>

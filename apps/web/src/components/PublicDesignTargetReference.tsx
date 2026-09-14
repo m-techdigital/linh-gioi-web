@@ -10,7 +10,7 @@ const PUBLIC_HOMEPAGE_TARGET = {
 };
 
 const PUBLIC_GAME_WORLD_TARGET = {
-  label: "Game world detailed design target",
+  label: "Thiết kế chi tiết thế giới",
   href: "/design-reference/game-world-detailed-design-target-v1120.png",
   scope: "Public Game World"
 };

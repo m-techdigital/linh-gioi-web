@@ -55,8 +55,8 @@ def check_tests_docs() -> None:
     for rel in ["docs/execution/specs/WEB-FE-HOMEPAGE-VIETNAMESE-FIRST-FLOW-v1.134.md", "LGO-WEB-FE-HOMEPAGE-VIETNAMESE-FIRST-FLOW-REPORT-v1.134.md", "HANDOFF-LGO-WEB-FE-HOMEPAGE-VIETNAMESE-FIRST-FLOW-v1.134.md"]:
         require_text(rel, ["WEB-FE-HOMEPAGE-VIETNAMESE-FIRST-FLOW-v1.134", "WEB_CLOSED", "Sequential Page Completion", "Just-in-time Design", "Design Target First", "Base UI/UX Layout", "Public Homepage", "Vietnamese", "browser/e2e", "built-in image_gen", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Homepage", "homepage-detailed-design-target-v1118.png", "WEB-FE-HOMEPAGE-DETAILED-DESIGN-TARGET-v1.118.png"])
-    require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-HOMEPAGE-VIETNAMESE-FIRST-FLOW-v1.134 WEB_CLOSED", "sequential page completion is now mandatory", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.135"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.135", "complete one page at a time", "just-in-time", "homepage page slice"])
+    require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-HOMEPAGE-VIETNAMESE-FIRST-FLOW-v1.134 WEB_CLOSED", "sequential page completion is now mandatory", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "complete one page at a time", "just-in-time"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-HOMEPAGE-VIETNAMESE-FIRST-FLOW-v1.134 | WEB-FE | WEB_CLOSED |"])
 def main() -> int:
     check_target(); check_source(); check_tests_docs()

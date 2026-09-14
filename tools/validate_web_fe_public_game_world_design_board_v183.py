@@ -18,8 +18,8 @@ def check_game_world_board() -> None:
     require_file("apps/web/public/game-art/design-boards/game-world-atlas-hub.svg")
     svg = read("apps/web/public/game-art/design-boards/game-world-atlas-hub.svg")
     if "<svg" not in svg or len(svg) > 12000: fail("game-world-atlas-hub.svg should be a small SVG reference-art asset")
-    require_text("apps/web/src/app/game/page.tsx", ["lgo-game-world-design-board", "/game-art/design-boards/game-world-atlas-hub.svg", "Game world atlas hub board", "loading=\"eager\"", "Game reference art", "không phải live open-world backend"])
-    require_text("apps/web/src/app/globals.css", ["WEB v1.83 public game world atlas hub board", ".lgo-game-world-design-board", ".lgo-game-world-design-board img", "grid-template-columns: 1fr", "overflow-wrap: anywhere", "WEB v1.83 public game world hero typography cap", "clamp(36px, 3.5vw, 64px)", "clamp(34px, 9vw, 48px)", "WEB v1.83 public game world atlas typography cap", "clamp(42px, 4vw, 64px)", "clamp(34px, 12vw, 48px)"])
+    require_text("apps/web/src/app/game/page.tsx", ["WorldRouteJourney", "WorldAtlasStories", "lgo-game-world-boundary", "Lộ trình công khai", "Bản đồ thế giới là lộ trình khám phá công khai", "chưa phải bản đồ mở hoặc máy chủ thế giới thật"])
+    require_text("apps/web/src/app/globals.css", ["WEB v1.120/v1.135 game world detailed design target density", ".lgo-gamepage-stack", ".lgo-world-route-section", ".lgo-world-atlas-section", ".lgo-game-world-boundary"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-game-world-design-board-v183.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-GAME-WORLD-DESIGN-BOARD-v1.83.md", "LGO-WEB-FE-PUBLIC-GAME-WORLD-DESIGN-BOARD-REPORT-v1.83.md", "HANDOFF-LGO-WEB-FE-PUBLIC-GAME-WORLD-DESIGN-BOARD-v1.83.md"]: require_file(rel)
     require_text("tests/e2e/fe-public-game-world-design-board-v183.spec.ts", ["/game", "Game world atlas hub board", "/game-art/design-boards/game-world-atlas-hub.svg", "loading", "naturalWidth", "game world horizontal overflow"])

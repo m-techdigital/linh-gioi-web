@@ -88,6 +88,11 @@ FE/UI work must be completed page by page. Start from the selected page, attach 
 
 Design Target First means just-in-time design for the current page or component, not designing the whole site upfront. Each page must have a concrete target before code changes for that page. Public visible design copy must be Vietnamese unless an owner-approved route-specific exception is recorded. If a design is stale, English-heavy, or no longer matches the intended UI/UX direction, replace or supersede that target within the current page slice before implementation.
 
+
+## Layout Match Before Closure rule
+
+A FE/UI page slice cannot close until the implemented page has been rendered in a real browser and compared against its registered design target. The comparison must cover hero composition, visual hierarchy, spacing, typography scale, content order, first-fold density and mobile behavior. Copy-only, label-only, validator-only or density-only changes are not enough to mark a page WEB_CLOSED. If the implementation does not match the target, keep working on that same page; do not move to another page.
+
 ## Evidence rule
 
 Source inspection alone is not runtime PASS. If runtime/browser/visual gates cannot run in the environment, classify them as not executed or environment limited in the task handoff. Never skip-as-PASS.
