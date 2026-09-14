@@ -21,11 +21,11 @@ def require_order(rel: str, first: str, second: str) -> None:
 def check_routes() -> None:
     require_order("apps/web/src/app/accessibility/page.tsx", "<h1>Dễ đọc và dễ thao tác</h1>", "<PlayerTrustReleaseCta />")
     require_order("apps/web/src/app/community/page.tsx", "<h1>Cộng đồng Linh Giới</h1>", "<PlayerTrustReleaseCta />")
-    require_order("apps/web/src/app/game/loop/page.tsx", "<h1>World gameplay loop</h1>", "<PlayerTrustReleaseCta />")
+    require_order("apps/web/src/app/game/loop/page.tsx", "<h1>Vòng lặp gameplay thế giới</h1>", "<PlayerTrustReleaseCta />")
     require_order("apps/web/src/app/performance/page.tsx", "<h1>Hiệu năng và ngân sách nội dung</h1>", "<PlayerTrustReleaseCta />")
     require_text("apps/web/src/app/accessibility/page.tsx", ["Chưa có audit WCAG chính thức", "chưa có claim pháp lý", "chưa có thiết lập cá nhân"])
     require_text("apps/web/src/app/community/page.tsx", ["Chưa có trò chuyện · chưa có diễn đàn · chưa có bang hội", "chưa mở trò chuyện, diễn đàn, bang hội", "điều phối thật"])
-    require_text("apps/web/src/app/game/loop/page.tsx", ["without claiming live combat", "inventory persistence", "account integration"])
+    require_text("apps/web/src/app/game/loop/page.tsx", ["không công bố", "combat trực tiếp", "tích hợp tài khoản thật"])
     require_text("apps/web/src/app/performance/page.tsx", ["Chưa có đo Core Web Vitals", "chưa có chứng nhận Lighthouse", "chưa có CDN ảnh riêng"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-route-heading-priority-v189.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-v1.89.md", "LGO-WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-REPORT-v1.89.md", "HANDOFF-LGO-WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-v1.89.md"]: require_file(rel)

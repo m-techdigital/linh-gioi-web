@@ -1,3 +1,16 @@
+Current phase: WEB-FE-GAME-LOOP-REAL-UI-LAYOUT-v1.154 WEB_CLOSED.
+
+Current decision: v1.154 closed the active `/game/loop` page slice as a real browser UI/UX Layout task. The existing gameplay-loop board remained the design guardrail; work focused on the rendered page, first-fold order, Vietnamese game-scenario boundaries and shared Base First layout. Entire program is NOT production-complete.
+
+- v1.154 did not create a new design batch because the existing gameplay-loop board was sufficient for comparison after minimal Vietnamese alignment in the rendered page.
+- v1.154 replaced the old English-heavy first-flow with Vietnamese `Vòng lặp gameplay thế giới`, a compact boundary, the gameplay-loop board and a three-step loop gate path.
+- v1.154 moved gameplay-loop board/stage layout CSS out of `apps/web/src/app/globals.css` and into shared `packages/ui/src/service-layout.css`.
+- v1.154 evidence: browser/e2e desktop/mobile v1.154 and historical v1.82/v1.89 compatibility; source validator; Web/content/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/game-loop-desktop-v1154.png` and `/tmp/game-loop-mobile-v1154.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.155. Select `/guides/world-gameplay-loop-guide` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-ROADMAP-REAL-UI-LAYOUT-v1.153 WEB_CLOSED.
 
 Current decision: v1.153 closed the active `/roadmap` page slice as a real browser UI/UX Layout task. The existing roadmap board remained the design guardrail; work focused on the rendered page, first-flow hierarchy, Vietnamese game-scenario boundaries and shared Base First layout. Entire program is NOT production-complete.

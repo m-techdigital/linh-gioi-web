@@ -18,11 +18,11 @@ def check_game_loop_board() -> None:
     require_file("apps/web/public/game-art/design-boards/world-gameplay-loop-board.svg")
     svg = read("apps/web/public/game-art/design-boards/world-gameplay-loop-board.svg")
     if "<svg" not in svg or len(svg) > 12000: fail("world-gameplay-loop-board.svg should be a small SVG reference-art asset")
-    require_text("apps/web/src/app/game/loop/page.tsx", ["lgo-game-loop-design-board", "/game-art/design-boards/world-gameplay-loop-board.svg", "World gameplay loop board", "loading=\"eager\"", "Game reference art", "không phải combat backend thật"])
-    require_text("apps/web/src/app/globals.css", ["WEB v1.82 public world gameplay-loop board", ".lgo-game-loop-design-board", ".lgo-game-loop-design-board img", "grid-template-columns: 1fr", "overflow-wrap: anywhere"])
+    require_text("apps/web/src/app/game/loop/page.tsx", ["lgo-game-loop-design-board", "/game-art/design-boards/world-gameplay-loop-board.svg", "Board vòng lặp gameplay thế giới Linh Giới", "loading=\"eager\"", "Board tham chiếu", "không phải combat vận hành thật"])
+    require_text("packages/ui/src/service-layout.css", ["WEB v1.82 public world gameplay-loop board", ".lgo-game-loop-design-board", ".lgo-game-loop-design-board img", "grid-template-columns: 1fr", "overflow-wrap: anywhere"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-game-loop-design-board-v182.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-GAME-LOOP-DESIGN-BOARD-v1.82.md", "LGO-WEB-FE-PUBLIC-GAME-LOOP-DESIGN-BOARD-REPORT-v1.82.md", "HANDOFF-LGO-WEB-FE-PUBLIC-GAME-LOOP-DESIGN-BOARD-v1.82.md"]: require_file(rel)
-    require_text("tests/e2e/fe-public-game-loop-design-board-v182.spec.ts", ["/game/loop", "World gameplay loop board", "/game-art/design-boards/world-gameplay-loop-board.svg", "loading", "naturalWidth", "game loop horizontal overflow"])
+    require_text("tests/e2e/fe-public-game-loop-design-board-v182.spec.ts", ["/game/loop", "Board vòng lặp gameplay thế giới Linh Giới", "/game-art/design-boards/world-gameplay-loop-board.svg", "loading", "naturalWidth", "game loop horizontal overflow"])
     for rel in ["docs/execution/specs/WEB-FE-PUBLIC-GAME-LOOP-DESIGN-BOARD-v1.82.md", "LGO-WEB-FE-PUBLIC-GAME-LOOP-DESIGN-BOARD-REPORT-v1.82.md", "HANDOFF-LGO-WEB-FE-PUBLIC-GAME-LOOP-DESIGN-BOARD-v1.82.md"]:
         require_text(rel, ["WEB-FE-PUBLIC-GAME-LOOP-DESIGN-BOARD-v1.82", "WEB_CLOSED", "World gameplay loop board", "browser/e2e", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-PUBLIC-GAME-LOOP-DESIGN-BOARD-v1.82 WEB_CLOSED", "WEB-FE-PUBLIC-GAME-LOOP-DESIGN-BOARD-v1.82"])

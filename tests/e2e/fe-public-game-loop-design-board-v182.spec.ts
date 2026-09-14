@@ -22,7 +22,7 @@ async function collectGameLoopBoardMetrics(page: Page): Promise<GameLoopBoardMet
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const image = document.querySelector<HTMLImageElement>('img[alt="World gameplay loop board"]');
+    const image = document.querySelector<HTMLImageElement>('img[alt="Board vòng lặp gameplay thế giới Linh Giới"]');
     const caption = image?.closest("figure")?.querySelector("figcaption");
     return {
       pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -41,8 +41,8 @@ async function collectGameLoopBoardMetrics(page: Page): Promise<GameLoopBoardMet
 test.describe("public world gameplay loop design board", () => {
   test("/game/loop renders the gameplay-loop visual without mobile overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/game/loop`);
-    await expect(page.getByRole("heading", { name: "World gameplay loop" })).toBeVisible();
-    await expect(page.getByRole("img", { name: "World gameplay loop board" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Vòng lặp gameplay thế giới" })).toBeVisible();
+    await expect(page.getByRole("img", { name: "Board vòng lặp gameplay thế giới Linh Giới" })).toBeVisible();
 
     const metrics = await collectGameLoopBoardMetrics(page);
     expect(metrics.board, "game loop board metrics").not.toBeNull();
@@ -51,7 +51,7 @@ test.describe("public world gameplay loop design board", () => {
     expect(metrics.board?.naturalWidth, "game loop board loaded width").toBeGreaterThan(0);
     expect(metrics.board?.naturalHeight, "game loop board loaded height").toBeGreaterThan(0);
     expect(metrics.pageOverflow, "game loop horizontal overflow").toBeLessThanOrEqual(0);
-    expect(metrics.maxFont, "game loop visible font cap").toBeLessThanOrEqual(isMobile ? 48 : 64);
+    expect(metrics.maxFont, "game loop visible font cap").toBeLessThanOrEqual(isMobile ? 34 : 56);
     expect(metrics.board?.captionFontSize ?? 0, "game loop board caption font-size").toBeLessThanOrEqual(18);
   });
 });
