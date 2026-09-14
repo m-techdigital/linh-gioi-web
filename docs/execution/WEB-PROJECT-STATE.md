@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-RELEASE-HEADING-PRIORITY-v1.86 WEB_CLOSED.
+
+Current decision: v1.86 FE public release heading-priority slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.86 moves CTA sections below the page h1 on `/release`, `/release/readiness` and `/release/tester-pack`.
+- The selected release routes now start main content with exactly one visible h1 while keeping release/tester/backend/entitlement non-claims explicit.
+- v1.86 evidence: RED browser/e2e reproduced CTA h2 headings before release h1; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile heading-order/font-size/overflow PASS; visual metric review completed with pageOverflow 0.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.87.
+
 Current phase: WEB-FE-PUBLIC-CONTENT-HEADING-ORDER-v1.85 WEB_CLOSED.
 
 Current decision: v1.85 FE public content heading-order slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

@@ -22,9 +22,6 @@ export default function ReleaseReadinessPage() {
   return (
     <WebAppShell>
       <Stack>
-        <ContentIaStartCta />
-        <FaqHelpfulnessCta />
-        <RouteContinuityCta />
         <GameCard className="lgo-detail-hero-card lgo-release-readiness-hero-card">
           <StatusBadge tone="gold">WEB v1.19 release readiness hub</StatusBadge>
           <span className="lgo-card-kicker">Owner gates · tester expectation · Download/Status/Support alignment · No public build</span>
@@ -57,6 +54,9 @@ export default function ReleaseReadinessPage() {
         <SectionHeading eyebrow="Readiness before conversion" title="Release clarity phải đi trước mọi CTA nhạy cảm">
           v1.19 tập trung vào product web: owner gates, tester expectation copy, download/status/support alignment và release route clarity.
         </SectionHeading>
+        <ContentIaStartCta />
+        <FaqHelpfulnessCta />
+        <RouteContinuityCta />
         <ReleaseReadinessHubBoard />
         <OwnerReleaseGateBoard />
         <TesterExpectationCopyBoard />

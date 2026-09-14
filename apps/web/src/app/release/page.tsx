@@ -24,9 +24,6 @@ export default function ReleaseNarrativePage() {
   return (
     <WebAppShell>
       <Stack>
-        <ContentIaStartCta />
-        <FaqHelpfulnessCta />
-        <RouteContinuityCta />
         <GameCard className="lgo-detail-hero-card lgo-release-narrative-hero-card">
           <StatusBadge tone="gold">WEB v1.18 player trust / staged release narrative</StatusBadge>
           <span className="lgo-card-kicker">No public build · no open beta · no entitlement funnel</span>
@@ -63,6 +60,9 @@ export default function ReleaseNarrativePage() {
         <SectionHeading eyebrow="Player trust first" title="Release wording phải chứng minh trước, rồi mới hứa sau">
           v1.18 tập trung vào product web: player trust, closed-test readiness, staged release messaging và route clarity giữa download/status/support.
         </SectionHeading>
+        <ContentIaStartCta />
+        <FaqHelpfulnessCta />
+        <RouteContinuityCta />
         <ReleaseReadinessHubCta />
         <ReleaseReadinessHubBoard />
         <OwnerReleaseGateBoard />
