@@ -1,3 +1,18 @@
+Current phase: WEB-FE-NEWS-PUBLIC-GAME-INFO-REAL-UI-LAYOUT-v1.180 WEB_CLOSED.
+
+Current decision: v1.180 closed the active `/news/public-game-info-depth-started` page slice as a real browser UI/UX Layout task. The existing public core design target and shared public shell were sufficient as the comparison guardrail; work focused on the rendered News Detail article, public game-info context, shared header/menu/footer coherence, article reading density, related-news grid, keyboard navigation and shared Base First detail layout. Entire program is NOT production-complete.
+
+- v1.180 did not create a design batch because the existing public core target and registered route target were enough for comparison after checking shared shell coherence.
+- v1.180 browser/e2e RED showed the detail page rendered the hero but missed current-slug detail depth and still exposed stale WEB v1.8 English fixture body.
+- v1.180 completed the page with Vietnamese public game-info article body, two compact detail cards, current-slug detail heading, duplicate stale detail section removal and next-step CTA without fake CMS/live feed/backend production claims.
+- v1.180 reused the shared News Detail layout in `packages/ui/src/service-layout.css`; no current-page selectors were added to `apps/web/src/app/globals.css`.
+- v1.180 final browser/e2e metrics: desktop hero bottom 448.91px, depth top 459.78px, first depth card top 602.69px, related top 820.48px, next steps top 1154.94px, scrollHeight 1808px, h1/max font 42.48px, 2 desktop related columns, overflow 0; mobile hero bottom 439.22px, depth top 449.13px, first depth card top 588.41px, related top 1036.95px, next steps top 1552.05px, scrollHeight 2460px, h1/max font 27.52px, 1 mobile related column, overflow 0.
+- v1.180 evidence: browser/e2e desktop/mobile v1.180; screenshot review `/tmp/news-public-game-info-desktop-v1180.png` and `/tmp/news-public-game-info-mobile-v1180.png`; source validator; Web/UI checks; Web build; clean current-state closure validator.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.181. Select `/news/news-guide-detail-pages-started` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-NEWS-VISUAL-RESPONSIVE-REAL-UI-LAYOUT-v1.179 WEB_CLOSED.
 
 Current decision: v1.179 closed the active `/news/visual-responsive-polish-started` page slice as a real browser UI/UX Layout task. The existing public core design target and shared public shell were sufficient as the comparison guardrail; work focused on the rendered News Detail article, visual/responsive context, shared header/menu/footer coherence, article reading density, related-news grid, keyboard navigation and shared Base First detail layout. Entire program is NOT production-complete.

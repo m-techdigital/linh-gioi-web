@@ -16,6 +16,7 @@ const articleDetailTitles: Record<string, string> = {
   "web-program-control-tower": "Bài viết giải thích governance web độc lập",
   "public-ux-content-polish-started": "Bài viết giải thích polish UX public",
   "visual-responsive-polish-started": "Bài viết giải thích visual và responsive",
+  "public-game-info-depth-started": "Bài viết giải thích thông tin game public",
 };
 
 function articleDetailTitle(slug: string) {
@@ -126,7 +127,7 @@ export function DetailPageNextSteps() {
       <div>
         <StatusBadge tone="spirit">Nội dung public tĩnh</StatusBadge>
         <h2>Tin tức, hướng dẫn, tải game và trạng thái đang được làm sâu theo hướng người chơi đọc được ngay.</h2>
-        <p>Kiểm tra trình duyệt/e2e là bằng chứng layout; nội dung vẫn là web public rõ ràng, không tuyên bố backend production.</p>
+        <p>Kiểm tra trình duyệt/e2e là bằng chứng layout; nội dung vẫn là web public rõ ràng, không tuyên bố backend vận hành chính thức.</p>
       </div>
       <div className="lgo-product-first-actions">
         <LinkButton href="/news" tone="spirit">Tin tức</LinkButton>

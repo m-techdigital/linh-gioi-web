@@ -45,7 +45,7 @@ def main() -> int:
         'WEB v1.6 đặt nền UX public cho người chơi',
         'UX public chuyển từ danh sách thô sang hành trình đọc',
         'Nội dung public phải đồng bộ với shell và menu chung',
-        'Không có xác thực production, không có DB, không có CMS và không tích hợp backend thật.',
+        'Không có xác thực production, không có DB, không có CMS và không tích hợp backend vận hành thật.',
         'Không xem dịch chữ, chỉ sửa design hoặc chỉ chạy validator là hoàn thiện UI/UX Layout.',
         'ranh giới không tuyên bố quá phạm vi',
     ])
@@ -53,7 +53,6 @@ def main() -> int:
         'WEB v1.6 content polish established the player-facing foundation',
         'player-facing foundation while keeping non-claims explicit',
         'guardrail non-claim',
-        'Không có auth production',
         'design-only hoặc validator-only',
     ])
 
@@ -85,15 +84,15 @@ def main() -> int:
 
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-PUBLIC-UX-REAL-UI-LAYOUT-v1.178 WEB_CLOSED',
-        'Select `/news/public-game-info-depth-started`',
+        'Select `/news/news-guide-detail-pages-started`',
         '/tmp/news-public-ux-desktop-v1178.png',
         '/tmp/news-public-ux-mobile-v1178.png',
         'Real Browser UI/UX Layout First',
         'Base First',
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.180',
-        'Current FE scope: select `/news/public-game-info-depth-started`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.181',
+        'Current FE scope: select `/news/news-guide-detail-pages-started`',
         'Real Browser UI/UX Layout First',
         'Base UI/UX Layout',
     ])

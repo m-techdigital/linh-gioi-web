@@ -528,7 +528,7 @@ export const contentEntries: ContentEntry[] = [
     category: "news",
     title: "Bắt đầu polish UX và nội dung public",
     summary: "Slice web trước tập trung vào hierarchy trang chủ, thông tin game, roadmap, trạng thái tải game và hướng dẫn hỗ trợ.",
-    body: "WEB v1.6 đặt nền UX public cho người chơi: hierarchy trang chủ, thông tin game, roadmap, trạng thái tải game và hướng dẫn hỗ trợ được gom lại rõ hơn nhưng vẫn giữ ranh giới không auth production, không DB, không CMS và không tích hợp backend thật.",
+    body: "WEB v1.6 đặt nền UX public cho người chơi: hierarchy trang chủ, thông tin game, roadmap, trạng thái tải game và hướng dẫn hỗ trợ được gom lại rõ hơn nhưng vẫn giữ ranh giới không xác thực production, không DB, không CMS và không tích hợp backend vận hành thật.",
     publishedAt: "2026-09-05T06:00:00.000Z",
     status: "published",
     featured: true,
@@ -550,8 +550,8 @@ export const contentEntries: ContentEntry[] = [
     slug: "public-game-info-depth-started",
     category: "news",
     title: "Thông tin game public được làm sâu hơn",
-    summary: "WEB v1.8 mở rộng lore, hướng dẫn người mới, trạng thái tải game, FAQ hỗ trợ và readiness cộng đồng mà không claim hệ thống production.",
-    body: "WEB v1.8 focuses on the actual public website product. It deepens world story chapters, beginner guide steps, download status notes, FAQ hỗ trợ and community readiness while runtime/browser checks remain guardrails only.",
+    summary: "WEB v1.8 làm sâu lore, hướng dẫn người mới, trạng thái tải, FAQ hỗ trợ và readiness cộng đồng.",
+    body: "WEB v1.8 làm sâu nội dung game trên web public: chương truyện thế giới, bước nhập môn, ghi chú tải game, FAQ hỗ trợ và readiness cộng đồng. Kiểm tra trình duyệt chỉ là bằng chứng layout, không tuyên bố hệ thống vận hành chính thức.",
     publishedAt: "2026-09-05T10:00:00.000Z",
     status: "published",
     featured: true,
@@ -941,6 +941,21 @@ export const downloadBuilds: DownloadBuild[] = [
 export const contentDetailSections: ContentDetailSection[] = [
 
   {
+    slug: "public-game-info-depth-started",
+    heading: "Thông tin game public nối lore với hành trình người mới",
+    body: "Bài viết này giải thích vì sao lore, lớp nhân vật, hướng dẫn nhập môn, trạng thái tải và hỗ trợ phải được trình bày như một hành trình đọc chung thay vì các mảnh fixture rời rạc.",
+    playerImpact: "Người chơi hiểu trước bối cảnh Linh Giới, biết đọc route nào tiếp theo và không nhầm nội dung giới thiệu với dữ liệu gameplay production thật.",
+    nonClaim: "Không công bố cơ sở dữ liệu nhiệm vụ, chỉ số nhân vật, tài khoản thật hoặc dữ liệu server vận hành thật."
+  },
+  {
+    slug: "public-game-info-depth-started",
+    heading: "Readiness cộng đồng phải giữ ranh giới web public",
+    body: "Thông tin game public có thể chuẩn bị kỳ vọng cộng đồng, nhưng mọi CTA tải game, hỗ trợ và trạng thái vẫn phải nói rõ khi nào chỉ là nội dung tĩnh.",
+    playerImpact: "Người chơi thấy cùng nhịp đọc với các bài tin chi tiết khác, có tin liên quan và bước tiếp theo mà không bị dẫn tới đăng ký hoặc download giả.",
+    nonClaim: "Không mở tải game, không mở xác thực vận hành chính thức, không có CMS và không tích hợp backend vận hành thật."
+  },
+
+  {
     slug: "visual-responsive-polish-started",
     heading: "Thứ bậc thị giác giúp người chơi đọc đúng trọng tâm",
     body: "Slice này đặt lại nhịp hero, card và CTA để thông tin game, trạng thái tải và hỗ trợ dễ quét hơn trên first-fold mà không biến trang tin thành log kỹ thuật.",
@@ -960,7 +975,7 @@ export const contentDetailSections: ContentDetailSection[] = [
     heading: "UX public chuyển từ danh sách thô sang hành trình đọc",
     body: "Slice v1.6 gom các điểm người chơi cần đọc trước: trang chủ, thông tin game, roadmap, tải game và hỗ trợ. Mục tiêu là giúp người mới hiểu trạng thái dự án mà không bị dẫn sang claim backend hoặc download thật.",
     playerImpact: "Người chơi có thể đi từ tin tức sang các route cốt lõi theo thứ tự dễ hiểu, thay vì gặp danh sách fixture hoặc CTA mơ hồ.",
-    nonClaim: "Không có xác thực production, không có DB, không có CMS và không tích hợp backend thật."
+    nonClaim: "Không có xác thực production, không có DB, không có CMS và không tích hợp backend vận hành thật."
   },
   {
     slug: "public-ux-content-polish-started",
@@ -1037,7 +1052,7 @@ export const contentDetailSections: ContentDetailSection[] = [
     heading: "Vì sao web repo đứng độc lập?",
     body: "Trang tin này giải thích rằng website là lớp public/player-facing riêng, không được sao chép game source hoặc tự dựng backend thay game server canonical.",
     playerImpact: "Người đọc hiểu vì sao web có thể phát triển nhanh nhưng vẫn không hứa tính năng account, DB hoặc portal thật.",
-    nonClaim: "Không có backend độc lập, không có auth production, không có lưu trữ DB."
+    nonClaim: "Không có backend độc lập, không có xác thực production, không có lưu trữ DB."
   },
   {
     slug: "web-program-control-tower",
@@ -1045,13 +1060,6 @@ export const contentDetailSections: ContentDetailSection[] = [
     body: "Governance web yêu cầu mỗi page đi theo shell public đã chấp nhận, dùng Base First cho layout lặp lại và chỉ sửa design target vừa đủ khi nó lệch UI chung.",
     playerImpact: "Người chơi thấy cùng một header, menu, footer và nhịp đọc trên các trang public thay vì mỗi route một kiểu trình bày.",
     nonClaim: "Không tính tiến độ design-only, không sao chép game backend, không tạo owner component trùng lặp."
-  },
-  {
-    slug: "public-game-info-depth-started",
-    heading: "Từ placeholder sang thông tin game dễ đọc",
-    body: "WEB v1.8 đưa lore, beginner guide, download status, FAQ và community readiness vào các trang public để người chơi có đường đọc rõ hơn.",
-    playerImpact: "Người chơi mới có thể đi từ Trang chủ tới Thế giới, Guide, Download và Support mà không cần hiểu cấu trúc sandbox.",
-    nonClaim: "No production quest/wiki/combat/economy claim."
   },
   {
     slug: "news-guide-detail-pages-started",
@@ -1435,7 +1443,7 @@ export const guideDetailSteps: GuideDetailStep[] = [
     title: "Xem trạng thái công khai trước",
     action: "Mở Trạng thái chơi và Tin cậy tải game để biết gói build, tài khoản, hỗ trợ và cộng đồng đang ở mức nào.",
     expectedResult: "Người chơi hiểu đâu là thông tin công khai, đâu là guardrail nội bộ và đâu là phụ thuộc đang tạm khóa.",
-    blockedScope: "Chưa có gói tải game công khai, auth production hoặc support backend live."
+    blockedScope: "Chưa có gói tải game công khai, xác thực production hoặc support backend live."
   },
   {
     slug: "community-roadmap-onboarding-guide",
@@ -2907,7 +2915,7 @@ export const faqDiscoveryGroups: FaqDiscoveryGroup[] = [
   { id: "closed-test", title: "Closed test / gói tester", playerQuestion: "Tôi có được tham gia test chưa và cần chuẩn bị gì?", route: "/release/tester-pack", helpfulnessCue: "Đọc Gói tester để chuẩn bị phản hồi an toàn; chỉ gửi khi owner công bố kênh chính thức.", nonClaim: "Không có kênh nhận tester live, không bảo đảm suất tester, không có tự động cấp quyền." },
   { id: "safety-support", title: "An toàn / hỗ trợ", playerQuestion: "Tôi nên báo lỗi hoặc góp ý thế nào để không gửi nhầm dữ liệu?", route: "/support/safety", helpfulnessCue: "Dùng hỗ trợ an toàn để chuẩn bị route, bước tái hiện, loại thiết bị và ảnh/log đã che dữ liệu riêng tư.", nonClaim: "Không có hộp thư ticket bảo mật, không tra cứu tài khoản, không có SLA production." },
   { id: "account-backend", title: "Tài khoản / ranh giới backend", playerQuestion: "Tại sao portal, login hoặc account chưa hoạt động như game thật?", route: "/status", helpfulnessCue: "Trang trạng thái nói rõ bề mặt công khai/nội bộ/tạm khóa; WEB-08 cần hợp đồng backend trước khi tích hợp thật.", nonClaim: "Không có xác thực production, không lưu DB thật, không tích hợp portal tài khoản thật." },
-  { id: "world-loop", title: "Vòng lặp thế giới / kỳ vọng lối chơi", playerQuestion: "Game hiện đang mô tả lối chơi tới mức nào?", route: "/game/loop", helpfulnessCue: "Vòng lặp game giải thích Cổng Linh, Người Gác Cổng, Đá Luyện Tập và những phần chưa claim như chiến đấu/kinh tế/thế giới live.", nonClaim: "Không có sát thương chiến đấu, loot, PvP, thưởng boss, máy chủ thế giới live hoặc database nhiệm vụ production." }
+  { id: "world-loop", title: "Vòng lặp thế giới / kỳ vọng lối chơi", playerQuestion: "Game hiện đang mô tả lối chơi tới mức nào?", route: "/game/loop", helpfulnessCue: "Vòng lặp game giải thích Cổng Linh, Người Gác Cổng, Đá Luyện Tập và những phần chưa claim như chiến đấu/kinh tế/thế giới live.", nonClaim: "Không có sát thương chiến đấu, loot, PvP, thưởng boss, máy chủ thế giới live hoặc cơ sở dữ liệu nhiệm vụ production." }
 ];
 
 export const faqHelpfulnessPrompts: FaqHelpfulnessPrompt[] = [

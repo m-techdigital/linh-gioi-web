@@ -67,7 +67,7 @@ def main() -> int:
         'title: "Control tower web đã được thiết lập"',
         'Bản tin này là nội dung source-owned của web program',
         'Control tower giữ header, footer, menu và workflow thống nhất',
-        'Không có backend độc lập, không có auth production, không có lưu trữ DB.',
+        'Không có backend độc lập, không có xác thực production, không có lưu trữ DB.',
         'Không tính tiến độ design-only, không sao chép game backend, không tạo owner component trùng lặp.',
     ])
     forbid_text("packages/content/src/fixtures.ts", [
@@ -105,15 +105,15 @@ def main() -> int:
 
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-CONTROL-TOWER-REAL-UI-LAYOUT-v1.177 WEB_CLOSED',
-        'Select `/news/public-game-info-depth-started`',
+        'Select `/news/news-guide-detail-pages-started`',
         '/tmp/news-control-tower-desktop-v1177.png',
         '/tmp/news-control-tower-mobile-v1177.png',
         'Real Browser UI/UX Layout First',
         'Base First',
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.180',
-        'Current FE scope: select `/news/public-game-info-depth-started`',
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.181',
+        'Current FE scope: select `/news/news-guide-detail-pages-started`',
         'Real Browser UI/UX Layout First',
         'Base UI/UX Layout',
     ])
