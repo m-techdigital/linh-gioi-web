@@ -29,19 +29,20 @@ def check_safety_board() -> None:
     require_file("apps/web/public/design-reference/support-safety-detailed-design-target-v1133.png")
     require_text("apps/web/src/app/support/safety/page.tsx", [
         "lgo-safety-support-design-board",
+        "lgo-service-proof-board",
         "/design-reference/support-safety-detailed-design-target-v1133.png",
         "Bảng thiết kế báo lỗi an toàn",
         "loading=\"eager\"",
-        "Design Target First",
+        "Board tham chiếu",
         "chưa có ticket thật",
     ])
-    require_text("apps/web/src/app/globals.css", [
-        "WEB v1.72 public safety support HUD reference board",
-        "WEB v1.133 support safety Vietnamese design target density",
-        ".lgo-safety-support-design-board",
-        ".lgo-safety-support-design-board img",
-        "grid-template-columns: 1fr",
-        "overflow-wrap: anywhere",
+    require_text("packages/ui/src/service-layout.css", [
+        "Shared support/safety safe-reporting layout",
+        "lgo-safety-support-design-board",
+        "lgo-support-safety-checklist",
+        "lgo-player-safety-board",
+        "lgo-support-issue-path-board",
+        "grid-template-columns: repeat(2, minmax(0, 1fr))",
     ])
 
 def check_tests_and_docs() -> None:

@@ -50,13 +50,13 @@ async function collectSafetyMetrics(page): Promise<SafetyMetrics> {
 }
 
 test.describe("support safety Vietnamese design target density", () => {
-  test("/support/safety attaches Public Support Safety target and keeps safe reporting readable", async ({ page, isMobile }) => {
+  test("/support/safety attaches Hỗ trợ an toàn target and keeps safe reporting readable", async ({ page, isMobile }) => {
     await page.goto(`${web}/support/safety`);
-    await expect(page.getByRole("region", { name: /Design target reference.*Public Support Safety/i })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Báo lỗi an toàn cho người chơi mới" })).toBeVisible();
+    await expect(page.getByRole("region", { name: /Design target reference.*Hỗ trợ an toàn/i })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1, name: "Báo lỗi an toàn" })).toBeVisible();
     await expect(page.locator(".lgo-safety-support-design-board").getByText("không gửi dữ liệu nhạy cảm", { exact: false })).toBeVisible();
     const metrics = await collectSafetyMetrics(page);
-    expect(metrics.designTargetScope, "Public Support Safety target scope").toContain("Public Support Safety");
+    expect(metrics.designTargetScope, "Hỗ trợ an toàn target scope").toContain("Hỗ trợ an toàn");
     expect(metrics.designTargetHref, "support safety design target href").toContain("support-safety-detailed-design-target-v1133.png");
     expect(metrics.englishLeak, "support/safety first-flow visible copy should be Vietnamese").toBe("");
     expect(metrics.overflow, "support/safety horizontal overflow").toBeLessThanOrEqual(0);

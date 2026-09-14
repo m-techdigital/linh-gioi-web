@@ -90,7 +90,7 @@ const PUBLIC_SUPPORT_HELP_TARGET = {
 const PUBLIC_SUPPORT_SAFETY_TARGET = {
   label: "Thiết kế chi tiết hỗ trợ an toàn",
   href: "/design-reference/support-safety-detailed-design-target-v1133.png",
-  scope: "Public Support Safety"
+  scope: "Hỗ trợ an toàn"
 };
 
 const PUBLIC_CORE_TARGET = {

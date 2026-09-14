@@ -38,7 +38,7 @@ def check_tests_docs() -> None:
     require_text("apps/web/src/app/support/page.tsx", ["lgo-supportpage-stack", "lgo-support-design-board", "support-detailed-design-target-v1131.png", "Hỗ trợ cộng đồng", "Không có hệ thống ticket thật", "supportTopicCards"])
     require_text("packages/ui/src/service-layout.css", ["Shared support station layout", "lgo-support-hero-note", "lgo-support-topic-board", "lgo-faq-panel"])
     forbid_text("apps/web/src/app/globals.css", ["WEB v1.131 support detailed design target density"])
-    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_SUPPORT_TARGET", "Thiết kế chi tiết hỗ trợ", "support-detailed-design-target-v1131.png", "Public Support", "pathname === \"/support\""])
+    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_SUPPORT_TARGET", "Thiết kế chi tiết hỗ trợ", "support-detailed-design-target-v1131.png", "Hỗ trợ cộng đồng", "pathname === \"/support\""])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Support", "support-detailed-design-target-v1131.png", "WEB-FE-SUPPORT-DETAILED-DESIGN-TARGET-v1.131.png", "Vietnamese", "Design Target First"])
     registry = read("docs/design/DESIGN-TARGET-REGISTRY.md")
     for line in registry.splitlines():

@@ -30,10 +30,10 @@ def check_target() -> None:
     if all((ROOT / rel).is_file() for rel in targets) and (ROOT / targets[0]).read_bytes() != (ROOT / targets[1]).read_bytes(): fail("support safety detailed target public/docs copies differ")
 def check_tests_docs() -> None:
     for rel in ["tests/e2e/fe-support-safety-design-target-density-v1133.spec.ts", "docs/execution/specs/WEB-FE-SUPPORT-SAFETY-DESIGN-TARGET-DENSITY-v1.133.md", "LGO-WEB-FE-SUPPORT-SAFETY-DESIGN-TARGET-DENSITY-REPORT-v1.133.md", "HANDOFF-LGO-WEB-FE-SUPPORT-SAFETY-DESIGN-TARGET-DENSITY-v1.133.md"]: require_file(rel)
-    require_text("tests/e2e/fe-support-safety-design-target-density-v1133.spec.ts", ["support safety Vietnamese design target density", "Public Support Safety", "support-safety-detailed-design-target-v1133.png", "support/safety first-flow visible copy should be Vietnamese", "desktop support/safety board enters first fold", "desktop issue routing remains discoverable", "support/safety h1 follows target scale"])
-    require_text("apps/web/src/app/support/safety/page.tsx", ["lgo-supportsafetypage-stack", "lgo-safety-support-design-board", "support-safety-detailed-design-target-v1133.png", "Báo lỗi an toàn cho người chơi mới", "Không gửi dữ liệu nhạy cảm", "Chưa có ticket thật", "safetyChecklist"])
-    require_text("apps/web/src/app/globals.css", ["WEB v1.133 support safety Vietnamese design target density", ".lgo-supportsafetypage-stack", ".lgo-support-safety-checklist", ".lgo-safety-support-design-board", ".lgo-player-safety-board", ".lgo-support-issue-path-board"])
-    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_SUPPORT_SAFETY_TARGET", "Thiết kế chi tiết hỗ trợ an toàn", "support-safety-detailed-design-target-v1133.png", "Public Support Safety", "pathname === \"/support/safety\""])
+    require_text("tests/e2e/fe-support-safety-design-target-density-v1133.spec.ts", ["support safety Vietnamese design target density", "Hỗ trợ an toàn", "support-safety-detailed-design-target-v1133.png", "support/safety first-flow visible copy should be Vietnamese", "desktop support/safety board enters first fold", "desktop issue routing remains discoverable", "support/safety h1 follows target scale"])
+    require_text("apps/web/src/app/support/safety/page.tsx", ["lgo-supportsafetypage-stack", "lgo-safety-support-design-board", "support-safety-detailed-design-target-v1133.png", "Báo lỗi an toàn", "Không gửi dữ liệu nhạy cảm", "Chưa có ticket thật", "safetyChecklist"])
+    require_text("packages/ui/src/service-layout.css", ["Shared support/safety safe-reporting layout", ".lgo-supportsafetypage-stack", ".lgo-support-safety-checklist", ".lgo-safety-support-design-board", ".lgo-player-safety-board", ".lgo-support-issue-path-board"])
+    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", ["PUBLIC_SUPPORT_SAFETY_TARGET", "Thiết kế chi tiết hỗ trợ an toàn", "support-safety-detailed-design-target-v1133.png", "Hỗ trợ an toàn", "pathname === \"/support/safety\""])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Support Safety", "support-safety-detailed-design-target-v1133.png", "WEB-FE-SUPPORT-SAFETY-DETAILED-DESIGN-TARGET-v1.133.png", "Vietnamese", "Design Target First"])
     registry = read("docs/design/DESIGN-TARGET-REGISTRY.md")
     for line in registry.splitlines():
@@ -42,7 +42,7 @@ def check_tests_docs() -> None:
     for rel in ["docs/execution/specs/WEB-FE-SUPPORT-SAFETY-DESIGN-TARGET-DENSITY-v1.133.md", "LGO-WEB-FE-SUPPORT-SAFETY-DESIGN-TARGET-DENSITY-REPORT-v1.133.md", "HANDOFF-LGO-WEB-FE-SUPPORT-SAFETY-DESIGN-TARGET-DENSITY-v1.133.md"]:
         require_text(rel, ["WEB-FE-SUPPORT-SAFETY-DESIGN-TARGET-DENSITY-v1.133", "WEB_CLOSED", "Design Target First", "Base UI/UX Layout", "Public Support Safety", "Vietnamese", "browser/e2e", "built-in image_gen", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["WEB-FE-SUPPORT-SAFETY-DESIGN-TARGET-DENSITY-v1.133 WEB_CLOSED", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "Design Target First", "Base UI/UX Layout", "browser/e2e", "Vietnamese"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "Real Browser UI/UX Layout First", "Base UI/UX Layout", "browser/e2e", "Vietnamese"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-SUPPORT-SAFETY-DESIGN-TARGET-DENSITY-v1.133 | WEB-FE | WEB_CLOSED |"])
 def main() -> int:
     check_target(); check_tests_docs()

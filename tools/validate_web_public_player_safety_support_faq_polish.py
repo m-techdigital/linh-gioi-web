@@ -44,7 +44,7 @@ def main() -> int:
             "PlayerSafetyPrinciplesBoard", "SupportIssuePathBoard", "ClosedTestSupportBoard", "CommunityConductBoard", "PlayerSafetySupportCta"
         ],
         "apps/web/src/app/support/safety/page.tsx": [
-            "Báo lỗi an toàn cho người chơi mới", "Chưa có ticket thật", "chưa tra cứu tài khoản", "chưa có bảng kiểm duyệt"
+            "Báo lỗi an toàn", "Chưa có ticket thật", "chưa tra cứu tài khoản", "chưa có bảng kiểm duyệt"
         ],
         "apps/web/src/app/sitemap.ts": ["/support/safety", "/guides/player-safety-support-guide"],
         "docs/execution/WEB-PROJECT-STATE.md": ["LGO_WEB_PUBLIC_PLAYER_SAFETY_SUPPORT_FAQ_POLISH_READY_v1.14"],

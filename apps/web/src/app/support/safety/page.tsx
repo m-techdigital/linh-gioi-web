@@ -33,11 +33,11 @@ const safetyChecklist = [
 export default function SafetySupportPage() {
   return (
     <WebAppShell>
-      <Stack className="lgo-player-facing-stack lgo-supportsafetypage-stack">
+      <Stack className="lgo-player-facing-stack lgo-service-compact-proof-page lgo-supportsafetypage-stack">
         <GameCard className="lgo-detail-hero-card">
-          <StatusBadge tone="jade">WEB v1.133 · báo lỗi an toàn tiếng Việt</StatusBadge>
+          <StatusBadge tone="jade">WEB v1.148 · báo lỗi an toàn</StatusBadge>
           <span className="lgo-card-kicker">Chưa có ticket thật · chưa tra cứu tài khoản · chưa có bảng kiểm duyệt</span>
-          <h1>Báo lỗi an toàn cho người chơi mới</h1>
+          <h1>Báo lỗi an toàn</h1>
           <p className="lgo-hero-lead">
             Trang này giúp người chơi chuẩn bị phản hồi hữu ích mà không gửi dữ liệu nhạy cảm,
             không nhầm roadmap với kênh hỗ trợ backend thật.
@@ -53,7 +53,7 @@ export default function SafetySupportPage() {
             <LinkButton href="/support/help" tone="jade">FAQ nhanh</LinkButton>
           </div>
         </GameCard>
-        <figure className="lgo-safety-support-design-board lgo-panel" aria-label="Bảng thiết kế báo lỗi an toàn">
+        <figure className="lgo-safety-support-design-board lgo-service-proof-board lgo-panel" aria-label="Bảng thiết kế báo lỗi an toàn">
           <img
             src="/design-reference/support-safety-detailed-design-target-v1133.png"
             alt="Thiết kế tiếng Việt cho báo lỗi an toàn và ranh giới dữ liệu"
@@ -61,10 +61,10 @@ export default function SafetySupportPage() {
             decoding="async"
           />
           <figcaption>
-            <StatusBadge tone="spirit">Design Target First</StatusBadge>
+            <StatusBadge tone="spirit">Board tham chiếu</StatusBadge>
             <strong>Không gửi dữ liệu nhạy cảm khi báo lỗi hoặc góp ý.</strong>
             <span>
-              Target này giữ `/support/safety` thành hướng dẫn an toàn: chưa có ticket thật, chưa có tra cứu tài khoản,
+              Đích này giữ `/support/safety` thành hướng dẫn an toàn: chưa có ticket thật, chưa có tra cứu tài khoản,
               chưa có bảng kiểm duyệt và không thu dữ liệu riêng tư qua website.
             </span>
           </figcaption>
@@ -72,11 +72,10 @@ export default function SafetySupportPage() {
         <SectionHeading eyebrow="Báo lỗi an toàn" title="Chuẩn bị phản hồi mà không lộ dữ liệu riêng tư">
           Mục tiêu là giúp người chơi gửi mô tả lỗi đúng phạm vi, biết điều gì có thể gửi và điều gì phải che trước khi có kênh hỗ trợ thật.
         </SectionHeading>
-        <div className="lgo-support-safety-checklist" aria-label="Hướng dẫn báo lỗi an toàn">
+        <div className="lgo-support-safety-checklist lgo-support-safety-checklist-grid" aria-label="Hướng dẫn báo lỗi an toàn">
           {safetyChecklist.map((item, index) => (
-            <GameCard className="lgo-support-safety-card" key={item.title}>
+            <GameCard className="lgo-service-proof-card lgo-support-safety-card" key={item.title}>
               <StatusBadge tone={index % 3 === 0 ? "jade" : index % 3 === 1 ? "gold" : "spirit"}>{item.title}</StatusBadge>
-              <h3>{item.title}</h3>
               <p>{item.body}</p>
             </GameCard>
           ))}
