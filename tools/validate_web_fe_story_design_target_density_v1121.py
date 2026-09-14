@@ -74,8 +74,8 @@ def check_tests_docs() -> None:
     story = read("apps/web/src/app/story/page.tsx")
     if not (story.find("<div id=\"chapters\"><NarrativeChapterGrid /></div>") < story.find("<StoryArcTimeline />") < story.find("lgo-story-fracture-design-board")):
         fail("apps/web/src/app/story/page.tsx: expected chapters before story arc before fracture design board")
-    require_text("apps/web/src/app/globals.css", [
-        "WEB v1.121 story detailed design target density",
+    require_text("packages/ui/src/service-layout.css", [
+        "v1.214 shared story overview layout for the public narrative route",
         ".lgo-storypage-stack",
         ".lgo-story-fracture-design-board",
     ])

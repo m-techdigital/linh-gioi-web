@@ -1428,7 +1428,7 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
 .lgo-world-fantasy-panel{display:grid;grid-template-columns:1fr .75fr;gap:3rem;align-items:center}.lgo-world-layer-stack{display:grid;gap:.55rem}.lgo-world-layer-stack span{padding:.75rem 1rem;border:1px solid rgba(255,255,255,.09);border-radius:.8rem;background:linear-gradient(90deg,rgba(49,216,232,.09),rgba(245,200,107,.03));transform:translateX(var(--shift,0))}.lgo-world-layer-stack span:nth-child(2){--shift:12px}.lgo-world-layer-stack span:nth-child(3){--shift:24px}.lgo-world-layer-stack span:nth-child(4){--shift:36px}.lgo-world-layer-stack span:nth-child(5){--shift:48px}.lgo-world-layer-stack span:nth-child(6){--shift:60px}
 .lgo-paths-hero,.lgo-journey-hero{display:grid;grid-template-columns:1fr 360px;align-items:center;gap:3rem}.lgo-five-path-orbit,.lgo-journey-cycle{position:relative;width:320px;height:320px;margin:auto;border:1px solid rgba(49,216,232,.18);border-radius:50%;box-shadow:inset 0 0 50px rgba(49,216,232,.07)}.lgo-five-path-orbit::before,.lgo-journey-cycle::before{content:"";position:absolute;inset:48px;border:1px solid rgba(245,200,107,.16);border-radius:50%}.lgo-five-path-orbit i,.lgo-journey-cycle i{position:absolute;inset:105px;border-radius:50%;background:radial-gradient(circle,rgba(49,216,232,.35),rgba(122,75,217,.11) 55%,transparent 65%);box-shadow:0 0 34px rgba(49,216,232,.15)}.lgo-five-path-orbit span,.lgo-journey-cycle span{position:absolute;z-index:2;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:#0b1a2d;border:1px solid rgba(245,200,107,.28);font-family:var(--lgo-font-display);font-weight:800}.lgo-five-path-orbit span:nth-child(1){left:131px;top:6px}.lgo-five-path-orbit span:nth-child(2){right:8px;top:94px}.lgo-five-path-orbit span:nth-child(3){right:54px;bottom:13px}.lgo-five-path-orbit span:nth-child(4){left:54px;bottom:13px}.lgo-five-path-orbit span:nth-child(5){left:8px;top:94px}.lgo-journey-cycle span:nth-child(1){left:131px;top:6px}.lgo-journey-cycle span:nth-child(2){right:4px;top:131px}.lgo-journey-cycle span:nth-child(3){left:131px;bottom:6px}.lgo-journey-cycle span:nth-child(4){left:4px;top:131px}
 .lgo-onboarding-steps{margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:.55rem}.lgo-onboarding-steps span{padding:.55rem .75rem;border:1px solid rgba(49,216,232,.18);border-radius:999px;background:rgba(7,17,31,.55);font-size:.76rem;color:rgba(255,255,255,.72)}
-.lgo-story-hero .lgo-cinematic-copy h1{max-width:13ch}.lgo-guide-hero{min-height:390px}.lgo-path-philosophy{max-width:980px;margin-inline:auto;text-align:center}.lgo-path-philosophy .lgo-hero-actions{justify-content:center}
+.lgo-guide-hero{min-height:390px}.lgo-path-philosophy{max-width:980px;margin-inline:auto;text-align:center}.lgo-path-philosophy .lgo-hero-actions{justify-content:center}
 
 .lgo-brand-footer{margin-top:clamp(4rem,8vw,8rem);border-top:1px solid rgba(49,216,232,.12);background:rgba(4,10,20,.72);padding:2rem 0}.lgo-brand-footer-inner{display:grid;grid-template-columns:1fr auto;gap:1.25rem 2rem;align-items:center}.lgo-brand-footer-inner p{margin:.35rem 0 0}.lgo-brand-footer-inner small{grid-column:1/-1;color:rgba(255,255,255,.48)}.lgo-footer-links{display:flex;flex-wrap:wrap;gap:1rem}.lgo-footer-links a{color:var(--lgo-color-text-muted);text-decoration:none}
 
@@ -2489,54 +2489,6 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
 .lgo-experience-hero { overflow-x: clip; }
 
 
-/* WEB v1.84 public story fracture design board */
-.lgo-story-fracture-design-board {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(17rem, .95fr);
-  align-items: center;
-  gap: var(--lgo-space-lg);
-  overflow: hidden;
-}
-
-.lgo-story-fracture-design-board img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border: 1px solid rgba(157,122,234,.28);
-  border-radius: var(--lgo-radius-lg);
-  background: rgba(7,17,31,.72);
-}
-
-.lgo-story-fracture-design-board figcaption {
-  display: grid;
-  gap: .65rem;
-  color: var(--lgo-color-text-muted);
-  font-size: .95rem;
-  line-height: 1.55;
-}
-
-.lgo-story-fracture-design-board figcaption strong {
-  color: var(--lgo-color-text-primary);
-  font-size: clamp(1.05rem, 1.4vw, 1.3rem);
-}
-
-.lgo-story-fracture-design-board figcaption span { overflow-wrap: anywhere; }
-
-@media (max-width: 760px) {
-  .lgo-story-fracture-design-board { grid-template-columns: 1fr; }
-}
-
-/* WEB v1.84 shared public player hero typography cap */
-.lgo-public-shell main .lgo-public-player-hero .lgo-cinematic-copy h1 {
-  font-size: clamp(36px, 3.5vw, 64px);
-}
-
-@media (max-width: 620px) {
-  .lgo-public-shell main .lgo-public-player-hero .lgo-cinematic-copy h1 {
-    font-size: clamp(34px, 9vw, 48px);
-  }
-}
-
 /* WEB v1.90 public start real onboarding screenshot gallery */
 .lgo-start-real-screenshot-panel {
   display: grid;
@@ -2995,114 +2947,6 @@ h3 {
   }
 }
 
-
-/* WEB v1.121 story detailed design target density */
-@media (min-width: 981px) {
-  .lgo-player-facing-stack.lgo-storypage-stack {
-    gap: clamp(1rem, 1.9vw, 2.25rem);
-  }
-
-  .lgo-storypage-stack .lgo-story-hero {
-    min-height: min(430px, calc(100vh - 300px));
-    gap: clamp(1.25rem, 2.6vw, 3rem);
-    padding: clamp(.9rem, 2.4vw, 2rem) 0;
-  }
-
-  .lgo-storypage-stack .lgo-cinematic-scene {
-    min-height: 335px;
-  }
-
-  .lgo-storypage-stack .lgo-cinematic-copy {
-    display: grid;
-    gap: .6rem;
-    align-content: center;
-  }
-
-  .lgo-storypage-stack .lgo-cinematic-copy p,
-  .lgo-storypage-stack .lgo-cinematic-copy h1 {
-    margin: 0;
-  }
-
-  .lgo-storypage-stack .lgo-cinematic-copy h1 {
-    max-width: 14ch;
-    font-size: clamp(2.1rem, 3.45vw, 3rem);
-    line-height: .98;
-  }
-
-  .lgo-storypage-stack .lgo-cinematic-copy .lgo-hero-lead {
-    font-size: clamp(.92rem, .98vw, 1rem);
-    line-height: 1.48;
-  }
-
-  .lgo-storypage-stack .lgo-hero-actions {
-    margin-top: .15rem;
-    gap: .45rem;
-  }
-
-  .lgo-storypage-stack .lgo-link-button {
-    padding: .62rem .82rem;
-    font-size: .84rem;
-  }
-
-  .lgo-storypage-stack .lgo-story-fracture-design-board {
-    grid-template-columns: minmax(0, 1.3fr) minmax(14rem, .7fr);
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .lgo-storypage-stack .lgo-story-fracture-design-board img {
-    aspect-ratio: 16 / 9;
-    max-height: 235px;
-    object-fit: cover;
-  }
-
-  .lgo-storypage-stack .lgo-story-fracture-design-board figcaption {
-    gap: .45rem;
-    font-size: .84rem;
-    line-height: 1.42;
-  }
-
-  .lgo-storypage-stack .lgo-story-fracture-design-board figcaption strong {
-    font-size: clamp(.98rem, 1.05vw, 1.08rem);
-  }
-
-  .lgo-storypage-stack #chapters {
-    margin-top: -1.25rem;
-  }
-
-  .lgo-storypage-stack #chapters .lgo-experience-section {
-    gap: .55rem;
-  }
-
-  .lgo-storypage-stack #chapters .lgo-section-heading {
-    display: grid;
-    grid-template-columns: max-content minmax(0, 1fr);
-    gap: .2rem .85rem;
-    align-items: baseline;
-  }
-
-  .lgo-storypage-stack #chapters .lgo-section-heading .lgo-eyebrow,
-  .lgo-storypage-stack #chapters .lgo-section-heading h2,
-  .lgo-storypage-stack #chapters .lgo-section-heading p {
-    margin: 0;
-  }
-
-  .lgo-storypage-stack #chapters .lgo-section-heading h2 {
-    font-size: clamp(1.1rem, 1.42vw, 1.42rem);
-  }
-
-  .lgo-storypage-stack #chapters .lgo-section-heading p:last-child {
-    grid-column: 1 / -1;
-    max-width: 76ch;
-    font-size: .88rem;
-    line-height: 1.34;
-  }
-
-  .lgo-storypage-stack .lgo-narrative-chapter {
-    min-height: 250px;
-    padding: 1rem;
-  }
-}
 
 /* WEB v1.122 classes detailed design target density */
 @media (min-width: 981px) {

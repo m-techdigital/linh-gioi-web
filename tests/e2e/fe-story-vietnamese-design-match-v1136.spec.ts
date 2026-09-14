@@ -57,6 +57,7 @@ test.describe("story Vietnamese design match", () => {
     await expect(page.getByText("Cốt truyện Linh Giới", { exact: true })).toBeVisible();
     await expect(page.locator(".lgo-storypage-stack #chapters").getByText("Chương 01", { exact: true })).toBeVisible();
     await expect(page.locator(".lgo-storypage-stack #chapters").getByText("Âm Giới Xâm Lăng", { exact: true })).toBeVisible();
+    await expect(page.locator(".lgo-storypage-expanded-evidence > summary").getByText("Bằng chứng phụ và tuyến cốt truyện", { exact: true })).toBeVisible();
 
     const metrics = await collectStoryMetrics(page);
     expect(metrics.designReferenceText, "story design target link uses Vietnamese visible label").toContain("Thiết kế chi tiết cốt truyện");

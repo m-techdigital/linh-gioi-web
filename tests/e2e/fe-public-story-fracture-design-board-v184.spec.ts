@@ -42,6 +42,7 @@ test.describe("public story fracture design board", () => {
   test("/story renders real concept art without mobile overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/story`);
     await expect(page.getByRole("heading", { name: "Cho đến ngày những cánh cửa bắt đầu mở" })).toBeVisible();
+    await page.locator(".lgo-storypage-expanded-evidence > summary").click();
     await expect(page.getByRole("img", { name: "Ảnh ý tưởng Vết Nứt Đông Môn trong cốt truyện Linh Giới" })).toBeVisible();
 
     const metrics = await collectStoryFractureMetrics(page);

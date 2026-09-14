@@ -1,3 +1,21 @@
+Current phase: WEB-FE-STORY-REAL-UI-LAYOUT-v1.214 WEB_CLOSED.
+
+Current decision: v1.214 closed the active `/story` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Story design target and shared public shell were sufficient as comparison guardrails; work focused on the rendered `/story` page, first-flow density, mobile typography, compact chapter cards, native disclosure grouping for secondary story proof and Base First shared CSS ownership. Entire program is NOT production-complete.
+
+- v1.214 did not create or batch a new design target because the existing Public Story board plus shared public shell were usable for checking header, footer, menu, shell, route flow and game scenario alignment.
+- v1.214 changed real UI layout: `/story` now keeps the first-flow to hero and opening chapter cards, while detailed timeline, Đông Môn concept proof and Âm Giới Xâm Lăng event proof are grouped behind the shared native disclosure.
+- v1.214 moved and extended the reusable story overview layout CSS in `packages/ui/src/service-layout.css`; story fracture board and story hero ownership were removed from `apps/web/src/app/globals.css`.
+- v1.214 referenced AXIRO only for code organization judgment: Base components first, page composition second, CSS owner clarity and no copied code or design.
+- v1.214 kept the page Vietnamese and FE-only: no production auth, no backend integration, no DB persistence, no CMS, no full MMO gameplay, no public download promise and no accepted backend contract.
+- v1.214 explicitly checked rendered screenshots against the Public Story design board and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.214 final browser/e2e metrics: desktop overflow 0, h1 font 44.80px, max font 51.20px, hero bottom 468.17px, chapters top 465.78px, chapters bottom 842.81px, first card visible height 217.72px, disclosure top 860.41px, scrollHeight 1400px, 3 chapter columns, 1 disclosure; mobile overflow 0, h1/max font 37.08px, hero bottom 683.45px, chapters top 692.41px, chapters bottom 1289.95px, first card visible height 85.39px, disclosure top 1300.50px, scrollHeight 2043px, 2 chapter columns, 1 disclosure.
+- v1.214 evidence: RED baseline from browser metrics showed mobile hero 951.56px, chapters starting at 1145.75px and page height 7563px; GREEN browser/e2e desktop/mobile 9/9 story layout/design-board checks; screenshot review `/tmp/story-desktop-v1214.png` and `/tmp/story-mobile-v1214.png`; source validator `tools/validate_web_fe_story_real_ui_layout_v1214.py`; Web/UI typecheck; Web build; current-state closure validator.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.215.
+Select `/classes` as the next single active page. Continue Real Browser UI/UX Layout First and Base First; use design target only as a comparison guardrail and do not move past `/classes` before browser/e2e, screenshot review, validator, build/typecheck, docs, commit and push.
+
+Historical snapshot follows.
+
 Current phase: WEB-FE-GAME-REAL-UI-LAYOUT-v1.213 WEB_CLOSED.
 
 Current decision: v1.213 closed the active `/game` page slice as a real browser UI/UX Layout task. The existing Vietnamese game world atlas target and shared public shell were sufficient as comparison guardrails after the rendered page proved the board was missing and the first-flow density was too tall; work focused on the rendered `/game` page, shared Base First CSS ownership, target-board placement, compact route density, atlas hierarchy and a native disclosure for secondary proof. Entire program is NOT production-complete.

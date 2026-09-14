@@ -46,7 +46,7 @@ def check_docs():
  req('tests/e2e/fe-journey-vietnamese-design-match-v1138.spec.ts',['journey Vietnamese design match','Thiết kế chi tiết hành trình','20-minute card loop starts in the opening viewport','world route follows session loop before boundary board'])
  for f in files[1:]: req(f,['WEB-FE-JOURNEY-VIETNAMESE-DESIGN-MATCH-v1.138','WEB_CLOSED','Sequential Page Completion','Just-in-time Design','Design Target First','Layout Match Before Closure','Base UI/UX Layout','Public Journey','Vietnamese','browser/e2e','built-in imagegen','No production auth','No DB persistence','No real Portal integration','No real Ops/Admin mutation','NO_ACCEPTED_BACKEND_CONTRACT'])
  req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-JOURNEY-VIETNAMESE-DESIGN-MATCH-v1.138 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.139'])
- req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.214','select `/story` as the next single active page'])
+ req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.215','select `/classes` as the next single active page'])
  req('docs/execution/WEB-TASK-LEDGER.md',['| WEB-FE-JOURNEY-VIETNAMESE-DESIGN-MATCH-v1.138 | WEB-FE | WEB_CLOSED |'])
 def main():
  check_target(); check_source(); check_docs()

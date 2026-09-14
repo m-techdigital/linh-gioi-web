@@ -30,24 +30,34 @@ export default function StoryPage() {
         />
 
         <div id="chapters"><NarrativeChapterGrid /></div>
-        <StoryArcTimeline />
 
-        <figure className="lgo-story-fracture-design-board lgo-panel" aria-label="Ảnh ý tưởng Vết Nứt Đông Môn">
-          <img
-            src="/game-art/world/dong-mon-skyline.webp"
-            alt="Ảnh ý tưởng Vết Nứt Đông Môn trong cốt truyện Linh Giới"
-            loading="eager"
-          />
-          <figcaption>
-            <StatusBadge tone="shadow">Ảnh ý tưởng cốt truyện</StatusBadge>
-            <strong>Vết Nứt Đông Môn là phần mở đầu cốt truyện, không phải trạng thái nhiệm vụ thật.</strong>
-            <span>
-              Ảnh ý tưởng này dùng hình ảnh thật từ LinhGioiOnline để neo mở đầu câu chuyện vào Đông Môn,
-              đồng thời giữ sự kiện cổng, tiến trình người chơi, trạng thái tài khoản và mô phỏng thế giới chính thức ngoài phạm vi trang FE này.
-            </span>
-          </figcaption>
-        </figure>
-        <ShadowInvasionFeature />
+        <details className="lgo-service-disclosure-stack lgo-storypage-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến cốt truyện</span>
+            <small>
+              Giữ timeline chi tiết, ảnh ý tưởng Đông Môn và sự kiện Âm Giới Xâm Lăng nhưng không ép toàn bộ proof board vào first-flow `/story`.
+            </small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <StoryArcTimeline />
+            <figure className="lgo-story-fracture-design-board lgo-panel" aria-label="Ảnh ý tưởng Vết Nứt Đông Môn">
+              <img
+                src="/game-art/world/dong-mon-skyline.webp"
+                alt="Ảnh ý tưởng Vết Nứt Đông Môn trong cốt truyện Linh Giới"
+                loading="eager"
+              />
+              <figcaption>
+                <StatusBadge tone="shadow">Ảnh ý tưởng cốt truyện</StatusBadge>
+                <strong>Vết Nứt Đông Môn là phần mở đầu cốt truyện, không phải trạng thái nhiệm vụ thật.</strong>
+                <span>
+                  Ảnh ý tưởng này dùng hình ảnh thật từ LinhGioiOnline để neo mở đầu câu chuyện vào Đông Môn,
+                  đồng thời giữ sự kiện cổng, tiến trình người chơi, trạng thái tài khoản và mô phỏng thế giới chính thức ngoài phạm vi trang FE này.
+                </span>
+              </figcaption>
+            </figure>
+            <ShadowInvasionFeature />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );
