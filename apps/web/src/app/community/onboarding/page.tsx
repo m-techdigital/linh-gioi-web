@@ -92,17 +92,25 @@ export default function CommunityOnboardingPage() {
           </div>
         </section>
 
-        <ReleaseReadinessHubCta />
-        <TesterExpectationCopyBoard />
-        <PlayerTrustReleaseCta />
-        <ReleaseNarrativeStageBoard />
-        <ContentIaStartCta />
-        <RouteContinuityCta />
-        <CommunityOnboardingPathBoard />
-        <RoadmapDecisionGateBoard />
-        <CommunityFeedbackGuidance />
-        <StagedReleaseMessagingBoard />
-        <ClosedTesterInformationPackCta />
+        <details className="lgo-service-disclosure-stack lgo-community-onboarding-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>Giữ đủ readiness, tester expectation, trust, release narrative, content hub, route continuity, onboarding path, roadmap gate, feedback và closed tester nhưng không ép toàn bộ proof board vào first-flow hòa nhập.</small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <ReleaseReadinessHubCta />
+            <TesterExpectationCopyBoard />
+            <PlayerTrustReleaseCta />
+            <ReleaseNarrativeStageBoard />
+            <ContentIaStartCta />
+            <RouteContinuityCta />
+            <CommunityOnboardingPathBoard />
+            <RoadmapDecisionGateBoard />
+            <CommunityFeedbackGuidance />
+            <StagedReleaseMessagingBoard />
+            <ClosedTesterInformationPackCta />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );

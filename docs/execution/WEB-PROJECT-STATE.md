@@ -1,3 +1,20 @@
+Current phase: WEB-FE-COMMUNITY-ONBOARDING-REAL-UI-LAYOUT-v1.208 WEB_CLOSED.
+
+Current decision: v1.208 closed the active `/community/onboarding` page slice as a real browser UI/UX Layout task. The existing Vietnamese onboarding gameplay-loop design board and shared public shell were sufficient for comparison; work focused on the rendered onboarding route, first-flow density, mobile typography, route-card grid density, disclosure grouping for secondary evidence and Base First shared CSS ownership. Entire program is NOT production-complete.
+
+- v1.208 did not create or batch a new design target because the existing onboarding board plus Public Service design reference were usable for checking header, footer, menu, shell, route flow and game scenario alignment.
+- v1.208 changed real UI layout: `/community/onboarding` now keeps the first-flow to hero, onboarding design board and proposed reading route, while readiness, tester expectation, trust, release narrative, content hub, route continuity, onboarding path, roadmap gate, feedback, staged release and closed tester proof boards are grouped behind the shared native disclosure.
+- v1.208 extended the existing community onboarding shared layout in `packages/ui/src/service-layout.css`; no current-page CSS was added to `apps/web/src/app/globals.css`.
+- v1.208 kept the page Vietnamese and FE-only: no forum, no guild/chat, no waitlist, no support ticket backend, no account lookup, no production auth, no DB persistence and no accepted backend contract.
+- v1.208 explicitly checked rendered screenshots against the onboarding design board and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.208 final browser/e2e metrics: desktop hero bottom 372.75px, design top 385.70px, design bottom 600.73px, route top 632.09px, disclosure top 1045.11px, scrollHeight 1617px, h1/max font 41.60px, 3 step columns, 1 disclosure, 3 expanded top-level boards, overflow 0; mobile hero bottom 514.86px, design top 520.78px, design bottom 820.69px, route top 845.02px, disclosure top 1531.72px, scrollHeight 2290px, h1 font 29.12px, max heading font 32.00px, 2 step columns, 1 disclosure, 3 expanded top-level boards, overflow 0.
+- v1.208 evidence: browser/e2e desktop/mobile v1.208; screenshot review `/tmp/community-onboarding-desktop-v1208.png` and `/tmp/community-onboarding-mobile-v1208.png`; source validator `tools/validate_web_fe_community_onboarding_real_ui_layout_v1208.py`; Web/UI typecheck; Web build; current-state closure validator.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.209.
+Select `/performance` as the next single active page. Continue Real Browser UI/UX Layout First and Base First; use design target only as a comparison guardrail and do not move past `/performance` before browser/e2e, screenshot review, validator, build/typecheck, docs, commit and push.
+
+Historical snapshot follows.
+
 Current phase: WEB-FE-COMMUNITY-REAL-UI-LAYOUT-v1.207 WEB_CLOSED.
 
 Current decision: v1.207 closed the active `/community` page slice as a real browser UI/UX Layout task. The existing Vietnamese Community design target and shared shell were sufficient for comparison; work focused on the rendered community plaza route, first-flow density, mobile typography, real plaza image hierarchy, community readiness proof, keyboard/focus evidence and Base First shared disclosure/compact proof layout. Entire program is NOT production-complete.
