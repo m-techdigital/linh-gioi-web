@@ -65,13 +65,13 @@ def main() -> int:
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-PLAYER-TRUST-RELEASE-REAL-UI-LAYOUT-v1.185 WEB_CLOSED',
-        'Select `/news/performance-copy-asset-budget-polish-started`',
+        'Select `/news/route-continuity-conversion-polish-started`',
         '/tmp/news-player-trust-release-desktop-v1185.png', '/tmp/news-player-trust-release-mobile-v1185.png',
         'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.192',
-        'Current FE scope: select `/news/performance-copy-asset-budget-polish-started`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.193',
+        'Current FE scope: select `/news/route-continuity-conversion-polish-started`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
         '| WEB-FE-NEWS-PLAYER-TRUST-RELEASE-REAL-UI-LAYOUT-v1.185 | WEB-FE | WEB_CLOSED | fdfb854 |',

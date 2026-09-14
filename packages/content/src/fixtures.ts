@@ -792,9 +792,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "performance-copy-asset-budget-polish-started",
     category: "news",
-    title: "Performance and copy budget get a public polish pass",
-    summary: "WEB v1.16 makes the public website lighter to read: copy budgets, hiệu ứng CSS nhẹ budget, static route composition and perceived load expectations are visible to players.",
-    body: "This update keeps product focus on the public web. It does not claim Web Vitals PASS, production monitoring, CDN deployment, bundle analysis certification or image CDN integration. Runtime/browser/e2e remains a guardrail only.",
+    title: "Web nhẹ và rõ hơn",
+    summary: "WEB v1.16 làm route public dễ đọc hơn bằng ngân sách chữ gọn, hiệu ứng CSS nhẹ, cấu trúc tĩnh và kỳ vọng tải trang rõ cho người chơi.",
+    body: "WEB v1.16 giữ trọng tâm ở public web thật. Slice này làm rõ ngân sách nội dung, giới hạn hiệu ứng, nhịp card tĩnh và cảm nhận tải trang mà không tuyên bố điểm Web Vitals production, giám sát vận hành, phát hành CDN, chứng nhận phân tích bundle hoặc tích hợp CDN ảnh.",
     publishedAt: "2026-09-05T21:40:00.000Z",
     status: "published",
     featured: true,
@@ -1123,6 +1123,20 @@ export const contentDetailSections: ContentDetailSection[] = [
     body: "Luồng đọc nối Start, Accessibility, Guides và News bằng cùng shell public, focus state rõ và density card gọn để mỗi route giữ cấu trúc quen thuộc.",
     playerImpact: "Người chơi dùng mobile hoặc bàn phím vẫn thấy header, menu, footer, hero và các card theo cùng nhịp UI đã được chấp nhận.",
     nonClaim: "Không mở tính năng tài khoản, không kiểm thử thiết bị hỗ trợ chính thức và không thay thế kiểm định accessibility chuyên sâu."
+  },
+  {
+    slug: "performance-copy-asset-budget-polish-started",
+    heading: "Ngân sách chữ giữ route nhẹ và dễ quét",
+    body: "Bài viết gom copy ngắn, detail cards gọn và CTA rõ để người chơi hiểu trạng thái public mà không phải đọc một trang dài như log kỹ thuật.",
+    playerImpact: "Người chơi thấy nội dung chính ngay trong first-fold, đọc tiếp bằng card liên quan và không nhầm kiểm chứng hiệu năng bằng trình duyệt với cam kết vận hành production.",
+    nonClaim: "Không tuyên bố điểm Web Vitals production, giám sát vận hành, phát hành CDN, chứng nhận phân tích bundle hoặc tích hợp CDN ảnh."
+  },
+  {
+    slug: "performance-copy-asset-budget-polish-started",
+    heading: "Hiệu ứng và asset giữ vai trò nền, không lấn nội dung",
+    body: "Layout ưu tiên shell public, typography gọn, card density ổn định và hiệu ứng nhẹ để các route tin tức giữ cùng nhịp đọc trên desktop/mobile.",
+    playerImpact: "Người chơi dùng máy yếu hoặc mobile vẫn thấy tiêu đề, ranh giới, tin liên quan và bước tiếp theo mà không bị hình ảnh nặng che mất nội dung.",
+    nonClaim: "Không có đo đạc RUM production, không có pipeline CDN, không có ngân sách CI production và không có quyền tải game."
   },
   {
     slug: "world-gameplay-loop-depth-started",
