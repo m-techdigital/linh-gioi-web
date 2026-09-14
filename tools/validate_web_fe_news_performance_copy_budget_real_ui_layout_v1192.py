@@ -61,13 +61,13 @@ def main() -> int:
     ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         'Current phase: WEB-FE-NEWS-PERFORMANCE-COPY-BUDGET-REAL-UI-LAYOUT-v1.192 WEB_CLOSED',
-        'Select `/news/route-continuity-conversion-polish-started`',
+        'Select `/news/player-trust-release-narrative-started`',
         '/tmp/news-performance-copy-budget-desktop-v1192.png', '/tmp/news-performance-copy-budget-mobile-v1192.png',
         'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.193',
-        'Current FE scope: select `/news/route-continuity-conversion-polish-started`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.194',
+        'Current FE scope: select `/news/player-trust-release-narrative-started`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
         '| WEB-FE-NEWS-PERFORMANCE-COPY-BUDGET-REAL-UI-LAYOUT-v1.192 | WEB-FE | WEB_CLOSED | c55d03c |',

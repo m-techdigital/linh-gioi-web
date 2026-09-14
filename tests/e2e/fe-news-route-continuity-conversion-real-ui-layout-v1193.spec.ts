@@ -1,4 +1,4 @@
-// v1.186 coverage: /news/route-continuity-conversion-polish-started must render as compact Vietnamese route continuity article, not a raw WEB v1.17 fixture body.
+// v1.193 coverage: /news/route-continuity-conversion-polish-started must render compact Vietnamese route continuity conversion article with detail cards, not a body-only route continuity fixture.
 import { test, expect, type Page } from "@playwright/test";
 
 const web = process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
@@ -56,8 +56,8 @@ async function collectArticleMetrics(page: Page): Promise<ArticleMetrics> {
   });
 }
 
-test.describe("news route continuity real UI layout v1.186", () => {
-  test("/news/route-continuity-conversion-polish-started renders compact Vietnamese route continuity article flow", async ({ page, isMobile }) => {
+test.describe("news route continuity conversion real UI layout v1.193", () => {
+  test("/news/route-continuity-conversion-polish-started renders compact Vietnamese route continuity conversion article flow", async ({ page, isMobile }) => {
     await page.goto(`${web}/news/route-continuity-conversion-polish-started`);
 
     await expect(page.getByRole("heading", { level: 1, name: "Route tiếp theo rõ và an toàn hơn" })).toBeVisible();
@@ -70,7 +70,7 @@ test.describe("news route continuity real UI layout v1.186", () => {
     await expect(page.locator(".lgo-newsdetail-next-steps")).toBeVisible();
 
     const mainText = await page.locator("main").innerText();
-    expect(mainText).not.toMatch(/Route continuity and safe next steps get clearer|WEB v1\.17 connects public routes|This update focuses on the public website product|page-to-page cohesion|conversion-safe routing|fake download, account, portal, ticket, payment|No fake funnel|No entitlement, payment, launcher, secure inbox or live moderation claim/i);
+    expect(mainText).not.toMatch(/Bài viết giải thích nội dung public|fake download CTA|conversion funnel production|portal|ticket routing|backend giả|payment flow|account flow/i);
 
     const backToNews = page.locator(".lgo-newsdetail-hero-card").getByRole("link", { name: "Tin tức" });
     await backToNews.focus();
@@ -107,6 +107,6 @@ test.describe("news route continuity real UI layout v1.186", () => {
       expect(metrics.relatedColumns).toBeGreaterThanOrEqual(2);
     }
 
-    await page.screenshot({ path: `/tmp/news-route-continuity-${isMobile ? "mobile" : "desktop"}-v1186.png`, fullPage: true });
+    await page.screenshot({ path: `/tmp/news-route-continuity-conversion-${isMobile ? "mobile" : "desktop"}-v1193.png`, fullPage: true });
   });
 });
