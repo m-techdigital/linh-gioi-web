@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-GAME-WORLD-DESIGN-BOARD-v1.83 WEB_CLOSED.
+
+Current decision: v1.83 FE public game world design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.83 adds a real LinhGioiOnline world-hub reference-art SVG to `/game`.
+- The game world atlas board renders with accessible name `Game world atlas hub board`, eager loading and responsive layout while keeping live map/account position/quest/world-server non-claims explicit.
+- v1.83 evidence: RED browser/e2e reproduced missing game world atlas hub board on `/game`; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded SVG natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.84.
+
 Current phase: WEB-FE-PUBLIC-GAME-LOOP-DESIGN-BOARD-v1.82 WEB_CLOSED.
 
 Current decision: v1.82 FE public game loop design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.

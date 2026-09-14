@@ -1,4 +1,4 @@
-import { Stack } from "@lgo-web/ui";
+import { Stack, StatusBadge } from "@lgo-web/ui";
 import {
   CinematicWorldScene,
   GamePillarGrid,
@@ -29,6 +29,22 @@ export default function GamePage() {
           ]}
           visual={<CinematicWorldScene compact />}
         />
+
+        <figure className="lgo-game-world-design-board lgo-panel" aria-label="Game world atlas hub reference art">
+          <img
+            src="/game-art/design-boards/game-world-atlas-hub.svg"
+            alt="Game world atlas hub board"
+            loading="eager"
+          />
+          <figcaption>
+            <StatusBadge tone="spirit">Game reference art</StatusBadge>
+            <strong>World atlas là route map public, không phải live open-world backend.</strong>
+            <span>
+              Board này dùng visual thật từ LinhGioiOnline để nối Linh Thành, Đông Môn, Linh Lâm và các realm cao hơn
+              without claiming live map streaming, account position, quest state or production world server.
+            </span>
+          </figcaption>
+        </figure>
 
         <WorldRouteJourney />
         <WorldAtlasStories />
