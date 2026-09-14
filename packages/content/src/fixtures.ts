@@ -516,7 +516,7 @@ export const contentEntries: ContentEntry[] = [
     slug: "web-program-control-tower",
     category: "news",
     title: "Control tower web đã được thiết lập",
-    summary: "Repo web độc lập của Linh Giới Online đã có governance, ownership và guardrail non-claim.",
+    summary: "Repo web độc lập của Linh Giới Online đã có governance, ownership và ranh giới không tuyên bố quá phạm vi.",
     body: "Bản tin này là nội dung source-owned của web program: nó giải thích governance, ownership và ranh giới non-claim mà không biến web repo thành backend contract hoặc thông báo release production.",
     publishedAt: "2026-09-05T00:00:00.000Z",
     status: "published",
@@ -528,7 +528,7 @@ export const contentEntries: ContentEntry[] = [
     category: "news",
     title: "Bắt đầu polish UX và nội dung public",
     summary: "Slice web trước tập trung vào hierarchy trang chủ, thông tin game, roadmap, trạng thái tải game và hướng dẫn hỗ trợ.",
-    body: "WEB v1.6 content polish established the player-facing foundation while keeping non-claims explicit: no production auth, no DB persistence, no CMS and no real backend integration.",
+    body: "WEB v1.6 đặt nền UX public cho người chơi: hierarchy trang chủ, thông tin game, roadmap, trạng thái tải game và hướng dẫn hỗ trợ được gom lại rõ hơn nhưng vẫn giữ ranh giới không auth production, không DB, không CMS và không tích hợp backend thật.",
     publishedAt: "2026-09-05T06:00:00.000Z",
     status: "published",
     featured: true,
@@ -939,6 +939,21 @@ export const downloadBuilds: DownloadBuild[] = [
 
 
 export const contentDetailSections: ContentDetailSection[] = [
+
+  {
+    slug: "public-ux-content-polish-started",
+    heading: "UX public chuyển từ danh sách thô sang hành trình đọc",
+    body: "Slice v1.6 gom các điểm người chơi cần đọc trước: trang chủ, thông tin game, roadmap, tải game và hỗ trợ. Mục tiêu là giúp người mới hiểu trạng thái dự án mà không bị dẫn sang claim backend hoặc download thật.",
+    playerImpact: "Người chơi có thể đi từ tin tức sang các route cốt lõi theo thứ tự dễ hiểu, thay vì gặp danh sách fixture hoặc CTA mơ hồ.",
+    nonClaim: "Không có xác thực production, không có DB, không có CMS và không tích hợp backend thật."
+  },
+  {
+    slug: "public-ux-content-polish-started",
+    heading: "Nội dung public phải đồng bộ với shell và menu chung",
+    body: "Bài viết này giữ cùng header, menu, footer và rhythm card của news detail để người đọc thấy đây là một phần của official web, không phải ghi chú kỹ thuật rời rạc.",
+    playerImpact: "Người chơi đọc được ranh giới sản phẩm ngay trên page thật, với spacing, font và related-news flow nhất quán trên desktop/mobile.",
+    nonClaim: "Không xem dịch chữ, chỉ sửa design hoặc chỉ chạy validator là hoàn thiện UI/UX Layout."
+  },
   {
     slug: "closed-tester-information-pack-started",
     heading: "Tester pack là guidance, không phải intake",

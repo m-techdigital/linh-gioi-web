@@ -12,6 +12,15 @@ function toneForStatus(status: string) {
   return "shadow" as const;
 }
 
+const articleDetailTitles: Record<string, string> = {
+  "web-program-control-tower": "Bài viết giải thích governance web độc lập",
+  "public-ux-content-polish-started": "Bài viết giải thích polish UX public",
+};
+
+function articleDetailTitle(slug: string) {
+  return articleDetailTitles[slug] ?? "Bài viết giải thích nội dung public";
+}
+
 function vietnameseStatusLabel(status: string) {
   if (status === "public") return "công khai";
   if (status === "internal") return "nội bộ";
@@ -27,7 +36,7 @@ export function ArticleDetailDepth({ slug }: { slug: string }) {
 
   return (
     <section className="lgo-panel lgo-article-depth lgo-newsdetail-depth" aria-labelledby="article-detail-depth-heading">
-      <SectionHeading eyebrow="Chi tiết bài viết" title="Bài viết giải thích governance web độc lập">
+      <SectionHeading eyebrow="Chi tiết bài viết" title={articleDetailTitle(slug)}>
         Detail page mở rộng ngữ cảnh người chơi cần biết, tác động thực tế và ranh giới non-claim phải giữ.
       </SectionHeading>
       <div id="article-detail-depth-heading" className="lgo-article-depth-grid lgo-newsdetail-depth-grid">
