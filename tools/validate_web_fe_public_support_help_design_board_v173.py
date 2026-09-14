@@ -26,20 +26,18 @@ def require_text(rel: str, markers: list[str]) -> str:
     return text
 
 def check_support_help_board() -> None:
-    require_file("apps/web/public/game-art/design-boards/support-help-route-map.svg")
-    svg = read("apps/web/public/game-art/design-boards/support-help-route-map.svg")
-    if "<svg" not in svg or len(svg) > 12000:
-        fail("support-help-route-map.svg should be a small SVG reference-art asset")
+    require_file("apps/web/public/design-reference/support-help-detailed-design-target-v1132.png")
     require_text("apps/web/src/app/support/help/page.tsx", [
         "lgo-support-help-design-board",
-        "/game-art/design-boards/support-help-route-map.svg",
-        "Support help route map board",
+        "/design-reference/support-help-detailed-design-target-v1132.png",
+        "Bảng thiết kế bản đồ câu hỏi hỗ trợ",
         "loading=\"eager\"",
-        "Game reference art",
-        "without claiming live search",
+        "Design Target First",
+        "không có tìm kiếm thật",
     ])
     require_text("apps/web/src/app/globals.css", [
         "WEB v1.73 public support help route-map reference board",
+        "WEB v1.132 support help Vietnamese design target density",
         ".lgo-support-help-design-board",
         ".lgo-support-help-design-board img",
         "grid-template-columns: 1fr",

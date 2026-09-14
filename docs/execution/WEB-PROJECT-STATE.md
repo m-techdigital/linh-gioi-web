@@ -1,3 +1,18 @@
+Current phase: WEB-FE-SUPPORT-HELP-DESIGN-TARGET-DENSITY-v1.132 WEB_CLOSED.
+
+Current decision: v1.132 FE support help design target density slice closed. Public `/support/help` now has a dedicated high-fidelity Vietnamese `Public Support Help` design target and runtime desktop/mobile browser/e2e guardrails for FAQ route-map density. Entire program is NOT production-complete.
+
+- v1.132 created `support-help-detailed-design-target-v1132.png` with built-in image_gen and mirrored it under `docs/design/reference`.
+- v1.132 registered `Public Support Help`, routed `/support/help` to that page-specific target and kept Public Service as the broader target for remaining service routes.
+- v1.132 compacted desktop `/support/help` hero, design board, route cards, FAQ discovery and issue routing under `lgo-supporthelppage-stack` while preserving mobile behavior.
+- v1.132 evidence: RED browser/e2e reproduced missing `Public Support Help` target attachment; Playwright desktop/mobile support help design target density PASS after fix; dedicated validator and closure checks recorded in report/handoff.
+- Vietnamese design targets remain mandatory for new public FE work unless a route-specific owner-approved exception is recorded. Existing English-heavy targets must be replaced when their page is revisited.
+- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.133.
+
 Current phase: WEB-FE-SUPPORT-DESIGN-TARGET-DENSITY-v1.131 WEB_CLOSED.
 
 Current decision: v1.131 FE support design target density slice closed. Public `/support` now has a dedicated high-fidelity Vietnamese `Public Support` design target and runtime desktop/mobile browser/e2e guardrails for first-flow support station density. Entire program is NOT production-complete.
