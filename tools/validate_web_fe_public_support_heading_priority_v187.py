@@ -21,10 +21,10 @@ def require_order(rel: str, first: str, second: str) -> None:
 def check_routes() -> None:
     require_order("apps/web/src/app/support/page.tsx", "<h1>Hỗ trợ cộng đồng</h1>", "<PlayerTrustReleaseCta />")
     require_order("apps/web/src/app/support/help/page.tsx", "<h1>FAQ nhanh: tìm đúng câu trả lời trước khi gửi phản hồi</h1>", "<FaqHelpfulnessCta />")
-    require_order("apps/web/src/app/support/safety/page.tsx", "<h1>Safety support cho người chơi mới</h1>", "<ReleaseReadinessHubCta />")
+    require_order("apps/web/src/app/support/safety/page.tsx", "<h1>Báo lỗi an toàn cho người chơi mới</h1>", "<ReleaseReadinessHubCta />")
     require_text("apps/web/src/app/support/page.tsx", ["Không có hệ thống ticket thật", "tra cứu tài khoản", "thao tác vận hành/admin"])
     require_text("apps/web/src/app/support/help/page.tsx", ["chưa có tìm kiếm thật", "chưa có ticket thật", "không thu dữ liệu nhạy cảm"])
-    require_text("apps/web/src/app/support/safety/page.tsx", ["No live ticket", "no account lookup", "moderation backend"])
+    require_text("apps/web/src/app/support/safety/page.tsx", ["Chưa có ticket thật", "chưa tra cứu tài khoản", "chưa có bảng kiểm duyệt"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-support-heading-priority-v187.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-SUPPORT-HEADING-PRIORITY-v1.87.md", "LGO-WEB-FE-PUBLIC-SUPPORT-HEADING-PRIORITY-REPORT-v1.87.md", "HANDOFF-LGO-WEB-FE-PUBLIC-SUPPORT-HEADING-PRIORITY-v1.87.md"]: require_file(rel)
     require_text("tests/e2e/fe-public-support-heading-priority-v187.spec.ts", ["/support", "/support/help", "/support/safety", "starts support content with the page h1", "pageOverflow", "maxFont"])

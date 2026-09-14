@@ -5,7 +5,7 @@ const web = process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
 const routes = [
   { path: "/support", title: "Hỗ trợ cộng đồng" },
   { path: "/support/help", title: "FAQ nhanh: tìm đúng câu trả lời trước khi gửi phản hồi" },
-  { path: "/support/safety", title: "Safety support cho người chơi mới" },
+  { path: "/support/safety", title: "Báo lỗi an toàn cho người chơi mới" },
 ];
 
 type HeadingMetrics = {

@@ -87,6 +87,12 @@ const PUBLIC_SUPPORT_HELP_TARGET = {
   scope: "Public Support Help"
 };
 
+const PUBLIC_SUPPORT_SAFETY_TARGET = {
+  label: "Support safety detailed design target",
+  href: "/design-reference/support-safety-detailed-design-target-v1133.png",
+  scope: "Public Support Safety"
+};
+
 const PUBLIC_CORE_TARGET = {
   label: "Public Core design target",
   href: "/design-reference/design-atlas-public-core-v195.png",
@@ -118,6 +124,7 @@ function targetForPath(pathname: string) {
   if (pathname === "/release") return PUBLIC_RELEASE_TARGET;
   if (pathname === "/status") return PUBLIC_STATUS_TARGET;
   if (pathname === "/support/help") return PUBLIC_SUPPORT_HELP_TARGET;
+  if (pathname === "/support/safety") return PUBLIC_SUPPORT_SAFETY_TARGET;
   if (pathname === "/support") return PUBLIC_SUPPORT_TARGET;
   if (publicServicePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_SERVICE_TARGET;
   if (publicCorePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_CORE_TARGET;

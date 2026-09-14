@@ -20,47 +20,72 @@ import { AccessibilityReadabilityCta, FocusOrderBoard } from "../../../component
 import { PerformanceBudgetCta, MobileDensityBudgetBoard } from "../../../components/PublicPerformanceBudgetSections";
 import { ReleaseReadinessHubCta, TesterExpectationCopyBoard } from "../../../components/PublicReleaseReadinessHubSections";
 
-export const metadata = { title: "Safety support" };
+export const metadata = { title: "Báo lỗi an toàn" };
+
+const safetyChecklist = [
+  { title: "Che mật khẩu", body: "Không gửi mật khẩu trong ảnh chụp, video, log hoặc mô tả lỗi." },
+  { title: "Che token", body: "Ẩn token, mã xác thực, mã OTP, mã 2FA và mọi chuỗi dài nhạy cảm." },
+  { title: "Mô tả bước tái hiện", body: "Ghi route, thiết bị, trình duyệt và các bước làm lỗi xuất hiện." },
+  { title: "Ảnh/log đã che", body: "Chỉ đính kèm ảnh hoặc log đã xóa thông tin riêng tư." },
+  { title: "Chờ kênh chính thức", body: "Chỉ gửi qua kênh được công bố, tránh tin nhắn lạ hoặc link giả." }
+];
 
 export default function SafetySupportPage() {
   return (
     <WebAppShell>
-      <Stack>
+      <Stack className="lgo-player-facing-stack lgo-supportsafetypage-stack">
         <GameCard className="lgo-detail-hero-card">
-          <StatusBadge tone="jade">WEB v1.14 player safety / support FAQ polish</StatusBadge>
-          <span className="lgo-card-kicker">No live ticket · no account lookup · no moderation backend</span>
-          <h1>Safety support cho người chơi mới</h1>
+          <StatusBadge tone="jade">WEB v1.133 · báo lỗi an toàn tiếng Việt</StatusBadge>
+          <span className="lgo-card-kicker">Chưa có ticket thật · chưa tra cứu tài khoản · chưa có bảng kiểm duyệt</span>
+          <h1>Báo lỗi an toàn cho người chơi mới</h1>
           <p className="lgo-hero-lead">
-            Trang này giải thích cách báo lỗi, góp ý và chuẩn bị closed-test support theo hướng an toàn dữ liệu.
+            Trang này giúp người chơi chuẩn bị phản hồi hữu ích mà không gửi dữ liệu nhạy cảm,
+            không nhầm roadmap với kênh hỗ trợ backend thật.
           </p>
           <p>
-            Đây là static public guidance. Không có support ticket backend, account recovery, moderation dashboard,
-            forum/chat/guild live system hoặc production support SLA trong web repo hiện tại.
+            Website hiện chỉ cung cấp hướng dẫn public tĩnh. Hãy che mật khẩu, token, thông tin cá nhân
+            và chỉ gửi phản hồi khi có kênh chính thức được công bố.
           </p>
           <div className="lgo-product-first-actions">
-            <LinkButton href="/support" tone="jade">Support FAQ</LinkButton>
-            <LinkButton href="/guides/player-safety-support-guide" tone="gold">Safety guide</LinkButton>
-            <LinkButton href="/download/trust" tone="spirit">Download trust</LinkButton>
-            <LinkButton href="/accessibility" tone="jade">Đọc dễ hơn</LinkButton>
-            <LinkButton href="/performance" tone="spirit">Hiệu năng/copy budget</LinkButton>
+            <LinkButton href="/support" tone="jade">Trạm hỗ trợ</LinkButton>
+            <LinkButton href="/guides/player-safety-support-guide" tone="gold">Hướng dẫn an toàn</LinkButton>
+            <LinkButton href="/download/trust" tone="spirit">Độ tin cậy tải game</LinkButton>
+            <LinkButton href="/support/help" tone="jade">FAQ nhanh</LinkButton>
           </div>
         </GameCard>
-        <figure className="lgo-safety-support-design-board lgo-panel" aria-label="Player safety support HUD board">
+        <figure className="lgo-safety-support-design-board lgo-panel" aria-label="Bảng thiết kế báo lỗi an toàn">
           <img
-            src="/game-art/design-boards/player-safety-support-hud.svg"
-            alt="Player safety support HUD board"
+            src="/design-reference/support-safety-detailed-design-target-v1133.png"
+            alt="Thiết kế tiếng Việt cho báo lỗi an toàn và ranh giới dữ liệu"
             loading="eager"
             decoding="async"
           />
           <figcaption>
-            <StatusBadge tone="spirit">Game reference art</StatusBadge>
-            <strong>Safety/support guidance before live ticketing</strong>
-            <span>Small LinhGioiOnline HUD reference board that grounds support guidance without claiming account lookup, moderation backend, live ticketing or production SLA.</span>
+            <StatusBadge tone="spirit">Design Target First</StatusBadge>
+            <strong>Không gửi dữ liệu nhạy cảm khi báo lỗi hoặc góp ý.</strong>
+            <span>
+              Target này giữ `/support/safety` thành hướng dẫn an toàn: chưa có ticket thật, chưa có tra cứu tài khoản,
+              chưa có bảng kiểm duyệt và không thu dữ liệu riêng tư qua website.
+            </span>
           </figcaption>
         </figure>
-        <SectionHeading eyebrow="Product-first support" title="Hỗ trợ phải rõ, thân thiện và không hứa backend giả">
-          Runtime/browser/e2e chỉ là guardrail nội bộ. Nội dung chính là player-facing safety/support expectation cho closed testing sau này.
+        <SectionHeading eyebrow="Báo lỗi an toàn" title="Chuẩn bị phản hồi mà không lộ dữ liệu riêng tư">
+          Mục tiêu là giúp người chơi gửi mô tả lỗi đúng phạm vi, biết điều gì có thể gửi và điều gì phải che trước khi có kênh hỗ trợ thật.
         </SectionHeading>
+        <div className="lgo-support-safety-checklist" aria-label="Hướng dẫn báo lỗi an toàn">
+          {safetyChecklist.map((item, index) => (
+            <GameCard className="lgo-support-safety-card" key={item.title}>
+              <StatusBadge tone={index % 3 === 0 ? "jade" : index % 3 === 1 ? "gold" : "spirit"}>{item.title}</StatusBadge>
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
+            </GameCard>
+          ))}
+        </div>
+        <PlayerSafetyPrinciplesBoard />
+        <SupportIssuePathBoard />
+        <IssueCategoryRouteBoard />
+        <SafeFeedbackTemplateBoard />
+        <DeviceReportTemplateBoard />
         <ReleaseReadinessHubCta />
         <TesterExpectationCopyBoard />
         <PlayerTrustReleaseCta />
@@ -69,9 +94,6 @@ export default function SafetySupportPage() {
         <FaqHelpfulnessCta />
         <RouteContinuityCta />
         <WorldGameplayLoopCta />
-        <PlayerSafetyPrinciplesBoard />
-        <SupportIssuePathBoard />
-        <IssueCategoryRouteBoard />
         <NoSearchBackendNoteBoard />
         <ClosedTestSupportBoard />
         <CommunityConductBoard />
@@ -82,10 +104,8 @@ export default function SafetySupportPage() {
         <PerformanceBudgetCta />
         <DownloadTrustCta />
         <PlayerSafetySupportCta />
-              <SafeFeedbackTemplateBoard />
-        <DeviceReportTemplateBoard />
         <ClosedTesterInformationPackCta />
-        </Stack>
+      </Stack>
     </WebAppShell>
   );
 }
