@@ -14,7 +14,7 @@ export const metadata = { title: "Thế giới" };
 export default function GamePage() {
   return (
     <WebAppShell>
-      <Stack className="lgo-player-facing-stack">
+      <Stack className="lgo-player-facing-stack lgo-gamepage-stack">
         <PublicPlayerHero
           className="lgo-cinematic-hero lgo-cinematic-hero-inner"
           copyClassName="lgo-cinematic-copy"

@@ -1,0 +1,129 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import struct
+
+ROOT = Path(__file__).resolve().parents[1]
+ERRORS: list[str] = []
+
+def fail(message: str) -> None:
+    ERRORS.append(message)
+
+def read(rel: str) -> str:
+    p = ROOT / rel
+    if not p.is_file():
+        fail(f"missing file: {rel}")
+        return ""
+    return p.read_text(encoding="utf-8")
+
+def require_file(rel: str) -> None:
+    if not (ROOT / rel).is_file():
+        fail(f"missing file: {rel}")
+
+def require_text(rel: str, markers: list[str]) -> None:
+    text = read(rel)
+    for marker in markers:
+        if marker not in text:
+            fail(f"{rel}: missing {marker}")
+
+def png_size(rel: str) -> tuple[int, int]:
+    path = ROOT / rel
+    if not path.is_file():
+        fail(f"missing file: {rel}")
+        return (0, 0)
+    data = path.read_bytes()
+    if not data.startswith(b"\x89PNG\r\n\x1a\n"):
+        fail(f"{rel}: expected PNG")
+        return (0, 0)
+    return struct.unpack(">II", data[16:24])
+
+def check_target() -> None:
+    targets = [
+        "apps/web/public/design-reference/game-world-detailed-design-target-v1120.png",
+        "docs/design/reference/WEB-FE-GAME-WORLD-DETAILED-DESIGN-TARGET-v1.120.png",
+    ]
+    for rel in targets:
+        require_file(rel)
+        width, height = png_size(rel)
+        if width < 1600 or height < 900:
+            fail(f"{rel}: expected high-fidelity game world target dimensions, got {width}x{height}")
+        size = (ROOT / rel).stat().st_size if (ROOT / rel).is_file() else 0
+        if size < 500_000:
+            fail(f"{rel}: expected full raster design board, got {size} bytes")
+    if all((ROOT / rel).is_file() for rel in targets):
+        if (ROOT / targets[0]).read_bytes() != (ROOT / targets[1]).read_bytes():
+            fail("game world detailed target public/docs copies differ")
+
+def check_tests_docs() -> None:
+    for rel in [
+        "tests/e2e/fe-game-world-design-target-density-v1120.spec.ts",
+        "docs/execution/specs/WEB-FE-GAME-WORLD-DESIGN-TARGET-DENSITY-v1.120.md",
+        "LGO-WEB-FE-GAME-WORLD-DESIGN-TARGET-DENSITY-REPORT-v1.120.md",
+        "HANDOFF-LGO-WEB-FE-GAME-WORLD-DESIGN-TARGET-DENSITY-v1.120.md",
+    ]:
+        require_file(rel)
+    require_text("tests/e2e/fe-game-world-design-target-density-v1120.spec.ts", [
+        "game world design target density",
+        "Public Game World",
+        "game-world-detailed-design-target-v1120.png",
+        "desktop world design board enters first fold",
+        "desktop world design board visible in first fold",
+        "desktop world route starts near first target board",
+        "game page h1 follows target scale",
+    ])
+    require_text("apps/web/src/app/game/page.tsx", ["lgo-gamepage-stack", "lgo-game-world-design-board"])
+    require_text("apps/web/src/app/globals.css", [
+        "WEB v1.120 game world detailed design target density",
+        ".lgo-gamepage-stack",
+        ".lgo-game-world-design-board",
+    ])
+    require_text("apps/web/src/components/PublicDesignTargetReference.tsx", [
+        "PUBLIC_GAME_WORLD_TARGET",
+        "Game world detailed design target",
+        "game-world-detailed-design-target-v1120.png",
+        "Public Game World",
+    ])
+    require_text("docs/design/DESIGN-TARGET-REGISTRY.md", [
+        "Public Game World",
+        "game-world-detailed-design-target-v1120.png",
+        "Design Target First",
+    ])
+    for rel in [
+        "docs/execution/specs/WEB-FE-GAME-WORLD-DESIGN-TARGET-DENSITY-v1.120.md",
+        "LGO-WEB-FE-GAME-WORLD-DESIGN-TARGET-DENSITY-REPORT-v1.120.md",
+        "HANDOFF-LGO-WEB-FE-GAME-WORLD-DESIGN-TARGET-DENSITY-v1.120.md",
+    ]:
+        require_text(rel, [
+            "WEB-FE-GAME-WORLD-DESIGN-TARGET-DENSITY-v1.120",
+            "WEB_CLOSED",
+            "Design Target First",
+            "Base UI/UX Layout",
+            "Public Game World",
+            "browser/e2e",
+            "fold density",
+            "built-in image_gen",
+            "No production auth",
+            "No DB persistence",
+            "No real Portal integration",
+            "No real Ops/Admin mutation",
+            "NO_ACCEPTED_BACKEND_CONTRACT",
+        ])
+    require_text("docs/execution/WEB-PROJECT-STATE.md", [
+        "Current phase: WEB-FE-GAME-WORLD-DESIGN-TARGET-DENSITY-v1.120 WEB_CLOSED",
+        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.121",
+    ])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.121", "Design Target First", "Base UI/UX Layout", "browser/e2e"])
+    require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-GAME-WORLD-DESIGN-TARGET-DENSITY-v1.120 | WEB-FE | WEB_CLOSED |"])
+
+def main() -> int:
+    check_target()
+    check_tests_docs()
+    if ERRORS:
+        print("WEB FE GAME WORLD DESIGN TARGET DENSITY v1.120 VALIDATION FAIL")
+        for error in ERRORS:
+            print(f"- {error}")
+        return 1
+    print("WEB FE GAME WORLD DESIGN TARGET DENSITY v1.120 VALIDATION PASS")
+    return 0
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,3 +1,17 @@
+Current phase: WEB-FE-GAME-WORLD-DESIGN-TARGET-DENSITY-v1.120 WEB_CLOSED.
+
+Current decision: v1.120 FE game world design target density slice closed. Public `/game` now has a dedicated high-fidelity `Public Game World` design target and runtime desktop/mobile browser/e2e guardrails for first-fold density. Entire program is NOT production-complete.
+
+- v1.120 created `game-world-detailed-design-target-v1120.png` with built-in image_gen and mirrored it under `docs/design/reference`.
+- v1.120 registered `Public Game World`, routed `/game` to that page-specific target and kept Public Core as the broader target for the remaining public core routes.
+- v1.120 compacted desktop `/game` hero/design-board/route spacing under `lgo-gamepage-stack` while preserving mobile behavior.
+- v1.120 evidence: RED desktop browser/e2e reproduced the game design board starting below target first-fold density; Playwright desktop/mobile game world design target density PASS 2/2 after fix; dedicated validator and closure checks recorded in report/handoff.
+- Design Target First remains Priority #1: every page, section and reusable component must attach to a design target before implementation; missing/stale targets must be created, replaced or deleted before UI work proceeds.
+- Base UI/UX Layout remains mandatory in `packages/design-tokens` and `packages/ui` before page-local layout is added.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.121.
+
 Current phase: WEB-FE-HOMEPAGE-TARGET-FOLD-DENSITY-v1.119 WEB_CLOSED.
 
 Current decision: v1.119 FE homepage target fold density slice closed. Public `/` now follows the v1.118 `Public Homepage` design target more closely in browser/e2e: desktop first fold shows hero content plus a visible first pillar card instead of a hero-only viewport. Entire program is NOT production-complete.

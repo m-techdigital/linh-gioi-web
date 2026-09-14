@@ -9,6 +9,12 @@ const PUBLIC_HOMEPAGE_TARGET = {
   scope: "Public Homepage"
 };
 
+const PUBLIC_GAME_WORLD_TARGET = {
+  label: "Game world detailed design target",
+  href: "/design-reference/game-world-detailed-design-target-v1120.png",
+  scope: "Public Game World"
+};
+
 const PUBLIC_CORE_TARGET = {
   label: "Public Core design target",
   href: "/design-reference/design-atlas-public-core-v195.png",
@@ -28,6 +34,7 @@ const publicServicePrefixes = ["/download", "/release", "/status", "/support", "
 
 function targetForPath(pathname: string) {
   if (pathname === "/") return PUBLIC_HOMEPAGE_TARGET;
+  if (pathname === "/game") return PUBLIC_GAME_WORLD_TARGET;
   if (publicServicePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_SERVICE_TARGET;
   if (publicCorePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_CORE_TARGET;
   return PUBLIC_CORE_TARGET;
