@@ -1,3 +1,21 @@
+Current phase: WEB-FE-SUPPORT-SAFETY-REAL-UI-LAYOUT-v1.206 WEB_CLOSED.
+
+Current decision: v1.206 closed the active `/support/safety` page slice as a real browser UI/UX Layout task. The existing Vietnamese Support Safety design target and shared shell were sufficient for comparison; work focused on the rendered safe-reporting route, first-flow density, mobile typography, checklist/principles/issue hierarchy, keyboard/focus evidence and Base First shared disclosure/compact proof layout. Entire program is NOT production-complete.
+
+- v1.206 did not create a design batch because the registered Hỗ trợ an toàn target already matched the shared header, footer, menu and shell well enough for comparison.
+- v1.206 changed real UI layout: `/support/safety` now keeps the first-flow to hero, safety design board, privacy checklist, player safety principles and support issue path, while secondary route/proof boards are grouped behind the shared native disclosure.
+- v1.206 added/extended support-safety composition rules in `packages/ui/src/service-layout.css`, reusing `lgo-service-compact-proof-page`, `lgo-service-disclosure-stack` and `lgo-service-disclosure-body` rather than adding current-page CSS to `apps/web/src/app/globals.css`.
+- v1.206 kept the page Vietnamese and support-scenario safe: no ticket backend, no account lookup, no moderation dashboard, no sensitive data intake, no production auth, no DB persistence and no accepted backend contract.
+- v1.206 explicitly checked rendered screenshots against the Support Safety target and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.206 final browser/e2e metrics: desktop hero bottom 368.95px, design top 368.31px, design bottom 560.06px, checklist top 741.25px, principles top 864.17px, issue path top 1329.75px, disclosure top 1846.61px, scrollHeight 2402px, h1/max font 34.82px, 5 checklist columns, 3 principles columns, 2 issue columns, 1 disclosure, 4 expanded top-level boards, overflow 0; mobile hero bottom 489.16px, design top 497.16px, design bottom 806.63px, checklist top 1072.16px, principles top 1404.84px, issue path top 2160.48px, disclosure top 2851.78px, scrollHeight 3610px, h1/max font 29.12px, 2 checklist columns, 2 principles columns, 2 issue columns, 1 disclosure, 4 expanded top-level boards, overflow 0.
+- v1.206 evidence: browser/e2e desktop/mobile v1.206; screenshot review `/tmp/support-safety-desktop-v1206.png` and `/tmp/support-safety-mobile-v1206.png`; source validator; Web/UI checks; Web build; clean current-state closure validator.
+- AXIRO reference remains organizational only: shared base/layout/style owners and separated style primitives. No AXIRO code was copied.
+- Design target sync rule remains recorded: design targets must stay synchronized with shared header, footer, menu, shell and navigation; if a current target diverges, only the smallest current-page target area may be corrected before returning to browser layout.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.207. Select `/community` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-SUPPORT-HELP-REAL-UI-LAYOUT-v1.205 WEB_CLOSED.
 
 Current decision: v1.205 closed the active `/support/help` page slice as a real browser UI/UX Layout task. The existing Vietnamese Support Help design target and shared shell were sufficient for comparison; work focused on the rendered FAQ/help route map, first-flow density, mobile typography, card hierarchy, keyboard/focus evidence and Base First shared disclosure/compact proof layout. Entire program is NOT production-complete.

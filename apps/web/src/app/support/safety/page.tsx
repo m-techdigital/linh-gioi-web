@@ -82,28 +82,36 @@ export default function SafetySupportPage() {
         </div>
         <PlayerSafetyPrinciplesBoard />
         <SupportIssuePathBoard />
-        <IssueCategoryRouteBoard />
-        <SafeFeedbackTemplateBoard />
-        <DeviceReportTemplateBoard />
-        <ReleaseReadinessHubCta />
-        <TesterExpectationCopyBoard />
-        <PlayerTrustReleaseCta />
-        <ClosedTestReadinessBoard />
-        <ContentIaStartCta />
-        <FaqHelpfulnessCta />
-        <RouteContinuityCta />
-        <WorldGameplayLoopCta />
-        <NoSearchBackendNoteBoard />
-        <ClosedTestSupportBoard />
-        <CommunityConductBoard />
-        <CommunityFeedbackGuidance />
-        <AccessibilityReadabilityCta />
-        <FocusOrderBoard />
-        <MobileDensityBudgetBoard />
-        <PerformanceBudgetCta />
-        <DownloadTrustCta />
-        <PlayerSafetySupportCta />
-        <ClosedTesterInformationPackCta />
+        <details className="lgo-service-disclosure-stack lgo-support-safety-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>Giữ đủ issue category, template phản hồi, readiness, trust, guide, community, accessibility, performance và route continuity nhưng không ép toàn bộ proof board vào first-flow báo lỗi an toàn.</small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <IssueCategoryRouteBoard />
+            <SafeFeedbackTemplateBoard />
+            <DeviceReportTemplateBoard />
+            <ReleaseReadinessHubCta />
+            <TesterExpectationCopyBoard />
+            <PlayerTrustReleaseCta />
+            <ClosedTestReadinessBoard />
+            <ContentIaStartCta />
+            <FaqHelpfulnessCta />
+            <RouteContinuityCta />
+            <WorldGameplayLoopCta />
+            <NoSearchBackendNoteBoard />
+            <ClosedTestSupportBoard />
+            <CommunityConductBoard />
+            <CommunityFeedbackGuidance />
+            <AccessibilityReadabilityCta />
+            <FocusOrderBoard />
+            <MobileDensityBudgetBoard />
+            <PerformanceBudgetCta />
+            <DownloadTrustCta />
+            <PlayerSafetySupportCta />
+            <ClosedTesterInformationPackCta />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );

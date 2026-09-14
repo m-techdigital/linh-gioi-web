@@ -1021,6 +1021,51 @@
     gap: .45rem;
     padding: .56rem;
   }
+
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-support-safety-expanded-evidence {
+    margin-top: -.35rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack {
+    gap: .72rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-detail-hero-card {
+    gap: .48rem;
+    padding: .78rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-detail-hero-card h1 {
+    font-size: clamp(1.82rem, 7vw, 2.02rem);
+    line-height: .96;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack h2 {
+    font-size: clamp(1.14rem, 5.6vw, 1.54rem);
+    line-height: 1.08;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack h3 {
+    font-size: clamp(.88rem, 4.5vw, 1rem);
+    line-height: 1.08;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-detail-hero-card p,
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-detail-hero-card .lgo-hero-lead {
+    font-size: .78rem;
+    line-height: 1.24;
+    margin-block: .18rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-safety-support-design-board img {
+    max-height: 168px;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-support-safety-checklist {
+    gap: .48rem;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1033,7 +1078,8 @@
   }
 
   .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-detail-hero-card h1 {
-    font-size: clamp(2rem, 10vw, 2.8rem);
+    font-size: clamp(1.82rem, 7vw, 2.02rem);
+    line-height: .96;
   }
 
   .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-detail-hero-card p,
@@ -1132,6 +1178,34 @@
   .lgo-service-compact-proof-page .lgo-issue-category-list {
     display: grid;
     gap: .55rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-player-safety-board .lgo-grid,
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-support-issue-path-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .48rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-player-safety-card,
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-support-issue-path {
+    padding: .54rem;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-player-safety-card p,
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-support-issue-path p {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-player-safety-card small,
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-support-issue-path small {
+    -webkit-line-clamp: 1;
+  }
+
+  .lgo-service-compact-proof-page.lgo-supportsafetypage-stack .lgo-support-issue-path .lgo-link-button {
+    min-height: 30px;
+    padding-block: .25rem;
+    padding-inline: .42rem;
+    font-size: .66rem;
   }
 }
 
