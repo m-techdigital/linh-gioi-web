@@ -16,54 +16,84 @@ import { WorldGameplayLoopCta } from "../../components/PublicWorldGameplayLoopSe
 import { PlayerTrustReleaseCta } from "../../components/PublicPlayerTrustReleaseSections";
 import { WebAppShell } from "../../components/WebAppShell";
 
-export const metadata = { title: "Performance / copy budget" };
+const performanceSteps = [
+  {
+    badge: "Ưu tiên 1",
+    title: "Nhẹ ở lần đọc đầu",
+    text: "Hero và board phải giúp người chơi hiểu trạng thái mà không phải cuộn qua nhiều CTA sâu.",
+  },
+  {
+    badge: "Ưu tiên 2",
+    title: "Ít chữ nhưng đúng ranh giới",
+    text: "Copy phải nói rõ chưa có giám sát production, chứng nhận Lighthouse hoặc CDN ảnh riêng.",
+  },
+  {
+    badge: "Ưu tiên 3",
+    title: "Mobile không bị dày",
+    text: "Thẻ, board và CTA phải giữ nhịp đọc ngắn để tránh cảm giác web nặng hoặc rối.",
+  },
+];
+
+export const metadata = { title: "Hiệu năng và ngân sách nội dung" };
 
 export default function PerformanceBudgetPage() {
   return (
     <WebAppShell>
-      <Stack>
+      <Stack className="lgo-player-facing-stack lgo-service-compact-proof-page lgo-performancepage-stack">
         <GameCard className="lgo-detail-hero-card lgo-performance-hero-card">
-          <StatusBadge tone="jade">WEB v1.16 performance / copy / asset budget polish</StatusBadge>
-          <span className="lgo-card-kicker">No Core Web Vitals measured PASS · no Lighthouse certification · no image CDN claim</span>
-          <h1>Performance, copy và asset budget cho public web</h1>
+          <StatusBadge tone="jade">WEB v1.151 · hiệu năng public</StatusBadge>
+          <span className="lgo-card-kicker">Chưa có đo Core Web Vitals · chưa có chứng nhận Lighthouse · chưa có CDN ảnh riêng</span>
+          <h1>Hiệu năng và ngân sách nội dung</h1>
           <p className="lgo-hero-lead">
-            Trang này biến performance thành trải nghiệm người chơi: route nhẹ hơn, copy ngắn hơn, visual fantasy dùng CSS-only,
-            và blocker download/support/account nằm gần CTA nhạy cảm.
+            Trang này biến hiệu năng thành trải nghiệm người chơi: ít chữ hơn, thứ tự rõ hơn, ảnh tham chiếu nhẹ hơn và CTA nhạy cảm không gây hiểu nhầm.
           </p>
           <p>
-            Đây là product web polish. Runtime/browser/e2e chỉ là guardrail; public site không claim production monitoring,
-            CDN deployment, formal Core Web Vitals PASS hoặc approved game asset pipeline.
+            Đây là hướng dẫn tĩnh cho public web. Chưa công bố giám sát production, chứng nhận Lighthouse, CDN ảnh riêng,
+            pipeline asset được duyệt hoặc chỉ số Core Web Vitals chính thức.
           </p>
           <div className="lgo-product-first-actions">
-            <LinkButton href="/journey" tone="spirit">Journey hub</LinkButton>
-            <LinkButton href="/start" tone="spirit">Start hub</LinkButton>
             <LinkButton href="/accessibility" tone="jade">Đọc dễ hơn</LinkButton>
-            <LinkButton href="/download/trust" tone="gold">Download trust</LinkButton>
+            <LinkButton href="/download/trust" tone="gold">Tin cậy tải game</LinkButton>
+            <LinkButton href="/journey" tone="spirit">Hành trình</LinkButton>
           </div>
         </GameCard>
-        <PlayerTrustReleaseCta />
-        <figure className="lgo-performance-design-board lgo-panel" aria-label="Performance copy budget HUD reference art">
+
+        <figure className="lgo-performance-design-board lgo-panel" aria-label="Bảng HUD ngân sách hiệu năng public">
           <img
             src="/game-art/design-boards/performance-copy-budget-hud.svg"
-            alt="Performance copy budget HUD board"
+            alt="Bảng HUD ngân sách hiệu năng public Linh Giới"
             loading="eager"
           />
           <figcaption>
-            <StatusBadge tone="jade">Game reference art</StatusBadge>
-            <strong>Performance budget nhìn từ HUD: ít chữ hơn, quyết định rõ hơn.</strong>
+            <StatusBadge tone="jade">Board tham chiếu</StatusBadge>
+            <strong>Nhìn hiệu năng như HUD: ít nhiễu, quyết định rõ, ranh giới gần CTA.</strong>
             <span>
-              Board này dùng visual thật từ LinhGioiOnline để giữ copy, asset và CTA budget gọn trên public route,
-              without claiming Lighthouse certification, CDN deployment or formal Core Web Vitals PASS.
+              Board này dùng visual HUD từ LinhGioiOnline để giữ copy, asset và CTA gọn trên public route
+              trước khi có chứng nhận đo lường hoặc hạ tầng ảnh production.
             </span>
           </figcaption>
         </figure>
-        <SectionHeading eyebrow="Product-first performance" title="Nhanh hơn bằng cách nói ít nhưng đúng hơn">
-          v1.16 không mở backend, CMS, image pipeline hoặc tool loop mới. Nó làm web public dễ scan hơn và giảm cảm giác nặng ở hero/cards/routes.
-        </SectionHeading>
+
+        <section className="lgo-performance-route-board lgo-panel" aria-label="Ngân sách hiệu năng đầu trang">
+          <SectionHeading eyebrow="Ngân sách đầu trang" title="Nhanh hơn bằng cách nói ít nhưng đúng hơn">
+            Luồng đầu trang phải giúp người chơi hiểu trạng thái tải game, độ tin cậy và ranh giới vận hành trước khi đi vào các bảng chi tiết.
+          </SectionHeading>
+          <div className="lgo-performance-step-grid">
+            {performanceSteps.map((step) => (
+              <article key={step.title} className="lgo-performance-step-card">
+                <StatusBadge tone="jade">{step.badge}</StatusBadge>
+                <h2>{step.title}</h2>
+                <p>{step.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <PerformanceCopyBudgetPrincipleBoard />
         <StaticRouteCompositionBoard />
         <PerceivedLoadSignalBoard />
         <MobileDensityBudgetBoard />
+        <PlayerTrustReleaseCta />
         <RouteContinuityCta />
         <PerformanceBudgetCta />
         <AccessibilityReadabilityCta />
@@ -71,8 +101,8 @@ export default function PerformanceBudgetPage() {
         <WorldGameplayLoopCta />
         <DownloadTrustCta />
         <PlayerSafetySupportCta />
-              <ClosedTesterInformationPackCta />
-        </Stack>
+        <ClosedTesterInformationPackCta />
+      </Stack>
     </WebAppShell>
   );
 }

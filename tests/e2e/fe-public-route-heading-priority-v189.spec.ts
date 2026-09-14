@@ -6,7 +6,7 @@ const routes = [
   { path: "/accessibility", title: "Accessibility và readability cho người chơi mới" },
   { path: "/community", title: "Cộng đồng Linh Giới" },
   { path: "/game/loop", title: "World gameplay loop" },
-  { path: "/performance", title: "Performance, copy và asset budget cho public web" },
+  { path: "/performance", title: "Hiệu năng và ngân sách nội dung" },
 ];
 
 type HeadingMetrics = {

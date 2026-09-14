@@ -44,7 +44,7 @@ def main() -> int:
             "PerformanceCopyBudgetPrincipleBoard", "StaticRouteCompositionBoard", "PerceivedLoadSignalBoard", "MobileDensityBudgetBoard", "PerformanceBudgetCta"
         ],
         "apps/web/src/app/performance/page.tsx": [
-            "Performance, copy và asset budget", "No Core Web Vitals measured PASS", "no Lighthouse certification", "no image CDN claim"
+            "Hiệu năng và ngân sách nội dung", "Chưa có đo Core Web Vitals", "chưa có chứng nhận Lighthouse", "chưa có CDN ảnh riêng"
         ],
         "apps/web/src/app/globals.css": [
             "WEB v1.16 performance / copy / asset budget polish", "lgo-performance-cta", "lgo-static-route-item"

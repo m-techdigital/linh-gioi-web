@@ -22,11 +22,11 @@ def check_routes() -> None:
     require_order("apps/web/src/app/accessibility/page.tsx", "<h1>Accessibility và readability cho người chơi mới</h1>", "<PlayerTrustReleaseCta />")
     require_order("apps/web/src/app/community/page.tsx", "<h1>Cộng đồng Linh Giới</h1>", "<PlayerTrustReleaseCta />")
     require_order("apps/web/src/app/game/loop/page.tsx", "<h1>World gameplay loop</h1>", "<PlayerTrustReleaseCta />")
-    require_order("apps/web/src/app/performance/page.tsx", "<h1>Performance, copy và asset budget cho public web</h1>", "<PlayerTrustReleaseCta />")
+    require_order("apps/web/src/app/performance/page.tsx", "<h1>Hiệu năng và ngân sách nội dung</h1>", "<PlayerTrustReleaseCta />")
     require_text("apps/web/src/app/accessibility/page.tsx", ["No formal WCAG audit", "no legal compliance claim", "no personal settings backend"])
     require_text("apps/web/src/app/community/page.tsx", ["Chưa có trò chuyện · chưa có diễn đàn · chưa có bang hội", "chưa mở trò chuyện, diễn đàn, bang hội", "điều phối thật"])
     require_text("apps/web/src/app/game/loop/page.tsx", ["without claiming live combat", "inventory persistence", "account integration"])
-    require_text("apps/web/src/app/performance/page.tsx", ["No Core Web Vitals measured PASS", "no Lighthouse certification", "no image CDN claim"])
+    require_text("apps/web/src/app/performance/page.tsx", ["Chưa có đo Core Web Vitals", "chưa có chứng nhận Lighthouse", "chưa có CDN ảnh riêng"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-route-heading-priority-v189.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-v1.89.md", "LGO-WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-REPORT-v1.89.md", "HANDOFF-LGO-WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-v1.89.md"]: require_file(rel)
     require_text("tests/e2e/fe-public-route-heading-priority-v189.spec.ts", ["/accessibility", "/community", "/game/loop", "/performance", "starts content with the page h1", "pageOverflow", "maxFont"])

@@ -22,7 +22,7 @@ async function collectPerformanceBoardMetrics(page: Page): Promise<PerformanceBo
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const image = document.querySelector<HTMLImageElement>('img[alt="Performance copy budget HUD board"]');
+    const image = document.querySelector<HTMLImageElement>('img[alt="Bảng HUD ngân sách hiệu năng public Linh Giới"]');
     const caption = image?.closest("figure")?.querySelector("figcaption");
     return {
       pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -41,8 +41,8 @@ async function collectPerformanceBoardMetrics(page: Page): Promise<PerformanceBo
 test.describe("public performance design board", () => {
   test("/performance renders the copy-budget HUD visual without mobile overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/performance`);
-    await expect(page.getByRole("heading", { name: "Performance, copy và asset budget cho public web" })).toBeVisible();
-    await expect(page.getByRole("img", { name: "Performance copy budget HUD board" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Hiệu năng và ngân sách nội dung" })).toBeVisible();
+    await expect(page.getByRole("img", { name: "Bảng HUD ngân sách hiệu năng public Linh Giới" })).toBeVisible();
 
     const metrics = await collectPerformanceBoardMetrics(page);
     expect(metrics.board, "performance board metrics").not.toBeNull();

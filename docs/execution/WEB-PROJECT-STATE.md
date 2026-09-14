@@ -1,3 +1,16 @@
+Current phase: WEB-FE-PERFORMANCE-REAL-UI-LAYOUT-v1.151 WEB_CLOSED.
+
+Current decision: v1.151 closed the active `/performance` page slice as a real browser UI/UX Layout task. The existing Public Service design target remained the guardrail; work focused on the rendered page and shared Base First layout. Entire program is NOT production-complete.
+
+- v1.151 did not create a new design batch because the registered Public Service target was sufficient for comparison.
+- v1.151 replaced the old English-heavy first-flow with Vietnamese `Hiệu năng và ngân sách nội dung`, a compact boundary, the HUD board and a three-step performance budget path.
+- v1.151 moved performance board/layout CSS out of `apps/web/src/app/globals.css` and into shared `packages/ui/src/service-layout.css`.
+- v1.151 evidence: browser/e2e desktop/mobile v1.151 and historical v1.76 performance-board compatibility; source validator; Web/content/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/performance-desktop-v1151.png` and `/tmp/performance-mobile-v1151.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.152. Select `/accessibility` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-COMMUNITY-ONBOARDING-REAL-UI-LAYOUT-v1.150 WEB_CLOSED.
 
 Current decision: v1.150 closed the active `/community/onboarding` page slice as a real browser UI/UX Layout task. The existing Public Service design target remained the guardrail; work focused on the rendered page and shared Base First layout. Entire program is NOT production-complete.
