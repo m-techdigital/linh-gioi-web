@@ -437,3 +437,23 @@
     text-align: center;
   }
 }
+
+/* WEB v1.100 workspace component/state design target companion */
+.lgo-workspace-shell .lgo-design-target-reference-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  justify-content: flex-end;
+}
+
+.lgo-workspace-shell .lgo-design-target-reference-link-secondary {
+  border-color: rgba(245, 200, 107, .34);
+  background: rgba(245, 200, 107, .08);
+}
+
+@media (max-width: 720px) {
+  .lgo-workspace-shell .lgo-design-target-reference-actions {
+    display: grid;
+    justify-content: stretch;
+  }
+}

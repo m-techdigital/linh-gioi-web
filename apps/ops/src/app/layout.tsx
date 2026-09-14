@@ -37,7 +37,8 @@ export default function OpsLayout({ children }: { children: ReactNode }) {
           designTarget={{
             label: "Ops/Admin design target",
             href: "/design-reference/design-atlas-ops-v195.png",
-            scope: "Ops/Admin"
+            scope: "Ops/Admin",
+            companionTargets: [{ label: "Component/state design target", href: "/design-reference/design-atlas-components-v195.png" }]
           }}
         >
           {children}

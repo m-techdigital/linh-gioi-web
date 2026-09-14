@@ -469,15 +469,18 @@ export function ErrorState({ title = "Không thể tải dữ liệu", children 
   return <div className="lgo-state lgo-state-error" role="alert"><strong>{title}</strong>{children ? <p>{children}</p> : null}</div>;
 }
 
+export type DesignTargetReferenceLink = { label: string; href: string };
+
 export type DesignTargetReferenceProps = {
   label: string;
   href: string;
   scope: string;
   note?: ReactNode;
   className?: string;
+  companionTargets?: DesignTargetReferenceLink[];
 };
 
-export function DesignTargetReference({ label, href, scope, note, className }: DesignTargetReferenceProps) {
+export function DesignTargetReference({ label, href, scope, note, className, companionTargets = [] }: DesignTargetReferenceProps) {
   return (
     <aside className={cx("lgo-design-target-reference", className)} role="region" aria-label="Design target reference">
       <div className="lgo-design-target-reference-copy">
@@ -485,9 +488,16 @@ export function DesignTargetReference({ label, href, scope, note, className }: D
         <strong>{scope}</strong>
         {note ? <p>{note}</p> : null}
       </div>
-      <a className="lgo-design-target-reference-link" href={href} target="_blank" rel="noreferrer">
-        {label}
-      </a>
+      <div className="lgo-design-target-reference-actions">
+        <a className="lgo-design-target-reference-link" href={href} target="_blank" rel="noreferrer">
+          {label}
+        </a>
+        {companionTargets.map((target) => (
+          <a className="lgo-design-target-reference-link lgo-design-target-reference-link-secondary" href={target.href} target="_blank" rel="noreferrer" key={`${target.href}:${target.label}`}>
+            {target.label}
+          </a>
+        ))}
+      </div>
     </aside>
   );
 }

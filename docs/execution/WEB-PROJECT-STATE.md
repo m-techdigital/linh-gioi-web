@@ -1,3 +1,14 @@
+Current phase: WEB-FE-COMPONENT-STATE-DESIGN-TARGET-v1.100 WEB_CLOSED.
+
+Current decision: v1.100 FE component/state design target slice closed. Public, Portal and Ops now expose a Component/state atlas companion link in their Design Target First region so shared Base UI/UX Layout work can be compared before implementation. Entire program is NOT production-complete.
+
+- v1.100 extends shared `DesignTargetReference` with companion targets instead of duplicating per-surface UI.
+- v1.100 uses the existing v1.95 Component/state atlas and mirrors it to Portal/Ops runtime; no new design target was required and no stale target was replaced.
+- v1.100 evidence: RED browser/e2e reproduced missing Component/state design-target link; Playwright desktop/mobile component target loading PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.101.
+
 Current phase: WEB-FE-WORKSPACE-DESIGN-TARGET-ASSET-v1.99 WEB_CLOSED.
 
 Current decision: v1.99 FE workspace design-target asset slice closed. Portal and Ops/Admin now serve their registered design target PNGs from their own app runtimes, so Design Target First links can be opened directly during browser review. Entire program is NOT production-complete.

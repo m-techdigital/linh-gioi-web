@@ -15,6 +15,8 @@ const PUBLIC_SERVICE_TARGET = {
   scope: "Public Service"
 };
 
+const COMPONENT_STATE_TARGET = { label: "Component/state design target", href: "/design-reference/design-atlas-components-v195.png" };
+
 const publicCorePrefixes = ["/game", "/classes", "/story", "/journey", "/start", "/guides", "/news", "/events", "/patch-notes"];
 const publicServicePrefixes = ["/download", "/release", "/status", "/support", "/community", "/performance", "/accessibility", "/roadmap"];
 
@@ -33,6 +35,7 @@ export function PublicDesignTargetReference() {
     <DesignTargetReference
       {...target}
       note={<>Base UI/UX Layout · đối chiếu page này với atlas đã đăng ký trước khi sửa UI.</>}
+      companionTargets={[COMPONENT_STATE_TARGET]}
     />
   );
 }

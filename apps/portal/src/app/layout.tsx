@@ -35,7 +35,8 @@ export default function PortalLayout({ children }: { children: ReactNode }) {
           designTarget={{
             label: "Player Portal design target",
             href: "/design-reference/design-atlas-portal-v195.png",
-            scope: "Player Portal"
+            scope: "Player Portal",
+            companionTargets: [{ label: "Component/state design target", href: "/design-reference/design-atlas-components-v195.png" }]
           }}
         >
           {children}

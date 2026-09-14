@@ -95,10 +95,10 @@ def check_tests_docs_registry() -> None:
         ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         "Current phase: WEB-FE-WORKSPACE-DESIGN-TARGET-ASSET-v1.99 WEB_CLOSED",
-        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.100",
+        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.100",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT",
         "Design Target First",
         "browser/e2e",
     ])
