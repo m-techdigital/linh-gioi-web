@@ -152,12 +152,12 @@ def check_tests_docs() -> None:
         ])
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
         "Current phase: WEB-FE-TESTER-PACK-REAL-UI-LAYOUT-v1.144 WEB_CLOSED",
-        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.212",
+        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.213",
         "Select `/game/loop` as the next single active page",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.212",
-        "Current FE scope: select `/game/loop`",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.213",
+        "Current FE scope: select `/game`",
         "Real Browser UI/UX Layout First is Priority #1",
         "Base UI/UX Layout",
         "CSS must be managed by owner/role",

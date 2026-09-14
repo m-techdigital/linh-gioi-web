@@ -2489,16 +2489,16 @@
 
 /* Shared game-loop page layout for public gameplay expectation surfaces. */
 .lgo-gamelooppage-stack {
-  gap: 1.05rem;
+  gap: clamp(.78rem, 1.35vw, 1.1rem);
 }
 
 .lgo-gamelooppage-stack .lgo-detail-hero-card {
-  padding: clamp(1rem, 2.2vw, 1.55rem);
+  padding: clamp(.84rem, 1.32vw, 1.08rem);
 }
 
 .lgo-gamelooppage-stack .lgo-detail-hero-card h1 {
-  font-size: clamp(2.08rem, 4vw, 3.45rem);
-  line-height: .92;
+  font-size: clamp(1.95rem, 3.1vw, 3.02rem);
+  line-height: .94;
   max-width: 14ch;
 }
 
@@ -2507,12 +2507,13 @@
 }
 
 .lgo-game-loop-design-board {
-  gap: .95rem;
-  padding: .9rem;
+  gap: .72rem;
+  margin-top: -.3rem;
+  padding: .72rem;
 }
 
 .lgo-game-loop-design-board img {
-  max-height: 236px;
+  max-height: 190px;
   object-fit: contain;
 }
 
@@ -2529,8 +2530,9 @@
 
 .lgo-game-loop-gate-board {
   display: grid;
-  gap: .75rem;
-  padding: .9rem;
+  gap: .6rem;
+  margin-top: -.18rem;
+  padding: .72rem;
 }
 
 .lgo-game-loop-gate-board .lgo-section-heading {
@@ -2565,13 +2567,18 @@
   line-height: 1.28;
 }
 
+
+.lgo-gamelooppage-stack .lgo-gameloop-expanded-evidence {
+  margin-top: -.34rem;
+}
+
 @media (min-width: 981px) {
   .lgo-gamelooppage-stack {
-    gap: .82rem;
+    gap: .78rem;
   }
 
   .lgo-gamelooppage-stack .lgo-detail-hero-card {
-    gap: .52rem;
+    gap: .48rem;
   }
 
   .lgo-gamelooppage-stack .lgo-detail-hero-card .lgo-product-first-actions {
@@ -2581,31 +2588,72 @@
   }
 
   .lgo-game-loop-design-board {
-    margin-top: -.25rem;
+    margin-top: -.3rem;
     grid-template-columns: minmax(0, 1.12fr) minmax(17rem, .88fr);
+  }
+
+  .lgo-game-loop-gate-board .lgo-section-heading p:last-child {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin: 0;
+    font-size: .78rem;
+    line-height: 1.24;
   }
 
   .lgo-game-loop-gate-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .4rem;
+  }
+
+  .lgo-game-loop-gate-card {
+    gap: .3rem;
+    padding: .56rem;
+  }
+
+  .lgo-game-loop-gate-card p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: .72rem;
+    line-height: 1.18;
   }
 
   .lgo-service-compact-proof-page .lgo-gameplay-loop-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: .58rem;
+    gap: .44rem;
   }
 
   .lgo-service-compact-proof-page .lgo-gameplay-loop-board {
-    padding: .85rem;
+    margin-top: -.18rem;
+    padding: .72rem;
   }
 
   .lgo-service-compact-proof-page .lgo-gameplay-loop-card {
-    gap: .42rem;
-    padding: .7rem;
+    gap: .24rem;
+    padding: .46rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-gameplay-loop-step {
+    gap: .28rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-gameplay-loop-step > span {
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: .72rem;
   }
 
   .lgo-service-compact-proof-page .lgo-gameplay-loop-card h3 {
-    font-size: .9rem;
-    line-height: 1.06;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin: 0;
+    font-size: .8rem;
+    line-height: 1.04;
   }
 
   .lgo-service-compact-proof-page .lgo-gameplay-loop-card p,
@@ -2613,38 +2661,40 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    font-size: .72rem;
-    line-height: 1.22;
+    margin: 0;
+    font-size: .64rem;
+    line-height: 1.1;
   }
 
   .lgo-service-compact-proof-page .lgo-gameplay-loop-card p {
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
   }
 
   .lgo-service-compact-proof-page .lgo-gameplay-loop-card small {
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
   }
 
   .lgo-service-compact-proof-page .lgo-gameplay-loop-card .lgo-link-button {
-    min-height: 30px;
-    padding-block: .24rem;
-    padding-inline: .42rem;
-    font-size: .66rem;
+    min-height: 28px;
+    padding-block: .18rem;
+    padding-inline: .34rem;
+    font-size: .6rem;
   }
 }
 
 @media (max-width: 760px) {
   .lgo-gamelooppage-stack {
-    gap: .78rem;
+    gap: .68rem;
   }
 
   .lgo-gamelooppage-stack .lgo-detail-hero-card {
-    gap: .48rem;
-    padding: .9rem;
+    gap: .42rem;
+    padding: .74rem;
   }
 
   .lgo-gamelooppage-stack .lgo-detail-hero-card h1 {
-    font-size: clamp(1.95rem, 8.05vw, 2.12rem);
+    font-size: clamp(1.78rem, 6.8vw, 2rem);
+    line-height: .96;
   }
 
   .lgo-gamelooppage-stack .lgo-detail-hero-card p,
@@ -2653,8 +2703,8 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
-    font-size: .88rem;
-    line-height: 1.34;
+    font-size: .82rem;
+    line-height: 1.28;
   }
 
   .lgo-gamelooppage-stack .lgo-detail-hero-card .lgo-link-button {
@@ -2666,11 +2716,11 @@
 
   .lgo-game-loop-design-board,
   .lgo-game-loop-gate-board {
-    padding: .68rem;
+    padding: .62rem;
   }
 
   .lgo-game-loop-design-board img {
-    max-height: 188px;
+    max-height: 150px;
   }
 
   .lgo-game-loop-design-board figcaption,
@@ -2707,8 +2757,8 @@
   }
 
   .lgo-game-loop-gate-card {
-    gap: .28rem;
-    padding: .5rem;
+    gap: .24rem;
+    padding: .44rem;
   }
 
   .lgo-game-loop-gate-card h2 {
@@ -2724,6 +2774,62 @@
     font-size: .62rem;
     padding-block: .12rem;
     padding-inline: .34rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-gameplay-loop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .42rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-gameplay-loop-board {
+    margin-top: -.18rem;
+    padding: .62rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-gameplay-loop-card {
+    gap: .24rem;
+    padding: .44rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-gameplay-loop-step {
+    gap: .24rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-gameplay-loop-step > span {
+    width: 2rem;
+    height: 2rem;
+    font-size: .72rem;
+  }
+
+  .lgo-service-compact-proof-page .lgo-gameplay-loop-card h3 {
+    margin: 0;
+    font-size: .78rem;
+    line-height: 1.04;
+  }
+
+  .lgo-service-compact-proof-page .lgo-gameplay-loop-card p,
+  .lgo-service-compact-proof-page .lgo-gameplay-loop-card small {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+    font-size: .64rem;
+    line-height: 1.12;
+  }
+
+  .lgo-service-compact-proof-page .lgo-gameplay-loop-card p {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-service-compact-proof-page .lgo-gameplay-loop-card small {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-service-compact-proof-page .lgo-gameplay-loop-card .lgo-link-button {
+    min-height: 28px;
+    padding-block: .18rem;
+    padding-inline: .34rem;
+    font-size: .6rem;
   }
 }
 

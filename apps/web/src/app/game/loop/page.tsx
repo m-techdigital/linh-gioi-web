@@ -87,19 +87,30 @@ export default function WorldGameplayLoopPage() {
         </section>
 
         <GameplayLoopStageBoard />
-        <PlayerTrustReleaseCta />
-        <BeginnerExpectationBoard />
-        <GuideWorldNavigationBoard />
-        <GameplayScopeBoundaryBoard />
-        <DownloadTrustCta />
-        <ContentIaStartCta />
-        <RouteContinuityCta />
-        <AccessibilityReadabilityCta />
-        <PerformanceBudgetCta />
-        <StaticRouteCompositionBoard />
-        <WorldGameplayLoopCta />
-        <PlayerSafetySupportCta />
-        <ClosedTesterInformationPackCta />
+
+        <details className="lgo-service-disclosure-stack lgo-gameloop-expanded-evidence">
+          <summary>
+            <span>Bằng chứng phụ và tuyến liên quan</span>
+            <small>
+              Giữ đủ trust release, kỳ vọng nhập môn, guide, scope boundary, download trust, content hub, route continuity, accessibility, performance, static route, safety và closed tester mà không ép toàn bộ proof board vào first-flow gameplay.
+            </small>
+          </summary>
+          <div className="lgo-service-disclosure-body">
+            <PlayerTrustReleaseCta />
+            <BeginnerExpectationBoard />
+            <GuideWorldNavigationBoard />
+            <GameplayScopeBoundaryBoard />
+            <DownloadTrustCta />
+            <ContentIaStartCta />
+            <RouteContinuityCta />
+            <AccessibilityReadabilityCta />
+            <PerformanceBudgetCta />
+            <StaticRouteCompositionBoard />
+            <WorldGameplayLoopCta />
+            <PlayerSafetySupportCta />
+            <ClosedTesterInformationPackCta />
+          </div>
+        </details>
       </Stack>
     </WebAppShell>
   );

@@ -1,3 +1,21 @@
+Current phase: WEB-FE-GAME-LOOP-REAL-UI-LAYOUT-v1.212 WEB_CLOSED.
+
+Current decision: v1.212 closed the active `/game/loop` page slice as a real browser UI/UX Layout task. The existing Vietnamese gameplay loop design board and shared public shell were sufficient for comparison; work focused on the rendered page, first-flow density, mobile typography, compact gate/stage boards, native disclosure grouping for secondary proof and Base First shared CSS ownership. Entire program is NOT production-complete.
+
+- v1.212 did not create or batch a new design target because the existing world gameplay loop board plus Public Core shell were usable for checking header, footer, menu, shell, route flow and game scenario alignment.
+- v1.212 changed real UI layout: `/game/loop` now keeps the core first-flow to hero, design board, gate board and gameplay stage board, while trust release, beginner expectation, guide navigation, gameplay scope, download trust, content hub, route continuity, accessibility, performance, static route, world loop CTA, safety and closed tester proof boards are grouped behind the shared native disclosure.
+- v1.212 extended the existing game-loop shared layout in `packages/ui/src/service-layout.css`; no current-page CSS was added to `apps/web/src/app/globals.css`.
+- v1.212 referenced AXIRO only for code organization judgment: Base components first, page composition second, no copied code and no AXIRO design copied.
+- v1.212 kept the page Vietnamese and FE-only: no production auth, no backend integration, no DB persistence, no CMS, no full MMO gameplay, no public download promise and no accepted backend contract.
+- v1.212 explicitly checked rendered screenshots against the gameplay loop board and shared shell for margin, padding, font-size, card density, header/footer/menu coherence and Base First reuse before closure.
+- v1.212 final browser/e2e metrics: desktop hero bottom 351.80px, design top 359.47px, design bottom 574.50px, gate top 600.09px, gate bottom 941.67px, stage top 951.27px, stage bottom 1319.48px, disclosure top 1326.52px, scrollHeight 1898px, h1/max font 39.68px, 3 gate columns, 4 stage columns, 1 disclosure, overflow 0; mobile hero bottom 516.00px, design top 522.08px, design bottom 834.27px, gate top 858.27px, gate bottom 1417.33px, stage top 1425.33px, stage bottom 2228.13px, disclosure top 2233.56px, scrollHeight 2992px, h1 font 28.48px, max heading font 32.00px, 2 gate columns, 2 stage columns, 1 disclosure, overflow 0.
+- v1.212 evidence: browser/e2e desktop/mobile v1.212; screenshot review `/tmp/game-loop-desktop-v1212.png` and `/tmp/game-loop-mobile-v1212.png`; source validator `tools/validate_web_fe_game_loop_real_ui_layout_v1212.py`; Web/UI typecheck; Web build; current-state closure validator.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.213.
+Select `/game` as the next single active page. Continue Real Browser UI/UX Layout First and Base First; use design target only as a comparison guardrail and do not move past `/game` before browser/e2e, screenshot review, validator, build/typecheck, docs, commit and push.
+
+Historical snapshot follows.
+
 Current phase: WEB-FE-ROADMAP-REAL-UI-LAYOUT-v1.211 WEB_CLOSED.
 
 Current decision: v1.211 closed the active `/roadmap` page slice as a real browser UI/UX Layout task. The existing Vietnamese roadmap flow design board and shared public service shell were sufficient for comparison; work focused on the rendered roadmap route, first-flow density, moving the public roadmap list into the core flow, compacting long roadmap cards, disclosure grouping for secondary evidence and Base First shared CSS ownership. Entire program is NOT production-complete.
