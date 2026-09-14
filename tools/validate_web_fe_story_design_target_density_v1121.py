@@ -81,7 +81,7 @@ def check_tests_docs() -> None:
     ])
     require_text("apps/web/src/components/PublicDesignTargetReference.tsx", [
         "PUBLIC_STORY_TARGET",
-        "Story detailed design target",
+        "Thiết kế chi tiết cốt truyện",
         "story-detailed-design-target-v1121.png",
         "Public Story",
     ])

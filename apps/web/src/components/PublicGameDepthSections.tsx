@@ -70,7 +70,7 @@ export function WorldAtlasStories() {
 export function StoryArcTimeline() {
   return (
     <section className="lgo-experience-section lgo-story-arc-section" aria-labelledby="story-arc-heading">
-      <SectionHeading eyebrow="Opening arc" title="Ba chương — một thế giới mất dần cảm giác an toàn">
+      <SectionHeading eyebrow="Mở đầu truyện" title="Ba chương — một thế giới mất dần cảm giác an toàn">
         Mỗi chương phải thay đổi quy mô câu hỏi: từ một khe nứt ngoài thành, tới một mạng lưới portal, rồi thành cuộc xâm lăng khiến nơi người chơi gọi là nhà cũng bị đặt lên bàn cân.
       </SectionHeading>
       <div className="lgo-story-arc-timeline" id="story-arc-heading">
@@ -91,7 +91,7 @@ export function StoryArcTimeline() {
                 <div><strong>Vai trò của bạn</strong><p>{chapter.playerRole}</p></div>
               </div>
               <footer>
-                <span>Closing turn</span>
+                <span>Chuyển biến cuối chương</span>
                 <p>{chapter.closingTurn}</p>
               </footer>
             </div>

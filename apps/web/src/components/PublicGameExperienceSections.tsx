@@ -263,11 +263,11 @@ export function ShadowInvasionFeature() {
         <div className="lgo-invasion-sentinels"><i /><i /><i /></div>
       </div>
       <div className="lgo-shadow-invasion-copy">
-        <StatusBadge tone="shadow">Signature world event</StatusBadge>
+        <StatusBadge tone="shadow">Sự kiện thế giới đặc trưng</StatusBadge>
         <span className="lgo-card-kicker">Âm Giới Xâm Lăng</span>
         <h2 id="shadow-invasion-heading">Khi thành phố bạn gọi là nhà trở thành nơi phải bảo vệ</h2>
         <p>
-          Portal xuất hiện ở nhiều zone. Người chơi hợp lực qua các khu vực, chống từng đợt xâm lăng và đối mặt World Boss. Đóng góp dài hạn được thiết kế cho nhiều vai trò, không chỉ raw DPS.
+          Cổng Âm Giới xuất hiện ở nhiều vùng. Người chơi hợp lực qua các khu vực, chống từng đợt xâm lăng và đối mặt Boss Thế Giới. Đóng góp dài hạn được thiết kế cho nhiều vai trò, không chỉ sát thương thô.
         </p>
         <div className="lgo-hero-actions">
           <LinkButton href="/story" tone="shadow">Bắt đầu câu chuyện</LinkButton>

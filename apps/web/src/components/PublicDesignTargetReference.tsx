@@ -16,7 +16,7 @@ const PUBLIC_GAME_WORLD_TARGET = {
 };
 
 const PUBLIC_STORY_TARGET = {
-  label: "Story detailed design target",
+  label: "Thiết kế chi tiết cốt truyện",
   href: "/design-reference/story-detailed-design-target-v1121.png",
   scope: "Public Story"
 };

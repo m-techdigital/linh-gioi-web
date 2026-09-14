@@ -46,7 +46,7 @@ def check_tests_docs() -> None:
         require_text(rel, ["WEB-FE-GAME-WORLD-VIETNAMESE-FIRST-FLOW-v1.135", "WEB_CLOSED", "Sequential Page Completion", "Just-in-time Design", "Design Target First", "Base UI/UX Layout", "Public Game World", "Vietnamese", "browser/e2e", "built-in image_gen", "Layout Match Before Closure", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("docs/design/DESIGN-TARGET-REGISTRY.md", ["Public Game World", "game-world-detailed-design-target-v1120.png", "WEB-FE-GAME-WORLD-DETAILED-DESIGN-TARGET-v1.120.png"])
     require_text("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-GAME-WORLD-VIETNAMESE-FIRST-FLOW-v1.135 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.136"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.136", "complete one page at a time", "just-in-time"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT", "complete one page at a time", "just-in-time"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-GAME-WORLD-VIETNAMESE-FIRST-FLOW-v1.135 | WEB-FE | WEB_CLOSED |"])
 def main() -> int:
     check_target(); check_source(); check_tests_docs()

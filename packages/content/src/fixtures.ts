@@ -2800,28 +2800,28 @@ export const worldRouteStops: WorldRouteStop[] = [
 
 export const narrativeChapters: NarrativeChapter[] = [
   {
-    chapter: "Chapter 01",
+    chapter: "Chương 01",
     title: "Vết Nứt Đông Môn",
-    hook: "Linh khí ngoài thành dao động, Shadow Slime xuất hiện và một mảnh Âm Giới Fragment đặt câu hỏi đầu tiên.",
+    hook: "Linh khí ngoài thành dao động, Shadow Slime xuất hiện và một mảnh Âm Giới đặt câu hỏi đầu tiên.",
     playerRole: "Rời Linh Thành, điều tra Linh Lâm và trở về với bằng chứng rằng sự bất thường không còn là chuyện nhỏ.",
     openingImage: "Một buổi tối bình thường ở Đông Môn bị cắt đôi bởi vệt tím trên bầu trời; linh phù quanh cổng thành lần lượt sáng lên.",
     stakes: "Nếu đây không phải hiện tượng đơn lẻ, tuyến ngoài thành — và những người vẫn sống nhờ nó — đang là lớp phòng thủ đầu tiên của Linh Thành.",
     closingTurn: "Mảnh Âm Giới Fragment không biến mất khi khe nứt đóng. Nó còn ở lại, như bằng chứng rằng phía bên kia đã chạm được vào thế giới này."
   },
   {
-    chapter: "Chapter 02",
+    chapter: "Chương 02",
     title: "Những Cánh Cổng Không Thuộc Về Thế Giới Này",
-    hook: "Các portal nhỏ bắt đầu mở ở nhiều nơi và năm class nhìn cùng một hiểm họa bằng năm cách khác nhau.",
+    hook: "Các cánh cổng nhỏ bắt đầu mở ở nhiều nơi và năm Lộ nhìn cùng một hiểm họa bằng năm cách khác nhau.",
     playerRole: "Bảo vệ, truy tìm, nghiên cứu, đo đạc hoặc lắng nghe — lựa chọn Lộ định hình cách bạn đọc thế giới.",
     openingImage: "Những báo cáo rời rạc cùng xuất hiện: cánh cổng trong rừng, tín hiệu lạ dưới di tích, linh thể nghe thấy tiếng gọi và thiết bị đo cho cùng một kết quả bất khả thi.",
     stakes: "Mối đe dọa không còn có một điểm xuất phát duy nhất; nó đang thử nhiều cách để bước qua và buộc năm Lộ chia sẻ những mảnh sự thật khác nhau.",
-    closingTurn: "Khi các dữ kiện ghép lại, câu hỏi đổi từ ‘portal mở ở đâu?’ thành ‘điều gì đang cố mở chúng từ phía bên kia?’"
+    closingTurn: "Khi các dữ kiện ghép lại, câu hỏi đổi từ ‘cánh cổng mở ở đâu?’ thành ‘điều gì đang cố mở chúng từ phía bên kia?’"
   },
   {
-    chapter: "Chapter 03",
+    chapter: "Chương 03",
     title: "Âm Giới Xâm Lăng",
-    hook: "Portal đồng loạt xuất hiện, thành phố chuyển từ nơi sinh sống thành nơi cần được bảo vệ.",
-    playerRole: "Hợp lực qua nhiều zone, đóng góp theo vai trò và cùng cộng đồng đối mặt World Boss trước khi Linh Thành được phục hồi.",
+    hook: "Cổng Âm Giới đồng loạt xuất hiện, thành phố chuyển từ nơi sinh sống thành nơi cần được bảo vệ.",
+    playerRole: "Hợp lực qua nhiều vùng, đóng góp theo vai trò và cùng cộng đồng đối mặt Boss Thế Giới trước khi Linh Thành được phục hồi.",
     openingImage: "Chuông cảnh giới vang khắp Linh Thành. Từng tuyến cổng báo động cùng lúc và bầu trời phía trên thành phố xuất hiện nhiều vòng sáng tím thay vì một khe nứt đơn lẻ.",
     stakes: "Thất bại không còn chỉ mất một chuyến phiêu lưu; nếu các tuyến phòng thủ sụp đổ, nơi người chơi gọi là nhà sẽ trở thành chiến trường của một thế giới khác.",
     closingTurn: "Cuộc xâm lăng có thể bị đẩy lùi, nhưng cánh cổng lớn nhất cho thấy đây không phải kết thúc — chỉ là lần đầu hai thế giới thực sự nhìn thấy nhau."
@@ -2830,11 +2830,11 @@ export const narrativeChapters: NarrativeChapter[] = [
 
 export const sampleSessionBeats: SessionBeat[] = [
   { time: "00–03", title: "Gặp nhau ở Linh Thành", summary: "Vào game, chào bạn bè, đọc hoạt động đang diễn ra và chọn việc muốn làm trong phiên." },
-  { time: "03–06", title: "Nhận mục tiêu", summary: "Chọn Daily hoặc tuyến phiêu lưu, chuẩn bị class/loadout và rời hub qua một cổng khu vực." },
-  { time: "06–12", title: "Tiến vào Linh Lâm", summary: "Di chuyển, combat, tương tác với môi trường và theo dấu linh khí bất thường." },
-  { time: "12–16", title: "Đối mặt mini boss", summary: "Một cao trào ngắn kiểm tra nhịp di chuyển, skill và khả năng đọc telegraph." },
-  { time: "16–18", title: "Nhận phần thưởng", summary: "Thu item/material/progression và quyết định giữ, dùng hay chuẩn bị cho mục tiêu kế tiếp." },
-  { time: "18–20", title: "Trở về Linh Thành", summary: "Đổi trang phục, gặp guild/bạn bè, sắp xếp tiến trình và kết thúc phiên ở nơi có cảm giác thuộc về." }
+  { time: "03–06", title: "Nhận mục tiêu", summary: "Chọn Daily hoặc tuyến phiêu lưu, chuẩn bị Lộ/trang bị và rời hub qua một cổng khu vực." },
+  { time: "06–12", title: "Tiến vào Linh Lâm", summary: "Di chuyển, chiến đấu, tương tác với môi trường và theo dấu linh khí bất thường." },
+  { time: "12–16", title: "Đối mặt tiểu thủ lĩnh", summary: "Một cao trào ngắn kiểm tra nhịp di chuyển, kỹ năng và khả năng đọc dấu hiệu tấn công." },
+  { time: "16–18", title: "Nhận phần thưởng", summary: "Thu vật phẩm/nguyên liệu/tiến trình và quyết định giữ, dùng hay chuẩn bị cho mục tiêu kế tiếp." },
+  { time: "18–20", title: "Trở về Linh Thành", summary: "Đổi trang phục, gặp bang hội/bạn bè, sắp xếp tiến trình và kết thúc phiên ở nơi có cảm giác thuộc về." }
 ];
 
 export const publicGameArtAssets: PublicGameArtAsset[] = [
@@ -2847,7 +2847,7 @@ export const publicGameArtAssets: PublicGameArtAsset[] = [
     role: "world-concept",
     publicLabel: "Ý tưởng thế giới · Đông Môn",
     sourceSha256: "6dc7313b27f2b00eb93c0fa8dd0a1f3793c9f7a4f406439068959664cf75ea1a",
-    notFinalArt: "Concept art for public world direction; not a gameplay screenshot or production-final environment."
+    notFinalArt: "Concept art for public world direction; không phải ảnh gameplay hoặc môi trường hoàn thiện cuối cùng."
   },
   {
     id: "vo-lv1-starter-development-art",

@@ -22,7 +22,7 @@ async function collectStoryFractureMetrics(page: Page): Promise<StoryFractureMet
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const image = document.querySelector<HTMLImageElement>('img[alt="Dong Mon fracture story concept art"]');
+    const image = document.querySelector<HTMLImageElement>('img[alt="Ảnh ý tưởng Vết Nứt Đông Môn trong cốt truyện Linh Giới"]');
     const caption = image?.closest("figure")?.querySelector("figcaption");
     return {
       pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -42,7 +42,7 @@ test.describe("public story fracture design board", () => {
   test("/story renders real concept art without mobile overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/story`);
     await expect(page.getByRole("heading", { name: "Cho đến ngày những cánh cửa bắt đầu mở" })).toBeVisible();
-    await expect(page.getByRole("img", { name: "Dong Mon fracture story concept art" })).toBeVisible();
+    await expect(page.getByRole("img", { name: "Ảnh ý tưởng Vết Nứt Đông Môn trong cốt truyện Linh Giới" })).toBeVisible();
 
     const metrics = await collectStoryFractureMetrics(page);
     expect(metrics.board, "story fracture board metrics").not.toBeNull();

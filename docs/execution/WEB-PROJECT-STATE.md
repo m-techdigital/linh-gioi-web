@@ -1,3 +1,16 @@
+Current phase: WEB-FE-STORY-VIETNAMESE-DESIGN-MATCH-v1.136 WEB_CLOSED.
+
+Current decision: v1.136 closed the active `/story` page slice after refreshing the Public Story design target to Vietnamese and reviewing the implemented page in browser against that target. `/story` now follows the target structure more closely: cinematic Vết Nứt Đông Môn hero, immediate opening chapter cards, Vietnamese story labels and delayed boundary/reference board after the first-flow content. Entire program is NOT production-complete.
+
+- v1.136 refreshed `story-detailed-design-target-v1121.png` with built-in imagegen and mirrored it under `docs/design/reference`.
+- v1.136 translated visible Public Story labels and chapter labels to Vietnamese.
+- v1.136 reworked desktop `/story` hero into a poster-style overlay and compacted chapter card density under `.lgo-storypage-stack`.
+- v1.136 evidence: RED browser/e2e reproduced stale English label and insufficient first-fold chapter visibility; Playwright desktop/mobile `/story` Vietnamese design-match PASS 2/2 after fix; screenshot metrics reviewed: hero 385.234px, chapters top 519.594, first card top 559.75, first card visible 367.188, overflow 0.
+- Sequential Page Completion, Just-in-time Design, Design Target First, Layout Match Before Closure and Base UI/UX Layout remain mandatory.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.137. Select `/classes` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-GAME-WORLD-VIETNAMESE-FIRST-FLOW-v1.135 WEB_CLOSED.
 
 Current decision: v1.135 closed the active `/game` page slice after browser/e2e and screenshot review against the registered Public Game World design target. `/game` now follows the target structure more closely: cinematic hero, immediate Linh Thành → Đông Môn → Linh Lâm → Cổ Di Tích → Âm Giới route strip, first-flow world atlas preview, and Vietnamese boundary messaging after the design-led flow. Entire program is NOT production-complete.
