@@ -36,7 +36,7 @@ def main() -> int:
     if (ROOT/"apps/web/public/design-reference/release-readiness-detailed-design-target-v1128.png").is_file() and (ROOT/"docs/design/reference/WEB-FE-RELEASE-READINESS-DETAILED-DESIGN-TARGET-v1.128.png").is_file():
         if (ROOT/"apps/web/public/design-reference/release-readiness-detailed-design-target-v1128.png").read_bytes() != (ROOT/"docs/design/reference/WEB-FE-RELEASE-READINESS-DETAILED-DESIGN-TARGET-v1.128.png").read_bytes(): fail("release readiness target copies differ")
     req("AGENTS.md", ["Real Browser UI/UX Layout First is Priority #1", "CSS Ownership and File-Size rule", "Base First is mandatory before adding or changing FE/UI layout"])
-    req("docs/execution/WEB-NEXT-ACTION.md", ["Real Browser UI/UX Layout First is Priority #1", "CSS must be managed by owner/role", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.182", "select `/news/status-download-trust-polish-started` as the next single active page"])
+    req("docs/execution/WEB-NEXT-ACTION.md", ["Real Browser UI/UX Layout First is Priority #1", "CSS must be managed by owner/role", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.183", "select `/news/closed-tester-information-pack-started` as the next single active page"])
     req("packages/ui/package.json", ["./service-layout.css", "./src/service-layout.css"])
     req("apps/web/src/app/layout.tsx", ["@lgo-web/ui/service-layout.css"])
     req("packages/ui/src/service-layout.css", ["Shared public service/proof layout foundation", ".lgo-service-compact-proof-page", ".lgo-service-status-seal", ".lgo-service-proof-board", ".lgo-service-proof-card-grid", ".lgo-service-proof-card"])
@@ -47,7 +47,7 @@ def main() -> int:
     req("tests/e2e/fe-release-readiness-vietnamese-design-match-v1143.spec.ts", ["release readiness Vietnamese design match v1.143", "owner gates stay close to readiness hub", "desktop compact readiness hero", "mobile board follows without excessive blank gap"])
     for rel in ["docs/execution/specs/WEB-FE-RELEASE-READINESS-REAL-UI-LAYOUT-v1.143.md", "LGO-WEB-FE-RELEASE-READINESS-REAL-UI-LAYOUT-REPORT-v1.143.md", "HANDOFF-LGO-WEB-FE-RELEASE-READINESS-REAL-UI-LAYOUT-v1.143.md"]:
         req(rel, ["WEB-FE-RELEASE-READINESS-REAL-UI-LAYOUT-v1.143", "WEB_CLOSED", "Real Browser UI/UX Layout First", "Base First", "service-layout.css", "browser/e2e", "No production auth", "No DB persistence", "No real Portal integration", "No real Ops/Admin mutation", "NO_ACCEPTED_BACKEND_CONTRACT"])
-    req("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-RELEASE-READINESS-REAL-UI-LAYOUT-v1.143 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.182"])
+    req("docs/execution/WEB-PROJECT-STATE.md", ["Current phase: WEB-FE-RELEASE-READINESS-REAL-UI-LAYOUT-v1.143 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.183"])
     req("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-RELEASE-READINESS-REAL-UI-LAYOUT-v1.143 | WEB-FE | WEB_CLOSED |"])
     if ERRORS:
         print("WEB FE RELEASE READINESS REAL UI LAYOUT v1.143 VALIDATION FAIL")

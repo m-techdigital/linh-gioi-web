@@ -103,8 +103,8 @@ def main() -> None:
         "/tmp/roadmap-mobile-v1153.png",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.182",
-        "Current FE scope: select `/news/status-download-trust-polish-started`",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.183",
+        "Current FE scope: select `/news/closed-tester-information-pack-started`",
         "Real Browser UI/UX Layout First",
         "Base UI/UX Layout",
     ])

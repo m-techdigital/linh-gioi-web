@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def fail(message: str) -> None:
-    print(f"[validate_web_fe_news_guide_detail_real_ui_layout_v1181] FAIL: {message}", file=sys.stderr)
+    print(f"[validate_web_fe_news_status_download_trust_real_ui_layout_v1182] FAIL: {message}", file=sys.stderr)
     sys.exit(1)
 
 
@@ -37,13 +37,8 @@ def main() -> int:
         "shared header, footer, menu, shell and navigation patterns",
         "Base UI/UX Layout rule",
     ])
-    require_text("docs/execution/WEB-ACTIVE-GOAL.md", [
-        "Nếu design target không đồng bộ UI/UX Layout chung như header, footer, menu, shell hoặc navigation đã được chấp nhận",
-        "Base First là luật chặn bắt buộc",
-        "Real UI/UX Layout trong browser",
-    ])
     require_text("apps/web/src/components/PublicDetailSections.tsx", [
-        '"news-guide-detail-pages-started": "Bài viết giải thích news và guide detail"',
+        '"status-download-trust-polish-started": "Bài viết giải thích status và download trust"',
         'title={articleDetailTitle(slug)}',
         'Trang bài viết mở rộng ngữ cảnh người chơi cần biết',
         'không tuyên bố backend vận hành chính thức',
@@ -51,29 +46,32 @@ def main() -> int:
         'lgo-newsdetail-depth-card',
     ])
     forbid_text("apps/web/src/components/PublicDetailSections.tsx", [
-        'Detail page mở rộng ngữ cảnh',
+        'WEB v1.10 article detail',
+        'Detail section',
         'ranh giới non-claim',
         'không tuyên bố backend production',
-        'WEB v1.9 article detail',
-        'Detail section',
     ])
 
     require_text("packages/content/src/fixtures.ts", [
-        'slug: "news-guide-detail-pages-started"',
-        'WEB v1.9 biến trang danh sách thành trải nghiệm detail dễ đọc cho tin tức, hướng dẫn, trạng thái và tải game.',
-        'WEB v1.9 làm sâu các trang detail public: bài news có ngữ cảnh, guide có bước đọc tiếp, trạng thái có giải thích và tải game có ranh giới rõ.',
-        'Detail page giải thích sâu hơn summary',
-        'News, guide, status và download phải cùng nhịp đọc',
-        'Không mở CMS, không có workflow biên tập backend và không có dữ liệu live support.',
-        'Không công bố artifact tải game, không mở xác thực vận hành chính thức và không tạo quyền tải game.',
+        'slug: "status-download-trust-polish-started"',
+        'WEB v1.10 làm rõ niềm tin tải game, bằng chứng artifact, trạng thái public và kỳ vọng hỗ trợ mà không thêm backend claim.',
+        'WEB v1.10 giải thích khi nào download đáng tin: phải có artifact thật, checksum, nguồn phát hành, giới hạn rõ và owner approval.',
+        'Download trust không phải marketing CTA',
+        'Status cần phân biệt public, internal và blocked',
+        'Không có artifact tải game public, không có triển khai production và không có backend cấp quyền tải.',
+        'Browser/e2e chỉ là bằng chứng guardrail, không phải readiness phát hành public.',
     ])
     fixtures = read("packages/content/src/fixtures.ts")
-    if fixtures.count('slug: "news-guide-detail-pages-started"') != 3:
-        fail('packages/content/src/fixtures.ts should contain one content entry and two detail sections for news-guide-detail-pages-started')
+    if fixtures.count('slug: "status-download-trust-polish-started"') != 3:
+        fail('packages/content/src/fixtures.ts should contain one content entry and two detail sections for status-download-trust-polish-started')
     forbid_text("packages/content/src/fixtures.ts", [
-        'WEB v1.9 keeps the product focus on public website quality',
-        'article detail sections, guide detail steps',
-        'no CMS, no production auth, no DB persistence',
+        'WEB v1.10 focuses on release trust wording',
+        'WEB v1.10 keeps building the public web product',
+        'public game artifacts, production auth, DB persistence',
+        'checksum/provenance explanation',
+        'support expectations without adding backend claims',
+        'No public game download artifact, no production deployment, no entitlement backend.',
+        'Runtime/browser/e2e is guardrail only, not public release readiness.',
     ])
 
     require_text("packages/ui/src/service-layout.css", [
@@ -93,21 +91,21 @@ def main() -> int:
         '.lgo-newsdetail-next-steps',
     ])
 
-    require_text("tests/e2e/fe-news-guide-detail-real-ui-layout-v1181.spec.ts", [
-        '/news/news-guide-detail-pages-started renders compact Vietnamese news guide detail article flow',
-        'Bài viết giải thích news và guide detail',
+    require_text("tests/e2e/fe-news-status-download-trust-real-ui-layout-v1182.spec.ts", [
+        '/news/status-download-trust-polish-started renders compact Vietnamese status download trust article flow',
+        'Bài viết giải thích status và download trust',
         'toHaveCount(2)',
         'mobile related not pushed by raw body',
         'desktop next steps reachable',
         'backToNews',
-        '/tmp/news-guide-detail-${isMobile ? "mobile" : "desktop"}-v1181.png',
+        '/tmp/news-status-download-trust-${isMobile ? "mobile" : "desktop"}-v1182.png',
     ])
 
     require_text("docs/execution/WEB-PROJECT-STATE.md", [
-        'Current phase: WEB-FE-NEWS-GUIDE-DETAIL-REAL-UI-LAYOUT-v1.181 WEB_CLOSED',
+        'Current phase: WEB-FE-NEWS-STATUS-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.182 WEB_CLOSED',
         'Select `/news/closed-tester-information-pack-started`',
-        '/tmp/news-guide-detail-desktop-v1181.png',
-        '/tmp/news-guide-detail-mobile-v1181.png',
+        '/tmp/news-status-download-trust-desktop-v1182.png',
+        '/tmp/news-status-download-trust-mobile-v1182.png',
         'Real Browser UI/UX Layout First',
         'Base First',
         'shared header/menu/footer coherence',
@@ -120,17 +118,17 @@ def main() -> int:
         'Base UI/UX Layout',
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
-        '| WEB-FE-NEWS-GUIDE-DETAIL-REAL-UI-LAYOUT-v1.181 | WEB-FE | WEB_CLOSED | 76d0aa1 |',
-        'Playwright desktop/mobile 2/2 news guide detail real UI layout checks',
+        '| WEB-FE-NEWS-STATUS-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.182 | WEB-FE | WEB_CLOSED | a2ad9e3 |',
+        'Playwright desktop/mobile 2/2 news status download trust real UI layout checks',
         'NO_ACCEPTED_BACKEND_CONTRACT retained',
     ])
     for rel in [
-        'docs/execution/specs/WEB-FE-NEWS-GUIDE-DETAIL-REAL-UI-LAYOUT-v1.181.md',
-        'docs/execution/LGO-WEB-FE-NEWS-GUIDE-DETAIL-REAL-UI-LAYOUT-REPORT-v1.181.md',
-        'docs/execution/HANDOFF-LGO-WEB-FE-NEWS-GUIDE-DETAIL-REAL-UI-LAYOUT-v1.181.md',
+        'docs/execution/specs/WEB-FE-NEWS-STATUS-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.182.md',
+        'docs/execution/LGO-WEB-FE-NEWS-STATUS-DOWNLOAD-TRUST-REAL-UI-LAYOUT-REPORT-v1.182.md',
+        'docs/execution/HANDOFF-LGO-WEB-FE-NEWS-STATUS-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.182.md',
     ]:
-        require_text(rel, ['WEB-FE-NEWS-GUIDE-DETAIL-REAL-UI-LAYOUT-v1.181', 'WEB_CLOSED', 'Real Browser UI/UX Layout First', 'Base First', 'browser/e2e', 'NO_ACCEPTED_BACKEND_CONTRACT'])
-    print('[validate_web_fe_news_guide_detail_real_ui_layout_v1181] PASS')
+        require_text(rel, ['WEB-FE-NEWS-STATUS-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.182', 'WEB_CLOSED', 'Real Browser UI/UX Layout First', 'Base First', 'browser/e2e', 'NO_ACCEPTED_BACKEND_CONTRACT'])
+    print('[validate_web_fe_news_status_download_trust_real_ui_layout_v1182] PASS')
     return 0
 
 

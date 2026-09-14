@@ -572,8 +572,8 @@ export const contentEntries: ContentEntry[] = [
     slug: "status-download-trust-polish-started",
     category: "news",
     title: "Copy trạng thái và download trust rõ hơn",
-    summary: "WEB v1.10 focuses on release trust wording, checksum/provenance explanation, status visibility and support expectations without adding backend claims.",
-    body: "WEB v1.10 keeps building the public web product. It explains what evidence a real download needs, how status surfaces should be read, and what support can safely promise while public game artifacts, production auth, DB persistence, CMS and live support backend remain unavailable.",
+    summary: "WEB v1.10 làm rõ niềm tin tải game, bằng chứng artifact, trạng thái public và kỳ vọng hỗ trợ mà không thêm backend claim.",
+    body: "WEB v1.10 giải thích khi nào download đáng tin: phải có artifact thật, checksum, nguồn phát hành, giới hạn rõ và owner approval. Status và support chỉ nói phần public có thể kiểm chứng; chưa mở xác thực vận hành, DB, CMS hoặc hỗ trợ live.",
     publishedAt: "2026-09-05T12:00:00.000Z",
     status: "published",
     featured: true,
@@ -1078,16 +1078,16 @@ export const contentDetailSections: ContentDetailSection[] = [
   {
     slug: "status-download-trust-polish-started",
     heading: "Download trust không phải marketing CTA",
-    body: "WEB v1.10 làm rõ rằng nút tải chỉ được xuất hiện khi artifact, checksum, provenance, limitations và owner approval đều tồn tại.",
+    body: "WEB v1.10 làm rõ rằng nút tải chỉ được xuất hiện khi artifact, checksum, nguồn phát hành, giới hạn và owner approval đều tồn tại.",
     playerImpact: "Người chơi biết trang Download đáng tin vì nó nói thật về blocker thay vì giấu sau lời mời tải giả.",
-    nonClaim: "No public game download artifact, no production deployment, no entitlement backend."
+    nonClaim: "Không có artifact tải game public, không có triển khai production và không có backend cấp quyền tải."
   },
   {
     slug: "status-download-trust-polish-started",
     heading: "Status cần phân biệt public, internal và blocked",
-    body: "Status page không gom runtime/browser guardrails với release readiness; mỗi surface có source-of-truth và forbidden claim riêng.",
-    playerImpact: "Người đọc hiểu cái gì đang public, cái gì chỉ là kiểm thử nội bộ, và cái gì bị chặn bởi backend/release artifact.",
-    nonClaim: "Runtime/browser/e2e is guardrail only, not public release readiness."
+    body: "Trang trạng thái không gom browser guardrail với readiness phát hành; mỗi surface cần nguồn xác thực và claim bị chặn riêng.",
+    playerImpact: "Người đọc hiểu cái gì đang public, cái gì chỉ là kiểm thử nội bộ, và cái gì bị chặn bởi backend hoặc artifact phát hành.",
+    nonClaim: "Browser/e2e chỉ là bằng chứng guardrail, không phải readiness phát hành public."
   },
   {
     slug: "world-gameplay-loop-depth-started",

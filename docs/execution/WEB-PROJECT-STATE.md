@@ -1,3 +1,19 @@
+Current phase: WEB-FE-NEWS-STATUS-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.182 WEB_CLOSED.
+
+Current decision: v1.182 closed the active `/news/status-download-trust-polish-started` page slice as a real browser UI/UX Layout task. The existing public core design target and shared public shell were sufficient as the comparison guardrail after checking shared header/menu/footer coherence; work focused on the rendered News Detail article, status/download trust context, article reading density, related-news grid, keyboard navigation and shared Base First detail layout. Entire program is NOT production-complete.
+
+- v1.182 did not create a design batch because the existing public core target and registered route target were enough for comparison after checking shared shell coherence.
+- v1.182 browser/e2e RED showed the detail page rendered the hero but missed current-slug detail title and still exposed stale WEB v1.10 English fixture body/non-claim copy.
+- v1.182 completed the page with Vietnamese status/download trust article body, two compact detail cards, current-slug detail heading and next-step CTA without fake download artifact, entitlement backend, CMS/live support or backend production claims.
+- v1.182 reused the shared News Detail layout in `packages/ui/src/service-layout.css`; no current-page selectors were added to `apps/web/src/app/globals.css`.
+- v1.182 final browser/e2e metrics: desktop hero bottom 435.55px, depth top 446.42px, first depth card top 587.11px, related top 811.84px, next steps top 1144.08px, scrollHeight 1775px, h1/max font 37.76px, 2 desktop related columns, overflow 0; mobile hero bottom 454.22px, depth top 464.13px, first depth card top 622.36px, related top 1055.78px, next steps top 1570.88px, scrollHeight 2479px, h1/max font 27.52px, 1 mobile related column, overflow 0.
+- v1.182 evidence: browser/e2e desktop/mobile v1.182; screenshot review `/tmp/news-status-download-trust-desktop-v1182.png` and `/tmp/news-status-download-trust-mobile-v1182.png`; source validator; Web/UI checks; Web build; clean current-state closure validator.
+- Design target sync rule remains recorded: design targets must stay synchronized with shared header, footer, menu, shell and navigation; if a current target diverges, only the smallest current-page target area may be corrected before returning to browser layout.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.183. Select `/news/closed-tester-information-pack-started` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-NEWS-GUIDE-DETAIL-REAL-UI-LAYOUT-v1.181 WEB_CLOSED.
 
 Current decision: v1.181 closed the active `/news/news-guide-detail-pages-started` page slice as a real browser UI/UX Layout task. The existing public core design target and shared public shell were sufficient as the comparison guardrail after checking shared header/menu/footer coherence; work focused on the rendered News Detail article, news/guide detail context, article reading density, related-news grid, keyboard navigation and shared Base First detail layout. Entire program is NOT production-complete.
