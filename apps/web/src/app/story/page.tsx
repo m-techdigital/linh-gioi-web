@@ -1,4 +1,4 @@
-import { Stack } from "@lgo-web/ui";
+import { Stack, StatusBadge } from "@lgo-web/ui";
 import {
   CinematicWorldScene,
   NarrativeChapterGrid,
@@ -28,6 +28,22 @@ export default function StoryPage() {
           ]}
           visual={<CinematicWorldScene compact />}
         />
+
+        <figure className="lgo-story-fracture-design-board lgo-panel" aria-label="Dong Mon fracture story concept reference art">
+          <img
+            src="/game-art/world/dong-mon-skyline.webp"
+            alt="Dong Mon fracture story concept art"
+            loading="eager"
+          />
+          <figcaption>
+            <StatusBadge tone="shadow">Story reference art</StatusBadge>
+            <strong>Vết Nứt Đông Môn là narrative setup, không phải quest state live.</strong>
+            <span>
+              Concept art này dùng visual thật từ LinhGioiOnline để neo mở đầu câu chuyện vào Đông Môn while keeping
+              portal events, player progress, account state and production world simulation outside this FE-only page.
+            </span>
+          </figcaption>
+        </figure>
 
         <div id="chapters"><NarrativeChapterGrid /></div>
         <StoryArcTimeline />

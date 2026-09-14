@@ -1,3 +1,14 @@
+Current phase: WEB-FE-PUBLIC-STORY-FRACTURE-DESIGN-BOARD-v1.84 WEB_CLOSED.
+
+Current decision: v1.84 FE public story fracture design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
+
+- v1.84 adds the audited LinhGioiOnline Dong Mon world concept image to `/story`.
+- The story fracture board renders with accessible name `Dong Mon fracture story concept art`, eager loading and responsive layout while keeping live portal/quest/player/account/world-simulation non-claims explicit.
+- v1.84 evidence: RED browser/e2e reproduced missing story fracture concept image on `/story`; source validator PASS; Web typecheck PASS; Web production build PASS; Playwright desktop/mobile image-loading/font-size/overflow PASS; visual metric review completed with pageOverflow 0 and loaded image natural dimensions.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.85.
+
 Current phase: WEB-FE-PUBLIC-GAME-WORLD-DESIGN-BOARD-v1.83 WEB_CLOSED.
 
 Current decision: v1.83 FE public game world design-board slice closed; continue FE/browser UI work next. Entire program is NOT production-complete.
