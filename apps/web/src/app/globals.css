@@ -1479,7 +1479,7 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
   .lgo-section-heading-row,.lgo-availability-note,.lgo-brand-footer-inner{grid-template-columns:1fr;display:grid;align-items:start}.lgo-brand-footer-inner small{grid-column:auto}
 }
 @media (max-width: 560px){
-  .lgo-player-facing-stack{gap:3.5rem}.lgo-main{padding-top:1rem}.lgo-brand-nav{gap:.75rem}.lgo-nav-play{font-size:.78rem;padding:.55rem .7rem}.lgo-brand-links{gap:0}.lgo-brand-links a{padding:.55rem .6rem}
+  .lgo-player-facing-stack{gap:3.5rem}.lgo-main{padding-top:1rem}.lgo-brand-nav{gap:.75rem}.lgo-nav-play{font-size:.78rem;padding:.55rem .7rem}.lgo-brand-links{gap:0;flex-wrap:wrap;justify-content:flex-start}.lgo-brand-links a{padding:.5rem .52rem;font-size:.78rem}
   .lgo-cinematic-copy h1{font-size:clamp(2.35rem,10vw,3.35rem)}.lgo-cinematic-scene{min-height:360px;border-radius:1.4rem}.lgo-scene-gate{width:130px;height:185px}.lgo-scene-rift{left:55%;transform:scale(.78) rotate(9deg)}.lgo-scene-caption strong{font-size:.92rem}
   .lgo-class-path-grid,.lgo-world-route,.lgo-session-loop{grid-template-columns:1fr}.lgo-class-path{min-height:340px}.lgo-class-path-grid-compact .lgo-class-path{min-height:300px}.lgo-world-route-stop{display:grid;grid-template-columns:max-content 1fr;gap:1rem}.lgo-route-marker{margin:0}.lgo-narrative-chapter{min-height:285px}.lgo-shadow-invasion{padding:1.35rem;border-radius:1.4rem}.lgo-shadow-invasion-art{min-height:285px}.lgo-invasion-portal{width:190px;height:250px}.lgo-five-path-orbit,.lgo-journey-cycle{transform:scale(.84);margin-block:-20px}.lgo-world-fantasy-panel,.lgo-path-philosophy,.lgo-guide-hero,.lgo-start-hero,.lgo-journey-hero,.lgo-paths-hero{padding:1.4rem;border-radius:1.4rem}
 }

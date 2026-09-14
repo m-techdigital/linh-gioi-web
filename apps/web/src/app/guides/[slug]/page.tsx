@@ -28,12 +28,14 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
   const entry = localContentRepository.bySlug(slug);
   if (!entry || entry.category !== "guides") notFound();
 
+  const isGateEntryGuide = entry.slug === "gate-entry-guide";
+
   return (
     <WebAppShell>
-      <Stack className="lgo-player-facing-stack lgo-service-compact-proof-page lgo-guidedetailpage-stack">
-        <GameCard className="lgo-detail-hero-card lgo-guide-detail-hero-card">
-          <StatusBadge tone="jade">WEB v1.155 · hướng dẫn gameplay</StatusBadge>
-          <span className="lgo-card-kicker">Guide tĩnh · chưa có hệ thống wiki · chưa có tiến trình tài khoản</span>
+      <Stack className={`lgo-player-facing-stack lgo-service-compact-proof-page lgo-guidedetailpage-stack${isGateEntryGuide ? " lgo-gateentrypage-stack" : ""}`}>
+        <GameCard className={`lgo-detail-hero-card lgo-guide-detail-hero-card${isGateEntryGuide ? " lgo-gate-entry-hero-card" : ""}`}>
+          <StatusBadge tone="jade">{isGateEntryGuide ? "Cổng Linh nhập môn" : "WEB v1.155 · hướng dẫn gameplay"}</StatusBadge>
+          <span className="lgo-card-kicker">{isGateEntryGuide ? "Guide tĩnh · chưa có bản đồ live · chưa có nhiệm vụ tài khoản" : "Guide tĩnh · chưa có hệ thống wiki · chưa có tiến trình tài khoản"}</span>
           <h1>{entry.title}</h1>
           <p className="lgo-hero-lead">{entry.summary}</p>
           <p>{entry.body}</p>

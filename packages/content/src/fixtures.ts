@@ -634,12 +634,12 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "gate-entry-guide",
     category: "guides",
-    title: "Gate Entry guide placeholder",
-    summary: "A future player guide area is reserved without claiming complete gameplay documentation.",
-    body: "Guide content will follow the game source of truth and explicit content acceptance gates.",
+    title: "Vào Cổng Linh đúng kỳ vọng",
+    summary: "Guide giúp người chơi mới đọc Cổng Linh như điểm vào thế giới, gặp Người Giữ Cổng và chuyển sang Đá Luyện mà không hiểu nhầm thành bản đồ live hoặc nhiệm vụ thật.",
+    body: "Nội dung này chỉ mô tả flow công khai hiện tại của web: vào cổng, hiểu vai trò Gate Keeper, xem Training Stone và đọc trạng thái tải game. Nó không công bố wiki nhiệm vụ, combat, phần thưởng hoặc dữ liệu backend vận hành.",
     publishedAt: "2026-09-05T04:00:00.000Z",
     status: "published",
-    tags: [PROVISIONAL_WEB_FIXTURE]
+    tags: [PROVISIONAL_WEB_FIXTURE, NOT_CANONICAL_BACKEND_CONTRACT]
   },
   {
     slug: "beginner-training-loop-guide",
@@ -1280,10 +1280,26 @@ export const guideDetailSteps: GuideDetailStep[] = [
   {
     slug: "gate-entry-guide",
     step: "01",
-    title: "Đọc mục tiêu vào cổng",
-    action: "Bắt đầu từ trang Thế giới để hiểu Spirit Gate, Gate Keeper và Training Stone.",
-    expectedResult: "Người chơi hiểu bối cảnh non-combat hiện tại trước khi đọc download/status.",
-    blockedScope: "No full world wiki, no production map database."
+    title: "Nhìn Cổng Linh như điểm vào hướng dẫn",
+    action: "Mở /game trước, đọc Cổng Linh như cảnh nhập môn và không tìm map live hay nhiệm vụ vận hành trong bước này.",
+    expectedResult: "Người chơi hiểu đây là điểm vào thế giới public hiện tại, không phải bản đồ production.",
+    blockedScope: "Chưa có bản đồ live, wiki nhiệm vụ hoặc dữ liệu tiến trình tài khoản."
+  },
+  {
+    slug: "gate-entry-guide",
+    step: "02",
+    title: "Gặp Người Giữ Cổng để hiểu phạm vi",
+    action: "Đọc vai trò Gate Keeper như người giải thích ranh giới: flow hiện tại đang hướng dẫn kỳ vọng, chưa mở chiến đấu hoặc phần thưởng.",
+    expectedResult: "Người chơi biết vì sao web nói rõ boundary trước khi dẫn sang trạng thái tải game.",
+    blockedScope: "Chưa có combat, reward, inventory hoặc quest persistence được backend chấp nhận."
+  },
+  {
+    slug: "gate-entry-guide",
+    step: "03",
+    title: "Chuyển sang Đá Luyện và trạng thái tải",
+    action: "Sau khi hiểu cổng, tiếp tục sang Training Stone, /status và /download/trust để xem readiness thay vì tìm link tải giả.",
+    expectedResult: "Người chơi đi tiếp theo luồng proof-before-download và không hiểu nhầm thành closed test đã mở.",
+    blockedScope: "Chưa có public build, launcher, entitlement hoặc support ticket production."
   },
   {
     slug: "beginner-training-loop-guide",

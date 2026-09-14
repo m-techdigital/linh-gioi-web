@@ -1,3 +1,17 @@
+Current phase: WEB-FE-GUIDES-GATE-ENTRY-REAL-UI-LAYOUT-v1.158 WEB_CLOSED.
+
+Current decision: v1.158 closed the active `/guides/gate-entry-guide` page slice as a real browser UI/UX Layout task. The existing guide-detail direction remained the design guardrail; work focused on the rendered Gate Entry guide, first-fold density, Vietnamese Cổng Linh scenario and shared Base First layout. Entire program is NOT production-complete.
+
+- v1.158 did not create a new design batch because the existing guide-detail direction was sufficient for comparison after minimal current-page scenario correction in the rendered page.
+- v1.158 replaced the English placeholder first-flow with Vietnamese Cổng Linh → Người Giữ Cổng → Đá Luyện expectations and three compact guide steps.
+- v1.158 extended shared `packages/ui/src/service-layout.css` with a Gate Entry composition class for dense guide-detail cards and generic CTA rhythm, while keeping Gate Entry route CSS out of `apps/web/src/app/globals.css`.
+- v1.158 also fixed the existing mobile app-shell brand link wrap in `apps/web/src/app/globals.css` because browser metrics found visible nav overflow on this page.
+- v1.158 evidence: browser/e2e desktop/mobile v1.158; source validator; Web/UI checks; Web build; clean current-state closure validator; screenshots `/tmp/guides-gate-entry-desktop-v1158.png` and `/tmp/guides-gate-entry-mobile-v1158.png`.
+- Base First/CSS ownership remains mandatory: similar UI/UX Layout must be extracted or consolidated in `packages/design-tokens`/`packages/ui` before page-local code; repeated route CSS must not inflate `apps/web/src/app/globals.css`.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.159. Select `/guides/beginner-training-loop-guide` as the next single active page and complete it fully before moving onward.
+
 Current phase: WEB-FE-GUIDES-BEGINNER-REAL-UI-LAYOUT-v1.157 WEB_CLOSED.
 
 Current decision: v1.157 closed the active `/guides/beginner` page slice as a real browser UI/UX Layout task. The existing beginner-guide direction remained the design guardrail; work focused on the rendered beginner guide, first-fold density, Vietnamese game-scenario labels and shared Base First layout. Entire program is NOT production-complete.

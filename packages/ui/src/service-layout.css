@@ -2598,6 +2598,170 @@
 }
 
 
+
+/* Gate Entry guide page composes the shared detail base with a denser first-read flow. */
+.lgo-gateentrypage-stack {
+  gap: .82rem;
+}
+
+.lgo-gate-entry-hero-card {
+  border-color: rgba(49,216,232,.36);
+  background:
+    radial-gradient(circle at top left, rgba(49,216,232,.14), transparent 15rem),
+    radial-gradient(circle at bottom right, rgba(245,200,107,.10), transparent 17rem),
+    linear-gradient(145deg, rgba(13,27,46,.95), rgba(7,17,31,.90));
+}
+
+.lgo-gateentrypage-stack .lgo-detail-hero-card h1 {
+  max-width: 12ch;
+}
+
+.lgo-gateentrypage-stack .lgo-guide-detail-depth {
+  border-color: rgba(53,198,163,.28);
+}
+
+.lgo-gateentrypage-stack .lgo-guide-detail-step {
+  border-color: rgba(49,216,232,.24);
+  background: linear-gradient(145deg, rgba(9,29,52,.74), rgba(7,17,31,.78));
+}
+
+.lgo-gateentrypage-stack .lgo-detail-next-steps,
+.lgo-gateentrypage-stack .lgo-action-band {
+  padding: .88rem;
+}
+
+.lgo-gateentrypage-stack .lgo-detail-next-steps {
+  gap: .7rem;
+}
+
+.lgo-gateentrypage-stack .lgo-detail-next-steps h2,
+.lgo-gateentrypage-stack .lgo-action-band h2 {
+  font-size: clamp(1.02rem, 1.45vw, 1.28rem);
+  line-height: 1.08;
+}
+
+.lgo-gateentrypage-stack .lgo-detail-next-steps p,
+.lgo-gateentrypage-stack .lgo-action-band p {
+  font-size: .82rem;
+  line-height: 1.32;
+}
+
+@media (min-width: 981px) {
+  .lgo-gateentrypage-stack .lgo-detail-hero-card h1 {
+    font-size: clamp(2.05rem, 3.35vw, 3rem);
+  }
+
+  .lgo-gateentrypage-stack .lgo-guide-detail-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lgo-gateentrypage-stack .lgo-guide-detail-step {
+    grid-template-columns: 2.35rem 1fr;
+    padding: .62rem;
+  }
+
+  .lgo-gateentrypage-stack .lgo-guide-detail-step > span {
+    width: 2.12rem;
+    height: 2.12rem;
+    font-size: .8rem;
+  }
+
+  .lgo-gateentrypage-stack .lgo-detail-next-steps {
+    grid-template-columns: minmax(0, 1fr) minmax(13rem, max-content);
+  }
+
+  .lgo-gateentrypage-stack .lgo-detail-next-steps p,
+  .lgo-gateentrypage-stack .lgo-action-band p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .lgo-gateentrypage-stack {
+    gap: .62rem;
+  }
+
+  .lgo-gateentrypage-stack .lgo-detail-hero-card {
+    padding: .72rem;
+  }
+
+  .lgo-gateentrypage-stack .lgo-detail-hero-card h1 {
+    font-size: clamp(1.72rem, 7vw, 1.92rem);
+  }
+
+  .lgo-gateentrypage-stack .lgo-detail-hero-card .lgo-hero-lead,
+  .lgo-gateentrypage-stack .lgo-detail-hero-card > p:not(.lgo-guide-detail-boundary),
+  .lgo-gateentrypage-stack .lgo-guide-detail-boundary {
+    -webkit-line-clamp: 2;
+  }
+
+  .lgo-gateentrypage-stack .lgo-detail-hero-card .lgo-product-first-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .34rem;
+  }
+
+  .lgo-gateentrypage-stack .lgo-detail-hero-card .lgo-link-button {
+    justify-content: center;
+    min-height: 31px;
+    padding-block: .28rem;
+    padding-inline: .38rem;
+    font-size: .68rem;
+    text-align: center;
+  }
+
+  .lgo-gateentrypage-stack .lgo-guide-detail-depth {
+    padding: .56rem;
+  }
+
+  .lgo-gateentrypage-stack .lgo-guide-detail-depth .lgo-section-heading h2 {
+    font-size: clamp(1.02rem, 5.1vw, 1.18rem);
+    line-height: 1.08;
+  }
+
+  .lgo-gateentrypage-stack .lgo-guide-detail-step {
+    gap: .4rem;
+    padding: .46rem;
+  }
+
+  .lgo-gateentrypage-stack .lgo-guide-detail-step h3 {
+    font-size: .82rem;
+  }
+
+  .lgo-gateentrypage-stack .lgo-guide-detail-step p,
+  .lgo-gateentrypage-stack .lgo-guide-detail-step small {
+    font-size: .69rem;
+    line-height: 1.2;
+  }
+
+  .lgo-gateentrypage-stack .lgo-detail-next-steps,
+  .lgo-gateentrypage-stack .lgo-action-band {
+    gap: .5rem;
+    padding: .62rem;
+  }
+
+  .lgo-gateentrypage-stack .lgo-detail-next-steps p,
+  .lgo-gateentrypage-stack .lgo-action-band p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    font-size: .74rem;
+    line-height: 1.24;
+  }
+
+  .lgo-gateentrypage-stack .lgo-detail-next-steps .lgo-link-button,
+  .lgo-gateentrypage-stack .lgo-action-band .lgo-link-button {
+    min-height: 32px;
+    padding-block: .3rem;
+    padding-inline: .5rem;
+    font-size: .7rem;
+  }
+}
+
 /* Shared guide index layout for public guide/library pages. */
 .lgo-guidespage-stack {
   gap: 1rem;

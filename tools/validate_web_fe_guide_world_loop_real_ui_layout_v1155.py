@@ -40,7 +40,7 @@ def main() -> int:
         "GuideDetailDepth",
         "WorldGameplayLoopCta",
     ])
-    require_order("apps/web/src/app/guides/[slug]/page.tsx", "<GameCard className=\"lgo-detail-hero-card lgo-guide-detail-hero-card\">", "<GuideDetailDepth slug={entry.slug} />")
+    require_order("apps/web/src/app/guides/[slug]/page.tsx", "lgo-guide-detail-hero-card", "<GuideDetailDepth slug={entry.slug} />")
     require_order("apps/web/src/app/guides/[slug]/page.tsx", "<GuideDetailDepth slug={entry.slug} />", "<WorldGameplayLoopCta />")
     require_order("apps/web/src/app/guides/[slug]/page.tsx", "<WorldGameplayLoopCta />", "<PlayerTrustReleaseCta />")
     require_order("apps/web/src/app/guides/[slug]/page.tsx", "<PlayerTrustReleaseCta />", "<ReleaseReadinessHubCta />")
@@ -111,8 +111,8 @@ def main() -> int:
         "/tmp/guide-world-loop-mobile-v1155.png",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.158",
-        "Current FE scope: select `/guides/gate-entry-guide`",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.159",
+        "Current FE scope: select `/guides/beginner-training-loop-guide`",
         "Real Browser UI/UX Layout First",
         "Base UI/UX Layout",
     ])
