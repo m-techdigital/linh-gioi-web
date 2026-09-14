@@ -1,3 +1,14 @@
+Current phase: WEB-FE-DESIGN-TARGET-FOCUS-MOTION-v1.102 WEB_CLOSED.
+
+Current decision: v1.102 FE design-target focus-motion slice closed. Portal and Ops workspace design-target links now share the same visible focus lift as public links while staying attached to the registered v1.95 Component/state and workspace design targets. Entire program is NOT production-complete.
+
+- v1.102 updates the shared workspace shell CSS in `packages/ui` rather than adding app-local Portal/Ops focus styles.
+- v1.102 uses existing v1.95 Component/state, Player Portal and Ops/Admin design targets; no new design target was required and no stale target was replaced.
+- v1.102 evidence: RED browser/e2e reproduced workspace `transform: none`; Playwright desktop/mobile focus-motion parity PASS; dedicated validator and closure checks recorded in report/handoff.
+- No production auth, No DB persistence, No real Portal integration, No real Ops/Admin mutation, and NO_ACCEPTED_BACKEND_CONTRACT remain explicit.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.103.
+
 Current phase: WEB-FE-DESIGN-TARGET-LINK-A11Y-v1.101 WEB_CLOSED.
 
 Current decision: v1.101 FE design-target link accessibility slice closed. Public, Portal and Ops Design Target First links now announce `opens in a new tab` through the shared Base UI/UX Layout primitive while preserving the registered v1.95 design targets. Entire program is NOT production-complete.

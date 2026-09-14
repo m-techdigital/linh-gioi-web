@@ -419,12 +419,14 @@
   text-decoration: none;
   font-weight: 900;
   white-space: nowrap;
+  transition: transform .18s ease, outline-color .18s ease, border-color .18s ease, background-color .18s ease;
 }
 
 .lgo-workspace-shell .lgo-design-target-reference-link:hover,
 .lgo-workspace-shell .lgo-design-target-reference-link:focus-visible {
   outline: 2px solid rgba(245, 200, 107, .56);
   outline-offset: 3px;
+  transform: translateY(-1px);
 }
 
 @media (max-width: 720px) {
