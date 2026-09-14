@@ -16,7 +16,7 @@ def require_text(rel: str, markers: list[str]) -> str:
     return text
 def check_routes() -> None:
     route_markers = {
-        "apps/web/src/app/events/page.tsx": ["PageHeader", "title=\"Sự kiện\"", "PROVISIONAL_WEB_FIXTURE · No CMS · No backend", "Danh sách sự kiện tĩnh"],
+        "apps/web/src/app/events/page.tsx": ["lgo-eventspage-stack", "Sự kiện Linh Giới", "Lịch sự kiện tĩnh", "Sự kiện hiện là thông báo định hướng cộng đồng"],
         "apps/web/src/app/patch-notes/page.tsx": ["PageHeader", "title=\"Patch notes\"", "PROVISIONAL_WEB_FIXTURE · No CMS · No backend", "Ghi chú phát triển tĩnh"],
         "apps/web/src/app/news/page.tsx": ["PageHeader", "title=\"Tin tức\"", "Bản tin public tĩnh", "ContentIaStartCta"],
         "apps/web/src/app/status/page.tsx": ["lgo-status-hero-card", "Trạng thái công khai", "Các hạng mục công khai", "lgo-status-fixture-board"],

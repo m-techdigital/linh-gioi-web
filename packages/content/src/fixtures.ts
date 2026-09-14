@@ -913,9 +913,9 @@ export const contentEntries: ContentEntry[] = [
   {
     slug: "spirit-festival-event-placeholder",
     category: "events",
-    title: "Spirit festival event placeholder",
-    summary: "Event taxonomy exists, but no real live event or backend scheduler exists in WEB-07.",
-    body: "This is a provisional web fixture and not a live operations contract.",
+    title: "Lễ hội Linh Khí",
+    summary: "Thông báo định hướng cộng đồng về một lễ hội Linh Khí tương lai; chưa có lịch live, đăng ký tham gia, phần thưởng hoặc bộ lập lịch backend.",
+    body: "Đây là fixture công khai để người chơi hiểu chủ đề sự kiện có thể xuất hiện sau này. Nội dung này không phải lịch vận hành live hoặc hợp đồng backend được chấp nhận.",
     publishedAt: "2026-09-05T05:00:00.000Z",
     status: "published",
     tags: [PROVISIONAL_WEB_FIXTURE]
