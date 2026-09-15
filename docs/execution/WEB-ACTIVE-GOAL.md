@@ -1,8 +1,8 @@
 # WEB-ACTIVE-GOAL
 
-## Owner delivery override — 2026-09-15
+## Owner delivery policy — commit and push authorized
 
-The owner explicitly waived push. Do NOT push. Local commit + verified source/evidence ZIP + SHA256 replaces the older commit-and-push delivery requirement below; all source, browser, visual and build gates still apply. After local handoff, continue to the next single page without asking for confirmation. This override takes precedence over historical push wording in this file.
+The owner's latest instruction is “hãy commit push rồi sau đó làm tiếp”. This supersedes the prior no-push waiver. Commit reviewed source/test/docs and push normally to origin/main; never force-push or include local handoff ZIPs/cache/secrets. Verify remote HEAD, complete the ZIP/SHA256 handoff, then continue the next single page without another confirmation. This authorizes repository delivery, not production deployment.
 
 Mục tiêu bắt buộc cho LinhGioiOnline-Web:
 

@@ -291,11 +291,17 @@ VALIDATORS = [
     "validate_web_fe_release_real_ui_layout_v1220.py",
     "validate_web_fe_release_readiness_real_ui_layout_v1221.py",
     "validate_web_fe_tester_pack_real_ui_layout_v1222.py",
+    "validate_web_fe_status_real_ui_layout_v1223.py",
 ]
 
 # These guards enforced a diagram image or deliberately line-clamped readiness cards.
 # v1.221 replaces them with art-backed DOM UI + native evidence disclosures. Not counted as PASS.
 SUPERSEDED_LAYOUT_VALIDATORS = {
+    "validate_web_fe_public_status_design_board_v181.py": "validate_web_fe_status_real_ui_layout_v1223.py",
+    "validate_web_fe_status_design_target_density_v1130.py": "validate_web_fe_status_real_ui_layout_v1223.py",
+    "validate_web_fe_status_real_ui_layout_v1145.py": "validate_web_fe_status_real_ui_layout_v1223.py",
+    "validate_web_fe_status_real_ui_layout_v1203.py": "validate_web_fe_status_real_ui_layout_v1223.py",
+
     "validate_web_fe_public_closed_tester_design_board_v177.py": "validate_web_fe_tester_pack_real_ui_layout_v1222.py",
     "validate_web_fe_tester_pack_design_target_density_v1129.py": "validate_web_fe_tester_pack_real_ui_layout_v1222.py",
     "validate_web_fe_tester_pack_real_ui_layout_v1144.py": "validate_web_fe_tester_pack_real_ui_layout_v1222.py",

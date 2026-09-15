@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: v1.222 `/release/tester-pack` closed locally; next v1.223 `/status`. Backend/production integration gates remain blocked. Delivery is local ZIP/SHA256; push waived by owner.
+Current visual checkpoint: v1.223 `/status` closed locally; next v1.224 `/support`. Backend/production integration gates remain blocked. Delivery is local ZIP/SHA256; commit/push re-authorized by the owner; do not force-push.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 

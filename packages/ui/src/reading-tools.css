@@ -19,7 +19,7 @@
 .lgo-template-copy-row { display:flex; gap:.85rem; align-items:center; margin-top:.7rem; }
 .lgo-template-copy-row .lgo-button { background:var(--lgo-color-warm-gold); border-color:var(--lgo-color-warm-gold); color:var(--lgo-color-art-ink); flex-shrink:0; }
 .lgo-template-feedback { font-size:.73rem; line-height:1.5; color:var(--lgo-color-text-muted); }
-.lgo-template-feedback[data-state=copied] { color:var(--lgo-color-jade); }
+.lgo-template-feedback[data-state=copied] { color:var(--lgo-color-jade-teal); }
 .lgo-template-feedback[data-state=error] { color:var(--lgo-color-warm-gold); }
 .lgo-local-checklist input:focus-visible, .lgo-local-checklist button:focus-visible, .lgo-template-tools button:focus-visible, .lgo-template-panel pre:focus-visible { outline:2px solid var(--lgo-color-warm-gold); outline-offset:3px; }
 @media(max-width:480px) {

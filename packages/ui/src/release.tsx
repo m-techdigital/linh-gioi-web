@@ -50,3 +50,17 @@ export function FieldManual({ title, quote, steps }: { title: string; quote: str
     <div className="lgo-field-manual-cover"><span>CẨM NANG CỘNG ĐỒNG</span><strong>{title}</strong><div className="lgo-field-manual-crest">界</div><ol>{steps.map((step,index)=><li key={`${index}-${step}`}>{step}</li>)}</ol><small>Thông tin chuẩn bị · Chưa mở intake</small></div>
   </div>;
 }
+
+export function VisibilitySignal({ label, description, visibility }: { label: string; description: string; visibility: "public" | "internal" | "blocked" }) {
+  return <div className="lgo-visibility-signal" data-visibility={visibility}>
+    <svg viewBox="0 0 100 150" fill="none" aria-hidden="true" focusable="false">
+      <ellipse cx="50" cy="132" rx="39" ry="10" stroke="currentColor" strokeOpacity=".5" />
+      <ellipse cx="50" cy="127" rx="31" ry="8" fill="currentColor" fillOpacity=".12" stroke="currentColor" />
+      <path d="M50 6 75 49 73 108 50 125 27 108 25 49Z" fill="currentColor" fillOpacity=".2" stroke="currentColor" strokeWidth="1.5" />
+      <path d="m50 6 5 49-5 70-10-70Z" fill="currentColor" fillOpacity=".55" stroke="currentColor" />
+      <path d="m25 49 15 6 15 0 20-6M27 108l23 17 23-17M50 6 40 55 27 108M55 55l18 53" stroke="currentColor" strokeOpacity=".8" />
+      <path d="m14 35 2 7 7 2-7 2-2 7-2-7-7-2 7-2Zm69 49 2 7 7 2-7 2-2 7-2-7-7-2 7-2Z" fill="currentColor" fillOpacity=".65" />
+      {visibility === "blocked" ? <path d="m23 99 57-40M24 106l58-40" stroke="var(--lgo-color-art-ink)" strokeWidth="5" /> : null}
+    </svg><strong>{label}</strong><span>{description}</span>
+  </div>;
+}

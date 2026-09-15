@@ -6,7 +6,7 @@ const routes = [
   { path: "/events", title: "Sự kiện Linh Giới" },
   { path: "/patch-notes", title: "Ghi chú cập nhật Linh Giới" },
   { path: "/news", title: "Tin tức Linh Giới" },
-  { path: "/status", title: "Trạng thái / Maintenance" },
+  { path: "/status", title: "Trạng thái công khai" },
 ];
 
 type HeadingMetrics = {

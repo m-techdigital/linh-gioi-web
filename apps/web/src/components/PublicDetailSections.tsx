@@ -118,10 +118,10 @@ export function DownloadExplanationDepth() {
 export function StatusExplanationDepth() {
   return (
     <section className="lgo-panel lgo-service-proof-card-grid lgo-status-explainers" aria-labelledby="status-explainers-heading">
-      <SectionHeading eyebrow="Minh bạch trạng thái" title="Tách rõ công khai, nội bộ và tạm khóa">
+      <SectionHeading headingId="status-explainers-heading" eyebrow="Minh bạch trạng thái" title="Tách rõ công khai, nội bộ và tạm khóa">
         Trang trạng thái không được biến guardrail kỹ thuật thành readiness phát hành hoặc claim live service.
       </SectionHeading>
-      <Grid id="status-explainers-heading">
+      <Grid id="status-explainers-heading-items">
         {statusExplainers.map((item) => (
           <GameCard className="lgo-service-proof-card" key={item.label}>
             <StatusBadge tone={toneForStatus(item.visibility)}>{vietnameseStatusLabel(item.visibility)}</StatusBadge>

@@ -12,7 +12,8 @@
     "./progress.css": "./src/progress.css",
     "./service-layout.css": "./src/service-layout.css",
     "./release-layout.css": "./src/release-layout.css",
-    "./reading-tools.css": "./src/reading-tools.css"
+    "./reading-tools.css": "./src/reading-tools.css",
+    "./visibility-layout.css": "./src/visibility-layout.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

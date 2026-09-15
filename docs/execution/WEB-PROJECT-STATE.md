@@ -1,3 +1,16 @@
+Current phase: WEB-FE-STATUS-REAL-UI-LAYOUT-v1.223 WEB_CLOSED.
+
+Current decision: `/status` now renders actual content-visibility UI with three semantic signals, source-backed filtering, readable evidence and maintenance-fixture boundaries. Production Playwright 50/50 PASS; five viewport screenshots/axe; 63-page build. This is not a live monitoring service or game release approval.
+
+Delivery: local commit + verified ZIP/SHA256. Push waived; do NOT push.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.224.
+Select `/support` as the next single active page. Real Browser UI/UX Layout First and Base First. Do not fabricate support intake/tickets or ask for account secrets.
+
+Detailed report: `LGO-WEB-FE-STATUS-REAL-UI-LAYOUT-REPORT-v1.223.md`.
+
+Historical snapshots below are not the active checkpoint.
+
 Current phase: WEB-FE-RELEASE-TESTER-PACK-REAL-UI-LAYOUT-v1.222 WEB_CLOSED.
 
 Current decision: `/release/tester-pack` now has illustrated manual composition and functional local preparation tools. Production Playwright 30/30 PASS; five viewport screenshot/axe reviews; 63-page build. No intake/backend/data persistence was added. Entire program is NOT production-complete.

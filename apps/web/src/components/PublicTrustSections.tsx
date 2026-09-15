@@ -82,10 +82,10 @@ export function ReleaseEvidenceChecklist() {
 export function StatusTrustBoard() {
   return (
     <section className="lgo-panel lgo-service-proof-card-grid lgo-status-trust" aria-labelledby="status-trust-heading">
-      <SectionHeading eyebrow="Tin cậy trạng thái" title="Mỗi bề mặt có nguồn sự thật và claim bị cấm riêng">
+      <SectionHeading headingId="status-trust-heading" eyebrow="Tin cậy trạng thái" title="Mỗi bề mặt có nguồn sự thật và claim bị cấm riêng">
         Trạng thái không được biến guardrail kỹ thuật thành readiness phát hành. Các bề mặt công khai, nội bộ và tạm khóa phải đọc được ngay.
       </SectionHeading>
-      <Grid id="status-trust-heading">
+      <Grid id="status-trust-heading-items">
         {statusTrustSurfaces.map((surface) => (
           <GameCard key={surface.surface} className="lgo-service-proof-card lgo-status-trust-card">
             <StatusBadge tone={toneForTrust(surface.visibility)}>{vietnameseTrustLabel(surface.visibility)}</StatusBadge>

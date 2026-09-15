@@ -19,9 +19,10 @@ def check_routes() -> None:
         "apps/web/src/app/events/page.tsx": ["lgo-eventspage-stack", "Sự kiện Linh Giới", "Lịch sự kiện tĩnh", "Sự kiện hiện là thông báo định hướng cộng đồng"],
         "apps/web/src/app/patch-notes/page.tsx": ["lgo-patchnotespage-stack", "Ghi chú cập nhật Linh Giới", "Nhật ký cập nhật tĩnh", "Bản ghi hiện là nhật ký phát triển công khai"],
         "apps/web/src/app/news/page.tsx": ["lgo-newspage-stack", "Tin tức Linh Giới", "Bản tin công khai", "Bản tin hiện là nhật ký web công khai"],
-        "apps/web/src/app/status/page.tsx": ["lgo-status-hero-card", "Trạng thái công khai", "Các hạng mục công khai", "lgo-status-fixture-board"],
+        "apps/web/src/app/status/page.tsx": ["lgo-status-experience", "Trạng thái công khai", "PublicStatusHero", "PublicStatusSurfaces"],
     }
     for rel, markers in route_markers.items(): require_text(rel, markers)
+    require_text("apps/web/src/components/PublicStatusExperience.tsx", ['title="Trạng thái công khai"', "ExperienceHero", "VisibilityCatalog"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-content-heading-order-v185.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-CONTENT-HEADING-ORDER-v1.85.md", "LGO-WEB-FE-PUBLIC-CONTENT-HEADING-ORDER-REPORT-v1.85.md", "HANDOFF-LGO-WEB-FE-PUBLIC-CONTENT-HEADING-ORDER-v1.85.md"]: require_file(rel)
     require_text("tests/e2e/fe-public-content-heading-order-v185.spec.ts", ["/events", "/patch-notes", "/news", "/status", "starts main content with one page h1", "pageOverflow", "maxFont"])
