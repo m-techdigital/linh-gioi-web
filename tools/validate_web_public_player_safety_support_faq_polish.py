@@ -43,7 +43,7 @@ def main() -> int:
         "apps/web/src/components/PublicPlayerSafetySections.tsx": [
             "PlayerSafetyPrinciplesBoard", "SupportIssuePathBoard", "ClosedTestSupportBoard", "CommunityConductBoard", "PlayerSafetySupportCta"
         ],
-        "apps/web/src/app/support/safety/page.tsx": [
+        "apps/web/src/components/PublicSupportSafetyExperience.tsx": [
             "Báo lỗi an toàn", "Chưa có ticket thật", "chưa tra cứu tài khoản", "chưa có bảng kiểm duyệt"
         ],
         "apps/web/src/app/sitemap.ts": ["/support/safety", "/guides/player-safety-support-guide"],
@@ -54,7 +54,7 @@ def main() -> int:
         for needle in needles:
             require_text(rel, needle)
     # Guard against unsafe promises in the safety work.
-    for rel in ["packages/content/src/fixtures.ts", "apps/web/src/app/support/safety/page.tsx"]:
+    for rel in ["packages/content/src/fixtures.ts", "apps/web/src/app/support/safety/page.tsx", "apps/web/src/components/PublicSupportSafetyExperience.tsx", "packages/ui/src/privacy-guidance.tsx"]:
         text = read(rel).lower()
         for forbidden in ["ticket id", "guaranteed response", "sla guaranteed", "account recovery is available", "moderation dashboard is available"]:
             if forbidden in text:

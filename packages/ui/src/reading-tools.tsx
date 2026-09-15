@@ -5,11 +5,11 @@ import { CheckboxField } from "./forms";
 import { SpiritButton } from "./primitives";
 
 export type LocalChecklistItem = { id: string; label: string; description: string };
-export function LocalChecklist({ items, label }: { items: readonly LocalChecklistItem[]; label: string }) {
+export function LocalChecklist({ items, label, layout = "list" }: { items: readonly LocalChecklistItem[]; label: string; layout?: "list" | "cards" }) {
   const prefix = useId();
   const [checked, setChecked] = useState<ReadonlySet<string>>(() => new Set());
   const count = items.filter(item => checked.has(item.id)).length;
-  return <div className="lgo-local-checklist" role="group" aria-label={label}>
+  return <div className="lgo-local-checklist" data-layout={layout} role="group" aria-label={label}>
     <div className="lgo-local-checklist-toolbar">
       <output className="lgo-local-checklist-count" role="status" aria-live="polite">Đã đánh dấu {count}/{items.length} mục</output>
       <SpiritButton type="button" tone="neutral" disabled={count === 0} onClick={() => setChecked(new Set())}>Bỏ các đánh dấu</SpiritButton>

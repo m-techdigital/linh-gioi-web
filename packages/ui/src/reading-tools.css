@@ -31,3 +31,27 @@
 @media(prefers-reduced-motion:reduce) {
   .lgo-local-checklist *, .lgo-template-tools * { transition:none; animation:none; }
 }
+
+/* Optional card presentation for a local preparation checklist; default list stays unchanged. */
+.lgo-local-checklist[data-layout="cards"] .lgo-local-checklist-items { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:.8rem; counter-reset:checklist-item; }
+.lgo-local-checklist[data-layout="cards"] .lgo-checkbox-field { display:flex; align-items:start; gap:.6rem; min-width:0; margin:0; padding:1rem .8rem; background:linear-gradient(140deg,color-mix(in srgb,var(--lgo-color-jade-teal) 8%,var(--lgo-color-night-panel)),var(--lgo-color-art-ink)); border:1px solid color-mix(in srgb,var(--lgo-color-jade-teal) 35%,transparent); border-radius:4px; }
+.lgo-local-checklist[data-layout="cards"] .lgo-checkbox-field input { flex-shrink:0; width:18px; height:18px; margin-top:.3rem; accent-color:var(--lgo-color-jade-teal); }
+.lgo-local-checklist[data-layout="cards"] .lgo-checkbox-copy { min-width:0; counter-increment:checklist-item; }
+.lgo-local-checklist[data-layout="cards"] .lgo-checkbox-copy::before { content:counter(checklist-item,decimal-leading-zero); display:block; font:1.45rem var(--lgo-font-editorial); color:var(--lgo-color-jade-teal); margin-bottom:.6rem; }
+.lgo-local-checklist[data-layout="cards"] .lgo-checkbox-copy strong { display:block; font-size:.88rem; line-height:1.5; color:var(--lgo-color-parchment); }
+.lgo-local-checklist[data-layout="cards"] .lgo-checkbox-copy small { display:block; font-size:.77rem; line-height:1.65; margin-top:.55rem; color:var(--release-muted); }
+.lgo-local-checklist[data-layout="cards"] .lgo-checkbox-field:has(input:checked) { border-color:var(--lgo-color-jade-teal); background:linear-gradient(140deg,color-mix(in srgb,var(--lgo-color-jade-teal) 19%,var(--lgo-color-night-panel)),var(--lgo-color-art-ink)); box-shadow:inset 3px 0 0 var(--lgo-color-jade-teal); }
+@media(forced-colors:active) {
+  .lgo-local-checklist[data-layout="cards"] .lgo-checkbox-field:has(input:checked) { border-color:Highlight; outline:1px solid Highlight; }
+}
+.lgo-local-checklist[data-layout="cards"] .lgo-checkbox-field:focus-within { outline:2px solid var(--lgo-color-warm-gold); outline-offset:3px; }
+@media(max-width:1100px) {
+  .lgo-local-checklist[data-layout="cards"] .lgo-local-checklist-items { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media(max-width:800px) {
+  .lgo-local-checklist[data-layout="cards"] .lgo-local-checklist-items { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:480px) {
+  .lgo-local-checklist[data-layout="cards"] .lgo-local-checklist-items { grid-template-columns:1fr; }
+  .lgo-local-checklist[data-layout="cards"] .lgo-checkbox-copy::before { float:left; margin:0 .65rem .1rem 0; font-size:1.15rem; }
+}

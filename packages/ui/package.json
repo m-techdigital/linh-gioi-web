@@ -15,7 +15,8 @@
     "./reading-tools.css": "./src/reading-tools.css",
     "./visibility-layout.css": "./src/visibility-layout.css",
     "./guidance-layout.css": "./src/guidance-layout.css",
-    "./question-directory.css": "./src/question-directory.css"
+    "./question-directory.css": "./src/question-directory.css",
+    "./safety-layout.css": "./src/safety-layout.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

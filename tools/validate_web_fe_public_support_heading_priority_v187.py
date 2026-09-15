@@ -21,10 +21,10 @@ def require_order(rel: str, first: str, second: str) -> None:
 def check_routes() -> None:
     require_order("apps/web/src/app/support/page.tsx", "<PublicSupportHero/>", "<PublicSupportTopics/>")
     require_order("apps/web/src/app/support/help/page.tsx", "<PublicHelpHero/>", "<PublicHelpAnswers/>")
-    require_order("apps/web/src/app/support/safety/page.tsx", "<h1>Báo lỗi an toàn</h1>", "<ReleaseReadinessHubCta />")
+    require_order("apps/web/src/app/support/safety/page.tsx", "<PublicSafetyHero/>", "<PublicSafetyChecklist/>")
     require_text("apps/web/src/components/PublicSupportExperience.tsx", ['title="Hỗ trợ cộng đồng"', "ExperienceHero", "Không có hệ thống ticket thật", "tra cứu", "Chưa có ticket"])
     require_text("apps/web/src/components/PublicSupportHelpExperience.tsx", ['title="FAQ nhanh"', "không có tìm kiếm backend", "Không có hệ thống ticket thật", "thông tin cá nhân nhạy cảm"])
-    require_text("apps/web/src/app/support/safety/page.tsx", ["Chưa có ticket thật", "chưa tra cứu tài khoản", "chưa có bảng kiểm duyệt"])
+    require_text("apps/web/src/components/PublicSupportSafetyExperience.tsx", ['title="Báo lỗi an toàn"', "Chưa có ticket thật", "chưa tra cứu tài khoản", "chưa có bảng kiểm duyệt"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-support-heading-priority-v187.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-SUPPORT-HEADING-PRIORITY-v1.87.md", "LGO-WEB-FE-PUBLIC-SUPPORT-HEADING-PRIORITY-REPORT-v1.87.md", "HANDOFF-LGO-WEB-FE-PUBLIC-SUPPORT-HEADING-PRIORITY-v1.87.md"]: require_file(rel)
     require_text("tests/e2e/fe-public-support-heading-priority-v187.spec.ts", ["/support", "/support/help", "/support/safety", "starts support content with the page h1", "pageOverflow", "maxFont"])

@@ -1,0 +1,37 @@
+/* Shared privacy guidance: visual boundaries, not automatic redaction or support intake. */
+.lgo-privacy-notice { position:relative; min-width:0; padding:1.7rem 1.1rem 1.1rem; border:5px double color-mix(in srgb,var(--lgo-color-jade-teal) 35%,var(--lgo-color-art-ink)); border-radius:4px; color:var(--lgo-color-art-ink); background:linear-gradient(125deg,color-mix(in srgb,var(--lgo-color-jade-teal) 12%,var(--lgo-color-parchment)),var(--lgo-color-parchment)); box-shadow:var(--lgo-shadow-panel); }
+.lgo-privacy-notice::after { content:""; position:absolute; inset:7px; border:1px solid color-mix(in srgb,var(--lgo-color-art-ink) 15%,transparent); pointer-events:none; }
+.lgo-privacy-notice-heading { display:flex; gap:.8rem; align-items:center; }
+.lgo-guidance-layout .lgo-privacy-notice-heading > .lgo-release-icon { width:2.6rem; height:2.6rem; color:color-mix(in srgb,var(--lgo-color-jade-teal) 28%,var(--lgo-color-art-ink)); }
+.lgo-guidance-layout .lgo-privacy-notice h2 { margin:0; color:var(--lgo-color-art-ink); font:500 1.65rem/1.2 var(--lgo-font-editorial); }
+.lgo-guidance-layout .lgo-privacy-notice > p { font-size:.82rem; line-height:1.55; color:var(--lgo-color-art-ink); margin:.8rem 0 1.2rem; }
+.lgo-privacy-notice-items { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.9rem; }
+.lgo-privacy-notice-item { min-width:0; }
+.lgo-privacy-notice-icon { display:grid; place-items:center; width:45px; height:45px; border-radius:50%; border:1px solid color-mix(in srgb,var(--lgo-color-art-ink) 20%,transparent); background:color-mix(in srgb,var(--lgo-color-jade-teal) 18%,transparent); margin:0 0 .7rem; }
+.lgo-guidance-layout .lgo-privacy-notice h3 { margin:0 0 .45rem; font:500 1.07rem/1.35 var(--lgo-font-editorial); color:var(--lgo-color-art-ink); }
+.lgo-guidance-layout .lgo-privacy-notice-item p { font-size:.76rem; line-height:1.55; color:var(--lgo-color-art-ink); margin:0; }
+.lgo-privacy-notice > small { display:block; border-top:1px solid color-mix(in srgb,var(--lgo-color-art-ink) 25%,transparent); padding-top:.8rem; margin-top:1.1rem; font:italic .85rem/1.4 var(--lgo-font-editorial); text-align:center; }
+.lgo-safety-self-check-note { display:flex; align-items:start; gap:.6rem; color:var(--release-muted); font-size:.8rem; margin:.9rem 0 0; }
+.lgo-safety-self-check-note > .lgo-release-icon { color:var(--lgo-color-warm-gold); }
+.lgo-data-boundary-columns { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; align-items:stretch; }
+.lgo-data-boundary-columns > section { padding:1.3rem; background:var(--lgo-color-art-ink); border:1px solid color-mix(in srgb,var(--lgo-color-jade-teal) 45%,transparent); border-radius:4px; min-width:0; }
+.lgo-data-boundary-columns > .lgo-data-boundary-withheld { border-color:color-mix(in srgb,var(--lgo-color-shadow-purple) 65%,transparent); }
+.lgo-guidance-layout .lgo-data-boundary-columns h3 { display:flex; align-items:center; gap:.7rem; margin:0 0 1rem; font:500 1.35rem/1.3 var(--lgo-font-editorial); color:var(--lgo-color-jade-teal); }
+.lgo-guidance-layout .lgo-data-boundary-withheld h3 { color:color-mix(in srgb,var(--lgo-color-shadow-purple) 40%,white); }
+.lgo-data-boundary-columns ul { display:grid; gap:.7rem; margin:0; padding-left:1.15rem; }
+.lgo-data-boundary-columns li { font-size:.86rem; line-height:1.65; color:var(--release-muted); }
+.lgo-guidance-layout .lgo-safety-answer-boundary { margin:.8rem 0!important; color:var(--lgo-color-warm-gold); }
+.lgo-guidance-layout .lgo-safety-contract-note { font-size:.68rem; overflow-wrap:anywhere; margin:1rem 0 0; }
+@media(max-width:800px) {
+  .lgo-privacy-notice { padding:1.4rem 1rem 1rem; }
+  .lgo-data-boundary-columns { grid-template-columns:1fr; }
+}
+@media(max-width:480px) {
+  .lgo-privacy-notice-items { grid-template-columns:1fr; gap:.8rem; }
+  .lgo-privacy-notice-item { display:grid; grid-template-columns:40px minmax(0,1fr); gap:.2rem .65rem; }
+  .lgo-privacy-notice-icon { grid-row:1/span 2; width:36px; height:36px; margin:0; }
+  .lgo-privacy-notice-item p { grid-column:2; }
+  .lgo-guidance-layout .lgo-privacy-notice h2 { font-size:1.4rem; }
+  .lgo-guidance-layout .lgo-privacy-notice h3 { margin:0; }
+  .lgo-data-boundary-columns > section { padding:1.1rem; }
+}
