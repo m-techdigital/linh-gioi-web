@@ -1,3 +1,20 @@
+Current phase: WEB-FE-RELEASE-REAL-UI-LAYOUT-v1.220 WEB_CLOSED.
+
+Current decision: v1.220 closed the active `/release` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Release design target and shared public shell were usable as comparison guardrails; work focused on the rendered page, staged-release first-flow, M0→M1 visual board density, release stage rhythm, readiness CTA, collapsed expanded evidence and Base First CSS ownership. Entire program is NOT production-complete.
+
+- v1.220 did not create or batch a new design target because the existing Public Release board plus shared public shell were sufficient for checking header, footer, menu, shell, route flow and staged release scenario alignment.
+- v1.220 preserved the already usable real UI layout and fixed the owner problem: release layout CSS moved from stale `/release` app-local blocks in `apps/web/src/app/globals.css` into `packages/ui/src/service-layout.css`.
+- v1.220 tuned the shared UI block after the ownership move so desktop kept compact first-flow density instead of regressing through cascade order.
+- v1.220 kept the page Vietnamese and scenario-correct as a comparison guardrail only; no design-only, translation-only, validator-only or docs-only work was used as page progress.
+- v1.220 kept the page FE-only: no production auth, no backend integration, no DB persistence, no CMS, no real launcher build, no open beta, no account entitlement, no public download promise and no accepted backend contract.
+- v1.220 final browser/e2e metrics: desktop overflow 0, desktop scrollHeight 1510px, h1/max font 34.82px, heroBottom 360.92px, boardTop 349.08px, boardBottom 530.83px, stagesTop 549.38px, stagesBottom 1030.08px, readinessTop 1031.03px, disclosureTop 1207.33px, designBandTop 1313.39px, 6 stage columns and collapsed disclosure with 2 direct children; mobile overflow 0, mobile scrollHeight 3095px, h1/max font 30.28px, heroBottom 546.94px, boardTop 618.94px, boardBottom 1133.72px, stagesTop 1184.13px, stagesBottom 2071.41px, readinessTop 2127.41px, disclosureTop 2676.08px, designBandTop 2838.33px, 2 stage columns and collapsed disclosure with 2 direct children.
+- v1.220 evidence: RED ownership baseline showed `/release` layout already visually acceptable but owned by stale `globals.css`; first shared-owner run revealed desktop cascade drift; GREEN Playwright desktop/mobile 6/6 Release layout/design-match checks after shared UI density fix; screenshot review `/tmp/release-desktop-v1220.png` and `/tmp/release-mobile-v1220.png`; source validator `tools/validate_web_fe_release_real_ui_layout_v1220.py`; Web/UI typecheck; Web build; current-state closure validator.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221.
+Select `/release/readiness` as the next single active page. Continue Real Browser UI/UX Layout First, Runtime Layout Gate and Base First; use design target only as a comparison guardrail and do not move past `/release/readiness` before browser/e2e, screenshot review, validator, build/typecheck, docs, commit and push.
+
+Historical snapshot follows.
+
 Current phase: WEB-FE-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.219 WEB_CLOSED.
 
 Current decision: v1.219 closed the active `/download/trust` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Download Trust design target and shared public shell were usable as comparison guardrails; work focused on the rendered page, trust-gate first-flow, owner evidence density, release evidence, status depth, collapsed secondary proof boards and Base First CSS ownership. Entire program is NOT production-complete.

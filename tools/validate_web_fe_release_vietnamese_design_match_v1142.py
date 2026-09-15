@@ -44,14 +44,14 @@ def check_source():
  req('apps/web/public/game-art/design-boards/release-narrative-m0-to-m1-gate.svg',['Cổng M0 → M1','Sẵn sàng nội dung','Closed test','bằng chứng trước lời hứa','không phải claim production'])
  req('packages/content/src/fixtures.ts',['M0 — Sẵn sàng nội dung','Kiểm tra tin cậy','Điều kiện closed test','Contract backend','Owner phê duyệt','M1 — Closed test có điều kiện'])
  forbid('packages/content/src/fixtures.ts',['stage: "Content-ready public web"','stage: "Closed-test preparation"','stage: "Limited closed test"','stage: "Public download candidate"'])
- req('apps/web/src/app/globals.css',['WEB v1.142 release Vietnamese design match','WEB v1.142 release proof heading compact fold alignment','grid-template-columns: repeat(6, minmax(0, 1fr))'])
+ req('packages/ui/src/service-layout.css',['v1.220 shared release narrative layout','grid-template-columns: repeat(6, minmax(0, 1fr))'])
 def check_docs():
  files=['tests/e2e/fe-release-vietnamese-design-match-v1142.spec.ts','docs/execution/specs/WEB-FE-RELEASE-VIETNAMESE-DESIGN-MATCH-v1.142.md','LGO-WEB-FE-RELEASE-VIETNAMESE-DESIGN-MATCH-REPORT-v1.142.md','HANDOFF-LGO-WEB-FE-RELEASE-VIETNAMESE-DESIGN-MATCH-v1.142.md']
  for f in files: req_file(f)
  req('tests/e2e/fe-release-vietnamese-design-match-v1142.spec.ts',['release Vietnamese design match','Thiết kế chi tiết phát hành','Bằng chứng trước lời hứa','Không claim open beta','stagesTop'])
  for f in files[1:]: req(f,['WEB-FE-RELEASE-VIETNAMESE-DESIGN-MATCH-v1.142','WEB_CLOSED','Sequential Page Completion','Just-in-time Design','Design Target First','Layout Match Before Closure','Base UI/UX Layout','Public Release','Vietnamese','game scenario','browser/e2e','screenshot','No production auth','No DB persistence','No real Portal integration','No real Ops/Admin mutation','NO_ACCEPTED_BACKEND_CONTRACT'])
- req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-RELEASE-VIETNAMESE-DESIGN-MATCH-v1.142 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220'])
- req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220','select `/release` as the next single active page'])
+ req('docs/execution/WEB-PROJECT-STATE.md',['Current phase: WEB-FE-RELEASE-VIETNAMESE-DESIGN-MATCH-v1.142 WEB_CLOSED','Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221'])
+ req('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221','select `/release/readiness` as the next single active page'])
  req('docs/execution/WEB-TASK-LEDGER.md',['| WEB-FE-RELEASE-VIETNAMESE-DESIGN-MATCH-v1.142 | WEB-FE | WEB_CLOSED |'])
 def main():
  check_target(); check_source(); check_docs()

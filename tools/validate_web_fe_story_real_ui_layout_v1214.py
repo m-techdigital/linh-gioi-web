@@ -102,13 +102,13 @@ def main() -> int:
         "Base First",
         "/tmp/story-desktop-v1214.png",
         "/tmp/story-mobile-v1214.png",
-        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220",
-        "Select `/release` as the next single active page",
+        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221",
+        "Select `/release/readiness` as the next single active page",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220",
-        "Current FE scope: select `/release`",
-        "Complete `/release` fully before any other page",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221",
+        "Current FE scope: select `/release/readiness`",
+        "Complete `/release/readiness` fully before any other page",
         "Real Browser UI/UX Layout First",
         "Base UI/UX Layout First",
     ])

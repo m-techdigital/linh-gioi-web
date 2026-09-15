@@ -43,8 +43,8 @@ def check_tests_docs() -> None:
     ]:
         require_file(rel)
         require_text(rel, ["WEB-FE-START-REAL-UI-LAYOUT-v1.217", "WEB_CLOSED", "Real Browser UI/UX Layout First", "Base First", "/tmp/start-desktop-v1217.png", "/tmp/start-mobile-v1217.png", "No production auth", "NO_ACCEPTED_BACKEND_CONTRACT"])
-    require_text("docs/execution/WEB-PROJECT-STATE.md", ["WEB-FE-START-REAL-UI-LAYOUT-v1.217 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220"])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220", "select `/release` as the next single active page"])
+    require_text("docs/execution/WEB-PROJECT-STATE.md", ["WEB-FE-START-REAL-UI-LAYOUT-v1.217 WEB_CLOSED", "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221"])
+    require_text("docs/execution/WEB-NEXT-ACTION.md", ["WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221", "select `/release/readiness` as the next single active page"])
     require_text("docs/execution/WEB-TASK-LEDGER.md", ["| WEB-FE-START-REAL-UI-LAYOUT-v1.217 | WEB-FE | WEB_CLOSED |"])
 def main() -> int:
     check_runtime_gate(); check_page_source(); check_tests_docs()

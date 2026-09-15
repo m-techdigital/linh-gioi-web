@@ -5811,8 +5811,8 @@
     grid-row: 1 / span 5;
     align-self: center;
     display: grid;
-    gap: .5rem;
-    padding: .74rem;
+    gap: .42rem;
+    padding: .58rem;
     border: 1px solid rgba(245, 200, 107, .34);
     border-radius: var(--lgo-radius-xl);
     background:
@@ -5831,14 +5831,14 @@
   }
 
   .lgo-testerpackpage-stack.lgo-service-compact-proof-page .lgo-closed-tester-design-board img {
-    max-height: 220px;
+    max-height: 188px;
     width: 100%;
     object-fit: contain;
   }
 
   .lgo-testerpackpage-stack.lgo-service-compact-proof-page .lgo-closed-tester-design-board figcaption {
-    font-size: .82rem;
-    line-height: 1.34;
+    font-size: .76rem;
+    line-height: 1.24;
   }
 
   .lgo-testerpackpage-stack.lgo-service-compact-proof-page > .lgo-section-heading {
@@ -6886,8 +6886,8 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
-    font-size: .86rem;
-    line-height: 1.36;
+    font-size: .78rem;
+    line-height: 1.24;
   }
 
   .lgo-storypage-stack .lgo-story-hero .lgo-cinematic-scene {
@@ -8964,5 +8964,247 @@
   .lgo-downloadtrustpage-stack .lgo-download-depth .lgo-card p,
   .lgo-downloadtrustpage-stack .lgo-download-depth .lgo-card small {
     font-size: .54rem;
+  }
+}
+
+/* v1.220 shared release narrative layout for the public staged-release route. */
+@media (min-width: 981px) {
+  .lgo-releasepage-stack {
+    gap: clamp(.78rem, 1.45vw, 1.2rem);
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 350px);
+    align-items: center;
+    gap: clamp(.68rem, 1.15vw, 1rem);
+    padding: clamp(.62rem, 1vw, .86rem);
+    overflow: hidden;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card h1 {
+    max-width: 16ch;
+    font-size: clamp(2.05rem, 2.72vw, 2.6rem);
+    line-height: .94;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card .lgo-hero-lead,
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card p {
+    max-width: 72ch;
+    font-size: .8rem;
+    line-height: 1.24;
+    margin-block: .32rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card .lgo-product-first-actions {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    align-self: center;
+    display: grid;
+    gap: .42rem;
+    padding: .58rem;
+    border: 1px solid rgba(53, 198, 163, .34);
+    border-radius: var(--lgo-radius-xl);
+    background:
+      radial-gradient(circle at 48% 18%, rgba(53, 198, 163, .2), transparent 8rem),
+      linear-gradient(145deg, rgba(7, 17, 31, .88), rgba(13, 27, 46, .72));
+    box-shadow: var(--lgo-shadow-spirit-glow);
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card .lgo-link-button {
+    min-height: 38px;
+    padding-block: .42rem;
+    font-size: .84rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-design-board {
+    display: grid;
+    grid-template-columns: minmax(0, .72fr) minmax(260px, .28fr);
+    align-items: center;
+    gap: clamp(.75rem, 1.2vw, 1rem);
+    margin-top: -1.65rem;
+    padding: clamp(.75rem, 1.2vw, .95rem);
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-design-board img {
+    max-height: 188px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-design-board figcaption {
+    font-size: .76rem;
+    line-height: 1.24;
+  }
+
+  .lgo-releasepage-stack > .lgo-section-heading {
+    display: grid;
+    grid-template-columns: minmax(220px, .34fr) minmax(0, 1fr);
+    align-items: end;
+    gap: clamp(.85rem, 1.4vw, 1.15rem);
+    margin-top: -.6rem;
+  }
+
+  .lgo-releasepage-stack > .lgo-section-heading h2 {
+    font-size: clamp(1.35rem, 1.9vw, 1.72rem);
+    line-height: 1.03;
+  }
+
+  .lgo-releasepage-stack > .lgo-section-heading p {
+    font-size: .78rem;
+    line-height: 1.24;
+  }
+
+  .lgo-releasepage-stack .lgo-release-readiness-cta {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, .34fr);
+    align-items: center;
+    gap: clamp(.8rem, 1.3vw, 1.1rem);
+    padding: clamp(.8rem, 1.25vw, 1rem);
+    margin-top: -1.1rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-readiness-cta h2 {
+    font-size: clamp(1.2rem, 1.55vw, 1.5rem);
+    line-height: 1.04;
+  }
+
+  .lgo-releasepage-stack .lgo-release-readiness-cta p {
+    font-size: .76rem;
+    line-height: 1.24;
+  }
+
+  .lgo-releasepage-stack .lgo-release-readiness-cta .lgo-product-first-actions {
+    display: grid;
+    gap: .48rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-readiness-cta .lgo-link-button {
+    min-height: 38px;
+    padding-block: .42rem;
+    font-size: .84rem;
+  }
+}
+
+
+/* Shared release narrative compact cards moved from stale app-local v1.142. */
+@media (min-width: 981px) {
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card {
+    padding: clamp(.62rem, 1vw, .88rem);
+    gap: clamp(.7rem, 1.15vw, 1rem);
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card h1 {
+    font-size: clamp(2.12rem, 2.75vw, 2.78rem);
+    max-width: 18ch;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card .lgo-hero-lead,
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card p {
+    font-size: .82rem;
+    line-height: 1.28;
+    margin-block: .36rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-hero-card .lgo-product-first-actions {
+    padding: .64rem;
+    gap: .42rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-design-board {
+    margin-top: -1.9rem;
+    padding: clamp(.55rem, .85vw, .72rem);
+    grid-template-columns: minmax(0, .7fr) minmax(230px, .3fr);
+    gap: clamp(.55rem, .9vw, .75rem);
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-design-board img {
+    max-height: 158px;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-design-board figcaption {
+    font-size: .76rem;
+    line-height: 1.25;
+  }
+
+  .lgo-releasepage-stack > .lgo-section-heading {
+    margin-top: -1rem;
+    min-height: 0;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board {
+    margin-top: -1.1rem;
+    padding: clamp(.68rem, 1vw, .86rem);
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board .lgo-section-heading {
+    margin-bottom: .58rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board .lgo-section-heading h2 {
+    font-size: clamp(1.12rem, 1.45vw, 1.38rem);
+    line-height: 1.04;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board .lgo-section-heading p {
+    font-size: .78rem;
+    line-height: 1.28;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-list {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: .55rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-item {
+    display: grid;
+    align-content: start;
+    gap: .42rem;
+    padding: .62rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-item h3 {
+    font-size: clamp(.92rem, 1vw, 1.02rem);
+    line-height: 1.06;
+    margin-block: .32rem .24rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-item p {
+    font-size: .72rem;
+    line-height: 1.25;
+    margin-block: .25rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-item small {
+    font-size: .66rem;
+    line-height: 1.22;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-item .lgo-link-button {
+    min-height: 32px;
+    padding-block: .32rem;
+    font-size: .72rem;
+  }
+}
+
+/* Shared release narrative proof heading compact fold alignment. */
+@media (min-width: 981px) {
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board .lgo-section-heading {
+    display: grid;
+    grid-template-columns: minmax(190px, .28fr) minmax(0, 1fr);
+    align-items: end;
+    gap: .75rem;
+    margin-bottom: .42rem;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board .lgo-section-heading h2 {
+    font-size: clamp(1.05rem, 1.25vw, 1.22rem);
+    line-height: 1.02;
+  }
+
+  .lgo-releasepage-stack .lgo-release-narrative-stage-board .lgo-section-heading p {
+    font-size: .72rem;
+    line-height: 1.22;
+    margin: 0;
   }
 }

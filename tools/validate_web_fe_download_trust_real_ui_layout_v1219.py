@@ -126,18 +126,18 @@ def check_state() -> None:
         "Current phase: WEB-FE-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.219 WEB_CLOSED",
         "desktop scrollHeight 2209px",
         "mobile scrollHeight 3204px",
-        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220",
+        "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220",
-        "select `/release` as the next single active page",
-        "Complete `/release` fully before any other page",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221",
+        "select `/release/readiness` as the next single active page",
+        "Complete `/release/readiness` fully before any other page",
         "Real Browser UI/UX Layout First",
         "Base UI/UX Layout",
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
         "| WEB-FE-DOWNLOAD-TRUST-REAL-UI-LAYOUT-v1.219 | WEB-FE | WEB_CLOSED |",
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.220",
+        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221",
     ])
 
 def main() -> int:
