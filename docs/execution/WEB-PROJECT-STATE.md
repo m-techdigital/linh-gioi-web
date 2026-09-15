@@ -1,3 +1,17 @@
+Current phase: WEB-FE-BEGINNER-GUIDE-READING-v1.235 WEB_CLOSED.
+
+Current decision: /guides/beginner uses the shared illustrated article, four source-exact chapters, real destinations and native contents/deep links. Solid parchment action treatment verified. Production 226/226 PASS; 63-page build; five viewport screenshots/axe; sibling world article DOM/geometry unchanged. No gameplay or account progress.
+
+Delivery: reviewed commit and normal origin/main push, exact remote verification and source/delta/evidence ZIP/SHA256; no deployment or handoff artifacts in Git.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.236.
+Select `/guides/gate-entry-guide` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate; source-authored guide and native reading navigation only.
+
+Detailed report: LGO-WEB-FE-BEGINNER-GUIDE-READING-REPORT-v1.235.md.
+Whole-app no-JavaScript streaming limitation remains open. One non-reproduced dev fragment-coordinate observation is retained in evidence; not claimed fixed. Final production cold-fragment check passed unchanged.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-GUIDES-DISCOVERY-REAL-UI-LAYOUT-v1.234 WEB_CLOSED.
 
 Current decision: /guides has a featured reading cover, four local editorial groups, source-exact catalog, accent-insensitive phrase filtering and native summaries. Reset retains usable focus; no word submission/storage. Production 210/210 PASS; 63-page build; five viewport screenshots/axe plus filtered/empty states. No wiki/search backend or game state added.

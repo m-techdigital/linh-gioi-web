@@ -28,6 +28,8 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.235 replaces the clipped beginner multi-board layout; historical assertions are not PASS.
+    "**/fe-guides-beginner-real-ui-layout-v1157.spec.ts",
     // v1.234 replaces exact old guides two-shelf/line-clamp layout; published-content checks remain active.
     "**/fe-guides-index-real-ui-layout-v1156.spec.ts",
     // v1.233 replaces four-column guide/CTA presentation with source-complete article navigation.
