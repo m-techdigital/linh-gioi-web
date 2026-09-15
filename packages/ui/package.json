@@ -13,7 +13,8 @@
     "./service-layout.css": "./src/service-layout.css",
     "./release-layout.css": "./src/release-layout.css",
     "./reading-tools.css": "./src/reading-tools.css",
-    "./visibility-layout.css": "./src/visibility-layout.css"
+    "./visibility-layout.css": "./src/visibility-layout.css",
+    "./guidance-layout.css": "./src/guidance-layout.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

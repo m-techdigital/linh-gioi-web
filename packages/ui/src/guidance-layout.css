@@ -1,0 +1,75 @@
+/* Shared guidance station, topic cards and native FAQ. No diagram-as-page or clipped answers. */
+.lgo-guidance-layout .lgo-guidance-hero { grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); }
+.lgo-guidance-hero .lgo-release-hero-art { object-position:center 42%; }
+.lgo-guidance-hero-boundary { display:flex; align-items:start; gap:.75rem; margin:1.25rem 0 1rem; }
+.lgo-guidance-hero-boundary .lgo-release-icon { color:var(--lgo-color-warm-gold); }
+.lgo-guidance-layout .lgo-guidance-hero-boundary p { margin:0; font-size:.84rem; color:var(--release-muted); line-height:1.7; }
+.lgo-guidance-hero-boundary strong { font-weight:500; color:var(--lgo-color-parchment); }
+.lgo-guidance-station { position:relative; min-width:0; padding:1.75rem 1rem 1rem; text-align:center; color:var(--lgo-color-art-ink); background-color:var(--lgo-color-parchment); border:5px double color-mix(in srgb,var(--lgo-color-warm-gold) 65%,var(--lgo-color-art-ink)); border-radius:5px; box-shadow:var(--lgo-shadow-panel); }
+.lgo-guidance-station::before { content:""; position:absolute; inset:7px; border:1px solid color-mix(in srgb,var(--lgo-color-art-ink) 18%,transparent); pointer-events:none; }
+.lgo-guidance-station-crest { display:grid; place-items:center; position:absolute; top:-22px; left:calc(50% - 22px); width:44px; height:44px; color:var(--lgo-color-warm-gold); background:var(--lgo-color-art-ink); border:3px double var(--lgo-color-warm-gold); border-radius:50%; }
+.lgo-guidance-layout .lgo-guidance-station h2 { margin:0; font:500 1.7rem/1.2 var(--lgo-font-editorial); color:var(--lgo-color-art-ink); }
+.lgo-guidance-layout .lgo-guidance-station > p { margin:.5rem 0 1rem; font-size:.82rem; color:var(--lgo-color-art-ink); }
+.lgo-guidance-station-links { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.45rem; }
+.lgo-guidance-station-links a { display:flex; flex-direction:column; align-items:center; gap:.65rem; min-width:0; min-height:148px; padding:1rem .45rem; border:1px solid color-mix(in srgb,var(--lgo-color-warm-gold) 70%,var(--lgo-color-art-ink)); border-radius:3px; background:linear-gradient(155deg,color-mix(in srgb,var(--lgo-color-jade-teal) 22%,var(--lgo-color-art-ink)),var(--lgo-color-art-ink)); text-decoration:none; color:var(--lgo-color-parchment); }
+.lgo-guidance-station-links .lgo-release-icon { width:2rem; height:2rem; color:var(--lgo-color-parchment); }
+.lgo-guidance-station-links strong { font:500 1rem/1.35 var(--lgo-font-editorial); }
+.lgo-guidance-station-links span { font-size:.7rem; line-height:1.5; color:var(--lgo-color-text-primary); }
+.lgo-guidance-station > small { display:block; margin-top:1rem; font:italic .83rem/1.4 var(--lgo-font-editorial); }
+.lgo-guidance-layout .lgo-guidance-station a:focus-visible { outline:2px solid var(--lgo-color-art-ink); outline-offset:2px; }
+.lgo-guidance-station a:hover { background:color-mix(in srgb,var(--lgo-color-jade-teal) 25%,var(--lgo-color-art-ink)); }
+.lgo-guidance-topics > .lgo-section-heading { margin-bottom:1rem; }
+.lgo-guidance-topic-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; }
+.lgo-guidance-topic-card { display:flex; flex-direction:column; min-width:0; border:1px solid color-mix(in srgb,var(--lgo-color-jade-teal) 32%,transparent); background:var(--lgo-color-art-ink); border-radius:4px; overflow:hidden; }
+.lgo-guidance-topic-art { position:relative; min-height:88px; display:flex; align-items:end; padding:1rem; background:linear-gradient(0deg,var(--lgo-color-art-ink),color-mix(in srgb,var(--lgo-color-art-ink) 15%,transparent)),url('/game-art/world/dong-mon-skyline.webp') center 42% / cover; }
+.lgo-guidance-topic-card:nth-child(2) .lgo-guidance-topic-art { background-position:center,70% 30%; }
+.lgo-guidance-topic-card:nth-child(3) .lgo-guidance-topic-art { background-position:center,30% 70%; }
+.lgo-guidance-topic-card:nth-child(4) .lgo-guidance-topic-art { background-position:center,90% 45%; }
+.lgo-guidance-layout .lgo-guidance-topic-art .lgo-release-icon { width:2.1rem; height:2.1rem; color:var(--lgo-color-warm-gold); }
+.lgo-guidance-topic-copy { flex:1; display:flex; flex-direction:column; align-items:stretch; padding:0 1rem 1rem; }
+.lgo-guidance-layout .lgo-guidance-topic-copy h3 { margin:0 0 .5rem; font:500 1.35rem/1.25 var(--lgo-font-editorial); color:var(--lgo-color-parchment); }
+.lgo-guidance-layout .lgo-guidance-topic-copy p { flex:1; font-size:.85rem; line-height:1.6; color:var(--release-muted); margin:0 0 1rem; }
+.lgo-guidance-topic-copy .lgo-link-button { justify-content:space-between; text-align:left; }
+.lgo-guidance-topic-copy .lgo-link-button .lgo-release-icon { width:1rem; height:1rem; }
+.lgo-guidance-reading-grid { align-items:start; }
+.lgo-guidance-faq-heading { display:flex; align-items:center; gap:.8rem; }
+.lgo-guidance-faq-heading > .lgo-release-icon { width:2rem; height:2rem; color:var(--lgo-color-warm-gold); }
+.lgo-question-list { display:grid; gap:.55rem; margin:1.15rem 0; }
+.lgo-question-list details { border:1px solid color-mix(in srgb,var(--lgo-color-text-muted) 25%,transparent); background:color-mix(in srgb,var(--lgo-color-art-ink) 80%,transparent); border-radius:3px; }
+.lgo-question-list summary { display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:50px; padding:.85rem; cursor:pointer; list-style:none; color:var(--lgo-color-text-primary); font-size:.86rem; line-height:1.5; }
+.lgo-question-list summary::-webkit-details-marker { display:none; }
+.lgo-question-toggle { font-size:1rem; color:var(--lgo-color-warm-gold); }
+.lgo-question-list details[open] > summary { color:var(--lgo-color-parchment); border-bottom:1px solid var(--release-line); }
+.lgo-question-list details[open] .lgo-question-toggle { transform:rotate(45deg); }
+.lgo-question-answer { padding:.85rem; font-size:.87rem; line-height:1.65; color:var(--release-muted); overflow:visible; -webkit-line-clamp:none; }
+.lgo-guidance-layout .lgo-question-answer p { margin:0; line-height:1.65; }
+.lgo-guidance-boundary-stack { display:grid; gap:1rem; min-width:0; }
+.lgo-guidance-layout .lgo-guidance-boundary-stack .lgo-section-heading h2 { font-size:1.65rem; }
+.lgo-guidance-layout .lgo-guidance-boundaries { margin:1rem 0; }
+.lgo-guidance-scope-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.25rem; margin:1rem 0; }
+.lgo-guidance-scope-list > div { border:1px solid var(--release-line); padding:1rem; }
+.lgo-guidance-scope-list dt { font:1.3rem var(--lgo-font-editorial); color:var(--lgo-color-parchment); }
+.lgo-guidance-scope-list dd { margin:.5rem 0 0; }
+.lgo-guidance-scope-list p { font-size:.85rem; }
+@media(max-width:1100px) {
+  .lgo-guidance-station-links { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .lgo-guidance-station-links a { min-height:102px; gap:.4rem; padding:.7rem; }
+  .lgo-guidance-topic-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:800px) {
+  .lgo-guidance-layout .lgo-guidance-hero { grid-template-columns:1fr; gap:2rem; }
+  .lgo-guidance-station { padding:1.5rem .85rem 1rem; }
+  .lgo-guidance-layout .lgo-guidance-station h2 { font-size:1.5rem; }
+  .lgo-guidance-topic-grid { gap:.75rem; }
+  .lgo-guidance-topic-copy { padding:0 .8rem .85rem; }
+  .lgo-guidance-layout .lgo-guidance-topic-copy h3 { font-size:1.2rem; }
+  .lgo-guidance-topic-copy .lgo-link-button { font-size:.77rem; padding:.6rem; }
+  .lgo-guidance-scope-list { grid-template-columns:1fr; }
+}
+@media(max-width:380px) {
+  .lgo-guidance-layout .lgo-guidance-topic-copy h3 { font-size:1.12rem; }
+  .lgo-guidance-topic-grid { grid-template-columns:1fr; }
+  .lgo-guidance-topic-card { display:grid; grid-template-columns:80px minmax(0,1fr); }
+  .lgo-guidance-topic-art { padding:.7rem; align-items:center; justify-content:center; }
+  .lgo-guidance-topic-copy { padding:.8rem; }
+}

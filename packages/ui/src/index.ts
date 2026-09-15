@@ -69,3 +69,6 @@ export type { LocalChecklistItem, ReadingTemplate } from "./reading-tools";
 
 export { VisibilityCatalog } from "./visibility-catalog";
 export type { VisibilityCatalogItem, PresentationVisibility } from "./visibility-catalog";
+
+export { GuidanceStation, GuidanceTopicGrid, QuestionDisclosureList } from "./guidance";
+export type { GuidanceTopic, GuidanceQuestion } from "./guidance";

@@ -1,8 +1,21 @@
+Current phase: WEB-FE-SUPPORT-REAL-UI-LAYOUT-v1.224 WEB_CLOSED.
+
+Current decision: /support now has a real parchment navigation station, actionable topic cards, native FAQ and visible safe-support boundaries. Production browser regression 66/66 PASS; five viewport screenshot/axe review; 63-page build. Whole-app no-JavaScript navigation is a separate pre-existing root-streaming limitation, not included as PASS.
+
+Delivery: commit and normal push to origin/main are authorized. Verify remote HEAD and ZIP/SHA256 before moving on; never push local handoff artifacts or secrets. No production deployment.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.225.
+Select `/support/help` as the next single active page. Real Browser UI/UX Layout First, Runtime Layout Gate and Base First.
+
+Detailed report: LGO-WEB-FE-SUPPORT-REAL-UI-LAYOUT-REPORT-v1.224.md.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-STATUS-REAL-UI-LAYOUT-v1.223 WEB_CLOSED.
 
 Current decision: `/status` now renders actual content-visibility UI with three semantic signals, source-backed filtering, readable evidence and maintenance-fixture boundaries. Production Playwright 50/50 PASS; five viewport screenshots/axe; 63-page build. This is not a live monitoring service or game release approval.
 
-Delivery: local commit + verified ZIP/SHA256. Push waived; do NOT push.
+Delivery: v1.223 committed and origin/main verified at b4ac1b335f0553dd8b60deed376cd191b1a0f8fb. Latest owner instruction authorizes commit/push; verified ZIP/SHA256 handoff complete.
 
 Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.224.
 Select `/support` as the next single active page. Real Browser UI/UX Layout First and Base First. Do not fabricate support intake/tickets or ask for account secrets.
