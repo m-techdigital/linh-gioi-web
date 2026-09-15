@@ -28,6 +28,11 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.230 replaces diagram/compact readability checks with native focus practice; NOT PASS.
+    "**/fe-public-accessibility-design-board-v178.spec.ts",
+    "**/fe-accessibility-real-ui-layout-v1152.spec.ts",
+    "**/fe-accessibility-real-ui-layout-v1210.spec.ts",
+
     // v1.229 replaces embedded performance HUD/compact assertions with live reader controls; NOT PASS.
     "**/fe-public-performance-design-board-v176.spec.ts",
     "**/fe-performance-real-ui-layout-v1151.spec.ts",

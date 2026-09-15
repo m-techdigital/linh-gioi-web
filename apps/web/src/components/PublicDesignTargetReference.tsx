@@ -111,6 +111,12 @@ const PUBLIC_PERFORMANCE_TARGET = {
   scope: "Hiệu năng · Họ giao diện dịch vụ công khai"
 };
 
+const PUBLIC_ACCESSIBILITY_TARGET = {
+  label: "Thiết kế cách đọc và thao tác",
+  href: "/design-reference/design-atlas-public-service-v195.png",
+  scope: "Dễ đọc · Họ giao diện dịch vụ công khai"
+};
+
 const PUBLIC_SERVICE_TARGET = {
   label: "Public Service design target",
   href: "/design-reference/design-atlas-public-service-v195.png",
@@ -123,6 +129,7 @@ const publicCorePrefixes = ["/game", "/classes", "/story", "/journey", "/start",
 const publicServicePrefixes = ["/download", "/release", "/status", "/support", "/community", "/performance", "/accessibility", "/roadmap"];
 
 function targetForPath(pathname: string) {
+  if (pathname === "/accessibility") return PUBLIC_ACCESSIBILITY_TARGET;
   if (pathname === "/performance") return PUBLIC_PERFORMANCE_TARGET;
   if (pathname === "/") return PUBLIC_HOMEPAGE_TARGET;
   if (pathname === "/game") return PUBLIC_GAME_WORLD_TARGET;

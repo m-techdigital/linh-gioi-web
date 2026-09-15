@@ -19,7 +19,8 @@
     "./safety-layout.css": "./src/safety-layout.css",
     "./community-layout.css": "./src/community-layout.css",
     "./reading-journey.css": "./src/reading-journey.css",
-    "./performance-layout.css": "./src/performance-layout.css"
+    "./performance-layout.css": "./src/performance-layout.css",
+    "./keyboard-practice.css": "./src/keyboard-practice.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

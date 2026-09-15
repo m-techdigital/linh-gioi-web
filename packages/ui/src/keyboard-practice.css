@@ -1,0 +1,59 @@
+/* Native keyboard practice and public readability composition, not a certification system. */
+.lgo-accessibility-experience .lgo-accessibility-hero { background:radial-gradient(ellipse at top right,color-mix(in srgb,var(--lgo-color-spirit-cyan) 15%,transparent),transparent 58%),var(--lgo-color-art-ink); }
+.lgo-accessibility-hero::before { background:linear-gradient(125deg,transparent 50%,color-mix(in srgb,var(--lgo-color-warm-gold) 5%,transparent)); }
+.lgo-accessibility-experience .lgo-accessibility-hero h1 { max-width:17ch; }
+.lgo-accessibility-hero-note { display:flex; align-items:start; gap:.65rem; padding-top:.5rem; color:var(--release-muted); font-size:.82rem; }
+.lgo-accessibility-hero-note .lgo-release-icon { color:var(--lgo-color-warm-gold); }
+.lgo-keyboard-guide { min-width:0; padding:1.5rem; border:1px solid var(--release-line); background:color-mix(in srgb,var(--lgo-color-art-ink) 72%,transparent); border-radius:4px; }
+.lgo-keyboard-practice-overline { font-size:.67rem; letter-spacing:.08em; text-transform:uppercase; }
+.lgo-keyboard-guide > .lgo-keyboard-practice-overline,.lgo-keyboard-practice-instructions .lgo-keyboard-practice-overline { color:var(--lgo-color-warm-gold); }
+.lgo-accessibility-experience .lgo-keyboard-guide h2 { font:500 2rem/1.2 var(--lgo-font-editorial); color:var(--lgo-color-parchment); margin:.6rem 0 1.3rem; }
+.lgo-keyboard-guide em { color:var(--lgo-color-spirit-cyan); font-style:italic; }
+.lgo-keyboard-guide dl { display:grid; gap:.85rem; margin:0; }
+.lgo-keyboard-guide dl > div { display:grid; grid-template-columns:8rem minmax(0,1fr); gap:1rem; align-items:center; }
+.lgo-keyboard-guide dt { margin:0; }
+.lgo-keyboard-guide kbd { display:block; border:1px solid color-mix(in srgb,var(--lgo-color-spirit-cyan) 45%,transparent); border-bottom:3px solid color-mix(in srgb,var(--lgo-color-spirit-cyan) 45%,var(--lgo-color-art-ink)); border-radius:5px; padding:.8rem .6rem; font:600 .85rem/1.4 var(--lgo-font-sans); text-align:center; color:var(--lgo-color-parchment); background:var(--lgo-color-night-panel); }
+.lgo-keyboard-guide dd { margin:0; font-size:.83rem; line-height:1.55; color:var(--release-muted); }
+.lgo-keyboard-practice h3 { font:500 1.6rem/1.3 var(--lgo-font-editorial); margin:.8rem 0; }
+.lgo-keyboard-practice-instructions h3 { color:var(--lgo-color-parchment); }
+.lgo-keyboard-practice-instructions ol { display:grid; gap:1rem; margin:1rem 0 1.4rem; padding-left:1.15rem; color:var(--release-muted); font-size:.88rem; line-height:1.7; }
+.lgo-keyboard-practice-instructions kbd { padding:.2rem .35rem; border:1px solid var(--release-line); border-radius:3px; color:var(--lgo-color-parchment); font-size:.76rem; white-space:nowrap; }
+.lgo-keyboard-practice-instructions .lgo-button { min-height:44px; padding:.7rem 1rem; border-radius:3px; background:var(--lgo-color-warm-gold); color:var(--lgo-color-art-ink); font-size:.85rem; }
+.lgo-keyboard-practice-instructions > p { font-size:.76rem; color:var(--release-muted); margin:1rem 0 0; }
+.lgo-keyboard-practice-sample h3,.lgo-keyboard-practice-sample p { color:var(--lgo-color-art-ink); }
+.lgo-keyboard-practice-sample > p { font-size:.87rem; margin:.8rem 0 1.2rem; }
+.lgo-keyboard-practice .lgo-checkbox-field { display:flex; align-items:center; gap:.75rem; margin:0; min-height:52px; padding:.85rem; border:1px solid color-mix(in srgb,var(--lgo-color-art-ink) 30%,transparent); border-radius:3px; background:color-mix(in srgb,var(--lgo-color-jade-teal) 8%,transparent); cursor:pointer; }
+.lgo-keyboard-practice .lgo-checkbox-field:has(input:checked) { border-color:var(--lgo-color-art-ink); background:color-mix(in srgb,var(--lgo-color-jade-teal) 20%,transparent); }
+.lgo-keyboard-practice input { width:19px; height:19px; flex-shrink:0; accent-color:var(--lgo-color-art-ink); margin:0; }
+.lgo-keyboard-practice .lgo-checkbox-copy strong { color:var(--lgo-color-art-ink); font-size:.88rem; }
+.lgo-keyboard-practice .lgo-checkbox-field:focus-within { outline:3px solid var(--lgo-color-art-ink); outline-offset:4px; }
+.lgo-keyboard-practice details { margin:1rem 0; border-block:1px solid color-mix(in srgb,var(--lgo-color-art-ink) 25%,transparent); }
+.lgo-keyboard-practice summary { display:flex; align-items:center; justify-content:space-between; gap:.65rem; min-height:52px; padding:.8rem .2rem; cursor:pointer; list-style:none; font-size:.88rem; color:var(--lgo-color-art-ink); }
+.lgo-keyboard-practice summary::-webkit-details-marker { display:none; }
+.lgo-keyboard-practice details[open] summary > span { transform:rotate(45deg); }
+.lgo-keyboard-practice .lgo-keyboard-practice-answer p { font-size:.85rem; line-height:1.7; margin:.5rem 0 1rem; color:var(--lgo-color-art-ink); }
+.lgo-keyboard-practice .lgo-link-button { display:flex; align-items:center; justify-content:space-between; gap:.8rem; }
+.lgo-keyboard-practice-sample output { display:block; margin:1rem 0 .5rem; font-size:.78rem; line-height:1.5; }
+.lgo-keyboard-practice-sample > small { display:block; font-size:.74rem; line-height:1.6; }
+.lgo-keyboard-practice .lgo-button:focus-visible { outline:3px solid var(--lgo-color-warm-gold); outline-offset:4px; }
+.lgo-keyboard-practice-sample summary:focus-visible,.lgo-keyboard-practice-sample a:focus-visible { outline:3px solid var(--lgo-color-art-ink); outline-offset:4px; }
+.lgo-accessibility-boundary-list { display:grid; gap:1rem; list-style:none; padding:0; margin:1rem 0; }
+.lgo-accessibility-boundary-list strong { display:block; font-size:.9rem; color:var(--lgo-color-warm-gold); }
+.lgo-accessibility-boundary-list span { display:block; color:var(--release-muted); margin-top:.35rem; font-size:.83rem; line-height:1.65; }
+.lgo-accessibility-runtime-note { padding-top:1rem; border-top:1px solid var(--release-line); font-size:.77rem; color:var(--release-muted); }
+.lgo-accessibility-contract-note { display:block; margin:1rem 0 0; font-size:.67rem; overflow-wrap:anywhere; color:var(--release-muted); }
+.lgo-accessibility-experience .lgo-question-answer small { display:block; font-size:.78rem; line-height:1.6; color:var(--lgo-color-text-muted); }
+@media(max-width:800px) { .lgo-keyboard-guide { padding:1.25rem; } }
+@media(max-width:480px) {
+ .lgo-keyboard-guide dl > div { grid-template-columns:7.1rem minmax(0,1fr); gap:.8rem; }
+ .lgo-keyboard-guide { padding:1rem; }
+ .lgo-keyboard-guide kbd { font-size:.76rem; padding:.7rem .4rem; }
+ .lgo-keyboard-guide dd { font-size:.79rem; }
+ .lgo-keyboard-practice .lgo-button { width:100%; }
+ .lgo-keyboard-practice h3 { font-size:1.45rem; }
+}
+@media(forced-colors:active) {
+ .lgo-keyboard-practice .lgo-checkbox-field:focus-within,.lgo-keyboard-practice summary:focus-visible,.lgo-keyboard-practice .lgo-button:focus-visible,.lgo-keyboard-practice a:focus-visible { outline:3px solid Highlight; }
+ .lgo-keyboard-guide kbd { border-color:ButtonText; }
+}
+@media(prefers-reduced-motion:reduce) { .lgo-keyboard-practice * { transition:none; animation:none; scroll-behavior:auto; } }

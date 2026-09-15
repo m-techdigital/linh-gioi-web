@@ -86,3 +86,5 @@ export type { ReadingJourneyStep } from "./reading-journey";
 
 export { ReadingPreview } from "./reading-preview";
 export type { ReadingPreviewImage } from "./reading-preview";
+
+export { KeyboardPractice } from "./keyboard-practice";

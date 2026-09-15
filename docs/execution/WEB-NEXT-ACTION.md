@@ -5,12 +5,12 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.230
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.231
 
 Objective:
-Continue the sequential Real Browser UI/UX Layout pass for the public accessibility guidance page after v1.229 `/performance` closure. Keep the work page-scoped, Base First and browser-evidence driven.
+Continue the sequential Real Browser UI/UX Layout pass for the public roadmap planning page after v1.230 `/accessibility` closure. Keep the work page-scoped, Base First and browser-evidence driven.
 
-Current FE scope: select `/accessibility` as the next single active page after v1.229 `/performance` closure. Complete `/accessibility` fully before any other page. Use its registered public route target as the comparison guardrail and prioritize real accessibility UI/UX Layout: readable first fold, keyboard/focus practice, actual local controls where useful, clear preference boundaries and no certification claim, spacing, typography, responsive density, keyboard/focus and actual interaction. No invented WCAG certification, assistive-technology lab approval, site-wide saved preferences or account accessibility settings.
+Current FE scope: select `/roadmap` as the next single active page after v1.230 `/accessibility` closure. Complete `/roadmap` fully before any other page. Use its registered public route target as the comparison guardrail and prioritize real roadmap UI/UX Layout: readable planning stages, source-backed status filters or navigation, clear dependencies and non-release boundaries, spacing, typography, responsive density, keyboard/focus and actual interaction. No invented release dates, completion percentages, launch countdown, available game systems or release sign-off.
 
 Mandatory execution rules:
 
@@ -23,7 +23,7 @@ Mandatory execution rules:
 3. CSS must be managed by owner/role.
    Theme/tokens: packages/design-tokens. Reusable component/layout style: packages/ui. Apps compose base and keep only truly route-specific differences. Do not inflate apps/web/src/app/globals.css with duplicate page blocks.
 
-4. Do not move past `/accessibility` until closure evidence exists:
+4. Do not move past `/roadmap` until closure evidence exists:
    - render in real browser/e2e;
    - desktop/mobile metrics and screenshot/visual review against the target and accepted shell;
    - active source validator and necessary typecheck/build;
@@ -32,7 +32,7 @@ Mandatory execution rules:
 
 5. Forbidden substitutes: text-only/copy-only, translation-only, design-only, validator/doc-only, content edits without browser evidence, multiple pages at once. Never relax layout tests just to obtain PASS.
 
-6. If execution drifts, return to `/accessibility`, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until `/accessibility` is closed.
+6. If execution drifts, return to `/roadmap`, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until `/roadmap` is closed.
 
 Non-claims: FE-only until accepted game backend contracts exist. No independent backend. No production auth. No DB persistence. No CMS. No production deployment. No payment/shop/economy.
 
