@@ -10,7 +10,8 @@
     "./forms.css": "./src/forms.css",
     "./data.css": "./src/data.css",
     "./progress.css": "./src/progress.css",
-    "./service-layout.css": "./src/service-layout.css"
+    "./service-layout.css": "./src/service-layout.css",
+    "./release-layout.css": "./src/release-layout.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

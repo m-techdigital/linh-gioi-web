@@ -3,6 +3,7 @@
 from __future__ import annotations
 from pathlib import Path
 import sys
+import re
 ROOT = Path(__file__).resolve().parents[1]
 ERRORS: list[str] = []
 
@@ -288,8 +289,36 @@ VALIDATORS = [
     "validate_web_fe_download_real_ui_layout_v1218.py",
     "validate_web_fe_download_trust_real_ui_layout_v1219.py",
     "validate_web_fe_release_real_ui_layout_v1220.py",
+    "validate_web_fe_release_readiness_real_ui_layout_v1221.py",
 ]
+
+# These guards enforced a diagram image or deliberately line-clamped readiness cards.
+# v1.221 replaces them with art-backed DOM UI + native evidence disclosures. Not counted as PASS.
+SUPERSEDED_LAYOUT_VALIDATORS = {
+    "validate_web_fe_public_release_readiness_design_board_v171.py": "validate_web_fe_release_readiness_real_ui_layout_v1221.py",
+    "validate_web_fe_release_readiness_design_target_density_v1128.py": "validate_web_fe_release_readiness_real_ui_layout_v1221.py",
+    "validate_web_fe_release_readiness_real_ui_layout_v1143.py": "validate_web_fe_release_readiness_real_ui_layout_v1221.py",
+    "validate_web_fe_release_readiness_real_ui_layout_v1201.py": "validate_web_fe_release_readiness_real_ui_layout_v1221.py",
+}
+
+def check_active_checkpoint() -> None:
+    state = read("docs/execution/WEB-PROJECT-STATE.md")
+    queue = read("docs/execution/WEB-NEXT-ACTION.md")
+    current = re.match(r"Current phase: ([A-Z0-9-]+)-v(\d+)\.(\d+) WEB_CLOSED", state)
+    upcoming = re.search(r"(?m)^Next task:\s*\n(WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v(\d+)\.(\d+))", queue)
+    route = re.search(r"Current FE scope: select `([^`]+)`", queue)
+    if not current or not upcoming or not route:
+        fail("active checkpoint/next page header is missing or ambiguous")
+        return
+    if (int(upcoming[2]), int(upcoming[3])) != (int(current[2]), int(current[3]) + 1):
+        fail("next task must be the successor of the first, active checkpoint (not a historical marker)")
+    phase = f"{current[1]}-v{current[2]}.{current[3]}"
+    require_text("docs/execution/WEB-TASK-LEDGER.md", f"| {phase} | WEB-FE | WEB_CLOSED |")
+    page = ROOT / "apps/web/src/app" / route[1].lstrip("/") / "page.tsx"
+    if not page.is_file(): fail(f"next public page does not exist: {route[1]}")
+
 def main() -> int:
+    check_active_checkpoint()
     check_forbidden_roots(); check_no_app_api_routes(); check_no_generated_artifacts(); require_non_claims()
     for rel in ["docs/execution/WEB-PROJECT-STATE.md", "docs/execution/WEB-NEXT-ACTION.md", "docs/execution/WEB-TASK-LEDGER.md"]:
         require_file(rel)
@@ -341,7 +370,7 @@ def main() -> int:
         "LGO_WEB_PUBLIC_UX_CONTENT_POLISH_READY_v1.6",
         "LGO_WEB_RUNTIME_BROWSER_E2E_MATRIX_PASSED_v1.5",
     ])
-    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221")
+    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT")
     require_text("docs/execution/WEB-NEXT-ACTION.md", "browser/e2e")
     for phrase in ["No independent backend", "No CMS", "No production deployment", "No payment/shop/economy"]:
         require_text("docs/execution/WEB-NON-CLAIMS.md", phrase)
@@ -353,6 +382,12 @@ def main() -> int:
     if ERRORS:
         return finish("WEB CURRENT STATE")
     for validator in VALIDATORS:
+        if validator in SUPERSEDED_LAYOUT_VALIDATORS:
+            replacement = SUPERSEDED_LAYOUT_VALIDATORS[validator]
+            if replacement not in VALIDATORS or not (ROOT / "tools" / replacement).is_file():
+                fail(f"missing active replacement for {validator}")
+            print(f"HISTORICAL_SUPERSEDED {validator} -> {replacement}; not a runtime PASS")
+            continue
         validator_path = ROOT / "tools" / validator
         namespace = runpy.run_path(str(validator_path), run_name=f"lgo_web_validator_{validator}")
         validator_main = namespace.get("main")
@@ -363,8 +398,7 @@ def main() -> int:
         if result != 0:
             fail(f"validator failed: {validator}")
 
-    require_text("docs/execution/WEB-PROJECT-STATE.md", "Current phase: WEB-FE-RELEASE-REAL-UI-LAYOUT-v1.220 WEB_CLOSED")
-    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221")
+    require_text("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT")
     require_text("docs/execution/WEB-NEXT-ACTION.md", "Real Browser UI/UX Layout First")
     require_text("docs/execution/WEB-NEXT-ACTION.md", "Base UI/UX Layout")
     require_text("docs/execution/WEB-TASK-LEDGER.md", "| WEB-FE-RELEASE-REAL-UI-LAYOUT-v1.220 | WEB-FE | WEB_CLOSED |")

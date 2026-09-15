@@ -1,3 +1,16 @@
+Current phase: WEB-FE-RELEASE-READINESS-REAL-UI-LAYOUT-v1.221 WEB_CLOSED.
+
+Current decision: `/release/readiness` now has an art-backed, interactive HTML layout instead of a schematic/text-card stack. Production browser suite 20/20 PASS; five viewport screenshot/axe reviews; production build 63 static pages; source/typecheck/lint verified. Entire program is NOT production-complete.
+
+Delivery policy: local commit + source/evidence ZIP + SHA256. User explicitly waived push. No remote write or deployment is authorized by this checkpoint.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.222.
+Select `/release/tester-pack` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate remain mandatory. Complete local handoff before advancing.
+
+Detailed report: `LGO-WEB-FE-RELEASE-READINESS-REAL-UI-LAYOUT-REPORT-v1.221.md`.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-RELEASE-REAL-UI-LAYOUT-v1.220 WEB_CLOSED.
 
 Current decision: v1.220 closed the active `/release` page slice as a real browser UI/UX Layout task. The existing Vietnamese Public Release design target and shared public shell were usable as comparison guardrails; work focused on the rendered page, staged-release first-flow, M0→M1 visual board density, release stage rhythm, readiness CTA, collapsed expanded evidence and Base First CSS ownership. Entire program is NOT production-complete.

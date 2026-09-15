@@ -36,7 +36,7 @@ def main() -> int:
     if (ROOT/"apps/web/public/design-reference/release-readiness-detailed-design-target-v1128.png").is_file() and (ROOT/"docs/design/reference/WEB-FE-RELEASE-READINESS-DETAILED-DESIGN-TARGET-v1.128.png").is_file():
         if (ROOT/"apps/web/public/design-reference/release-readiness-detailed-design-target-v1128.png").read_bytes() != (ROOT/"docs/design/reference/WEB-FE-RELEASE-READINESS-DETAILED-DESIGN-TARGET-v1.128.png").read_bytes(): fail("release readiness target copies differ")
     req("AGENTS.md", ["Real Browser UI/UX Layout First is Priority #1", "CSS Ownership and File-Size rule", "Base First is mandatory before adding or changing FE/UI layout"])
-    req("docs/execution/WEB-NEXT-ACTION.md", ["Real Browser UI/UX Layout First is Priority #1", "CSS must be managed by owner/role", "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221", "select `/release/readiness` as the next single active page"])
+    req("docs/execution/WEB-NEXT-ACTION.md", ["Real Browser UI/UX Layout First is Priority #1", "CSS must be managed by owner/role", 'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT', 'as the next single active page'])
     req("packages/ui/package.json", ["./service-layout.css", "./src/service-layout.css"])
     req("apps/web/src/app/layout.tsx", ["@lgo-web/ui/service-layout.css"])
     req("packages/ui/src/service-layout.css", ["Shared public service/proof layout foundation", ".lgo-service-compact-proof-page", ".lgo-service-status-seal", ".lgo-service-proof-board", ".lgo-service-proof-card-grid", ".lgo-service-proof-card"])

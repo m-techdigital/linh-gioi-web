@@ -64,11 +64,11 @@ export function GameCard({ className, ...props }: HTMLAttributes<HTMLElement>) {
   return <article {...props} className={cx("lgo-card", className)} />;
 }
 
-export function SectionHeading({ eyebrow, title, children }: { eyebrow?: string; title: string; children?: ReactNode }) {
+export function SectionHeading({ eyebrow, title, children, headingId }: { eyebrow?: string; title: string; children?: ReactNode; headingId?: string }) {
   return (
     <div className="lgo-section-heading">
       {eyebrow ? <p className="lgo-eyebrow">{eyebrow}</p> : null}
-      <h2>{title}</h2>
+      <h2 id={headingId}>{title}</h2>
       {children ? <p>{children}</p> : null}
     </div>
   );

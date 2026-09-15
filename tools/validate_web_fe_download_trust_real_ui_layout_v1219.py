@@ -129,9 +129,9 @@ def check_state() -> None:
         "Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221",
-        "select `/release/readiness` as the next single active page",
-        "Complete `/release/readiness` fully before any other page",
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT',
+        'as the next single active page',
+        'fully before any other page',
         "Real Browser UI/UX Layout First",
         "Base UI/UX Layout",
     ])

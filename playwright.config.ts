@@ -25,6 +25,14 @@ const webServers = [
 
 export default defineConfig({
   testDir: "./tests/e2e",
+  // Historical readiness screenshot/card implementations are replaced by v1.221.
+  // These cases are retired, NOT counted as PASS; active behavior is covered in v1221.
+  testIgnore: [
+    "**/fe-public-release-readiness-design-board-v171.spec.ts",
+    "**/fe-release-readiness-design-target-density-v1128.spec.ts",
+    "**/fe-release-readiness-real-ui-layout-v1143.spec.ts",
+    "**/fe-release-readiness-real-ui-layout-v1201.spec.ts"
+  ],
   timeout: 30_000,
   fullyParallel: false,
   workers: 1,

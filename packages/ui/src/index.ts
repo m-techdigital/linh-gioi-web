@@ -60,3 +60,6 @@ export { ActivityTimeline, ActivityTimelineItem, CaseSummary, CaseSummaryItem, D
 export type { DataTableColumn, DataTableRow } from "./data";
 export { ProgressSteps, ProgressStep } from "./progress";
 export type { ProgressStepState } from "./progress";
+
+export { ReleaseIcon, ReleaseSeal, ReleaseGateCard } from "./release";
+export type { ReleaseIconName, ReleaseGateState } from "./release";

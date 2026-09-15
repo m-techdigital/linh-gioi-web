@@ -66,8 +66,8 @@ def main() -> int:
         'Real Browser UI/UX Layout First', 'Base First'
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221',
-        'Current FE scope: select `/release/readiness`', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT',
+        'Current FE scope: select', 'Real Browser UI/UX Layout First', 'Base UI/UX Layout'
     ])
     require_text("docs/execution/WEB-TASK-LEDGER.md", [
         '| WEB-FE-NEWS-COMMUNITY-ROADMAP-REAL-UI-LAYOUT-v1.188 | WEB-FE | WEB_CLOSED | eb4b2ad |',

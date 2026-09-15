@@ -20,7 +20,8 @@ def require_order(rel: str, first: str, second: str) -> None:
     if a < 0 or b < 0 or a > b: fail(f"{rel}: expected {first} before {second}")
 def check_routes() -> None:
     require_order("apps/web/src/app/release/page.tsx", "<h1>Hành trình phát hành</h1>", "<ContentIaStartCta />")
-    require_order("apps/web/src/app/release/readiness/page.tsx", "<h1>Sẵn sàng phát hành</h1>", "<ContentIaStartCta />")
+    require_order("apps/web/src/app/release/readiness/page.tsx", "<ReleaseReadinessHero />", "<OwnerReleaseGateBoard")
+    require_text("apps/web/src/components/PublicReleaseReadinessExperience.tsx", ['title="Sẵn sàng phát hành"', "ExperienceHero"])
     require_order("apps/web/src/app/release/tester-pack/page.tsx", "<h1>Gói tester cộng đồng</h1>", "<ContentIaStartCta />")
     require_text("apps/web/src/app/release/tester-pack/page.tsx", ["lgo-closed-tester-hero-card", "Board gói tester cộng đồng", "Chưa mở intake", "không claim intake thật"])
 def check_tests_and_docs() -> None:

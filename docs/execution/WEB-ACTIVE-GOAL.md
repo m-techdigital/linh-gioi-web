@@ -1,5 +1,9 @@
 # WEB-ACTIVE-GOAL
 
+## Owner delivery override — 2026-09-15
+
+The owner explicitly waived push. Do NOT push. Local commit + verified source/evidence ZIP + SHA256 replaces the older commit-and-push delivery requirement below; all source, browser, visual and build gates still apply. After local handoff, continue to the next single page without asking for confirmation. This override takes precedence over historical push wording in this file.
+
 Mục tiêu bắt buộc cho LinhGioiOnline-Web:
 
 Hoàn thiện FE theo từng page một cách tuần tự, ưu tiên UI/UX Layout thật trong browser và Base First. Không được quay lại quy trình cũ “Design Target First” theo nghĩa sa đà tạo/sửa design, sửa tiếng Anh, sửa text hoặc chạy validator thay cho hoàn thiện layout thật.

@@ -1,5 +1,9 @@
 # AGENTS.md — Linh Giới Online Web Program
 
+## Owner delivery override — 2026-09-15
+
+The owner explicitly waived push. Do NOT push. Local commit + verified source/evidence ZIP + SHA256 replaces the older commit-and-push delivery requirement below; all source, browser, visual and build gates still apply. After local handoff, continue to the next single page without asking for confirmation. This override takes precedence over historical push wording in this file.
+
 This repo is the independent Linh Giới Online Web Program.
 It is developed separately from the game repo.
 Game repo remains canonical for Unity, Java backend, protocol, gamedata and gameplay.

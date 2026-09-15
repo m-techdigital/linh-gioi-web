@@ -156,8 +156,8 @@ def check_tests_docs() -> None:
         "Select `/game/loop` as the next single active page",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221",
-        "Current FE scope: select `/release/readiness`",
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT',
+        'Current FE scope: select',
         "Real Browser UI/UX Layout First is Priority #1",
         "Base UI/UX Layout",
         "CSS must be managed by owner/role",

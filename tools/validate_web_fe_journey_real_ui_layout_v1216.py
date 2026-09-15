@@ -99,9 +99,9 @@ def main() -> int:
         "Select `/release/readiness` as the next single active page",
     ])
     require_text("docs/execution/WEB-NEXT-ACTION.md", [
-        "WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.221",
-        "Current FE scope: select `/release/readiness`",
-        "Complete `/release/readiness` fully before any other page",
+        'WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT',
+        'Current FE scope: select',
+        'fully before any other page',
         "Real Browser UI/UX Layout First",
         "Base UI/UX Layout First",
     ])
