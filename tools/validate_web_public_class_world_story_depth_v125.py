@@ -34,12 +34,16 @@ def main() -> int:
         "apps/web/src/app/story/page.tsx",
         "apps/web/src/app/start/page.tsx",
         "apps/web/src/app/journey/page.tsx",
-        "apps/web/src/app/guides/page.tsx",
         "apps/web/src/app/download/page.tsx",
     ):
         require_text(rel, "PublicPlayerHero")
         if "lgo-hero-kicker" in read(rel):
             fail(f"{rel} duplicates base hero kicker markup instead of PublicPlayerHero")
+    # Guides v1.234 composes the same shared ExperienceHero through its new directory owner.
+    require_text("apps/web/src/app/guides/page.tsx", "PublicGuidesDiscovery")
+    require_text("apps/web/src/components/PublicGuidesDiscovery.tsx", "<ExperienceHero", 'title="Hướng dẫn cho Người Thức Tỉnh"')
+    if "lgo-hero-kicker" in read("apps/web/src/components/PublicGuidesDiscovery.tsx"):
+        fail("Guides duplicates the shared hero kicker markup")
     if any(symbol in read("apps/web/src/components/PublicGameExperienceSections.tsx") for symbol in ("ClassIdentityDeck", "WorldAtlasStories", "StoryArcTimeline")):
         fail("PublicGameExperienceSections.tsx still owns v1.25 depth components; split them into PublicGameDepthSections.tsx")
     require_text("apps/web/src/app/classes/page.tsx", "ClassIdentityDeck")

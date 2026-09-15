@@ -1,3 +1,17 @@
+Current phase: WEB-FE-GUIDES-DISCOVERY-REAL-UI-LAYOUT-v1.234 WEB_CLOSED.
+
+Current decision: /guides has a featured reading cover, four local editorial groups, source-exact catalog, accent-insensitive phrase filtering and native summaries. Reset retains usable focus; no word submission/storage. Production 210/210 PASS; 63-page build; five viewport screenshots/axe plus filtered/empty states. No wiki/search backend or game state added.
+
+Delivery: reviewed commit and normal origin/main push, exact remote verification and full/delta/evidence ZIP/SHA256. No deployment; handoff remains outside Git.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.235.
+Select `/guides/beginner` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate; source-authored beginner orientation and existing route navigation only.
+
+Detailed report: LGO-WEB-FE-GUIDES-DISCOVERY-REAL-UI-LAYOUT-REPORT-v1.234.md.
+Whole-app JavaScript-disabled streaming limitation remains open. Backend/production gates remain blocked.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-WORLD-LOOP-GUIDE-ARTICLE-v1.233 WEB_CLOSED.
 
 Current decision: /guides/world-gameplay-loop-guide now renders an illustrated article with sticky/collapsible contents, four complete source sections and native chapter navigation. Cold chapter URLs restore the requested position/focus after streaming. All published guides remain reachable; unknown/non-guide slugs return 404. Production 192/192 PASS; 63-page build; five viewport screenshots/axe; six sibling DOM/geometry comparisons match. No gameplay, saved progress or backend added.

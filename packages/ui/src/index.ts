@@ -97,3 +97,7 @@ export type { PlanningGateView } from "./planning";
 
 export { GuideArticle } from "./guide-article";
 export type { GuideArticleSection } from "./guide-article";
+
+export { ReadingCatalog } from "./reading-catalog";
+export type { ReadingCatalogEntry, ReadingCatalogGroup } from "./reading-catalog";
+export { FeaturedReading } from "./featured-reading";
