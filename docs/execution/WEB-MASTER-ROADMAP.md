@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: v1.230 `/accessibility` verified; next v1.231 `/roadmap`. Delivery: commit/push, remote confirmation and ZIP/SHA256. No backend/production or accessibility certification. Whole-app no-JavaScript streaming limitation remains open.
+Current visual checkpoint: v1.231 `/roadmap` verified; next v1.232 `/game/loop`. Delivery: commit/push, remote confirmation and ZIP/SHA256. No game release/backend/deployment claim. Historical source labels are not current task status. Whole-app no-JavaScript streaming limitation remains open.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 

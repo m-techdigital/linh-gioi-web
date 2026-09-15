@@ -29,9 +29,10 @@ def main() -> int:
         'NO_ACCEPTED_BACKEND_CONTRACT', 'Không có dữ liệu giám sát trực tiếp',
         'Không phải lịch bảo trì hoặc sự cố đang diễn ra', 'Fixture local', 'không phải uptime',
         '/release/readiness', '/support/safety', 'headingId="status-surfaces-heading"'))
-    catalog = require("packages/ui/src/visibility-catalog.tsx", ('"use client"', 'PresentationVisibility', 'items.filter', 'aria-pressed', 'aria-controls', 'role="status"', '<details', '<summary', 'visibilityLabels[item.visibility]'))
+    catalog = require("packages/ui/src/visibility-catalog.tsx", ('"use client"', 'PresentationVisibility', 'items.filter', 'FilterChoices', 'controlsId', 'role="status"', '<details', '<summary', 'visibilityLabels[item.visibility]'))
+    choices = require("packages/ui/src/filter-choices.tsx", ('aria-pressed', 'aria-controls', 'role="group"', 'onChange(option.value)'))
     for marker in ('fetch(', 'XMLHttpRequest', 'WebSocket', 'setInterval(', 'Date.now(', 'localStorage', 'sessionStorage', '<form', 'data-live="true"'):
-        if marker in experience or marker in catalog: ERRORS.append(f"forbidden monitoring/mutation surrogate: {marker}")
+        if marker in experience or marker in catalog or marker in choices: ERRORS.append(f"forbidden monitoring/mutation surrogate: {marker}")
     require("packages/ui/src/release.tsx", ('export function VisibilitySignal', 'aria-hidden="true"'))
     require("packages/ui/src/index.ts", ('VisibilityCatalog', 'VisibilitySignal'))
     exports = json.loads(require("packages/ui/package.json"))["exports"]

@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useState } from "react";
-import { SpiritButton } from "./primitives";
+import { FilterChoices } from "./filter-choices";
 
 /** Presentation-only labels; not a health API or accepted backend contract. */
 export type PresentationVisibility = "public" | "internal" | "blocked";
@@ -21,10 +21,8 @@ export function VisibilityCatalog({ items, label }: { items: readonly Visibility
   const visible = filter === "all" ? items : items.filter(item => item.visibility === filter);
   return <div className="lgo-visibility-catalog">
     <div className="lgo-visibility-filterbar">
-      <div className="lgo-visibility-filters" role="group" aria-label={label}>
-        {filters.map(option => <SpiritButton key={option.value} type="button" tone="neutral"
-          aria-controls={`${prefix}-results`} aria-pressed={filter === option.value} onClick={() => setFilter(option.value)}>{option.label}</SpiritButton>)}
-      </div>
+      <FilterChoices options={filters} value={filter} onChange={setFilter} label={label}
+        controlsId={`${prefix}-results`} className="lgo-visibility-filters"/>
       <output role="status" aria-live="polite">Hiển thị {visible.length}/{items.length} hạng mục</output>
     </div>
     <div className="lgo-visibility-results" id={`${prefix}-results`}>

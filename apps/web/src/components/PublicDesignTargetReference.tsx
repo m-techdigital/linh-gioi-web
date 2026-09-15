@@ -129,6 +129,7 @@ const publicCorePrefixes = ["/game", "/classes", "/story", "/journey", "/start",
 const publicServicePrefixes = ["/download", "/release", "/status", "/support", "/community", "/performance", "/accessibility", "/roadmap"];
 
 function targetForPath(pathname: string) {
+  if (pathname === "/roadmap") return { ...PUBLIC_SERVICE_TARGET, label: "Bố cục điều kiện và lộ trình", scope: "Roadmap · Kế hoạch không phải lịch phát hành" };
   if (pathname === "/accessibility") return PUBLIC_ACCESSIBILITY_TARGET;
   if (pathname === "/performance") return PUBLIC_PERFORMANCE_TARGET;
   if (pathname === "/") return PUBLIC_HOMEPAGE_TARGET;

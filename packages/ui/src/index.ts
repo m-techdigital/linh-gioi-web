@@ -88,3 +88,9 @@ export { ReadingPreview } from "./reading-preview";
 export type { ReadingPreviewImage } from "./reading-preview";
 
 export { KeyboardPractice } from "./keyboard-practice";
+
+export { FilterChoices } from "./filter-choices";
+export { MilestoneArchive } from "./milestone-archive";
+export type { MilestoneSourceRecord, MilestoneSourceState } from "./milestone-archive";
+export { PlanningGateMap } from "./planning";
+export type { PlanningGateView } from "./planning";

@@ -20,7 +20,8 @@
     "./community-layout.css": "./src/community-layout.css",
     "./reading-journey.css": "./src/reading-journey.css",
     "./performance-layout.css": "./src/performance-layout.css",
-    "./keyboard-practice.css": "./src/keyboard-practice.css"
+    "./keyboard-practice.css": "./src/keyboard-practice.css",
+    "./planning-layout.css": "./src/planning-layout.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

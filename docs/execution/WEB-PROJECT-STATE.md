@@ -1,3 +1,17 @@
+Current phase: WEB-FE-ROADMAP-REAL-UI-LAYOUT-v1.231 WEB_CLOSED.
+
+Current decision: /roadmap now renders a real gate map, source-backed decision conditions, release boundaries and an explicitly historical fifteen-record archive with filters. Production 164/164 PASS; five viewport screenshots/axe; 63-page build. Empty-result reset returns keyboard focus. No dates, percentages, release approval or backend added.
+
+Delivery: reviewed commit and normal push to origin/main; verify remote HEAD and source/delta/evidence ZIP/SHA256. No force-push, handoff artifacts in Git or deployment.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.232.
+Select `/game/loop` as the next single active page. Real Browser UI/UX Layout First, Base First, Runtime Layout Gate; no live gameplay or combat simulation claims.
+
+Detailed report: LGO-WEB-FE-ROADMAP-REAL-UI-LAYOUT-REPORT-v1.231.md.
+Whole-app JavaScript-disabled streaming limitation remains open. Backend/production gates remain blocked.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-ACCESSIBILITY-REAL-UI-LAYOUT-v1.230 WEB_CLOSED.
 
 Current decision: /accessibility now has a real keyboard guide and disposable native focus practice, five readable routes and explicit certification/settings limits. Production 152/152 PASS; 5 viewport screenshots/axe; forced-colors focus; 63-page build. No key interception, focus trap, telemetry or stored settings.
