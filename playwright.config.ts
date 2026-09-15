@@ -28,6 +28,12 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.225 retires diagram-only help presentation; replaced by real map/answers/history tests, NOT PASS.
+    "**/fe-public-support-help-design-board-v173.spec.ts",
+    "**/fe-support-help-design-target-density-v1132.spec.ts",
+    "**/fe-support-help-real-ui-layout-v1147.spec.ts",
+    "**/fe-support-help-real-ui-layout-v1205.spec.ts",
+
     // v1.224 replaces support mockup/card-only assertions; never counted as runtime PASS.
     "**/fe-support-design-target-density-v1131.spec.ts",
     "**/fe-support-real-ui-layout-v1146.spec.ts",

@@ -20,10 +20,10 @@ def require_order(rel: str, first: str, second: str) -> None:
     if a < 0 or b < 0 or a > b: fail(f"{rel}: expected {first} before {second}")
 def check_routes() -> None:
     require_order("apps/web/src/app/support/page.tsx", "<PublicSupportHero/>", "<PublicSupportTopics/>")
-    require_order("apps/web/src/app/support/help/page.tsx", "<h1>FAQ nhanh</h1>", "<FaqHelpfulnessCta />")
+    require_order("apps/web/src/app/support/help/page.tsx", "<PublicHelpHero/>", "<PublicHelpAnswers/>")
     require_order("apps/web/src/app/support/safety/page.tsx", "<h1>Báo lỗi an toàn</h1>", "<ReleaseReadinessHubCta />")
     require_text("apps/web/src/components/PublicSupportExperience.tsx", ['title="Hỗ trợ cộng đồng"', "ExperienceHero", "Không có hệ thống ticket thật", "tra cứu", "Chưa có ticket"])
-    require_text("apps/web/src/app/support/help/page.tsx", ["chưa có tìm kiếm thật", "chưa có ticket thật", "không thu dữ liệu nhạy cảm"])
+    require_text("apps/web/src/components/PublicSupportHelpExperience.tsx", ['title="FAQ nhanh"', "không có tìm kiếm backend", "Không có hệ thống ticket thật", "thông tin cá nhân nhạy cảm"])
     require_text("apps/web/src/app/support/safety/page.tsx", ["Chưa có ticket thật", "chưa tra cứu tài khoản", "chưa có bảng kiểm duyệt"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-support-heading-priority-v187.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-SUPPORT-HEADING-PRIORITY-v1.87.md", "LGO-WEB-FE-PUBLIC-SUPPORT-HEADING-PRIORITY-REPORT-v1.87.md", "HANDOFF-LGO-WEB-FE-PUBLIC-SUPPORT-HEADING-PRIORITY-v1.87.md"]: require_file(rel)

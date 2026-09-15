@@ -72,3 +72,6 @@ export type { VisibilityCatalogItem, PresentationVisibility } from "./visibility
 
 export { GuidanceStation, GuidanceTopicGrid, QuestionDisclosureList } from "./guidance";
 export type { GuidanceTopic, GuidanceQuestion } from "./guidance";
+
+export { QuestionDirectory } from "./question-directory";
+export type { GuidanceQuestionGroup } from "./question-directory";

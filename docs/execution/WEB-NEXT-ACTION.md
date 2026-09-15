@@ -5,12 +5,12 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.225
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.226
 
 Objective:
-Continue the sequential Real Browser UI/UX Layout pass for the public FAQ/help page after v1.224 `/support` closure. Keep the work page-scoped, Base First and browser-evidence driven.
+Continue the sequential Real Browser UI/UX Layout pass for the public safe-reporting page after v1.225 `/support/help` closure. Keep the work page-scoped, Base First and browser-evidence driven.
 
-Current FE scope: select `/support/help` as the next single active page after v1.224 `/support` closure. Complete `/support/help` fully before any other page. Use its registered public route target as the comparison guardrail and prioritize real FAQ/help UI/UX Layout: first-fold question discovery, actual answers, helpful routes, support boundaries, spacing, typography, responsive density, keyboard/focus and actual interaction. No fake ticket intake or account lookup.
+Current FE scope: select `/support/safety` as the next single active page after v1.225 `/support/help` closure. Complete `/support/safety` fully before any other page. Use its registered public route target as the comparison guardrail and prioritize real safe-reporting UI/UX Layout: first-fold privacy guidance, preparation checklist, clear reporting routes, support boundaries, spacing, typography, responsive density, keyboard/focus and actual interaction. No fake ticket intake or account lookup.
 
 Mandatory execution rules:
 
@@ -23,7 +23,7 @@ Mandatory execution rules:
 3. CSS must be managed by owner/role.
    Theme/tokens: packages/design-tokens. Reusable component/layout style: packages/ui. Apps compose base and keep only truly route-specific differences. Do not inflate apps/web/src/app/globals.css with duplicate page blocks.
 
-4. Do not move past `/support/help` until closure evidence exists:
+4. Do not move past `/support/safety` until closure evidence exists:
    - render in real browser/e2e;
    - desktop/mobile metrics and screenshot/visual review against the target and accepted shell;
    - active source validator and necessary typecheck/build;
@@ -32,7 +32,7 @@ Mandatory execution rules:
 
 5. Forbidden substitutes: text-only/copy-only, translation-only, design-only, validator/doc-only, content edits without browser evidence, multiple pages at once. Never relax layout tests just to obtain PASS.
 
-6. If execution drifts, return to `/support/help`, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until `/support` is closed.
+6. If execution drifts, return to `/support/safety`, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until `/support/safety` is closed.
 
 Non-claims: FE-only until accepted game backend contracts exist. No independent backend. No production auth. No DB persistence. No CMS. No production deployment. No payment/shop/economy.
 

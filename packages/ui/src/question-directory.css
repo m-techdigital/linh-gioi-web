@@ -1,0 +1,67 @@
+/* Shared question-map and local category reader. Category selection is not search. */
+.lgo-guidance-station.lgo-guidance-map { padding:1.6rem 1rem 1rem; isolation:isolate; }
+.lgo-guidance-map .lgo-guidance-station-links { position:relative; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.8rem 1.2rem; padding:.3rem .35rem; }
+.lgo-guidance-map-path { position:absolute; z-index:-1; inset:12% 7% 5%; width:86%; height:83%; color:color-mix(in srgb,var(--lgo-color-jade-teal) 35%,var(--lgo-color-art-ink)); opacity:.35; pointer-events:none; }
+.lgo-guidance-map .lgo-guidance-station-links a { min-height:76px; padding:.7rem .65rem; display:grid; grid-template-columns:1.6rem minmax(0,1fr); gap:.2rem .65rem; text-align:left; border:1px solid color-mix(in srgb,var(--lgo-color-art-ink) 40%,transparent); background:linear-gradient(120deg,var(--lgo-color-parchment),color-mix(in srgb,var(--lgo-color-parchment) 76%,var(--lgo-color-warm-gold))); color:var(--lgo-color-art-ink); box-shadow:0 4px 10px color-mix(in srgb,var(--lgo-color-art-ink) 13%,transparent); }
+.lgo-guidance-map .lgo-guidance-station-links a:nth-child(2n) { transform:translateY(.55rem); }
+.lgo-guidance-map .lgo-guidance-station-links a:hover { border-color:var(--lgo-color-art-ink); background:color-mix(in srgb,var(--lgo-color-parchment) 80%,var(--lgo-color-warm-gold)); }
+.lgo-guidance-map .lgo-guidance-station-links .lgo-release-icon { grid-row:1 / span 2; width:1.6rem; height:1.6rem; color:color-mix(in srgb,var(--lgo-color-jade-teal) 30%,var(--lgo-color-art-ink)); }
+.lgo-guidance-map .lgo-guidance-station-links span { color:var(--lgo-color-art-ink); font-size:.68rem; }
+.lgo-guidance-map > small { margin-top:1.4rem; }
+.lgo-guidance-topic-grid[data-count="6"] { grid-template-columns:repeat(6,minmax(0,1fr)); gap:.7rem; }
+.lgo-guidance-layout .lgo-guidance-topic-grid[data-count="6"] h3 { font-size:1.12rem; }
+.lgo-guidance-topic-grid[data-count="6"] .lgo-guidance-topic-copy { padding:0 .75rem .85rem; }
+.lgo-guidance-layout .lgo-guidance-topic-grid[data-count="6"] p { font-size:.78rem; }
+.lgo-guidance-topic-grid[data-count="6"] .lgo-link-button { padding:.6rem .5rem; font-size:.69rem; }
+.lgo-question-filterbar { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; margin:1rem 0; }
+.lgo-question-filters { display:flex; flex-wrap:wrap; gap:.4rem; }
+.lgo-question-filters .lgo-button { min-height:44px; padding:.6rem .8rem; border:1px solid var(--release-line); border-radius:3px; box-shadow:none; background:var(--lgo-color-art-ink); color:var(--lgo-color-text-primary); font-size:.78rem; }
+.lgo-question-filters .lgo-button[aria-pressed="true"] { background:var(--lgo-color-warm-gold); color:var(--lgo-color-art-ink); border-color:var(--lgo-color-warm-gold); }
+.lgo-question-filters button:focus-visible { outline:2px solid var(--lgo-color-warm-gold); outline-offset:3px; }
+.lgo-question-filterbar output { font-size:.76rem; color:var(--release-muted); }
+.lgo-question-groups { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; gap:1rem; }
+.lgo-question-groups[data-filtered="true"] { grid-template-columns:1fr; }
+.lgo-question-groups[data-filtered="true"] .lgo-question-answer { max-width:85ch; }
+.lgo-question-group { min-width:0; }
+.lgo-question-group:target { border-color:var(--lgo-color-warm-gold); }
+.lgo-question-group:focus-visible { outline:2px solid var(--lgo-color-warm-gold); outline-offset:3px; }
+.lgo-question-group-heading { display:flex; align-items:center; gap:.65rem; }
+.lgo-guidance-layout .lgo-question-group-heading h3 { flex:1; margin:0; color:var(--lgo-color-parchment); font:500 1.45rem/1.35 var(--lgo-font-editorial); }
+.lgo-question-group-heading > .lgo-release-icon { color:var(--lgo-color-warm-gold); }
+.lgo-question-group-heading > span { color:var(--release-muted); font-size:.7rem; white-space:nowrap; }
+.lgo-guidance-layout .lgo-question-answer p + p { margin-top:.7rem; }
+.lgo-guidance-layout .lgo-question-boundary { padding-top:.65rem; border-top:1px solid var(--release-line); color:var(--lgo-color-warm-gold); }
+.lgo-question-group > .lgo-link-button { gap:.8rem; }
+@media(max-width:1100px) {
+  .lgo-guidance-topic-grid[data-count="6"] { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media(max-width:800px) {
+  .lgo-question-groups { grid-template-columns:1fr; }
+  .lgo-guidance-station.lgo-guidance-map { max-width:580px; width:100%; margin:auto; }
+  .lgo-guidance-topic-grid[data-count="6"] { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .lgo-question-filterbar { align-items:start; gap:.6rem; }
+  .lgo-question-filters { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); width:100%; }
+  .lgo-question-filters .lgo-button { font-size:.74rem; padding:.55rem; }
+  .lgo-question-filters .lgo-button:first-child { grid-column:1 / -1; }
+}
+@media(max-width:480px) {
+  .lgo-guidance-map .lgo-guidance-station-links { gap:.65rem; padding:.15rem 0; }
+  .lgo-guidance-map .lgo-guidance-station-links a { grid-template-columns:1.2rem minmax(0,1fr); padding:.65rem .5rem; gap:.25rem .5rem; }
+  .lgo-guidance-map .lgo-guidance-station-links strong { font-size:.87rem; }
+  .lgo-guidance-map .lgo-guidance-station-links .lgo-release-icon { width:1.2rem; height:1.2rem; }
+  .lgo-guidance-layout .lgo-question-group-heading h3 { font-size:1.3rem; }
+  .lgo-guidance-topic-grid[data-count="6"] .lgo-guidance-topic-card { display:flex; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .lgo-guidance-map .lgo-guidance-station-links a, .lgo-question-filters .lgo-button { transition:none; }
+}
+
+/* Compact mobile topic index: keep every word/link, reduce repeated decorative art only. */
+@media(max-width:480px) {
+  .lgo-guidance-topic-grid[data-count="6"] .lgo-guidance-topic-card { display:grid; grid-template-columns:40px minmax(0,1fr); }
+  .lgo-guidance-topic-grid[data-count="6"] .lgo-guidance-topic-art { min-height:0; padding:.45rem; align-items:start; padding-top:.8rem; }
+  .lgo-guidance-layout .lgo-guidance-topic-grid[data-count="6"] .lgo-guidance-topic-art .lgo-release-icon { width:1.5rem; height:1.5rem; }
+  .lgo-guidance-topic-grid[data-count="6"] .lgo-guidance-topic-copy { padding:.7rem .6rem .7rem 0; }
+  .lgo-guidance-layout .lgo-guidance-topic-grid[data-count="6"] h3 { font-size:1rem; }
+  .lgo-guidance-topic-grid[data-count="6"] .lgo-link-button { font-size:.7rem; padding:.5rem; gap:.25rem; }
+}

@@ -1,3 +1,16 @@
+Current phase: WEB-FE-SUPPORT-HELP-REAL-UI-LAYOUT-v1.225 WEB_CLOSED.
+
+Current decision: /support/help now has a six-topic HTML map, source-backed native answers, local category filtering, fragment/reload/Back navigation and safe onward routes. Production regression 78/78 PASS; five viewport screenshots/axe; 63-page production build. Whole-app no-JavaScript root-streaming limitation remains open.
+
+Delivery: reviewed commit and normal push to origin/main, verified remote HEAD and source/delta/evidence ZIP/SHA256. Never push local handoff artifacts or secrets. No production deployment.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.226.
+Select `/support/safety` as the next single active page. Real Browser UI/UX Layout First, Runtime Layout Gate and Base First.
+
+Detailed report: LGO-WEB-FE-SUPPORT-HELP-REAL-UI-LAYOUT-REPORT-v1.225.md.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-SUPPORT-REAL-UI-LAYOUT-v1.224 WEB_CLOSED.
 
 Current decision: /support now has a real parchment navigation station, actionable topic cards, native FAQ and visible safe-support boundaries. Production browser regression 66/66 PASS; five viewport screenshot/axe review; 63-page build. Whole-app no-JavaScript navigation is a separate pre-existing root-streaming limitation, not included as PASS.
