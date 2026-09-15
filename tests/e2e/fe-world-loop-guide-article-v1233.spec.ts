@@ -129,7 +129,15 @@ test.describe('world-loop guide article and native navigation v1.233', () => {
       await page.goto(`${origin}/guides/${slug}`);
       const expected = contentEntries.find(item => item.slug === slug)!;
       await expect(page.getByRole('heading', { level: 1, name: expected.title, exact: true })).toBeVisible();
-      await expect(page.locator('.lgo-guide-detail-steps')).toBeVisible();
+      if (slug === 'gate-entry-guide') {
+        // v1.236 owns this previously generic slug; keep exact renderer and source coverage.
+        await expect(page.locator('.lgo-gate-entry-guide')).toBeVisible();
+        await expect(page.locator('.lgo-guide-article-section')).toHaveCount(guideDetailSteps.filter(step => step.slug === slug).length);
+        await expect(page.locator('.lgo-guide-detail-steps')).toHaveCount(0);
+      } else {
+        await expect(page.locator('.lgo-guide-detail-steps')).toBeVisible();
+        await expect(page.locator('.lgo-gate-entry-guide')).toHaveCount(0);
+      }
       await expect(page.locator('.lgo-world-loop-guide')).toHaveCount(0);
       expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(0);
     }

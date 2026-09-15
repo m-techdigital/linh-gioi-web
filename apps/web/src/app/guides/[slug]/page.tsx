@@ -1,3 +1,4 @@
+import { PublicGateEntryGuide } from "../../../components/PublicGateEntryGuide";
 import "@lgo-web/ui/release-layout.css";
 import "@lgo-web/ui/guide-article.css";
 import { PublicWorldLoopGuide } from "../../../components/PublicWorldLoopGuide";
@@ -34,9 +35,13 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
   const entry = localContentRepository.bySlug(slug);
   if (!entry || entry.category !== "guides") notFound();
 
-  // The current article owns only this slug; other guides retain their existing renderer.
+  // Each accepted article owns only its explicit slug; other guides retain the existing renderer.
   if (entry.slug === "world-gameplay-loop-guide") {
     return <WebAppShell><PublicWorldLoopGuide entry={entry}/></WebAppShell>;
+  }
+
+  if (entry.slug === "gate-entry-guide") {
+    return <WebAppShell><PublicGateEntryGuide entry={entry}/></WebAppShell>;
   }
 
   const isGateEntryGuide = entry.slug === "gate-entry-guide";

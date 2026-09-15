@@ -1,3 +1,17 @@
+Current phase: WEB-FE-GATE-ENTRY-GUIDE-ARTICLE-v1.236 WEB_CLOSED.
+
+Current decision: /guides/gate-entry-guide is a source-exact three-chapter article with responsive contents, native chapter/history navigation and real reading destinations. Production 240/240 PASS; 63-page build; five viewport screenshots/axe and 320px reflow. Existing world/beginner/training guide DOM and measured geometry match across six checks. No gameplay or saved state.
+
+Delivery: reviewed commit and normal origin/main push; exact remote HEAD verification and source/delta/evidence ZIP/SHA256. No deployment or handoff artifacts in Git.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.237.
+Select `/guides/beginner-training-loop-guide` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate; source-authored article and real reading navigation only.
+
+Detailed report: LGO-WEB-FE-GATE-ENTRY-GUIDE-ARTICLE-REPORT-v1.236.md.
+Whole-app JavaScript-disabled streaming limitation remains open. The earlier non-reproduced dev fragment-coordinate observation is not claimed fixed; final production fragment tests pass.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-BEGINNER-GUIDE-READING-v1.235 WEB_CLOSED.
 
 Current decision: /guides/beginner uses the shared illustrated article, four source-exact chapters, real destinations and native contents/deep links. Solid parchment action treatment verified. Production 226/226 PASS; 63-page build; five viewport screenshots/axe; sibling world article DOM/geometry unchanged. No gameplay or account progress.

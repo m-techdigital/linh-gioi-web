@@ -36,7 +36,7 @@ def main() -> int:
     require("packages/ui/src/article-fragment-restoration.tsx", (
         'targetIds.includes(targetId)', 'decodeURIComponent(window.location.hash.slice(1))', 'target.focus({ preventScroll: true })'))
     css = require("packages/ui/src/guide-article.css", (
-        ':is(.lgo-world-loop-guide,.lgo-beginner-guide)', '.lgo-guide-article-layout', 'position:sticky',
+        '.lgo-release-layout .lgo-guide-article-hero', '.lgo-guide-article-layout', 'position:sticky',
         '.lgo-guide-article-section .lgo-article-section-copy > .lgo-link-button.lgo-tone-neutral',
         '.lgo-link-button.lgo-tone-neutral { background:var(--lgo-color-art-ink)', 'box-shadow:none', ':focus-visible', 'forced-colors:active', 'min-height:44px'))
     if 'line-clamp' in css: ERRORS.append('authored article text is truncated')
