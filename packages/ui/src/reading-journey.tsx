@@ -10,14 +10,16 @@ export type ReadingJourneyStep = {
   title: string;
   summary: string;
   detail: string;
+  note?: string;
   href: string;
   action: string;
 };
 
-export function ReadingJourney({ steps, label, boundary }: {
+export function ReadingJourney({ steps, label, boundary, columns }: {
   steps: readonly ReadingJourneyStep[];
   label: string;
   boundary: string;
+  columns?: 4;
 }) {
   const [position, setPosition] = useState(0);
   const prefix = useId();
@@ -27,7 +29,7 @@ export function ReadingJourney({ steps, label, boundary }: {
   const headingId = `${prefix}-heading`;
   if (!active) return <p className="lgo-reading-journey-empty">Chưa có bước đọc được cấu hình.</p>;
 
-  return <div className="lgo-reading-journey">
+  return <div className="lgo-reading-journey" data-columns={columns}>
     <ProgressSteps label={label}>
       {steps.map((step, stepIndex) => <ProgressStep key={step.id}
         title={step.title} description={step.summary} marker={String(stepIndex + 1).padStart(2, "0")}
@@ -43,6 +45,7 @@ export function ReadingJourney({ steps, label, boundary }: {
         <span className="lgo-reading-journey-overline">Bước {index + 1} · Hướng dẫn đọc</span>
         <h3 id={headingId}>{active.title}</h3>
         <p>{active.detail}</p>
+        {active.note ? <p className="lgo-reading-journey-note">{active.note}</p> : null}
       </div>
       <LinkButton href={active.href} tone="gold">{active.action}</LinkButton>
     </section>

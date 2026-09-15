@@ -28,6 +28,11 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.232 retires exact old loop diagram/compact composition; shared onboarding/heading tests stay active.
+    "**/fe-public-game-loop-design-board-v182.spec.ts",
+    "**/fe-game-loop-real-ui-layout-v1154.spec.ts",
+    "**/fe-game-loop-real-ui-layout-v1212.spec.ts",
+
     // v1.231 replaces roadmap image/compact assertions; active trust-heading/status regression stays.
     "**/fe-public-roadmap-design-board-v170.spec.ts",
     "**/fe-roadmap-real-ui-layout-v1153.spec.ts",

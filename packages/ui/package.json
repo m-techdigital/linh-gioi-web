@@ -21,7 +21,8 @@
     "./reading-journey.css": "./src/reading-journey.css",
     "./performance-layout.css": "./src/performance-layout.css",
     "./keyboard-practice.css": "./src/keyboard-practice.css",
-    "./planning-layout.css": "./src/planning-layout.css"
+    "./planning-layout.css": "./src/planning-layout.css",
+    "./world-loop-layout.css": "./src/world-loop-layout.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

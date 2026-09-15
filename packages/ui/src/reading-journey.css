@@ -25,10 +25,13 @@
 .lgo-onboarding-hero-boundary > .lgo-release-icon { color:var(--lgo-color-warm-gold); }
 .lgo-onboarding-experience .lgo-onboarding-contract-note { font-size:.7rem; overflow-wrap:anywhere; margin-top:1rem; }
 .lgo-onboarding-experience .lgo-question-answer small { display:block; color:var(--lgo-color-text-muted); font-size:.8rem; line-height:1.6; }
+.lgo-reading-journey[data-columns="4"] .lgo-progress-steps { grid-template-columns:repeat(4,minmax(0,1fr)); }
 @media(max-width:1100px) {
+  .lgo-reading-journey[data-columns="4"] .lgo-progress-steps { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .lgo-reading-journey .lgo-progress-step { flex-direction:column; padding:1rem; }
 }
 @media(max-width:800px) {
+  .lgo-reading-journey[data-columns="4"] .lgo-progress-steps { grid-template-columns:1fr; }
   .lgo-reading-journey .lgo-progress-steps { grid-template-columns:1fr; gap:.65rem; }
   .lgo-reading-journey .lgo-progress-step { flex-direction:row; padding:1rem; }
   .lgo-reading-journey-panel { grid-template-columns:1fr; gap:1rem; padding:1.15rem; }
@@ -41,3 +44,5 @@
 }
 @media(prefers-reduced-motion:reduce) { .lgo-reading-journey .lgo-button { transition:none; animation:none; } }
 @media(forced-colors:active) { .lgo-reading-journey .lgo-progress-step[data-state="current"] { border:2px solid Highlight; } }
+
+.lgo-reading-journey-panel .lgo-reading-journey-note { margin-top:.9rem; padding-top:.75rem; border-top:1px solid var(--journey-line); font-size:.78rem; color:var(--lgo-color-warm-gold); overflow-wrap:anywhere; }

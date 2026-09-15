@@ -300,11 +300,16 @@ VALIDATORS = [
     "validate_web_fe_performance_real_ui_layout_v1229.py",
     "validate_web_fe_accessibility_real_ui_layout_v1230.py",
     "validate_web_fe_roadmap_real_ui_layout_v1231.py",
+    "validate_web_fe_game_loop_real_ui_layout_v1232.py",
 ]
 
 # These guards enforced a diagram image or deliberately line-clamped readiness cards.
 # v1.221 replaces them with art-backed DOM UI + native evidence disclosures. Not counted as PASS.
 SUPERSEDED_LAYOUT_VALIDATORS = {
+    "validate_web_fe_public_game_loop_design_board_v182.py": "validate_web_fe_game_loop_real_ui_layout_v1232.py",
+    "validate_web_fe_game_loop_real_ui_layout_v1154.py": "validate_web_fe_game_loop_real_ui_layout_v1232.py",
+    "validate_web_fe_game_loop_real_ui_layout_v1212.py": "validate_web_fe_game_loop_real_ui_layout_v1232.py",
+
     "validate_web_fe_public_roadmap_design_board_v170.py": "validate_web_fe_roadmap_real_ui_layout_v1231.py",
     "validate_web_fe_roadmap_real_ui_layout_v1153.py": "validate_web_fe_roadmap_real_ui_layout_v1231.py",
     "validate_web_fe_roadmap_real_ui_layout_v1211.py": "validate_web_fe_roadmap_real_ui_layout_v1231.py",
@@ -354,6 +359,37 @@ SUPERSEDED_LAYOUT_VALIDATORS = {
     "validate_web_fe_release_readiness_real_ui_layout_v1201.py": "validate_web_fe_release_readiness_real_ui_layout_v1221.py",
 }
 
+def public_route_exists(route: str) -> bool:
+    """Resolve literal pages and the existing file-backed published-guide renderer.
+
+    This is intentionally not a general Next.js route parser. Unknown dynamic
+    families fail closed; browser tests must still prove runtime reachability.
+    """
+    if not re.fullmatch(r"/(?:[a-z0-9-]+(?:/[a-z0-9-]+)*)?", route):
+        return False
+    app = ROOT / "apps/web/src/app"
+    if (app / route.lstrip("/") / "page.tsx").is_file():
+        return True
+    match = re.fullmatch(r"/guides/([a-z0-9-]+)", route)
+    renderer = app / "guides/[slug]/page.tsx"
+    fixtures = ROOT / "packages/content/src/fixtures.ts"
+    if not match or not renderer.is_file() or not fixtures.is_file():
+        return False
+    source = renderer.read_text(encoding="utf-8")
+    required = ('generateStaticParams', 'localContentRepository.list("guides")',
+                'localContentRepository.bySlug(slug)', 'entry.category !== "guides"', 'notFound()')
+    if not all(marker in source for marker in required):
+        return False
+    entries = re.search(r"export const contentEntries\s*:\s*ContentEntry\[\]\s*=\s*\[(.*?)^\];",
+                        fixtures.read_text(encoding="utf-8"), re.S | re.M)
+    if not entries:
+        return False
+    for block in re.findall(r"^  \{\n(.*?)^  \}", entries[1], re.S | re.M):
+        values = dict(re.findall(r'^\s*(slug|category|status):\s*"([^"\n]+)"\s*,?\s*$', block, re.M))
+        if values == {"slug": match[1], "category": "guides", "status": "published"}:
+            return True
+    return False
+
 def check_active_checkpoint() -> None:
     state = read("docs/execution/WEB-PROJECT-STATE.md")
     queue = read("docs/execution/WEB-NEXT-ACTION.md")
@@ -367,8 +403,7 @@ def check_active_checkpoint() -> None:
         fail("next task must be the successor of the first, active checkpoint (not a historical marker)")
     phase = f"{current[1]}-v{current[2]}.{current[3]}"
     require_text("docs/execution/WEB-TASK-LEDGER.md", f"| {phase} | WEB-FE | WEB_CLOSED |")
-    page = ROOT / "apps/web/src/app" / route[1].lstrip("/") / "page.tsx"
-    if not page.is_file(): fail(f"next public page does not exist: {route[1]}")
+    if not public_route_exists(route[1]): fail(f"next public page does not exist: {route[1]}")
 
 def main() -> int:
     check_active_checkpoint()

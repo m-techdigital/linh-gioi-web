@@ -134,6 +134,7 @@ function targetForPath(pathname: string) {
   if (pathname === "/performance") return PUBLIC_PERFORMANCE_TARGET;
   if (pathname === "/") return PUBLIC_HOMEPAGE_TARGET;
   if (pathname === "/game") return PUBLIC_GAME_WORLD_TARGET;
+  if (pathname === "/game/loop") return { ...PUBLIC_GAME_WORLD_TARGET, label: "Bố cục thế giới và hành trình đọc", scope: "Vòng lặp thế giới · Hướng dẫn, không phải gameplay live" };
   if (pathname === "/story") return PUBLIC_STORY_TARGET;
   if (pathname === "/classes") return PUBLIC_CLASSES_TARGET;
   if (pathname === "/journey") return PUBLIC_JOURNEY_TARGET;
