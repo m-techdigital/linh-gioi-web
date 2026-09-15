@@ -1,3 +1,4 @@
+import { PublicStartHereGuide } from "../../../components/PublicStartHereGuide";
 import { PublicCommunityRoadmapGuide } from "../../../components/PublicCommunityRoadmapGuide";
 import { PublicReleaseTrustGuide } from "../../../components/PublicReleaseTrustGuide";
 import { PublicSupportCommunityGuide } from "../../../components/PublicSupportCommunityGuide";
@@ -39,6 +40,10 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
   const { slug } = await params;
   const entry = localContentRepository.bySlug(slug);
   if (!entry || entry.category !== "guides") notFound();
+
+  if (entry.slug === "start-here-content-hub-guide") {
+    return <WebAppShell><PublicStartHereGuide entry={entry}/></WebAppShell>;
+  }
 
   if (entry.slug === "community-roadmap-onboarding-guide") {
     return <WebAppShell><PublicCommunityRoadmapGuide entry={entry}/></WebAppShell>;

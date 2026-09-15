@@ -1,3 +1,17 @@
+Current phase: WEB-FE-START-HERE-GUIDE-ARTICLE-v1.242 WEB_CLOSED.
+
+Current decision: /guides/start-here-content-hub-guide has four source-exact chapters and six native chapter destinations, including three shared grouped reading choices. Production 326/326 PASS; 63-page build; five viewport screenshots/axe; 18 sibling DOM/geometry matches. No preferences or personalization.
+
+Delivery: reviewed commit, normal origin/main push, exact remote confirmation and source/delta/evidence ZIP/SHA256. External manifest must confirm this checkpoint; no deployment or handoff artifacts in Git.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.243.
+Select `/guides/player-safety-support-guide` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate. World-loop guide already closed at v1.233; continue to the next uncompleted guide.
+
+Detailed report: LGO-WEB-FE-START-HERE-GUIDE-ARTICLE-REPORT-v1.242.md.
+Whole-app JavaScript-disabled streaming remains open; earlier non-reproduced dev fragment observation is not claimed fixed.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-COMMUNITY-ROADMAP-GUIDE-ARTICLE-v1.241 WEB_CLOSED.
 
 Current decision: /guides/community-roadmap-onboarding-guide has four source-authored chapters, responsive/native contents and real reading destinations. Production 310/310 PASS; 63-page build; five viewport screenshots/axe; 16 sibling DOM/geometry matches. No schedule, enrollment or membership.

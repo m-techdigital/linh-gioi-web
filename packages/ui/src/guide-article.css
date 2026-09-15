@@ -82,5 +82,12 @@
 /* Source-directed actions inside article chapters, shared by beginner and future reading guides. */
 .lgo-article-section-copy > .lgo-link-button { justify-self:start; gap:.7rem; }
 
+.lgo-guide-article-section .lgo-guide-chapter-actions > .lgo-link-button.lgo-tone-neutral,
 .lgo-guide-article-section .lgo-article-section-copy > .lgo-link-button.lgo-tone-neutral { background:var(--lgo-color-art-ink); color:var(--lgo-color-parchment); border-color:var(--lgo-color-art-ink); box-shadow:none; }
+.lgo-guide-article-section .lgo-guide-chapter-actions > .lgo-link-button.lgo-tone-neutral:hover,
 .lgo-guide-article-section .lgo-article-section-copy > .lgo-link-button.lgo-tone-neutral:hover { background:color-mix(in srgb,var(--lgo-color-jade-teal) 25%,var(--lgo-color-art-ink)); border-color:var(--lgo-color-art-ink); }
+
+/* Optional chapter reading choices. Native links, never selected or saved preferences. */
+.lgo-guide-chapter-actions { display:flex; flex-wrap:wrap; gap:.65rem; min-width:0; }
+.lgo-guide-chapter-actions > .lgo-link-button { gap:.7rem; }
+@media(max-width:600px) { .lgo-guide-chapter-actions > .lgo-link-button { width:100%; } }
