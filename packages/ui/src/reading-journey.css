@@ -1,0 +1,43 @@
+/* Local reading-position UI. No enrollment, approval or completion state is implied. */
+.lgo-reading-journey { --journey-line:color-mix(in srgb,var(--lgo-color-warm-gold) 32%,transparent); }
+.lgo-reading-journey .lgo-progress-steps { grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin:0 0 1rem; }
+.lgo-reading-journey .lgo-progress-step { gap:.8rem; padding:1.1rem; border-radius:4px; border:1px solid var(--journey-line); background:linear-gradient(150deg,var(--lgo-color-night-panel),var(--lgo-color-art-ink)); min-width:0; }
+.lgo-reading-journey .lgo-progress-step > div { display:flex; flex-direction:column; min-width:0; flex:1; align-self:stretch; }
+.lgo-reading-journey .lgo-progress-step[data-state="current"] { border-color:var(--lgo-color-jade-teal); box-shadow:inset 0 3px 0 var(--lgo-color-jade-teal); background:linear-gradient(150deg,color-mix(in srgb,var(--lgo-color-jade-teal) 12%,var(--lgo-color-night-panel)),var(--lgo-color-art-ink)); }
+.lgo-reading-journey .lgo-progress-step-marker { display:grid; place-items:center; flex-shrink:0; width:34px; height:34px; border:1px solid var(--journey-line); border-radius:50%; font:1rem var(--lgo-font-editorial); color:var(--lgo-color-warm-gold); }
+.lgo-reading-journey .lgo-progress-step strong { font:500 1.2rem/1.35 var(--lgo-font-editorial); color:var(--lgo-color-parchment); }
+.lgo-reading-journey .lgo-progress-step small { font-size:.7rem; margin-top:.45rem; color:var(--lgo-color-warm-gold); }
+.lgo-reading-journey .lgo-progress-step p { color:var(--lgo-color-text-muted); font-size:.8rem; line-height:1.6; margin:.65rem 0 1rem; }
+.lgo-reading-journey .lgo-button { min-height:44px; border-radius:3px; padding:.6rem .75rem; font-size:.78rem; box-shadow:none; }
+.lgo-reading-journey .lgo-progress-step .lgo-button { width:100%; margin-top:auto; }
+.lgo-reading-journey .lgo-button[aria-pressed="true"] { background:var(--lgo-color-jade-teal); border-color:var(--lgo-color-jade-teal); color:var(--lgo-color-art-ink); }
+.lgo-reading-journey .lgo-button:disabled { opacity:.45; cursor:not-allowed; border-style:dashed; background:var(--lgo-color-art-ink); }
+.lgo-reading-journey .lgo-button:focus-visible { outline:2px solid var(--lgo-color-warm-gold); outline-offset:3px; }
+.lgo-reading-journey-panel { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:1.5rem; border:1px solid var(--journey-line); padding:1.3rem 1.4rem; background:color-mix(in srgb,var(--lgo-color-jade-teal) 6%,var(--lgo-color-art-ink)); border-radius:4px; }
+.lgo-reading-journey-overline { font-size:.68rem; letter-spacing:.08em; color:var(--lgo-color-jade-teal); }
+.lgo-reading-journey .lgo-reading-journey-panel h3 { font:500 1.5rem/1.35 var(--lgo-font-editorial); color:var(--lgo-color-parchment); margin:.45rem 0 .65rem; }
+.lgo-reading-journey-panel p { color:var(--lgo-color-text-muted); margin:0; font-size:.88rem; line-height:1.7; max-width:82ch; }
+.lgo-reading-journey-panel .lgo-link-button { min-width:145px; }
+.lgo-reading-journey-controls { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:.8rem; }
+.lgo-reading-journey-controls output { color:var(--lgo-color-text-primary); font-size:.78rem; text-align:center; }
+.lgo-reading-journey-boundary { color:var(--lgo-color-text-muted); font-size:.75rem; line-height:1.65; margin:.8rem 0 0; }
+.lgo-onboarding-hero-boundary { display:flex; align-items:start; gap:.7rem; font-size:.83rem; color:var(--lgo-color-text-muted); margin:1.2rem 0; }
+.lgo-onboarding-hero-boundary > .lgo-release-icon { color:var(--lgo-color-warm-gold); }
+.lgo-onboarding-experience .lgo-onboarding-contract-note { font-size:.7rem; overflow-wrap:anywhere; margin-top:1rem; }
+.lgo-onboarding-experience .lgo-question-answer small { display:block; color:var(--lgo-color-text-muted); font-size:.8rem; line-height:1.6; }
+@media(max-width:1100px) {
+  .lgo-reading-journey .lgo-progress-step { flex-direction:column; padding:1rem; }
+}
+@media(max-width:800px) {
+  .lgo-reading-journey .lgo-progress-steps { grid-template-columns:1fr; gap:.65rem; }
+  .lgo-reading-journey .lgo-progress-step { flex-direction:row; padding:1rem; }
+  .lgo-reading-journey-panel { grid-template-columns:1fr; gap:1rem; padding:1.15rem; }
+  .lgo-reading-journey .lgo-progress-step p { margin:.5rem 0 .65rem; }
+}
+@media(max-width:400px) {
+  .lgo-reading-journey-controls { gap:.4rem; }
+  .lgo-reading-journey-controls .lgo-button { padding:.6rem .55rem; }
+  .lgo-reading-journey-controls output { font-size:.71rem; }
+}
+@media(prefers-reduced-motion:reduce) { .lgo-reading-journey .lgo-button { transition:none; animation:none; } }
+@media(forced-colors:active) { .lgo-reading-journey .lgo-progress-step[data-state="current"] { border:2px solid Highlight; } }

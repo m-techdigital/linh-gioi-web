@@ -80,3 +80,6 @@ export { PrivacyNotice, DataBoundaryColumns } from "./privacy-guidance";
 export type { PrivacyNoticeItem } from "./privacy-guidance";
 
 export { PrincipleMedallions } from "./guidance";
+
+export { ReadingJourney } from "./reading-journey";
+export type { ReadingJourneyStep } from "./reading-journey";

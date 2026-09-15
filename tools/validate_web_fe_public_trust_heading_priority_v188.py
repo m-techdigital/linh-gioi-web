@@ -21,10 +21,10 @@ def require_order(rel: str, first: str, second: str) -> None:
 def check_routes() -> None:
     require_order("apps/web/src/app/download/trust/page.tsx", "<h1>Tin cậy tải game</h1>", "<DownloadTrustGateBoard />")
     require_order("apps/web/src/app/roadmap/page.tsx", "<h1>Roadmap phát triển web</h1>", "<ReleaseReadinessHubCta />")
-    require_order("apps/web/src/app/community/onboarding/page.tsx", "<h1>Hòa nhập cộng đồng Linh Giới</h1>", "<ReleaseReadinessHubCta />")
+    require_order("apps/web/src/app/community/onboarding/page.tsx", "<PublicOnboardingHero/>", "<PublicOnboardingReading/>")
     require_text("apps/web/src/app/download/trust/page.tsx", ["chưa có gói tải game công khai", "chưa có xác thực production", "chưa có quyền Portal thật"])
     require_text("apps/web/src/app/roadmap/page.tsx", ["WEB-08 vẫn bị chặn", "không công bố xác thực vận hành"])
-    require_text("apps/web/src/app/community/onboarding/page.tsx", ["Chưa mở trò chuyện, diễn đàn, bang hội", "danh sách chờ công khai"])
+    require_text("apps/web/src/components/PublicCommunityOnboardingExperience.tsx", ['title="Hòa nhập cộng đồng Linh Giới"', "chưa có trò chuyện, diễn đàn, bang hội", "danh sách chờ công khai", "Chưa có danh sách chờ"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-trust-heading-priority-v188.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-TRUST-HEADING-PRIORITY-v1.88.md", "LGO-WEB-FE-PUBLIC-TRUST-HEADING-PRIORITY-REPORT-v1.88.md", "HANDOFF-LGO-WEB-FE-PUBLIC-TRUST-HEADING-PRIORITY-v1.88.md"]: require_file(rel)
     require_text("tests/e2e/fe-public-trust-heading-priority-v188.spec.ts", ["/download/trust", "/roadmap", "/community/onboarding", "starts trust content with the page h1", "pageOverflow", "maxFont"])

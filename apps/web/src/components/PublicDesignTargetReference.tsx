@@ -132,6 +132,8 @@ function targetForPath(pathname: string) {
   if (pathname === "/support/help") return PUBLIC_SUPPORT_HELP_TARGET;
   if (pathname === "/support/safety") return PUBLIC_SUPPORT_SAFETY_TARGET;
   if (pathname === "/support") return PUBLIC_SUPPORT_TARGET;
+  // Onboarding uses the accepted Vietnamese community composition, not the old M1 combat diagram.
+  if (pathname === "/community/onboarding") return { ...PUBLIC_COMMUNITY_TARGET, label: "Bố cục hòa nhập cộng đồng", scope: "Hòa nhập cộng đồng · Ba bước đọc, không đăng ký" };
   if (pathname === "/community") return PUBLIC_COMMUNITY_TARGET;
   if (publicServicePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_SERVICE_TARGET;
   if (publicCorePrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`))) return PUBLIC_CORE_TARGET;

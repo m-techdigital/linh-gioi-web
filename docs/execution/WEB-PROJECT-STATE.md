@@ -1,3 +1,17 @@
+Current phase: WEB-FE-COMMUNITY-ONBOARDING-REAL-UI-LAYOUT-v1.228 WEB_CLOSED.
+
+Current decision: /community/onboarding now renders a manual hero, real three-step reading selector, bounded previous/next controls and truthful no-waitlist guidance. The unrelated M1 combat SVG was removed from page content and the exact route comparison was scoped to the accepted Vietnamese community design family. Production regression 128/128 PASS; five viewport screenshots/axe; 63-page build. No registration or entitlement was added.
+
+Delivery: reviewed commit and normal push to origin/main; verify remote HEAD and full/delta/evidence ZIP/SHA256. No force-push, no local handoff artifacts committed, no deployment.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.229.
+Select `/performance` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate; never invent measured performance results.
+
+Detailed report: LGO-WEB-FE-COMMUNITY-ONBOARDING-REAL-UI-LAYOUT-REPORT-v1.228.md.
+Whole-app JavaScript-disabled streaming limitation remains open. Backend/production gates remain blocked.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-COMMUNITY-REAL-UI-LAYOUT-v1.227 WEB_CLOSED.
 
 Current decision: /community renders a vista hero, three paper guidance panels, principle navigation, prototype gallery and native conduct disclosures. The gallery link cue clipping defect was fixed and regression-tested. Production regression 110/110 PASS; five-viewport screenshot/axe review; 63-page build. No live community service or signup/entitlement flow was added.
