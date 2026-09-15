@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import { LinkButton } from "./primitives";
+import { ReleaseIcon } from "./release";
 import { ArticleFragmentRestoration } from "./article-fragment-restoration";
 
 export type GuideArticleSection = {
@@ -48,4 +50,19 @@ export function GuideArticle({ sections, contentsId, contentsLabel, intro }: {
     </div>
     <ArticleFragmentRestoration targetIds={[contentsId, ...sections.map(section => section.id)]}/>
   </div>;
+}
+
+/** Reusable authored instruction/result/boundary content; it never changes the source wording. */
+export function GuideChapterBody({ instruction, outcome, boundary, action }: {
+  instruction: string;
+  outcome: string;
+  boundary: string;
+  action?: { href: string; label: string; className?: string };
+}) {
+  return <>
+    <p className="lgo-article-instruction">{instruction}</p>
+    <div className="lgo-article-outcome"><h3><ReleaseIcon name="document"/>Điều cần hiểu</h3><p>{outcome}</p></div>
+    <div className="lgo-article-boundary"><h3><ReleaseIcon name="lock"/>Giới hạn hiện tại</h3><p>{boundary}</p></div>
+    {action ? <LinkButton className={action.className} href={action.href} tone="neutral">{action.label}<ReleaseIcon name="arrow"/></LinkButton> : null}
+  </>;
 }

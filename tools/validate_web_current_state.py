@@ -305,11 +305,13 @@ VALIDATORS = [
     "validate_web_fe_guides_discovery_real_ui_layout_v1234.py",
     "validate_web_fe_beginner_guide_reading_v1235.py",
     "validate_web_fe_gate_entry_guide_article_v1236.py",
+    "validate_web_fe_training_loop_guide_article_v1237.py",
 ]
 
 # These guards enforced a diagram image or deliberately line-clamped readiness cards.
 # v1.221 replaces them with art-backed DOM UI + native evidence disclosures. Not counted as PASS.
 SUPERSEDED_LAYOUT_VALIDATORS = {
+    "validate_web_fe_guides_beginner_training_loop_real_ui_layout_v1159.py": "validate_web_fe_training_loop_guide_article_v1237.py",
     "validate_web_fe_guides_gate_entry_real_ui_layout_v1158.py": "validate_web_fe_gate_entry_guide_article_v1236.py",
     "validate_web_fe_guides_beginner_real_ui_layout_v1157.py": "validate_web_fe_beginner_guide_reading_v1235.py",
     "validate_web_fe_guides_index_real_ui_layout_v1156.py": "validate_web_fe_guides_discovery_real_ui_layout_v1234.py",

@@ -134,6 +134,11 @@ test.describe('world-loop guide article and native navigation v1.233', () => {
         await expect(page.locator('.lgo-gate-entry-guide')).toBeVisible();
         await expect(page.locator('.lgo-guide-article-section')).toHaveCount(guideDetailSteps.filter(step => step.slug === slug).length);
         await expect(page.locator('.lgo-guide-detail-steps')).toHaveCount(0);
+      } else if (slug === 'beginner-training-loop-guide') {
+        // v1.237 replaces this exact slug's compact renderer; category and source checks stay active.
+        await expect(page.locator('.lgo-training-loop-guide')).toBeVisible();
+        await expect(page.locator('.lgo-guide-article-section')).toHaveCount(guideDetailSteps.filter(item => item.slug === slug).length);
+        await expect(page.locator('.lgo-guide-detail-steps')).toHaveCount(0);
       } else {
         await expect(page.locator('.lgo-guide-detail-steps')).toBeVisible();
         await expect(page.locator('.lgo-gate-entry-guide')).toHaveCount(0);

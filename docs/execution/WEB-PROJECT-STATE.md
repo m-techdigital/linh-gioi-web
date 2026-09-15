@@ -1,3 +1,17 @@
+Current phase: WEB-FE-TRAINING-LOOP-GUIDE-ARTICLE-v1.237 WEB_CLOSED.
+
+Current decision: /guides/beginner-training-loop-guide has four source-exact readable chapters, responsive contents and real destinations. Shared GuideChapterBody added without changing article navigation. Production 254/254 PASS; 63-page build; five viewport captures/axe; eight sibling DOM/geometry matches. No gameplay or saved state.
+
+Delivery: reviewed commit and normal origin/main push, exact remote HEAD verification and source/delta/evidence ZIP/SHA256. No deployment or handoff artifacts in Git.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.238.
+Select `/guides/download-readiness-guide` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate; preserve authored article and real reading routes.
+
+Detailed report: LGO-WEB-FE-TRAINING-LOOP-GUIDE-ARTICLE-REPORT-v1.237.md.
+Whole-app JavaScript-disabled streaming limitation remains open; earlier non-reproduced dev fragment observation is not claimed fixed.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-GATE-ENTRY-GUIDE-ARTICLE-v1.236 WEB_CLOSED.
 
 Current decision: /guides/gate-entry-guide is a source-exact three-chapter article with responsive contents, native chapter/history navigation and real reading destinations. Production 240/240 PASS; 63-page build; five viewport screenshots/axe and 320px reflow. Existing world/beginner/training guide DOM and measured geometry match across six checks. No gameplay or saved state.
