@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: v1.240 `/guides/release-trust-and-checksum-guide` verified; next v1.241 `/guides/community-roadmap-onboarding-guide`. Delivery: normal commit/push, exact remote match and ZIP/SHA256. Source-authored reading only; no artifact verification/download/backend/deployment. Whole-app no-JavaScript streaming remains open.
+Current visual checkpoint: v1.241 `/guides/community-roadmap-onboarding-guide` verified; next v1.242 `/guides/start-here-content-hub-guide`. Delivery: normal commit/push, exact remote match and ZIP/SHA256. Source-authored guidance; no date/enrollment/backend/deployment. Whole-app no-JavaScript streaming remains open.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 

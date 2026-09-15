@@ -1,3 +1,17 @@
+Current phase: WEB-FE-COMMUNITY-ROADMAP-GUIDE-ARTICLE-v1.241 WEB_CLOSED.
+
+Current decision: /guides/community-roadmap-onboarding-guide has four source-authored chapters, responsive/native contents and real reading destinations. Production 310/310 PASS; 63-page build; five viewport screenshots/axe; 16 sibling DOM/geometry matches. No schedule, enrollment or membership.
+
+Delivery: reviewed commit, normal origin/main push, exact remote confirmation and source/delta/evidence ZIP/SHA256. External manifest must confirm this checkpoint; no deployment or handoff artifacts in Git.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.242.
+Select `/guides/start-here-content-hub-guide` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate; source-authored orientation only.
+
+Detailed report: LGO-WEB-FE-COMMUNITY-ROADMAP-GUIDE-ARTICLE-REPORT-v1.241.md.
+Whole-app JavaScript-disabled streaming remains open; earlier non-reproduced dev fragment observation is not claimed fixed.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-RELEASE-TRUST-GUIDE-ARTICLE-v1.240 WEB_CLOSED.
 
 Current decision: /guides/release-trust-and-checksum-guide has four source-exact chapters, responsive contents and real evidence-reading destinations. Existing article/hero/body reused unchanged. Production 296/296 PASS; 63-page build; five viewport screenshots/axe; 14 sibling DOM/geometry matches. No fake hash or download service.

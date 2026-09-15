@@ -1,3 +1,4 @@
+import { PublicCommunityRoadmapGuide } from "../../../components/PublicCommunityRoadmapGuide";
 import { PublicReleaseTrustGuide } from "../../../components/PublicReleaseTrustGuide";
 import { PublicSupportCommunityGuide } from "../../../components/PublicSupportCommunityGuide";
 import { PublicDownloadReadinessGuide } from "../../../components/PublicDownloadReadinessGuide";
@@ -38,6 +39,10 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
   const { slug } = await params;
   const entry = localContentRepository.bySlug(slug);
   if (!entry || entry.category !== "guides") notFound();
+
+  if (entry.slug === "community-roadmap-onboarding-guide") {
+    return <WebAppShell><PublicCommunityRoadmapGuide entry={entry}/></WebAppShell>;
+  }
 
   // Each accepted article owns only its explicit slug; other guides retain the existing renderer.
   if (entry.slug === "world-gameplay-loop-guide") {
