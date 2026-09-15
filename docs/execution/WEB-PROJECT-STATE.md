@@ -1,3 +1,17 @@
+Current phase: WEB-FE-WORLD-LOOP-GUIDE-ARTICLE-v1.233 WEB_CLOSED.
+
+Current decision: /guides/world-gameplay-loop-guide now renders an illustrated article with sticky/collapsible contents, four complete source sections and native chapter navigation. Cold chapter URLs restore the requested position/focus after streaming. All published guides remain reachable; unknown/non-guide slugs return 404. Production 192/192 PASS; 63-page build; five viewport screenshots/axe; six sibling DOM/geometry comparisons match. No gameplay, saved progress or backend added.
+
+Delivery: reviewed commit and normal push to origin/main; verify exact remote HEAD and full/delta/evidence ZIP/SHA256. No force-push or production deployment; handoff artifacts stay outside Git.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.234.
+Select `/guides` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate; guide discovery and real navigation from existing published content only.
+
+Detailed report: LGO-WEB-FE-WORLD-LOOP-GUIDE-ARTICLE-REPORT-v1.233.md.
+Whole-application JavaScript-disabled streaming limitation remains open. The article's mount-time fragment helper is not a site-wide fix. Backend/production gates remain blocked.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-GAME-LOOP-REAL-UI-LAYOUT-v1.232 WEB_CLOSED.
 
 Current decision: /game/loop has an illustrated world hero, four interactive reading stages, source boundaries beside each action and native beginner questions. Production 176/176 PASS; five viewport screenshots/axe; 63-page build. Shared ReadingJourney default onboarding DOM/geometry preserved. No gameplay/combat/persistence created.

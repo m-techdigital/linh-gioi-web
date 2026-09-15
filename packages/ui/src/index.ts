@@ -94,3 +94,6 @@ export { MilestoneArchive } from "./milestone-archive";
 export type { MilestoneSourceRecord, MilestoneSourceState } from "./milestone-archive";
 export { PlanningGateMap } from "./planning";
 export type { PlanningGateView } from "./planning";
+
+export { GuideArticle } from "./guide-article";
+export type { GuideArticleSection } from "./guide-article";

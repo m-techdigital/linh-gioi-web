@@ -1,3 +1,6 @@
+import "@lgo-web/ui/release-layout.css";
+import "@lgo-web/ui/guide-article.css";
+import { PublicWorldLoopGuide } from "../../../components/PublicWorldLoopGuide";
 import { FaqHelpfulnessCta } from "../../../components/PublicFaqHelpfulnessSections";
 import { ClosedTesterInformationPackCta } from "../../../components/PublicClosedTesterInformationPackSections";
 import { localContentRepository } from "@lgo-web/content";
@@ -13,6 +16,9 @@ import { PerformanceBudgetCta } from "../../../components/PublicPerformanceBudge
 import { RouteContinuityCta } from "../../../components/PublicRouteContinuitySections";
 import { ReleaseReadinessHubCta } from "../../../components/PublicReleaseReadinessHubSections";
 
+// Guides are published, file-backed entries. Unknown slugs must not stream a 200 fallback.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return localContentRepository.list("guides").map((entry) => ({ slug: entry.slug }));
 }
@@ -27,6 +33,11 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
   const { slug } = await params;
   const entry = localContentRepository.bySlug(slug);
   if (!entry || entry.category !== "guides") notFound();
+
+  // The current article owns only this slug; other guides retain their existing renderer.
+  if (entry.slug === "world-gameplay-loop-guide") {
+    return <WebAppShell><PublicWorldLoopGuide entry={entry}/></WebAppShell>;
+  }
 
   const isGateEntryGuide = entry.slug === "gate-entry-guide";
   const isBeginnerTrainingLoopGuide = entry.slug === "beginner-training-loop-guide";

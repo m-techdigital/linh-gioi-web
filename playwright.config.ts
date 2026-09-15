@@ -28,6 +28,11 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.233 replaces four-column guide/CTA presentation with source-complete article navigation.
+    // Only these exact historical world-loop layouts are superseded; not counted as runtime PASS.
+    "**/fe-guide-world-loop-real-ui-layout-v1155.spec.ts",
+    "**/fe-guides-world-gameplay-loop-real-ui-layout-v1165.spec.ts",
+
     // v1.232 retires exact old loop diagram/compact composition; shared onboarding/heading tests stay active.
     "**/fe-public-game-loop-design-board-v182.spec.ts",
     "**/fe-game-loop-real-ui-layout-v1154.spec.ts",
