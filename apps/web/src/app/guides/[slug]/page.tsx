@@ -1,3 +1,4 @@
+import { PublicDownloadReadinessGuide } from "../../../components/PublicDownloadReadinessGuide";
 import { PublicTrainingLoopGuide } from "../../../components/PublicTrainingLoopGuide";
 import { PublicGateEntryGuide } from "../../../components/PublicGateEntryGuide";
 import "@lgo-web/ui/release-layout.css";
@@ -47,6 +48,10 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
 
   if (entry.slug === "beginner-training-loop-guide") {
     return <WebAppShell><PublicTrainingLoopGuide entry={entry}/></WebAppShell>;
+  }
+
+  if (entry.slug === "download-readiness-guide") {
+    return <WebAppShell><PublicDownloadReadinessGuide entry={entry}/></WebAppShell>;
   }
 
   const isGateEntryGuide = entry.slug === "gate-entry-guide";

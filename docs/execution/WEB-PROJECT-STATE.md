@@ -1,3 +1,17 @@
+Current phase: WEB-FE-DOWNLOAD-READINESS-GUIDE-ARTICLE-v1.238 WEB_CLOSED.
+
+Current decision: /guides/download-readiness-guide has four complete source-authored condition chapters, responsive contents and real reading destinations. Reuses the article/body without new CSS or controllers. Production 268/268 PASS; 63-page build; five viewport captures/axe; ten sibling DOM/geometry matches. No fake checksum, download or entitlement.
+
+Delivery: reviewed commit and normal origin/main push, exact remote HEAD verification and source/delta/evidence ZIP/SHA256. No deployment or handoff artifacts in Git.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.239.
+Select `/guides/support-and-community-guide` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate; source-authored article and real reading navigation only.
+
+Detailed report: LGO-WEB-FE-DOWNLOAD-READINESS-GUIDE-ARTICLE-REPORT-v1.238.md.
+Whole-app JavaScript-disabled streaming remains open; earlier non-reproduced dev fragment observation is not claimed fixed.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-TRAINING-LOOP-GUIDE-ARTICLE-v1.237 WEB_CLOSED.
 
 Current decision: /guides/beginner-training-loop-guide has four source-exact readable chapters, responsive contents and real destinations. Shared GuideChapterBody added without changing article navigation. Production 254/254 PASS; 63-page build; five viewport captures/axe; eight sibling DOM/geometry matches. No gameplay or saved state.
