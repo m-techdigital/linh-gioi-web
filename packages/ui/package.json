@@ -11,7 +11,8 @@
     "./data.css": "./src/data.css",
     "./progress.css": "./src/progress.css",
     "./service-layout.css": "./src/service-layout.css",
-    "./release-layout.css": "./src/release-layout.css"
+    "./release-layout.css": "./src/release-layout.css",
+    "./reading-tools.css": "./src/reading-tools.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

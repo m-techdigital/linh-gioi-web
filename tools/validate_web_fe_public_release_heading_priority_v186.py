@@ -22,8 +22,8 @@ def check_routes() -> None:
     require_order("apps/web/src/app/release/page.tsx", "<h1>Hành trình phát hành</h1>", "<ContentIaStartCta />")
     require_order("apps/web/src/app/release/readiness/page.tsx", "<ReleaseReadinessHero />", "<OwnerReleaseGateBoard")
     require_text("apps/web/src/components/PublicReleaseReadinessExperience.tsx", ['title="Sẵn sàng phát hành"', "ExperienceHero"])
-    require_order("apps/web/src/app/release/tester-pack/page.tsx", "<h1>Gói tester cộng đồng</h1>", "<ContentIaStartCta />")
-    require_text("apps/web/src/app/release/tester-pack/page.tsx", ["lgo-closed-tester-hero-card", "Board gói tester cộng đồng", "Chưa mở intake", "không claim intake thật"])
+    require_order("apps/web/src/app/release/tester-pack/page.tsx", "<TesterPackHero />", "<TesterPackShortcuts />")
+    require_text("apps/web/src/components/PublicTesterPackExperience.tsx", ['title="Gói tester cộng đồng"', "ExperienceHero", "Chưa mở intake", "Không hứa slot", "không có backend tiếp nhận"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-release-heading-priority-v186.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-RELEASE-HEADING-PRIORITY-v1.86.md", "LGO-WEB-FE-PUBLIC-RELEASE-HEADING-PRIORITY-REPORT-v1.86.md", "HANDOFF-LGO-WEB-FE-PUBLIC-RELEASE-HEADING-PRIORITY-v1.86.md"]: require_file(rel)
     require_text("tests/e2e/fe-public-release-heading-priority-v186.spec.ts", ["/release", "/release/readiness", "/release/tester-pack", "starts release content with the page h1", "pageOverflow", "maxFont"])

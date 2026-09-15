@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-export type ReleaseIconName = "shield" | "document" | "users" | "lock" | "download" | "signal" | "help" | "arrow";
+export type ReleaseIconName = "shield" | "document" | "users" | "lock" | "download" | "signal" | "help" | "arrow" | "monitor";
 export type ReleaseGateState = "blocked" | "review" | "planned";
 const iconPaths: Record<ReleaseIconName, ReactNode> = {
   shield: <><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></>,
@@ -10,6 +10,7 @@ const iconPaths: Record<ReleaseIconName, ReactNode> = {
   download: <><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></>,
   signal: <path d="M2 12h5l3-8 4 16 3-8h5"/>,
   help: <><path d="M4 13v-2a8 8 0 0 1 16 0v2M4 13H2v6h4v-6ZM20 13h2v6h-4v-6ZM18 19c0 2-3 2-6 2"/></>,
+  monitor: <><rect x="3" y="4" width="18" height="13" rx="1"/><path d="M8 21h8M12 17v4"/></>,
   arrow: <path d="M4 12h16m-6-6 6 6-6 6"/>
 };
 export function ReleaseIcon({ name, className }: { name: ReleaseIconName; className?: string }) {
@@ -40,4 +41,12 @@ export function ReleaseGateCard({ id, title, icon, state, stateLabel, owner, evi
       <div><p>{evidence}</p><p><strong>Trước khi mở:</strong> {rule}</p></div>
     </details>
   </article>;
+}
+
+/** Decorative manual cover; actionable instructions are rendered separately by the page. */
+export function FieldManual({ title, quote, steps }: { title: string; quote: string; steps: readonly string[] }) {
+  return <div className="lgo-field-manual" aria-hidden="true">
+    <div className="lgo-field-manual-paper"><span>LINH GIỚI · CÙNG KIẾN TẠO</span><p>{quote}</p><ReleaseIcon name="shield" /><small>Quan sát bằng sự chân thành</small></div>
+    <div className="lgo-field-manual-cover"><span>CẨM NANG CỘNG ĐỒNG</span><strong>{title}</strong><div className="lgo-field-manual-crest">界</div><ol>{steps.map((step,index)=><li key={`${index}-${step}`}>{step}</li>)}</ol><small>Thông tin chuẩn bị · Chưa mở intake</small></div>
+  </div>;
 }

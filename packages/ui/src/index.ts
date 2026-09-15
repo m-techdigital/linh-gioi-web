@@ -61,5 +61,8 @@ export type { DataTableColumn, DataTableRow } from "./data";
 export { ProgressSteps, ProgressStep } from "./progress";
 export type { ProgressStepState } from "./progress";
 
-export { ReleaseIcon, ReleaseSeal, ReleaseGateCard } from "./release";
+export { ReleaseIcon, ReleaseSeal, ReleaseGateCard, FieldManual } from "./release";
 export type { ReleaseIconName, ReleaseGateState } from "./release";
+
+export { LocalChecklist, TemplateTabs } from "./reading-tools";
+export type { LocalChecklistItem, ReadingTemplate } from "./reading-tools";

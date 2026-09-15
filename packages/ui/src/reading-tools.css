@@ -1,0 +1,33 @@
+/* Local preparation controls. No persistence or network submission is implied. */
+.lgo-local-checklist { min-width: 0; }
+.lgo-local-checklist-toolbar { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin:1rem 0 .6rem; }
+.lgo-local-checklist-count { color:var(--lgo-color-warm-gold); font-size:.8rem; font-variant-numeric:tabular-nums; }
+.lgo-local-checklist .lgo-checkbox-field { display:flex; gap:.8rem; align-items:flex-start; padding:1rem 0; min-height:44px; border-bottom:1px solid color-mix(in srgb,var(--lgo-color-text-muted) 20%,transparent); cursor:pointer; }
+.lgo-local-checklist .lgo-checkbox-field input { flex-shrink:0; width:20px; height:20px; margin:.1rem 0 0; accent-color:var(--lgo-color-warm-gold); }
+.lgo-local-checklist .lgo-checkbox-copy { display:block; min-width:0; }
+.lgo-local-checklist .lgo-checkbox-copy strong { display:block; color:var(--lgo-color-text-primary); font-size:.9rem; font-weight:600; line-height:1.45; }
+.lgo-local-checklist .lgo-checkbox-copy small { display:block; color:var(--lgo-color-text-muted); font-size:.8rem; line-height:1.6; margin-top:.3rem; }
+.lgo-local-checklist .lgo-button, .lgo-template-tools .lgo-button { min-height:44px; border-radius:3px; box-shadow:none; font-size:.8rem; font-weight:600; padding:.65rem .75rem; }
+.lgo-local-checklist .lgo-button:disabled { opacity:.55; cursor:not-allowed; }
+.lgo-local-checklist .lgo-reading-tools-note { margin:1rem 0 0; color:var(--lgo-color-text-muted); font-size:.74rem; line-height:1.6; }
+.lgo-template-tools { min-width:0; }
+.lgo-template-tabs { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.4rem; margin:1rem 0 .65rem; }
+.lgo-template-tabs [role=tab] { color:var(--lgo-color-text-primary); background:var(--lgo-color-art-ink); border:1px solid color-mix(in srgb,var(--lgo-color-warm-gold) 28%,transparent); }
+.lgo-template-tabs [role=tab][aria-selected=true] { background:var(--lgo-color-warm-gold); border-color:var(--lgo-color-warm-gold); color:var(--lgo-color-art-ink); }
+.lgo-template-panel { background:var(--lgo-color-art-ink); border:1px solid color-mix(in srgb,var(--lgo-color-text-muted) 30%,transparent); border-radius:3px; padding:1rem; }
+.lgo-template-panel pre { margin:0; min-height:10rem; white-space:pre-wrap; overflow-wrap:anywhere; font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:.8rem; line-height:1.8; color:var(--lgo-color-text-primary); }
+.lgo-template-copy-row { display:flex; gap:.85rem; align-items:center; margin-top:.7rem; }
+.lgo-template-copy-row .lgo-button { background:var(--lgo-color-warm-gold); border-color:var(--lgo-color-warm-gold); color:var(--lgo-color-art-ink); flex-shrink:0; }
+.lgo-template-feedback { font-size:.73rem; line-height:1.5; color:var(--lgo-color-text-muted); }
+.lgo-template-feedback[data-state=copied] { color:var(--lgo-color-jade); }
+.lgo-template-feedback[data-state=error] { color:var(--lgo-color-warm-gold); }
+.lgo-local-checklist input:focus-visible, .lgo-local-checklist button:focus-visible, .lgo-template-tools button:focus-visible, .lgo-template-panel pre:focus-visible { outline:2px solid var(--lgo-color-warm-gold); outline-offset:3px; }
+@media(max-width:480px) {
+  .lgo-local-checklist-toolbar { gap:.5rem; }
+  .lgo-local-checklist-toolbar .lgo-button { font-size:.7rem; }
+  .lgo-template-panel { padding:.8rem; }
+  .lgo-template-copy-row { align-items:flex-start; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .lgo-local-checklist *, .lgo-template-tools * { transition:none; animation:none; }
+}

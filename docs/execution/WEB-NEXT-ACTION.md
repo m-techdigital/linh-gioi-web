@@ -5,12 +5,12 @@ Status: WEB_TASK_CONTINUE
 Owner delivery override: Do not push. Close each page with a local source checkpoint, verified ZIP/SHA256 and browser evidence, then continue without asking for confirmation.
 
 Next task:
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.222
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.223
 
 Objective:
-Continue the sequential Real Browser UI/UX Layout pass for the next single public tester information page after v1.221 `/release/readiness` closure. The work must stay page-scoped, Base First and browser-evidence driven.
+Continue the sequential Real Browser UI/UX Layout pass for the next single public service status page after v1.222 `/release/tester-pack` closure. The work must stay page-scoped, Base First and browser-evidence driven.
 
-Current FE scope: select `/release/tester-pack` as the next single active page after v1.221 `/release/readiness` closure. Complete `/release/tester-pack` fully before any other page: confirm the registered public route target, apply only the minimal target correction needed if it blocks comparison, then prioritize the real Tester Pack UI/UX Layout in browser. Required work is first-fold tester preparation structure, visual hierarchy, spacing, typography scale, tester checklist and safe-feedback density, mobile behavior, keyboard/focus/accessibility, screenshot/design-target comparison, docs/handoff/ledger, local commit and ZIP/SHA256 handoff (push waived).
+Current FE scope: select `/status` as the next single active page after v1.222 `/release/tester-pack` closure. Complete `/status` fully before any other page: confirm the registered public route target, apply only the minimal target correction needed if it blocks comparison, then prioritize the real Status UI/UX Layout in browser. Required work is first-fold honest service state and incident/maintenance reading structure, visual hierarchy, spacing, typography scale, service component and history density, mobile behavior, keyboard/focus/accessibility, screenshot/design-target comparison, docs/handoff/ledger, local commit and ZIP/SHA256 handoff (push waived).
 
 Mandatory execution rules:
 
@@ -23,7 +23,7 @@ Mandatory execution rules:
 3. CSS must be managed by owner/role.
    Theme/tokens belong in `packages/design-tokens`; reusable component/layout style belongs in `packages/ui`; app/page code should compose base classes and keep only real route-specific differences. Do not inflate `apps/web/src/app/globals.css` with repeated current-page blocks.
 
-4. Do not move past `/release/tester-pack` until closure evidence exists:
+4. Do not move past `/status` until closure evidence exists:
    - render page in browser/e2e;
    - e2e or browser metrics for desktop/mobile;
    - screenshot/visual review against the design target and shared shell;
@@ -41,7 +41,7 @@ Mandatory execution rules:
    - multiple pages at once.
 
 6. If execution drifts, stop and reset to this page:
-   - return to `/release/tester-pack`;
+   - return to `/status`;
    - inspect the rendered browser layout;
    - check Base First owners;
    - modify shared base if a pattern repeats;
