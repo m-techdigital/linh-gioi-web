@@ -78,3 +78,5 @@ export type { GuidanceQuestionGroup } from "./question-directory";
 
 export { PrivacyNotice, DataBoundaryColumns } from "./privacy-guidance";
 export type { PrivacyNoticeItem } from "./privacy-guidance";
+
+export { PrincipleMedallions } from "./guidance";

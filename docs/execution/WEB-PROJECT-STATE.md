@@ -1,3 +1,17 @@
+Current phase: WEB-FE-COMMUNITY-REAL-UI-LAYOUT-v1.227 WEB_CLOSED.
+
+Current decision: /community renders a vista hero, three paper guidance panels, principle navigation, prototype gallery and native conduct disclosures. The gallery link cue clipping defect was fixed and regression-tested. Production regression 110/110 PASS; five-viewport screenshot/axe review; 63-page build. No live community service or signup/entitlement flow was added.
+
+Delivery: reviewed commit and normal push to origin/main; verify remote HEAD and source/delta/evidence ZIP/SHA256. Never force-push or commit local handoff artifacts.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.228.
+Select `/community/onboarding` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-COMMUNITY-REAL-UI-LAYOUT-REPORT-v1.227.md.
+Whole-app no-JavaScript streaming limitation remains open; backend/production gates remain blocked.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-SUPPORT-SAFETY-REAL-UI-LAYOUT-v1.226 WEB_CLOSED.
 
 Current decision: /support/safety has a real privacy notice, interactive five-step local checklist, visible checked-card feedback, paired data boundaries and source-backed safe issue paths. Production regression 90/90 PASS; five viewport screenshots/axe; 63-page build. No ticket intake, data upload, automatic redaction or backend was added. Whole-app no-JavaScript streaming limitation remains open.

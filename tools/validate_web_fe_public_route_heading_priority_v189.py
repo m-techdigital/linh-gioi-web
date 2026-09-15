@@ -20,11 +20,11 @@ def require_order(rel: str, first: str, second: str) -> None:
     if a < 0 or b < 0 or a > b: fail(f"{rel}: expected {first} before {second}")
 def check_routes() -> None:
     require_order("apps/web/src/app/accessibility/page.tsx", "<h1>Dễ đọc và dễ thao tác</h1>", "<PlayerTrustReleaseCta />")
-    require_order("apps/web/src/app/community/page.tsx", "<h1>Cộng đồng Linh Giới</h1>", "<PlayerTrustReleaseCta />")
+    require_order("apps/web/src/app/community/page.tsx", "<PublicCommunityHero/>", "<PublicCommunityPanels/>")
     require_order("apps/web/src/app/game/loop/page.tsx", "<h1>Vòng lặp gameplay thế giới</h1>", "<PlayerTrustReleaseCta />")
     require_order("apps/web/src/app/performance/page.tsx", "<h1>Hiệu năng và ngân sách nội dung</h1>", "<PlayerTrustReleaseCta />")
     require_text("apps/web/src/app/accessibility/page.tsx", ["Chưa có audit WCAG chính thức", "chưa có claim pháp lý", "chưa có thiết lập cá nhân"])
-    require_text("apps/web/src/app/community/page.tsx", ["Chưa có trò chuyện · chưa có diễn đàn · chưa có bang hội", "chưa mở trò chuyện, diễn đàn, bang hội", "điều phối thật"])
+    require_text("apps/web/src/components/PublicCommunityExperience.tsx", ['title="Cộng đồng Linh Giới"', "Chưa có trò chuyện, diễn đàn hoặc bang hội", "không có kiểm duyệt trực tiếp", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("apps/web/src/app/game/loop/page.tsx", ["không công bố", "combat trực tiếp", "tích hợp tài khoản thật"])
     require_text("apps/web/src/app/performance/page.tsx", ["Chưa có đo Core Web Vitals", "chưa có chứng nhận Lighthouse", "chưa có CDN ảnh riêng"])
 def check_tests_and_docs() -> None:

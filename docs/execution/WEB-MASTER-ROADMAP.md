@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: v1.226 `/support/safety` verified; next v1.227 `/community`. Delivery: commit/push, remote HEAD verification and ZIP/SHA256. Backend/production gates remain blocked. Whole-app JavaScript-disabled access needs a separate root-rendering decision.
+Current visual checkpoint: v1.227 `/community` verified; next v1.228 `/community/onboarding`. Delivery: commit/push, remote HEAD verification and ZIP/SHA256. No live social backend/production release. Whole-app no-JavaScript limitation remains open.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 

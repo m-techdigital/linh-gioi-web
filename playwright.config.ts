@@ -28,6 +28,10 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.227 replaces community mockup/compact layout; v1.91 asset/gallery coverage stays active.
+    "**/fe-community-real-ui-layout-v1149.spec.ts",
+    "**/fe-community-real-ui-layout-v1207.spec.ts",
+
     // v1.226 supersedes static safety mockup assertions; not counted as PASS.
     "**/fe-public-safety-support-design-board-v172.spec.ts",
     "**/fe-support-safety-design-target-density-v1133.spec.ts",

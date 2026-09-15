@@ -47,3 +47,16 @@ export function QuestionDisclosureList({ items }: { items: readonly GuidanceQues
     </details>)}
   </div>;
 }
+
+/** Linked community/guide principles; this is navigation, not a membership control. */
+export function PrincipleMedallions({ items, label }: {
+  items: readonly { id: string; title: string; icon: ReleaseIconName; href: string }[];
+  label: string;
+}) {
+  return <nav className="lgo-principle-medallions" aria-label={label}>
+    {items.map(item => <a href={item.href} key={item.id}>
+      <span className="lgo-principle-medallion"><ReleaseIcon name={item.icon}/></span>
+      <strong>{item.title}</strong>
+    </a>)}
+  </nav>;
+}

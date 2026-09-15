@@ -32,9 +32,9 @@ async function collectGalleryMetrics(page: Page): Promise<GalleryMetrics> {
       const style = getComputedStyle(element);
       return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
     });
-    const gallery = document.querySelector<HTMLElement>('[aria-label="Ảnh thật quảng trường Linh Thành"]');
-    const cards = Array.from(gallery?.querySelectorAll<HTMLElement>("figure") ?? []);
-    const captions = Array.from(gallery?.querySelectorAll<HTMLElement>("figcaption") ?? []);
+    const gallery = document.querySelector<HTMLElement>('#community-runtime-gallery');
+    const cards = Array.from(gallery?.querySelectorAll<HTMLElement>(".lgo-media-frame") ?? []);
+    const captions = Array.from(gallery?.querySelectorAll<HTMLElement>(".lgo-media-frame-copy p") ?? []);
     const firstTop = cards[0]?.getBoundingClientRect().top ?? 0;
     const columnCount = new Set(cards.filter((card) => Math.abs(card.getBoundingClientRect().top - firstTop) < 4).map((card) => Math.round(card.getBoundingClientRect().left))).size;
     return {
@@ -59,7 +59,7 @@ async function collectGalleryMetrics(page: Page): Promise<GalleryMetrics> {
 test.describe("public community real plaza gallery", () => {
   test("/community uses real Linh Thanh plaza screenshots without backend claims or layout overflow", async ({ page, isMobile }) => {
     await page.goto(`${web}/community`);
-    await expect(page.getByRole("heading", { level: 2, name: "Ảnh thật từ quảng trường Linh Thành" })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 2, name: "Khung hình prototype Linh Thành" })).toBeVisible();
     for (const screenshot of screenshots) {
       await expect(page.getByRole("img", { name: screenshot.alt })).toBeVisible();
     }
