@@ -18,7 +18,8 @@
     "./question-directory.css": "./src/question-directory.css",
     "./safety-layout.css": "./src/safety-layout.css",
     "./community-layout.css": "./src/community-layout.css",
-    "./reading-journey.css": "./src/reading-journey.css"
+    "./reading-journey.css": "./src/reading-journey.css",
+    "./performance-layout.css": "./src/performance-layout.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

@@ -28,6 +28,11 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.229 replaces embedded performance HUD/compact assertions with live reader controls; NOT PASS.
+    "**/fe-public-performance-design-board-v176.spec.ts",
+    "**/fe-performance-real-ui-layout-v1151.spec.ts",
+    "**/fe-performance-real-ui-layout-v1209.spec.ts",
+
     // v1.228 replaces mislabeled combat-board/compact onboarding cases; not counted as PASS.
     "**/fe-public-community-onboarding-design-board-v175.spec.ts",
     "**/fe-community-onboarding-real-ui-layout-v1150.spec.ts",

@@ -83,3 +83,6 @@ export { PrincipleMedallions } from "./guidance";
 
 export { ReadingJourney } from "./reading-journey";
 export type { ReadingJourneyStep } from "./reading-journey";
+
+export { ReadingPreview } from "./reading-preview";
+export type { ReadingPreviewImage } from "./reading-preview";

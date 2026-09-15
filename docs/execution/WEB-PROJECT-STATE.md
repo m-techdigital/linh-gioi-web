@@ -1,3 +1,17 @@
+Current phase: WEB-FE-PERFORMANCE-REAL-UI-LAYOUT-v1.229 WEB_CLOSED.
+
+Current decision: /performance has an editorial priority hero, functional disposable reading workshop, on-demand illustration and truthful unmeasured-state guidance. Production 140/140 PASS; 5 viewport screenshots/axe; 63-page build. No global settings, performance telemetry, speed score or CDN claim.
+
+Delivery: reviewed commit and normal push to origin/main; remote HEAD verification and source/delta/evidence ZIP/SHA256. No force-push, no deployment, no handoff artifacts in Git.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.230.
+Select `/accessibility` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-PERFORMANCE-REAL-UI-LAYOUT-REPORT-v1.229.md.
+Whole-app JavaScript-disabled streaming limitation remains open. Backend/production gates remain blocked.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-COMMUNITY-ONBOARDING-REAL-UI-LAYOUT-v1.228 WEB_CLOSED.
 
 Current decision: /community/onboarding now renders a manual hero, real three-step reading selector, bounded previous/next controls and truthful no-waitlist guidance. The unrelated M1 combat SVG was removed from page content and the exact route comparison was scoped to the accepted Vietnamese community design family. Production regression 128/128 PASS; five viewport screenshots/axe; 63-page build. No registration or entitlement was added.

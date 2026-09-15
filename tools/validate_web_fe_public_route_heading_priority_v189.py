@@ -22,11 +22,11 @@ def check_routes() -> None:
     require_order("apps/web/src/app/accessibility/page.tsx", "<h1>Dễ đọc và dễ thao tác</h1>", "<PlayerTrustReleaseCta />")
     require_order("apps/web/src/app/community/page.tsx", "<PublicCommunityHero/>", "<PublicCommunityPanels/>")
     require_order("apps/web/src/app/game/loop/page.tsx", "<h1>Vòng lặp gameplay thế giới</h1>", "<PlayerTrustReleaseCta />")
-    require_order("apps/web/src/app/performance/page.tsx", "<h1>Hiệu năng và ngân sách nội dung</h1>", "<PlayerTrustReleaseCta />")
+    require_order("apps/web/src/app/performance/page.tsx", "<PublicPerformanceHero/>", "<PublicPerformanceWorkshop/>")
     require_text("apps/web/src/app/accessibility/page.tsx", ["Chưa có audit WCAG chính thức", "chưa có claim pháp lý", "chưa có thiết lập cá nhân"])
     require_text("apps/web/src/components/PublicCommunityExperience.tsx", ['title="Cộng đồng Linh Giới"', "Chưa có trò chuyện, diễn đàn hoặc bang hội", "không có kiểm duyệt trực tiếp", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("apps/web/src/app/game/loop/page.tsx", ["không công bố", "combat trực tiếp", "tích hợp tài khoản thật"])
-    require_text("apps/web/src/app/performance/page.tsx", ["Chưa có đo Core Web Vitals", "chưa có chứng nhận Lighthouse", "chưa có CDN ảnh riêng"])
+    require_text("apps/web/src/components/PublicPerformanceExperience.tsx", ['title="Hiệu năng và ngân sách nội dung"', "Chưa có số đo production", "Core Web Vitals", "Chưa chứng nhận", "Chưa có CDN riêng", "Không phải kết quả benchmark"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-route-heading-priority-v189.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-v1.89.md", "LGO-WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-REPORT-v1.89.md", "HANDOFF-LGO-WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-v1.89.md"]: require_file(rel)
     require_text("tests/e2e/fe-public-route-heading-priority-v189.spec.ts", ["/accessibility", "/community", "/game/loop", "/performance", "starts content with the page h1", "pageOverflow", "maxFont"])
