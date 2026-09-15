@@ -1,3 +1,17 @@
+Current phase: WEB-FE-SUPPORT-COMMUNITY-GUIDE-ARTICLE-v1.239 WEB_CLOSED.
+
+Current decision: /guides/support-and-community-guide has four source-exact chapters, real explanatory destinations and responsive/native article navigation. Production 282/282 PASS; 63-page build; five viewport screenshots/axe; 12 sibling DOM/geometry matches. No ticket or live community service.
+
+Delivery: reviewed commit, normal origin/main push, exact remote confirmation and source/delta/evidence ZIP/SHA256. External manifest must match this checkpoint; no deployment or handoff artifacts in Git.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.240.
+Select `/guides/release-trust-and-checksum-guide` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate; preserve source-authored evidence guidance.
+
+Detailed report: LGO-WEB-FE-SUPPORT-COMMUNITY-GUIDE-ARTICLE-REPORT-v1.239.md.
+Whole-app JavaScript-disabled streaming remains open; earlier non-reproduced dev fragment observation is not claimed fixed.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-DOWNLOAD-READINESS-GUIDE-ARTICLE-v1.238 WEB_CLOSED.
 
 Current decision: /guides/download-readiness-guide has four complete source-authored condition chapters, responsive contents and real reading destinations. Reuses the article/body without new CSS or controllers. Production 268/268 PASS; 63-page build; five viewport captures/axe; ten sibling DOM/geometry matches. No fake checksum, download or entitlement.
