@@ -1,3 +1,4 @@
+import { PublicReleaseTrustGuide } from "../../../components/PublicReleaseTrustGuide";
 import { PublicSupportCommunityGuide } from "../../../components/PublicSupportCommunityGuide";
 import { PublicDownloadReadinessGuide } from "../../../components/PublicDownloadReadinessGuide";
 import { PublicTrainingLoopGuide } from "../../../components/PublicTrainingLoopGuide";
@@ -57,6 +58,10 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
 
   if (entry.slug === "support-and-community-guide") {
     return <WebAppShell><PublicSupportCommunityGuide entry={entry}/></WebAppShell>;
+  }
+
+  if (entry.slug === "release-trust-and-checksum-guide") {
+    return <WebAppShell><PublicReleaseTrustGuide entry={entry}/></WebAppShell>;
   }
 
   const isGateEntryGuide = entry.slug === "gate-entry-guide";

@@ -1,3 +1,17 @@
+Current phase: WEB-FE-RELEASE-TRUST-GUIDE-ARTICLE-v1.240 WEB_CLOSED.
+
+Current decision: /guides/release-trust-and-checksum-guide has four source-exact chapters, responsive contents and real evidence-reading destinations. Existing article/hero/body reused unchanged. Production 296/296 PASS; 63-page build; five viewport screenshots/axe; 14 sibling DOM/geometry matches. No fake hash or download service.
+
+Delivery: reviewed commit, normal origin/main push, exact remote confirmation and source/delta/evidence ZIP/SHA256. External manifest must match; no deployment or handoff artifacts in Git.
+
+Next task: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.241.
+Select `/guides/community-roadmap-onboarding-guide` as the next single active page. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate; source-authored reading only.
+
+Detailed report: LGO-WEB-FE-RELEASE-TRUST-GUIDE-ARTICLE-REPORT-v1.240.md.
+Whole-app JavaScript-disabled streaming remains open; earlier non-reproduced dev fragment observation is not claimed fixed.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-SUPPORT-COMMUNITY-GUIDE-ARTICLE-v1.239 WEB_CLOSED.
 
 Current decision: /guides/support-and-community-guide has four source-exact chapters, real explanatory destinations and responsive/native article navigation. Production 282/282 PASS; 63-page build; five viewport screenshots/axe; 12 sibling DOM/geometry matches. No ticket or live community service.

@@ -28,6 +28,8 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.240 replaces only the compact trust/checksum article layout; historical is not PASS.
+    "**/fe-guides-release-trust-real-ui-layout-v1162.spec.ts",
     // v1.239 replaces only the compact support/community guide layout; historical is not PASS.
     "**/fe-guides-support-community-real-ui-layout-v1161.spec.ts",
     // v1.238 supersedes only the old compact download-readiness article, not a runtime PASS.
