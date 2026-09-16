@@ -1,3 +1,17 @@
+Current phase: WEB-FE-RELEASE-READINESS-GUIDE-ARTICLE-v1.248 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /guides/release-readiness-hub-guide has four linked source shortcuts, four complete chapters and seven contextual native actions. Production regression 440/440; 63-page build; five viewports and 32 sibling geometry comparisons. Gate and tester destinations verified; no approval state duplicated.
+
+Delivery gate: reviewed commit, normal origin/main push, exact remote HEAD and verified full/delta/evidence ZIP/SHA256/replay are required for effective closure. No deployment or local handoff artifacts in source Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.249.
+Select `/guides/closed-tester-information-pack-guide` only after v1.248 delivery. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-RELEASE-READINESS-GUIDE-ARTICLE-REPORT-v1.248.md.
+Whole-app JavaScript-disabled streaming remains open. Owner PID capacity waiver remains; future pause/ownership checks retained.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-PLAYER-TRUST-GUIDE-ARTICLE-v1.247 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /guides/player-trust-release-guide now has an illustrated editorial header, four complete source chapters and six contextual native actions. Production regression 420/420; 63-page build; five viewport captures and 30 sibling geometry checks. No signup, download artifact or access grant.

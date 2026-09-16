@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: v1.247 `/guides/player-trust-release-guide` verified; next v1.248 `/guides/release-readiness-hub-guide` only after delivery. WEB_CLOSED requires normal push, remote HEAD and verified ZIP/SHA256. Source reading guidance is not test signup or access. Whole-app JavaScript-disabled access remains open.
+Current visual checkpoint: v1.248 `/guides/release-readiness-hub-guide` verified; next v1.249 `/guides/closed-tester-information-pack-guide` after delivery. Closure requires normal push, remote HEAD and verified ZIP/SHA256. Guidance is not owner approval or test access. Whole-app JavaScript-disabled access remains open.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 

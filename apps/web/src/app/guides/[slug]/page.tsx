@@ -1,3 +1,4 @@
+import { PublicReleaseReadinessGuide } from "../../../components/PublicReleaseReadinessGuide";
 import { PublicPlayerTrustGuide } from "../../../components/PublicPlayerTrustGuide";
 import { PublicRouteContinuityGuide } from "../../../components/PublicRouteContinuityGuide";
 import "@lgo-web/ui/performance-layout.css";
@@ -46,6 +47,10 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
   const { slug } = await params;
   const entry = localContentRepository.bySlug(slug);
   if (!entry || entry.category !== "guides") notFound();
+
+  if (entry.slug === "release-readiness-hub-guide") {
+    return <WebAppShell><PublicReleaseReadinessGuide entry={entry}/></WebAppShell>;
+  }
 
   if (entry.slug === "player-trust-release-guide") {
     return <WebAppShell><PublicPlayerTrustGuide entry={entry}/></WebAppShell>;
