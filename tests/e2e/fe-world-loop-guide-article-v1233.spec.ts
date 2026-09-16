@@ -125,7 +125,7 @@ test.describe('world-loop guide article and native navigation v1.233', () => {
     for (const item of published) expect((await page.request.get(`${origin}/guides/${item.slug}`)).status(), item.slug).toBe(200);
     const news = contentEntries.find(item => item.category === 'news' && item.status === 'published')!;
     expect((await page.request.get(`${origin}/guides/${news.slug}`)).status()).toBe(404);
-    for (const slug of ['gate-entry-guide', 'beginner-training-loop-guide', 'player-safety-support-guide', 'accessibility-readability-guide', 'performance-copy-budget-guide', 'route-continuity-conversion-guide', 'player-trust-release-guide', 'release-readiness-hub-guide', 'closed-tester-information-pack-guide']) {
+    for (const slug of ['gate-entry-guide', 'beginner-training-loop-guide', 'player-safety-support-guide', 'accessibility-readability-guide', 'performance-copy-budget-guide', 'route-continuity-conversion-guide', 'player-trust-release-guide', 'release-readiness-hub-guide', 'closed-tester-information-pack-guide', 'faq-search-helpfulness-guide']) {
       await page.goto(`${origin}/guides/${slug}`);
       const expected = contentEntries.find(item => item.slug === slug)!;
       await expect(page.getByRole('heading', { level: 1, name: expected.title, exact: true })).toBeVisible();
@@ -167,6 +167,11 @@ test.describe('world-loop guide article and native navigation v1.233', () => {
       } else if (slug === 'release-readiness-hub-guide') {
         // v1.248 specializes this guide; the closed-tester guide remains the generic-renderer control.
         await expect(page.locator('.lgo-readiness-guide')).toBeVisible();
+        await expect(page.locator('.lgo-guide-article-section')).toHaveCount(guideDetailSteps.filter(item => item.slug === slug).length);
+        await expect(page.locator('.lgo-guide-detail-steps')).toHaveCount(0);
+      } else if (slug === 'closed-tester-information-pack-guide') {
+        // v1.249 owns this exact article; FAQ remains the generic control below.
+        await expect(page.locator('.lgo-tester-guide')).toBeVisible();
         await expect(page.locator('.lgo-guide-article-section')).toHaveCount(guideDetailSteps.filter(item => item.slug === slug).length);
         await expect(page.locator('.lgo-guide-detail-steps')).toHaveCount(0);
       } else {

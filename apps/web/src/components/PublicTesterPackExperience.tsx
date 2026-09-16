@@ -49,7 +49,8 @@ export function TesterPackFeedback() {
       <p className="lgo-release-paper-quote">“Cùng quan sát. Cùng cải thiện.<br />Linh Giới tử tế hơn.”</p>
       <LinkButton href="/support/safety" tone="neutral">Đọc hướng dẫn an toàn <ReleaseIcon name="arrow" /></LinkButton>
     </section>
-    <section id="tester-feedback" className="lgo-release-reading-panel lgo-release-frame" aria-labelledby="tester-feedback-heading">
+    <section id="tester-feedback" tabIndex={-1} className="lgo-release-reading-panel lgo-release-frame" aria-labelledby="tester-feedback-heading">
+      <ArticleFragmentRestoration targetIds={["tester-feedback"]} />
       <SectionHeading headingId="tester-feedback-heading" eyebrow="Rõ ràng · Cụ thể · Tôn trọng" title="Mẫu phản hồi" />
       <p>Chọn mẫu để tự ghi nhận sau này. Nút sao chép chỉ chép mẫu văn bản, không gửi phản hồi.</p>
       <TemplateTabs label="Mẫu phản hồi" templates={feedbackTemplates} />
@@ -68,7 +69,8 @@ export function TesterPackPreparation() {
       <LocalChecklist items={preparationItems} label="Tự kiểm tra chuẩn bị tester" />
       <ArticleFragmentRestoration targetIds={["tester-checklist"]} />
     </section>
-    <section id="tester-device" className="lgo-release-reading-panel lgo-release-frame" aria-labelledby="tester-device-heading">
+    <section id="tester-device" tabIndex={-1} className="lgo-release-reading-panel lgo-release-frame" aria-labelledby="tester-device-heading">
+      <ArticleFragmentRestoration targetIds={["tester-device"]} />
       <SectionHeading headingId="tester-device-heading" eyebrow="Đủ để tái hiện, không để định danh" title="Báo cáo thiết bị" />
       <p>Ghi thông tin tổng quát, không tự động quét thiết bị và không thu thập dữ liệu cá nhân.</p>
       <dl className="lgo-release-device-guide">{deviceReportTemplateFields.map(item => <div key={item.field}>
@@ -79,7 +81,8 @@ export function TesterPackPreparation() {
   </div>;
 }
 export function TesterPackLimitations() {
-  return <section id="tester-limits" className="lgo-tester-limitations" aria-labelledby="tester-limits-heading">
+  return <section id="tester-limits" tabIndex={-1} className="lgo-tester-limitations" aria-labelledby="tester-limits-heading">
+      <ArticleFragmentRestoration targetIds={["tester-limits"]} />
     <div className="lgo-release-section-heading"><SectionHeading headingId="tester-limits-heading" eyebrow="Đọc trước một lời mời" title="Giới hạn đã biết" /><p>Hướng dẫn có thể sẵn sàng trước khi bản test được mở.</p></div>
     <div className="lgo-release-limits-grid">{knownLimitationNotes.map(item => <details className="lgo-release-limit" key={item.area}>
       <summary><ReleaseIcon name="lock" /><strong>{item.area}</strong><span aria-hidden="true">+</span></summary>

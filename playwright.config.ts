@@ -28,6 +28,8 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.249 owns only this formerly compact article; tester/privacy and real navigation stay active.
+    "**/fe-guides-closed-tester-information-pack-real-ui-layout-v1172.spec.ts",
     // v1.248 replaces only this guide's compact-layout assertions. Source/route tests remain active.
     "**/fe-guides-release-readiness-hub-real-ui-layout-v1171.spec.ts",
     // v1.247 replaces this exact compact guide; HTTP/source/interaction guards remain active.
