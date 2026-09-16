@@ -1,3 +1,4 @@
+import { PublicSafetySupportArticle } from "../../../components/PublicSafetySupportArticle";
 import { PublicWorldLoopArticle } from "../../../components/PublicWorldLoopArticle";
 import { PublicContentHubArticle } from "../../../components/PublicContentHubArticle";
 import { PublicCommunityOnboardingArticle } from "../../../components/PublicCommunityOnboardingArticle";
@@ -74,6 +75,10 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
 
   if (entry.slug === "world-gameplay-loop-depth-started") {
     return <WebAppShell><PublicWorldLoopArticle entry={entry} related={related}/></WebAppShell>;
+  }
+
+  if (entry.slug === "player-safety-support-faq-polish-started") {
+    return <WebAppShell><PublicSafetySupportArticle entry={entry} related={related}/></WebAppShell>;
   }
 
   return (

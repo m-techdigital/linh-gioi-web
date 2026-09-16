@@ -1,3 +1,17 @@
+Current phase: WEB-FE-SAFETY-SUPPORT-ARTICLE-v1.264 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /news/player-safety-support-faq-polish-started uses unchanged PublishedArticle with two full source chapters, original date/related articles and8 reading paths. Actual Safety checklist and FAQ reporting/privacy groups verified without editing destination tools. Fresh production896/896 in64 files, build63, five viewports and80 raw DOM/geometry matches. No CSS/package/content/dependency changes.
+
+Delivery gate: reviewed normal commit/push, exact remote HEAD and verified full/delta/evidence ZIP/SHA256/replay. No production deployment or handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.265.
+Select `/news/accessibility-readability-polish-started` only after v1.264 delivery. Real Browser UI/UX Layout First, Base First, Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-SAFETY-SUPPORT-ARTICLE-REPORT-v1.264.md.
+Reuse dev3221/production3236 with Manager ensure/native identity review. Release finished handoff claim after verified delivery; retain archives. Whole-app JavaScript-disabled streaming remains open. Old dashboard task stays operator REVIEW; PID waiver and pause/recovery/ownership checks remain active.
+
+Historical snapshots below are not active delivery policy.
+
 Current phase: WEB-FE-WORLD-LOOP-ARTICLE-v1.263 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /news/world-gameplay-loop-depth-started uses unchanged PublishedArticle with two full source chapters, original date/related articles and8 reading paths. Actual world-loop and guide interactions verified without changing destination tools. Fresh production866/866 in64 files, build63, five viewports and74 raw DOM/geometry matches. No CSS/package/content/dependency changes.
