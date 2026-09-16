@@ -5,12 +5,12 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.252
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.253
 
 Objective:
-Continue the sequential Real Browser UI/UX Layout pass for the public patch-notes page after v1.251 `/events` closure. Keep the work page-scoped, Base First and browser-evidence driven.
+Continue the sequential Real Browser UI/UX Layout pass for the public news page after v1.252 `/patch-notes` closure. Keep the work page-scoped, Base First and browser-evidence driven.
 
-Current FE scope: select `/patch-notes` as the next single active page after v1.251 `/events` closure. Complete `/patch-notes` fully before any other page. Use its registered public route target as the comparison guardrail and prioritize real patch-notes UI/UX Layout: source-backed development notes, complete readable records and publication semantics, clear distinction from downloadable game builds, native reading routes, spacing, typography, responsive density, keyboard/focus and actual interaction. No invented release versions, binaries, checksum/signatures, deploy status, patch downloads, update service, account personalization or gameplay controls.
+Current FE scope: select `/news` as the next single active page after v1.252 `/patch-notes` closure. Complete `/news` fully before any other page. Use its registered public route target as the comparison guardrail and prioritize real news UI/UX Layout: source-backed published news discovery, complete readable summaries and article links, publication semantics and clear distinction from live game operations, native reading routes, spacing, typography, responsive density, keyboard/focus and actual interaction. No invented articles, publication dates, live-news feed, personal recommendations, subscriber counts, notifications, release availability or backend.
 
 Mandatory execution rules:
 
@@ -23,7 +23,7 @@ Mandatory execution rules:
 3. CSS must be managed by owner/role.
    Theme/tokens: packages/design-tokens. Reusable component/layout style: packages/ui. Apps compose base and keep only truly route-specific differences. Do not inflate apps/web/src/app/globals.css with duplicate page blocks.
 
-4. Do not move past `/patch-notes` until closure evidence exists:
+4. Do not move past `/news` until closure evidence exists:
    - render in real browser/e2e;
    - desktop/mobile metrics and screenshot/visual review against the target and accepted shell;
    - active source validator and necessary typecheck/build;
@@ -32,7 +32,7 @@ Mandatory execution rules:
 
 5. Forbidden substitutes: text-only/copy-only, translation-only, design-only, validator/doc-only, content edits without browser evidence, multiple pages at once. Never relax layout tests just to obtain PASS.
 
-6. If execution drifts, return to `/patch-notes`, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until `/patch-notes` is closed.
+6. If execution drifts, return to `/news`, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until `/news` is closed.
 
 Non-claims: FE-only until accepted game backend contracts exist. No independent backend. No production auth. No DB persistence. No CMS. No production deployment. No payment/shop/economy.
 

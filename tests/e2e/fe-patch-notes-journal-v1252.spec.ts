@@ -1,0 +1,97 @@
+import { test, expect } from '@playwright/test';
+import { contentEntries } from '../../packages/content/src/fixtures';
+const origin=process.env.LGO_WEB_URL??'http://127.0.0.1:3000';
+const entries=contentEntries.filter(entry=>entry.category==='patch-notes'&&entry.status==='published');
+
+test.describe('patch-notes are readable announcements, not live operations v1.252',()=>{
+  test.beforeEach(async({page})=>{await page.goto(origin+'/patch-notes');await expect(page.getByRole('heading',{level:1,name:'Ghi chú cập nhật Linh Giới',exact:true})).toBeVisible();});
+  test('illustrated hero and full-width editorial announcement replace tiny proof cards',async({page,isMobile})=>{
+    const root=page.locator('.lgo-patch-notes-experience');await expect(root).toBeVisible();
+    await expect(root.locator('.lgo-announcement-card')).toHaveCount(entries.length);
+    await expect(root.locator('img[src*=design-reference],.lgo-service-compact-proof-page')).toHaveCount(0);
+    const metrics=await root.evaluate(e=>{
+      const copy=e.querySelector('.lgo-release-hero-copy')!.getBoundingClientRect(),note=e.querySelector('.lgo-performance-priority-console')!.getBoundingClientRect(),board=e.querySelector('.lgo-announcement-board')!.getBoundingClientRect(),card=e.querySelector('.lgo-announcement-card')!.getBoundingClientRect();
+      const img=e.querySelector('.lgo-release-hero-art') as HTMLImageElement;
+      return {copy:copy.toJSON(),note:note.toJSON(),board:board.toJSON(),card:card.toJSON(),loaded:img.complete&&img.naturalWidth>0,overflow:document.documentElement.scrollWidth-innerWidth};
+    });
+    expect(metrics.loaded).toBe(true);expect(metrics.overflow).toBeLessThanOrEqual(0);expect(metrics.card.width).toBeGreaterThan(metrics.board.width*.9);
+    if(isMobile)expect(metrics.note.top).toBeGreaterThanOrEqual(metrics.copy.bottom);else expect(metrics.note.left).toBeGreaterThanOrEqual(metrics.copy.right);
+    await page.screenshot({path:test.info().outputPath('patch-notes-layout.png'),fullPage:true});
+  });
+  test('only published development records appear, with exact descriptions and posting time not game release dates',async({page})=>{
+    const cards=page.locator('.lgo-announcement-card');await expect(cards).toHaveCount(entries.length);
+    for(const [index,entry] of entries.entries()){
+      const card=cards.nth(index);await expect(card).toHaveAttribute('data-announcement-id',entry.slug);
+      await expect(card.getByRole('heading',{level:3})).toHaveText(entry.title);await expect(card.locator('.lgo-announcement-description')).toHaveText(entry.summary);
+      await expect(card.locator('time')).toHaveAttribute('datetime',entry.publishedAt);
+      await expect(card.locator('time')).toHaveText(entry.publishedAt.slice(0,10).split('-').reverse().join('/'));
+      await expect(card).toContainText('Ngày đăng nội dung');await expect(card).toContainText('Không phải ngày phát hành game');
+      expect(await card.locator('.lgo-announcement-description').evaluate(e=>getComputedStyle(e).webkitLineClamp)).toBe('none');
+      await card.locator('summary').click();await expect(card.locator('.lgo-announcement-body')).toHaveText(entry.body);
+    }
+    for(const entry of contentEntries.filter(entry=>entry.category==='patch-notes'&&entry.status!=='published'))await expect(page.locator(`[data-announcement-id="${entry.slug}"]`)).toHaveCount(0);
+  });
+  test('native disclosure opens the complete body with Enter and Space without requests or saved state',async({page})=>{
+    const card=page.locator('.lgo-announcement-card').first(),details=card.locator('details'),summary=details.locator('summary');await expect(summary).toBeVisible();
+    const requests:string[]=[];page.on('request',r=>{if(r.method()!=='GET'||['fetch','xhr'].includes(r.resourceType()))requests.push(r.url());});
+    await summary.focus();await page.keyboard.press('Enter');await expect(details).toHaveAttribute('open','');await expect(card.locator('.lgo-announcement-body')).toHaveText(entries[0]!.body);
+    expect(await summary.evaluate(e=>getComputedStyle(e).outlineStyle)).not.toBe('none');
+    await page.keyboard.press('Space');await expect(details).not.toHaveAttribute('open','');await expect(summary).toBeFocused();
+    expect(requests).toEqual([]);await page.reload();await expect(details).not.toHaveAttribute('open','');
+  });
+  test('announcement and boundary links arrive below the header and keep native history',async({page})=>{
+    await page.getByRole('link',{name:'Đọc nhật ký hiện có',exact:true}).click();
+    const board=page.locator('#patch-notes-announcements');await expect(board).toBeFocused();
+    await expect.poll(async()=>{const b=await board.boundingBox(),h=await page.locator('header').first().boundingBox();return !!b&&!!h&&b.y>=h.y+h.height&&b.y<500;}).toBe(true);
+    await page.keyboard.press('Tab');await expect(board.locator('summary').first()).toBeFocused();
+    await page.goto('about:blank');await page.goto(origin+'/patch-notes#patch-notes-announcements',{waitUntil:'networkidle'});await expect(board).toBeFocused();
+    await page.goto('about:blank');await page.goto(origin+'/patch-notes#%E0%A4%A',{waitUntil:'networkidle'});await expect(page.locator('.lgo-patch-notes-experience')).toBeVisible();await expect(board).not.toBeFocused();
+    await page.goto(origin+'/patch-notes');await page.locator('.lgo-patch-notes-reading-routes').getByRole('link',{name:'Đọc Trạng thái',exact:true}).click();await expect(page).toHaveURL(origin+'/status');await page.goBack();await expect(page.getByRole('heading',{level:1,name:'Ghi chú cập nhật Linh Giới'})).toBeVisible();
+  });
+  test('status roadmap download and trust routes are real reading destinations',async({page})=>{
+    const routes=page.locator('.lgo-patch-notes-reading-routes');await expect(routes).toBeVisible();
+    const links=routes.getByRole('link');await expect(links).toHaveCount(4);
+    for(const [i,href] of ['/status','/roadmap','/download','/download/trust'].entries()){
+      await expect(links.nth(i)).toHaveAttribute('href',href);expect((await page.request.get(origin+href)).status()).toBe(200);
+      await links.nth(i).focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+href);await expect(page.locator('main h1')).toBeVisible();await page.goBack();
+    }
+    await links.first().focus();await page.keyboard.press('Tab');await expect(links.nth(1)).toBeFocused();
+  });
+  test('no version checksum update download or production release is manufactured',async({page})=>{
+    const root=page.locator('.lgo-patch-notes-experience');await expect(root).toBeVisible();await expect(root).toContainText('Bản ghi không mở tải build mới hoặc xác nhận phát hành game.');await expect(root).toContainText('NO_ACCEPTED_BACKEND_CONTRACT');
+    await expect(root.locator('form,input,textarea,iframe,canvas,video,[role=timer],[role=progressbar],a[download]')).toHaveCount(0);
+    await expect(page.getByRole('button',{name:/Cập nhật ngay|Cài đặt|Tải bản vá|Đăng ký/i})).toHaveCount(0);
+    const text=await root.innerText();expect(text).not.toMatch(/\b[a-f0-9]{64}\b|\b(?:version|phiên bản)\s+\d+\.\d+/i);
+    await expect(root.locator('.lgo-announcement-eyebrow')).toHaveText(entries.map(()=> 'Nhật ký phát triển'));
+    await expect(root.locator('.lgo-announcement-details summary')).toHaveText(entries.map(()=> 'Đọc toàn bộ bản ghi +'));
+    const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.route('**/game-art/**',r=>r.abort());await page.reload();
+    await root.locator('.lgo-announcement-card summary').first().click();await expect(root.locator('.lgo-announcement-body').first()).toHaveText(entries[0]!.body);expect(errors).toEqual([]);
+  });
+  test('320px body and controls remain readable and focused under normal and forced colors',async({page})=>{
+    await page.setViewportSize({width:320,height:800});const root=page.locator('.lgo-patch-notes-experience');await expect(root).toBeVisible();
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(0);
+    const summary=root.locator('.lgo-announcement-card summary').first();for(const item of await root.locator('.lgo-announcement-card summary').all())await item.click();await summary.focus();
+    for(const body of await root.locator('.lgo-announcement-description,.lgo-announcement-body').all())expect(await body.evaluate(e=>parseFloat(getComputedStyle(e).fontSize))).toBeGreaterThanOrEqual(14);
+    for(const action of await root.locator('a,summary').all())expect((await action.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+    await page.keyboard.press('Tab');await page.keyboard.press('Shift+Tab');await expect(summary).toBeFocused();expect(await summary.evaluate(e=>getComputedStyle(e).outlineStyle)).not.toBe('none');
+    await page.emulateMedia({forcedColors:'active'});expect(await summary.evaluate(e=>getComputedStyle(e).outlineStyle)).not.toBe('none');
+    await page.screenshot({path:test.info().outputPath('patch-notes-forced-colors.png'),fullPage:true});
+  });
+  test('expanded notices and navigation have coherent labels and accessible main content',async({page})=>{
+    const root=page.locator('.lgo-patch-notes-experience');await expect(root).toBeVisible();await expect(root.locator('h1')).toHaveCount(1);
+    for(const summary of await root.locator('.lgo-announcement-card summary').all())await summary.click();
+    const bad=await root.locator('[aria-labelledby]').evaluateAll(nodes=>nodes.filter(n=>(n.getAttribute('aria-labelledby')??'').split(/\s+/).some(id=>!/^H[1-6]$/.test(document.getElementById(id)?.tagName??''))).map(n=>n.getAttribute('aria-labelledby')));expect(bad).toEqual([]);
+    await page.addScriptTag({path:'node_modules/axe-core/axe.min.js'});const violations=await page.evaluate(async()=>{const axe=(window as unknown as {axe:{run:(n:Element|null,o:unknown)=>Promise<{violations:{id:string}[]}>}}).axe;return (await axe.run(document.querySelector('main'),{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}})).violations.map(v=>v.id);});expect(violations).toEqual([]);
+  });
+  test('two native records expand independently and returning from reading routes never submits a patch action',async({page})=>{
+    const cards=page.locator('.lgo-announcement-card');await expect(cards).toHaveCount(2);
+    const first=cards.first().locator('summary'),second=cards.nth(1).locator('summary');
+    await first.focus();await page.keyboard.press('Enter');await expect(cards.first().locator('details')).toHaveAttribute('open','');
+    await page.keyboard.press('Tab');await expect(second).toBeFocused();await page.keyboard.press('Space');
+    await expect(cards.nth(1).locator('details')).toHaveAttribute('open','');await expect(cards.first().locator('details')).toHaveAttribute('open','');
+    await page.keyboard.press('Shift+Tab');await expect(first).toBeFocused();await page.keyboard.press('Enter');
+    await expect(cards.first().locator('details')).not.toHaveAttribute('open','');await expect(cards.nth(1).locator('details')).toHaveAttribute('open','');
+    await page.reload();await expect(page.locator('.lgo-announcement-card details[open]')).toHaveCount(0);
+  });
+
+});

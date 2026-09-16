@@ -8,27 +8,39 @@ export type AnnouncementBoardItem = {
   publication: { iso: string; label: string };
 };
 
-/** Read-only editorial records. Publication dates are never interpreted as event schedules. */
-export function AnnouncementBoard({ items, label, boundary, emptyTitle, emptyDescription }: {
+export type AnnouncementBoardCopy = {
+  eyebrow: string;
+  publicationNote: string;
+  disclosureLabel: string;
+};
+const defaultCopy: AnnouncementBoardCopy = {
+  eyebrow: "Thông báo định hướng",
+  publicationNote: "Không phải ngày tổ chức",
+  disclosureLabel: "Đọc toàn bộ thông báo"
+};
+
+/** Read-only editorial records. Publication dates never imply an event or release schedule. */
+export function AnnouncementBoard({ items, label, boundary, emptyTitle, emptyDescription, copy = defaultCopy }: {
   items: readonly AnnouncementBoardItem[];
   label: string;
   boundary: string;
   emptyTitle: string;
   emptyDescription: string;
+  copy?: AnnouncementBoardCopy;
 }) {
   return <div className="lgo-announcement-board" role="region" aria-label={label}>
     {items.map(item => <article className="lgo-announcement-card lgo-release-paper-panel" key={item.id} data-announcement-id={item.id}
       aria-labelledby={`announcement-${item.id}-heading`}>
       <div className="lgo-announcement-publication"><ReleaseIcon name="document"/>
         <span>Ngày đăng nội dung</span><time dateTime={item.publication.iso}>{item.publication.label}</time>
-        <small>Không phải ngày tổ chức</small>
+        <small>{copy.publicationNote}</small>
       </div>
       <div className="lgo-announcement-copy">
-        <span className="lgo-announcement-eyebrow">Thông báo định hướng</span>
+        <span className="lgo-announcement-eyebrow">{copy.eyebrow}</span>
         <h3 id={`announcement-${item.id}-heading`}>{item.title}</h3>
         <p className="lgo-announcement-description">{item.summary}</p>
         <p className="lgo-announcement-boundary"><ReleaseIcon name="lock"/><span>{boundary}</span></p>
-        <details className="lgo-announcement-details"><summary>Đọc toàn bộ thông báo <span aria-hidden="true">+</span></summary>
+        <details className="lgo-announcement-details"><summary>{`${copy.disclosureLabel} `}<span aria-hidden="true">+</span></summary>
           <p className="lgo-announcement-body">{item.body}</p>
         </details>
       </div>

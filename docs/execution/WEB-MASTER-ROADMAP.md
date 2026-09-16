@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: v1.251 `/events` verified; next v1.252 `/patch-notes` after delivery. Closure requires normal push, exact remote HEAD and verified ZIP/SHA256. Publication dates are not event dates or registration. Whole-app JavaScript-disabled access remains open.
+Current visual checkpoint: v1.252 `/patch-notes` verified; next v1.253 `/news` after delivery. Closure requires normal push, matching remote HEAD and verified ZIP/SHA256. Posting dates and source notes are not game release/build availability. Whole-app JavaScript-disabled access remains open.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 

@@ -1,3 +1,17 @@
+Current phase: WEB-FE-PATCH-NOTES-JOURNAL-v1.252 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /patch-notes renders two exact published records with full native bodies, explicit posting-date semantics and four real onward routes. Shared AnnouncementBoard copy is reusable while event defaults stay unchanged. Fresh production530/530, component7, build63, five viewports and42 sibling geometry matches. No patch download or game release is implied.
+
+Delivery gate: reviewed commit, normal origin/main push, matching remote HEAD and verified full/delta/evidence ZIP/SHA256/replay required. No deployment or handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.253.
+Select `/news` only after v1.252 delivery. Real Browser UI/UX Layout First, Base First, Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-PATCH-NOTES-JOURNAL-REPORT-v1.252.md.
+Whole-app JavaScript-disabled streaming remains open. PID capacity waiver retained; new pause/ownership checks remain active.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-EVENTS-ANNOUNCEMENT-BOARD-v1.251 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /events now has an illustrated community notice board, one exact source announcement, full native disclosure, publication-date semantics and real reading routes. Fresh production512/512, build63, component4; five viewports and42 sibling geometry matches. No live event schedule, registration or rewards.

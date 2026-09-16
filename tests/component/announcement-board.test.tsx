@@ -21,3 +21,19 @@ test('existing repository excludes drafts scheduled items and other categories w
  const source=[base,{...base,slug:'draft',status:'draft' as const},{...base,slug:'scheduled',status:'scheduled' as const},{...base,slug:'news',category:'news' as const}];
  expect(new LocalContentRepository(source).list('events').map(item=>item.slug)).toEqual(['published']);expect(source).toHaveLength(4);
 });
+
+test('publication copy is supplied per editorial context without changing event defaults',()=>{
+ const html=renderToStaticMarkup(createElement(AnnouncementBoard,{items:[entry],label:'Nhật ký',boundary:'Không cấp bản tải.',emptyTitle:'Chưa có bản ghi',emptyDescription:'Chưa công bố.',copy:{eyebrow:'Nhật ký phát triển',publicationNote:'Không phải ngày phát hành game',disclosureLabel:'Đọc toàn bộ bản ghi'}}));
+ expect(html).toContain('Nhật ký phát triển');expect(html).toContain('Không phải ngày phát hành game');expect(html).toContain('Đọc toàn bộ bản ghi');
+ expect(html).not.toContain('Không phải ngày tổ chức');expect(html).not.toContain('Thông báo định hướng');
+ expect(render([entry])).toContain('Không phải ngày tổ chức');expect(render([entry])).toContain('Đọc toàn bộ thông báo');
+});
+test('custom editorial copy is escaped exactly like source content',()=>{
+ const html=renderToStaticMarkup(createElement(AnnouncementBoard,{items:[entry],label:'Nhật ký',boundary:'Chỉ đọc',emptyTitle:'Rỗng',emptyDescription:'Chưa có',copy:{eyebrow:'<b>ghi chú</b>',publicationNote:'<script>date</script>',disclosureLabel:'<img src=x>'}}));
+ expect(html).toContain('&lt;b&gt;ghi chú&lt;/b&gt;');expect(html).toContain('&lt;script&gt;date&lt;/script&gt;');expect(html).toContain('&lt;img src=x&gt;');expect(html).not.toContain('<script');expect(html).not.toContain('<img');
+});
+test('patch-note selection uses published/category ownership rather than current time or release status',()=>{
+ const note:ContentEntry={slug:'note',category:'patch-notes',status:'published',title:'Nhật ký',summary:'Ghi chú',body:'Đọc',publishedAt:'2099-01-01T00:00:00.000Z',tags:[]};
+ const source=[note,{...note,slug:'draft',status:'draft' as const},{...note,slug:'scheduled',status:'scheduled' as const},{...note,slug:'event',category:'events' as const}];
+ expect(new LocalContentRepository(source).list('patch-notes').map(item=>item.slug)).toEqual(['note']);expect(source).toHaveLength(4);
+});
