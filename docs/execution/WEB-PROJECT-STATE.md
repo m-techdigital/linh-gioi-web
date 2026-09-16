@@ -1,3 +1,17 @@
+Current phase: WEB-FE-VISUAL-RESPONSIVE-ARTICLE-v1.256 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /news/visual-responsive-polish-started now uses unchanged PublishedArticle with full original chapters, posting date, six reading destinations and original related articles. No shared/CSS/content/dependency changes. Fresh production664/664, build63, five viewports and52 sibling geometry comparisons; same-page reflow/text-spacing tested.
+
+Delivery gate: reviewed normal commit/push, matching remote HEAD and verified full/delta/evidence ZIP/SHA256/replay. No deployment or handoff artifact in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.257.
+Select `/news/public-game-info-depth-started` after v1.256 delivery only. Real Browser UI/UX Layout First, Base First, Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-VISUAL-RESPONSIVE-ARTICLE-REPORT-v1.256.md.
+Whole-app JavaScript-disabled streaming remains open. Late v1.255 assignment reconciled to operator REVIEW; capacity waiver and new pause/ownership checks remain.
+
+Historical snapshots below are not active delivery policy.
+
 Current phase: WEB-FE-PUBLIC-UX-ARTICLE-v1.255 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /news/public-ux-content-polish-started uses two full source chapters, native contents, posting metadata, six real reading destinations and original related articles. PublishedArticle is shared with the delivered Control Tower; no CSS/content/dependency edits. Production638/638, component4+4+6+7, build63, five viewports and50 geometry comparisons.

@@ -1,3 +1,4 @@
+import { PublicVisualResponsiveArticle } from "../../../components/PublicVisualResponsiveArticle";
 import { PublicUXArticle } from "../../../components/PublicUXArticle";
 import "@lgo-web/ui/release-layout.css";
 import "@lgo-web/ui/guide-article.css";
@@ -34,6 +35,10 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
 
   if (entry.slug === "public-ux-content-polish-started") {
     return <WebAppShell><PublicUXArticle entry={entry} related={related}/></WebAppShell>;
+  }
+
+  if (entry.slug === "visual-responsive-polish-started") {
+    return <WebAppShell><PublicVisualResponsiveArticle entry={entry} related={related}/></WebAppShell>;
   }
 
   return (

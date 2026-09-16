@@ -129,6 +129,7 @@ const publicCorePrefixes = ["/game", "/classes", "/story", "/journey", "/start",
 const publicServicePrefixes = ["/download", "/release", "/status", "/support", "/community", "/performance", "/accessibility", "/roadmap"];
 
 function targetForPath(pathname: string) {
+  if (pathname === "/news/visual-responsive-polish-started") return { ...PUBLIC_CORE_TARGET, label: "Bố cục bài viết visual và responsive", scope: "Bài viết nguồn · Trải nghiệm đọc đa màn hình" };
   if (pathname === "/news/public-ux-content-polish-started") return { ...PUBLIC_CORE_TARGET, label: "Bố cục bài viết UX public", scope: "Bài viết nguồn · Hành trình đọc website" };
   if (pathname === "/news/web-program-control-tower") return { ...PUBLIC_CORE_TARGET, label: "Bố cục bài viết nền tảng web", scope: "Bài viết nguồn · Phạm vi web độc lập" };
   if (pathname === "/news") return { ...PUBLIC_CORE_TARGET, label: "Bố cục khám phá bản tin", scope: "Tin nguồn công khai · Không phải bản tin trực tiếp" };
