@@ -28,6 +28,11 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.266 replaces the historical /game proof-board layouts with the live target-driven world landing.
+    "**/fe-public-game-world-design-board-v183.spec.ts",
+    "**/fe-game-world-design-target-density-v1120.spec.ts",
+    "**/fe-game-world-vietnamese-first-flow-v1135.spec.ts",
+    "**/fe-game-real-ui-layout-v1213.spec.ts",
     // Owner reopened homepage: old tests asserted a split hero/design link, not actual new composition.
     "**/fe-public-home-visual-target-v193.spec.ts",
     "**/fe-homepage-detailed-design-target-v1118.spec.ts",

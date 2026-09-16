@@ -30,7 +30,6 @@ def main() -> int:
     require_text("apps/web/src/components/PublicGameDepthSections.tsx", "ClassIdentityDeck", "WorldAtlasStories", "StoryArcTimeline")
     for rel in (
         "apps/web/src/app/classes/page.tsx",
-        "apps/web/src/app/game/page.tsx",
         "apps/web/src/app/story/page.tsx",
         "apps/web/src/app/start/page.tsx",
         "apps/web/src/app/journey/page.tsx",
@@ -39,6 +38,9 @@ def main() -> int:
         require_text(rel, "PublicPlayerHero")
         if "lgo-hero-kicker" in read(rel):
             fail(f"{rel} duplicates base hero kicker markup instead of PublicPlayerHero")
+    # /game v1.266 supersedes the legacy PublicPlayerHero + WorldAtlasStories proof-card flow.
+    require_text("apps/web/src/app/game/page.tsx", "PublicWorldLanding", 'variant="immersive"')
+    require_text("apps/web/src/components/PublicWorldLanding.tsx", "worldRouteStops", "lgo-world-region-grid")
     # Guides v1.234 composes the same shared ExperienceHero through its new directory owner.
     require_text("apps/web/src/app/guides/page.tsx", "PublicGuidesDiscovery")
     require_text("apps/web/src/components/PublicGuidesDiscovery.tsx", "<ExperienceHero", 'title="Hướng dẫn cho Người Thức Tỉnh"')
@@ -47,7 +49,6 @@ def main() -> int:
     if any(symbol in read("apps/web/src/components/PublicGameExperienceSections.tsx") for symbol in ("ClassIdentityDeck", "WorldAtlasStories", "StoryArcTimeline")):
         fail("PublicGameExperienceSections.tsx still owns v1.25 depth components; split them into PublicGameDepthSections.tsx")
     require_text("apps/web/src/app/classes/page.tsx", "ClassIdentityDeck")
-    require_text("apps/web/src/app/game/page.tsx", "WorldAtlasStories")
     require_text("apps/web/src/app/story/page.tsx", "StoryArcTimeline")
     require_text("apps/web/src/app/globals.css", "WEB v1.25 class world story depth", "lgo-class-identity-deck", "lgo-world-atlas-stories", "lgo-story-arc-timeline")
     require_text("docs/execution/WEB-PROJECT-STATE.md", "v1.25")

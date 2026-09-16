@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: homepage `/` v1.265 revision6 completes registered target-density refinements (six-link immersive nav, semantic live motto, no redundant technical hero lines); owner visual review remains open. No later route starts before homepage acceptance.
+Current visual checkpoint: full-site visual realignment is active. `/game` v1.266 now matches its dedicated world target; next `/story` v1.267, then `/classes`, `/journey`, `/start`. Historical test closure is not visual acceptance.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 

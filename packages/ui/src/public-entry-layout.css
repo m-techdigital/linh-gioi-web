@@ -1,0 +1,87 @@
+@import "./immersive-shell.css";
+
+/* Shared visual owner for the player-facing entry-page family. Route components only compose source data/art. */
+.lgo-public-shell-immersive .lgo-world-landing { min-height:100vh; color:#e8eef6; background:#06101b; }
+.lgo-public-shell-immersive .lgo-world-landing :is(h1,h2,h3) { font-family:var(--lgo-font-editorial); }
+.lgo-public-shell-immersive .lgo-world-landing :is(a,button,summary):focus-visible { outline:3px solid var(--lgo-color-warm-gold); outline-offset:4px; }
+.lgo-public-shell-immersive .lgo-world-landing-hero { position:relative; min-height:440px; overflow:hidden; isolation:isolate; display:flex; align-items:center; padding:46px max(6vw,72px); border-bottom:1px solid rgba(157,195,218,.22); background:#06111d; }
+.lgo-public-shell-immersive .lgo-world-landing-art { position:absolute; inset:0; z-index:-2; overflow:hidden; }
+.lgo-public-shell-immersive .lgo-world-hero-city { position:absolute; right:0; top:0; height:100%; width:auto; max-width:none; object-fit:cover; object-position:center; mask-image:linear-gradient(90deg,transparent 0,#000 24%,#000 100%); }
+.lgo-public-shell-immersive .lgo-world-hero-character { position:absolute; left:0; bottom:0; height:96%; width:auto; max-width:34vw; object-fit:cover; object-position:center; mask-image:linear-gradient(90deg,#000 0,#000 70%,transparent 100%); }
+.lgo-public-shell-immersive .lgo-world-landing-hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(3,12,23,.54) 0%,rgba(3,12,23,.83) 26%,rgba(3,12,23,.65) 48%,rgba(3,12,23,.1) 78%),linear-gradient(0deg,#06101b 0%,transparent 26%); }
+.lgo-public-shell-immersive .lgo-world-landing-copy { width:min(560px,42vw); margin-left:24%; text-shadow:0 2px 10px #02070c; }
+.lgo-public-shell-immersive .lgo-world-eyebrow { display:block; margin-bottom:10px; color:#d9b36c; font:600 14px/1.2 var(--lgo-font-editorial); letter-spacing:.22em; }
+.lgo-public-shell-immersive .lgo-world-landing-copy h1 { margin:0; color:#eef6ff; font-size:clamp(48px,4.6vw,72px); line-height:1.03; font-weight:400; }
+.lgo-public-shell-immersive .lgo-world-landing-copy h1 em { color:#f0c984; font-style:normal; }
+.lgo-public-shell-immersive .lgo-world-landing-copy > p { max-width:520px; margin:18px 0 0; color:#d0deeb; font-size:17px; line-height:1.65; }
+.lgo-public-shell-immersive .lgo-world-landing-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+.lgo-public-shell-immersive .lgo-world-landing-actions .lgo-link-button { min-height:48px; border-radius:999px; }
+.lgo-public-shell-immersive .lgo-world-journey-section { margin:-1px auto 0; width:min(100% - 48px,1540px); padding:16px 24px 18px; background:linear-gradient(180deg,rgba(10,27,42,.98),rgba(5,18,30,.98)); border:1px solid #263d50; box-shadow:0 18px 40px rgba(0,0,0,.22); }
+.lgo-public-shell-immersive .lgo-world-section-header { display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:12px; }
+.lgo-public-shell-immersive .lgo-world-section-header > div > span { color:#e3bd72; font:600 13px/1.2 var(--lgo-font-editorial); letter-spacing:.12em; }
+.lgo-public-shell-immersive .lgo-world-section-header h2 { margin:4px 0 0; color:#eef5fb; font-size:clamp(25px,2.2vw,34px); line-height:1.15; font-weight:400; }
+.lgo-public-shell-immersive .lgo-world-section-header > p { max-width:460px; margin:0; color:#95aabd; font-size:14px; line-height:1.5; text-align:right; }
+.lgo-public-shell-immersive .lgo-world-journey { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:18px; }
+.lgo-public-shell-immersive .lgo-world-journey-stop { position:relative; display:grid; grid-template-columns:68px 1fr; align-items:center; gap:12px; min-width:0; }
+.lgo-public-shell-immersive .lgo-world-journey-stop:not(:last-child)::after { content:"→"; position:absolute; right:-14px; top:29px; color:#d4af67; font-size:18px; }
+.lgo-public-shell-immersive .lgo-world-journey-art { position:relative; width:68px; height:68px; border-radius:50%; overflow:hidden; border:2px solid #c4a263; box-shadow:0 0 0 4px rgba(66,105,130,.25); }
+.lgo-public-shell-immersive .lgo-world-journey-art img { width:100%; height:100%; object-fit:cover; }
+.lgo-public-shell-immersive .lgo-world-journey-art span { position:absolute; right:4px; bottom:2px; display:grid; place-items:center; width:22px; height:22px; border-radius:50%; background:#07121e; border:1px solid #7ca5ba; color:#f3d28f; font-size:10px; }
+.lgo-public-shell-immersive .lgo-world-journey-stop h3 { margin:0; color:#f2e1bd; font-size:17px; font-weight:500; }
+.lgo-public-shell-immersive .lgo-world-journey-stop p { margin:5px 0 0; color:#9fb3c3; font-size:14px; line-height:1.45; }
+.lgo-public-shell-immersive .lgo-world-atlas { width:min(100% - 48px,1540px); margin:0 auto; padding:20px 0 14px; }
+.lgo-public-shell-immersive .lgo-world-atlas-header > a { min-height:44px; display:flex; align-items:center; gap:8px; color:#d9c089; text-decoration:none; font-size:14px; white-space:nowrap; }
+.lgo-public-shell-immersive .lgo-world-region-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px; }
+.lgo-public-shell-immersive .lgo-world-region-card { min-width:0; overflow:hidden; border:1px solid #345064; border-radius:6px; background:#091724; box-shadow:0 8px 24px rgba(0,0,0,.18); }
+.lgo-public-shell-immersive .lgo-world-region-card img { display:block; width:100%; height:118px; object-fit:cover; }
+.lgo-public-shell-immersive .lgo-world-region-card > div { padding:11px 13px 12px; }
+.lgo-public-shell-immersive .lgo-world-region-card h3 { margin:0; color:#f0e4ce; font-size:18px; line-height:1.2; font-weight:500; }
+.lgo-public-shell-immersive .lgo-world-region-card p { margin:5px 0 0; color:#a6b9c8; font-size:14px; line-height:1.5; }
+.lgo-public-shell-immersive .lgo-world-pillars { width:min(100% - 48px,1540px); margin:0 auto; padding:14px 0 20px; border-top:1px solid #263b4a; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); }
+.lgo-public-shell-immersive .lgo-world-pillars article { position:relative; display:grid; grid-template-columns:46px 1fr; gap:10px; align-items:center; padding:8px 24px; }
+.lgo-public-shell-immersive .lgo-world-pillars article > span { display:grid; place-items:center; width:40px; height:40px; border:1px solid #b4945c; border-radius:50%; color:#f1d595; font-size:22px; }
+.lgo-public-shell-immersive .lgo-world-pillars article > i { position:absolute; right:0; height:44px; width:1px; background:#2d4250; }
+.lgo-public-shell-immersive .lgo-world-pillars h3 { margin:0; color:#e8dcc5; font-size:16px; font-weight:500; }
+.lgo-public-shell-immersive .lgo-world-pillars p { margin:4px 0 0; color:#879bab; font-size:14px; line-height:1.45; }
+@media (max-width:1100px) {
+ .lgo-public-shell-immersive .lgo-world-landing-hero { min-height:500px; padding-inline:32px; }
+ .lgo-public-shell-immersive .lgo-world-landing-copy { margin-left:18%; width:min(600px,55vw); }
+ .lgo-public-shell-immersive .lgo-world-journey { gap:12px; }
+ .lgo-public-shell-immersive .lgo-world-journey-stop { grid-template-columns:60px 1fr; }
+ .lgo-public-shell-immersive .lgo-world-journey-art { width:60px; height:60px; }
+ .lgo-public-shell-immersive .lgo-world-journey-stop:not(:last-child)::after { top:25px; }
+ .lgo-public-shell-immersive .lgo-world-region-card img { height:120px; }
+}
+@media (max-width:700px) {
+ .lgo-public-shell-immersive .lgo-world-landing-hero { min-height:620px; align-items:flex-end; padding:220px 18px 30px; }
+ .lgo-public-shell-immersive .lgo-world-hero-character { display:none; }
+ .lgo-public-shell-immersive .lgo-world-hero-city { top:0; right:-30%; width:auto; height:330px; mask-image:linear-gradient(180deg,#000 0,#000 70%,transparent 100%); }
+ .lgo-public-shell-immersive .lgo-world-landing-hero::after { background:linear-gradient(180deg,rgba(5,14,24,.08),rgba(5,14,24,.65) 43%,#06101b 70%); }
+ .lgo-public-shell-immersive .lgo-world-landing-copy { margin-left:0; width:100%; text-align:center; }
+ .lgo-public-shell-immersive .lgo-world-landing-copy h1 { font-size:48px; }
+ .lgo-public-shell-immersive .lgo-world-landing-copy > p { font-size:15px; margin-inline:auto; }
+ .lgo-public-shell-immersive .lgo-world-landing-actions { justify-content:center; }
+ .lgo-public-shell-immersive .lgo-world-journey-section,.lgo-public-shell-immersive .lgo-world-atlas,.lgo-public-shell-immersive .lgo-world-pillars { width:calc(100% - 24px); }
+ .lgo-public-shell-immersive .lgo-world-journey-section { padding:20px 16px; }
+ .lgo-public-shell-immersive .lgo-world-section-header { align-items:flex-start; flex-direction:column; gap:8px; }
+ .lgo-public-shell-immersive .lgo-world-section-header > p { text-align:left; }
+ .lgo-public-shell-immersive .lgo-world-journey,.lgo-public-shell-immersive .lgo-world-region-grid { grid-template-columns:1fr; }
+ .lgo-public-shell-immersive .lgo-world-journey-stop { grid-template-columns:76px 1fr; padding:5px 0; }
+ .lgo-public-shell-immersive .lgo-world-journey-art { width:76px; height:76px; }
+ .lgo-public-shell-immersive .lgo-world-journey-stop:not(:last-child)::after { content:"↓"; left:35px; right:auto; top:auto; bottom:-14px; }
+ .lgo-public-shell-immersive .lgo-world-region-card { display:grid; grid-template-columns:42% 1fr; min-height:140px; }
+ .lgo-public-shell-immersive .lgo-world-region-card img { height:100%; min-height:140px; }
+ .lgo-public-shell-immersive .lgo-world-pillars { grid-template-columns:1fr 1fr; }
+ .lgo-public-shell-immersive .lgo-world-pillars article { padding:10px 8px; }
+ .lgo-public-shell-immersive .lgo-world-pillars article:nth-child(2) > i { display:none; }
+}
+@media (max-width:380px) {
+ .lgo-public-shell-immersive .lgo-world-landing-copy h1 { font-size:42px; }
+ .lgo-public-shell-immersive .lgo-world-pillars { grid-template-columns:1fr; }
+ .lgo-public-shell-immersive .lgo-world-pillars article > i { display:none; }
+}
+@media (forced-colors:active) {
+ .lgo-public-shell-immersive .lgo-world-landing-art { display:none; }
+ .lgo-public-shell-immersive .lgo-world-region-card,.lgo-public-shell-immersive .lgo-world-journey-section { border:1px solid CanvasText; }
+}
+@media (prefers-reduced-motion:reduce) { html:has(.lgo-world-landing) { scroll-behavior:auto; } }

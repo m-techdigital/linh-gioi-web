@@ -1,5 +1,9 @@
 # WEB-ACTIVE-GOAL
 
+## Owner override — full public-page visual remediation (2026-09-17)
+
+A full browser audit found 27 concrete public routes and16 page-specific visual targets. Do not infer visual completion from historical validators/tests. Process one page at a time using the existing target, real browser screenshots and shared Base First owners. Current order: `/story`, `/classes`, `/journey`, `/start`, then service and support/community families. The old `/news` queue is historical, not active authority.
+
 ## Owner priority override — homepage first (2026-09-17)
 
 Restart the visual pass at `/` from the existing detailed homepage design. Remaining news articles are deferred. Earlier homepage/entry-page CLOSED markers and passing tests are historical engineering evidence, not current visual acceptance. Compare actual desktop/mobile rendering against the page-specific design before claiming completion; do not replace the design with a simpler target that matches old code. Reuse source and shared components, preserve runtime/branch/worktree. After homepage review, continue main entry pages sequentially, not the old news queue.

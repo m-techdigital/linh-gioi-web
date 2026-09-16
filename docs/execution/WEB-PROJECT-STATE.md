@@ -1,3 +1,14 @@
+Current phase: WEB-FE-GAME-WORLD-REALIGNMENT-v1.266 WEB_CLOSED
+
+Current decision: `/game` is now a target-driven immersive world landing, replacing the historical proof-board first flow. Fresh production40/40, focused18/18, build63, UI/Web/Portal/Ops typecheck, UI/Web lint, and16 exact sibling comparisons PASS. Source-derived world art is provenance-locked. Full-site audit confirms many other routes still need real design work.
+
+Next task after verified delivery: WEB-FE-STORY-VISUAL-REALIGNMENT-v1.267.
+Select `/story` as the next single active page. Then `/classes`, `/journey`, `/start`, followed by release/service and support/community families from the full-site visual audit plan. Do not resume the historical `/news` queue.
+
+Detailed report: LGO-WEB-FE-GAME-WORLD-REALIGNMENT-REPORT-v1.266.md.
+
+Historical state below is retained for provenance, not active visual authority.
+
 Current phase: WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265 WEB_VISUAL_REVIEW_REQUIRED
 Current route: `/`
 

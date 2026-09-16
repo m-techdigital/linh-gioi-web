@@ -5,12 +5,14 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265
+WEB-FE-STORY-VISUAL-REALIGNMENT-v1.267
 
 Objective:
 Owner priority override: restart at the homepage `/`; early public pages have NOT been accepted as matching the detailed design. Defer the remaining /news queue. Build from the actual homepage design, not previous CLOSED labels or same-layout regression counts.
 
-Current FE scope: select `/` as the next single active page for WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265. Complete `/` fully before any other page. Match homepage-detailed-design-target-v1118.png: immersive full-width artwork with centered brand and primary navigation, three illustrated feature links, discovery gallery beside the news cards, compact truthful availability. Reuse shared owners; no screenshot-as-page, fictitious player count, working-login/trailer/download claim. Source fixes, browser/e2e and screenshot comparison precede closure. Main pages queued after homepage review: /game, /classes, /story, /journey, /start; do not start them in this slice.
+Current FE scope: select `/story` as the next single active page. Rebuild from `story-detailed-design-target-v1121.png`; complete `/story` fully before any other page, with real browser desktop/mobile evidence, before touching `/classes`.
+
+Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile;16 have detailed page targets. Historical CLOSED/PASS does not prove visual fidelity. `/game` v1.266 is now closed by real target-driven replacement. Continue sequentially `/story` → `/classes` → `/journey` → `/start`, then release/service and support/community families. Do not use the old `/news` queue as current authority.
 
 Mandatory execution rules:
 

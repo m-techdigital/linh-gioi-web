@@ -28,7 +28,8 @@
     "./announcement-board.css": "./src/announcement-board.css",
     "./marketing-layout.css": "./src/marketing-layout.css",
     "./art-wordmark.css": "./src/art-wordmark.css",
-    "./home-editorial.css": "./src/home-editorial.css"
+    "./home-editorial.css": "./src/home-editorial.css",
+    "./public-entry-layout.css": "./src/public-entry-layout.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

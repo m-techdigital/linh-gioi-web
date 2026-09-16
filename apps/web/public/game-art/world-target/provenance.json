@@ -1,0 +1,96 @@
+{
+  "source": "apps/web/public/design-reference/game-world-detailed-design-target-v1120.png",
+  "sourceSha256": "25b50399d2dab8969de70963b27432210fbb91157a5283caf12a4bc2643d4d91",
+  "sourceSize": [
+    1672,
+    941
+  ],
+  "method": "macOS sips integer crop; no resize, inpainting, generation or full-board embedding",
+  "status": "SOURCE_DERIVED_VISUAL_ASSET",
+  "items": [
+    {
+      "file": "hero-character.png",
+      "path": "/game-art/world-target/hero-character.png",
+      "sourceRect": [
+        90,
+        75,
+        310,
+        365
+      ],
+      "sha256": "a631192b2a5086e4b0f36c9cede2d28e9c964b7202994341f79a69a19ab2bf88",
+      "role": "decorative artwork crop only; labels/actions remain live HTML"
+    },
+    {
+      "file": "hero-city.png",
+      "path": "/game-art/world-target/hero-city.png",
+      "sourceRect": [
+        780,
+        65,
+        892,
+        390
+      ],
+      "sha256": "69e8ede4a0a1a241c98b233c212b36a315fab1996033f0553f32eb5056e32adf",
+      "role": "decorative artwork crop only; labels/actions remain live HTML"
+    },
+    {
+      "file": "linh-thanh.png",
+      "path": "/game-art/world-target/linh-thanh.png",
+      "sourceRect": [
+        68,
+        621,
+        295,
+        130
+      ],
+      "sha256": "ae6e42cbaf2239fe62352b76012d81292bdc2f93ed156677834361fdd1155fbf",
+      "role": "decorative artwork crop only; labels/actions remain live HTML"
+    },
+    {
+      "file": "dong-mon.png",
+      "path": "/game-art/world-target/dong-mon.png",
+      "sourceRect": [
+        377,
+        621,
+        295,
+        130
+      ],
+      "sha256": "1f6676c32627c641ee93eb96bee07ac71ba03fdc5da2a12a693b1c8fca3e8868",
+      "role": "decorative artwork crop only; labels/actions remain live HTML"
+    },
+    {
+      "file": "linh-lam.png",
+      "path": "/game-art/world-target/linh-lam.png",
+      "sourceRect": [
+        684,
+        621,
+        294,
+        130
+      ],
+      "sha256": "0ac73308bbe234e0cd94d7e8abec1f5d19e05d6b5d9ef2e464cda0a7cf1e0bd4",
+      "role": "decorative artwork crop only; labels/actions remain live HTML"
+    },
+    {
+      "file": "co-di-tich.png",
+      "path": "/game-art/world-target/co-di-tich.png",
+      "sourceRect": [
+        988,
+        621,
+        287,
+        130
+      ],
+      "sha256": "e64c6d460c43dd5560fad71e5185adf3b7ed2966c4946a66956277ea9cd4c39d",
+      "role": "decorative artwork crop only; labels/actions remain live HTML"
+    },
+    {
+      "file": "am-gioi.png",
+      "path": "/game-art/world-target/am-gioi.png",
+      "sourceRect": [
+        1288,
+        621,
+        295,
+        130
+      ],
+      "sha256": "042b1d2d6dfb4aa4f09f9094671ba17305b8c346d1e1d2b5e9b950c57ae8230f",
+      "role": "decorative artwork crop only; labels/actions remain live HTML"
+    }
+  ]
+}
