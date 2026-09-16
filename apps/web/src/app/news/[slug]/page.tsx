@@ -1,3 +1,4 @@
+import { PublicGameInfoArticle } from "../../../components/PublicGameInfoArticle";
 import { PublicVisualResponsiveArticle } from "../../../components/PublicVisualResponsiveArticle";
 import { PublicUXArticle } from "../../../components/PublicUXArticle";
 import "@lgo-web/ui/release-layout.css";
@@ -39,6 +40,10 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
 
   if (entry.slug === "visual-responsive-polish-started") {
     return <WebAppShell><PublicVisualResponsiveArticle entry={entry} related={related}/></WebAppShell>;
+  }
+
+  if (entry.slug === "public-game-info-depth-started") {
+    return <WebAppShell><PublicGameInfoArticle entry={entry} related={related}/></WebAppShell>;
   }
 
   return (
