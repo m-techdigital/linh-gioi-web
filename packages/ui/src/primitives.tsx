@@ -175,7 +175,7 @@ export function ExperienceHero({
   badge: string;
   badgeTone?: Tone;
   kicker: string;
-  title: string;
+  title: ReactNode;
   lead: ReactNode;
   actions?: ExperienceHeroAction[];
   className?: string;

@@ -5,12 +5,12 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.265
+WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265
 
 Objective:
-Continue the sequential Real Browser UI/UX Layout pass for the next source news article after v1.264 `/news/player-safety-support-faq-polish-started` closure. Keep the work page-scoped, Base First and browser-evidence driven.
+Owner priority override: restart at the homepage `/`; early public pages have NOT been accepted as matching the detailed design. Defer the remaining /news queue. Build from the actual homepage design, not previous CLOSED labels or same-layout regression counts.
 
-Current FE scope: select `/news/accessibility-readability-polish-started` as the next single active page after v1.264 `/news/player-safety-support-faq-polish-started` closure. Complete `/news/accessibility-readability-polish-started` fully before any other page. Use its registered public route target as the comparison guardrail and prioritize real news UI/UX Layout: the original article title/summary/body and existing detail sections, complete readable article structure and onward links, publication semantics and clear distinction from live game operations, native reading routes, spacing, typography, responsive density, keyboard/focus and actual interaction. No invented articles, publication dates, live-news feed, personal recommendations, subscriber counts, notifications, release availability or backend.
+Current FE scope: select `/` as the next single active page for WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265. Complete `/` fully before any other page. Match homepage-detailed-design-target-v1118.png: immersive full-width artwork with centered brand and primary navigation, three illustrated feature links, discovery gallery beside the news cards, compact truthful availability. Reuse shared owners; no screenshot-as-page, fictitious player count, working-login/trailer/download claim. Source fixes, browser/e2e and screenshot comparison precede closure. Main pages queued after homepage review: /game, /classes, /story, /journey, /start; do not start them in this slice.
 
 Mandatory execution rules:
 
@@ -23,7 +23,7 @@ Mandatory execution rules:
 3. CSS must be managed by owner/role.
    Theme/tokens: packages/design-tokens. Reusable component/layout style: packages/ui. Apps compose base and keep only truly route-specific differences. Do not inflate apps/web/src/app/globals.css with duplicate page blocks.
 
-4. Do not move past `/news/accessibility-readability-polish-started` until closure evidence exists:
+4. Do not move past `/` until closure evidence exists:
    - render in real browser/e2e;
    - desktop/mobile metrics and screenshot/visual review against the target and accepted shell;
    - active source validator and necessary typecheck/build;
@@ -32,7 +32,7 @@ Mandatory execution rules:
 
 5. Forbidden substitutes: text-only/copy-only, translation-only, design-only, validator/doc-only, content edits without browser evidence, multiple pages at once. Never relax layout tests just to obtain PASS.
 
-6. If execution drifts, return to `/news/accessibility-readability-polish-started`, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until `/news/accessibility-readability-polish-started` is closed.
+6. If execution drifts, return to `/`, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until `/` is closed.
 
 Non-claims: FE-only until accepted game backend contracts exist. No independent backend. No production auth. No DB persistence. No CMS. No production deployment. No payment/shop/economy.
 
@@ -46,3 +46,5 @@ Validator compatibility and anti-drift guardrails:
 - Base First Stop Gate: inspect shared owners and reuse/extend shared layout before page-local component/CSS work.
 
 Runtime resource policy: keep dev3221 and reuse production3236 after fresh ownership/process verification. Do not open another port per version. Release finished handoff write claims after verified delivery; retain artifacts.
+
+Deferred historical queue (not active): WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.265 `/news/accessibility-readability-polish-started`. Current task stays homepage until review.

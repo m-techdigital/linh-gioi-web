@@ -1,0 +1,115 @@
+{
+  "source": "apps/web/public/design-reference/homepage-detailed-design-target-v1118.png",
+  "sourceSha256": "ecf58cb2af080587e3be3b07430640b9765eb6b8319facc5bc9ad16e8eecef9e",
+  "method": "sips crop only; no redraw, whole-page embedding or inpainting; art reviewed at source resolution. Crops are not gameplay screenshots.",
+  "items": [
+    {
+      "id": "hero-traveler",
+      "path": "/game-art/marketing/hero-traveler.png",
+      "rect": {
+        "left": 117,
+        "top": 66,
+        "width": 344,
+        "height": 348
+      },
+      "sha256": "44ebffae955f423d6cb9d3f6406d4b64470b76f4ea9c95d4bdcd47044db2ac62",
+      "role": "Artwork-only decorative crop; no source title, button, UI controls or fictional counters."
+    },
+    {
+      "id": "hero-moon-city",
+      "path": "/game-art/marketing/hero-moon-city.png",
+      "rect": {
+        "left": 1110,
+        "top": 62,
+        "width": 225,
+        "height": 245
+      },
+      "sha256": "491c3717880083a48e31fab98cf4f59a804fe04f3c7a228bd681cc9ef960bd89",
+      "role": "Artwork-only decorative crop; no source title, button, UI controls or fictional counters."
+    },
+    {
+      "id": "feature-world",
+      "path": "/game-art/marketing/feature-world.png",
+      "rect": {
+        "left": 103,
+        "top": 467,
+        "width": 463,
+        "height": 84
+      },
+      "sha256": "88b96c0c79fd233d5ea21260eac9d4e8f4879e078f9353212ecdb22c033a82c8",
+      "role": "Artwork-only decorative crop; no source title, button, UI controls or fictional counters."
+    },
+    {
+      "id": "feature-action",
+      "path": "/game-art/marketing/feature-action.png",
+      "rect": {
+        "left": 593,
+        "top": 467,
+        "width": 462,
+        "height": 84
+      },
+      "sha256": "393b06ebb34ddbe61e037267dd90ec54457481e04e46cbff845f4f5066a7bc7f",
+      "role": "Artwork-only decorative crop; no source title, button, UI controls or fictional counters."
+    },
+    {
+      "id": "feature-community",
+      "path": "/game-art/marketing/feature-community.png",
+      "rect": {
+        "left": 1085,
+        "top": 467,
+        "width": 461,
+        "height": 84
+      },
+      "sha256": "4e377f1d5e80805af6b5570667c3f0609777fd388dd65cb90a3b6f62ec28add9",
+      "role": "Artwork-only decorative crop; no source title, button, UI controls or fictional counters."
+    },
+    {
+      "id": "gallery-purple",
+      "path": "/game-art/marketing/gallery-purple.png",
+      "rect": {
+        "left": 474,
+        "top": 682,
+        "width": 129,
+        "height": 64
+      },
+      "sha256": "6ca8b56c0ce69146c25604c6f38cb72d0567fa24b0b9189aa2ba156ab8512038",
+      "role": "Artwork-only decorative crop; no source title, button, UI controls or fictional counters."
+    },
+    {
+      "id": "gallery-jade",
+      "path": "/game-art/marketing/gallery-jade.png",
+      "rect": {
+        "left": 625,
+        "top": 682,
+        "width": 124,
+        "height": 64
+      },
+      "sha256": "4b0d2e5ca6a181cb98c8f8a88842c6cd4f1c650b187e457741ec7f2b0ead4fbf",
+      "role": "Artwork-only decorative crop; no source title, button, UI controls or fictional counters."
+    },
+    {
+      "id": "gallery-sunset",
+      "path": "/game-art/marketing/gallery-sunset.png",
+      "rect": {
+        "left": 474,
+        "top": 773,
+        "width": 129,
+        "height": 62
+      },
+      "sha256": "1822ad2680b30dca33e04a1588685df11b92e752b1a7db9f096e8639d3fc695b",
+      "role": "Artwork-only decorative crop; no source title, button, UI controls or fictional counters."
+    },
+    {
+      "id": "gallery-snow",
+      "path": "/game-art/marketing/gallery-snow.png",
+      "rect": {
+        "left": 625,
+        "top": 773,
+        "width": 124,
+        "height": 62
+      },
+      "sha256": "e8ea78284d2069c7967f510c7349326dcd50372d5906c5e45af8addd1cf89599",
+      "role": "Artwork-only decorative crop; no source title, button, UI controls or fictional counters."
+    }
+  ]
+}

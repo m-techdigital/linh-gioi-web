@@ -27,15 +27,8 @@ def require_text(rel: str, *needles: str) -> None:
 
 
 def main() -> int:
-    require_text(
-        "apps/web/src/app/page.tsx",
-        "Khám phá Linh Giới",
-        "Chọn Lộ của bạn",
-        "SpiritRouteBreadcrumb",
-    )
-    homepage = read("apps/web/src/app/page.tsx")
-    if "WorldPanoramaBand" not in homepage and "HomeDiscoveryShowcase" not in homepage:
-        fail("homepage must keep a player-facing world discovery surface")
+    require_text("apps/web/src/app/page.tsx", "PublicHomeLanding")
+    require_text("apps/web/src/components/PublicHomeLanding.tsx", "Khám phá Linh Giới", "Chọn Lộ của bạn", "MediaMosaic", 'href: "/game"', 'href: "/classes"')
     require_text(
         "apps/web/src/components/PublicGameExperienceSections.tsx",
         "SpiritRouteBreadcrumb",

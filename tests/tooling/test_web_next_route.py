@@ -99,4 +99,25 @@ class NextRouteTests(unittest.TestCase):
         p.write_text(p.read_text().replace('entry.category !== "news"', 'false'))
         self.assertTrue(self.check("/news/news-article"))
 
+    def review_queue(self, queued_phase="WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265", route="/", state="WEB_VISUAL_REVIEW_REQUIRED"):
+        phase="WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265"
+        self.write("apps/web/src/app/page.tsx", "export default function Home() {}")
+        self.write("docs/execution/WEB-PROJECT-STATE.md", f"Current phase: {phase} {state}\nCurrent route: `/`\n")
+        self.write("docs/execution/WEB-TASK-LEDGER.md", f"| {phase} | WEB-FE | {state} |")
+        self.write("docs/execution/WEB-NEXT-ACTION.md", f"Next task:\n{queued_phase}\nCurrent FE scope: select `{route}`")
+        guard.ERRORS.clear();guard.check_active_checkpoint();return list(guard.ERRORS)
+
+    def test_visual_review_stays_on_same_homepage_without_forced_false_closure(self):
+        self.assertEqual(self.review_queue(), [])
+
+    def test_unreviewed_homepage_cannot_advance_version(self):
+        self.assertTrue(self.review_queue(queued_phase="WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.266"))
+
+    def test_unreviewed_homepage_cannot_silently_change_route(self):
+        self.write("apps/web/src/app/game/page.tsx", "export default function Game() {}")
+        self.assertTrue(self.review_queue(route="/game"))
+
+    def test_unknown_review_status_is_rejected(self):
+        self.assertTrue(self.review_queue(state="ASSUMED_PASSED"))
+
 if __name__ == "__main__": unittest.main()

@@ -25,7 +25,8 @@
     "./world-loop-layout.css": "./src/world-loop-layout.css",
     "./guide-article.css": "./src/guide-article.css",
     "./reading-catalog.css": "./src/reading-catalog.css",
-    "./announcement-board.css": "./src/announcement-board.css"
+    "./announcement-board.css": "./src/announcement-board.css",
+    "./marketing-layout.css": "./src/marketing-layout.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

@@ -1,5 +1,10 @@
 # AGENTS.md — Linh Giới Online Web Program
 
+## Owner priority override — homepage first (2026-09-17)
+
+Restart the visual pass at `/` from the existing detailed homepage design. Remaining news articles are deferred. Earlier homepage/entry-page CLOSED markers and passing tests are historical engineering evidence, not current visual acceptance. Compare actual desktop/mobile rendering against the page-specific design before claiming completion; do not replace the design with a simpler target that matches old code. Reuse source and shared components, preserve runtime/branch/worktree. After homepage review, continue main entry pages sequentially, not the old news queue.
+
+
 ## Owner delivery policy — commit and push authorized
 
 The owner's latest instruction is “hãy commit push rồi sau đó làm tiếp”. This supersedes the prior no-push waiver. Commit reviewed source/test/docs and push normally to origin/main; never force-push or include local handoff ZIPs/cache/secrets. Verify remote HEAD, complete the ZIP/SHA256 handoff, then continue the next single page without another confirmation. This authorizes repository delivery, not production deployment.

@@ -28,6 +28,12 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // Owner reopened homepage: old tests asserted a split hero/design link, not actual new composition.
+    "**/fe-public-home-visual-target-v193.spec.ts",
+    "**/fe-homepage-detailed-design-target-v1118.spec.ts",
+    "**/fe-homepage-target-fold-density-v1119.spec.ts",
+    "**/fe-homepage-vietnamese-first-flow-v1134.spec.ts",
+
     // v1.264 replaces only this compact article; Safety and FAQ destination suites stay active.
     "**/fe-news-player-safety-support-real-ui-layout-v1190.spec.ts",
     // v1.263 replaces the old compact article only; world-loop and guide suites stay active.

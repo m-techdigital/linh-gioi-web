@@ -77,6 +77,7 @@ def finish(name: str) -> int:
 import runpy
 
 VALIDATORS = [
+    "validate_web_fe_homepage_design_realignment_v1265.py",
     # Core architectural and safety validators remain authoritative.
     # v1.6-v1.21 page-composition validators are historical evidence and are
     # intentionally not rerun after the v1.22 player-facing information-architecture realignment.
@@ -338,6 +339,12 @@ VALIDATORS = [
 # These guards enforced a diagram image or deliberately line-clamped readiness cards.
 # v1.221 replaces them with art-backed DOM UI + native evidence disclosures. Not counted as PASS.
 SUPERSEDED_LAYOUT_VALIDATORS = {
+    "validate_web_public_home_discovery_v126.py": "validate_web_fe_homepage_design_realignment_v1265.py",
+    "validate_web_fe_public_home_visual_target_v193.py": "validate_web_fe_homepage_design_realignment_v1265.py",
+    "validate_web_fe_homepage_detailed_design_target_v1118.py": "validate_web_fe_homepage_design_realignment_v1265.py",
+    "validate_web_fe_homepage_target_fold_density_v1119.py": "validate_web_fe_homepage_design_realignment_v1265.py",
+    "validate_web_fe_homepage_vietnamese_first_flow_v1134.py": "validate_web_fe_homepage_design_realignment_v1265.py",
+
     "validate_web_fe_news_player_safety_support_real_ui_layout_v1190.py": "validate_web_fe_safety_support_article_v1264.py",
     "validate_web_fe_news_world_gameplay_loop_real_ui_layout_v1189.py": "validate_web_fe_world_loop_article_v1263.py",
     "validate_web_fe_news_content_ia_hub_real_ui_layout_v1187.py": "validate_web_fe_content_hub_article_v1262.py",
@@ -465,16 +472,22 @@ def public_route_exists(route: str) -> bool:
 def check_active_checkpoint() -> None:
     state = read("docs/execution/WEB-PROJECT-STATE.md")
     queue = read("docs/execution/WEB-NEXT-ACTION.md")
-    current = re.match(r"Current phase: ([A-Z0-9-]+)-v(\d+)\.(\d+) WEB_CLOSED", state)
-    upcoming = re.search(r"(?m)^Next task:\s*\n(WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v(\d+)\.(\d+))", queue)
+    current = re.match(r"Current phase: ([A-Z0-9-]+)-v(\d+)\.(\d+) (WEB_CLOSED|WEB_VISUAL_REVIEW_REQUIRED)", state)
+    upcoming = re.search(r"(?m)^Next task:\s*\n(WEB-FE-[A-Z0-9-]+-v(\d+)\.(\d+))", queue)
     route = re.search(r"Current FE scope: select `([^`]+)`", queue)
     if not current or not upcoming or not route:
         fail("active checkpoint/next page header is missing or ambiguous")
         return
-    if (int(upcoming[2]), int(upcoming[3])) != (int(current[2]), int(current[3]) + 1):
-        fail("next task must be the successor of the first, active checkpoint (not a historical marker)")
     phase = f"{current[1]}-v{current[2]}.{current[3]}"
-    require_text("docs/execution/WEB-TASK-LEDGER.md", f"| {phase} | WEB-FE | WEB_CLOSED |")
+    status = current[4]
+    if status == "WEB_CLOSED":
+        if (int(upcoming[2]), int(upcoming[3])) != (int(current[2]), int(current[3]) + 1):
+            fail("next task must be the successor of the first, active checkpoint (not a historical marker)")
+    else:
+        current_route = re.search(r"(?m)^Current route: `([^`]+)`", state)
+        if upcoming[1] != phase or not current_route or route[1] != current_route[1]:
+            fail("visual review must remain on the same task and route; no assumed closure or automatic advance")
+    require_text("docs/execution/WEB-TASK-LEDGER.md", f"| {phase} | WEB-FE | {status} |")
     if not public_route_exists(route[1]): fail(f"next public page does not exist: {route[1]}")
 
 def main() -> int:

@@ -113,3 +113,6 @@ export type { AnnouncementBoardItem, AnnouncementBoardCopy } from "./announcemen
 
 export { PublishedArticle } from "./published-article";
 export type { PublishedArticleCopy, PublishedArticleEntry, PublishedArticleSection, PublishedArticleLink } from "./published-article";
+
+export { IllustratedLink, MediaMosaic } from "./illustrated-navigation";
+export type { IllustratedLinkProps } from "./illustrated-navigation";

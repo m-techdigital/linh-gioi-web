@@ -2743,71 +2743,8 @@ h3 {
   }
 }
 
-/* WEB v1.119 homepage target fold density */
+/* Shared pillar density retained for legacy entry routes; homepage now opts into marketing-layout.css. */
 @media (min-width: 981px) {
-  .lgo-player-facing-stack.lgo-homepage-stack {
-    gap: clamp(1rem, 1.9vw, 2.25rem);
-  }
-
-  .lgo-homepage-stack .lgo-cinematic-hero {
-    min-height: min(430px, calc(100vh - 300px));
-    gap: clamp(1.25rem, 2.6vw, 3rem);
-    padding: clamp(.9rem, 2.4vw, 2rem) 0;
-  }
-
-  .lgo-homepage-stack .lgo-cinematic-scene {
-    min-height: 335px;
-  }
-
-  .lgo-homepage-stack .lgo-cinematic-copy {
-    display: grid;
-    gap: .55rem;
-    align-content: center;
-  }
-
-  .lgo-homepage-stack .lgo-hero-kicker,
-  .lgo-homepage-stack .lgo-cinematic-copy p,
-  .lgo-homepage-stack .lgo-cinematic-copy h1 {
-    margin: 0;
-  }
-
-  .lgo-homepage-stack .lgo-cinematic-copy h1 {
-    max-width: 14ch;
-    font-size: clamp(2.1rem, 3.45vw, 3rem);
-    line-height: .96;
-  }
-
-  .lgo-homepage-stack .lgo-cinematic-copy .lgo-hero-lead {
-    font-size: clamp(.92rem, .98vw, 1rem);
-    line-height: 1.48;
-  }
-
-  .lgo-homepage-stack .lgo-cinematic-hero .lgo-link-button {
-    padding: .62rem .82rem;
-    font-size: .84rem;
-  }
-
-  .lgo-homepage-stack .lgo-cinematic-hero .lgo-hero-actions {
-    margin-top: .15rem;
-    gap: .45rem;
-  }
-
-  .lgo-homepage-stack .lgo-spirit-route-breadcrumb {
-    gap: .4rem;
-    margin-top: .25rem;
-    font-size: .68rem;
-  }
-
-  .lgo-homepage-stack .lgo-spirit-route-breadcrumb i {
-    width: .75rem;
-  }
-
-  .lgo-homepage-stack .lgo-hero-signals {
-    margin-top: .35rem;
-    gap: .28rem .45rem;
-    font-size: .68rem;
-  }
-
   .lgo-home-pillar-section {
     gap: .45rem;
     margin-top: -3.25rem;

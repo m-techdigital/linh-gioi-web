@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: v1.264 `/news/player-safety-support-faq-polish-started` verified; next v1.265 `/news/accessibility-readability-polish-started` after delivery. Normal push, exact remote HEAD and verified ZIP/SHA256 required. Reuse dev3221/production3236, no version-port accumulation. Historical source is not operational support; whole-app no-JavaScript streaming remains open.
+Current visual checkpoint: homepage `/` is reopened for design realignment v1.265 and requires visual review. News queue is deferred by owner. Next entry pages after homepage acceptance: /game, /classes, /story, /journey, /start. Earlier engineering PASS does not imply design fidelity.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 

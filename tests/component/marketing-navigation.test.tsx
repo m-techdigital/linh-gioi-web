@@ -1,0 +1,9 @@
+import {test,expect} from 'vitest';
+import {createElement} from 'react';
+import {renderToStaticMarkup} from 'react-dom/server';
+import {IllustratedLink,MediaMosaic} from '../../packages/ui/src/illustrated-navigation';
+const link={href:'/game',title:'Khám phá thế giới',description:'Mô tả đầy đủ',image:{src:'/art.png',width:400,height:100}};
+test('illustrated navigation renders real anchors and uncut source copy',()=>{const html=renderToStaticMarkup(createElement(IllustratedLink,link));expect(html).toContain('href="/game"');expect(html).toContain('Mô tả đầy đủ');expect(html).toContain('<img');expect(html).not.toContain('<button');});
+test('mosaic keeps supplied navigation order without a fake play action',()=>{const html=renderToStaticMarkup(createElement(MediaMosaic,{lead:link,items:[{...link,href:'/story',title:'Cốt truyện'},{...link,href:'/classes',title:'Năm Lộ'}]}));expect(html.indexOf('href="/story"')).toBeLessThan(html.indexOf('href="/classes"'));expect(html).not.toContain('video');expect(html).not.toContain('iframe');});
+test('empty mosaic does not invent media or links',()=>{const html=renderToStaticMarkup(createElement(MediaMosaic,{lead:link,items:[]}));expect((html.match(/<a /g)||[]).length).toBe(1);});
+test('source text remains escaped, never interpreted as HTML',()=>{const html=renderToStaticMarkup(createElement(IllustratedLink,{...link,title:'<script>unsafe</script>'}));expect(html).toContain('&lt;script&gt;');expect(html).not.toContain('<script>');});

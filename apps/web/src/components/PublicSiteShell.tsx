@@ -3,10 +3,10 @@ import type { ReactNode } from "react";
 import { PublicNavigation } from "./PublicNavigation";
 import { PublicDesignTargetReference } from "./PublicDesignTargetReference";
 
-export function PublicSiteShell({ children }: { children: ReactNode }) {
+export function PublicSiteShell({ children, variant }: { children: ReactNode; variant?: "immersive" | undefined }) {
   return (
     <LgoThemeProvider>
-      <div className="lgo-public-shell">
+      <div className={`lgo-public-shell${variant === "immersive" ? " lgo-public-shell-immersive" : ""}`}>
         <a className="lgo-skip-link" href="#main-content">Bỏ qua menu tới nội dung chính</a>
         <header className="lgo-site-header">
           <Container><PublicNavigation /></Container>
@@ -14,9 +14,9 @@ export function PublicSiteShell({ children }: { children: ReactNode }) {
         <main id="main-content" className="lgo-main" tabIndex={-1}>
           <Container>{children}</Container>
         </main>
-        <aside className="lgo-design-target-band">
+        {variant !== "immersive" ? <aside className="lgo-design-target-band">
           <Container><PublicDesignTargetReference /></Container>
-        </aside>
+        </aside> : null}
         <footer className="lgo-brand-footer">
           <Container className="lgo-brand-footer-inner">
             <div>

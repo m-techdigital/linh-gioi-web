@@ -39,12 +39,8 @@ def main() -> int:
             fail(f"missing file: {rel}")
 
     require_text("packages/content/src/fixtures.ts", "gameExperiencePillars", "classPaths", "worldRouteStops", "narrativeChapters", "sampleSessionBeats")
-    require_text("apps/web/src/app/page.tsx", "Sống một đời khác trong Linh Giới", "ShadowInvasionFeature")
-    homepage_world = read("apps/web/src/app/page.tsx")
-    if "ClassPathGrid" not in homepage_world and "HomeDiscoveryShowcase" not in homepage_world:
-        fail("apps/web/src/app/page.tsx must keep a player-facing class discovery entry")
-    if not any(marker in homepage_world for marker in ["WorldRouteJourney", "WorldPanoramaBand", "HomeDiscoveryShowcase"]):
-        fail("apps/web/src/app/page.tsx must keep a player-facing world-route presentation")
+    require_text("apps/web/src/app/page.tsx", "PublicHomeLanding")
+    require_text("apps/web/src/components/PublicHomeLanding.tsx", "Sống một đời khác trong Linh Giới", 'href: "/game"', 'href: "/classes"', 'href: "/story"', "MediaMosaic")
     require_text("apps/web/src/app/game/page.tsx", "Linh Thành", "WorldRouteJourney", "GamePillarGrid")
     require_text("apps/web/src/app/classes/page.tsx", "Năm Lộ", "ClassPathGrid")
     require_text("apps/web/src/app/story/page.tsx", "Vết Nứt Đông Môn", "NarrativeChapterGrid")
@@ -54,7 +50,7 @@ def main() -> int:
     require_text("apps/web/src/app/sitemap.ts", '"/classes"', '"/story"')
     require_text("apps/web/src/app/globals.css", "WEB v1.22 public game experience", "lgo-cinematic-hero", "lgo-class-path-grid", "lgo-world-route")
 
-    homepage = read("apps/web/src/app/page.tsx")
+    homepage = read("apps/web/src/app/page.tsx") + read("apps/web/src/components/PublicHomeLanding.tsx")
     banned_home_markers = [
         "Public RC · WEB v1.20",
         "WEB v1.16 performance/copy budget",

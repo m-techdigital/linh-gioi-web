@@ -1,3 +1,12 @@
+Current phase: WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265 WEB_VISUAL_REVIEW_REQUIRED
+Current route: `/`
+
+Owner has reprioritized visual correction from homepage. Previous article work is preserved; early-page CLOSED markers are not proof of design fidelity. Current homepage composition is under browser verification and human visual review, not automatically accepted. The old news queue is deferred.
+
+Active task remains homepage v1.265 until design comparison and visual review are complete. Later entry pages: /game, /classes, /story, /journey, /start, one at a time. Keep source/branch/worktree; no restoration. Evidence in handoff/home-realignment-v1.265. No production deployment or independent backend.
+
+Historical state below is retained for provenance, not active visual acceptance.
+
 Current phase: WEB-FE-SAFETY-SUPPORT-ARTICLE-v1.264 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /news/player-safety-support-faq-polish-started uses unchanged PublishedArticle with two full source chapters, original date/related articles and8 reading paths. Actual Safety checklist and FAQ reporting/privacy groups verified without editing destination tools. Fresh production896/896 in64 files, build63, five viewports and80 raw DOM/geometry matches. No CSS/package/content/dependency changes.
