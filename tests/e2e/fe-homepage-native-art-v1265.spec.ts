@@ -1,7 +1,8 @@
+import {waitForHomepage} from './helpers/homepage-ready';
 import {test,expect} from '@playwright/test';
 const origin=process.env.LGO_WEB_URL??'http://127.0.0.1:3236';
 test.describe('homepage native-scale original artwork v1.265 revision2',()=>{
- test.beforeEach(async({page})=>{await page.goto(origin+'/');});
+ test.beforeEach(async({page})=>{await page.goto(origin+'/');await waitForHomepage(page);});
  test('uses the original brush wordmark as a separate image with one real accessible title',async({page})=>{
   const h1=page.locator('main h1'),brand=h1.locator('.lgo-art-wordmark');await expect(brand).toBeVisible();await expect(h1).toHaveAccessibleName('Linh Giới Online');
   const image=brand.locator('img');await expect(image).toHaveAttribute('src','/game-art/marketing/wordmark-brush.png');
@@ -14,11 +15,11 @@ test.describe('homepage native-scale original artwork v1.265 revision2',()=>{
   await expect(page.locator('main img[src*=design-reference],main iframe,main canvas')).toHaveCount(0);
  });
  test('brand load failure uses readable live fallback, without duplicating the accessible name',async({page})=>{
-  await page.route('**/wordmark-brush.png',r=>r.abort());await page.reload();const brand=page.locator('.lgo-art-wordmark');await expect(brand).toHaveAttribute('data-fallback','true');await expect(brand.locator('.lgo-art-wordmark-fallback')).toBeVisible();await expect(page.locator('h1')).toHaveAccessibleName('Linh Giới Online');
+  await page.route('**/wordmark-brush.png',r=>r.abort());await page.reload();await waitForHomepage(page);const brand=page.locator('main h1 .lgo-art-wordmark');await expect(brand).toHaveAttribute('data-fallback','true');await expect(brand.locator('.lgo-art-wordmark-fallback')).toBeVisible();await expect(page.locator('h1')).toHaveAccessibleName('Linh Giới Online');
   const link=page.locator('.lgo-immersive-hero .lgo-hero-actions a').first();await link.focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+'/game');
  });
  test('forced colors retains a live legible brand and source-art failure never blocks actions',async({page})=>{
-  await page.emulateMedia({forcedColors:'active'});await expect(page.locator('.lgo-art-wordmark-fallback')).toBeVisible();await expect(page.locator('.lgo-art-wordmark img')).toBeHidden();await page.locator('.lgo-immersive-hero .lgo-hero-actions a').last().focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+'/story');
+  await page.emulateMedia({forcedColors:'active'});await expect(page.locator('main h1 .lgo-art-wordmark-fallback')).toBeVisible();await expect(page.locator('main h1 .lgo-art-wordmark img')).toBeHidden();await page.locator('.lgo-immersive-hero .lgo-hero-actions a').last().focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+'/story');
  });
  test('responsive brand and real first-fold actions fit at narrow wide and short screens',async({page})=>{
   for(const [width,height]of [[320,800],[390,844],[768,1024],[1440,900],[1920,1080],[844,390]]){
@@ -30,7 +31,7 @@ test.describe('homepage native-scale original artwork v1.265 revision2',()=>{
  test('news titles are the primary article links, with one separate complete-summary disclosure',async({page})=>{
   const cards=page.locator('#home-news .lgo-landing-news-card');await expect(cards).toHaveCount(3);
   for(const card of await cards.all()){await expect(card.locator('h3 a')).toHaveCount(1);await expect(card.getByRole('link')).toHaveCount(1);await expect(card.locator('summary')).toHaveCount(1);expect((await card.locator('h3 a').boundingBox())!.height).toBeGreaterThanOrEqual(44);}
-  const title=cards.first().locator('h3 a'),href=await title.getAttribute('href');await title.focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+href);await page.goBack();await expect(page.locator('.lgo-art-wordmark')).toBeVisible();
+  const title=cards.first().locator('h3 a'),href=await title.getAttribute('href');await title.focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+href);await page.goBack();await waitForHomepage(page);await expect(page.locator('main h1 .lgo-art-wordmark')).toBeVisible();
  });
 
 });

@@ -19,6 +19,11 @@ def main():
  check('packages/ui/src/art-wordmark.tsx',['export function ArtWordmark','onError','node?.complete','lgo-art-wordmark-label'])
  check('tests/e2e/fe-homepage-native-art-v1265.spec.ts',['toBeLessThanOrEqual(1.02)','toBeLessThanOrEqual(1.06)','forced colors','load failure','news titles'])
  check('tools/validate_homepage_native_art.mjs',['OPAQUE_SOURCE_PIXELS','TRANSPARENT_UI_REGIONS','negativeControlRejected'])
+ check('apps/web/src/components/PublicNavigation.tsx',['variant === "immersive"','<ArtWordmark','revealOnFocus','Trang chủ'])
+ check('packages/ui/src/primitives.tsx',['ActionLinkDecoration','lgo-action-link-description','decorated ?'])
+ check('packages/ui/src/action-link.css',['::before','clip-path:polygon','var(--lgo-font-sans)','outline-offset:4px'])
+ check('packages/ui/src/route-aware-link.tsx',['revealOnFocus = false','inline: "nearest"','onFocus?.(event)'])
+ check('tests/e2e/fe-homepage-header-actions-v1265.spec.ts',['toHaveCount(8)','toBeGreaterThanOrEqual(44)','keyboard.press(\'Tab\')','violations).toEqual([])'])
  check('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265','Current FE scope: select `/`'])
  manifest=ROOT/'apps/web/public/game-art/marketing/manifest.json'
  if not manifest.is_file():errors.append('missing artwork provenance')

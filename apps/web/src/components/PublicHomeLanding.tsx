@@ -23,7 +23,11 @@ export function PublicHomeLanding() {
       kicker="Sống một đời khác trong Linh Giới"
       badge="MMORPG hành động cộng đồng 2D"
       lead="Gặp gỡ ở Linh Thành. Chọn Lộ của bạn. Viết tiếp câu chuyện của riêng mình."
-      actions={[{href:"/game",label:"Khám phá Linh Giới",tone:"spirit"},{href:"/classes",label:"Chọn Lộ của bạn",tone:"jade"},{href:"/story",label:"Bắt đầu câu chuyện",tone:"gold"}]}
+      actions={[
+        {href:"/game",label:"Khám phá Linh Giới",tone:"spirit",variant:"ornate",icon:<ReleaseIcon name="compass"/>,description:"Thế giới và nhân vật"},
+        {href:"/classes",label:"Chọn Lộ của bạn",tone:"jade",variant:"ornate",icon:<ReleaseIcon name="lotus"/>,description:"Tìm con đường riêng"},
+        {href:"/story",label:"Bắt đầu câu chuyện",tone:"gold",variant:"ornate",icon:<ReleaseIcon name="book"/>,description:"Đọc mở đầu hành trình"}
+      ]}
       detail={<div className="lgo-landing-signals" aria-label="Định hướng thế giới"><span>Thế giới 2D</span><span>Năm Lộ nhân vật</span><span>Kết nối cộng đồng</span><span>Cùng nhau viết chuyện</span></div>}
       visual={<div className="lgo-immersive-art" aria-hidden="true"><picture className="lgo-native-hero-scene"><source media="(max-width: 600px)" srcSet="/game-art/marketing/hero-mobile.png" width={565} height={405}/><img {...art("hero-artwork",1672,405)} alt="" fetchPriority="high"/></picture></div>}/>
     <div className="lgo-landing-content">

@@ -4,9 +4,10 @@ import type { WorkspaceShellNavItem } from "./workspace-navigation";
 
 export type Tone = "spirit" | "gold" | "jade" | "shadow" | "neutral";
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & { tone?: Tone };
-export type LinkButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & { tone?: Tone };
+export type ActionLinkDecoration = { icon?: ReactNode; description?: ReactNode; variant?: "ornate" };
+export type LinkButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & { tone?: Tone } & ActionLinkDecoration;
 export type NavItem = { href: string; label: string; blocked?: boolean };
-export type ExperienceHeroAction = { href: string; label: string; tone?: Tone };
+export type ExperienceHeroAction = { href: string; label: string; tone?: Tone } & ActionLinkDecoration;
 
 
 function toneClass(tone: Tone = "spirit") {
@@ -52,8 +53,16 @@ export function BlockedActionButton({
   );
 }
 
-export function LinkButton({ tone = "spirit", className, ...props }: LinkButtonProps) {
-  return <a {...props} className={cx("lgo-link-button", toneClass(tone), className)} />;
+export function LinkButton({ tone = "spirit", className, icon, description, variant, children, ...props }: LinkButtonProps) {
+  const decorated = variant === "ornate" || icon != null || description != null;
+  return <a {...props} className={cx("lgo-link-button", toneClass(tone), decorated && "lgo-action-link", className)}>
+    {decorated ? <>
+      {icon != null ? <span className="lgo-action-link-icon" aria-hidden="true">{icon}</span> : null}
+      <span className="lgo-action-link-copy"><span className="lgo-action-link-label">{children}</span>
+        {description != null ? <span className="lgo-action-link-description">{description}</span> : null}
+      </span>
+    </> : children}
+  </a>;
 }
 
 export function SpiritPanel({ className, ...props }: HTMLAttributes<HTMLElement>) {
@@ -151,7 +160,7 @@ export function MediaFrame({
         <p>{description}</p>
         {meta ? <div className="lgo-media-frame-meta">{meta}</div> : null}
         {action ? (
-          <LinkButton href={action.href} {...(action.tone ? { tone: action.tone } : {})}>
+          <LinkButton href={action.href} {...(action.tone ? { tone: action.tone } : {})} {...(action.icon != null ? { icon: action.icon } : {})} {...(action.description != null ? { description: action.description } : {})} {...(action.variant ? { variant: action.variant } : {})}>
             {action.label}
           </LinkButton>
         ) : null}
@@ -194,7 +203,7 @@ export function ExperienceHero({
         {actions.length ? (
           <div className="lgo-hero-actions">
             {actions.map((action) => (
-              <LinkButton href={action.href} {...(action.tone ? { tone: action.tone } : {})} key={`${action.href}:${action.label}`}>
+              <LinkButton href={action.href} {...(action.tone ? { tone: action.tone } : {})} {...(action.icon != null ? { icon: action.icon } : {})} {...(action.description != null ? { description: action.description } : {})} {...(action.variant ? { variant: action.variant } : {})} key={`${action.href}:${action.label}`}>
                 {action.label}
               </LinkButton>
             ))}
@@ -235,7 +244,7 @@ export function PageHeader({
       {actions.length ? (
         <div className="lgo-page-header-actions">
           {actions.map((action) => (
-            <LinkButton href={action.href} {...(action.tone ? { tone: action.tone } : {})} key={`${action.href}:${action.label}`}>
+            <LinkButton href={action.href} {...(action.tone ? { tone: action.tone } : {})} {...(action.icon != null ? { icon: action.icon } : {})} {...(action.description != null ? { description: action.description } : {})} {...(action.variant ? { variant: action.variant } : {})} key={`${action.href}:${action.label}`}>
               {action.label}
             </LinkButton>
           ))}

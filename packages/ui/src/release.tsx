@@ -1,8 +1,11 @@
 import type { ReactNode } from "react";
 
-export type ReleaseIconName = "shield" | "document" | "users" | "lock" | "download" | "signal" | "help" | "arrow" | "monitor";
+export type ReleaseIconName = "shield" | "document" | "users" | "lock" | "download" | "signal" | "help" | "arrow" | "monitor" | "compass" | "lotus" | "book";
 export type ReleaseGateState = "blocked" | "review" | "planned";
 const iconPaths: Record<ReleaseIconName, ReactNode> = {
+  compass: <><circle cx="12" cy="12" r="8"/><path d="M12 1v4m0 14v4M1 12h4m14 0h4M4.2 4.2 7 7m10 10 2.8 2.8M4.2 19.8 7 17M17 7l2.8-2.8m-5.1 4.1-5.8 2.2-2.2 5.8 5.8-2.2Z"/></>,
+  lotus: <><path d="M12 2c-5 5-5 10 0 16 5-6 5-11 0-16ZM4 6c-1 7 1 11 8 13C12 12 9 8 4 6Zm16 0c1 7-1 11-8 13 0-7 3-11 8-13Z"/><path d="M2 13c2 7 6 9 10 8 4 1 8-1 10-8-4 0-7 2-10 6-3-4-6-6-10-6Z"/></>,
+  book: <><path d="M12 5C8 2 4 3 2 4v15c4-2 7-1 10 1 3-2 6-3 10-1V4c-2-1-6-2-10 1Zm0 0v15M5 7l4 1M5 11l4 1M15 8l4-1M15 12l4-1"/></>,
   shield: <><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></>,
   document: <><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v5h4M9 12h6M9 16h6"/></>,
   users: <><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6M17 14a5 5 0 0 1 4 5v2"/></>,

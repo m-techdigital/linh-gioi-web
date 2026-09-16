@@ -1,4 +1,6 @@
 @import "./art-wordmark.css";
+@import "./action-link.css";
+@import "./marketing-navigation.css";
 
 /* Opt-in public landing composition: untouched defaults for other public routes. */
 .lgo-public-shell-immersive { background:#050f1b; }
@@ -21,11 +23,7 @@
 .lgo-public-shell-immersive .lgo-immersive-copy .lgo-hero-kicker { order:1; margin:6px 0 10px; color:#fff0cf; font:400 clamp(21px,2.15vw,31px)/1.35 var(--lgo-font-editorial); text-transform:none; letter-spacing:0; text-shadow:0 2px 4px #000; }
 .lgo-public-shell-immersive .lgo-immersive-copy .lgo-status-badge { order:2; border:0; background:transparent; box-shadow:none; padding:0; color:#daeff8; font-size:14px; letter-spacing:.06em; }
 .lgo-public-shell-immersive .lgo-immersive-copy .lgo-hero-lead { order:3; font-size:15px; line-height:1.5; max-width:590px; color:#d1e3f2; margin:10px 0 0; text-shadow:0 2px 4px #000; }
-.lgo-public-shell-immersive .lgo-immersive-copy .lgo-hero-actions { order:4; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; width:min(100%,740px); margin-top:18px; }
-.lgo-public-shell-immersive .lgo-immersive-copy .lgo-link-button { border-radius:6px; min-height:62px; font:600 18px/1.3 var(--lgo-font-editorial); padding:12px 18px; background:linear-gradient(150deg,rgba(22,54,81,.96),rgba(5,23,42,.95)); border:1px solid #64becd; color:#e4fbff; box-shadow:inset 0 0 0 3px rgba(100,190,205,.12),0 0 16px rgba(49,216,232,.15); }
-.lgo-public-shell-immersive .lgo-immersive-copy .lgo-tone-jade { background:linear-gradient(150deg,#10424a,#052c34); border-color:var(--lgo-color-jade-teal); }
-.lgo-public-shell-immersive .lgo-immersive-copy .lgo-tone-gold { color:#231504; border-color:#efc471; background:linear-gradient(#ffe3a0,#d5a444); box-shadow:inset 0 0 0 3px rgba(255,255,255,.18),0 0 22px rgba(245,200,107,.24); }
-.lgo-public-shell-immersive .lgo-immersive-copy .lgo-link-button:hover { filter:brightness(1.14); }
+.lgo-public-shell-immersive .lgo-immersive-copy .lgo-hero-actions { order:4; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; width:min(100%,840px); margin-top:18px; }
 .lgo-public-shell-immersive .lgo-landing-signals { order:5; display:flex; flex-wrap:wrap; justify-content:center; gap:9px; margin-top:16px; }
 .lgo-public-shell-immersive .lgo-landing-signals span { display:flex; align-items:center; gap:8px; padding:7px 11px; font-size:14px; color:#cfe6f4; background:rgba(4,16,28,.8); border:1px solid #284359; border-radius:4px; }
 .lgo-public-shell-immersive .lgo-landing-signals span::before { content:"◇"; color:var(--lgo-color-spirit-cyan); }
@@ -87,7 +85,6 @@
  .lgo-public-shell-immersive .lgo-immersive-copy .lgo-hero-kicker { font-size:25px; max-width:15em; }
  .lgo-public-shell-immersive .lgo-immersive-copy .lgo-hero-lead { font-size:14px; }
  .lgo-public-shell-immersive .lgo-immersive-copy .lgo-hero-actions { grid-template-columns:1fr; max-width:330px; gap:10px; margin-top:20px; }
- .lgo-public-shell-immersive .lgo-immersive-copy .lgo-link-button { min-height:50px; font-size:17px; }
  .lgo-public-shell-immersive .lgo-immersive-hero::after { background:linear-gradient(180deg,rgba(5,15,27,.2),rgba(5,15,27,.62) 50%,#050f1b); }
  .lgo-public-shell-immersive .lgo-landing-signals { display:grid; grid-template-columns:1fr 1fr; gap:7px; margin-top:18px; }
  .lgo-public-shell-immersive .lgo-landing-signals span { font-size:12px; padding:7px; }

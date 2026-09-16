@@ -1,0 +1,38 @@
+/* Optional LinkButton presentation. Default links and native anchor behavior are unchanged. */
+.lgo-link-button.lgo-action-link {
+  --lgo-action-edge:var(--lgo-color-spirit-cyan);
+  --lgo-action-ink:#e9f9ff;
+  --lgo-action-surface:linear-gradient(145deg,#153559,#071c35);
+  position:relative; isolation:isolate; display:grid; grid-template-columns:auto minmax(0,1fr);
+  align-items:center; gap:12px; min-height:76px; padding:13px 16px;
+  border:0; border-radius:0; color:var(--lgo-action-ink); background:transparent;
+  text-align:left; text-decoration:none; box-shadow:none; white-space:normal;
+}
+.lgo-link-button.lgo-action-link.lgo-tone-jade {
+  --lgo-action-edge:var(--lgo-color-jade-teal);
+  --lgo-action-surface:linear-gradient(145deg,#12424b,#05252d);
+}
+.lgo-link-button.lgo-action-link.lgo-tone-gold {
+  --lgo-action-edge:var(--lgo-color-warm-gold); --lgo-action-ink:#ffe6b2;
+  --lgo-action-surface:linear-gradient(145deg,#67481c,#281a09);
+}
+.lgo-link-button.lgo-action-link::before,.lgo-link-button.lgo-action-link::after {
+  content:""; position:absolute; pointer-events:none;
+  clip-path:polygon(9px 0,calc(100% - 9px) 0,100% 9px,100% calc(100% - 9px),calc(100% - 9px) 100%,9px 100%,0 calc(100% - 9px),0 9px);
+}
+.lgo-link-button.lgo-action-link::before { inset:0; z-index:-2; background:var(--lgo-action-edge); }
+.lgo-link-button.lgo-action-link::after { inset:2px; z-index:-1; background:var(--lgo-action-surface); box-shadow:inset 0 0 0 2px #ffffff10; }
+.lgo-action-link-icon { display:grid; place-items:center; width:38px; height:38px; flex-shrink:0; color:var(--lgo-action-edge); border:1px solid currentColor; border-radius:50%; }
+.lgo-action-link-icon svg { width:28px; height:28px; }
+.lgo-action-link-copy { display:flex; flex-direction:column; gap:5px; min-width:0; }
+.lgo-action-link-label { font:600 17px/1.25 var(--lgo-font-editorial); }
+.lgo-action-link-description { font:400 14px/1.4 var(--lgo-font-sans); color:inherit; }
+.lgo-link-button.lgo-action-link:hover::after { filter:brightness(1.2); }
+.lgo-link-button.lgo-action-link:focus-visible { outline:3px solid var(--lgo-color-warm-gold); outline-offset:4px; }
+@media (prefers-reduced-motion:reduce) { .lgo-link-button.lgo-action-link { transition:none; } }
+@media (forced-colors:active) {
+ .lgo-link-button.lgo-action-link { color:LinkText; border:1px solid ButtonText; }
+ .lgo-link-button.lgo-action-link::before,.lgo-link-button.lgo-action-link::after { display:none; }
+ .lgo-link-button.lgo-action-link:focus-visible { outline-color:Highlight; }
+ .lgo-action-link-icon { color:LinkText; }
+}

@@ -7,6 +7,7 @@ export type RouteAwareLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
   currentWhen?: "exact" | "section";
   children: ReactNode;
+  revealOnFocus?: boolean;
 };
 
 function normalisePath(path: string): string {
@@ -21,7 +22,7 @@ function isCurrentRoute(currentPath: string, href: string, currentWhen: "exact" 
   return current === target || current.startsWith(`${target}/`);
 }
 
-export function RouteAwareLink({ href, currentWhen = "exact", children, ...props }: RouteAwareLinkProps) {
+export function RouteAwareLink({ href, currentWhen = "exact", children, revealOnFocus = false, onFocus, ...props }: RouteAwareLinkProps) {
   const [currentPath, setCurrentPath] = useState("");
 
   useEffect(() => {
@@ -41,6 +42,12 @@ export function RouteAwareLink({ href, currentWhen = "exact", children, ...props
     <a
       {...props}
       href={href}
+      onFocus={revealOnFocus ? event => {
+        // Native focus may leave a partially visible item clipped in a horizontal rail.
+        // Reveal the whole focused item without stealing focus or animating the viewport.
+        event.currentTarget.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "instant" });
+        onFocus?.(event);
+      } : onFocus}
       aria-current={current ? "page" : props["aria-current"]}
       data-current={current ? "page" : undefined}
     >

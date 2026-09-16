@@ -1,5 +1,10 @@
 # Homepage realignment handoff v1.265
 
+## Latest revision3 — continue same homepage
+
+Read LGO-WEB-FE-HOMEPAGE-HEADER-ACTIONS-REPORT-v1.265-r3.md first. Brush header identity, active home link, full keyboard menu visibility and three icon/description/beveled-frame links are verified in final production132/132, including44 homepage cases. One build63,17 shared component tests,17 tooling tests,4 capture widths and16 unchanged-sibling matches. Evidence: handoff/home-realignment-v1.265-r3/evidence/REVIEW.html. Keep WEB_VISUAL_REVIEW_REQUIRED with CONTINUE on `/`; next lower gallery/news media and footer alignment, not a new page. Prior revision handoffs below remain historical.
+
+
 ## Latest revision2 — same homepage, not CLOSED
 
 Read LGO-WEB-FE-HOMEPAGE-NATIVE-ART-REPORT-v1.265-r2.md first. Original brush wordmark and native1672×405 desktop scene replace the generic title/tiny enlarged city; mobile uses its own565×405 traveler crop. The live fallback and news-title anchors are verified. Final production122/122,34 homepage cases,build63,4 captures,16 unchanged-sibling comparisons. Final evidence is handoff/home-realignment-v1.265-r2/evidence/REVIEW.html. Baseline69465d3; same branch/worktree and fixed3221/3236 previews. Remain WEB_VISUAL_REVIEW_REQUIRED and keep `/` active; next refine header identity and main-action icon/frame details, not the old news queue.

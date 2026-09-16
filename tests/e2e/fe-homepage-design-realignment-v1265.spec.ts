@@ -1,9 +1,10 @@
+import {waitForHomepage} from './helpers/homepage-ready';
 import { test, expect } from '@playwright/test';
 import { localContentRepository } from '../../packages/content/src/repository';
 const origin=process.env.LGO_WEB_URL??'http://127.0.0.1:3000';
 
 test.describe('homepage restarts from actual v1.118 visual composition',()=>{
- test.beforeEach(async({page})=>{await page.goto(origin+'/');});
+ test.beforeEach(async({page})=>{await page.goto(origin+'/');await waitForHomepage(page);});
  test('full-width illustrated hero centers the brand rather than a split boxed proof layout',async({page,isMobile})=>{
   const hero=page.locator('.lgo-immersive-hero');await expect(hero).toBeVisible();await expect(hero.locator('h1')).toHaveAccessibleName('Linh Giới Online');
   const m=await hero.evaluate(e=>{const r=e.getBoundingClientRect(),h=e.querySelector('h1')!.getBoundingClientRect();return{hero:r.toJSON(),h:h.toJSON(),overflow:document.documentElement.scrollWidth-innerWidth,images:[...e.querySelectorAll('img')].every(i=>i.complete&&i.naturalWidth>0),center:Math.abs(h.x+h.width/2-innerWidth/2),background:getComputedStyle(e.querySelector('.lgo-immersive-art')!).position};});
@@ -20,7 +21,7 @@ test.describe('homepage restarts from actual v1.118 visual composition',()=>{
  test('brand and section typography follow the design hierarchy instead of legacy global caps',async({page,isMobile})=>{
   const size=async(s:string)=>page.locator(s).first().evaluate(e=>parseFloat(getComputedStyle(e).fontSize));
   // Source brush wordmark replaces a font-size proxy: assert wordmark rendered bounds.
-  const wordmark=page.locator('.lgo-art-wordmark');await expect(wordmark).toBeVisible();const wordmarkBox=(await wordmark.boundingBox())!;expect(wordmarkBox.width).toBeGreaterThanOrEqual(isMobile?280:400);expect(wordmarkBox.width).toBeLessThanOrEqual(440);
+  const wordmark=page.locator('main h1 .lgo-art-wordmark');await expect(wordmark).toBeVisible();const wordmarkBox=(await wordmark.boundingBox())!;expect(wordmarkBox.width).toBeGreaterThanOrEqual(isMobile?280:400);expect(wordmarkBox.width).toBeLessThanOrEqual(440);
   expect(wordmarkBox.width).toBeLessThanOrEqual((await page.viewportSize())!.width-20);
   expect(await size('.lgo-landing-heading h2')).toBeLessThanOrEqual(24);
   expect(await size('.lgo-landing-features h3')).toBeLessThanOrEqual(20);
@@ -28,12 +29,12 @@ test.describe('homepage restarts from actual v1.118 visual composition',()=>{
   expect(await size('.lgo-landing-news-card h3')).toBeLessThanOrEqual(19);
  });
  test('primary actions and illustrated features navigate to real existing destinations',async({page})=>{
-  for(const [i,href]of ['/game','/classes','/story'].entries()){const link=page.locator('.lgo-immersive-hero .lgo-hero-actions a').nth(i);await expect(link).toHaveAttribute('href',href);await link.focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+href);await expect(page.locator('main h1')).toBeVisible();await page.goBack();}
-  for(const [i,href]of ['/game','/game/loop','/community'].entries()){const link=page.locator('.lgo-landing-features .lgo-illustrated-link').nth(i);await expect(link).toHaveAttribute('href',href);await link.click();await expect(page).toHaveURL(origin+href);await page.goBack();}
+  for(const [i,href]of ['/game','/classes','/story'].entries()){const link=page.locator('.lgo-immersive-hero .lgo-hero-actions a').nth(i);await expect(link).toHaveAttribute('href',href);await link.focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+href);await expect(page.locator('main h1')).toBeVisible();await page.goBack();await waitForHomepage(page);}
+  for(const [i,href]of ['/game','/game/loop','/community'].entries()){const link=page.locator('.lgo-landing-features .lgo-illustrated-link').nth(i);await expect(link).toHaveAttribute('href',href);await link.click();await expect(page).toHaveURL(origin+href);await page.goBack();await waitForHomepage(page);}
  });
  test('discovery mosaic is actual image navigation, not a fake video or embedded UI board',async({page})=>{
   const mosaic=page.locator('.lgo-media-mosaic');await expect(mosaic.getByRole('link')).toHaveCount(5);
-  for(const link of await mosaic.getByRole('link').all()){const href=await link.getAttribute('href');expect(href).toMatch(/^\//);await link.focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+href);await page.goBack();}
+  for(const link of await mosaic.getByRole('link').all()){const href=await link.getAttribute('href');expect(href).toMatch(/^\//);await link.focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+href);await page.goBack();await waitForHomepage(page);}
   await expect(page.locator('main img[src*=design-reference],main iframe,main canvas,main video,main [role=timer],main a[download]')).toHaveCount(0);
  });
  test('news cards use real published entries with original date links and recoverable complete summaries',async({page})=>{
@@ -50,10 +51,10 @@ test.describe('homepage restarts from actual v1.118 visual composition',()=>{
   for(const width of [320,390,768,1440]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(0);await expect(page.locator('.lgo-landing-features a')).toHaveCount(3);}
   await page.setViewportSize({width:320,height:800});for(const p of await page.locator('.lgo-immersive-landing p').all()){if(await p.isVisible())expect(await p.evaluate(e=>parseFloat(getComputedStyle(e).fontSize))).toBeGreaterThanOrEqual(14);}
   for(const e of await page.locator('.lgo-immersive-landing a,.lgo-immersive-landing summary').all()){if(await e.isVisible())expect((await e.boundingBox())!.height).toBeGreaterThanOrEqual(44);}
-  const a=page.locator('.lgo-immersive-hero .lgo-hero-actions a').first();await a.focus();expect(await a.evaluate(e=>getComputedStyle(e).outlineStyle)).not.toBe('none');await page.emulateMedia({forcedColors:'active'});expect(await a.evaluate(e=>getComputedStyle(e).outlineStyle)).not.toBe('none');
+  const a=page.locator('.lgo-immersive-hero .lgo-hero-actions a').first();await page.keyboard.press('Tab');await a.focus();await expect(a).toBeFocused();expect(await a.evaluate(e=>getComputedStyle(e).outlineStyle)).not.toBe('none');await page.emulateMedia({forcedColors:'active'});expect(await a.evaluate(e=>getComputedStyle(e).outlineStyle)).not.toBe('none');
  });
  test('art failure leaves the brand and primary actions usable and reduced motion avoids animation',async({page})=>{
-  await page.route('**/game-art/marketing/**',r=>r.abort());await page.reload();await expect(page.locator('.lgo-immersive-hero h1')).toBeVisible();await page.emulateMedia({reducedMotion:'reduce'});expect(await page.evaluate(()=>getComputedStyle(document.documentElement).scrollBehavior)).toBe('auto');await page.locator('.lgo-immersive-hero .lgo-hero-actions a').first().click();await expect(page).toHaveURL(origin+'/game');
+  await page.route('**/game-art/marketing/**',r=>r.abort());await page.reload();await waitForHomepage(page);await expect(page.locator('.lgo-immersive-hero h1')).toBeVisible();await page.emulateMedia({reducedMotion:'reduce'});expect(await page.evaluate(()=>getComputedStyle(document.documentElement).scrollBehavior)).toBe('auto');await page.locator('.lgo-immersive-hero .lgo-hero-actions a').first().click();await expect(page).toHaveURL(origin+'/game');
  });
  test('homepage skip link and header remain usable without exposing engineering controls',async({page})=>{
   await page.keyboard.press('Tab');const skip=page.getByRole('link',{name:'Bỏ qua menu tới nội dung chính',exact:true});await expect(skip).toBeFocused();await page.keyboard.press('Enter');await expect(page.locator('#main-content')).toBeFocused();

@@ -9,7 +9,7 @@ export function PublicSiteShell({ children, variant }: { children: ReactNode; va
       <div className={`lgo-public-shell${variant === "immersive" ? " lgo-public-shell-immersive" : ""}`}>
         <a className="lgo-skip-link" href="#main-content">Bỏ qua menu tới nội dung chính</a>
         <header className="lgo-site-header">
-          <Container><PublicNavigation /></Container>
+          <Container><PublicNavigation variant={variant}/></Container>
         </header>
         <main id="main-content" className="lgo-main" tabIndex={-1}>
           <Container>{children}</Container>

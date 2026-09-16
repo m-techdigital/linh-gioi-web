@@ -1,11 +1,11 @@
 Current phase: WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265 WEB_VISUAL_REVIEW_REQUIRED
 Current route: `/`
 
-Latest homepage revision: v1.265-r2 — original brush wordmark with live fallback, native-scale desktop scene, separate mobile traveler crop and primary news-title links. Final scoped production122/122 (34 homepage), build63,4 viewport captures and16 unchanged-sibling matches. See LGO-WEB-FE-HOMEPAGE-NATIVE-ART-REPORT-v1.265-r2.md. These results are engineering evidence, not final visual acceptance.
+Latest homepage revision: v1.265-r3 — original brush header identity, active home navigation, complete44px keyboard menu targets and shared icon/description/beveled-frame primary links. Final production132/132 (44 homepage), build63,4 captures and16 unchanged-sibling matches. See LGO-WEB-FE-HOMEPAGE-HEADER-ACTIONS-REPORT-v1.265-r3.md. Same homepage remains open; tests do not establish owner visual acceptance.
 
 Owner has reprioritized visual correction from homepage. Previous article work is preserved; early-page CLOSED markers are not proof of design fidelity. Current homepage composition is under browser verification and human visual review, not automatically accepted. The old news queue is deferred.
 
-Active task remains homepage v1.265 until design comparison and visual review are complete. Later entry pages: /game, /classes, /story, /journey, /start, one at a time. Keep source/branch/worktree; no restoration. Latest evidence in handoff/home-realignment-v1.265-r2; prior revision retained in handoff/home-realignment-v1.265. No production deployment or independent backend.
+Active task remains homepage v1.265 until design comparison and visual review are complete. Later entry pages: /game, /classes, /story, /journey, /start, one at a time. Keep source/branch/worktree; no restoration. Latest evidence in handoff/home-realignment-v1.265-r3; revision2 retained in handoff/home-realignment-v1.265-r2; prior revision retained in handoff/home-realignment-v1.265. No production deployment or independent backend.
 
 Historical state below is retained for provenance, not active visual acceptance.
 
