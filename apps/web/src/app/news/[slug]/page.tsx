@@ -1,3 +1,4 @@
+import { PublicStatusTrustArticle } from "../../../components/PublicStatusTrustArticle";
 import { PublicDetailReadingArticle } from "../../../components/PublicDetailReadingArticle";
 import { PublicGameInfoArticle } from "../../../components/PublicGameInfoArticle";
 import { PublicVisualResponsiveArticle } from "../../../components/PublicVisualResponsiveArticle";
@@ -49,6 +50,10 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
 
   if (entry.slug === "news-guide-detail-pages-started") {
     return <WebAppShell><PublicDetailReadingArticle entry={entry} related={related}/></WebAppShell>;
+  }
+
+  if (entry.slug === "status-download-trust-polish-started") {
+    return <WebAppShell><PublicStatusTrustArticle entry={entry} related={related}/></WebAppShell>;
   }
 
   return (
