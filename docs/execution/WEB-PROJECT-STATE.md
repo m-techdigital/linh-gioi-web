@@ -1,3 +1,17 @@
+Current phase: WEB-FE-PUBLIC-UX-ARTICLE-v1.255 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /news/public-ux-content-polish-started uses two full source chapters, native contents, posting metadata, six real reading destinations and original related articles. PublishedArticle is shared with the delivered Control Tower; no CSS/content/dependency edits. Production638/638, component4+4+6+7, build63, five viewports and50 geometry comparisons.
+
+Delivery gate: reviewed commit, normal push, matching remote HEAD and verified full/delta/evidence ZIP/SHA256/replay. No deployment or handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.256.
+Select `/news/visual-responsive-polish-started` only after v1.255 delivery. Real Browser UI/UX Layout First, Base First, Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-PUBLIC-UX-ARTICLE-REPORT-v1.255.md.
+Whole-app JavaScript-disabled streaming remains open. Prior interruptions reconciled; fresh pause/ownership checks and owner PID waiver remain.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-CONTROL-TOWER-ARTICLE-v1.254 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /news/web-program-control-tower uses two full source chapters, posting metadata, native contents and original related articles. Shared optional labels/card variant preserve previous guide/topic defaults. Source boundary text and reduced-motion arrival fixed. Production616/616, component4+6+7, build63, five viewports and50 geometry matches.

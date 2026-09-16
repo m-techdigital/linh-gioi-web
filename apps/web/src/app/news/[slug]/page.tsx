@@ -1,3 +1,4 @@
+import { PublicUXArticle } from "../../../components/PublicUXArticle";
 import "@lgo-web/ui/release-layout.css";
 import "@lgo-web/ui/guide-article.css";
 import "@lgo-web/ui/guidance-layout.css";
@@ -29,6 +30,10 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
 
   if (entry.slug === "web-program-control-tower") {
     return <WebAppShell><PublicControlTowerArticle entry={entry} related={related}/></WebAppShell>;
+  }
+
+  if (entry.slug === "public-ux-content-polish-started") {
+    return <WebAppShell><PublicUXArticle entry={entry} related={related}/></WebAppShell>;
   }
 
   return (

@@ -110,3 +110,6 @@ export { ArticleFragmentRestoration } from "./article-fragment-restoration";
 
 export { AnnouncementBoard } from "./announcement-board";
 export type { AnnouncementBoardItem, AnnouncementBoardCopy } from "./announcement-board";
+
+export { PublishedArticle } from "./published-article";
+export type { PublishedArticleCopy, PublishedArticleEntry, PublishedArticleSection, PublishedArticleLink } from "./published-article";

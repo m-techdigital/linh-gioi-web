@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: v1.254 `/news/web-program-control-tower` verified; next v1.255 `/news/public-ux-content-polish-started` after delivery. Closure requires normal push, matching remote HEAD and verified ZIP/SHA256. Historical article content is not live game operations. Whole-app JavaScript-disabled access remains open.
+Current visual checkpoint: v1.255 `/news/public-ux-content-polish-started` verified; next v1.256 `/news/visual-responsive-polish-started` after delivery. Closure requires normal push, matching remote HEAD and verified ZIP/SHA256. Source-complete reading, not current game operation. Whole-app JavaScript-disabled access remains open.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 
