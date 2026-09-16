@@ -1,3 +1,4 @@
+import { PublicContentHubArticle } from "../../../components/PublicContentHubArticle";
 import { PublicCommunityOnboardingArticle } from "../../../components/PublicCommunityOnboardingArticle";
 import { PublicTesterPreparationArticle } from "../../../components/PublicTesterPreparationArticle";
 import { PublicStatusTrustArticle } from "../../../components/PublicStatusTrustArticle";
@@ -64,6 +65,10 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
 
   if (entry.slug === "community-roadmap-onboarding-started") {
     return <WebAppShell><PublicCommunityOnboardingArticle entry={entry} related={related}/></WebAppShell>;
+  }
+
+  if (entry.slug === "content-ia-hub-polish-started") {
+    return <WebAppShell><PublicContentHubArticle entry={entry} related={related}/></WebAppShell>;
   }
 
   return (

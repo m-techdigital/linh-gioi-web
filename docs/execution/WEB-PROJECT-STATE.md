@@ -1,3 +1,17 @@
+Current phase: WEB-FE-CONTENT-HUB-ARTICLE-v1.262 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /news/content-ia-hub-polish-started uses unchanged PublishedArticle for two full source chapters, original date/related articles and8 information paths. Actual library filtering and Start navigation verified without changing destination tools. Fresh production836/836 in64 files, build63, five viewports and70 raw DOM/geometry matches. No CSS/package/content/dependency changes.
+
+Delivery gate: reviewed normal commit/push, exact remote HEAD and verified full/delta/evidence ZIP/SHA256/replay. No production deployment or local handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.263.
+Select `/news/world-gameplay-loop-depth-started` only after v1.262 delivery. Real Browser UI/UX Layout First, Base First, Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-CONTENT-HUB-ARTICLE-REPORT-v1.262.md.
+Reuse dev3221/production3236; release finished handoff claim after verified delivery and retain archives. Whole-app JavaScript-disabled streaming remains open. Old dashboard task stays operator REVIEW; PID waiver and fresh pause/ownership checks remain active.
+
+Historical snapshots below are not active delivery policy.
+
 Current phase: WEB-FE-COMMUNITY-ONBOARDING-ARTICLE-v1.261 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /news/community-roadmap-onboarding-started uses unchanged PublishedArticle for two complete source chapters, source date, original related articles and8 informational paths. Actual Onboarding/Roadmap interactions verified without changing destination tools. Fresh production804/804 across64 files, build63, five viewports and68 exact raw DOM/geometry matches. No package/CSS/content/dependency changes.
