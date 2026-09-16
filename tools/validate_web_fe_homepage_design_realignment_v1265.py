@@ -36,7 +36,7 @@ def main():
  check('apps/web/src/components/PublicHomeLanding.tsx',['motto="KIẾP NÀY, THẾ GIỚI RỘNG LỚN HƠN BẠN NGHĨ"','lgo-media-mosaic-focal'])
  check('packages/ui/src/illustrated-navigation.tsx',['leadAdornment?: React.ReactNode','lgo-media-mosaic-lead-wrap'])
  check('tools/validate_homepage_header_sigil.mjs',['negativeControlRejected','opaque'])
- check('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265','Current FE scope: select `/`'])
+ check('docs/execution/LGO-WEB-FE-HOMEPAGE-FINAL-DENSITY-REPORT-v1.265-r6.md',['WEB-FE-HOMEPAGE-FINAL-DENSITY-v1.265-r6','156/156','WEB_VISUAL_REVIEW_REQUIRED'])
  manifest=ROOT/'apps/web/public/game-art/marketing/manifest.json'
  if not manifest.is_file():errors.append('missing artwork provenance')
  else:
