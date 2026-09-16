@@ -1,3 +1,17 @@
+Current phase: WEB-FE-PLAYER-TRUST-GUIDE-ARTICLE-v1.247 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /guides/player-trust-release-guide now has an illustrated editorial header, four complete source chapters and six contextual native actions. Production regression 420/420; 63-page build; five viewport captures and 30 sibling geometry checks. No signup, download artifact or access grant.
+
+Delivery gate: reviewed commit, normal origin/main push, exact remote HEAD and verified full/delta/evidence ZIPs are required before closure is effective. No deployment or local handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.248.
+Select `/guides/release-readiness-hub-guide` only after v1.247 delivery closure. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-PLAYER-TRUST-GUIDE-ARTICLE-REPORT-v1.247.md.
+Whole-app JavaScript-disabled streaming remains open. Owner PID capacity waiver remains; future pause/ownership checks retained.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-ROUTE-CONTINUITY-GUIDE-ARTICLE-v1.246 WEB_CLOSED — delivery-effective only after external manifest verification.
 
 Current decision: /guides/route-continuity-conversion-guide has five real header destinations, four complete source chapters and six contextual native actions. Production regression 396/396; 63-page build; five viewport captures; 28 sibling geometry comparisons. Existing shared priority panel consumers retain their default rendering. No access or conversion backend was created.

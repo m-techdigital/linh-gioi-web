@@ -1,5 +1,5 @@
 import { closedTesterChecklist, deviceReportTemplateFields, knownLimitationNotes, safeFeedbackTemplates } from "@lgo-web/content";
-import { ExperienceHero, FieldManual, LocalChecklist, TemplateTabs, ReleaseIcon, SectionHeading, LinkButton } from "@lgo-web/ui";
+import { ArticleFragmentRestoration, ExperienceHero, FieldManual, LocalChecklist, TemplateTabs, ReleaseIcon, SectionHeading, LinkButton } from "@lgo-web/ui";
 import type { ReadingTemplate, ReleaseIconName } from "@lgo-web/ui";
 
 const preparationLabels = ["Đọc điều kiện phát hành", "Chuẩn bị thông tin thiết bị", "Góp ý đúng phạm vi", "Chờ kênh chính thức"];
@@ -63,9 +63,10 @@ export function TesterPackFeedback() {
 }
 export function TesterPackPreparation() {
   return <div className="lgo-release-reading-grid lgo-release-reading-grid-even">
-    <section id="tester-checklist" className="lgo-release-reading-panel lgo-release-frame" aria-labelledby="tester-checklist-heading">
+    <section id="tester-checklist" tabIndex={-1} className="lgo-release-reading-panel lgo-release-frame" aria-labelledby="tester-checklist-heading">
       <SectionHeading headingId="tester-checklist-heading" eyebrow="Chuẩn bị từ những điều nhỏ" title="Checklist chuẩn bị" />
       <LocalChecklist items={preparationItems} label="Tự kiểm tra chuẩn bị tester" />
+      <ArticleFragmentRestoration targetIds={["tester-checklist"]} />
     </section>
     <section id="tester-device" className="lgo-release-reading-panel lgo-release-frame" aria-labelledby="tester-device-heading">
       <SectionHeading headingId="tester-device-heading" eyebrow="Đủ để tái hiện, không để định danh" title="Báo cáo thiết bị" />

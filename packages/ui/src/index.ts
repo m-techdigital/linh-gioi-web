@@ -105,3 +105,5 @@ export { FeaturedReading } from "./featured-reading";
 export { GuideChapterBody } from "./guide-article";
 
 export { ReadingPriorityPanel } from "./reading-priority-panel";
+
+export { ArticleFragmentRestoration } from "./article-fragment-restoration";

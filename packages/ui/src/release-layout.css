@@ -90,7 +90,7 @@
 .lgo-release-next-routes small { font-size:.66rem; color:var(--lgo-color-spirit-cyan); margin-top:auto; }
 .lgo-release-layout .lgo-release-route-boundary { display:flex; gap:.5rem; align-items:center; font-size:.7rem; margin:1rem 0 0; }
 .lgo-release-route-boundary .lgo-release-icon { width:1rem; height:1rem; }
-.lgo-release-layout a:focus-visible, .lgo-release-layout summary:focus-visible { outline:2px solid var(--lgo-color-warm-gold); outline-offset:4px; }
+.lgo-release-layout .lgo-release-reading-panel[tabindex="-1"]:focus-visible, .lgo-release-layout a:focus-visible, .lgo-release-layout summary:focus-visible { outline:2px solid var(--lgo-color-warm-gold); outline-offset:4px; }
 .lgo-release-layout .lgo-release-next-routes a:hover { border-color:var(--lgo-color-spirit-cyan); }
 .lgo-release-more-evidence { border-block:1px solid var(--release-line); }
 .lgo-release-more-evidence > summary { padding:1rem .25rem; color:var(--lgo-color-parchment); font-size:.85rem; }
@@ -242,3 +242,6 @@
 .lgo-release-template-tips dl { display:grid; gap:.65rem; margin:.2rem 0 .8rem; }
 .lgo-release-template-tips dt { color:var(--lgo-color-parchment); font-size:.8rem; font-weight:600; }
 .lgo-release-template-tips dd { margin:.25rem 0 0; font-size:.8rem; line-height:1.6; color:var(--release-muted); }
+
+/* Opt-in focusable reading targets must not race the root native smooth-fragment animation. */
+html:has(.lgo-release-layout .lgo-release-reading-panel[tabindex="-1"]) { scroll-behavior:auto; }
