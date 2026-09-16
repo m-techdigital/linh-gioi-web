@@ -107,3 +107,6 @@ export { GuideChapterBody } from "./guide-article";
 export { ReadingPriorityPanel } from "./reading-priority-panel";
 
 export { ArticleFragmentRestoration } from "./article-fragment-restoration";
+
+export { AnnouncementBoard } from "./announcement-board";
+export type { AnnouncementBoardItem } from "./announcement-board";

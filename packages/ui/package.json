@@ -24,7 +24,8 @@
     "./planning-layout.css": "./src/planning-layout.css",
     "./world-loop-layout.css": "./src/world-loop-layout.css",
     "./guide-article.css": "./src/guide-article.css",
-    "./reading-catalog.css": "./src/reading-catalog.css"
+    "./reading-catalog.css": "./src/reading-catalog.css",
+    "./announcement-board.css": "./src/announcement-board.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

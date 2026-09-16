@@ -1,3 +1,17 @@
+Current phase: WEB-FE-EVENTS-ANNOUNCEMENT-BOARD-v1.251 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /events now has an illustrated community notice board, one exact source announcement, full native disclosure, publication-date semantics and real reading routes. Fresh production512/512, build63, component4; five viewports and42 sibling geometry matches. No live event schedule, registration or rewards.
+
+Delivery gate: reviewed commit, normal origin/main push, exact remote HEAD, full/delta/evidence ZIP/SHA256/replay required. No deployment or handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.252.
+Select `/patch-notes` only after v1.251 delivery. Real Browser UI/UX Layout First, Base First, Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-EVENTS-ANNOUNCEMENT-BOARD-REPORT-v1.251.md.
+Whole-app JavaScript-disabled streaming remains open. PID capacity waiver retained; new pause/ownership checks remain active.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-FAQ-GUIDE-ARTICLE-v1.250 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /guides/faq-search-helpfulness-guide has four full source chapters, four overview links and nine contextual routes. Existing FAQ category tools are exercised, not duplicated; help-boundary direct focus fixed minimally. Production496/496, build63, five viewports and36 sibling geometry matches; FAQ default geometry retained. No online search or feedback intake.

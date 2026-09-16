@@ -1,0 +1,46 @@
+/* Reusable editorial notice board; no live schedule, ranking or status state. */
+.lgo-announcement-hero .lgo-performance-priority-console { background:color-mix(in srgb,var(--lgo-color-art-ink) 90%,transparent); border:1px solid var(--release-line); padding:1.5rem; }
+.lgo-announcement-hero .lgo-performance-priority-console li strong { font-size:.9rem; }
+.lgo-announcement-hero .lgo-performance-priority-console > small { line-height:1.6; }
+.lgo-announcement-board { display:grid; gap:1.2rem; }
+.lgo-announcement-card { display:grid; grid-template-columns:180px minmax(0,1fr); gap:1.75rem; border:3px double var(--lgo-color-warm-gold); border-radius:3px; min-width:0; }
+.lgo-announcement-publication { display:flex; flex-direction:column; align-items:flex-start; gap:.55rem; border-right:1px solid color-mix(in srgb,var(--lgo-color-art-ink) 23%,transparent); padding-right:1.1rem; }
+.lgo-announcement-publication > .lgo-release-icon { width:2rem; height:2rem; margin-bottom:.5rem; }
+.lgo-announcement-publication > span { font-size:.78rem; line-height:1.45; }
+.lgo-announcement-publication time { font:500 1.45rem/1.4 var(--lgo-font-editorial); }
+.lgo-announcement-publication small { font-size:.75rem; line-height:1.5; }
+.lgo-announcement-copy { min-width:0; }
+.lgo-announcement-eyebrow { text-transform:uppercase; letter-spacing:.12em; font-size:.68rem; line-height:1.6; }
+.lgo-release-layout .lgo-announcement-card h3 { margin:.55rem 0 .8rem; color:var(--lgo-color-art-ink); font:500 2rem/1.25 var(--lgo-font-editorial); overflow-wrap:anywhere; }
+.lgo-release-layout .lgo-announcement-card .lgo-announcement-description,
+.lgo-release-layout .lgo-announcement-card .lgo-announcement-body { display:block; overflow:visible; margin:.8rem 0; color:var(--lgo-color-art-ink); font-size:1rem; line-height:1.7; }
+.lgo-announcement-boundary { display:flex; align-items:start; gap:.65rem; padding:.85rem; background:color-mix(in srgb,var(--lgo-color-art-ink) 6%,transparent); border:1px solid color-mix(in srgb,var(--lgo-color-art-ink) 22%,transparent); }
+.lgo-announcement-boundary .lgo-release-icon { flex-shrink:0; }
+.lgo-announcement-details { margin-top:1rem; border-top:1px solid color-mix(in srgb,var(--lgo-color-art-ink) 25%,transparent); }
+.lgo-announcement-details > summary { display:flex; justify-content:space-between; align-items:center; gap:1rem; min-height:48px; padding:.7rem .15rem; font-size:.9rem; font-weight:600; list-style:none; cursor:pointer; color:var(--lgo-color-art-ink); }
+.lgo-announcement-details > summary::-webkit-details-marker { display:none; }
+.lgo-announcement-details > summary > span { font-size:1.3rem; }
+.lgo-announcement-details[open] > summary > span { transform:rotate(45deg); }
+.lgo-announcement-details > summary:hover { background:color-mix(in srgb,var(--lgo-color-art-ink) 6%,transparent); }
+.lgo-release-layout .lgo-announcement-details > summary:focus-visible { outline:2px solid var(--lgo-color-art-ink); outline-offset:3px; }
+.lgo-announcement-empty { text-align:center; border:1px dashed var(--release-line); }
+.lgo-announcement-empty h3 { font:500 1.5rem/1.4 var(--lgo-font-editorial); color:var(--lgo-color-parchment); }
+.lgo-announcement-reading-routes { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.7rem; margin:1rem 0; }
+.lgo-announcement-reading-routes .lgo-link-button { gap:.55rem; justify-content:space-between; }
+@media(max-width:800px) {
+  .lgo-announcement-card { grid-template-columns:1fr; gap:1rem; }
+  .lgo-announcement-publication { display:grid; grid-template-columns:2rem minmax(0,1fr); gap:.35rem .7rem; border-right:0; padding:0 0 1rem; border-bottom:1px solid color-mix(in srgb,var(--lgo-color-art-ink) 23%,transparent); }
+  .lgo-announcement-publication > .lgo-release-icon { grid-row:1 / span 3; margin:0; }
+  .lgo-announcement-publication time,.lgo-announcement-publication small { grid-column:2; }
+  .lgo-announcement-reading-routes { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:480px) {
+  .lgo-announcement-hero .lgo-performance-priority-console { padding:1.2rem; }
+  .lgo-release-layout .lgo-announcement-card h3 { font-size:1.7rem; }
+  .lgo-announcement-reading-routes { grid-template-columns:1fr; }
+}
+@media(forced-colors:active) {
+  .lgo-announcement-card { border-color:CanvasText; }
+  .lgo-release-layout .lgo-announcement-details > summary:focus-visible { outline-color:Highlight; }
+}
+@media(prefers-reduced-motion:reduce) { .lgo-announcement-details > summary { transition:none; } }
