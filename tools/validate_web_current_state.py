@@ -314,11 +314,13 @@ VALIDATORS = [
     "validate_web_fe_player_safety_guide_article_v1243.py",
     "validate_web_fe_readability_guide_article_v1244.py",
     "validate_web_fe_performance_guide_article_v1245.py",
+    "validate_web_fe_route_continuity_guide_article_v1246.py",
 ]
 
 # These guards enforced a diagram image or deliberately line-clamped readiness cards.
 # v1.221 replaces them with art-backed DOM UI + native evidence disclosures. Not counted as PASS.
 SUPERSEDED_LAYOUT_VALIDATORS = {
+    "validate_web_fe_guides_route_continuity_conversion_real_ui_layout_v1169.py": "validate_web_fe_route_continuity_guide_article_v1246.py",
     "validate_web_fe_guides_performance_copy_budget_real_ui_layout_v1168.py": "validate_web_fe_performance_guide_article_v1245.py",
     "validate_web_fe_guides_accessibility_readability_real_ui_layout_v1167.py": "validate_web_fe_readability_guide_article_v1244.py",
     "validate_web_fe_guides_player_safety_support_real_ui_layout_v1166.py": "validate_web_fe_player_safety_guide_article_v1243.py",

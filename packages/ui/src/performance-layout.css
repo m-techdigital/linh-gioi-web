@@ -83,3 +83,13 @@
  .lgo-performance-route-tile > p { min-height:0; }
 }
 @media(prefers-reduced-motion:reduce) { .lgo-reading-preview * { transition:none; animation:none; } }
+
+/* Optional reading destinations preserve the original unlinked priority panel. */
+.lgo-performance-priority-console li:has(> a) { padding:0; }
+.lgo-performance-priority-console li > a { display:flex; align-items:center; gap:.8rem; width:100%; min-width:0; min-height:48px; padding:.65rem .35rem; color:var(--lgo-color-parchment); text-decoration:none; }
+.lgo-performance-priority-console li > a > span { min-width:1.6rem; }
+.lgo-performance-priority-console li > a > strong { min-width:0; overflow-wrap:anywhere; line-height:1.5; }
+.lgo-performance-priority-console li > a > .lgo-release-icon { margin-left:auto; flex-shrink:0; width:1rem; height:1rem; color:var(--lgo-color-warm-gold); }
+.lgo-performance-priority-console li > a:hover { background:color-mix(in srgb,var(--lgo-color-jade-teal) 10%,transparent); }
+.lgo-performance-priority-console li > a:focus-visible { outline:2px solid var(--lgo-color-warm-gold); outline-offset:2px; }
+@media(forced-colors:active) { .lgo-performance-priority-console li > a:focus-visible { outline-color:Highlight; } }
