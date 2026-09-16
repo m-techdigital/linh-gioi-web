@@ -28,6 +28,9 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.260 replaces both historical compact render checks for this exact tester news slug.
+    "**/fe-news-closed-tester-pack-real-ui-layout-v1183.spec.ts",
+    "**/fe-news-closed-tester-pack-real-ui-layout-v1196.spec.ts",
     // v1.259 replaces only this exact compact status/trust article layout.
     "**/fe-news-status-download-trust-real-ui-layout-v1182.spec.ts",
     // v1.258 replaces only the exact compact news/guide-detail article. Other articles remain active.

@@ -1,3 +1,4 @@
+import { PublicTesterPreparationArticle } from "../../../components/PublicTesterPreparationArticle";
 import { PublicStatusTrustArticle } from "../../../components/PublicStatusTrustArticle";
 import { PublicDetailReadingArticle } from "../../../components/PublicDetailReadingArticle";
 import { PublicGameInfoArticle } from "../../../components/PublicGameInfoArticle";
@@ -54,6 +55,10 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
 
   if (entry.slug === "status-download-trust-polish-started") {
     return <WebAppShell><PublicStatusTrustArticle entry={entry} related={related}/></WebAppShell>;
+  }
+
+  if (entry.slug === "closed-tester-information-pack-started") {
+    return <WebAppShell><PublicTesterPreparationArticle entry={entry} related={related}/></WebAppShell>;
   }
 
   return (

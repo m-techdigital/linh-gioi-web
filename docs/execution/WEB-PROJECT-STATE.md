@@ -1,3 +1,17 @@
+Current phase: WEB-FE-TESTER-PREPARATION-ARTICLE-v1.260 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /news/closed-tester-information-pack-started uses unchanged PublishedArticle with two full source chapters and7 real links including4 focusable tester destinations. Original date and related articles preserved; no package/CSS/content/dependency or tester-tool changes. Fresh production774/774, build63, five viewports and62 raw sibling DOM/geometry comparisons.
+
+Delivery gate: reviewed normal commit/push, exact remote HEAD and verified full/delta/evidence ZIP/SHA256/replay. No production deployment or local handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.261.
+Select `/news/community-roadmap-onboarding-started` only after v1.260 delivery. Real Browser UI/UX Layout First, Base First, Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-TESTER-PREPARATION-ARTICLE-REPORT-v1.260.md.
+Runtime reuses dev3221/production3236. Release completed handoff write claims after verification; retain archives. Whole-app JavaScript-disabled streaming remains open. Old dashboard task stays operator REVIEW; PID waiver and fresh pause/ownership checks remain active.
+
+Historical snapshots below are not active delivery policy.
+
 Current phase: WEB-FE-STATUS-TRUST-ARTICLE-v1.259 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /news/status-download-trust-polish-started uses unchanged PublishedArticle for two complete source chapters, posting date, original related articles and seven real reading links. No package/CSS/content/dependency changes. Fresh production742/742, build63, five viewports and58 raw sibling DOM/geometry comparisons.

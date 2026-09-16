@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: v1.259 `/news/status-download-trust-polish-started` verified; next v1.260 `/news/closed-tester-information-pack-started` after delivery. Normal push, exact remote HEAD and verified ZIP/SHA256 required. Runtime reuses dev3221 andproduction3236; no per-version port accumulation. Historical articles are not live game operations; no-JavaScript streaming remains open.
+Current visual checkpoint: v1.260 `/news/closed-tester-information-pack-started` verified; next v1.261 `/news/community-roadmap-onboarding-started` after delivery. Normal push, exact remote HEAD and verified ZIP/SHA256 required. Runtime reuses dev3221/production3236, no per-version port accumulation. Historical articles are not live game operations; no-JavaScript streaming remains open.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 
