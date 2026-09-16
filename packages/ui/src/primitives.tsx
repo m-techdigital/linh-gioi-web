@@ -174,6 +174,7 @@ export function ExperienceHero({
   badgeTone = "spirit",
   kicker,
   title,
+  motto,
   lead,
   actions = [],
   className,
@@ -181,11 +182,12 @@ export function ExperienceHero({
   detail,
   visual
 }: {
-  badge: string;
+  badge?: string;
   badgeTone?: Tone;
   kicker: string;
   title: ReactNode;
-  lead: ReactNode;
+  motto?: ReactNode;
+  lead?: ReactNode;
   actions?: ExperienceHeroAction[];
   className?: string;
   copyClassName?: string;
@@ -195,10 +197,11 @@ export function ExperienceHero({
   return (
     <section className={cx(className, "lgo-experience-hero")}>
       <div className={copyClassName}>
-        <StatusBadge tone={badgeTone}>{badge}</StatusBadge>
+        {badge ? <StatusBadge tone={badgeTone}>{badge}</StatusBadge> : null}
         <p className="lgo-hero-kicker">{kicker}</p>
         <h1>{title}</h1>
-        <p className="lgo-hero-lead">{lead}</p>
+        {motto ? <p className="lgo-hero-motto">{motto}</p> : null}
+        {lead ? <p className="lgo-hero-lead">{lead}</p> : null}
         {detail}
         {actions.length ? (
           <div className="lgo-hero-actions">
@@ -261,7 +264,7 @@ export function BoundaryBanner({
   ariaLabel = "Environment boundary",
   className
 }: {
-  badge: string;
+  badge?: string;
   badgeTone?: Tone;
   children: ReactNode;
   ariaLabel?: string;

@@ -27,10 +27,9 @@
 .lgo-public-shell-immersive .lgo-immersive-copy .lgo-hero-kicker { order:1; margin:6px 0 10px; color:#fff0cf; font:400 clamp(21px,2.15vw,31px)/1.35 var(--lgo-font-editorial); text-transform:none; letter-spacing:0; text-shadow:0 2px 4px #000; }
 .lgo-public-shell-immersive .lgo-immersive-copy .lgo-status-badge { order:2; border:0; background:transparent; box-shadow:none; padding:0; color:#daeff8; font-size:14px; letter-spacing:.06em; }
 .lgo-public-shell-immersive .lgo-immersive-copy .lgo-hero-lead { order:3; font-size:15px; line-height:1.5; max-width:690px; color:#d1e3f2; margin:8px 0 0; text-shadow:0 2px 4px #000; }
-.lgo-public-shell-immersive .lgo-hero-motto { display:flex; align-items:center; justify-content:center; gap:12px; color:#d7e6f2; font:500 12px/1.4 var(--lgo-font-editorial); letter-spacing:.08em; }
+.lgo-public-shell-immersive .lgo-hero-motto { order:2; display:flex; align-items:center; justify-content:center; gap:12px; color:#d7e6f2; font:500 12px/1.4 var(--lgo-font-editorial); letter-spacing:.08em; }
 .lgo-public-shell-immersive .lgo-hero-motto::before,.lgo-public-shell-immersive .lgo-hero-motto::after { content:""; display:block; width:72px; height:1px; background:linear-gradient(90deg,transparent,#8ab3c9); }
 .lgo-public-shell-immersive .lgo-hero-motto::after { background:linear-gradient(90deg,#8ab3c9,transparent); }
-.lgo-public-shell-immersive .lgo-hero-lead-copy { display:block; margin-top:6px; }
 .lgo-public-shell-immersive .lgo-immersive-copy .lgo-hero-actions { order:4; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; width:min(100%,840px); margin-top:18px; }
 .lgo-public-shell-immersive .lgo-landing-signals { order:5; display:flex; flex-wrap:wrap; justify-content:center; gap:9px; margin-top:16px; }
 .lgo-public-shell-immersive .lgo-landing-signals span { display:flex; align-items:center; gap:8px; padding:7px 11px; font-size:14px; color:#cfe6f4; background:rgba(4,16,28,.8); border:1px solid #284359; border-radius:4px; }
@@ -81,8 +80,8 @@
  .lgo-public-shell-immersive .lgo-native-hero-scene { width:565px; left:auto; right:0; transform:none; opacity:.75; }
  .lgo-public-shell-immersive .lgo-immersive-copy .lgo-hero-kicker { font-size:25px; max-width:15em; }
  .lgo-public-shell-immersive .lgo-immersive-copy .lgo-hero-lead { font-size:14px; }
- .lgo-public-shell-immersive .lgo-hero-motto { font-size:12px; letter-spacing:.035em; gap:8px; }
- .lgo-public-shell-immersive .lgo-hero-motto::before,.lgo-public-shell-immersive .lgo-hero-motto::after { width:28px; }
+ .lgo-public-shell-immersive .lgo-hero-motto { font-size:14px; letter-spacing:.02em; gap:6px; }
+ .lgo-public-shell-immersive .lgo-hero-motto::before,.lgo-public-shell-immersive .lgo-hero-motto::after { width:18px; }
  .lgo-public-shell-immersive .lgo-nav-sigil-art { width:30px; height:30px; flex-basis:30px; }
  .lgo-public-shell-immersive .lgo-immersive-copy .lgo-hero-actions { grid-template-columns:1fr; max-width:330px; gap:10px; margin-top:20px; }
  .lgo-public-shell-immersive .lgo-immersive-hero::after { background:linear-gradient(180deg,rgba(5,15,27,.2),rgba(5,15,27,.62) 50%,#050f1b); }

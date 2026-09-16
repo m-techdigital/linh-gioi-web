@@ -26,7 +26,7 @@ test.describe('homepage header and main actions v1.265 revision3',()=>{
  });
  test('mobile keyboard can reach every menu entry with44px targets and no page overflow',async({page})=>{
   for(const width of [320,390,768,1280]){
-   await page.setViewportSize({width,height:900});const links=page.locator('header .lgo-brand-links a');await expect(links).toHaveCount(8);
+   await page.setViewportSize({width,height:900});const links=page.locator('header .lgo-brand-links a');await expect(links).toHaveCount(6);
    await page.keyboard.press('Tab');await links.first().focus();
    for(const [index,link]of (await links.all()).entries()){if(index)await page.keyboard.press('Tab');await expect(link).toBeFocused();const r=(await link.boundingBox())!;expect(r.height).toBeGreaterThanOrEqual(44);expect(r.x).toBeGreaterThanOrEqual(0);expect(r.x+r.width).toBeLessThanOrEqual(width+1);expect(await link.evaluate(e=>getComputedStyle(e).outlineStyle)).not.toBe('none');}
    expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(0);

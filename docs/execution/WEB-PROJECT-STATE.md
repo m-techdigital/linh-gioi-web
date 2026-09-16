@@ -1,6 +1,8 @@
 Current phase: WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265 WEB_VISUAL_REVIEW_REQUIRED
 Current route: `/`
 
+Latest homepage revision: v1.265-r6 — immersive nav reduced to six target-rhythm truthful routes; redundant hero technical badge/prose removed; live motto separated in shared ExperienceHero and mobile readability raised to14px. Fresh production156/156, build63,4 production captures,16 exact unchanged-sibling matches,331 runtime hashes. See LGO-WEB-FE-HOMEPAGE-FINAL-DENSITY-REPORT-v1.265-r6.md. Status remains WEB_VISUAL_REVIEW_REQUIRED.
+
 Latest homepage revision: v1.265-r4 — lower Khám phá/Bản tin now use distinct source-derived media, shared EditorialPreviewCard, and a compact truthful immersive footer. Final selected production144/144, build63, four viewport captures,16 unchanged-sibling matches. See LGO-WEB-FE-HOMEPAGE-LOWER-MEDIA-FOOTER-REPORT-v1.265-r4.md. The homepage now covers all major target regions but remains WEB_VISUAL_REVIEW_REQUIRED pending owner acceptance.
 
 Latest homepage revision: v1.265-r5 — source cyan header sigil, live hero motto and non-video discovery focal now align the remaining registered visual details. Final selected production150/150, build63, 16 unchanged-sibling matches and331 pinned runtime inputs. See LGO-WEB-FE-HOMEPAGE-FINAL-DETAILS-REPORT-v1.265-r5.md. Homepage remains WEB_VISUAL_REVIEW_REQUIRED pending owner acceptance.

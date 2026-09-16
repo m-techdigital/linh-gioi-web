@@ -1,5 +1,10 @@
 # Homepage realignment handoff v1.265
 
+## Latest revision6 — same homepage, still visual review
+
+Read LGO-WEB-FE-HOMEPAGE-FINAL-DENSITY-REPORT-v1.265-r6.md first. Immersive header now has six target-rhythm real routes; homepage hero omits the redundant technical badge and prose line, using a shared semantic motto slot instead. Final production156/156 on the rebuilt source after a real mobile motto readability fix, build63,4 captures,16 exact sibling comparisons,331 runtime hashes. Do not advance from `/` without visual acceptance.
+
+
 ## Latest revision5 — same homepage, review-ready not CLOSED
 
 Read LGO-WEB-FE-HOMEPAGE-FINAL-DETAILS-REPORT-v1.265-r5.md first. R5 adds the exact-source cyan header sigil, live target motto and a decorative non-video discovery focal while preserving r4's real content, footer and native artwork. Final selected production150/150, build63,331 pinned runtime inputs and16 exact sibling comparisons. Keep WEB_VISUAL_REVIEW_REQUIRED and route `/`; do not advance without owner acceptance.

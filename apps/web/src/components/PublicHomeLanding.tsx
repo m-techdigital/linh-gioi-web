@@ -22,8 +22,7 @@ export function PublicHomeLanding() {
     <ExperienceHero className="lgo-immersive-hero" copyClassName="lgo-immersive-copy"
       title={<ArtWordmark src="/game-art/marketing/wordmark-brush.png" width={422} height={169} label="Linh Giới Online" fallback={<><span>Linh Giới</span><small>ONLINE</small></>}/>}
       kicker="Sống một đời khác trong Linh Giới"
-      badge="MMORPG hành động cộng đồng 2D"
-      lead={<><span className="lgo-hero-motto">KIẾP NÀY, THẾ GIỚI RỘNG LỚN HƠN BẠN NGHĨ</span><span className="lgo-hero-lead-copy">Gặp gỡ ở Linh Thành. Chọn Lộ của bạn. Viết tiếp câu chuyện của riêng mình.</span></>}
+      motto="KIẾP NÀY, THẾ GIỚI RỘNG LỚN HƠN BẠN NGHĨ"
       actions={[
         {href:"/game",label:"Khám phá Linh Giới",tone:"spirit",variant:"ornate",icon:<ReleaseIcon name="compass"/>,description:"Thế giới và nhân vật"},
         {href:"/classes",label:"Chọn Lộ của bạn",tone:"jade",variant:"ornate",icon:<ReleaseIcon name="lotus"/>,description:"Tìm con đường riêng"},

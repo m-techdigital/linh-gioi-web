@@ -9,6 +9,13 @@ const primaryItems = [
   { href: "/news", label: "Tin tức" },
   { href: "/community", label: "Cộng đồng" }
 ];
+const immersiveItems = [
+  { href: "/game", label: "Thế giới" },
+  { href: "/classes", label: "Lộ phái" },
+  { href: "/game/loop", label: "Tính năng" },
+  { href: "/community", label: "Cộng đồng" },
+  { href: "/news", label: "Tin tức" }
+];
 
 export function PublicNavigation({ variant }: { variant?: "immersive" | undefined }) {
   return (
@@ -22,7 +29,7 @@ export function PublicNavigation({ variant }: { variant?: "immersive" | undefine
       </a>
       <div className="lgo-brand-links" role="region" aria-label="Public primary route links" tabIndex={0}>
         {variant === "immersive" ? <RouteAwareLink href="/" currentWhen="exact" revealOnFocus>Trang chủ</RouteAwareLink> : null}
-        {primaryItems.map((item) => <RouteAwareLink href={item.href} currentWhen="section" revealOnFocus={variant === "immersive"} key={item.href}>{item.label}</RouteAwareLink>)}
+        {(variant === "immersive" ? immersiveItems : primaryItems).map((item) => <RouteAwareLink href={item.href} currentWhen="section" revealOnFocus={variant === "immersive"} key={item.href}>{item.label}</RouteAwareLink>)}
       </div>
       <RouteAwareLink className="lgo-nav-play" href="/download" currentWhen="section">Trạng thái chơi</RouteAwareLink>
     </nav>

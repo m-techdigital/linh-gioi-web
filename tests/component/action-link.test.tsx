@@ -22,3 +22,8 @@ test('supplied anchor semantics stay intact and text is escaped', () => {
   const s=renderToStaticMarkup(createElement(LinkButton,{href:'/game',variant:'ornate',description:'<script>no</script>','aria-label':'Đọc thế giới','data-purpose':'reader'},'Nội dung'));
   expect(s).toContain('aria-label="Đọc thế giới"');expect(s).toContain('data-purpose="reader"');expect(s).toContain('&lt;script&gt;no&lt;/script&gt;');expect(s).not.toContain('<script>');
 });
+
+test('hero can render a separate motto without requiring badge or lead', () => {
+  const s=renderToStaticMarkup(createElement(ExperienceHero,{kicker:'Linh Giới',title:'Trang chủ',motto:'Kiếp này rộng lớn hơn'}));
+  expect(s).toContain('class="lgo-hero-motto">Kiếp này rộng lớn hơn</p>');expect(s).not.toContain('lgo-status-badge');expect(s).not.toContain('lgo-hero-lead');
+});
