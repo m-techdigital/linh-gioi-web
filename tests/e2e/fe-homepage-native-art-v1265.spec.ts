@@ -29,7 +29,7 @@ test.describe('homepage native-scale original artwork v1.265 revision2',()=>{
   }
  });
  test('news titles are the primary article links, with one separate complete-summary disclosure',async({page})=>{
-  const cards=page.locator('#home-news .lgo-landing-news-card');await expect(cards).toHaveCount(3);
+  const cards=page.locator('#home-news .lgo-editorial-preview-card');await expect(cards).toHaveCount(3);
   for(const card of await cards.all()){await expect(card.locator('h3 a')).toHaveCount(1);await expect(card.getByRole('link')).toHaveCount(1);await expect(card.locator('summary')).toHaveCount(1);expect((await card.locator('h3 a').boundingBox())!.height).toBeGreaterThanOrEqual(44);}
   const title=cards.first().locator('h3 a'),href=await title.getAttribute('href');await title.focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+href);await page.goBack();await waitForHomepage(page);await expect(page.locator('main h1 .lgo-art-wordmark')).toBeVisible();
  });

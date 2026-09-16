@@ -1,5 +1,12 @@
 # Homepage realignment handoff v1.265
 
+## Latest revision4 — all major homepage target regions implemented
+
+Read LGO-WEB-FE-HOMEPAGE-LOWER-MEDIA-FOOTER-REPORT-v1.265-r4.md first. Discovery now uses a dark source crop without baked mockup actions; the three news cards use distinct source editorial art; the immersive footer uses the brush brand, real links and truthful “Bản public chưa mở” instead of fake platform/server claims. Final production144/144, build63 and16 unchanged-sibling comparisons. Evidence: handoff/home-realignment-v1.265-r4/evidence. Remain WEB_VISUAL_REVIEW_REQUIRED. If owner accepts the homepage, next is /game; otherwise continue this route only.
+
+## Historical revision1-r3 handoff
+
+
 ## Latest revision3 — continue same homepage
 
 Read LGO-WEB-FE-HOMEPAGE-HEADER-ACTIONS-REPORT-v1.265-r3.md first. Brush header identity, active home link, full keyboard menu visibility and three icon/description/beveled-frame links are verified in final production132/132, including44 homepage cases. One build63,17 shared component tests,17 tooling tests,4 capture widths and16 unchanged-sibling matches. Evidence: handoff/home-realignment-v1.265-r3/evidence/REVIEW.html. Keep WEB_VISUAL_REVIEW_REQUIRED with CONTINUE on `/`; next lower gallery/news media and footer alignment, not a new page. Prior revision handoffs below remain historical.

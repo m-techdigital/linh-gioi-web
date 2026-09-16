@@ -26,7 +26,7 @@ test.describe('homepage restarts from actual v1.118 visual composition',()=>{
   expect(await size('.lgo-landing-heading h2')).toBeLessThanOrEqual(24);
   expect(await size('.lgo-landing-features h3')).toBeLessThanOrEqual(20);
   expect(await size('.lgo-media-mosaic-tiles h3')).toBeLessThanOrEqual(18);
-  expect(await size('.lgo-landing-news-card h3')).toBeLessThanOrEqual(19);
+  expect(await size('.lgo-editorial-preview-card h3')).toBeLessThanOrEqual(19);
  });
  test('primary actions and illustrated features navigate to real existing destinations',async({page})=>{
   for(const [i,href]of ['/game','/classes','/story'].entries()){const link=page.locator('.lgo-immersive-hero .lgo-hero-actions a').nth(i);await expect(link).toHaveAttribute('href',href);await link.focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+href);await expect(page.locator('main h1')).toBeVisible();await page.goBack();await waitForHomepage(page);}
@@ -38,12 +38,12 @@ test.describe('homepage restarts from actual v1.118 visual composition',()=>{
   await expect(page.locator('main img[src*=design-reference],main iframe,main canvas,main video,main [role=timer],main a[download]')).toHaveCount(0);
  });
  test('news cards use real published entries with original date links and recoverable complete summaries',async({page})=>{
-  const entries=localContentRepository.list('news').slice(0,3),cards=page.locator('#home-news .lgo-landing-news-card');await expect(cards).toHaveCount(entries.length);
+  const entries=localContentRepository.list('news').slice(0,3),cards=page.locator('#home-news .lgo-editorial-preview-card');await expect(cards).toHaveCount(entries.length);
   for(const [i,e]of entries.entries()){const card=cards.nth(i);await expect(card.locator('h3')).toHaveText(e.title);await expect(card.locator('time')).toHaveAttribute('datetime',e.publishedAt);await card.locator('summary').focus();await page.keyboard.press('Space');await expect(card.locator('details p')).toHaveText(e.summary);await expect(card.getByRole('link')).toHaveAttribute('href','/news/'+e.slug);}
   await expect(page.locator('main')).not.toContainText('500.000');await expect(page.locator('main')).not.toContainText('Máy chủ hoạt động ổn định');
  });
  test('availability is readable but no design-review or engineering banners dominate the homepage',async({page})=>{
-  await expect(page.locator('.lgo-landing-availability')).toContainText('Bản public chưa mở');await expect(page.locator('.lgo-landing-availability a')).toHaveAttribute('href','/download');
+  await expect(page.locator('.lgo-marketing-footer')).toContainText('Bản public chưa mở');await expect(page.locator('.lgo-marketing-footer').getByRole('link',{name:'Xem trạng thái chơi'})).toHaveAttribute('href','/download');
   await expect(page.locator('.lgo-design-target-band')).toHaveCount(0);await expect(page.locator('main')).not.toContainText('NO_ACCEPTED_BACKEND_CONTRACT');await expect(page.locator('main')).not.toContainText('browser/e2e');
   await expect(page.locator('main h1')).toHaveCount(1);await expect(page.locator('main form,main input,main textarea')).toHaveCount(0);
  });

@@ -1,7 +1,7 @@
 Current phase: WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265 WEB_VISUAL_REVIEW_REQUIRED
 Current route: `/`
 
-Latest homepage revision: v1.265-r3 — original brush header identity, active home navigation, complete44px keyboard menu targets and shared icon/description/beveled-frame primary links. Final production132/132 (44 homepage), build63,4 captures and16 unchanged-sibling matches. See LGO-WEB-FE-HOMEPAGE-HEADER-ACTIONS-REPORT-v1.265-r3.md. Same homepage remains open; tests do not establish owner visual acceptance.
+Latest homepage revision: v1.265-r4 — lower Khám phá/Bản tin now use distinct source-derived media, shared EditorialPreviewCard, and a compact truthful immersive footer. Final selected production144/144, build63, four viewport captures,16 unchanged-sibling matches. See LGO-WEB-FE-HOMEPAGE-LOWER-MEDIA-FOOTER-REPORT-v1.265-r4.md. The homepage now covers all major target regions but remains WEB_VISUAL_REVIEW_REQUIRED pending owner acceptance.
 
 Owner has reprioritized visual correction from homepage. Previous article work is preserved; early-page CLOSED markers are not proof of design fidelity. Current homepage composition is under browser verification and human visual review, not automatically accepted. The old news queue is deferred.
 

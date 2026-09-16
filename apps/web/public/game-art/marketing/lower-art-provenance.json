@@ -1,0 +1,63 @@
+{
+  "source": "apps/web/public/design-reference/homepage-detailed-design-target-v1118.png",
+  "sourceSha256": "ecf58cb2af080587e3be3b07430640b9765eb6b8319facc5bc9ad16e8eecef9e",
+  "method": "Integer canvas crop from existing design target. No resizing, inpainting, generation or baked interactive labels. Discovery crop intentionally excludes center mockup action buttons; decorative city signage may remain scenery.",
+  "items": [
+    {
+      "id": "discovery-world",
+      "path": "/game-art/marketing/discovery-world.png",
+      "rect": [
+        1080,
+        60,
+        500,
+        240
+      ],
+      "width": 500,
+      "height": 240,
+      "sha256": "b703a74303b7b376804b1ad4804e3c54c75cfcd1639113ee28a1926fe8d41d9e",
+      "role": "Night-city artwork crop only; no live controls or fabricated trailer UI."
+    },
+    {
+      "id": "news-event",
+      "path": "/game-art/marketing/news-event.png",
+      "rect": [
+        804,
+        674,
+        242,
+        91
+      ],
+      "width": 242,
+      "height": 91,
+      "sha256": "f43de0d48e5d2750f90e1936fc6d2f2db26be9d71ef9f50d6068c8f77f8fd3b5",
+      "role": "Editorial image crop only; title/category/date remain live source HTML."
+    },
+    {
+      "id": "news-update",
+      "path": "/game-art/marketing/news-update.png",
+      "rect": [
+        1057,
+        674,
+        244,
+        91
+      ],
+      "width": 244,
+      "height": 91,
+      "sha256": "ef9d973efd5d654540f26355d63e54a51a4ff3124f0ba22793860fd47b5b39e6",
+      "role": "Editorial image crop only; title/category/date remain live source HTML."
+    },
+    {
+      "id": "news-community",
+      "path": "/game-art/marketing/news-community.png",
+      "rect": [
+        1314,
+        674,
+        244,
+        91
+      ],
+      "width": 244,
+      "height": 91,
+      "sha256": "4d1441cb2d692b7baceb2aa690ce9605f19e4a7414cbbc0e67e58c3864cb5f5f",
+      "role": "Editorial image crop only; title/category/date remain live source HTML."
+    }
+  ]
+}

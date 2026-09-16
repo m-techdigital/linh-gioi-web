@@ -1,5 +1,5 @@
 import { localContentRepository } from "@lgo-web/content";
-import { ArtWordmark, ExperienceHero, IllustratedLink, LinkButton, MediaMosaic, ReleaseIcon } from "@lgo-web/ui";
+import { ArtWordmark, EditorialPreviewCard, ExperienceHero, IllustratedLink, MediaMosaic, ReleaseIcon } from "@lgo-web/ui";
 
 const art = (id: string, width: number, height: number) => ({ src: `/game-art/marketing/${id}.png`, width, height });
 const featureLinks = [
@@ -14,6 +14,7 @@ const discoveries = [
   { href: "/community", title: "Cộng đồng", image: art("gallery-snow",124,62) }
 ];
 const date = new Intl.DateTimeFormat("vi-VN", { day:"2-digit",month:"2-digit",year:"numeric",timeZone:"UTC" });
+const newsArt = [art("news-event",242,91),art("news-update",244,91),art("news-community",244,91)] as const;
 
 export function PublicHomeLanding() {
   const news = localContentRepository.list("news").slice(0,3);
@@ -35,20 +36,16 @@ export function PublicHomeLanding() {
       <div className="lgo-landing-columns">
         <section id="home-discovery" aria-labelledby="home-discovery-heading">
           <div className="lgo-landing-heading"><h2 id="home-discovery-heading"><ReleaseIcon name="shield"/>Khám phá Linh Giới</h2><a href="/game">Xem thêm <span aria-hidden="true">→</span></a></div>
-          <MediaMosaic lead={{href:"/game",title:"Một thế giới để thuộc về",description:"Khám phá những vùng đất",image:{src:"/game-art/world/dong-mon-skyline.webp",width:1360,height:765}}} items={discoveries}/>
+          <MediaMosaic lead={{href:"/game",title:"Một thế giới để thuộc về",description:"Khám phá Linh Thành và những vùng đất đang chờ được kể",image:art("discovery-world",500,300)}} items={discoveries}/>
           <p className="lgo-landing-art-note">Minh họa định hướng thế giới, không phải trailer hoặc ảnh gameplay.</p>
         </section>
         <section id="home-news" aria-labelledby="home-news-heading">
           <div className="lgo-landing-heading"><h2 id="home-news-heading"><ReleaseIcon name="document"/>Bản tin Linh Giới</h2><a href="/news">Xem tất cả <span aria-hidden="true">→</span></a></div>
-          <div className="lgo-landing-news-grid">{news.map((entry,index)=><article className="lgo-landing-news-card" key={entry.slug}>
-            <img {...featureLinks[index % featureLinks.length]!.image} alt="" loading="lazy"/>
-            <div className="lgo-landing-news-copy"><div className="lgo-landing-news-meta"><span>Nhật ký web</span><time dateTime={entry.publishedAt}>{date.format(new Date(entry.publishedAt))}</time></div>
-              <h3><a href={`/news/${entry.slug}`}>{entry.title}</a></h3><details><summary>Đọc tóm tắt</summary><p>{entry.summary}</p></details>
-            </div>
-          </article>)}</div>
+          <div className="lgo-landing-news-grid">{news.map((entry,index)=><EditorialPreviewCard key={entry.slug}
+            title={entry.title} href={`/news/${entry.slug}`} dateTime={entry.publishedAt} dateLabel={date.format(new Date(entry.publishedAt))}
+            category="Nhật ký web" summary={entry.summary} image={newsArt[index]!}/>)}</div>
         </section>
       </div>
-      <aside className="lgo-landing-availability" aria-label="Trạng thái phát hành"><div><strong>Bản public chưa mở</strong><p>Khám phá thế giới hôm nay. Theo dõi điều kiện mở chơi tại trang trạng thái.</p></div><LinkButton href="/download" tone="gold">Xem trạng thái chơi</LinkButton></aside>
     </div>
   </div>;
 }

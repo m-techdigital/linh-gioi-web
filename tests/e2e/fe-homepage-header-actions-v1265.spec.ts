@@ -27,7 +27,7 @@ test.describe('homepage header and main actions v1.265 revision3',()=>{
   }
  });
  test('image failure keeps both header and hero brands readable and focus survives forced colors',async({page})=>{
-  await page.route('**/wordmark-brush.png',r=>r.abort());await page.reload();await waitForHomepage(page);const brands=page.locator('.lgo-art-wordmark');await expect(brands).toHaveCount(2);
+  await page.route('**/wordmark-brush.png',r=>r.abort());await page.reload();await waitForHomepage(page);const brands=page.locator('header .lgo-art-wordmark, main h1 .lgo-art-wordmark');await expect(brands).toHaveCount(2);
   for(const brand of await brands.all()){await expect(brand).toHaveAttribute('data-fallback','true');await expect(brand.locator('.lgo-art-wordmark-fallback')).toBeVisible();const r=(await brand.locator('.lgo-art-wordmark-fallback > span').boundingBox())!;expect(r.x).toBeGreaterThanOrEqual(0);expect(r.x+r.width).toBeLessThanOrEqual((await page.viewportSize())!.width+1);}
   await page.emulateMedia({forcedColors:'active'});const link=page.locator('.lgo-hero-actions a').first();await link.focus();expect(await link.evaluate(e=>getComputedStyle(e).outlineStyle)).not.toBe('none');await expect(link).toContainText('Khám phá Linh Giới');await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+'/game');
  });

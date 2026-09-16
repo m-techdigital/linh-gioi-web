@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: homepage `/` v1.265 revision3 verifies brush header and framed primary actions. Continue same-page lower discovery/news media and footer comparison. The news queue stays deferred and later public pages do not start before homepage completion.
+Current visual checkpoint: homepage `/` v1.265 revision4 implements all major registered target regions (header, hero, actions, features, discovery/news and footer) with truthful semantics; owner visual acceptance remains pending. If accepted, next page is /game; otherwise continue the homepage. Deferred news work remains inactive.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 

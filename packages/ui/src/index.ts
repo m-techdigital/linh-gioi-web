@@ -118,3 +118,6 @@ export { IllustratedLink, MediaMosaic } from "./illustrated-navigation";
 export type { IllustratedLinkProps } from "./illustrated-navigation";
 
 export { ArtWordmark } from "./art-wordmark";
+
+export { EditorialPreviewCard, MarketingFooter } from "./home-editorial";
+export type { EditorialPreviewCardProps, MarketingFooterProps } from "./home-editorial";

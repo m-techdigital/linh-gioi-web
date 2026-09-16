@@ -12,7 +12,7 @@ def main():
   for n in needles:
    if n not in s:errors.append(name+' missing '+n)
  check('apps/web/src/app/page.tsx',['PublicHomeLanding','variant="immersive"','marketing-layout.css'])
- check('apps/web/src/components/PublicHomeLanding.tsx',['<ExperienceHero','<IllustratedLink','<MediaMosaic','localContentRepository.list("news")','entry.publishedAt','entry.summary','/game','/classes','/story','Bản public chưa mở'])
+ check('apps/web/src/components/PublicHomeLanding.tsx',['<ExperienceHero','<IllustratedLink','<MediaMosaic','localContentRepository.list("news")','entry.publishedAt','entry.summary','/game','/classes','/story'])
  check('apps/web/src/components/PublicSiteShell.tsx',['variant !== "immersive"','lgo-public-shell-immersive'])
  check('packages/ui/src/marketing-layout.css',['.lgo-immersive-art','position:absolute','grid-template-columns:repeat(3','min-height:44px','forced-colors','prefers-reduced-motion'])
  check('tests/e2e/fe-homepage-design-realignment-v1265.spec.ts',['typography follow','three real illustrated','wordmark rendered bounds','violations).toEqual([])','width:320','real existing destinations'])
@@ -24,6 +24,11 @@ def main():
  check('packages/ui/src/action-link.css',['::before','clip-path:polygon','var(--lgo-font-sans)','outline-offset:4px'])
  check('packages/ui/src/route-aware-link.tsx',['revealOnFocus = false','inline: "nearest"','onFocus?.(event)'])
  check('tests/e2e/fe-homepage-header-actions-v1265.spec.ts',['toHaveCount(8)','toBeGreaterThanOrEqual(44)','keyboard.press(\'Tab\')','violations).toEqual([])'])
+ check('packages/ui/src/home-editorial.tsx',['export function EditorialPreviewCard','export function MarketingFooter','lgo-editorial-preview-card','lgo-marketing-footer'])
+ check('apps/web/src/components/PublicHomeLanding.tsx',['EditorialPreviewCard','discovery-world','news-event','news-update','news-community'])
+ check('apps/web/src/components/PublicSiteShell.tsx',['variant === "immersive" ? <MarketingFooter'])
+ check('tests/e2e/fe-homepage-lower-composition-v1265.spec.ts',['three distinct editorial thumbnails','compact design rhythm','lower-art failure'])
+ check('tools/validate_homepage_lower_art.mjs',['negativeControlRejected','mismatched'])
  check('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265','Current FE scope: select `/`'])
  manifest=ROOT/'apps/web/public/game-art/marketing/manifest.json'
  if not manifest.is_file():errors.append('missing artwork provenance')
@@ -41,6 +46,14 @@ def main():
   for item in d['items']:
    p=ROOT/'apps/web/public'/item['path'].lstrip('/')
    if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest()!=item['sha256']:errors.append('native art drift '+item['id'])
+ lower=ROOT/'apps/web/public/game-art/marketing/lower-art-provenance.json'
+ if not lower.is_file():errors.append('missing lower art provenance')
+ else:
+  d=json.loads(lower.read_text())
+  if hashlib.sha256((ROOT/d['source']).read_bytes()).hexdigest()!=d['sourceSha256']:errors.append('lower source art drift')
+  for item in d['items']:
+   p=ROOT/'apps/web/public'/item['path'].lstrip('/')
+   if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest()!=item['sha256']:errors.append('lower art drift '+item['id'])
  print('HOMEPAGE REALIGNMENT SOURCE '+('FAIL' if errors else 'PASS'))
  for e in errors:print('- '+e)
  return int(bool(errors))
