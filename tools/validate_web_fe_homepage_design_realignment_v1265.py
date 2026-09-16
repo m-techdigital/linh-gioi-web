@@ -29,6 +29,10 @@ def main():
  check('apps/web/src/components/PublicSiteShell.tsx',['variant === "immersive" ? <MarketingFooter'])
  check('tests/e2e/fe-homepage-lower-composition-v1265.spec.ts',['three distinct editorial thumbnails','compact design rhythm','lower-art failure'])
  check('tools/validate_homepage_lower_art.mjs',['negativeControlRejected','mismatched'])
+ check('apps/web/src/components/PublicNavigation.tsx',['lgo-nav-sigil-art','/game-art/marketing/header-sigil.png'])
+ check('apps/web/src/components/PublicHomeLanding.tsx',['lgo-hero-motto','KIẾP NÀY, THẾ GIỚI RỘNG LỚN HƠN BẠN NGHĨ','lgo-media-mosaic-focal'])
+ check('packages/ui/src/illustrated-navigation.tsx',['leadAdornment?: React.ReactNode','lgo-media-mosaic-lead-wrap'])
+ check('tools/validate_homepage_header_sigil.mjs',['negativeControlRejected','opaque'])
  check('docs/execution/WEB-NEXT-ACTION.md',['WEB-FE-HOMEPAGE-DESIGN-REALIGNMENT-v1.265','Current FE scope: select `/`'])
  manifest=ROOT/'apps/web/public/game-art/marketing/manifest.json'
  if not manifest.is_file():errors.append('missing artwork provenance')

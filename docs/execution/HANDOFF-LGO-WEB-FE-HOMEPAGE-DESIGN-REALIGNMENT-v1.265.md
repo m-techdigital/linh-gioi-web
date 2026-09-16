@@ -1,5 +1,12 @@
 # Homepage realignment handoff v1.265
 
+## Latest revision5 — same homepage, review-ready not CLOSED
+
+Read LGO-WEB-FE-HOMEPAGE-FINAL-DETAILS-REPORT-v1.265-r5.md first. R5 adds the exact-source cyan header sigil, live target motto and a decorative non-video discovery focal while preserving r4's real content, footer and native artwork. Final selected production150/150, build63,331 pinned runtime inputs and16 exact sibling comparisons. Keep WEB_VISUAL_REVIEW_REQUIRED and route `/`; do not advance without owner acceptance.
+
+## Prior revision handoff
+
+
 ## Latest revision4 — all major homepage target regions implemented
 
 Read LGO-WEB-FE-HOMEPAGE-LOWER-MEDIA-FOOTER-REPORT-v1.265-r4.md first. Discovery now uses a dark source crop without baked mockup actions; the three news cards use distinct source editorial art; the immersive footer uses the brush brand, real links and truthful “Bản public chưa mở” instead of fake platform/server claims. Final production144/144, build63 and16 unchanged-sibling comparisons. Evidence: handoff/home-realignment-v1.265-r4/evidence. Remain WEB_VISUAL_REVIEW_REQUIRED. If owner accepts the homepage, next is /game; otherwise continue this route only.

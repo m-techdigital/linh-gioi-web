@@ -14,10 +14,10 @@ export function PublicNavigation({ variant }: { variant?: "immersive" | undefine
   return (
     <nav className="lgo-brand-nav" aria-label="Linh Giới Online public navigation" tabIndex={0}>
       <a className="lgo-brand-mark" href="/" aria-label="Linh Giới Online — Trang chủ">
-        {variant === "immersive" ? <span className="lgo-nav-brand-art" aria-hidden="true">
+        {variant === "immersive" ? <><span className="lgo-nav-sigil-art" aria-hidden="true"><img src="/game-art/marketing/header-sigil.png" width={42} height={42} alt=""/></span><span className="lgo-nav-brand-art" aria-hidden="true">
           <ArtWordmark src="/game-art/marketing/wordmark-brush.png" width={422} height={169} label="Linh Giới Online"
             fallback={<><span>Linh Giới</span><small>ONLINE</small></>}/>
-        </span> : <><span className="lgo-brand-sigil" aria-hidden="true">界</span>
+        </span></> : <><span className="lgo-brand-sigil" aria-hidden="true">界</span>
         <span><strong>Linh Giới</strong><small>ONLINE</small></span></>}
       </a>
       <div className="lgo-brand-links" role="region" aria-label="Public primary route links" tabIndex={0}>

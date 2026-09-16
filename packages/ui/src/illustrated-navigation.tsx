@@ -1,3 +1,4 @@
+import type React from "react";
 import { ReleaseIcon } from "./release";
 
 export type IllustratedLinkProps = {
@@ -16,9 +17,9 @@ export function IllustratedLink({ href, title, description, image, className = "
 }
 
 /** A lead illustration and smaller onward destinations, never a simulated media player. */
-export function MediaMosaic({ lead, items }: { lead: IllustratedLinkProps; items: readonly IllustratedLinkProps[] }) {
+export function MediaMosaic({ lead, items, leadAdornment }: { lead: IllustratedLinkProps; items: readonly IllustratedLinkProps[]; leadAdornment?: React.ReactNode }) {
   return <div className="lgo-media-mosaic">
-    <IllustratedLink {...lead} className="lgo-media-mosaic-lead"/>
+    {leadAdornment ? <div className="lgo-media-mosaic-lead-wrap"><IllustratedLink {...lead} className="lgo-media-mosaic-lead"/>{leadAdornment}</div> : <IllustratedLink {...lead} className="lgo-media-mosaic-lead"/>}
     {items.length ? <div className="lgo-media-mosaic-tiles">{items.map(item => <IllustratedLink {...item} key={item.href}/>)}</div> : null}
   </div>;
 }

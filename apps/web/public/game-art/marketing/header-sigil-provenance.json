@@ -1,0 +1,15 @@
+{
+  "source": "apps/web/public/design-reference/homepage-detailed-design-target-v1118.png",
+  "sourceSha256": "ecf58cb2af080587e3be3b07430640b9765eb6b8319facc5bc9ad16e8eecef9e",
+  "method": "Sharp raw integer 42x42 crop from registered homepage target; RGB bytes preserved from decoded source and only alpha bytes changed by cyan/background key. No resize, redraw or generation.",
+  "rect": [
+    272,
+    11,
+    42,
+    42
+  ],
+  "path": "/game-art/marketing/header-sigil.png",
+  "width": 42,
+  "height": 42,
+  "sha256": "a883c512b9d3637507f13c2499e65c50d8eaaaf06564327f96da880d3aff502e"
+}

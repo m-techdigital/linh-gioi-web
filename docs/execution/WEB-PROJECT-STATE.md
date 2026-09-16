@@ -3,6 +3,8 @@ Current route: `/`
 
 Latest homepage revision: v1.265-r4 — lower Khám phá/Bản tin now use distinct source-derived media, shared EditorialPreviewCard, and a compact truthful immersive footer. Final selected production144/144, build63, four viewport captures,16 unchanged-sibling matches. See LGO-WEB-FE-HOMEPAGE-LOWER-MEDIA-FOOTER-REPORT-v1.265-r4.md. The homepage now covers all major target regions but remains WEB_VISUAL_REVIEW_REQUIRED pending owner acceptance.
 
+Latest homepage revision: v1.265-r5 — source cyan header sigil, live hero motto and non-video discovery focal now align the remaining registered visual details. Final selected production150/150, build63, 16 unchanged-sibling matches and331 pinned runtime inputs. See LGO-WEB-FE-HOMEPAGE-FINAL-DETAILS-REPORT-v1.265-r5.md. Homepage remains WEB_VISUAL_REVIEW_REQUIRED pending owner acceptance.
+
 Owner has reprioritized visual correction from homepage. Previous article work is preserved; early-page CLOSED markers are not proof of design fidelity. Current homepage composition is under browser verification and human visual review, not automatically accepted. The old news queue is deferred.
 
 Active task remains homepage v1.265 until design comparison and visual review are complete. Later entry pages: /game, /classes, /story, /journey, /start, one at a time. Keep source/branch/worktree; no restoration. Latest evidence in handoff/home-realignment-v1.265-r3; revision2 retained in handoff/home-realignment-v1.265-r2; prior revision retained in handoff/home-realignment-v1.265. No production deployment or independent backend.

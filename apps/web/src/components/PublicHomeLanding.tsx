@@ -23,7 +23,7 @@ export function PublicHomeLanding() {
       title={<ArtWordmark src="/game-art/marketing/wordmark-brush.png" width={422} height={169} label="Linh Giới Online" fallback={<><span>Linh Giới</span><small>ONLINE</small></>}/>}
       kicker="Sống một đời khác trong Linh Giới"
       badge="MMORPG hành động cộng đồng 2D"
-      lead="Gặp gỡ ở Linh Thành. Chọn Lộ của bạn. Viết tiếp câu chuyện của riêng mình."
+      lead={<><span className="lgo-hero-motto">KIẾP NÀY, THẾ GIỚI RỘNG LỚN HƠN BẠN NGHĨ</span><span className="lgo-hero-lead-copy">Gặp gỡ ở Linh Thành. Chọn Lộ của bạn. Viết tiếp câu chuyện của riêng mình.</span></>}
       actions={[
         {href:"/game",label:"Khám phá Linh Giới",tone:"spirit",variant:"ornate",icon:<ReleaseIcon name="compass"/>,description:"Thế giới và nhân vật"},
         {href:"/classes",label:"Chọn Lộ của bạn",tone:"jade",variant:"ornate",icon:<ReleaseIcon name="lotus"/>,description:"Tìm con đường riêng"},
@@ -36,7 +36,7 @@ export function PublicHomeLanding() {
       <div className="lgo-landing-columns">
         <section id="home-discovery" aria-labelledby="home-discovery-heading">
           <div className="lgo-landing-heading"><h2 id="home-discovery-heading"><ReleaseIcon name="shield"/>Khám phá Linh Giới</h2><a href="/game">Xem thêm <span aria-hidden="true">→</span></a></div>
-          <MediaMosaic lead={{href:"/game",title:"Một thế giới để thuộc về",description:"Khám phá Linh Thành và những vùng đất đang chờ được kể",image:art("discovery-world",500,300)}} items={discoveries}/>
+          <MediaMosaic lead={{href:"/game",title:"Một thế giới để thuộc về",description:"Khám phá Linh Thành và những vùng đất đang chờ được kể",image:art("discovery-world",500,300)}} items={discoveries} leadAdornment={<span className="lgo-media-mosaic-focal" aria-hidden="true"><ReleaseIcon name="compass"/></span>}/>
           <p className="lgo-landing-art-note">Minh họa định hướng thế giới, không phải trailer hoặc ảnh gameplay.</p>
         </section>
         <section id="home-news" aria-labelledby="home-news-heading">
