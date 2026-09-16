@@ -1,3 +1,17 @@
+Current phase: WEB-FE-FAQ-GUIDE-ARTICLE-v1.250 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /guides/faq-search-helpfulness-guide has four full source chapters, four overview links and nine contextual routes. Existing FAQ category tools are exercised, not duplicated; help-boundary direct focus fixed minimally. Production496/496, build63, five viewports and36 sibling geometry matches; FAQ default geometry retained. No online search or feedback intake.
+
+Delivery gate: reviewed commit, normal origin/main push, matching remote HEAD and verified full/delta/evidence ZIP/SHA256/replay required for effective closure. No deployment or handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.251.
+Select `/events` only after v1.250 delivery. Real Browser UI/UX Layout First, Base First, Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-FAQ-GUIDE-ARTICLE-REPORT-v1.250.md.
+Whole-app JavaScript-disabled streaming remains open. Owner PID capacity waiver remains; new pause/ownership checks retained.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-TESTER-GUIDE-ARTICLE-v1.249 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /guides/closed-tester-information-pack-guide has four full source chapters, nine reading actions and real direct arrival at the tester device/feedback/limitations sections. Production regression468/468, build63, five viewports,34 sibling geometry matches; tester default geometry retained. No registration or intake.

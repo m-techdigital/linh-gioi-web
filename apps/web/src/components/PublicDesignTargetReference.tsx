@@ -129,6 +129,7 @@ const publicCorePrefixes = ["/game", "/classes", "/story", "/journey", "/start",
 const publicServicePrefixes = ["/download", "/release", "/status", "/support", "/community", "/performance", "/accessibility", "/roadmap"];
 
 function targetForPath(pathname: string) {
+  if (pathname === "/guides/faq-search-helpfulness-guide") return { ...PUBLIC_CORE_TARGET, label: "Cẩm nang FAQ hữu ích", scope: "Chọn nhóm · Đọc tiếp · Không tiếp nhận trực tuyến" };
   if (pathname === "/guides/closed-tester-information-pack-guide") return { ...PUBLIC_CORE_TARGET, label: "Cẩm nang chuẩn bị tester", scope: "Sổ tay chuẩn bị · Không phải đăng ký thử nghiệm" };
   if (pathname === "/guides/release-readiness-hub-guide") return { ...PUBLIC_CORE_TARGET, label: "Cẩm nang kiểm sẵn sàng phát hành", scope: "Bốn bước đối chiếu · Không phải kết quả phê duyệt" };
   if (pathname === "/guides/player-trust-release-guide") return { ...PUBLIC_CORE_TARGET, label: "Bố cục cẩm nang trước bản test", scope: "Đọc điều kiện · Không cấp quyền thử nghiệm" };

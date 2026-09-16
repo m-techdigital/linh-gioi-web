@@ -1456,56 +1456,6 @@
   }
 }
 
-/* FAQ search helpfulness guide composes compact guide-flow base for FAQ group → support route → static search boundary reading. */
-.lgo-faqhelpfulnessguidepage-stack .lgo-faq-helpfulness-guide-hero-card {
-  border-color: rgba(53,198,163,.42);
-  background:
-    radial-gradient(circle at top left, rgba(53,198,163,.16), transparent 15rem),
-    radial-gradient(circle at bottom right, rgba(49,216,232,.12), transparent 17rem),
-    linear-gradient(145deg, rgba(13,27,46,.95), rgba(7,17,31,.90));
-}
-
-.lgo-faqhelpfulnessguidepage-stack .lgo-guide-detail-depth {
-  border-color: rgba(53,198,163,.30);
-}
-
-.lgo-faqhelpfulnessguidepage-stack .lgo-guide-detail-step {
-  border-color: rgba(53,198,163,.26);
-  background: linear-gradient(145deg, rgba(10,42,39,.70), rgba(7,17,31,.80));
-}
-
-.lgo-faqhelpfulnessguidepage-stack .lgo-detail-hero-card h1 {
-  max-width: 18ch;
-}
-
-@media (min-width: 981px) {
-  .lgo-faqhelpfulnessguidepage-stack .lgo-guide-detail-steps {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .lgo-faqhelpfulnessguidepage-stack .lgo-guide-detail-step {
-    grid-template-columns: 2.2rem 1fr;
-    padding: .58rem;
-  }
-
-  .lgo-faqhelpfulnessguidepage-stack .lgo-guide-detail-step > span {
-    width: 2rem;
-    height: 2rem;
-    font-size: .76rem;
-  }
-
-  .lgo-faqhelpfulnessguidepage-stack .lgo-guide-detail-step h3 {
-    font-size: .9rem;
-  }
-
-  .lgo-faqhelpfulnessguidepage-stack .lgo-guide-detail-step p,
-  .lgo-faqhelpfulnessguidepage-stack .lgo-guide-detail-step small {
-    font-size: .72rem;
-    line-height: 1.22;
-  }
-}
-
-
 /* Events page composes shared service proof/card layout for static community event announcements. */
 .lgo-eventspage-stack {
   gap: .82rem;

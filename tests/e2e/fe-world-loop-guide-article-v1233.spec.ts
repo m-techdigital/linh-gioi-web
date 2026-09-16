@@ -174,6 +174,11 @@ test.describe('world-loop guide article and native navigation v1.233', () => {
         await expect(page.locator('.lgo-tester-guide')).toBeVisible();
         await expect(page.locator('.lgo-guide-article-section')).toHaveCount(guideDetailSteps.filter(item => item.slug === slug).length);
         await expect(page.locator('.lgo-guide-detail-steps')).toHaveCount(0);
+      } else if (slug === 'faq-search-helpfulness-guide') {
+        // v1.250 replaces the final compact guide in this list; published/category assertions stay active.
+        await expect(page.locator('.lgo-faq-guide')).toBeVisible();
+        await expect(page.locator('.lgo-guide-article-section')).toHaveCount(guideDetailSteps.filter(item => item.slug === slug).length);
+        await expect(page.locator('.lgo-guide-detail-steps')).toHaveCount(0);
       } else {
         await expect(page.locator('.lgo-guide-detail-steps')).toBeVisible();
         await expect(page.locator('.lgo-gate-entry-guide')).toHaveCount(0);

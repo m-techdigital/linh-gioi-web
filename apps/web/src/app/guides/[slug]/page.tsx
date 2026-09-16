@@ -1,3 +1,4 @@
+import { PublicFaqGuide } from "../../../components/PublicFaqGuide";
 import { PublicClosedTesterGuide } from "../../../components/PublicClosedTesterGuide";
 import { PublicReleaseReadinessGuide } from "../../../components/PublicReleaseReadinessGuide";
 import { PublicPlayerTrustGuide } from "../../../components/PublicPlayerTrustGuide";
@@ -48,6 +49,10 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
   const { slug } = await params;
   const entry = localContentRepository.bySlug(slug);
   if (!entry || entry.category !== "guides") notFound();
+
+  if (entry.slug === "faq-search-helpfulness-guide") {
+    return <WebAppShell><PublicFaqGuide entry={entry}/></WebAppShell>;
+  }
 
   if (entry.slug === "closed-tester-information-pack-guide") {
     return <WebAppShell><PublicClosedTesterGuide entry={entry}/></WebAppShell>;

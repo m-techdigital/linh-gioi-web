@@ -5,12 +5,12 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.250
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.251
 
 Objective:
-Continue the sequential Real Browser UI/UX Layout pass for the public FAQ usefulness guide after v1.249 `/guides/closed-tester-information-pack-guide` closure. Keep the work page-scoped, Base First and browser-evidence driven.
+Continue the sequential Real Browser UI/UX Layout pass for the public events page after v1.250 `/guides/faq-search-helpfulness-guide` closure. Keep the work page-scoped, Base First and browser-evidence driven.
 
-Current FE scope: select `/guides/faq-search-helpfulness-guide` as the next single active page after v1.249 `/guides/closed-tester-information-pack-guide` closure. Complete `/guides/faq-search-helpfulness-guide` fully before any other page. Use its registered public route target as the comparison guardrail and prioritize real FAQ usefulness guide UI/UX Layout: clear first steps, full source-authored descriptions, useful orientation and existing reading routes, honest gameplay boundaries, spacing, typography, responsive density, keyboard/focus and actual interaction. No invented guide content, live wiki, account personalization, search backend, game controls or readiness claims.
+Current FE scope: select `/events` as the next single active page after v1.250 `/guides/faq-search-helpfulness-guide` closure. Complete `/events` fully before any other page. Use its registered public route target as the comparison guardrail and prioritize real events page UI/UX Layout: source-backed event orientation, clear announcement scope and current boundaries, readable cards and native reading routes, spacing, typography, responsive density, keyboard/focus and actual interaction. No invented event schedules, countdowns, live participant counts, registration/reward claims, event backend, account personalization or gameplay controls.
 
 Mandatory execution rules:
 
@@ -23,7 +23,7 @@ Mandatory execution rules:
 3. CSS must be managed by owner/role.
    Theme/tokens: packages/design-tokens. Reusable component/layout style: packages/ui. Apps compose base and keep only truly route-specific differences. Do not inflate apps/web/src/app/globals.css with duplicate page blocks.
 
-4. Do not move past `/guides/faq-search-helpfulness-guide` until closure evidence exists:
+4. Do not move past `/events` until closure evidence exists:
    - render in real browser/e2e;
    - desktop/mobile metrics and screenshot/visual review against the target and accepted shell;
    - active source validator and necessary typecheck/build;
@@ -32,7 +32,7 @@ Mandatory execution rules:
 
 5. Forbidden substitutes: text-only/copy-only, translation-only, design-only, validator/doc-only, content edits without browser evidence, multiple pages at once. Never relax layout tests just to obtain PASS.
 
-6. If execution drifts, return to `/guides/faq-search-helpfulness-guide`, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until `/guides/faq-search-helpfulness-guide` is closed.
+6. If execution drifts, return to `/events`, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until `/events` is closed.
 
 Non-claims: FE-only until accepted game backend contracts exist. No independent backend. No production auth. No DB persistence. No CMS. No production deployment. No payment/shop/economy.
 

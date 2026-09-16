@@ -1,5 +1,5 @@
 import { faqDiscoveryGroups, faqHelpfulnessPrompts, playerSafetyPrinciples, supportFaqs } from "@lgo-web/content";
-import { ExperienceHero, GuidanceStation, GuidanceTopicGrid, LinkButton, QuestionDirectory, QuestionDisclosureList, ReleaseIcon, SectionHeading } from "@lgo-web/ui";
+import { ArticleFragmentRestoration, ExperienceHero, GuidanceStation, GuidanceTopicGrid, LinkButton, QuestionDirectory, QuestionDisclosureList, ReleaseIcon, SectionHeading } from "@lgo-web/ui";
 import type { GuidanceQuestion, GuidanceQuestionGroup, GuidanceTopic } from "@lgo-web/ui";
 
 const topics = [
@@ -57,7 +57,8 @@ export function PublicHelpAnswers() {
 }
 export function PublicHelpBoundary() {
   return <div className="lgo-release-reading-grid lgo-release-reading-grid-even">
-    <aside id="help-boundary" className="lgo-release-paper-panel lgo-release-frame" aria-labelledby="help-boundary-heading">
+    <aside id="help-boundary" tabIndex={-1} className="lgo-release-paper-panel lgo-release-frame" aria-labelledby="help-boundary-heading">
+      <ArticleFragmentRestoration targetIds={["help-boundary"]}/>
       <ReleaseIcon name="shield"/><SectionHeading headingId="help-boundary-heading" eyebrow="Dữ liệu của bạn, giữ riêng cho bạn" title="Không có hệ thống ticket thật"/>
       <p>Trang này không phải form hỗ trợ, không tra cứu tài khoản và không có tìm kiếm backend. Giữ riêng mật khẩu, token, dữ liệu thanh toán và thông tin cá nhân nhạy cảm.</p>
       <LinkButton href="/support/safety" tone="neutral">Đọc hướng dẫn an toàn <ReleaseIcon name="arrow"/></LinkButton>
