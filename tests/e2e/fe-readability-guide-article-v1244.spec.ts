@@ -1,0 +1,125 @@
+import { test, expect } from '@playwright/test';
+import { contentEntries, guideDetailSteps } from '../../packages/content/src/fixtures';
+const origin = process.env.LGO_WEB_URL ?? 'http://127.0.0.1:3000';
+const route = '/guides/accessibility-readability-guide';
+const entry = contentEntries.find(item => item.slug === 'accessibility-readability-guide')!;
+const steps = guideDetailSteps.filter(item => item.slug === entry.slug);
+
+test.describe('readability guide has native reading controls, not certification v1.244', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto(origin + route);
+    await expect(page.getByRole('heading', { level: 1, name: entry.title, exact: true })).toBeVisible();
+  });
+  test('four full article chapters and responsive contents replace compact proof boards', async ({ page, isMobile }) => {
+    const guide = page.locator('.lgo-readability-guide');
+    await expect(guide).toBeVisible();
+    await expect(guide.locator('.lgo-guide-article-section')).toHaveCount(4);
+    await expect(guide.locator('img[src*=design-reference],img[src*=design-boards],.lgo-detail-next-steps')).toHaveCount(0);
+    const boxes = await guide.evaluate(root => {
+      const contents = root.querySelector('.lgo-article-contents')!.getBoundingClientRect();
+      const body = root.querySelector('.lgo-guide-article-body')!.getBoundingClientRect();
+      const image = root.querySelector('.lgo-article-cover img') as HTMLImageElement;
+      return { contents: contents.toJSON(), body: body.toJSON(), loaded: image.complete && image.naturalWidth > 0, overflow: document.documentElement.scrollWidth - innerWidth };
+    });
+    expect(boxes.loaded).toBe(true); expect(boxes.overflow).toBeLessThanOrEqual(0);
+    if (isMobile) expect(boxes.body.top).toBeGreaterThanOrEqual(boxes.contents.bottom);
+    else expect(boxes.body.left).toBeGreaterThan(boxes.contents.right);
+    await page.screenshot({ path: test.info().outputPath('readability-guide-article.png'), fullPage: true });
+  });
+  test('original summary body and all four instruction result boundary records are exact', async ({ page }) => {
+    const guide = page.locator('.lgo-readability-guide'); await expect(guide).toBeVisible();
+    await expect(guide.locator('.lgo-hero-lead')).toHaveText(entry.summary);
+    await expect(guide.locator('.lgo-guide-article-intro p')).toHaveText(entry.body);
+    const chapters = guide.locator('.lgo-guide-article-section'); await expect(chapters).toHaveCount(steps.length);
+    for (const [index, step] of steps.entries()) {
+      const section = chapters.nth(index);
+      await expect(section.getByRole('heading', { level: 2 })).toHaveText(step.title);
+      await expect(section.locator('.lgo-article-instruction')).toHaveText(step.action);
+      await expect(section.locator('.lgo-article-outcome p')).toHaveText(step.expectedResult);
+      await expect(section.locator('.lgo-article-boundary p')).toHaveText(step.blockedScope);
+      expect(await section.locator('.lgo-article-instruction').evaluate(e => getComputedStyle(e).webkitLineClamp)).toBe('none');
+    }
+  });
+  test('native contents next previous and browser history follow the real chapter IDs', async ({ page }) => {
+    const contents = page.getByRole('navigation', { name: 'Mục lục cách đọc web' });
+    const links = contents.locator('a'); await expect(links).toHaveCount(4);
+    await links.nth(1).focus(); await page.keyboard.press('Enter'); await expect(page.locator('#readability-guide-step-02')).toBeFocused();
+    await page.locator('#readability-guide-step-02').getByRole('link', { name: /Phần tiếp/ }).click();
+    await expect(page).toHaveURL(origin + route + '#readability-guide-step-03'); await expect(page.locator('#readability-guide-step-03')).toBeFocused();
+    await page.goBack(); await expect(page).toHaveURL(origin + route + '#readability-guide-step-02');
+    await page.goForward(); await expect(page).toHaveURL(origin + route + '#readability-guide-step-03');
+    await page.locator('#readability-guide-step-03').getByRole('link', { name: 'Về mục lục', exact: true }).click();
+    await expect(page.locator('#readability-guide-contents')).toBeFocused();
+    const summary = page.locator('#readability-guide-contents summary'); await summary.focus(); await page.keyboard.press('Space');
+    await expect(contents).not.toBeVisible(); await page.keyboard.press('Enter'); await expect(contents).toBeVisible();
+  });
+  test('cold direct URLs land visibly at the requested chapter and malformed fragments are harmless', async ({ page }) => {
+    await page.goto('about:blank'); await page.goto(origin + route + '#readability-guide-step-03', { waitUntil: 'networkidle' });
+    const section = page.locator('#readability-guide-step-03'); await expect(section).toBeFocused();
+    await expect.poll(async () => { const box = await section.boundingBox(); return !!box && box.y >= 70 && box.y <= 600; }).toBe(true);
+    const errors: string[] = []; page.on('pageerror', error => errors.push(error.message));
+    await page.goto('about:blank'); await page.goto(origin + route + '#%E0%A4%A', { waitUntil: 'networkidle' });
+    await expect(page.locator('.lgo-guide-article-section')).toHaveCount(4); expect(errors).toEqual([]);
+  });
+  test('chapter actions and related destinations navigate to existing guidance, not commands', async ({ page }) => {
+    const actions = page.locator('.lgo-readability-guide-action'); await expect(actions).toHaveCount(6);
+    const routes = ['/accessibility', '/start', '#readability-guide-contents', '/status', '/download/trust', '/support/safety'];
+    for (let i = 0; i < routes.length; i++) {
+      await expect(actions.nth(i)).toHaveAttribute('href', routes[i]!);
+      expect((await page.request.get(new URL(routes[i]!, origin + route).href)).status()).toBe(200);
+    }
+    await expect(actions.nth(1)).toHaveAttribute('href','/start');
+    await actions.last().click(); await expect(page).toHaveURL(origin + '/support/safety');
+  });
+  test('source paper typography and actions remain legible at 320px with visible focus', async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 800 });
+    const guide = page.locator('.lgo-readability-guide'); await expect(guide).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(0);
+    const style = await guide.locator('.lgo-article-instruction').first().evaluate(e => ({ font: parseFloat(getComputedStyle(e).fontSize), color: getComputedStyle(e).color, ink: getComputedStyle(document.documentElement).getPropertyValue('--lgo-color-art-ink').trim() }));
+    expect(style.font).toBeGreaterThanOrEqual(14); expect(style.color).toBe('rgb(7, 19, 28)');
+    for (const link of await guide.locator('.lgo-article-section-navigation a,.lgo-readability-guide-action').all()) expect((await link.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+    const action = guide.locator('.lgo-readability-guide-action').first(); await action.focus(); await expect(action).toBeFocused();
+    expect(await action.evaluate(e => getComputedStyle(e).outlineStyle)).not.toBe('none');
+    await page.addScriptTag({ path: 'node_modules/axe-core/axe.min.js' });
+    const violations = await page.evaluate(async () => { const axe = (window as unknown as { axe: { run: (e: Element | null, o: unknown) => Promise<{ violations: { id: string }[] }> } }).axe; return (await axe.run(document.querySelector('main'), { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21aa'] } })).violations.map(v => v.id); });
+    expect(violations).toEqual([]);
+  });
+  test('reading has no submission saved progress access award or gameplay surrogate', async ({ page }) => {
+    const guide = page.locator('.lgo-readability-guide'); await expect(guide).toBeVisible();
+    await expect(guide).toContainText('Hướng dẫn cách đọc, không phải chứng nhận khả năng truy cập'); await expect(guide).toContainText('NO_ACCEPTED_BACKEND_CONTRACT');
+    await expect(guide.locator('canvas,video,iframe,form,input,textarea,[role=progressbar],a[download]')).toHaveCount(0);
+    const requests: string[] = []; page.on('request', r => { if (r.method() !== 'GET' || ['xhr', 'fetch'].includes(r.resourceType())) requests.push(r.url()); });
+    await page.getByRole('navigation', { name: 'Mục lục cách đọc web' }).locator('a').first().click();
+    await page.locator('#readability-guide-step-01').getByRole('link', { name: /Phần tiếp/ }).click();
+    expect(requests).toEqual([]); await expect(page.locator('main h1')).toHaveCount(1);
+    expect(await guide.innerText()).not.toMatch(/\b[a-f0-9]{64}\b/i);
+    for (const a of await guide.getByRole('link').all()) expect(await a.getAttribute('href')).toMatch(/^(?:#|\/)/);
+  });
+  test('the existing skip link and mobile chapter return remain real native focus destinations', async ({ page }) => {
+    await page.goto('about:blank');await page.goto(origin+route,{waitUntil:'networkidle'});
+    const skip=page.getByRole('link',{name:'Bỏ qua menu tới nội dung chính',exact:true});
+    await page.keyboard.press('Tab');await expect(skip).toBeFocused();await expect(skip).toBeVisible();
+    await page.keyboard.press('Enter');await expect(page.locator('main')).toBeFocused();await expect(page).toHaveURL(origin+route+'#main-content');
+    await page.setViewportSize({width:390,height:844});
+    await page.getByRole('navigation',{name:'Mục lục cách đọc web'}).getByRole('link').nth(2).click();
+    const returnLink=page.locator('#readability-guide-step-03 .lgo-readability-guide-action');
+    await expect(returnLink).toHaveAttribute('href','#readability-guide-contents');await returnLink.focus();await page.keyboard.press('Enter');
+    await expect(page.locator('#readability-guide-contents')).toBeFocused();
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(0);
+  });
+  test('boundary reading choices are ordered, keyboard reachable and do not certify anything', async ({ page }) => {
+    const group=page.getByRole('navigation',{name:'Đọc ranh giới trước kỳ vọng',exact:true});
+    const links=group.getByRole('link');await expect(links).toHaveCount(3);
+    for(const [i,link] of (await links.all()).entries()){
+      await expect(link).toHaveAttribute('href',['/status','/download/trust','/support/safety'][i]!);
+      await link.focus();expect(await link.evaluate(e=>getComputedStyle(e).outlineStyle)).not.toBe('none');
+    }
+    await links.first().focus();await page.keyboard.press('Tab');await expect(links.nth(1)).toBeFocused();
+    await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+'/download/trust');await page.goBack();await expect(group).toBeVisible();
+    await expect(page.locator('.lgo-guide-article-section').first()).toContainText('Chưa có audit pháp lý, chứng nhận WCAG');
+    await page.setViewportSize({width:320,height:800});
+    for(const link of await links.all())expect((await link.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+    await page.screenshot({path:test.info().outputPath('boundary-reading-320.png'),fullPage:true});
+  });
+
+});

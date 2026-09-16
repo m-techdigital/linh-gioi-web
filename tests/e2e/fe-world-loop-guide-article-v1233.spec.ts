@@ -125,7 +125,7 @@ test.describe('world-loop guide article and native navigation v1.233', () => {
     for (const item of published) expect((await page.request.get(`${origin}/guides/${item.slug}`)).status(), item.slug).toBe(200);
     const news = contentEntries.find(item => item.category === 'news' && item.status === 'published')!;
     expect((await page.request.get(`${origin}/guides/${news.slug}`)).status()).toBe(404);
-    for (const slug of ['gate-entry-guide', 'beginner-training-loop-guide', 'player-safety-support-guide', 'accessibility-readability-guide']) {
+    for (const slug of ['gate-entry-guide', 'beginner-training-loop-guide', 'player-safety-support-guide', 'accessibility-readability-guide', 'performance-copy-budget-guide']) {
       await page.goto(`${origin}/guides/${slug}`);
       const expected = contentEntries.find(item => item.slug === slug)!;
       await expect(page.getByRole('heading', { level: 1, name: expected.title, exact: true })).toBeVisible();
@@ -142,6 +142,11 @@ test.describe('world-loop guide article and native navigation v1.233', () => {
       } else if (slug === 'player-safety-support-guide') {
         // v1.243 migrates only this guide; retain source chapter counts and generic-route coverage.
         await expect(page.locator('.lgo-player-safety-guide')).toBeVisible();
+        await expect(page.locator('.lgo-guide-article-section')).toHaveCount(guideDetailSteps.filter(item => item.slug === slug).length);
+        await expect(page.locator('.lgo-guide-detail-steps')).toHaveCount(0);
+      } else if (slug === 'accessibility-readability-guide') {
+        // v1.244 specializes this exact article; the generic performance guide remains covered below.
+        await expect(page.locator('.lgo-readability-guide')).toBeVisible();
         await expect(page.locator('.lgo-guide-article-section')).toHaveCount(guideDetailSteps.filter(item => item.slug === slug).length);
         await expect(page.locator('.lgo-guide-detail-steps')).toHaveCount(0);
       } else {

@@ -1,3 +1,4 @@
+import { PublicReadabilityGuide } from "../../../components/PublicReadabilityGuide";
 import { PublicPlayerSafetyGuide } from "../../../components/PublicPlayerSafetyGuide";
 import { PublicStartHereGuide } from "../../../components/PublicStartHereGuide";
 import { PublicCommunityRoadmapGuide } from "../../../components/PublicCommunityRoadmapGuide";
@@ -41,6 +42,10 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
   const { slug } = await params;
   const entry = localContentRepository.bySlug(slug);
   if (!entry || entry.category !== "guides") notFound();
+
+  if (entry.slug === "accessibility-readability-guide") {
+    return <WebAppShell><PublicReadabilityGuide entry={entry}/></WebAppShell>;
+  }
 
   if (entry.slug === "player-safety-support-guide") {
     return <WebAppShell><PublicPlayerSafetyGuide entry={entry}/></WebAppShell>;

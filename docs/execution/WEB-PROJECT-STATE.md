@@ -1,3 +1,17 @@
+Current phase: WEB-FE-READABILITY-GUIDE-ARTICLE-v1.244 WEB_CLOSED — delivery-effective only after external manifest verification.
+
+Current decision: /guides/accessibility-readability-guide has four full source-authored chapters, six native reading actions and verified skip-to-main/contents focus. Production 360/360 PASS; 63-page build; five viewport captures/axe; 22 sibling DOM/geometry matches. No preference controls or certification.
+
+Delivery gate: reviewed commit, normal origin/main push, exact remote match and source/delta/evidence ZIP/SHA256 must be confirmed by the external manifest before WEB_CLOSED is effective. No production deployment command or handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.245.
+Select `/guides/performance-copy-budget-guide` as the next single active page only after v1.244 delivery closure. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-READABILITY-GUIDE-ARTICLE-REPORT-v1.244.md.
+Whole-app JavaScript-disabled streaming remains open; earlier non-reproduced dev fragment observation is not claimed fixed.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-PLAYER-SAFETY-GUIDE-ARTICLE-v1.243 WEB_CLOSED — delivery-effective only after external manifest verification.
 
 Current decision: /guides/player-safety-support-guide has four complete source chapters and seven real reading destinations, including shared two/three-link groups. Production 342/342 PASS; 63-page build; five viewport captures/axe; 20 sibling DOM/geometry matches. No private-data intake or live support.

@@ -312,11 +312,13 @@ VALIDATORS = [
     "validate_web_fe_community_roadmap_guide_article_v1241.py",
     "validate_web_fe_start_here_guide_article_v1242.py",
     "validate_web_fe_player_safety_guide_article_v1243.py",
+    "validate_web_fe_readability_guide_article_v1244.py",
 ]
 
 # These guards enforced a diagram image or deliberately line-clamped readiness cards.
 # v1.221 replaces them with art-backed DOM UI + native evidence disclosures. Not counted as PASS.
 SUPERSEDED_LAYOUT_VALIDATORS = {
+    "validate_web_fe_guides_accessibility_readability_real_ui_layout_v1167.py": "validate_web_fe_readability_guide_article_v1244.py",
     "validate_web_fe_guides_player_safety_support_real_ui_layout_v1166.py": "validate_web_fe_player_safety_guide_article_v1243.py",
     "validate_web_fe_guides_start_here_real_ui_layout_v1164.py": "validate_web_fe_start_here_guide_article_v1242.py",
     "validate_web_fe_guides_community_roadmap_real_ui_layout_v1163.py": "validate_web_fe_community_roadmap_guide_article_v1241.py",
