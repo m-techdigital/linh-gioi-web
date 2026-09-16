@@ -116,3 +116,5 @@ export type { PublishedArticleCopy, PublishedArticleEntry, PublishedArticleSecti
 
 export { IllustratedLink, MediaMosaic } from "./illustrated-navigation";
 export type { IllustratedLinkProps } from "./illustrated-navigation";
+
+export { ArtWordmark } from "./art-wordmark";

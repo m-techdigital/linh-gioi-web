@@ -1,5 +1,5 @@
 import { localContentRepository } from "@lgo-web/content";
-import { ExperienceHero, IllustratedLink, LinkButton, MediaMosaic, ReleaseIcon } from "@lgo-web/ui";
+import { ArtWordmark, ExperienceHero, IllustratedLink, LinkButton, MediaMosaic, ReleaseIcon } from "@lgo-web/ui";
 
 const art = (id: string, width: number, height: number) => ({ src: `/game-art/marketing/${id}.png`, width, height });
 const featureLinks = [
@@ -19,13 +19,13 @@ export function PublicHomeLanding() {
   const news = localContentRepository.list("news").slice(0,3);
   return <div className="lgo-immersive-landing">
     <ExperienceHero className="lgo-immersive-hero" copyClassName="lgo-immersive-copy"
-      title={<><span>Linh Giới</span><small>ONLINE</small></>}
+      title={<ArtWordmark src="/game-art/marketing/wordmark-brush.png" width={422} height={169} label="Linh Giới Online" fallback={<><span>Linh Giới</span><small>ONLINE</small></>}/>}
       kicker="Sống một đời khác trong Linh Giới"
       badge="MMORPG hành động cộng đồng 2D"
       lead="Gặp gỡ ở Linh Thành. Chọn Lộ của bạn. Viết tiếp câu chuyện của riêng mình."
       actions={[{href:"/game",label:"Khám phá Linh Giới",tone:"spirit"},{href:"/classes",label:"Chọn Lộ của bạn",tone:"jade"},{href:"/story",label:"Bắt đầu câu chuyện",tone:"gold"}]}
       detail={<div className="lgo-landing-signals" aria-label="Định hướng thế giới"><span>Thế giới 2D</span><span>Năm Lộ nhân vật</span><span>Kết nối cộng đồng</span><span>Cùng nhau viết chuyện</span></div>}
-      visual={<div className="lgo-immersive-art" aria-hidden="true"><img className="lgo-hero-plate-city" {...art("hero-moon-city",225,245)} alt="" fetchPriority="high"/><img className="lgo-hero-plate-traveler" {...art("hero-traveler",344,348)} alt="" fetchPriority="high"/></div>}/>
+      visual={<div className="lgo-immersive-art" aria-hidden="true"><picture className="lgo-native-hero-scene"><source media="(max-width: 600px)" srcSet="/game-art/marketing/hero-mobile.png" width={565} height={405}/><img {...art("hero-artwork",1672,405)} alt="" fetchPriority="high"/></picture></div>}/>
     <div className="lgo-landing-content">
       <section className="lgo-landing-features" aria-label="Ba nét riêng của Linh Giới">{featureLinks.map(item=><IllustratedLink {...item} key={item.href}/>)}</section>
       <div className="lgo-landing-columns">
@@ -39,7 +39,7 @@ export function PublicHomeLanding() {
           <div className="lgo-landing-news-grid">{news.map((entry,index)=><article className="lgo-landing-news-card" key={entry.slug}>
             <img {...featureLinks[index % featureLinks.length]!.image} alt="" loading="lazy"/>
             <div className="lgo-landing-news-copy"><div className="lgo-landing-news-meta"><span>Nhật ký web</span><time dateTime={entry.publishedAt}>{date.format(new Date(entry.publishedAt))}</time></div>
-              <h3>{entry.title}</h3><details><summary>Đọc tóm tắt</summary><p>{entry.summary}</p></details><a href={`/news/${entry.slug}`}>Đọc bài viết <span aria-hidden="true">→</span></a>
+              <h3><a href={`/news/${entry.slug}`}>{entry.title}</a></h3><details><summary>Đọc tóm tắt</summary><p>{entry.summary}</p></details>
             </div>
           </article>)}</div>
         </section>

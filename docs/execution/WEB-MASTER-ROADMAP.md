@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: homepage `/` is reopened for design realignment v1.265 and requires visual review. News queue is deferred by owner. Next entry pages after homepage acceptance: /game, /classes, /story, /journey, /start. Earlier engineering PASS does not imply design fidelity.
+Current visual checkpoint: homepage `/` v1.265 revision2 implements original brush branding and native-scale artwork; visual review remains open. Next same-page refinement is header identity/main-action details. The old news queue stays deferred; /game and other main pages start only after homepage completion.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 

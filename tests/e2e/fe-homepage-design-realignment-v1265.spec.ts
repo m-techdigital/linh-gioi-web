@@ -5,7 +5,7 @@ const origin=process.env.LGO_WEB_URL??'http://127.0.0.1:3000';
 test.describe('homepage restarts from actual v1.118 visual composition',()=>{
  test.beforeEach(async({page})=>{await page.goto(origin+'/');});
  test('full-width illustrated hero centers the brand rather than a split boxed proof layout',async({page,isMobile})=>{
-  const hero=page.locator('.lgo-immersive-hero');await expect(hero).toBeVisible();await expect(hero.locator('h1')).toHaveText('Linh GiớiONLINE');
+  const hero=page.locator('.lgo-immersive-hero');await expect(hero).toBeVisible();await expect(hero.locator('h1')).toHaveAccessibleName('Linh Giới Online');
   const m=await hero.evaluate(e=>{const r=e.getBoundingClientRect(),h=e.querySelector('h1')!.getBoundingClientRect();return{hero:r.toJSON(),h:h.toJSON(),overflow:document.documentElement.scrollWidth-innerWidth,images:[...e.querySelectorAll('img')].every(i=>i.complete&&i.naturalWidth>0),center:Math.abs(h.x+h.width/2-innerWidth/2),background:getComputedStyle(e.querySelector('.lgo-immersive-art')!).position};});
   expect(m.hero.width).toBeGreaterThanOrEqual((await page.viewportSize())!.width-2);expect(m.center).toBeLessThan(4);expect(m.images).toBe(true);expect(m.background).toBe('absolute');expect(m.overflow).toBeLessThanOrEqual(0);
   expect(m.hero.height).toBeLessThan(isMobile?850:600);await expect(page.locator('.lgo-cinematic-scene,.lgo-home-discovery-grid')).toHaveCount(0);await page.screenshot({path:test.info().outputPath('homepage-first-fold.png')});
@@ -19,8 +19,9 @@ test.describe('homepage restarts from actual v1.118 visual composition',()=>{
  });
  test('brand and section typography follow the design hierarchy instead of legacy global caps',async({page,isMobile})=>{
   const size=async(s:string)=>page.locator(s).first().evaluate(e=>parseFloat(getComputedStyle(e).fontSize));
-  expect(await size('.lgo-immersive-hero h1')).toBeGreaterThanOrEqual(isMobile?52:95);
-  if(isMobile){const span=page.locator('.lgo-immersive-hero h1 > span');expect(await span.evaluate(e=>getComputedStyle(e).whiteSpace)).toBe('nowrap');expect((await span.boundingBox())!.width).toBeLessThanOrEqual((await page.viewportSize())!.width-20);}
+  // Source brush wordmark replaces a font-size proxy: assert wordmark rendered bounds.
+  const wordmark=page.locator('.lgo-art-wordmark');await expect(wordmark).toBeVisible();const wordmarkBox=(await wordmark.boundingBox())!;expect(wordmarkBox.width).toBeGreaterThanOrEqual(isMobile?280:400);expect(wordmarkBox.width).toBeLessThanOrEqual(440);
+  expect(wordmarkBox.width).toBeLessThanOrEqual((await page.viewportSize())!.width-20);
   expect(await size('.lgo-landing-heading h2')).toBeLessThanOrEqual(24);
   expect(await size('.lgo-landing-features h3')).toBeLessThanOrEqual(20);
   expect(await size('.lgo-media-mosaic-tiles h3')).toBeLessThanOrEqual(18);

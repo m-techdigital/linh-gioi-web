@@ -1,0 +1,806 @@
+{
+  "source": "apps/web/public/design-reference/homepage-detailed-design-target-v1118.png",
+  "sourceSha256": "ecf58cb2af080587e3be3b07430640b9765eb6b8319facc5bc9ad16e8eecef9e",
+  "method": "Canvas integer crop + alpha-only masking. Opaque artwork RGB values remain source pixels. No interpolation resize, inpainting, generation or font substitution. Transparent gaps deliberately contain no invented hidden artwork.",
+  "status": "RUNTIME_REVIEW_NOT_FINAL_MASTER",
+  "items": [
+    {
+      "id": "wordmark-brush",
+      "path": "/game-art/marketing/wordmark-brush.png",
+      "width": 422,
+      "height": 169,
+      "sha256": "219d9fe250305e79569f8f294a2041af3440b87639c926973b07a29fc6b4235d",
+      "role": "Existing design pixel extraction with alpha mask; not a redrawn/HD original or whole UI screenshot."
+    },
+    {
+      "id": "hero-artwork",
+      "path": "/game-art/marketing/hero-artwork.png",
+      "width": 1672,
+      "height": 405,
+      "sha256": "56924aa81d379f1127474d55990761e8e71a348c1ce518a17c777ab6222000e6",
+      "role": "Existing design pixel extraction with alpha mask; not a redrawn/HD original or whole UI screenshot."
+    },
+    {
+      "id": "hero-mobile",
+      "path": "/game-art/marketing/hero-mobile.png",
+      "width": 565,
+      "height": 405,
+      "sha256": "d8d79a104cb22b7debd60ef4d233bbf4da24def99daedcb0047589b14d56e3f8",
+      "role": "Native crop of the left traveler scene at x118:683, no scenic calligraphy behind mobile text."
+    }
+  ],
+  "extraction": {
+    "files": [
+      {
+        "name": "wordmark-brush-d",
+        "width": 422,
+        "height": 169
+      },
+      {
+        "name": "hero-artwork-d",
+        "width": 1672,
+        "height": 405
+      },
+      {
+        "name": "hero-east-d",
+        "width": 565,
+        "height": 405
+      }
+    ],
+    "logo": {
+      "sourceRect": [
+        595,
+        75,
+        535,
+        173
+      ],
+      "key": {
+        "low": 130,
+        "high": 205,
+        "cutoff": 8,
+        "minComponent": 18
+      },
+      "regions": [
+        {
+          "bounds": [
+            413,
+            0,
+            534,
+            88
+          ],
+          "pixels": 6824,
+          "keep": false
+        },
+        {
+          "bounds": [
+            22,
+            14,
+            154,
+            170
+          ],
+          "pixels": 5796,
+          "keep": true
+        },
+        {
+          "bounds": [
+            395,
+            25,
+            395,
+            25
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            259,
+            28,
+            347,
+            163
+          ],
+          "pixels": 4728,
+          "keep": true
+        },
+        {
+          "bounds": [
+            129,
+            31,
+            242,
+            133
+          ],
+          "pixels": 3699,
+          "keep": true
+        },
+        {
+          "bounds": [
+            384,
+            45,
+            413,
+            76
+          ],
+          "pixels": 291,
+          "keep": true
+        },
+        {
+          "bounds": [
+            352,
+            58,
+            372,
+            77
+          ],
+          "pixels": 244,
+          "keep": true
+        },
+        {
+          "bounds": [
+            450,
+            59,
+            450,
+            59
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            512,
+            61,
+            512,
+            61
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            413,
+            62,
+            431,
+            81
+          ],
+          "pixels": 218,
+          "keep": true
+        },
+        {
+          "bounds": [
+            136,
+            64,
+            152,
+            80
+          ],
+          "pixels": 174,
+          "keep": true
+        },
+        {
+          "bounds": [
+            311,
+            67,
+            311,
+            67
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            310,
+            68,
+            310,
+            68
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            457,
+            69,
+            457,
+            69
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            458,
+            70,
+            458,
+            70
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            270,
+            73,
+            270,
+            74
+          ],
+          "pixels": 2,
+          "keep": false
+        },
+        {
+          "bounds": [
+            347,
+            73,
+            410,
+            128
+          ],
+          "pixels": 1648,
+          "keep": true
+        },
+        {
+          "bounds": [
+            348,
+            76,
+            348,
+            76
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            461,
+            77,
+            461,
+            77
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            462,
+            79,
+            462,
+            79
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            460,
+            81,
+            460,
+            81
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            506,
+            82,
+            508,
+            87
+          ],
+          "pixels": 10,
+          "keep": false
+        },
+        {
+          "bounds": [
+            412,
+            85,
+            429,
+            139
+          ],
+          "pixels": 511,
+          "keep": true
+        },
+        {
+          "bounds": [
+            460,
+            85,
+            460,
+            85
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            460,
+            88,
+            460,
+            88
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            508,
+            91,
+            511,
+            93
+          ],
+          "pixels": 8,
+          "keep": false
+        },
+        {
+          "bounds": [
+            502,
+            92,
+            504,
+            94
+          ],
+          "pixels": 7,
+          "keep": false
+        },
+        {
+          "bounds": [
+            456,
+            94,
+            458,
+            95
+          ],
+          "pixels": 4,
+          "keep": false
+        },
+        {
+          "bounds": [
+            470,
+            96,
+            517,
+            151
+          ],
+          "pixels": 1327,
+          "keep": false
+        },
+        {
+          "bounds": [
+            509,
+            96,
+            511,
+            97
+          ],
+          "pixels": 5,
+          "keep": false
+        },
+        {
+          "bounds": [
+            471,
+            98,
+            472,
+            98
+          ],
+          "pixels": 2,
+          "keep": false
+        },
+        {
+          "bounds": [
+            495,
+            99,
+            507,
+            103
+          ],
+          "pixels": 43,
+          "keep": false
+        },
+        {
+          "bounds": [
+            509,
+            99,
+            514,
+            101
+          ],
+          "pixels": 14,
+          "keep": false
+        },
+        {
+          "bounds": [
+            243,
+            100,
+            243,
+            100
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            411,
+            101,
+            411,
+            101
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            346,
+            102,
+            346,
+            102
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            460,
+            103,
+            461,
+            107
+          ],
+          "pixels": 8,
+          "keep": false
+        },
+        {
+          "bounds": [
+            463,
+            104,
+            466,
+            114
+          ],
+          "pixels": 24,
+          "keep": false
+        },
+        {
+          "bounds": [
+            431,
+            105,
+            431,
+            105
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            459,
+            105,
+            459,
+            105
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            430,
+            106,
+            430,
+            107
+          ],
+          "pixels": 2,
+          "keep": false
+        },
+        {
+          "bounds": [
+            492,
+            106,
+            492,
+            106
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            462,
+            109,
+            462,
+            110
+          ],
+          "pixels": 2,
+          "keep": false
+        },
+        {
+          "bounds": [
+            462,
+            116,
+            464,
+            118
+          ],
+          "pixels": 7,
+          "keep": false
+        },
+        {
+          "bounds": [
+            49,
+            117,
+            49,
+            117
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            458,
+            117,
+            458,
+            117
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            313,
+            118,
+            313,
+            118
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            47,
+            119,
+            48,
+            122
+          ],
+          "pixels": 5,
+          "keep": false
+        },
+        {
+          "bounds": [
+            312,
+            119,
+            312,
+            119
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            451,
+            120,
+            461,
+            141
+          ],
+          "pixels": 92,
+          "keep": false
+        },
+        {
+          "bounds": [
+            518,
+            126,
+            534,
+            160
+          ],
+          "pixels": 304,
+          "keep": false
+        },
+        {
+          "bounds": [
+            450,
+            136,
+            450,
+            136
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            88,
+            144,
+            91,
+            144
+          ],
+          "pixels": 4,
+          "keep": false
+        },
+        {
+          "bounds": [
+            169,
+            145,
+            184,
+            161
+          ],
+          "pixels": 128,
+          "keep": true
+        },
+        {
+          "bounds": [
+            200,
+            145,
+            214,
+            161
+          ],
+          "pixels": 127,
+          "keep": true
+        },
+        {
+          "bounds": [
+            230,
+            145,
+            240,
+            161
+          ],
+          "pixels": 72,
+          "keep": true
+        },
+        {
+          "bounds": [
+            257,
+            145,
+            260,
+            161
+          ],
+          "pixels": 66,
+          "keep": true
+        },
+        {
+          "bounds": [
+            278,
+            145,
+            293,
+            161
+          ],
+          "pixels": 123,
+          "keep": true
+        },
+        {
+          "bounds": [
+            309,
+            145,
+            320,
+            161
+          ],
+          "pixels": 98,
+          "keep": true
+        },
+        {
+          "bounds": [
+            503,
+            147,
+            503,
+            147
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            512,
+            152,
+            512,
+            153
+          ],
+          "pixels": 2,
+          "keep": false
+        },
+        {
+          "bounds": [
+            155,
+            157,
+            155,
+            157
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            529,
+            166,
+            529,
+            172
+          ],
+          "pixels": 7,
+          "keep": false
+        },
+        {
+          "bounds": [
+            499,
+            167,
+            501,
+            169
+          ],
+          "pixels": 7,
+          "keep": false
+        },
+        {
+          "bounds": [
+            534,
+            168,
+            534,
+            171
+          ],
+          "pixels": 4,
+          "keep": false
+        },
+        {
+          "bounds": [
+            488,
+            172,
+            488,
+            172
+          ],
+          "pixels": 1,
+          "keep": false
+        },
+        {
+          "bounds": [
+            533,
+            172,
+            533,
+            172
+          ],
+          "pixels": 1,
+          "keep": false
+        }
+      ],
+      "sourceGlyphMaxX": 445,
+      "crop": [
+        22,
+        14,
+        431,
+        170
+      ],
+      "pad": 6
+    },
+    "masks": [],
+    "leftProfile": [
+      [
+        0,
+        592
+      ],
+      [
+        160,
+        582
+      ],
+      [
+        217,
+        535
+      ],
+      [
+        258,
+        460
+      ],
+      [
+        343,
+        402
+      ],
+      [
+        405,
+        370
+      ]
+    ],
+    "rightProfile": [
+      [
+        0,
+        1045
+      ],
+      [
+        160,
+        1060
+      ],
+      [
+        225,
+        1140
+      ],
+      [
+        259,
+        1204
+      ],
+      [
+        345,
+        1236
+      ],
+      [
+        405,
+        1255
+      ]
+    ],
+    "mobileCrop": [
+      118,
+      0,
+      565,
+      405
+    ]
+  },
+  "sceneryPolicy": "Original illustrated hanging signs and poetic calligraphy are retained as non-interactive scenery (aria-hidden); they are not live HTML labels. Removing them produced artificial black rectangles, and those rejected candidates are retained. The central mockup wordmark/taglines/buttons/counters are absent from scene pixels. Only separate original brush wordmark is rendered in the real accessible h1.",
+  "mobileReview": "The wider eastern candidate overlapped decorative calligraphy with mobile copy; replaced with left traveler crop. Candidate retained in local handoff, not used on mobile."
+}

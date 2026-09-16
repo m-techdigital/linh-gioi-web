@@ -48,3 +48,5 @@ Validator compatibility and anti-drift guardrails:
 Runtime resource policy: keep dev3221 and reuse production3236 after fresh ownership/process verification. Do not open another port per version. Release finished handoff write claims after verified delivery; retain artifacts.
 
 Deferred historical queue (not active): WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.265 `/news/accessibility-readability-polish-started`. Current task stays homepage until review.
+
+Homepage revision2 checkpoint: original brush logo and native desktop/mobile artwork are implemented and tested. Continue the SAME homepage task to refine header identity and main-action icon/frame details against the original design; preserve original art provenance, live fallback, native scale, source content and keyboard behavior. Packaging a revision does not advance the route or imply visual acceptance. Latest report: LGO-WEB-FE-HOMEPAGE-NATIVE-ART-REPORT-v1.265-r2.md.

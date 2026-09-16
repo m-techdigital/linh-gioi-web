@@ -1,0 +1,12 @@
+.lgo-art-wordmark { display:block; position:relative; width:100%; }
+.lgo-art-wordmark-label { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
+.lgo-art-wordmark > img { display:block; position:absolute; inset:0; width:100%; height:100%; object-fit:contain; opacity:0; }
+.lgo-art-wordmark-fallback { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; font:italic 700 clamp(44px,7vw,82px)/1 var(--lgo-font-editorial); color:var(--lgo-color-text-primary); }
+.lgo-art-wordmark-fallback > span { white-space:nowrap; }
+.lgo-art-wordmark-fallback small { font:600 16px/1.5 var(--lgo-font-editorial); letter-spacing:.4em; padding-left:.4em; margin-top:10px; }
+.lgo-art-wordmark[data-fallback="false"] > img { opacity:1; }
+.lgo-art-wordmark[data-fallback="false"] > .lgo-art-wordmark-fallback { visibility:hidden; }
+@media (forced-colors:active) {
+ .lgo-art-wordmark > img { display:none; }
+ .lgo-art-wordmark[data-fallback] > .lgo-art-wordmark-fallback { visibility:visible; color:CanvasText; }
+}
