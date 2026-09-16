@@ -1,3 +1,17 @@
+Current phase: WEB-FE-COMMUNITY-ONBOARDING-ARTICLE-v1.261 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /news/community-roadmap-onboarding-started uses unchanged PublishedArticle for two complete source chapters, source date, original related articles and8 informational paths. Actual Onboarding/Roadmap interactions verified without changing destination tools. Fresh production804/804 across64 files, build63, five viewports and68 exact raw DOM/geometry matches. No package/CSS/content/dependency changes.
+
+Delivery gate: reviewed normal commit/push, exact remote HEAD and verified full/delta/evidence ZIP/SHA256/replay. No production deployment or local handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.262.
+Select `/news/content-ia-hub-polish-started` only after v1.261 delivery. Real Browser UI/UX Layout First, Base First, Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-COMMUNITY-ONBOARDING-ARTICLE-REPORT-v1.261.md.
+Runtime reuses dev3221/production3236. Finished handoff write claim released after verified delivery; artifacts retained. Whole-app JavaScript-disabled streaming remains open. Old dashboard task stays operator REVIEW; PID waiver and fresh pause/ownership checks remain active.
+
+Historical snapshots below are not active delivery policy.
+
 Current phase: WEB-FE-TESTER-PREPARATION-ARTICLE-v1.260 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /news/closed-tester-information-pack-started uses unchanged PublishedArticle with two full source chapters and7 real links including4 focusable tester destinations. Original date and related articles preserved; no package/CSS/content/dependency or tester-tool changes. Fresh production774/774, build63, five viewports and62 raw sibling DOM/geometry comparisons.

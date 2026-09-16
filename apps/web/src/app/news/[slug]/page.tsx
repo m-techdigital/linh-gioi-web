@@ -1,3 +1,4 @@
+import { PublicCommunityOnboardingArticle } from "../../../components/PublicCommunityOnboardingArticle";
 import { PublicTesterPreparationArticle } from "../../../components/PublicTesterPreparationArticle";
 import { PublicStatusTrustArticle } from "../../../components/PublicStatusTrustArticle";
 import { PublicDetailReadingArticle } from "../../../components/PublicDetailReadingArticle";
@@ -59,6 +60,10 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
 
   if (entry.slug === "closed-tester-information-pack-started") {
     return <WebAppShell><PublicTesterPreparationArticle entry={entry} related={related}/></WebAppShell>;
+  }
+
+  if (entry.slug === "community-roadmap-onboarding-started") {
+    return <WebAppShell><PublicCommunityOnboardingArticle entry={entry} related={related}/></WebAppShell>;
   }
 
   return (
