@@ -1,5 +1,5 @@
 /* Shared editorial reading catalog, article cover and browser-only discovery controls. */
-.lgo-guides-discovery .lgo-release-hero { grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr); }
+:is(.lgo-guides-discovery,.lgo-catalog-discovery) .lgo-release-hero { grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr); }
 .lgo-library-boundary { display:flex; align-items:start; gap:.65rem; margin:1.15rem 0; font-size:.85rem; color:var(--release-muted); }
 .lgo-library-boundary .lgo-release-icon { color:var(--lgo-color-warm-gold); }
 .lgo-library-featured { min-width:0; overflow:hidden; background:var(--lgo-color-parchment); box-shadow:var(--lgo-shadow-panel); border:3px double var(--lgo-color-warm-gold); }
@@ -51,7 +51,7 @@
 .lgo-reading-catalog button:focus-visible, .lgo-reading-catalog input:focus-visible { outline:2px solid var(--lgo-color-warm-gold); outline-offset:3px; }
 @media(max-width:1050px) { .lgo-reading-catalog-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:800px) {
-  .lgo-guides-discovery .lgo-release-hero { grid-template-columns:1fr; }
+  :is(.lgo-guides-discovery,.lgo-catalog-discovery) .lgo-release-hero { grid-template-columns:1fr; }
   .lgo-library-featured { max-width:540px; width:100%; margin-inline:auto; }
   .lgo-library-help { grid-template-columns:1fr; }
 }
@@ -89,3 +89,8 @@
   .lgo-reading-catalog-card .lgo-catalog-summary[open] { grid-column:1/-1; }
   .lgo-reading-catalog-card .lgo-catalog-summary[open] + .lgo-link-button { grid-column:1/-1; }
 }
+
+/* Optional publication metadata, without altering the undated guide catalog. */
+.lgo-catalog-publication { display:flex; flex-wrap:wrap; gap:.3rem .6rem; color:var(--release-muted); font-size:.78rem; line-height:1.5; margin-top:.65rem; grid-column:1/-1; }
+.lgo-catalog-publication time { color:var(--lgo-color-parchment); }
+.lgo-reading-catalog-card:has(.lgo-catalog-publication) .lgo-catalog-summary p { font-size:max(.86rem,14px); }

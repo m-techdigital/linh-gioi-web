@@ -1,4 +1,4 @@
-"""The next-page guard must resolve real published guides, not arbitrary dynamic slugs."""
+"""The next-page guard must resolve real published guides/news, not arbitrary dynamic slugs."""
 import importlib.util
 from pathlib import Path
 import tempfile
@@ -62,5 +62,41 @@ class NextRouteTests(unittest.TestCase):
     def test_unsafe_route_path(self):
         self.write("apps/web/src/outside/page.tsx", "export default function Page() {}")
         self.assertTrue(self.check("/../outside"))
+
+    def news_fixture(self, status="published", category="news"):
+        self.write("apps/web/src/app/news/[slug]/page.tsx", (REPO / "apps/web/src/app/news/[slug]/page.tsx").read_text())
+        self.write("packages/content/src/fixtures.ts", 'export const contentEntries: ContentEntry[] = [\n  {\n    slug: "news-article",\n    category: "'+category+'",\n    status: "'+status+'"\n  }\n];\nexport const other = [{ slug: "fake-news", category: "news", status: "published" }];')
+
+    def test_published_news_is_a_real_next_route(self):
+        self.news_fixture()
+        self.assertEqual(self.check("/news/news-article"), [])
+
+    def test_news_draft_and_scheduled_are_not_public(self):
+        for status in ("draft", "scheduled"):
+            with self.subTest(status=status):
+                self.news_fixture(status=status)
+                self.assertTrue(self.check("/news/news-article"))
+
+    def test_non_news_record_cannot_supply_a_news_route(self):
+        self.news_fixture(category="guides")
+        self.assertTrue(self.check("/news/news-article"))
+
+    def test_unknown_news_and_arbitrary_dynamic_namespace_rejected(self):
+        self.news_fixture()
+        self.assertTrue(self.check("/news/fake-news"))
+        self.assertTrue(self.check("/news/unknown"))
+        self.write("apps/web/src/app/invented/[slug]/page.tsx", "export default function Page() {}")
+        self.assertTrue(self.check("/invented/news-article"))
+
+    def test_missing_news_renderer_rejected(self):
+        self.news_fixture()
+        (self.root / "apps/web/src/app/news/[slug]/page.tsx").unlink()
+        self.assertTrue(self.check("/news/news-article"))
+
+    def test_missing_news_category_guard_rejected(self):
+        self.news_fixture()
+        p = self.root / "apps/web/src/app/news/[slug]/page.tsx"
+        p.write_text(p.read_text().replace('entry.category !== "news"', 'false'))
+        self.assertTrue(self.check("/news/news-article"))
 
 if __name__ == "__main__": unittest.main()

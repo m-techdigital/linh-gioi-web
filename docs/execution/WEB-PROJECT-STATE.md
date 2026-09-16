@@ -1,3 +1,17 @@
+Current phase: WEB-FE-NEWS-DISCOVERY-v1.253 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /news exposes all17 published records rather than first3, with shared local filtering, full native summaries, posting dates and original article routes. Source-backed starting article and actual news-library focus. Production594/594, reading component6, build63; five viewports and48 sibling geometry matches. No live news or subscription service.
+
+Delivery gate: reviewed commit, normal push, matching remote HEAD and verified full/delta/evidence ZIP/SHA256/replay. No deployment or handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.254.
+Select `/news/web-program-control-tower` only after v1.253 delivery. Real Browser UI/UX Layout First, Base First, Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-NEWS-DISCOVERY-REPORT-v1.253.md.
+Whole-app JavaScript-disabled streaming remains open. PID capacity waiver retained; fresh pause/ownership checks remain active.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-PATCH-NOTES-JOURNAL-v1.252 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /patch-notes renders two exact published records with full native bodies, explicit posting-date semantics and four real onward routes. Shared AnnouncementBoard copy is reusable while event defaults stay unchanged. Fresh production530/530, component7, build63, five viewports and42 sibling geometry matches. No patch download or game release is implied.

@@ -29,7 +29,7 @@ def main() -> int:
         'normalize("NFD")', "text.includes(phrase)", "entry.groupId === groupId", 'useState("all")', 'useState("")',
         'role="status"', 'aria-live="polite"', "visible.length", "entries.length", "document.getElementById(inputId)?.focus()",
         "setQuery(\"\"); setGroupId(\"all\")", "Chưa tìm thấy bài phù hợp", "Chưa có hướng dẫn công khai", "<details", "{entry.description}",
-        'aria-label={`Đọc hướng dẫn: ${entry.title}`}', "không được gửi hoặc lưu"))
+        'aria-label={`${copy.actionLabel}: ${entry.title}`}', 'actionLabel: "Đọc hướng dẫn"', 'copy = defaultCopy', "không được gửi hoặc lưu"))
     feature = require("packages/ui/src/featured-reading.tsx", ("export function FeaturedReading", "<h2>{title}</h2>", "{description}", "<details", "href={href}", "Không phải gameplay live"))
     for name, text in (("page",page),("view",view),("catalog",catalog),("feature",feature)):
         for marker in ("fetch(", "XMLHttpRequest", "localStorage", "sessionStorage", "WebSocket", "window.history", "<form", "<textarea", "dangerouslySetInnerHTML"):

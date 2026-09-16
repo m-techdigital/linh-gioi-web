@@ -321,11 +321,13 @@ VALIDATORS = [
     "validate_web_fe_faq_guide_article_v1250.py",
     "validate_web_fe_events_announcement_board_v1251.py",
     "validate_web_fe_patch_notes_journal_v1252.py",
+    "validate_web_fe_news_discovery_v1253.py",
 ]
 
 # These guards enforced a diagram image or deliberately line-clamped readiness cards.
 # v1.221 replaces them with art-backed DOM UI + native evidence disclosures. Not counted as PASS.
 SUPERSEDED_LAYOUT_VALIDATORS = {
+    "validate_web_fe_news_real_ui_layout_v1176.py": "validate_web_fe_news_discovery_v1253.py",
     "validate_web_fe_patch_notes_real_ui_layout_v1199.py": "validate_web_fe_patch_notes_journal_v1252.py",
     "validate_web_fe_patch_notes_real_ui_layout_v1175.py": "validate_web_fe_patch_notes_journal_v1252.py",
     "validate_web_fe_events_real_ui_layout_v1198.py": "validate_web_fe_events_announcement_board_v1251.py",
@@ -404,7 +406,7 @@ SUPERSEDED_LAYOUT_VALIDATORS = {
 }
 
 def public_route_exists(route: str) -> bool:
-    """Resolve literal pages and the existing file-backed published-guide renderer.
+    """Resolve literal pages and the existing file-backed published guide/news renderers.
 
     This is intentionally not a general Next.js route parser. Unknown dynamic
     families fail closed; browser tests must still prove runtime reachability.
@@ -414,14 +416,17 @@ def public_route_exists(route: str) -> bool:
     app = ROOT / "apps/web/src/app"
     if (app / route.lstrip("/") / "page.tsx").is_file():
         return True
-    match = re.fullmatch(r"/guides/([a-z0-9-]+)", route)
-    renderer = app / "guides/[slug]/page.tsx"
+    match = re.fullmatch(r"/(guides|news)/([a-z0-9-]+)", route)
+    if not match:
+        return False
+    category, slug = match.groups()
+    renderer = app / category / "[slug]/page.tsx"
     fixtures = ROOT / "packages/content/src/fixtures.ts"
     if not match or not renderer.is_file() or not fixtures.is_file():
         return False
     source = renderer.read_text(encoding="utf-8")
-    required = ('generateStaticParams', 'localContentRepository.list("guides")',
-                'localContentRepository.bySlug(slug)', 'entry.category !== "guides"', 'notFound()')
+    required = ('generateStaticParams', f'localContentRepository.list("{category}")',
+                'localContentRepository.bySlug(slug)', f'entry.category !== "{category}"', 'notFound()')
     if not all(marker in source for marker in required):
         return False
     entries = re.search(r"export const contentEntries\s*:\s*ContentEntry\[\]\s*=\s*\[(.*?)^\];",
@@ -430,7 +435,7 @@ def public_route_exists(route: str) -> bool:
         return False
     for block in re.findall(r"^  \{\n(.*?)^  \}", entries[1], re.S | re.M):
         values = dict(re.findall(r'^\s*(slug|category|status):\s*"([^"\n]+)"\s*,?\s*$', block, re.M))
-        if values == {"slug": match[1], "category": "guides", "status": "published"}:
+        if values == {"slug": slug, "category": category, "status": "published"}:
             return True
     return False
 
