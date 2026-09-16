@@ -28,6 +28,8 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.263 replaces the old compact article only; world-loop and guide suites stay active.
+    "**/fe-news-world-gameplay-loop-real-ui-layout-v1189.spec.ts",
     // v1.262 supersedes this compact article only; library and Start behavior stay covered.
     "**/fe-news-content-ia-hub-real-ui-layout-v1187.spec.ts",
     // v1.261 replaces only this compact article; community and roadmap destination suites stay active.

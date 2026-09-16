@@ -1,3 +1,17 @@
+Current phase: WEB-FE-WORLD-LOOP-ARTICLE-v1.263 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /news/world-gameplay-loop-depth-started uses unchanged PublishedArticle with two full source chapters, original date/related articles and8 reading paths. Actual world-loop and guide interactions verified without changing destination tools. Fresh production866/866 in64 files, build63, five viewports and74 raw DOM/geometry matches. No CSS/package/content/dependency changes.
+
+Delivery gate: reviewed normal commit/push, exact remote HEAD and verified full/delta/evidence ZIP/SHA256/replay. No production deployment or local handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.264.
+Select `/news/player-safety-support-faq-polish-started` only after v1.263 delivery. Real Browser UI/UX Layout First, Base First, Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-WORLD-LOOP-ARTICLE-REPORT-v1.263.md.
+Reuse dev3221/production3236; Manager3.2 ensure and native-identity review before fixed-role restart. Release finished handoff claim after verified delivery, retain archives. Whole-app JavaScript-disabled streaming remains open. Old dashboard task stays operator REVIEW; PID waiver and pause/recovery/ownership checks remain active.
+
+Historical snapshots below are not active delivery policy.
+
 Current phase: WEB-FE-CONTENT-HUB-ARTICLE-v1.262 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /news/content-ia-hub-polish-started uses unchanged PublishedArticle for two full source chapters, original date/related articles and8 information paths. Actual library filtering and Start navigation verified without changing destination tools. Fresh production836/836 in64 files, build63, five viewports and70 raw DOM/geometry matches. No CSS/package/content/dependency changes.
