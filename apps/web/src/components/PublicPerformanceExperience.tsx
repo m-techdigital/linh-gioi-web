@@ -1,5 +1,5 @@
 import {mobileDensityBudgets, perceivedLoadSignals, performanceCopyBudgetPrinciples, staticRouteCompositionRules} from "@lgo-web/content";
-import {ExperienceHero, LinkButton, QuestionDisclosureList, ReadingPreview, ReleaseIcon, SectionHeading} from "@lgo-web/ui";
+import {ExperienceHero, LinkButton, QuestionDisclosureList, ReadingPreview, ReadingPriorityPanel, ReleaseIcon, SectionHeading} from "@lgo-web/ui";
 import type {ReleaseIconName} from "@lgo-web/ui";
 
 const routeLabels: Record<string, {title: string; summary: string; icon: ReleaseIconName}> = {
@@ -15,13 +15,10 @@ export function PublicPerformanceHero() {
     title="Hiệu năng và ngân sách nội dung" lead="Đọc điều quan trọng trước. Mở chi tiết khi cần. Thử khoảng cách nội dung và chọn có tải thêm minh họa trong một khung đọc riêng."
     actions={[{href:"#performance-preview",label:"Thử cách đọc",tone:"gold"},{href:"/accessibility",label:"Hướng dẫn dễ đọc",tone:"neutral"}]}
     detail={<p className="lgo-performance-hero-note"><ReleaseIcon name="shield"/>Trải nghiệm thử tại chỗ, không phải báo cáo tốc độ website.</p>}
-    visual={<section className="lgo-performance-priority-console" aria-labelledby="performance-priority-heading">
-      <div className="lgo-performance-crest" aria-hidden="true"><ReleaseIcon name="document"/></div>
-      <span className="lgo-performance-console-overline">Ngân sách cho sự chú ý</span>
-      <h2 id="performance-priority-heading">Rõ trước.<br/><em>Đẹp vừa đủ.</em></h2>
-      <ol><li><span>Nội dung</span><strong>Điều cần biết nằm trước</strong></li><li><span>Minh họa</span><strong>Tải thêm khi bạn chọn</strong></li><li><span>Chi tiết</span><strong>Mở rộng, không cắt bỏ</strong></li></ol>
-      <small>Không gắn điểm số cho điều chưa đo.</small>
-    </section>}/>;
+    visual={<ReadingPriorityPanel headingId="performance-priority-heading" overline="Ngân sách cho sự chú ý"
+      title={<>Rõ trước.<br/><em>Đẹp vừa đủ.</em></>}
+      items={[{label:"Nội dung",value:"Điều cần biết nằm trước"},{label:"Minh họa",value:"Tải thêm khi bạn chọn"},{label:"Chi tiết",value:"Mở rộng, không cắt bỏ"}]}
+      note="Không gắn điểm số cho điều chưa đo."/>}/>;
 }
 export function PublicPerformanceWorkshop() {
   return <section id="performance-preview" aria-labelledby="performance-preview-heading">

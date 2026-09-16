@@ -1456,52 +1456,6 @@
   }
 }
 
-/* Performance copy budget guide composes compact guide-flow base for short copy → light visual → static route reading. */
-.lgo-performanceguidepage-stack .lgo-performance-guide-hero-card {
-  border-color: rgba(245,200,107,.42);
-  background:
-    radial-gradient(circle at top left, rgba(245,200,107,.16), transparent 15rem),
-    radial-gradient(circle at bottom right, rgba(49,216,232,.12), transparent 17rem),
-    linear-gradient(145deg, rgba(13,27,46,.95), rgba(7,17,31,.90));
-}
-
-.lgo-performanceguidepage-stack .lgo-guide-detail-depth {
-  border-color: rgba(245,200,107,.30);
-}
-
-.lgo-performanceguidepage-stack .lgo-guide-detail-step {
-  border-color: rgba(245,200,107,.26);
-  background: linear-gradient(145deg, rgba(39,31,12,.68), rgba(7,17,31,.80));
-}
-
-@media (min-width: 981px) {
-  .lgo-performanceguidepage-stack .lgo-guide-detail-steps {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .lgo-performanceguidepage-stack .lgo-guide-detail-step {
-    grid-template-columns: 2.2rem 1fr;
-    padding: .58rem;
-  }
-
-  .lgo-performanceguidepage-stack .lgo-guide-detail-step > span {
-    width: 2rem;
-    height: 2rem;
-    font-size: .76rem;
-  }
-
-  .lgo-performanceguidepage-stack .lgo-guide-detail-step h3 {
-    font-size: .9rem;
-  }
-
-  .lgo-performanceguidepage-stack .lgo-guide-detail-step p,
-  .lgo-performanceguidepage-stack .lgo-guide-detail-step small {
-    font-size: .72rem;
-    line-height: 1.22;
-  }
-}
-
-
 /* Route continuity conversion guide composes compact guide-flow base for Bắt đầu → Vòng lặp thế giới → Tin cậy tải game → Hỗ trợ reading. */
 .lgo-routecontinuityguidepage-stack .lgo-route-continuity-guide-hero-card {
   border-color: rgba(49,216,232,.42);

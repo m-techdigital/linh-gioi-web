@@ -1,3 +1,5 @@
+import "@lgo-web/ui/performance-layout.css";
+import { PublicPerformanceGuide } from "../../../components/PublicPerformanceGuide";
 import { PublicReadabilityGuide } from "../../../components/PublicReadabilityGuide";
 import { PublicPlayerSafetyGuide } from "../../../components/PublicPlayerSafetyGuide";
 import { PublicStartHereGuide } from "../../../components/PublicStartHereGuide";
@@ -42,6 +44,10 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
   const { slug } = await params;
   const entry = localContentRepository.bySlug(slug);
   if (!entry || entry.category !== "guides") notFound();
+
+  if (entry.slug === "performance-copy-budget-guide") {
+    return <WebAppShell><PublicPerformanceGuide entry={entry}/></WebAppShell>;
+  }
 
   if (entry.slug === "accessibility-readability-guide") {
     return <WebAppShell><PublicReadabilityGuide entry={entry}/></WebAppShell>;

@@ -1,3 +1,17 @@
+Current phase: WEB-FE-PERFORMANCE-GUIDE-ARTICLE-v1.245 WEB_CLOSED — delivery-effective only after external manifest verification.
+
+Current decision: /guides/performance-copy-budget-guide has a lightweight HTML/CSS principle panel, four complete source chapters and six native reading actions. Existing /performance consumes the same extracted base. Production regression 378/378 reused with exact build input hashes; fresh page tests 18/18, five production viewport captures and compatibility checks complete. No measured speed or optimization certificate.
+
+Delivery gate: reviewed commit, normal origin/main push, matching remote HEAD and verified full/delta/evidence ZIPs are required before closure is effective. No production deployment command or handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.246.
+Select `/guides/route-continuity-conversion-guide` as the next single page only after v1.245 delivery closure. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-PERFORMANCE-GUIDE-ARTICLE-REPORT-v1.245.md.
+Whole-app JavaScript-disabled streaming remains open. PID metadata capacity is temporarily waived by owner; existing ownership and future pause checks stay active.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-READABILITY-GUIDE-ARTICLE-v1.244 WEB_CLOSED — delivery-effective only after external manifest verification.
 
 Current decision: /guides/accessibility-readability-guide has four full source-authored chapters, six native reading actions and verified skip-to-main/contents focus. Production 360/360 PASS; 63-page build; five viewport captures/axe; 22 sibling DOM/geometry matches. No preference controls or certification.

@@ -103,3 +103,5 @@ export type { ReadingCatalogEntry, ReadingCatalogGroup } from "./reading-catalog
 export { FeaturedReading } from "./featured-reading";
 
 export { GuideChapterBody } from "./guide-article";
+
+export { ReadingPriorityPanel } from "./reading-priority-panel";

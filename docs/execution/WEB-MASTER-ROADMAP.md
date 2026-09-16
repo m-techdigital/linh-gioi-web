@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: v1.244 `/guides/accessibility-readability-guide` verified; next v1.245 `/guides/performance-copy-budget-guide` after delivery. WEB_CLOSED requires normal push, exact remote confirmation and verified ZIP/SHA256. Native source-authored reading, no preferences/certification/backend/deployment command. Whole-app no-JavaScript streaming remains open.
+Current visual checkpoint: v1.245 `/guides/performance-copy-budget-guide` verified; next v1.246 `/guides/route-continuity-conversion-guide` only after delivery. WEB_CLOSED requires normal push, remote HEAD and verified ZIP/SHA256. Native source reading and lightweight shared base, not measured performance. Whole-app JavaScript-disabled access remains open.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 
