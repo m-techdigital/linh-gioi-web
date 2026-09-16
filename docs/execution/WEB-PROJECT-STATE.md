@@ -1,3 +1,17 @@
+Current phase: WEB-FE-PLAYER-SAFETY-GUIDE-ARTICLE-v1.243 WEB_CLOSED — delivery-effective only after external manifest verification.
+
+Current decision: /guides/player-safety-support-guide has four complete source chapters and seven real reading destinations, including shared two/three-link groups. Production 342/342 PASS; 63-page build; five viewport captures/axe; 20 sibling DOM/geometry matches. No private-data intake or live support.
+
+Delivery gate: WEB_CLOSED only when the external manifest confirms reviewed commit, normal origin/main push, exact remote HEAD and source/delta/evidence ZIP/SHA256. No production deployment command or handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.244.
+Select `/guides/accessibility-readability-guide` as the next single active page only after v1.243 delivery closure. Real Browser UI/UX Layout First, Base First and Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-PLAYER-SAFETY-GUIDE-ARTICLE-REPORT-v1.243.md.
+Whole-app JavaScript-disabled streaming remains open; earlier non-reproduced dev fragment observation is not claimed fixed.
+
+Historical snapshots below are not the active checkpoint or delivery policy.
+
 Current phase: WEB-FE-START-HERE-GUIDE-ARTICLE-v1.242 WEB_CLOSED.
 
 Current decision: /guides/start-here-content-hub-guide has four source-exact chapters and six native chapter destinations, including three shared grouped reading choices. Production 326/326 PASS; 63-page build; five viewport screenshots/axe; 18 sibling DOM/geometry matches. No preferences or personalization.
