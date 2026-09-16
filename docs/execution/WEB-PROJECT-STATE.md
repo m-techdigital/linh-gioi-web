@@ -1,3 +1,17 @@
+Current phase: WEB-FE-DETAIL-READING-ARTICLE-v1.258 WEB_CLOSED — effective only after external delivery verification.
+
+Current decision: /news/news-guide-detail-pages-started uses unchanged PublishedArticle for two complete source sections, posting date, original related articles and seven real reading links. No package/CSS/content/dependency changes. Fresh production716/716, build63, five viewports and56 sibling geometry comparisons.
+
+Delivery gate: reviewed normal commit/push, matching remote HEAD and verified full/delta/evidence ZIP/SHA256/replay. No production deployment or local handoff artifacts in Git.
+
+Next task after delivery: WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.259.
+Select `/news/status-download-trust-polish-started` only after v1.258 delivery. Real Browser UI/UX Layout First, Base First, Runtime Layout Gate.
+
+Detailed report: LGO-WEB-FE-DETAIL-READING-ARTICLE-REPORT-v1.258.md.
+Whole-app JavaScript-disabled streaming remains open. Old dashboard task stays in operator REVIEW; PID waiver and fresh pause/ownership checks remain active.
+
+Historical snapshots below are not active delivery policy.
+
 Current phase: WEB-FE-GAME-INFO-ARTICLE-v1.257 WEB_CLOSED — effective only after external delivery verification.
 
 Current decision: /news/public-game-info-depth-started uses unchanged PublishedArticle for full source chapters, posting date, seven reading destinations and original related articles. No package/CSS/content/dependency changes. Fresh production690/690, build63, five viewports and54 sibling geometry comparisons.

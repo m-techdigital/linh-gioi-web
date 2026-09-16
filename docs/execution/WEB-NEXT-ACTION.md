@@ -5,12 +5,12 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.258
+WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.259
 
 Objective:
-Continue the sequential Real Browser UI/UX Layout pass for the next source news article after v1.257 `/news/public-game-info-depth-started` closure. Keep the work page-scoped, Base First and browser-evidence driven.
+Continue the sequential Real Browser UI/UX Layout pass for the next source news article after v1.258 `/news/news-guide-detail-pages-started` closure. Keep the work page-scoped, Base First and browser-evidence driven.
 
-Current FE scope: select `/news/news-guide-detail-pages-started` as the next single active page after v1.257 `/news/public-game-info-depth-started` closure. Complete `/news/news-guide-detail-pages-started` fully before any other page. Use its registered public route target as the comparison guardrail and prioritize real news UI/UX Layout: the original article title/summary/body and existing detail sections, complete readable article structure and onward links, publication semantics and clear distinction from live game operations, native reading routes, spacing, typography, responsive density, keyboard/focus and actual interaction. No invented articles, publication dates, live-news feed, personal recommendations, subscriber counts, notifications, release availability or backend.
+Current FE scope: select `/news/status-download-trust-polish-started` as the next single active page after v1.258 `/news/news-guide-detail-pages-started` closure. Complete `/news/status-download-trust-polish-started` fully before any other page. Use its registered public route target as the comparison guardrail and prioritize real news UI/UX Layout: the original article title/summary/body and existing detail sections, complete readable article structure and onward links, publication semantics and clear distinction from live game operations, native reading routes, spacing, typography, responsive density, keyboard/focus and actual interaction. No invented articles, publication dates, live-news feed, personal recommendations, subscriber counts, notifications, release availability or backend.
 
 Mandatory execution rules:
 
@@ -23,7 +23,7 @@ Mandatory execution rules:
 3. CSS must be managed by owner/role.
    Theme/tokens: packages/design-tokens. Reusable component/layout style: packages/ui. Apps compose base and keep only truly route-specific differences. Do not inflate apps/web/src/app/globals.css with duplicate page blocks.
 
-4. Do not move past `/news/news-guide-detail-pages-started` until closure evidence exists:
+4. Do not move past `/news/status-download-trust-polish-started` until closure evidence exists:
    - render in real browser/e2e;
    - desktop/mobile metrics and screenshot/visual review against the target and accepted shell;
    - active source validator and necessary typecheck/build;
@@ -32,7 +32,7 @@ Mandatory execution rules:
 
 5. Forbidden substitutes: text-only/copy-only, translation-only, design-only, validator/doc-only, content edits without browser evidence, multiple pages at once. Never relax layout tests just to obtain PASS.
 
-6. If execution drifts, return to `/news/news-guide-detail-pages-started`, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until `/news/news-guide-detail-pages-started` is closed.
+6. If execution drifts, return to `/news/status-download-trust-polish-started`, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until `/news/status-download-trust-polish-started` is closed.
 
 Non-claims: FE-only until accepted game backend contracts exist. No independent backend. No production auth. No DB persistence. No CMS. No production deployment. No payment/shop/economy.
 

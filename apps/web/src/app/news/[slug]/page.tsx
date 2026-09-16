@@ -1,3 +1,4 @@
+import { PublicDetailReadingArticle } from "../../../components/PublicDetailReadingArticle";
 import { PublicGameInfoArticle } from "../../../components/PublicGameInfoArticle";
 import { PublicVisualResponsiveArticle } from "../../../components/PublicVisualResponsiveArticle";
 import { PublicUXArticle } from "../../../components/PublicUXArticle";
@@ -44,6 +45,10 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
 
   if (entry.slug === "public-game-info-depth-started") {
     return <WebAppShell><PublicGameInfoArticle entry={entry} related={related}/></WebAppShell>;
+  }
+
+  if (entry.slug === "news-guide-detail-pages-started") {
+    return <WebAppShell><PublicDetailReadingArticle entry={entry} related={related}/></WebAppShell>;
   }
 
   return (
