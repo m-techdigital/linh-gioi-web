@@ -27,8 +27,8 @@ export function GuidanceStation({ headingId, title, description, topics, note, v
   </nav>;
 }
 
-export function GuidanceTopicGrid({ topics }: { topics: readonly GuidanceTopic[] }) {
-  return <div className="lgo-guidance-topic-grid" data-count={topics.length}>
+export function GuidanceTopicGrid({ topics, variant = "topics" }: { topics: readonly GuidanceTopic[]; variant?: "topics" | "articles" }) {
+  return <div className={`lgo-guidance-topic-grid${variant === "articles" ? " lgo-guidance-article-grid" : ""}`} data-count={topics.length}>
     {topics.map(topic => <article className="lgo-guidance-topic-card" key={topic.id}>
       <div className="lgo-guidance-topic-art" aria-hidden="true"><ReleaseIcon name={topic.icon}/></div>
       <div className="lgo-guidance-topic-copy"><h3>{topic.title}</h3><p>{topic.description}</p>

@@ -28,6 +28,8 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.254 replaces only the first compact news article; other news/article tests remain active.
+    "**/fe-news-control-tower-real-ui-layout-v1177.spec.ts",
     // v1.253 replaces only the old three-card news index; article and heading tests remain active.
     "**/fe-news-real-ui-layout-v1176.spec.ts",
     // v1.252 replaces exact old compact patch-note snapshots; v1.85 heading/route tests stay active.

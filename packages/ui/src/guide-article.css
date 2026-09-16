@@ -91,3 +91,7 @@
 .lgo-guide-chapter-actions { display:flex; flex-wrap:wrap; gap:.65rem; min-width:0; }
 .lgo-guide-chapter-actions > .lgo-link-button { gap:.7rem; }
 @media(max-width:600px) { .lgo-guide-chapter-actions > .lgo-link-button { width:100%; } }
+
+/* Opt-in editorial articles: readable source boundaries and reduced-motion anchor travel. */
+.lgo-editorial-article .lgo-article-boundary p { font-size:max(.83rem,14px); }
+@media(prefers-reduced-motion:reduce) { html:has(.lgo-editorial-article) { scroll-behavior:auto; } }

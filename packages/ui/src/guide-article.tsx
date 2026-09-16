@@ -53,17 +53,19 @@ export function GuideArticle({ sections, contentsId, contentsLabel, intro }: {
 }
 
 /** Reusable authored instruction/result/boundary content; it never changes the source wording. */
-export function GuideChapterBody({ instruction, outcome, boundary, action, actionGroup }: {
+export function GuideChapterBody({ instruction, outcome, boundary, action, actionGroup, outcomeLabel = "Điều cần hiểu", boundaryLabel = "Giới hạn hiện tại" }: {
   instruction: string;
   outcome: string;
   boundary: string;
+  outcomeLabel?: string;
+  boundaryLabel?: string;
   action?: { href: string; label: string; className?: string };
   actionGroup?: { label: string; links: readonly { href: string; label: string; className?: string }[] };
 }) {
   return <>
     <p className="lgo-article-instruction">{instruction}</p>
-    <div className="lgo-article-outcome"><h3><ReleaseIcon name="document"/>Điều cần hiểu</h3><p>{outcome}</p></div>
-    <div className="lgo-article-boundary"><h3><ReleaseIcon name="lock"/>Giới hạn hiện tại</h3><p>{boundary}</p></div>
+    <div className="lgo-article-outcome"><h3><ReleaseIcon name="document"/>{outcomeLabel}</h3><p>{outcome}</p></div>
+    <div className="lgo-article-boundary"><h3><ReleaseIcon name="lock"/>{boundaryLabel}</h3><p>{boundary}</p></div>
     {action ? <LinkButton className={action.className} href={action.href} tone="neutral">{action.label}<ReleaseIcon name="arrow"/></LinkButton> : null}
     {actionGroup?.links.length ? <nav className="lgo-guide-chapter-actions" aria-label={actionGroup.label}>
       {actionGroup.links.map(link => <LinkButton key={link.href} href={link.href} className={link.className} tone="neutral">{link.label}<ReleaseIcon name="arrow"/></LinkButton>)}

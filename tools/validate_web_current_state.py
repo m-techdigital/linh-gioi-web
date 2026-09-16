@@ -322,11 +322,13 @@ VALIDATORS = [
     "validate_web_fe_events_announcement_board_v1251.py",
     "validate_web_fe_patch_notes_journal_v1252.py",
     "validate_web_fe_news_discovery_v1253.py",
+    "validate_web_fe_control_tower_article_v1254.py",
 ]
 
 # These guards enforced a diagram image or deliberately line-clamped readiness cards.
 # v1.221 replaces them with art-backed DOM UI + native evidence disclosures. Not counted as PASS.
 SUPERSEDED_LAYOUT_VALIDATORS = {
+    "validate_web_fe_news_control_tower_real_ui_layout_v1177.py": "validate_web_fe_control_tower_article_v1254.py",
     "validate_web_fe_news_real_ui_layout_v1176.py": "validate_web_fe_news_discovery_v1253.py",
     "validate_web_fe_patch_notes_real_ui_layout_v1199.py": "validate_web_fe_patch_notes_journal_v1252.py",
     "validate_web_fe_patch_notes_real_ui_layout_v1175.py": "validate_web_fe_patch_notes_journal_v1252.py",

@@ -1,3 +1,7 @@
+import "@lgo-web/ui/release-layout.css";
+import "@lgo-web/ui/guide-article.css";
+import "@lgo-web/ui/guidance-layout.css";
+import { PublicControlTowerArticle } from "../../../components/PublicControlTowerArticle";
 import { localContentRepository } from "@lgo-web/content";
 import { notFound } from "next/navigation";
 import { GameCard, Grid, LinkButton, Stack, StatusBadge } from "@lgo-web/ui";
@@ -22,6 +26,10 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
     .list("news")
     .filter((candidate) => candidate.slug !== entry.slug)
     .slice(0, 3);
+
+  if (entry.slug === "web-program-control-tower") {
+    return <WebAppShell><PublicControlTowerArticle entry={entry} related={related}/></WebAppShell>;
+  }
 
   return (
     <WebAppShell>
