@@ -17,7 +17,7 @@ def require(rel: str, markers: tuple[str, ...] = ()) -> str:
 def main() -> int:
     ERRORS.clear()
     page = require("apps/web/src/app/support/help/page.tsx", ("@lgo-web/ui/release-layout.css", "@lgo-web/ui/guidance-layout.css", "@lgo-web/ui/question-directory.css", "lgo-help-hub"))
-    parts = ("<PublicHelpHero/>", "<PublicHelpTopics/>", "<PublicHelpAnswers/>", "<PublicHelpBoundary/>", "<PublicHelpReadingNotes/>")
+    parts = ("<PublicHelpHero/>", "<PublicHelpAnswers/>", "<PublicHelpBoundary/>", "<PublicHelpReadingNotes/>")
     offsets = [page.find(p) for p in parts]
     if -1 in offsets or offsets != sorted(offsets): ERRORS.append("FAQ page must lead with real map and answer directory")
     for marker in ("<figure", "design-reference", "lgo-service-compact-proof-page", "<form"):

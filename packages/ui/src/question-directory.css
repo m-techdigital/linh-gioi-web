@@ -40,9 +40,10 @@
   .lgo-guidance-station.lgo-guidance-map { max-width:580px; width:100%; margin:auto; }
   .lgo-guidance-topic-grid[data-count="6"] { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .lgo-question-filterbar { align-items:start; gap:.6rem; }
-  .lgo-question-filters { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); width:100%; }
-  .lgo-question-filters .lgo-button { font-size:.74rem; padding:.55rem; }
-  .lgo-question-filters .lgo-button:first-child { grid-column:1 / -1; }
+  /* WEB-OPT-09 support/help mobile filter rail: same seven local filters, one compact keyboard-scrollable row. */
+  .lgo-question-filters { display:flex; flex-wrap:nowrap; width:100%; overflow-x:auto; scroll-snap-type:x proximity; overscroll-behavior-inline:contain; padding-bottom:.25rem; }
+  .lgo-question-filters .lgo-button { flex:0 0 auto; font-size:.74rem; padding:.55rem; scroll-snap-align:start; }
+  .lgo-question-filters .lgo-button:first-child { grid-column:auto; }
 }
 @media(max-width:480px) {
   .lgo-guidance-map .lgo-guidance-station-links { gap:.65rem; padding:.15rem 0; }
