@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.287
+
+WEB-OPT-10 is CLOSED at `274bfab06307d7688ff1b3936ace654284a7c82f`. `/support/safety` keeps all privacy/data/no-ticket safeguards while moving safe issue routing 1,312px earlier on mobile and replacing the five-card vertical preparation wall with a one-row swipeable checklist rail.
+
+Continue Phase B with WEB-OPT-11 v1.288 on `/community` only, followed by WEB-OPT-12 v1.289 on `/community/onboarding`.
+
 ## 2026-09-18 optimization checkpoint v1.286
 
 WEB-OPT-09 is CLOSED at `6a69d6ab7c8e65eb5a376a5e9f4c196c37f4fb7a`. `/support/help` removes the duplicated topic wall, advances the real answer directory by 628px on mobile and reduces total mobile height 15.20% while retaining six local categories, 12 native answers, fragment/history behavior and truthful no-backend-search/no-ticket boundaries.

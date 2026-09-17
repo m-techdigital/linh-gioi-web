@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — support safety flow closed (2026-09-18)
+
+WEB-OPT-10 v1.287 is CLOSED at source commit `274bfab06307d7688ff1b3936ace654284a7c82f`. `/support/safety` now keeps privacy first while moving issue/no-ticket routing before the deep data reference; mobile height falls 3,842px→3,133px and issue/no-ticket guidance appears 1,312px earlier, with all five checks, three privacy items, two data panels and four issue disclosures preserved.
+
+Next task is **WEB-OPT-11-COMMUNITY-VALUE-CLARITY-v1.288** on `/community` only. Clarify player/community value before unavailable live-social boundaries and reduce repeated technical proof density without inventing chat/forum/guild/backend capability.
+
 ## Owner optimization authority — support help discovery closed (2026-09-18)
 
 WEB-OPT-09 v1.286 is CLOSED at source commit `6a69d6ab7c8e65eb5a376a5e9f4c196c37f4fb7a`. `/support/help` removes the duplicated six-card topic wall, keeps the six-topic question map as the entry owner and compresses the mobile local filter to one 44px rail; mobile height falls 4,881px→4,139px and the real answer directory advances 628px with no page overflow.

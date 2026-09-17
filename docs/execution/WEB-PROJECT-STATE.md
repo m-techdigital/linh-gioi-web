@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-10-SUPPORT-SAFETY-FLOW-v1.287 WEB_CLOSED
+
+Current decision: `/support/safety` preserves privacy guidance while making safe issue routing the next useful step after local preparation. Mobile height is 3,133px from 3,842px; issue routing moves to 1,374px from 2,686px and the no-ticket boundary to 1,766px from 3,078px. Five local checks, three privacy items, two data panels, four issue disclosures and no-intake/backend boundaries remain.
+
+Verified source delivery commit: `274bfab06307d7688ff1b3936ace654284a7c82f`. Clean temporary production build63; focused static browser6/6; parent Support/Help8/8; Phase-A mobile7/7; Web typecheck/lint; source validators; clean 2,006-file current-state candidate PASS.
+
+Next task: `WEB-OPT-11-COMMUNITY-VALUE-CLARITY-v1.288` on `/community` only. Do not batch `/community/onboarding`.
+
+Detailed report: `LGO-WEB-OPT-10-SUPPORT-SAFETY-FLOW-REPORT-v1.287.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-09-SUPPORT-HELP-DISCOVERY-v1.286 WEB_CLOSED
 
 Current decision: `/support/help` reaches its 12 source-backed FAQ answers immediately after the six-topic question map; the duplicate topic-card wall is removed and the seven local filters form one mobile horizontal rail. Desktop height is 2,216px from 2,554px; mobile is 4,139px from 4,881px; answer directory moves to 654px desktop / 1,049px mobile; page overflow remains zero.

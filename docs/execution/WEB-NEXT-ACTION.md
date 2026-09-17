@@ -4,28 +4,28 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-09 v1.286 is CLOSED at source commit `6a69d6ab7c8e65eb5a376a5e9f4c196c37f4fb7a`; do not reopen it without a related Help discovery/filter/fragment regression.
+WEB-OPT-10 v1.287 is CLOSED at source commit `274bfab06307d7688ff1b3936ace654284a7c82f`; do not reopen it without a related safety/privacy/reporting-flow regression.
 
 Next task:
-WEB-OPT-10-SUPPORT-SAFETY-FLOW-v1.287
+WEB-OPT-11-COMMUNITY-VALUE-CLARITY-v1.288
 
 Objective:
-Improve `/support/safety` reporting/privacy guidance sequence and mobile touch flow without creating live intake, upload or account lookup.
+Clarify `/community` player value and next steps before unavailable live-social/technical boundaries, reducing repeated proof density while preserving truthful no-live-chat/forum/guild/backend limits.
 
-Current optimization scope: `/support/safety` only plus the smallest shared Base owner change genuinely required by that route. Do not batch community/onboarding routes, broad copy rewrites, backend/CMS moderation, upload or ticket systems.
+Current optimization scope: `/community` only plus the smallest shared Base owner change genuinely required by that route. Do not batch `/community/onboarding`, roadmap, broad copy rewrites, backend/CMS/community systems or account/guild integration.
 
 Entry baseline:
-- WEB-OPT-01–09 foundations are CLOSED and must remain regression-green;
-- v1.285 parent Support and v1.286 Help discovery are accepted predecessors;
-- all safety/privacy/reporting boundaries remain source-of-truth constraints, not optional copy.
+- WEB-OPT-01–10 foundations are CLOSED and must remain regression-green;
+- v1.277 identifies `/community` as a Phase-B route where technical-boundary repetition competes with player value;
+- no live chat/forum/guild/account/community backend is accepted.
 
 Exit criteria:
-- reporting/privacy sequence is easier to scan and act on desktop/mobile, with first useful safe-reporting step earlier;
-- touch targets, native disclosures/links, keyboard/focus and truthful no-live-intake boundaries remain intact;
-- no form upload, ticket submission, account lookup, moderation backend or invented SLA is introduced;
+- community purpose, useful player destinations and next steps appear before repeated technical constraints on desktop/mobile;
+- page length/proof density is materially reduced without hiding unavailable-feature boundaries;
+- keyboard/focus/touch behavior, accepted public shell and truthful no-live-social semantics remain intact;
 - focused browser/e2e, fresh desktop/mobile screenshots, relevant validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.285/v1.286 contracts; no production deployment. Do not batch WEB-OPT-11.
+Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and Support-family contracts; no production deployment. Do not batch WEB-OPT-12.
 
 Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 
