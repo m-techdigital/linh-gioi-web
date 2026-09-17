@@ -28,6 +28,12 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.267 replaces the historical /story proof-board layouts with the live target-driven story landing.
+    "**/fe-public-story-chapter-typography-v164.spec.ts",
+    "**/fe-public-story-fracture-design-board-v184.spec.ts",
+    "**/fe-story-design-target-density-v1121.spec.ts",
+    "**/fe-story-vietnamese-design-match-v1136.spec.ts",
+    "**/fe-story-real-ui-layout-v1214.spec.ts",
     // v1.266 replaces the historical /game proof-board layouts with the live target-driven world landing.
     "**/fe-public-game-world-design-board-v183.spec.ts",
     "**/fe-game-world-design-target-density-v1120.spec.ts",

@@ -77,6 +77,7 @@ def finish(name: str) -> int:
 import runpy
 
 VALIDATORS = [
+    "validate_web_fe_story_visual_realignment_v1267.py",
     "validate_web_fe_game_world_realignment_v1266.py",
     "validate_web_fe_homepage_design_realignment_v1265.py",
     # Core architectural and safety validators remain authoritative.
@@ -340,6 +341,12 @@ VALIDATORS = [
 # These guards enforced a diagram image or deliberately line-clamped readiness cards.
 # v1.221 replaces them with art-backed DOM UI + native evidence disclosures. Not counted as PASS.
 SUPERSEDED_LAYOUT_VALIDATORS = {
+    "validate_web_fe_public_story_chapter_typography_v164.py": "validate_web_fe_story_visual_realignment_v1267.py",
+    "validate_web_fe_public_story_fracture_design_board_v184.py": "validate_web_fe_story_visual_realignment_v1267.py",
+    "validate_web_fe_story_design_target_density_v1121.py": "validate_web_fe_story_visual_realignment_v1267.py",
+    "validate_web_fe_story_vietnamese_design_match_v1136.py": "validate_web_fe_story_visual_realignment_v1267.py",
+    "validate_web_fe_story_real_ui_layout_v1214.py": "validate_web_fe_story_visual_realignment_v1267.py",
+
     "validate_web_fe_public_game_world_design_board_v183.py": "validate_web_fe_game_world_realignment_v1266.py",
     "validate_web_fe_game_world_design_target_density_v1120.py": "validate_web_fe_game_world_realignment_v1266.py",
     "validate_web_fe_game_world_vietnamese_first_flow_v1135.py": "validate_web_fe_game_world_realignment_v1266.py",

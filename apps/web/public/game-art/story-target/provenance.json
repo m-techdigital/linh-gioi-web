@@ -1,0 +1,83 @@
+{
+  "source": "apps/web/public/design-reference/story-detailed-design-target-v1121.png",
+  "sourceSha256": "a5a0a0bf254fcf32babf525bed8154690025b4b9bf579af8f4b2afdaf49a82ba",
+  "sourceSize": [
+    1672,
+    941
+  ],
+  "method": "macOS sips integer crop; no resize/inpainting/generation/full-board embedding",
+  "items": [
+    {
+      "file": "hero-character.png",
+      "path": "/game-art/story-target/hero-character.png",
+      "sourceRect": [
+        470,
+        180,
+        360,
+        340
+      ],
+      "sha256": "8daed8c2f58e46d6c350e4481d8a297cecdb814374c37c1f3571b41ea05abad0",
+      "role": "decorative story artwork only; title/copy/actions remain live HTML"
+    },
+    {
+      "file": "hero-gate.png",
+      "path": "/game-art/story-target/hero-gate.png",
+      "sourceRect": [
+        780,
+        80,
+        560,
+        450
+      ],
+      "sha256": "fddc302fa7d9202a2057cc275259d80c9f3ae6c84f503c98423a3c99550a1ec2",
+      "role": "decorative story artwork only; title/copy/actions remain live HTML"
+    },
+    {
+      "file": "chapter-1.png",
+      "path": "/game-art/story-target/chapter-1.png",
+      "sourceRect": [
+        47,
+        616,
+        386,
+        130
+      ],
+      "sha256": "b3582c127f311f44ec10be4905791cac1bd91cd5b9d415f1d7872e3bdcc62cfb",
+      "role": "decorative story artwork only; title/copy/actions remain live HTML"
+    },
+    {
+      "file": "chapter-2.png",
+      "path": "/game-art/story-target/chapter-2.png",
+      "sourceRect": [
+        446,
+        616,
+        385,
+        130
+      ],
+      "sha256": "bd2307b53a36c355063d6dc4f87aa31aa1025f3c6dd494301997080fdf0fcc71",
+      "role": "decorative story artwork only; title/copy/actions remain live HTML"
+    },
+    {
+      "file": "chapter-3.png",
+      "path": "/game-art/story-target/chapter-3.png",
+      "sourceRect": [
+        843,
+        616,
+        380,
+        130
+      ],
+      "sha256": "93cce734c6bcc83773711a222a32ef80c79a0ab833a9a1dcf6c291ae6d27b58f",
+      "role": "decorative story artwork only; title/copy/actions remain live HTML"
+    },
+    {
+      "file": "invasion.png",
+      "path": "/game-art/story-target/invasion.png",
+      "sourceRect": [
+        1238,
+        616,
+        385,
+        130
+      ],
+      "sha256": "c3c1ef8d1ca8406664fbc6353f896b80a090d2fcf72ee6b7eb80022045c82eba",
+      "role": "decorative story artwork only; title/copy/actions remain live HTML"
+    }
+  ]
+}
