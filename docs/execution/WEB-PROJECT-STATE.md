@@ -1,14 +1,14 @@
-Current phase: WEB-FE-RELEASE-TESTER-PACK-VISUAL-REALIGNMENT-v1.275 WEB_CLOSED
+Current phase: WEB-FE-STATUS-VISUAL-REALIGNMENT-v1.276 WEB_CLOSED
 
-Current decision: `/release/tester-pack` now uses the accepted immersive public/release chrome with a cinematic project-art hero, live field manual, five truthful tester shortcuts, primary safe-feedback/template flow and one native secondary disclosure for checklist/device/known limitations. The historical constrained proof/manual stack is superseded without removing local-only preparation controls.
+Current decision: `/status` now uses accepted immersive public chrome with a full-width clean-art hero, three truthful visibility signals, four canonical source surfaces, compact trust/maintenance panels and three real next routes. The prior constrained status composition is superseded while source truth, filtering, keyboard evidence and non-live-health semantics remain active through v1.223.
 
-Verified source delivery commit: `b2f8b5aa9a48505899c467002a030081734fb591` on `origin/main`. Focused v1.275: 14/14 PASS; production readiness stability after deterministic test gate: 28/28 PASS; selected dev: 110/110 PASS; selected production: 110/110 PASS; production build: 63 static pages; v1.275/v1.274/v1.273 validators PASS; UI/Web typecheck, Web lint and diff-check PASS. Production desktop/mobile AFTER screenshots were visually reviewed without dev badge or horizontal overflow.
+Verified source delivery commit: `9fdeafccca16657740eba1002c0e13680ecd4829` on `origin/main`. Focused v1.276: 14/14 PASS; active v1.223 + v1.276: 26/26 PASS; selected dev: 136/136 PASS; corrected selected production: 136/136 PASS; production build: 63 static pages; v1.276/v1.223/v1.275/v1.274/v1.273 validators PASS; UI/Web typecheck, Web lint, diff-check and clean-source current-state PASS. Production desktop/mobile AFTER were visually reviewed with no dev overlay or horizontal overflow.
 
-Accepted predecessors `/release` v1.273 and `/release/readiness` v1.274 remain closed; do not reopen them or v1.275 without a related regression.
+Accepted predecessors `/release/tester-pack` v1.275 and earlier release pages remain closed. Do not reopen them or v1.276 without a related regression.
 
-Next task queue only: WEB-FE-STATUS-VISUAL-REALIGNMENT-v1.276 on `/status`. Do not touch later support/community routes until `/status` is closed.
+Next task queue only: WEB-FE-SUPPORT-VISUAL-REALIGNMENT-v1.277 on `/support`. Do not touch `/support/help`, `/support/safety` or community routes until `/support` is closed.
 
-Detailed report: LGO-WEB-FE-RELEASE-TESTER-PACK-VISUAL-REALIGNMENT-REPORT-v1.275.md.
+Detailed report: LGO-WEB-FE-STATUS-VISUAL-REALIGNMENT-REPORT-v1.276.md.
 
 Historical state below is retained for provenance, not active visual authority.
 

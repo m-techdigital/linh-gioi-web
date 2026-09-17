@@ -5,18 +5,18 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-STATUS-VISUAL-REALIGNMENT-v1.276
+WEB-FE-SUPPORT-VISUAL-REALIGNMENT-v1.277
 
 Objective:
-Continue the owner-priority full-site visual remediation one page at a time. `/release/tester-pack` v1.275 is closed by target-driven real-browser evidence and verified source delivery; do not reopen it without a related regression. The next single active page is `/status` using the registered Public Status detailed target v1.130 and the accepted shared public/release chrome.
+Continue the owner-priority full-site visual remediation one page at a time. `/status` v1.276 is closed by target-driven real-browser evidence and verified source delivery; do not reopen it without a related regression. The next single active page is `/support` using the registered Public Support detailed target v1.131 and the accepted shared public chrome.
 
-Current FE scope: select `/status` only after v1.275 governance/package closure. Capture fresh production BEFORE desktop/mobile, compare against the registered Status target, then RED→GREEN the real page body while preserving truthful public status semantics and existing non-claims. Do not batch support/community routes into `/status`.
+Current FE scope: select `/support` only after v1.276 governance/package closure. Capture fresh production BEFORE desktop/mobile, compare against the registered Support target, then RED→GREEN the real page body while preserving truthful static support expectations and FE-only boundaries. Do not batch `/support/help`, `/support/safety` or community routes into `/support`.
 
-Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile; 16 have detailed page targets. `/game` v1.266 through `/release/tester-pack` v1.275 have now passed their sequential target-driven replacement/review. Continue next with `/status` only, then support/community families. The old `/news` queue remains historical, not active authority.
+Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile; 16 have detailed page targets. `/game` v1.266 through `/status` v1.276 have now passed sequential target-driven replacement/review. Continue next with `/support` only, then Support Help/Safety and community families. The old `/news` queue remains historical, not active authority.
 
-Release Readiness v1.274 checkpoint: `/release/readiness` remains closed at source commit `fed86b406e673243d0ebcb56442df8bb8005dbc0`; focused12/12, active v1.22110/10, selected dev96/96, production96/96 and build63 remain accepted predecessor evidence.
+Tester Pack v1.275 checkpoint: `/release/tester-pack` remains closed at source commit `b2f8b5aa9a48505899c467002a030081734fb591`; focused14/14, selected dev110/110, production110/110 and build63 remain accepted predecessor evidence.
 
-Tester Pack v1.275 checkpoint: `/release/tester-pack` is closed at source commit `b2f8b5aa9a48505899c467002a030081734fb591`. Focused14/14, production readiness stability28/28, selected dev110/110 and production110/110 PASS; build63; production desktop/mobile AFTER reviewed without dev badge; v1.275/v1.274/v1.273 validators, UI/Web typecheck, Web lint and diff-check PASS. Latest report: LGO-WEB-FE-RELEASE-TESTER-PACK-VISUAL-REALIGNMENT-REPORT-v1.275.md. Next single page: `/status` v1.276.
+Status v1.276 checkpoint: `/status` is closed at source commit `9fdeafccca16657740eba1002c0e13680ecd4829`. Focused14/14, active v1.223 + v1.276 26/26, selected dev136/136 and corrected selected production136/136 PASS; build63; clean production AFTER desktop/mobile reviewed without dev overlay or overflow; source validators/typecheck/lint/diff-check/current-state PASS. Latest report: LGO-WEB-FE-STATUS-VISUAL-REALIGNMENT-REPORT-v1.276.md. Next single page: `/support` v1.277.
 
 Mandatory execution rules:
 
