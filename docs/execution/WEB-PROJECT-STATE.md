@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-06-EDITORIAL-RENDERER-CONSOLIDATION-v1.283 WEB_CLOSED
+
+Current decision: all 17 News and 16 Guide detail routes now resolve through one typed editorial renderer registry instead of long route-local slug chains. Eleven News records retain specialized renderers, six retain the existing generic fallback, and all 16 Guides retain their established specialized article components.
+
+Verified source delivery commit: `b23fd22cbb6324a04769c315ca5cd16c3b3fba31` on `origin/main`. Focused browser 6/6 desktop/mobile, 66/66 exact before/after route signatures, 8/8 representative screenshot pixel parity, Content20/20, Content/UI/Web typecheck, Web lint, build63, predecessor validators and current-state PASS.
+
+Next task: `WEB-OPT-07-EDITORIAL-MOBILE-DENSITY-READING-FLOW-v1.284`. Measure the exact post-v1.283 editorial family before changing shared reading rhythm; preserve v1.281 IA and v1.282 metadata/indexability.
+
+Detailed report: `LGO-WEB-OPT-06-EDITORIAL-RENDERER-CONSOLIDATION-REPORT-v1.283.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-05-SEO-METADATA-SITEMAP-OWNERSHIP-v1.282 WEB_CLOSED
 
 Current decision: public SEO metadata now has one Base First owner derived from the v1.281 59-route IA/indexability contract. All 59 routes emit canonical metadata; 40 indexable routes expose unique route-specific descriptions and Open Graph URLs, while 19 Archive routes emit noindex and are excluded from sitemap. Sitemap no longer carries a stale global date; Guide detail freshness comes from source publication dates and routes without truthful freshness omit lastModified.

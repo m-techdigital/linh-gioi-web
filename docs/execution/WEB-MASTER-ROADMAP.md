@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.283
+
+WEB-OPT-01 through WEB-OPT-06 are CLOSED. v1.283 at `b23fd22cbb6324a04769c315ca5cd16c3b3fba31` replaces 27 News/Guide slug-specific route branches with one typed renderer registry while preserving all 33 editorial routes, metadata/404 semantics and exact browser rendering.
+
+Continue the v1.277 dependency backlog. Next is WEB-OPT-07 v1.284 (editorial mobile density and reading flow), then Phase B route work beginning with `/support` v1.285.
+
 ## 2026-09-18 optimization checkpoint v1.282
 
 WEB-OPT-01 through WEB-OPT-05 are CLOSED. v1.282 at `d8f2a2b5af106ab51960835117c48fd4745ffda3` centralizes metadata ownership for all 59 public routes: 40 indexable routes have unique descriptions/canonicals, 19 Archive routes are canonical noindex surfaces, sitemap contains only intentional indexable routes and source-owned dates, and robots publishes explicit host/sitemap ownership.

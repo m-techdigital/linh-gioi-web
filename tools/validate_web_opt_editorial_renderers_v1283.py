@@ -51,6 +51,17 @@ def main():
  ))
  state=read('tools/validate_web_current_state.py')
  if '"validate_web_opt_editorial_renderers_v1283.py"' not in state: fail('v1.283 validator not registered in current state')
+ next_action=read('docs/execution/WEB-NEXT-ACTION.md')
+ project_state=read('docs/execution/WEB-PROJECT-STATE.md')
+ ledger=read('docs/execution/WEB-TASK-LEDGER.md')
+ report=read('docs/execution/LGO-WEB-OPT-06-EDITORIAL-RENDERER-CONSOLIDATION-REPORT-v1.283.md')
+ active_prefix='Current phase: WEB-OPT-06-EDITORIAL-RENDERER-CONSOLIDATION-v1.283 WEB_CLOSED'
+ if project_state.startswith(active_prefix) and 'WEB-OPT-07-EDITORIAL-MOBILE-DENSITY-READING-FLOW-v1.284' not in next_action:
+  fail('active v1.283 checkpoint does not advance to WEB-OPT-07 v1.284')
+ if '| WEB-OPT-06-EDITORIAL-RENDERER-CONSOLIDATION-v1.283 | WEB-OPT | WEB_CLOSED |' not in ledger:
+  fail('WEB-TASK-LEDGER does not record WEB-OPT-06 v1.283 closure')
+ for marker in ('b23fd22cbb6324a04769c315ca5cd16c3b3fba31','66 route×viewport signatures','Eight representative full-page screenshots'):
+  if marker not in report: fail('v1.283 report missing closure evidence: '+marker)
  if ERRORS:
   print('WEB OPT EDITORIAL RENDERERS v1.283 VALIDATION FAIL')
   for e in ERRORS: print('- '+e)

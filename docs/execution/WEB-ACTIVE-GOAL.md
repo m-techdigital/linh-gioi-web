@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — editorial renderer consolidation closed (2026-09-18)
+
+WEB-OPT-06 v1.283 is CLOSED at source commit `b23fd22cbb6324a04769c315ca5cd16c3b3fba31`. News/Guide dynamic routes now delegate through one typed renderer registry instead of 27 slug branches; 66/66 route×viewport signatures and 8/8 representative screenshots are exactly unchanged.
+
+Next task is **WEB-OPT-07-EDITORIAL-MOBILE-DENSITY-READING-FLOW-v1.284**. Measure the post-v1.283 editorial family first, then reduce shared mobile wall-of-cards/scroll cost without hiding truth boundaries or rewriting authored content.
+
 ## Owner optimization authority — SEO metadata/sitemap ownership closed (2026-09-18)
 
 WEB-OPT-05 v1.282 is CLOSED at source commit `d8f2a2b5af106ab51960835117c48fd4745ffda3`. All 59 public routes now have canonical ownership; 40 player-facing routes have unique route-specific descriptions and remain indexable, while 19 Archive routes emit noindex and are excluded from sitemap. Sitemap/robots now derive from the v1.281 route policy instead of a stale independent list/date.

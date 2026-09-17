@@ -4,28 +4,29 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-05 v1.282 is CLOSED at source commit `d8f2a2b5af106ab51960835117c48fd4745ffda3`; do not reopen it without a related metadata/indexability regression.
+WEB-OPT-06 v1.283 is CLOSED at source commit `b23fd22cbb6324a04769c315ca5cd16c3b3fba31`; do not reopen it without a related renderer/route-equivalence regression.
 
 Next task:
-WEB-OPT-06-EDITORIAL-RENDERER-CONSOLIDATION-v1.283
+WEB-OPT-07-EDITORIAL-MOBILE-DENSITY-READING-FLOW-v1.284
 
 Objective:
-Replace long slug-specialized News/Guide route branches with data/registry-driven renderer selection around the accepted shared article primitives and small explicit variants, preserving all current URLs, authored content, archive/indexability semantics and unknown-slug 404 behavior.
+Reduce News/Guide mobile wall-of-cards and scroll cost through shared article/catalog rhythm, contents navigation, progressive disclosure and copy deduplication while preserving source meaning and keeping safety/truth boundaries visible.
 
-Current optimization scope: `apps/web/src/app/news/[slug]`, `apps/web/src/app/guides/[slug]`, editorial renderer registry/shared article primitives and the smallest source/browser tests needed. Do not batch mobile-density redesign, primary News/Guides discovery redesign, article copy rewriting, backend/CMS work or SEO policy changes.
+Current optimization scope: shared editorial article/catalog rhythm and the smallest News/Guide template changes needed after v1.283 renderer consolidation. Do not batch support/community routes, broad article rewriting, metadata/indexability policy changes, backend/CMS work or Phase-B page remediation.
 
 Entry baseline:
-- v1.277 audit found 16 Guide slug-specialized branches and 11 News specialized renderers despite shared article primitives;
-- v1.281 owns player/archive classification and v1.282 owns metadata/indexability; both must remain stable;
-- WEB-OPT-01–05 are closed predecessors and must remain regression-green.
+- v1.277 measured editorial mobile P90 page height at approximately 4,917px;
+- v1.283 now provides one stable renderer registry, so family-level density changes can be made at shared owners instead of slug branches;
+- WEB-OPT-01–06 are closed predecessors and must remain regression-green.
 
 Exit criteria:
-- dynamic News/Guide route files no longer contain long slug `if` chains; renderer ownership is explicit and typed;
-- every current News/Guide slug resolves to the same intended renderer family or an intentionally documented equivalent; unknown slugs remain 404;
-- authored content, related-link semantics, metadata/canonical/noindex and fragment/keyboard behavior remain valid;
-- full News/Guide route browser matrix + representative visual checks + typecheck/lint/build/current-state and normal commit/push/package closure PASS.
+- editorial-family mobile P90 page height is materially below the v1.277 ~4,917px baseline;
+- no horizontal overflow and first useful next-step appears earlier;
+- safety/truth boundaries, source meaning, fragments, keyboard navigation and disclosure semantics remain discoverable;
+- content-diff review confirms no accidental authored-content loss;
+- full editorial browser matrix, representative screenshots, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: Base First; RED→GREEN; preserve v1.281/v1.282 policy; no broad article rewrite; no production deployment. Do not batch WEB-OPT-07.
+Execution rules: Base First; RED→GREEN; measure before changing shared rhythm; preserve v1.281 IA and v1.282 metadata; no production deployment. Do not batch WEB-OPT-08.
 
 Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 
