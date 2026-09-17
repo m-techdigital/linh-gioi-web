@@ -524,10 +524,11 @@ def check_active_checkpoint() -> None:
     state = read("docs/execution/WEB-PROJECT-STATE.md")
     queue = read("docs/execution/WEB-NEXT-ACTION.md")
     current = re.match(r"Current phase: ([A-Z0-9-]+)-v(\d+)\.(\d+) (WEB_CLOSED|WEB_VISUAL_REVIEW_REQUIRED)", state)
-    upcoming = re.search(r"(?m)^Next task:\s*\n(WEB-FE-[A-Z0-9-]+-v(\d+)\.(\d+))", queue)
+    upcoming = re.search(r"(?m)^Next task:\s*\n((?:WEB-FE|WEB-OPT)-[A-Z0-9-]+-v(\d+)\.(\d+))", queue)
     route = re.search(r"Current FE scope: select `([^`]+)`", queue)
-    if not current or not upcoming or not route:
-        fail("active checkpoint/next page header is missing or ambiguous")
+    shared_scope = re.search(r"(?m)^Current optimization scope:\s*(.+)$", queue)
+    if not current or not upcoming:
+        fail("active checkpoint/next task header is missing or ambiguous")
         return
     phase = f"{current[1]}-v{current[2]}.{current[3]}"
     status = current[4]
@@ -536,10 +537,16 @@ def check_active_checkpoint() -> None:
             fail("next task must be the successor of the first, active checkpoint (not a historical marker)")
     else:
         current_route = re.search(r"(?m)^Current route: `([^`]+)`", state)
-        if upcoming[1] != phase or not current_route or route[1] != current_route[1]:
+        if not upcoming[1].startswith("WEB-FE-") or upcoming[1] != phase or not current_route or not route or route[1] != current_route[1]:
             fail("visual review must remain on the same task and route; no assumed closure or automatic advance")
     require_text("docs/execution/WEB-TASK-LEDGER.md", f"| {phase} | WEB-FE | {status} |")
-    if not public_route_exists(route[1]): fail(f"next public page does not exist: {route[1]}")
+    if upcoming[1].startswith("WEB-FE-"):
+        if not route:
+            fail("page-scoped WEB-FE task requires an explicit Current FE scope route")
+        elif not public_route_exists(route[1]):
+            fail(f"next public page does not exist: {route[1]}")
+    elif not shared_scope:
+        fail("shared WEB-OPT task requires an explicit Current optimization scope")
 
 def main() -> int:
     check_active_checkpoint()

@@ -2,6 +2,46 @@
 
 Status: WEB_TASK_CONTINUE
 
+Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
+Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
+The former `/support` v1.277 immediate queue is superseded by the shared-foundation optimization sequence.
+
+Next task:
+WEB-OPT-01-PUBLIC-CSS-OWNERSHIP-PAYLOAD-RESET-v1.278
+
+Objective:
+Remove the global `service-layout.css` dependency and reduce historical CSS ownership/payload without redesigning product pages. Move only active reusable rules to explicit shared/page owners, retire proven-unconsumed historical selectors, preserve current visual semantics, and establish a smaller trustworthy baseline for all later page work.
+
+Current optimization scope: shared public foundation — root layout imports, `apps/web/src/app/globals.css`, active `packages/ui` CSS owners and route imports. No content rewrite, no page-specific redesign, no backend/Portal/Ops feature work.
+
+Entry baseline:
+- v1.277 audit found ~11,084 CSS source lines, `service-layout.css` 5,067 lines globally imported, `globals.css` 3,024 lines, and substantial historical selector residue.
+- 59/59 sitemap URLs rendered; 0 horizontal overflow at 1440/390; axe smoke 0 automated A/AA violations.
+- Typical service/content routes carry roughly 240–250KB decoded CSS.
+
+Exit criteria:
+- root public layout no longer imports the whole service stylesheet globally; active service/content routes import explicit owners;
+- historical/dead selector removal is backed by consumer search plus browser regression, never deletion-by-guess;
+- median decoded public CSS is materially lower than the v1.277 baseline, with >=20% reduction as the target unless evidence proves a smaller safe bound;
+- 59-route HTTP/overflow smoke, selected modern+legacy desktop/mobile screenshots, relevant browser/e2e, typecheck, lint, build and current-state gates pass;
+- no intentional content/IA change and no visual regression is hidden by test relaxation.
+
+Execution rules: Real Browser UI/UX Layout First; Base UI/UX Layout ownership first; RED→GREEN for new guards; normal commit/push; no force push; no production deployment. Do not batch WEB-OPT-02.
+
+Runtime resource policy: reuse session-owned production 3236 after ownership verification; do not open a new version port.
+
+Historical compatibility markers retained until WEB-OPT-21: `WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT`; browser/e2e evidence remains mandatory.
+
+---
+
+## Historical validator compatibility snapshot — not active queue
+
+The text below is retained only because historical source validators still consume `WEB-NEXT-ACTION.md` as provenance. It MUST NOT override the first `Next task` above. WEB-OPT-21 owns migration away from these compatibility markers.
+
+# WEB-NEXT-ACTION
+
+Status: WEB_TASK_CONTINUE
+
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:

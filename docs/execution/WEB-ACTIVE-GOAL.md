@@ -1,6 +1,16 @@
 # WEB-ACTIVE-GOAL
 
-## Owner override — full public-page visual remediation (2026-09-17)
+## Owner override — full public-system optimization after v1.277 audit (2026-09-17)
+
+The full public audit at `026a0719027b5db25bc7c07175ef1bb786d1ed6d` is the current authority. It supersedes the immediate `/support` v1.277 page queue. The Web is usable and visually coherent enough to continue development, but it is not yet product-complete or technically optimized.
+
+Immediate task: `WEB-OPT-01 — Public CSS Ownership & Payload Reset — v1.278`. Phase A executes shared-root-cause work before remaining page polish: CSS ownership/payload, touch geometry/navigation, public asset boundaries, public IA/player language, SEO metadata/sitemap, editorial renderer consolidation and editorial mobile density. Phase B then resumes one route at a time; Phase C simplifies maintenance/governance.
+
+During Phase A, the historical one-page-only rule is intentionally suspended only for the named shared owner being changed. Real Browser UI/UX Layout First, Base First, truthful non-claims, desktop/mobile evidence, normal commit/push and no production deployment remain mandatory. Do not resume `/support` or historical `/news` queues ahead of `WEB-NEXT-ACTION`.
+
+Assessment: `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`. Ordered task authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
+
+## Historical owner override — full public-page visual remediation (superseded by v1.277 audit)
 
 A full browser audit found 27 concrete public routes and 16 page-specific visual targets. Do not infer visual completion from historical validators/tests. Process one page at a time using the existing target, real browser screenshots and shared Base First owners. `/story` v1.267, `/classes` v1.268, `/journey` v1.269, `/start` v1.270, `/download` v1.271, `/download/trust` v1.272, `/release` v1.273, `/release/readiness` v1.274, `/release/tester-pack` v1.275 and `/status` v1.276 have passed target-driven browser replacement/review; next single page is `/support` v1.277, followed by the remaining support/community families. The old `/news` queue is historical, not active authority.
 

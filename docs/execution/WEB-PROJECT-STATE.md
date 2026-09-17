@@ -1,3 +1,15 @@
+Current phase: LGO-WEB-FULL-PUBLIC-ASSESSMENT-v1.277 WEB_CLOSED
+
+Current decision: the public Web is usable and visually coherent enough to continue development, but it is not yet product-complete or optimized. Full runtime/source/IA/content/performance/a11y/SEO/governance audit is now the active authority; the previous immediate `/support` v1.277 queue is superseded.
+
+Verified assessment commit: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` on `origin/main`. Audit covered 59 sitemap URLs, 28 page templates, shared UI/tokens/content, 59-route desktop/mobile layout metrics, payload/transfer measurements, IA link graph, SEO metadata, 59-route axe smoke and visual contact sheets for the remaining older route families. No product UI source was changed by the assessment.
+
+Key findings: no horizontal overflow across all 59 routes and zero automated axe A/AA violations; shared CSS/history is over-broad; design-reference assets add ~48MB to public deploy root; News/Guides expose too much engineering history; `/events` is orphaned; all routes share one description and emit no canonical; editorial routing/test-validator provenance are over-fragmented.
+
+Next task: `WEB-OPT-01-PUBLIC-CSS-OWNERSHIP-PAYLOAD-RESET-v1.278`. Ordered queue and dependencies are in `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`. Do not resume `/support`, historical `/news`, backend integration or Portal/Ops work ahead of that queue.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-FE-STATUS-VISUAL-REALIGNMENT-v1.276 WEB_CLOSED
 
 Current decision: `/status` now uses accepted immersive public chrome with a full-width clean-art hero, three truthful visibility signals, four canonical source surfaces, compact trust/maintenance panels and three real next routes. The prior constrained status composition is superseded while source truth, filtering, keyboard evidence and non-live-health semantics remain active through v1.223.

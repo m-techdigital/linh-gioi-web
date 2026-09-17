@@ -1,8 +1,17 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: full-site visual realignment is active. `/game` v1.266, `/story` v1.267, `/classes` v1.268, `/journey` v1.269, `/start` v1.270, `/download` v1.271, `/download/trust` v1.272, `/release` v1.273, `/release/readiness` v1.274, `/release/tester-pack` v1.275 and `/status` v1.276 now use accepted target-driven compositions; next `/support` v1.277. Historical test closure is not visual acceptance.
+Current optimization checkpoint: `LGO-WEB-FULL-PUBLIC-ASSESSMENT-v1.277` is closed at `026a0719027b5db25bc7c07175ef1bb786d1ed6d`. The prior `/support` v1.277 page queue is superseded. Next: `WEB-OPT-01 — Public CSS Ownership & Payload Reset — v1.278`. Full ordered authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
+
+## Current optimization lanes — authority after v1.277 audit
+
+1. Public foundation optimization: WEB-OPT-01 through WEB-OPT-07.
+2. Remaining user-facing routes: WEB-OPT-08 through WEB-OPT-20, one route at a time after shared dependencies.
+3. Maintenance simplification: WEB-OPT-21 through WEB-OPT-23 after product-facing source stabilizes.
+4. Backend-dependent future: WEB-08 contract sync, real Portal/Ops integration and WEB-10 deployment only after accepted canonical game-backend/release contracts.
+
+The historical WEB-00→WEB-10 program phases remain architectural provenance and long-term gates; they do not override the current optimization queue.
 
 ## WEB-00 Program Constitution
 
