@@ -4,29 +4,28 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-06 v1.283 is CLOSED at source commit `b23fd22cbb6324a04769c315ca5cd16c3b3fba31`; do not reopen it without a related renderer/route-equivalence regression.
+WEB-OPT-07 v1.284 is CLOSED at source commit `e105aa7f874730ac6c82e8c49c37499a44dd806a`; do not reopen it without a related editorial-density/reading-flow regression.
 
 Next task:
-WEB-OPT-07-EDITORIAL-MOBILE-DENSITY-READING-FLOW-v1.284
+WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-v1.285
 
 Objective:
-Reduce News/Guide mobile wall-of-cards and scroll cost through shared article/catalog rhythm, contents navigation, progressive disclosure and copy deduplication while preserving source meaning and keeping safety/truth boundaries visible.
+Replace `/support` generic proof-density with a clear player support entry hierarchy while preserving truthful no-ticket/no-account-lookup boundaries and the accepted public shell.
 
-Current optimization scope: shared editorial article/catalog rhythm and the smallest News/Guide template changes needed after v1.283 renderer consolidation. Do not batch support/community routes, broad article rewriting, metadata/indexability policy changes, backend/CMS work or Phase-B page remediation.
+Current optimization scope: `/support` only plus the smallest shared Base owner change genuinely required by that route. Do not batch `/support/help`, `/support/safety`, community routes, broad copy rewrites, backend/CMS work or live intake.
 
 Entry baseline:
-- v1.277 measured editorial mobile P90 page height at approximately 4,917px;
-- v1.283 now provides one stable renderer registry, so family-level density changes can be made at shared owners instead of slug branches;
-- WEB-OPT-01–06 are closed predecessors and must remain regression-green.
+- WEB-OPT-01–07 Phase-A foundations are CLOSED and must remain regression-green;
+- the v1.277 audit names `/support` as the first remaining Phase-B route;
+- existing Support target/history is comparison evidence, not permission to restore superseded page-local patterns.
 
 Exit criteria:
-- editorial-family mobile P90 page height is materially below the v1.277 ~4,917px baseline;
-- no horizontal overflow and first useful next-step appears earlier;
-- safety/truth boundaries, source meaning, fragments, keyboard navigation and disclosure semantics remain discoverable;
-- content-diff review confirms no accidental authored-content loss;
-- full editorial browser matrix, representative screenshots, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
+- desktop/mobile `/support` presents a shorter, clearer path to the correct support/safety/status/help destinations;
+- no fake ticket submission, account lookup, SLA or backend capability is introduced;
+- keyboard/focus/touch behavior, truthful non-claims and accepted shell/navigation remain intact;
+- focused browser/e2e, fresh desktop/mobile screenshots, relevant source validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: Base First; RED→GREEN; measure before changing shared rhythm; preserve v1.281 IA and v1.282 metadata; no production deployment. Do not batch WEB-OPT-08.
+Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A IA/metadata/editorial contracts; no production deployment. Do not batch WEB-OPT-09.
 
 Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 

@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — editorial mobile density closed (2026-09-18)
+
+WEB-OPT-07 v1.284 is CLOSED at source commit `e105aa7f874730ac6c82e8c49c37499a44dd806a`. Across all 33 News/Guide detail routes, exact mobile P90 height fell from 5,089px to 4,016px and first-useful-next-step P90 from 2,193px to 1,846px, with zero page-level horizontal overflow and 33/33 exact content/headings/links/disclosure parity.
+
+Next task is **WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-v1.285**. Begin Phase B on `/support` only: replace generic proof-density with a clearer support entry hierarchy while preserving no-ticket/no-account-lookup truth and the accepted Phase-A foundations.
+
 ## Owner optimization authority — editorial renderer consolidation closed (2026-09-18)
 
 WEB-OPT-06 v1.283 is CLOSED at source commit `b23fd22cbb6324a04769c315ca5cd16c3b3fba31`. News/Guide dynamic routes now delegate through one typed renderer registry instead of 27 slug branches; 66/66 route×viewport signatures and 8/8 representative screenshots are exactly unchanged.

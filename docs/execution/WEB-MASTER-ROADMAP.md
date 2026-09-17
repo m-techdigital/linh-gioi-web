@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.284
+
+WEB-OPT-01 through WEB-OPT-07 are CLOSED. v1.284 at `e105aa7f874730ac6c82e8c49c37499a44dd806a` reduces the 33-route editorial mobile P90 height from 5,089px to 4,016px and first-useful-next-step P90 from 2,193px to 1,846px while preserving exact authored text/headings/links/disclosures and truth boundaries.
+
+Phase A is complete. Continue the v1.277 dependency backlog with Phase B: WEB-OPT-08 v1.285 on `/support` only, followed by `/support/help` v1.286 and `/support/safety` v1.287.
+
 ## 2026-09-18 optimization checkpoint v1.283
 
 WEB-OPT-01 through WEB-OPT-06 are CLOSED. v1.283 at `b23fd22cbb6324a04769c315ca5cd16c3b3fba31` replaces 27 News/Guide slug-specific route branches with one typed renderer registry while preserving all 33 editorial routes, metadata/404 semantics and exact browser rendering.

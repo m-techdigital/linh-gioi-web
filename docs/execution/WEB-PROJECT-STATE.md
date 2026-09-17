@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-07-EDITORIAL-MOBILE-DENSITY-READING-FLOW-v1.284 WEB_CLOSED
+
+Current decision: all 33 News/Guide detail routes retain authored meaning and explicit truth boundaries while the shared mobile article/catalog rhythm is materially shorter. Exact mobile P90 height is 4,016px from 5,089px, max 4,264px from 5,357px, and first-useful-next-step P90 1,846px from 2,193px; no audited route has page-level horizontal overflow.
+
+Verified source delivery commit: `e105aa7f874730ac6c82e8c49c37499a44dd806a`. Production build63; v1.284+v1.283 browser10/10 desktop/mobile; v1.279 mobile2/2; v1.281+v1.278 mobile5/5; content parity text/headings/links/details 33/33; Content20/20; Content/UI/Web typecheck; Web lint; clean 1,997-file current-state replay PASS.
+
+Next task: `WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-v1.285`. Begin Phase B on `/support` only and preserve all Phase-A shared foundations.
+
+Detailed report: `LGO-WEB-OPT-07-EDITORIAL-MOBILE-DENSITY-READING-FLOW-REPORT-v1.284.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-06-EDITORIAL-RENDERER-CONSOLIDATION-v1.283 WEB_CLOSED
 
 Current decision: all 17 News and 16 Guide detail routes now resolve through one typed editorial renderer registry instead of long route-local slug chains. Eleven News records retain specialized renderers, six retain the existing generic fallback, and all 16 Guides retain their established specialized article components.
