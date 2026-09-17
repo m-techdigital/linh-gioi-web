@@ -33,6 +33,7 @@ def main() -> int:
         "apps/web/src/components/PublicClassesLanding.tsx",
         "apps/web/src/app/story/page.tsx",
         "apps/web/src/components/PublicStoryLanding.tsx",
+        "apps/web/src/components/PublicJourneyLanding.tsx",
         "docs/execution/WEB-PUBLIC-GAME-EXPERIENCE-BRAND-REALIGNMENT-v1.22.md",
         "HANDOFF-LGO-WEB-PUBLIC-GAME-EXPERIENCE-BRAND-REALIGNMENT-v1.22.md",
     ]
@@ -49,7 +50,8 @@ def main() -> int:
     require_text("apps/web/src/components/PublicClassesLanding.tsx", "classPaths", "Chọn cách bạn bảo vệ Linh Giới", "lgo-class-choice-grid")
     require_text("apps/web/src/app/story/page.tsx", "PublicStoryLanding", "variant=\"immersive\"")
     require_text("apps/web/src/components/PublicStoryLanding.tsx", "Vết Nứt Đông Môn", "narrativeChapters", "lgo-story-chapter-grid")
-    require_text("apps/web/src/app/journey/page.tsx", "20 phút", "SessionLoopRail")
+    require_text("apps/web/src/app/journey/page.tsx", "PublicJourneyLanding", 'variant="immersive"')
+    require_text("apps/web/src/components/PublicJourneyLanding.tsx", "sampleSessionBeats", "worldRouteStops", "20 phút không chỉ để đánh quái", "lgo-journey-beat-grid")
     require_text("apps/web/src/components/PublicNavigation.tsx", "/classes", "/story", "Lộ", "Cốt truyện")
     require_text("apps/web/src/app/layout.tsx", "MMORPG hành động cộng đồng 2D", "Linh Thành")
     require_text("apps/web/src/app/sitemap.ts", '"/classes"', '"/story"')

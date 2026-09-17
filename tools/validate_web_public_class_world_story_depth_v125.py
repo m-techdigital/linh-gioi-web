@@ -30,7 +30,6 @@ def main() -> int:
     require_text("apps/web/src/components/PublicGameDepthSections.tsx", "ClassIdentityDeck", "WorldAtlasStories", "StoryArcTimeline")
     for rel in (
         "apps/web/src/app/start/page.tsx",
-        "apps/web/src/app/journey/page.tsx",
         "apps/web/src/app/download/page.tsx",
     ):
         require_text(rel, "PublicPlayerHero")
@@ -46,6 +45,9 @@ def main() -> int:
         fail("Guides duplicates the shared hero kicker markup")
     if any(symbol in read("apps/web/src/components/PublicGameExperienceSections.tsx") for symbol in ("ClassIdentityDeck", "WorldAtlasStories", "StoryArcTimeline")):
         fail("PublicGameExperienceSections.tsx still owns v1.25 depth components; split them into PublicGameDepthSections.tsx")
+    # /journey v1.269 supersedes the legacy PublicPlayerHero + SessionLoopRail proof flow while retaining canonical session/world-route data.
+    require_text("apps/web/src/app/journey/page.tsx", "PublicJourneyLanding", 'variant="immersive"')
+    require_text("apps/web/src/components/PublicJourneyLanding.tsx", "sampleSessionBeats", "worldRouteStops", "lgo-journey-beat-grid", "lgo-journey-route-grid")
     # /classes v1.268 supersedes the legacy PublicPlayerHero + ClassIdentityDeck proof flow while retaining canonical classPaths depth data.
     require_text("apps/web/src/app/classes/page.tsx", "PublicClassesLanding", 'variant="immersive"')
     require_text("apps/web/src/components/PublicClassesLanding.tsx", "classPaths", "battleRhythm", "worldLens", "signatureVerbs", "lgo-class-selected-feature")

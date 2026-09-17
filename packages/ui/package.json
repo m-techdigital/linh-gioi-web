@@ -31,7 +31,8 @@
     "./home-editorial.css": "./src/home-editorial.css",
     "./public-entry-layout.css": "./src/public-entry-layout.css",
     "./story-landing-layout.css": "./src/story-landing-layout.css",
-    "./classes-landing-layout.css": "./src/classes-landing-layout.css"
+    "./classes-landing-layout.css": "./src/classes-landing-layout.css",
+    "./journey-landing-layout.css": "./src/journey-landing-layout.css"
   },
   "scripts": {
     "build": "tsc --noEmit",
