@@ -46,3 +46,16 @@ After production verification, the owned 3236 runtime was stopped and generated 
 This remains public informational FE. There is no public game binary, real SHA256 artifact, launcher, entitlement, production auth, account flow, CMS, backend mutation or production deployment claim.
 
 Next single page after verified governance/package delivery: `/release` — WEB-FE-RELEASE-VISUAL-REALIGNMENT-v1.273. Continue one page at a time; do not resume the historical `/news` queue.
+
+## Reviewer production-evidence recertification
+
+Reviewer accepted the v1.272 product/runtime behavior but found the local `handoff/v1272/after-mobile.png` was byte-identical to `final-dev-mobile.png`. Evidence closure was reopened without changing product source.
+
+Fresh captures were taken from `next start` on `http://127.0.0.1:3236` with BUILD_ID `Gj7D7iu1vSPNM7llRtK2P`, listener cwd `apps/web`, and accepted HEAD/remote HEAD `98b5662f9faa9c13db721124ba92d6cf906a579a`.
+
+- production desktop SHA256: `906409af30fff7f4ec7907705a4d42aae5a0b9266797a409bac66e69579378d3`;
+- production mobile SHA256: `87b809ea9aa843c3bea3f398601b5157a11ac68d0d00b05b0faa6158abc1b371`;
+- dev mobile SHA256 retained for comparison: `00aeebc7d9bc13f4f665b7f9e474decff437b25c58c1676fb3389befafd5539a`;
+- both production captures returned HTTP 200 and reported zero `nextjs-portal` / dev-overlay markers.
+
+`handoff/v1272/production-capture-provenance.json` records capture timestamp, viewport, BUILD_ID, listener PID/cwd, HEAD/remote HEAD and image hashes. The fresh production pair was visually reviewed and contains no Next.js dev `N` indicator. This recertification changes evidence/governance only; product source remains the reviewer-accepted v1.272 implementation.
