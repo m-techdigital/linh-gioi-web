@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-04-PUBLIC-IA-PLAYER-LANGUAGE-CONTRACT-v1.281 WEB_CLOSED
+
+Current decision: the public Web now has one machine-readable 59-route ownership/indexability/language contract. All 17 current Web-program News records remain reachable as Archive/Devlog instead of primary player news; Homepage no longer promotes them as current game news; `/news` uses a truthful empty player-news state with a closed archive; `/events` is intentionally reachable and Archive/noindex intent.
+
+Verified source delivery commit: `a5659a33e0e74710efe334a96057dad7f64489c2` on `origin/main`. `/events` inbound links `0 -> 1`, route orphans `1 -> 0`; desktop News height `3232px -> 1266px`; focused v1.281 6/6, v1.280 4/4, v1.279 2/2, v1.278 4/4, Content tests18/18, Content/UI/Web typecheck, Web lint, build63 and clean current-state PASS.
+
+Next task: `WEB-OPT-05-SEO-METADATA-SITEMAP-OWNERSHIP-v1.282`. Use the v1.281 route/indexability matrix as authority; do not reopen v1.281 without a related IA/language regression.
+
+Detailed report: `LGO-WEB-OPT-04-PUBLIC-IA-PLAYER-LANGUAGE-CONTRACT-REPORT-v1.281.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-03-PUBLIC-ASSET-BOUNDARY-IMAGE-DELIVERY-v1.280 WEB_CLOSED
 
 Current decision: public review artifacts are no longer shipped from the Web deploy root. All 23 design targets remain canonical under docs/design/reference with SHA inventory; public footprint fell 61,177,886 B -> 10,187,479 B (-83.35%). Homepage desktop/mobile hero PNG sources are preserved under docs/design/source and runtime WebP q95 reduces transfer ~82.7% with stable geometry and no meaningful visual degradation.

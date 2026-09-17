@@ -89,8 +89,16 @@ def main() -> int:
     ))
 
     next_action = read("docs/execution/WEB-NEXT-ACTION.md")
-    if "WEB-OPT-04-PUBLIC-IA-PLAYER-LANGUAGE-CONTRACT-v1.281" not in next_action:
-        fail("WEB-NEXT-ACTION does not point to WEB-OPT-04 v1.281")
+    project_state = read("docs/execution/WEB-PROJECT-STATE.md")
+    ledger = read("docs/execution/WEB-TASK-LEDGER.md")
+    report = read("docs/execution/LGO-WEB-OPT-04-PUBLIC-IA-PLAYER-LANGUAGE-CONTRACT-REPORT-v1.281.md")
+    active_prefix = "Current phase: WEB-OPT-04-PUBLIC-IA-PLAYER-LANGUAGE-CONTRACT-v1.281 WEB_CLOSED"
+    if project_state.startswith(active_prefix) and "WEB-OPT-05-SEO-METADATA-SITEMAP-OWNERSHIP-v1.282" not in next_action:
+        fail("active v1.281 checkpoint does not advance to WEB-OPT-05 v1.282")
+    if "| WEB-OPT-04-PUBLIC-IA-PLAYER-LANGUAGE-CONTRACT-v1.281 | WEB-OPT | WEB_CLOSED |" not in ledger:
+        fail("WEB-TASK-LEDGER does not record WEB-OPT-04 v1.281 closure")
+    if "a5659a33e0e74710efe334a96057dad7f64489c2" not in report or "3232px" not in report or "1266px" not in report:
+        fail("v1.281 report is missing source/IA closure evidence")
     current_state = read("tools/validate_web_current_state.py")
     if '"validate_web_opt_public_ia_language_v1281.py"' not in current_state:
         fail("v1.281 validator is not registered in WEB CURRENT STATE authority")

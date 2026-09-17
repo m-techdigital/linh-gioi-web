@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.281
+
+WEB-OPT-01 through WEB-OPT-04 are CLOSED. v1.281 at `a5659a33e0e74710efe334a96057dad7f64489c2` establishes public route ownership/indexability/language policy, separates 17 Web-program News records into Archive/Devlog and resolves the `/events` orphan without rewriting article bodies.
+
+Continue the v1.277 dependency backlog. Next is WEB-OPT-05 v1.282 (SEO metadata and sitemap ownership), then WEB-OPT-06 renderer consolidation and WEB-OPT-07 editorial mobile density before remaining route-family work.
+
 ## 2026-09-18 optimization checkpoint v1.280
 
 WEB-OPT-01 CSS ownership, WEB-OPT-02 interaction ergonomics and WEB-OPT-03 public asset boundary/image delivery are CLOSED. v1.280 at `1c131e10ffe7f5ef060189cc02cbf57e77fcdf7a` removes 49.86MB of review-only public mirrors and reduces homepage hero transfer ~82.7% while retaining docs provenance and predecessor regressions.

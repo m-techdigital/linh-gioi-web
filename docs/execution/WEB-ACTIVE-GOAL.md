@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — public IA/player language closed (2026-09-18)
+
+WEB-OPT-04 v1.281 is CLOSED at source commit `a5659a33e0e74710efe334a96057dad7f64489c2`. A 59-route machine contract now separates Product/Guide/News/Support/Archive ownership; all current Web-program News entries are Archive/Devlog, `/events` is no longer orphaned, and Homepage/News primary discovery no longer treats implementation history as game news.
+
+Next task is **WEB-OPT-05-SEO-METADATA-SITEMAP-OWNERSHIP-v1.282**. Implement route metadata, canonical/indexability and sitemap ownership from the v1.281 contract; do not start editorial consolidation or broad copy rewriting in this slice.
+
 ## Owner optimization authority — public asset boundary closed (2026-09-18)
 
 WEB-OPT-03 v1.280 is CLOSED at source commit `1c131e10ffe7f5ef060189cc02cbf57e77fcdf7a`. Public deploy footprint fell by 83.35%; all 23 review-only design binaries moved out of the Web public boundary while docs canonical copies remain intact; homepage hero transfer fell ~82.7% via provenance-preserving WebP delivery.
