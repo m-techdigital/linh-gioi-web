@@ -77,6 +77,7 @@ def finish(name: str) -> int:
 import runpy
 
 VALIDATORS = [
+    "validate_web_fe_release_readiness_visual_realignment_v1274.py",
     "validate_web_fe_release_visual_realignment_v1273.py",
     "validate_web_fe_download_trust_visual_realignment_v1272.py",
     "validate_web_fe_download_visual_realignment_v1271.py",
@@ -476,10 +477,10 @@ SUPERSEDED_LAYOUT_VALIDATORS = {
     "validate_web_fe_tester_pack_real_ui_layout_v1144.py": "validate_web_fe_tester_pack_real_ui_layout_v1222.py",
     "validate_web_fe_release_tester_pack_real_ui_layout_v1202.py": "validate_web_fe_tester_pack_real_ui_layout_v1222.py",
 
-    "validate_web_fe_public_release_readiness_design_board_v171.py": "validate_web_fe_release_readiness_real_ui_layout_v1221.py",
-    "validate_web_fe_release_readiness_design_target_density_v1128.py": "validate_web_fe_release_readiness_real_ui_layout_v1221.py",
-    "validate_web_fe_release_readiness_real_ui_layout_v1143.py": "validate_web_fe_release_readiness_real_ui_layout_v1221.py",
-    "validate_web_fe_release_readiness_real_ui_layout_v1201.py": "validate_web_fe_release_readiness_real_ui_layout_v1221.py",
+    "validate_web_fe_public_release_readiness_design_board_v171.py": "validate_web_fe_release_readiness_visual_realignment_v1274.py",
+    "validate_web_fe_release_readiness_design_target_density_v1128.py": "validate_web_fe_release_readiness_visual_realignment_v1274.py",
+    "validate_web_fe_release_readiness_real_ui_layout_v1143.py": "validate_web_fe_release_readiness_visual_realignment_v1274.py",
+    "validate_web_fe_release_readiness_real_ui_layout_v1201.py": "validate_web_fe_release_readiness_visual_realignment_v1274.py",
 }
 
 def public_route_exists(route: str) -> bool:

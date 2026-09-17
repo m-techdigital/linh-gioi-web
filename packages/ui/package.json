@@ -37,7 +37,8 @@
     "./start-landing-layout.css": "./src/start-landing-layout.css",
     "./download-landing-layout.css": "./src/download-landing-layout.css",
     "./download-trust-landing-layout.css": "./src/download-trust-landing-layout.css",
-    "./release-landing-layout.css": "./src/release-landing-layout.css"
+    "./release-landing-layout.css": "./src/release-landing-layout.css",
+    "./release-readiness-landing-layout.css": "./src/release-readiness-landing-layout.css"
   },
   "scripts": {
     "build": "tsc --noEmit",

@@ -20,16 +20,18 @@ def require(rel: str, markers: tuple[str, ...] = ()) -> str:
 def main() -> int:
     ERRORS.clear()
     page = require("apps/web/src/app/release/readiness/page.tsx", (
-        '@lgo-web/ui/release-layout.css', 'lgo-release-layout', '<ReleaseReadinessHero />',
+        '@lgo-web/ui/release-readiness-landing-layout.css', 'lgo-release-readiness-landing lgo-release-layout', '<ReleaseReadinessHero />',
         '<OwnerReleaseGateBoard presentation="release" />', '<ReleaseReadinessPlayerNextSteps />'))
-    order = [page.find(x) for x in ('<ReleaseReadinessHero />', '<OwnerReleaseGateBoard', '<ReleaseReadinessPlayerNextSteps />', '<details')]
+    order = [page.find(x) for x in ('<ReleaseReadinessHero />', '<OwnerReleaseGateBoard', '<ReleaseReadinessPlayerNextSteps />')]
     if -1 in order or order != sorted(order):
-        ERRORS.append("readiness composition order must be hero -> owner gates -> player actions -> details")
+        ERRORS.append("readiness composition order must be hero -> owner gates -> player actions")
+    if 'ReleaseReadinessHubBoard' in page or 'lgo-release-more-evidence' in page:
+        ERRORS.append("readiness primary flow must not restore duplicated proof disclosure")
     for marker in ('lgo-service-compact-proof-page', '<form', 'dangerouslySetInnerHTML', 'release-readiness-production-board.svg'):
         if marker in page: ERRORS.append(f"obsolete or unsafe primary composition: {marker}")
     experience = require("apps/web/src/components/PublicReleaseReadinessExperience.tsx", (
         'ExperienceHero', 'ownerReleaseGates.map', 'readinessState', 'NO_ACCEPTED_BACKEND_CONTRACT',
-        'Chưa sẵn sàng', '/game-art/world/dong-mon-skyline.webp', 'Minh họa thế giới',
+        'Chưa sẵn sàng', '/game-art/marketing/discovery-world.png', '/game-art/marketing/hero-traveler.png', 'Minh họa thế giới',
         'fetchPriority="high"', '/download/trust', '/status', '/support/safety', '/release/tester-pack'))
     for marker in ('role="progressbar"', 'aria-valuenow', 'setInterval(', '<form'):
         if marker in experience: ERRORS.append(f"unverified progress/intake: {marker}")
@@ -38,6 +40,7 @@ def main() -> int:
     require("packages/ui/src/index.ts", ('from "./release"', 'ReleaseGateCard'))
     exports = json.loads(require("packages/ui/package.json"))["exports"]
     if exports.get("./release-layout.css") != "./src/release-layout.css": ERRORS.append("missing shared stylesheet export")
+    if exports.get("./release-readiness-landing-layout.css") != "./src/release-readiness-landing-layout.css": ERRORS.append("missing readiness landing stylesheet export")
     css = require("packages/ui/src/release-layout.css", ('.lgo-release-layout', '.lgo-release-hero', '.lgo-release-owner-grid',
         '.lgo-release-next-routes', ':focus-visible', 'prefers-reduced-motion', 'max-width:480px', '-webkit-line-clamp:none', 'min-height:44px'))
     if '-webkit-line-clamp: 2' in css or 'font-size: .56rem' in css: ERRORS.append("do not clamp/shrink main readiness copy to satisfy density metrics")
@@ -45,7 +48,8 @@ def main() -> int:
     if 'WEB v1.128 release readiness detailed design target density' in globals_css: ERRORS.append("stale readiness CSS owner retained")
     require("packages/design-tokens/src/tokens.css", ('--lgo-font-editorial', '--lgo-color-parchment', '--lgo-color-art-ink'))
     for asset in ('apps/web/public/design-reference/release-readiness-detailed-design-target-v1128.png',
-                  'apps/web/public/game-art/world/dong-mon-skyline.webp'):
+                  'apps/web/public/game-art/marketing/discovery-world.png',
+                  'apps/web/public/game-art/marketing/hero-traveler.png'):
         if not (ROOT / asset).is_file(): ERRORS.append(f"missing visual source {asset}")
     require("apps/web/src/components/PublicDesignTargetReference.tsx", ('release-readiness-detailed-design-target-v1128.png', 'pathname === "/release/readiness"'))
     require("tests/e2e/fe-release-readiness-real-ui-layout-v1221.spec.ts", ('toBeVisible', 'toBeFocused', 'owner.top', 'overflow', 'screenshot', 'result.violations', 'keyboard.press("Tab")'))

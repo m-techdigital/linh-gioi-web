@@ -28,7 +28,8 @@ export function ReleaseReadinessHero() {
       <p className="lgo-release-art-note">Minh họa thế giới · không phải ảnh gameplay</p>
     </>}
     visual={<>
-      <img className="lgo-release-hero-art" src="/game-art/world/dong-mon-skyline.webp" alt="" width="1360" height="765" fetchPriority="high" />
+      <img className="lgo-release-hero-art" src="/game-art/marketing/discovery-world.png" alt="" width="500" height="240" fetchPriority="high" />
+      <img className="lgo-release-readiness-traveler" src="/game-art/marketing/hero-traveler.png" alt="" width="344" height="348" fetchPriority="high" />
       <section className="lgo-release-gate-console lgo-release-frame" aria-labelledby="release-console-heading">
         <div className="lgo-release-console-heading"><span className="lgo-release-overline">Kiểm chứng · Đồng bộ · Phát hành</span><h2 id="release-console-heading">Cổng phát hành</h2></div>
         <div className="lgo-release-console-body">

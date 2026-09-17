@@ -1,0 +1,46 @@
+@import "./immersive-shell.css";
+@import "./release-layout.css";
+
+.lgo-release-readiness-landing { display:grid; grid-template-columns:minmax(0,1fr); min-width:0; gap:20px; padding-bottom:18px; background:#06121d; }
+.lgo-release-readiness-landing > * { min-width:0; }
+.lgo-release-readiness-landing > .lgo-release-owner-section,
+.lgo-release-readiness-landing > .lgo-release-player-next { width:min(calc(100% - 36px),1540px); margin-inline:auto; }
+.lgo-release-readiness-landing .lgo-release-hero { width:100%; min-height:430px; border-inline:0; border-radius:0; grid-template-columns:minmax(360px,.86fr) minmax(520px,1.14fr); gap:28px; padding:32px max(28px,calc((100vw - 1500px)/2)); }
+.lgo-release-readiness-landing .lgo-release-hero-art { object-position:center; opacity:.58; }
+.lgo-release-readiness-landing .lgo-release-readiness-traveler { position:absolute; z-index:-2; left:34%; bottom:0; width:auto; height:88%; object-fit:contain; opacity:.76; filter:drop-shadow(0 18px 28px rgba(0,0,0,.35)); }
+.lgo-release-readiness-landing .lgo-release-hero::before { background:linear-gradient(90deg,#06121d 0%,rgba(6,18,29,.9) 32%,rgba(6,18,29,.44) 58%,rgba(6,18,29,.72) 100%),linear-gradient(0deg,#06121d 0%,transparent 48%); }
+.lgo-release-readiness-landing .lgo-release-promises { margin:1rem 0; gap:.65rem; }
+.lgo-release-readiness-landing .lgo-release-gate-console { max-width:650px; justify-self:end; width:100%; }
+.lgo-release-readiness-landing .lgo-release-owner-section { padding-top:2px; }
+.lgo-release-readiness-landing .lgo-release-section-heading { margin-bottom:.85rem; }
+.lgo-release-readiness-landing .lgo-release-gate-card { padding:.85rem; }
+.lgo-release-readiness-landing .lgo-release-gate-card h3 { margin:.65rem 0 .25rem; }
+.lgo-release-readiness-landing .lgo-release-gate-owner { margin-bottom:.55rem; }
+.lgo-release-readiness-landing .lgo-release-gate-boundary { margin-bottom:.65rem; }
+.lgo-release-readiness-landing .lgo-release-player-next { gap:16px; }
+.lgo-release-readiness-landing .lgo-release-tester-panel,
+.lgo-release-readiness-landing .lgo-release-route-panel { padding:1.15rem; }
+@media (max-width:800px) {
+  .lgo-release-readiness-landing { gap:14px; }
+  .lgo-release-readiness-landing .lgo-release-hero { min-height:auto; grid-template-columns:1fr; padding:22px 18px; gap:16px; }
+  .lgo-release-readiness-landing .lgo-release-hero-art { object-position:center top; opacity:.42; }
+  .lgo-release-readiness-landing .lgo-release-readiness-traveler { left:auto; right:-26px; height:54%; opacity:.28; }
+  .lgo-release-readiness-landing .lgo-release-gate-console { max-width:none; justify-self:stretch; }
+  .lgo-release-readiness-landing > .lgo-release-owner-section,
+  .lgo-release-readiness-landing > .lgo-release-player-next { width:min(calc(100% - 20px),1540px); }
+}
+@media (max-width:480px) {
+  .lgo-release-readiness-landing .lgo-release-owner-grid { display:flex; overflow-x:auto; gap:10px; padding:0 0 8px; scroll-snap-type:x proximity; scrollbar-width:thin; }
+  .lgo-release-readiness-landing .lgo-release-gate-card { flex:0 0 min(82vw,270px); scroll-snap-align:start; }
+  .lgo-release-readiness-landing .lgo-release-hero { padding:18px 10px 14px; gap:12px; }
+  .lgo-release-readiness-landing .lgo-release-promises { margin:.8rem 0; }
+  .lgo-release-readiness-landing .lgo-release-hero .lgo-hero-lead { font-size:.875rem; }
+  .lgo-release-readiness-landing .lgo-release-gate-console { padding:.8rem .7rem .65rem; }
+  .lgo-release-readiness-landing .lgo-release-gate-signals a { min-height:54px; }
+  .lgo-release-readiness-landing .lgo-release-gate-card { padding:.8rem; }
+  .lgo-release-readiness-landing .lgo-release-tester-panel,
+  .lgo-release-readiness-landing .lgo-release-route-panel { padding:1rem; }
+}
+@media (forced-colors:active) {
+  .lgo-release-readiness-landing .lgo-release-readiness-traveler { opacity:.18; }
+}

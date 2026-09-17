@@ -9,8 +9,14 @@ test.describe("release readiness real visual composition v1.221", () => {
     await expect(hero).toBeVisible();
     await expect(hero.locator("h1")).toHaveText("Sẵn sàng phát hành");
     await expect(hero.locator(".lgo-release-seal")).toContainText("Chưa sẵn sàng");
-    await expect(hero.locator("img")).toHaveJSProperty("complete", true);
-    expect(await hero.locator("img").evaluate((e: HTMLImageElement) => e.naturalWidth)).toBeGreaterThan(0);
+    const heroImages = hero.locator("img");
+    expect(await heroImages.count()).toBeGreaterThanOrEqual(2);
+    for (const image of await heroImages.all()) {
+      const natural = await image.evaluate((e: HTMLImageElement) => ({ complete: e.complete, width: e.naturalWidth, height: e.naturalHeight }));
+      expect(natural.complete).toBe(true);
+      expect(natural.width).toBeGreaterThan(0);
+      expect(natural.height).toBeGreaterThan(0);
+    }
     await expect(hero.locator("[role=progressbar]")).toHaveCount(0);
     const metrics = await page.evaluate(() => {
       const r = (s: string) => document.querySelector<HTMLElement>(s)!.getBoundingClientRect().toJSON();
