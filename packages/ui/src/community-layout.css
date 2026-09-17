@@ -13,7 +13,7 @@
 .lgo-community-vista figcaption > small { color:var(--release-muted); font-size:.68rem; line-height:1.5; }
 .lgo-community-vista .lgo-link-button { gap:.5rem; }
 .lgo-community-columns { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; align-items:stretch; }
-.lgo-community-columns > section { display:flex; flex-direction:column; min-width:0; padding:1.25rem; }
+.lgo-community-columns > section { display:flex; flex-direction:column; min-width:0; padding:1.1rem 1.25rem; }
 .lgo-community-experience .lgo-community-columns .lgo-section-heading h2 { font-size:1.55rem; }
 .lgo-community-columns > section > .lgo-release-icon { color:color-mix(in srgb,var(--lgo-color-art-ink) 85%,var(--lgo-color-jade-teal)); }
 .lgo-community-experience .lgo-community-columns p { font-size:.83rem; }
@@ -52,8 +52,9 @@
 }
 @media(max-width:800px) {
   .lgo-community-experience .lgo-community-hero { grid-template-columns:1fr; padding:1.5rem 1.2rem; }
-  .lgo-community-columns { grid-template-columns:1fr; }
-  .lgo-community-columns > section { padding:1.25rem; }
+  /* WEB-OPT-11 community value rail: keep the three useful destinations together without a long card wall. */
+  .lgo-community-columns { display:flex; flex-wrap:nowrap; overflow-x:auto; scroll-snap-type:x proximity; overscroll-behavior-inline:contain; gap:.75rem; margin-inline:-1.25rem; padding:0 1.25rem .5rem; scrollbar-gutter:stable; }
+  .lgo-community-columns > section { flex:0 0 min(86vw,22rem); padding:1.25rem; scroll-snap-align:start; }
   .lgo-principle-medallions { max-width:400px; width:100%; margin-inline:auto; }
   .lgo-community-experience .lgo-community-hero h1 { font-size:2.25rem; }
 }

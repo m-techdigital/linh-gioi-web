@@ -11,7 +11,7 @@ export function PublicCommunityHero() {
     badge="Linh Giới Online · Cộng đồng" badgeTone="gold" kicker="Cộng đồng bền lâu · Cùng trưởng thành"
     title="Cộng đồng Linh Giới" lead="Một nơi để hiểu nhau, giúp người mới và chuẩn bị những phản hồi có ích. Cùng xây dựng không gian Linh Giới bằng sự tôn trọng và kỳ vọng rõ ràng."
     actions={[{href:"/community/onboarding",label:"Hòa nhập cộng đồng",tone:"gold"},{href:"#community-runtime-gallery",label:"Xem khung hình prototype",tone:"neutral"}]}
-    detail={<><p className="lgo-community-hero-boundary"><ReleaseIcon name="users"/><span>Chưa có trò chuyện, diễn đàn hoặc bang hội.<br/>Website hiện là hướng dẫn, không phải mạng cộng đồng live.</span></p><p className="lgo-release-art-note">Minh họa định hướng thế giới · Không phải gameplay trực tuyến</p></>}
+    detail={<p className="lgo-release-art-note">Minh họa định hướng thế giới · Không phải gameplay trực tuyến</p>}
     visual={<><img className="lgo-release-hero-art" src="/game-art/world/dong-mon-skyline.webp" width="1360" height="765" alt="" fetchPriority="high"/>
       <figure className="lgo-community-vista lgo-release-frame">
         <h2>Quảng trường Linh Thành</h2>
@@ -42,8 +42,8 @@ export function PublicCommunityPanels() {
     </section>
     <section className="lgo-release-paper-panel lgo-release-frame" aria-labelledby="community-feedback-heading">
       <ReleaseIcon name="shield"/><SectionHeading headingId="community-feedback-heading" eyebrow="Lắng nghe và cải thiện" title="Phản hồi an toàn"/>
-      <div className="lgo-community-paper-boundary"><ReleaseIcon name="lock"/><p>Chưa có trò chuyện, diễn đàn hoặc bang hội.</p></div>
-      <div className="lgo-community-paper-boundary"><ReleaseIcon name="document"/><p>Chưa có hệ thống phiếu hỗ trợ hoặc kênh nhận dữ liệu riêng tư.</p></div>
+      <p>Muốn góp ý có ích? Đọc hướng dẫn an toàn trước khi chuẩn bị phản hồi.</p>
+      <div id="community-live-boundary" className="lgo-community-paper-boundary"><ReleaseIcon name="lock"/><p><strong>Chưa có trò chuyện, diễn đàn hoặc bang hội.</strong><br/>Website chưa nhận phiếu hỗ trợ hoặc dữ liệu riêng tư.</p></div>
       <LinkButton href="/support/safety" tone="neutral">Đọc hướng dẫn an toàn <ReleaseIcon name="arrow"/></LinkButton>
     </section>
   </div>;
