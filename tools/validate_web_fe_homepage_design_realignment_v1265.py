@@ -14,6 +14,7 @@ def main():
  check('apps/web/src/app/page.tsx',['PublicHomeLanding','variant="immersive"','marketing-layout.css'])
  check('apps/web/src/components/PublicHomeLanding.tsx',['<ExperienceHero','motto="KIẾP NÀY, THẾ GIỚI RỘNG LỚN HƠN BẠN NGHĨ"','<IllustratedLink','<MediaMosaic','localContentRepository.list("news")','entry.publishedAt','entry.summary','/game','/classes','/story'])
  check('apps/web/src/components/PublicSiteShell.tsx',['lgo-public-shell-immersive','<PublicNavigation/>','<MarketingFooter'])
+ check('packages/ui/src/public-chrome.css',['.lgo-public-shell .lgo-site-header','.lgo-nav-sigil-art'])
  check('packages/ui/src/marketing-layout.css',['.lgo-immersive-art','position:absolute','grid-template-columns:repeat(3','min-height:44px','forced-colors','prefers-reduced-motion'])
  check('tests/e2e/fe-homepage-design-realignment-v1265.spec.ts',['typography follow','three real illustrated','wordmark rendered bounds','violations).toEqual([])','width:320','real existing destinations'])
  check('apps/web/src/components/PublicNavigation.tsx',['const publicItems','label: "Lộ phái"','label: "Tính năng"','href: "/game/loop"','Trang chủ','Liên kết điều hướng chính'])
