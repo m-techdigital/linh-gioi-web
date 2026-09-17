@@ -1,0 +1,30 @@
+{
+  "source": "/design-reference/download-trust-detailed-design-target-v1126.png",
+  "sourceSha256": "615e698aecbf8ed8210726c311fb9d864f4630e945459fc34184823e14c636a0",
+  "items": [
+    {
+      "id": "trust-character",
+      "path": "/game-art/download-trust-target/hero-character.png",
+      "crop": [
+        150,
+        145,
+        525,
+        405
+      ],
+      "sha256": "b2c11c8df5579ab137ae3e078d6af2aa93fa186808a219fdfbdbc74708e68922",
+      "bakedWebUiControls": false
+    },
+    {
+      "id": "trust-seal",
+      "path": "/game-art/download-trust-target/hero-seal.png",
+      "crop": [
+        1065,
+        125,
+        1425,
+        345
+      ],
+      "sha256": "9e79af52744ecdd7c390d54fbc6d93f576489c82e822fae2ddc04bd01cc996ab",
+      "bakedWebUiControls": false
+    }
+  ]
+}

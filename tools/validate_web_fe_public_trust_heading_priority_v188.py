@@ -19,10 +19,11 @@ def require_order(rel: str, first: str, second: str) -> None:
     a, b = text.find(first), text.find(second)
     if a < 0 or b < 0 or a > b: fail(f"{rel}: expected {first} before {second}")
 def check_routes() -> None:
-    require_order("apps/web/src/app/download/trust/page.tsx", "<h1>Tin cậy tải game</h1>", "<DownloadTrustGateBoard />")
+    require_text("apps/web/src/app/download/trust/page.tsx", ["PublicDownloadTrustLanding", 'variant="immersive"'])
+    require_order("apps/web/src/components/PublicDownloadTrustLanding.tsx", "<h1>Tin cậy tải game</h1>", "downloadTrustGates.map")
     require_order("apps/web/src/app/roadmap/page.tsx", "<PublicRoadmapHero/>", "<PublicRoadmapGates/>")
     require_order("apps/web/src/app/community/onboarding/page.tsx", "<PublicOnboardingHero/>", "<PublicOnboardingReading/>")
-    require_text("apps/web/src/app/download/trust/page.tsx", ["chưa có gói tải game công khai", "chưa có xác thực production", "chưa có quyền Portal thật"])
+    require_text("apps/web/src/components/PublicDownloadTrustLanding.tsx", ["Không tải giả", "Chỉ mở cổng tải khi build, SHA256", "Khi chưa có artifact thật"])
     require_text("apps/web/src/components/PublicRoadmapExperience.tsx", ['title="Roadmap phát triển web"', "WEB-08 backend contract sync", "Chưa mở đăng nhập, dữ liệu tài khoản hoặc tích hợp máy chủ thật", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("apps/web/src/components/PublicCommunityOnboardingExperience.tsx", ['title="Hòa nhập cộng đồng Linh Giới"', "chưa có trò chuyện, diễn đàn, bang hội", "danh sách chờ công khai", "Chưa có danh sách chờ"])
 def check_tests_and_docs() -> None:

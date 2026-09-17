@@ -14,6 +14,8 @@
 .lgo-marketing-footer-inner { display:grid; grid-template-columns:minmax(220px,1.1fr) minmax(260px,1fr) minmax(220px,.9fr); gap:24px; align-items:center; min-height:94px; padding-block:14px; }
 .lgo-marketing-footer-brand { display:grid; grid-template-columns:155px minmax(0,1fr); gap:18px; align-items:center; }
 .lgo-marketing-footer-brand .lgo-art-wordmark { width:155px; }
+.lgo-marketing-footer-brand .lgo-art-wordmark-fallback { font-size:30px; line-height:1; }
+.lgo-marketing-footer-brand .lgo-art-wordmark-fallback small { font-size:8px; line-height:1.3; letter-spacing:.35em; margin-top:4px; }
 .lgo-marketing-footer-brand p { margin:0; color:#aebfd0; font:14px/1.45 var(--lgo-font-editorial); }
 .lgo-marketing-footer-links { display:flex; justify-content:center; flex-wrap:wrap; gap:6px 18px; }
 .lgo-marketing-footer a { min-height:44px; display:inline-flex; align-items:center; color:#c5d7e6; text-decoration:none; }

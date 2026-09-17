@@ -77,6 +77,7 @@ def finish(name: str) -> int:
 import runpy
 
 VALIDATORS = [
+    "validate_web_fe_download_trust_visual_realignment_v1272.py",
     "validate_web_fe_download_visual_realignment_v1271.py",
     "validate_web_fe_start_visual_realignment_v1270.py",
     "validate_web_fe_journey_visual_realignment_v1269.py",
@@ -345,6 +346,10 @@ VALIDATORS = [
 # These guards enforced a diagram image or deliberately line-clamped readiness cards.
 # v1.221 replaces them with art-backed DOM UI + native evidence disclosures. Not counted as PASS.
 SUPERSEDED_LAYOUT_VALIDATORS = {
+    "validate_web_fe_public_download_trust_design_board_v167.py": "validate_web_fe_download_trust_visual_realignment_v1272.py",
+    "validate_web_fe_download_trust_design_target_density_v1126.py": "validate_web_fe_download_trust_visual_realignment_v1272.py",
+    "validate_web_fe_download_trust_vietnamese_design_match_v1141.py": "validate_web_fe_download_trust_visual_realignment_v1272.py",
+    "validate_web_fe_download_trust_real_ui_layout_v1219.py": "validate_web_fe_download_trust_visual_realignment_v1272.py",
     "validate_web_fe_download_design_target_density_v1125.py": "validate_web_fe_download_visual_realignment_v1271.py",
     "validate_web_fe_download_vietnamese_design_match_v1140.py": "validate_web_fe_download_visual_realignment_v1271.py",
     "validate_web_fe_download_real_ui_layout_v1218.py": "validate_web_fe_download_visual_realignment_v1271.py",

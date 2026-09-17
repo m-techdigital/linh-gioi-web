@@ -34,7 +34,8 @@
     "./classes-landing-layout.css": "./src/classes-landing-layout.css",
     "./journey-landing-layout.css": "./src/journey-landing-layout.css",
     "./start-landing-layout.css": "./src/start-landing-layout.css",
-    "./download-landing-layout.css": "./src/download-landing-layout.css"
+    "./download-landing-layout.css": "./src/download-landing-layout.css",
+    "./download-trust-landing-layout.css": "./src/download-trust-landing-layout.css"
   },
   "scripts": {
     "build": "tsc --noEmit",
