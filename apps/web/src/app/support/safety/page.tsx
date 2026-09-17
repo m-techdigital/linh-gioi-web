@@ -15,8 +15,8 @@ export default function SafetySupportPage() {
     <Stack className="lgo-release-layout lgo-guidance-layout lgo-safety-hub">
       <PublicSafetyHero/>
       <PublicSafetyChecklist/>
-      <PublicSafetyDataBoundary/>
       <PublicSafetyIssuePaths/>
+      <PublicSafetyDataBoundary/>
       <PublicSafetyCommunityNotes/>
     </Stack>
   </WebAppShell>;

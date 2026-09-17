@@ -52,6 +52,8 @@
   .lgo-local-checklist[data-layout="cards"] .lgo-local-checklist-items { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media(max-width:480px) {
-  .lgo-local-checklist[data-layout="cards"] .lgo-local-checklist-items { grid-template-columns:1fr; }
+  /* WEB-OPT-10 safety checklist rail: retain all five local checks without a long vertical card wall. */
+  .lgo-local-checklist[data-layout="cards"] .lgo-local-checklist-items { display:flex; flex-wrap:nowrap; overflow-x:auto; scroll-snap-type:x proximity; overscroll-behavior-inline:contain; gap:.7rem; padding-bottom:.3rem; }
+  .lgo-local-checklist[data-layout="cards"] .lgo-checkbox-field { flex:0 0 min(82%,18rem); scroll-snap-align:start; }
   .lgo-local-checklist[data-layout="cards"] .lgo-checkbox-copy::before { float:left; margin:0 .65rem .1rem 0; font-size:1.15rem; }
 }

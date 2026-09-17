@@ -22,7 +22,7 @@ def main() -> int:
     ERRORS.clear()
     page = require("apps/web/src/app/support/safety/page.tsx", (
         "@lgo-web/ui/safety-layout.css", "@lgo-web/ui/reading-tools.css", "lgo-safety-hub"))
-    parts = ("<PublicSafetyHero/>", "<PublicSafetyChecklist/>", "<PublicSafetyDataBoundary/>", "<PublicSafetyIssuePaths/>", "<PublicSafetyCommunityNotes/>")
+    parts = ("<PublicSafetyHero/>", "<PublicSafetyChecklist/>", "<PublicSafetyIssuePaths/>", "<PublicSafetyDataBoundary/>", "<PublicSafetyCommunityNotes/>")
     offsets = [page.find(p) for p in parts]
     if -1 in offsets or offsets != sorted(offsets):
         ERRORS.append("safe-reporting page must start with real hero, preparation and data boundaries")
