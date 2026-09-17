@@ -4,32 +4,32 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-02 v1.279 is CLOSED at source commit `5de43e8de9378d57162ad741dd5b3a4e87609417`; do not reopen it without a related regression.
+WEB-OPT-03 v1.280 is CLOSED at source commit `1c131e10ffe7f5ef060189cc02cbf57e77fcdf7a`; do not reopen it without a related public-asset/image-delivery regression.
 
 Next task:
-WEB-OPT-03-PUBLIC-ASSET-BOUNDARY-IMAGE-DELIVERY-v1.280
+WEB-OPT-04-PUBLIC-IA-PLAYER-LANGUAGE-CONTRACT-v1.281
 
 Objective:
-Move review-only design artifacts out of the public deploy root and optimize only high-impact product image delivery, without changing the accepted page compositions or inventing new artwork. Preserve source/provenance and stable dimensions.
+Define and enforce a player-facing public information architecture and language contract so the site reads like an MMORPG product rather than an engineering transparency portal. Classify every public route into Product, Guide, News, Support or Archive/Devlog ownership; make intentional sitemap routes reachable; define what engineering-history language stays public, moves to archive/devlog, or is removed from primary discovery.
 
-Current optimization scope: `apps/web/public/design-reference`, dead public design-reference consumers, high-impact public hero/content image delivery and the smallest required shared/app image primitives. No broad art redesign, no content rewrite, no backend/Portal/Ops feature work.
+Current optimization scope: public route taxonomy, navigation/link graph, content visibility/indexability rules, player-language rules and archive/devlog policy. Minimal shared navigation/content metadata changes are allowed when required by the contract. Do not batch full News/Guide article rewrites, SEO implementation, renderer consolidation or route-specific visual redesign.
 
 Entry baseline:
-- v1.277 audit measured `apps/web/public` at ~59MB, of which ~48MB is 23 design-reference PNGs; the public design-target component has no current app consumer.
-- `apps/web/public/game-art` is ~11MB; only one source file currently uses `next/image`.
-- homepage full-scroll image transfer was ~1.77MB; individual heavy hero assets are served at source size.
-- v1.278 CSS ownership and v1.279 interaction geometry are accepted predecessors and must remain regression-green.
+- v1.277 audit: `/events` is the only orphan sitemap route and 20 routes have <=1 inbound link.
+- News detail averages ~11.5 engineering/internal terms per page; Guide detail ~8.4; core pages ~4.
+- public technical vocabulary includes `WEB v1`, backend contract, fixture, runtime, owner approval, production/e2e and implementation-history language.
+- WEB-OPT-01/02/03 are closed predecessors; CSS, ergonomics and public asset boundaries must remain regression-green.
 
 Exit criteria:
-- no review-only design target remains under the public deploy root; provenance remains available outside the shipped public static path;
-- dead public design-reference runtime code is removed only when consumer search proves it unused;
-- selected high-impact hero/content images have truthful stable sizing/loading and materially lower transfer or deployment footprint without visible quality loss;
-- no broken public product image and no accidental artwork substitution;
-- fresh asset inventory/SHA, browser image-health/transfer comparison, representative production screenshots, relevant E2E, typecheck/lint/build/current-state and normal commit/push closure all pass.
+- one authoritative route/content matrix assigns all 59 public URLs to Product/Guide/News/Support/Archive ownership and indexability intent;
+- no sitemap route is unintentionally unreachable from the public journey; `/events` receives an explicit integrate-or-archive decision;
+- player-language rules distinguish public product language, necessary technical trust terms and internal engineering-history terms;
+- engineering version/change-log material has an explicit Archive/Devlog policy rather than dominating primary News/Guide discovery;
+- fresh link graph and term audit, public navigation walkthrough, relevant source/browser tests, typecheck/lint/build/current-state and normal commit/push closure pass.
 
-Execution rules: preserve accepted visual compositions; use source assets only; Base First; RED→GREEN for new artifact/image-delivery guards; never delete review evidence without relocating it safely; no force push or production deployment. Do not batch WEB-OPT-04.
+Execution rules: preserve truthful non-claims; do not invent game state, release dates or backend capability; Base First; RED→GREEN for IA/language guards; no production deployment. Do not batch WEB-OPT-05.
 
-Runtime resource policy: reuse session-owned runtime only after ownership verification; exact clean-build browser evidence is allowed where Manager blocks an additional listener.
+Runtime resource policy: use exact clean-build/browser evidence when Manager runtime ownership prevents a new listener.
 
 Historical compatibility markers remain until WEB-OPT-21; browser/e2e evidence remains mandatory.
 

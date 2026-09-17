@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — public asset boundary closed (2026-09-18)
+
+WEB-OPT-03 v1.280 is CLOSED at source commit `1c131e10ffe7f5ef060189cc02cbf57e77fcdf7a`. Public deploy footprint fell by 83.35%; all 23 review-only design binaries moved out of the Web public boundary while docs canonical copies remain intact; homepage hero transfer fell ~82.7% via provenance-preserving WebP delivery.
+
+Next task is **WEB-OPT-04-PUBLIC-IA-PLAYER-LANGUAGE-CONTRACT-v1.281**. Establish the shared public route/content taxonomy and player-language/archive policy before SEO and editorial consolidation. Do not broad-rewrite News/Guides or resume superseded page queues in this slice.
+
 ## Owner optimization authority — interaction ergonomics closed (2026-09-17)
 
 WEB-OPT-02 v1.279 is CLOSED at source commit `5de43e8de9378d57162ad741dd5b3a4e87609417`. Exact-v1.278 mobile baseline found 72 actionable controls below 44px across 8 routes; final v1.279 exact build has zero sub-44px audited controls across all 59 sitemap routes, zero horizontal-overflow routes, a visible 5px WebKit navigation scrollbar cue, and keyboard focus still reveals off-screen nav items. v1.278 CSS payload regression remains GREEN.

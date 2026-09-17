@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-03-PUBLIC-ASSET-BOUNDARY-IMAGE-DELIVERY-v1.280 WEB_CLOSED
+
+Current decision: public review artifacts are no longer shipped from the Web deploy root. All 23 design targets remain canonical under docs/design/reference with SHA inventory; public footprint fell 61,177,886 B -> 10,187,479 B (-83.35%). Homepage desktop/mobile hero PNG sources are preserved under docs/design/source and runtime WebP q95 reduces transfer ~82.7% with stable geometry and no meaningful visual degradation.
+
+Verified source delivery commit: `1c131e10ffe7f5ef060189cc02cbf57e77fcdf7a` on `origin/main`. Focused v1.280 browser 4/4 PASS desktop/mobile; v1.279 regression 2/2; v1.278 regression 4/4; UI/Web typecheck, Web lint, exact build 63 pages and clean current-state PASS. Portal/Ops design-reference mirrors remain unchanged.
+
+Next task: `WEB-OPT-04-PUBLIC-IA-PLAYER-LANGUAGE-CONTRACT-v1.281`. Do not reopen v1.280 without a related public-asset/provenance/image-delivery regression.
+
+Detailed report: `LGO-WEB-OPT-03-PUBLIC-ASSET-BOUNDARY-IMAGE-DELIVERY-REPORT-v1.280.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-02-INTERACTION-HIT-AREA-MOBILE-NAVIGATION-v1.279 WEB_CLOSED
 
 Current decision: shared public interaction geometry now meets the 44px mobile ergonomic contract without changing route IA or product copy. Release stage/readiness links, Status filters/disclosures, legacy service proof-card/news-detail actions and the mobile public navigation rail were corrected at shared owners.

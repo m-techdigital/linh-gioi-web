@@ -93,8 +93,16 @@ def main() -> int:
             fail(f"missing preserved PNG source: {rel}")
 
     next_action = read("docs/execution/WEB-NEXT-ACTION.md")
-    if "WEB-OPT-03-PUBLIC-ASSET-BOUNDARY-IMAGE-DELIVERY-v1.280" not in next_action:
-        fail("WEB-NEXT-ACTION does not point to WEB-OPT-03 v1.280")
+    project_state = read("docs/execution/WEB-PROJECT-STATE.md")
+    ledger = read("docs/execution/WEB-TASK-LEDGER.md")
+    report = read("docs/execution/LGO-WEB-OPT-03-PUBLIC-ASSET-BOUNDARY-IMAGE-DELIVERY-REPORT-v1.280.md")
+    active_prefix = "Current phase: WEB-OPT-03-PUBLIC-ASSET-BOUNDARY-IMAGE-DELIVERY-v1.280 WEB_CLOSED"
+    if project_state.startswith(active_prefix) and "WEB-OPT-04-PUBLIC-IA-PLAYER-LANGUAGE-CONTRACT-v1.281" not in next_action:
+        fail("active v1.280 checkpoint does not advance to WEB-OPT-04 v1.281")
+    if "| WEB-OPT-03-PUBLIC-ASSET-BOUNDARY-IMAGE-DELIVERY-v1.280 | WEB-OPT | WEB_CLOSED |" not in ledger:
+        fail("WEB-TASK-LEDGER does not record WEB-OPT-03 v1.280 closure")
+    if "1c131e10ffe7f5ef060189cc02cbf57e77fcdf7a" not in report or "83.35%" not in report:
+        fail("v1.280 report is missing source/footprint closure evidence")
     current_state = read("tools/validate_web_current_state.py")
     if '"validate_web_opt_public_asset_boundary_v1280.py"' not in current_state:
         fail("v1.280 validator is not registered in WEB CURRENT STATE authority")

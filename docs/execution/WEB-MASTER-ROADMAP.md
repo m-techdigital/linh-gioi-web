@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.280
+
+WEB-OPT-01 CSS ownership, WEB-OPT-02 interaction ergonomics and WEB-OPT-03 public asset boundary/image delivery are CLOSED. v1.280 at `1c131e10ffe7f5ef060189cc02cbf57e77fcdf7a` removes 49.86MB of review-only public mirrors and reduces homepage hero transfer ~82.7% while retaining docs provenance and predecessor regressions.
+
+Continue the v1.277 ordered optimization backlog. Next is WEB-OPT-04 v1.281 (public IA and player-language contract), followed by SEO metadata/sitemap ownership, editorial renderer consolidation and editorial mobile density.
+
 ## 2026-09-17 optimization checkpoint v1.279
 
 WEB-OPT-01 CSS ownership/payload reset and WEB-OPT-02 interaction hit-area/mobile-navigation are CLOSED. v1.279 at `5de43e8de9378d57162ad741dd5b3a4e87609417` removes all audited sub-44px mobile action targets from the 59-route public set while preserving v1.278 CSS payload ownership and no-overflow behavior. Continue the v1.277 ordered optimization backlog; next is WEB-OPT-03 v1.280 (public asset boundary and image delivery).
