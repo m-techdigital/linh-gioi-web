@@ -1,14 +1,14 @@
-Current phase: WEB-FE-RELEASE-READINESS-VISUAL-REALIGNMENT-v1.274 WEB_CLOSED
+Current phase: WEB-FE-RELEASE-TESTER-PACK-VISUAL-REALIGNMENT-v1.275 WEB_CLOSED
 
-Current decision: `/release/readiness` now uses the accepted immersive public/release chrome with a cinematic two-art hero, live readiness console, four canonical owner gates, truthful tester preparation and the real Download/Status/Support routes. The duplicated historical readiness proof disclosure and old constrained page frame are superseded. Mobile owner gates use an internal horizontal rail; evidence remains reachable through native disclosures.
+Current decision: `/release/tester-pack` now uses the accepted immersive public/release chrome with a cinematic project-art hero, live field manual, five truthful tester shortcuts, primary safe-feedback/template flow and one native secondary disclosure for checklist/device/known limitations. The historical constrained proof/manual stack is superseded without removing local-only preparation controls.
 
-Verified source delivery commit: `fed86b406e673243d0ebcb56442df8bb8005dbc0` on `origin/main`. Focused v1.274: 12/12 PASS; active v1.221 compatibility: 10/10 PASS; selected dev: 96/96 PASS; production: 96/96 PASS; production build: 63 static pages; UI/Web typecheck and lint PASS; canonical content 14/14 PASS; clean source-archive current-state PASS. Production desktop/mobile AFTER screenshots were visually reviewed with no dev badge.
+Verified source delivery commit: `b2f8b5aa9a48505899c467002a030081734fb591` on `origin/main`. Focused v1.275: 14/14 PASS; production readiness stability after deterministic test gate: 28/28 PASS; selected dev: 110/110 PASS; selected production: 110/110 PASS; production build: 63 static pages; v1.275/v1.274/v1.273 validators PASS; UI/Web typecheck, Web lint and diff-check PASS. Production desktop/mobile AFTER screenshots were visually reviewed without dev badge or horizontal overflow.
 
-Accepted predecessor `/release` v1.273 source commit: `98eadfcfd59d07d224c6e8733e1d211c5408efd8`. Do not reopen v1.273 or v1.274 without a related regression.
+Accepted predecessors `/release` v1.273 and `/release/readiness` v1.274 remain closed; do not reopen them or v1.275 without a related regression.
 
-Next task: WEB-FE-RELEASE-TESTER-PACK-VISUAL-REALIGNMENT-v1.275 on `/release/tester-pack`. Do not touch `/status` until v1.275 is closed.
+Next task queue only: WEB-FE-STATUS-VISUAL-REALIGNMENT-v1.276 on `/status`. Do not touch later support/community routes until `/status` is closed.
 
-Detailed report: LGO-WEB-FE-RELEASE-READINESS-VISUAL-REALIGNMENT-REPORT-v1.274.md.
+Detailed report: LGO-WEB-FE-RELEASE-TESTER-PACK-VISUAL-REALIGNMENT-REPORT-v1.275.md.
 
 Historical state below is retained for provenance, not active visual authority.
 

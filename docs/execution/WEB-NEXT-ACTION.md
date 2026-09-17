@@ -5,18 +5,18 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-RELEASE-TESTER-PACK-VISUAL-REALIGNMENT-v1.275
+WEB-FE-STATUS-VISUAL-REALIGNMENT-v1.276
 
 Objective:
-Continue the owner-priority full-site visual remediation one page at a time. `/release/readiness` v1.274 is closed by target-driven real-browser evidence and verified source delivery; do not reopen it without a related regression. The next single active page is `/release/tester-pack` using the registered Public Tester Pack detailed target v1.129 and the accepted shared public/release chrome.
+Continue the owner-priority full-site visual remediation one page at a time. `/release/tester-pack` v1.275 is closed by target-driven real-browser evidence and verified source delivery; do not reopen it without a related regression. The next single active page is `/status` using the registered Public Status detailed target v1.130 and the accepted shared public/release chrome.
 
-Current FE scope: select `/release/tester-pack` as the next single active page. Capture fresh production BEFORE desktop/mobile, compare against the registered Tester Pack target, then RED→GREEN the real page body while preserving truthful local-only tester preparation controls and `NO_ACCEPTED_BACKEND_CONTRACT`. Complete `/release/tester-pack` fully before touching `/status`.
+Current FE scope: select `/status` only after v1.275 governance/package closure. Capture fresh production BEFORE desktop/mobile, compare against the registered Status target, then RED→GREEN the real page body while preserving truthful public status semantics and existing non-claims. Do not batch support/community routes into `/status`.
 
-Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile; 16 have detailed page targets. Historical CLOSED/PASS does not prove visual fidelity. `/game` v1.266, `/story` v1.267, `/classes` v1.268, `/journey` v1.269, `/start` v1.270, `/download` v1.271, `/download/trust` v1.272, `/release` v1.273 and `/release/readiness` v1.274 have now passed target-driven replacement/review. Continue sequentially `/release/tester-pack` → `/status`, then support/community families. Do not use the old `/news` queue as current authority.
+Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile; 16 have detailed page targets. `/game` v1.266 through `/release/tester-pack` v1.275 have now passed their sequential target-driven replacement/review. Continue next with `/status` only, then support/community families. The old `/news` queue remains historical, not active authority.
 
-Release v1.273 checkpoint: `/release` source was accepted and delivered at `98eadfcfd59d07d224c6e8733e1d211c5408efd8` with focused14/14, selected dev74/74, production74/74 and build63. It is the accepted predecessor to v1.274 and must not be reopened without a related regression.
+Release Readiness v1.274 checkpoint: `/release/readiness` remains closed at source commit `fed86b406e673243d0ebcb56442df8bb8005dbc0`; focused12/12, active v1.22110/10, selected dev96/96, production96/96 and build63 remain accepted predecessor evidence.
 
-Release Readiness v1.274 checkpoint: `/release/readiness` is closed at source commit `fed86b406e673243d0ebcb56442df8bb8005dbc0`. Focused12/12, active v1.22110/10, selected dev96/96 and production96/96 PASS; build63; production desktop/mobile AFTER reviewed without dev badge; clean archive current-state PASS. Latest report: LGO-WEB-FE-RELEASE-READINESS-VISUAL-REALIGNMENT-REPORT-v1.274.md. Next single page: `/release/tester-pack` v1.275.
+Tester Pack v1.275 checkpoint: `/release/tester-pack` is closed at source commit `b2f8b5aa9a48505899c467002a030081734fb591`. Focused14/14, production readiness stability28/28, selected dev110/110 and production110/110 PASS; build63; production desktop/mobile AFTER reviewed without dev badge; v1.275/v1.274/v1.273 validators, UI/Web typecheck, Web lint and diff-check PASS. Latest report: LGO-WEB-FE-RELEASE-TESTER-PACK-VISUAL-REALIGNMENT-REPORT-v1.275.md. Next single page: `/status` v1.276.
 
 Mandatory execution rules:
 
