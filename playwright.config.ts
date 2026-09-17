@@ -28,6 +28,8 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // Public design targets remain evidence artifacts but no longer render as player-facing chrome; v1.272a owns public shell consistency.
+    "**/fe-public-design-target-attachment-v197.spec.ts",
     // v1.271 replaces the historical /download proof/depth layouts with the truthful target-driven release-gate landing.
     "**/fe-download-design-target-density-v1125.spec.ts",
     "**/fe-download-vietnamese-design-match-v1140.spec.ts",

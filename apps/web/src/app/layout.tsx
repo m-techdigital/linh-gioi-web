@@ -1,5 +1,6 @@
 import "./globals.css";
 import "@lgo-web/ui/service-layout.css";
+import "@lgo-web/ui/public-chrome.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 

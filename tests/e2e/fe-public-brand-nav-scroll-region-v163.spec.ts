@@ -50,14 +50,14 @@ async function collectBrandNavMetrics(page: Page): Promise<BrandNavMetrics> {
 async function expectPublicBrandNavRailReadable(page: Page, route: string, heading: string) {
   await page.goto(route);
   await expect(page.getByRole("heading", { name: heading })).toBeVisible();
-  const rail = page.getByRole("region", { name: "Public primary route links" });
+  const rail = page.getByRole("region", { name: "Liên kết điều hướng chính" });
   await expect(rail).toBeVisible();
   await rail.focus();
   await expect(rail).toBeFocused();
   const metrics = await collectBrandNavMetrics(page);
   expect(metrics.pageOverflow, "public page horizontal overflow").toBeLessThanOrEqual(0);
   expect(metrics.rail.role, "brand link rail role").toBe("region");
-  expect(metrics.rail.ariaLabel, "brand link rail label").toBe("Public primary route links");
+  expect(metrics.rail.ariaLabel, "brand link rail label").toBe("Liên kết điều hướng chính");
   expect(metrics.rail.tabIndex, "brand link rail tabindex").toBe(0);
   expect(metrics.rail.focused, "brand link rail focus").toBe(true);
   expect(metrics.rail.scrollWidth, "brand link rail scroll width").toBeGreaterThan(metrics.rail.clientWidth);
@@ -70,7 +70,7 @@ async function expectPublicBrandNavRailReadable(page: Page, route: string, headi
 test.describe("public brand navigation scroll region", () => {
   test("mobile classes route exposes the horizontal public route rail to keyboard users", async ({ page, isMobile }) => {
     test.skip(!isMobile, "mobile-only horizontal public nav rail coverage");
-    await expectPublicBrandNavRailReadable(page, "/classes", "Chọn cách bạn nhìn và bảo vệ thế giới");
+    await expectPublicBrandNavRailReadable(page, "/classes", "Chọn cách bạn bảo vệ Linh Giới");
   });
 
   test("mobile download route exposes the horizontal public route rail to keyboard users", async ({ page, isMobile }) => {

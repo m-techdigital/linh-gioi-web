@@ -12,8 +12,8 @@ const shellSurfaces = [
     route: "/",
     skipSelector: ".lgo-skip-link",
     contentSelector: "#main-content",
-    navName: /Linh Giới Online public navigation/i,
-    designScope: /Public Core/i,
+    navName: /Điều hướng công khai Linh Giới Online/i,
+    designScope: null,
     navFontCap: 18,
   },
   {
@@ -72,7 +72,12 @@ test.describe("shell keyboard reachability", () => {
       await page.goto(`${surface.url}${surface.route}`);
       await expect(page.locator("main h1").first(), `${surface.label} h1`).toBeVisible();
       await expect(page.getByRole("navigation", { name: surface.navName })).toBeVisible();
-      await expect(page.getByRole("region", { name: new RegExp(`Design target reference.*${surface.designScope.source}`, "i") })).toBeVisible();
+      if (surface.designScope) {
+        await expect(page.getByRole("region", { name: new RegExp(`Design target reference.*${surface.designScope.source}`, "i") })).toBeVisible();
+      } else {
+        await expect(page.locator(".lgo-design-target-band")).toHaveCount(0);
+        await expect(page.locator(".lgo-nav-play")).toBeVisible();
+      }
 
       await page.keyboard.press("Tab");
       await expect(page.locator(surface.skipSelector), `${surface.label} skip link first tab stop`).toBeFocused();
@@ -90,12 +95,20 @@ test.describe("shell keyboard reachability", () => {
       expect(navMetrics.overflow, `${surface.label} horizontal overflow`).toBeLessThanOrEqual(0);
       for (const size of navMetrics.navFontSizes) expect(size, `${surface.label} nav font-size`).toBeLessThanOrEqual(surface.navFontCap);
 
-      const designLink = page.getByRole("link", { name: new RegExp(`${surface.label}.*opens in a new tab`, "i") }).first();
-      await designLink.focus();
-      await expect(designLink, `${surface.label} design target link keyboard focus`).toBeFocused();
-      const designMetrics = await metrics(page, surface);
-      expect(designMetrics.designFocused, `${surface.label} design target region keyboard focus`).toBe(true);
-      expect(designMetrics.focusedOutlineStyle, `${surface.label} design target focus outline`).not.toBe("none");
+      if (surface.designScope) {
+        const designLink = page.getByRole("link", { name: new RegExp(`${surface.label}.*opens in a new tab`, "i") }).first();
+        await designLink.focus();
+        await expect(designLink, `${surface.label} design target link keyboard focus`).toBeFocused();
+        const designMetrics = await metrics(page, surface);
+        expect(designMetrics.designFocused, `${surface.label} design target region keyboard focus`).toBe(true);
+        expect(designMetrics.focusedOutlineStyle, `${surface.label} design target focus outline`).not.toBe("none");
+      } else {
+        const publicAction = page.locator(".lgo-nav-play");
+        await publicAction.focus();
+        await expect(publicAction, `${surface.label} primary action keyboard focus`).toBeFocused();
+        const actionMetrics = await metrics(page, surface);
+        expect(actionMetrics.focusedOutlineStyle, `${surface.label} primary action focus outline`).not.toBe("none");
+      }
     });
   }
 });

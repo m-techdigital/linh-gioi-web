@@ -30,7 +30,7 @@ def check_e2e_guardrail() -> None:
         "expanded FE route readability audit",
         "axe-core/axe.min.js",
         "seriousAxeViolations",
-        "Public primary route links",
+        "Liên kết điều hướng chính",
         "Linh Giới navigation",
         "Scrollable data table:",
         "page.getByRole(\"heading\"",

@@ -41,7 +41,7 @@ async function expectSkipLink(page: import("@playwright/test").Page) {
 }
 
 async function expectCurrentPublicLink(page: import("@playwright/test").Page, name: string, href: string) {
-  const link = page.getByRole("navigation", { name: "Linh Giới Online public navigation" }).getByRole("link", { name });
+  const link = page.getByRole("navigation", { name: "Điều hướng công khai Linh Giới Online" }).getByRole("link", { name });
   await expect(link).toHaveAttribute("href", href);
   await expect(link).toHaveAttribute("aria-current", "page");
   await expect(link).toHaveAttribute("data-current", "page");

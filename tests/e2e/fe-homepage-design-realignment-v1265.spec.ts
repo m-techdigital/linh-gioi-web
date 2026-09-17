@@ -43,7 +43,7 @@ test.describe('homepage restarts from actual v1.118 visual composition',()=>{
   await expect(page.locator('main')).not.toContainText('500.000');await expect(page.locator('main')).not.toContainText('Máy chủ hoạt động ổn định');
  });
  test('availability is readable but no design-review or engineering banners dominate the homepage',async({page})=>{
-  await expect(page.locator('.lgo-marketing-footer')).toContainText('Bản public chưa mở');await expect(page.locator('.lgo-marketing-footer').getByRole('link',{name:'Xem trạng thái chơi'})).toHaveAttribute('href','/download');
+  await expect(page.locator('.lgo-marketing-footer')).toContainText('Bản công khai chưa mở');await expect(page.locator('.lgo-marketing-footer').getByRole('link',{name:'Xem trạng thái chơi'})).toHaveAttribute('href','/download');
   await expect(page.locator('.lgo-design-target-band')).toHaveCount(0);await expect(page.locator('main')).not.toContainText('NO_ACCEPTED_BACKEND_CONTRACT');await expect(page.locator('main')).not.toContainText('browser/e2e');
   await expect(page.locator('main h1')).toHaveCount(1);await expect(page.locator('main form,main input,main textarea')).toHaveCount(0);
  });
@@ -58,7 +58,7 @@ test.describe('homepage restarts from actual v1.118 visual composition',()=>{
  });
  test('homepage skip link and header remain usable without exposing engineering controls',async({page})=>{
   await page.keyboard.press('Tab');const skip=page.getByRole('link',{name:'Bỏ qua menu tới nội dung chính',exact:true});await expect(skip).toBeFocused();await page.keyboard.press('Enter');await expect(page.locator('#main-content')).toBeFocused();
-  const nav=page.getByRole('navigation',{name:'Linh Giới Online public navigation',exact:true});const world=nav.getByRole('link',{name:'Thế giới',exact:true});await world.focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+'/game');await expect(world).toHaveAttribute('aria-current','page');
+  const nav=page.getByRole('navigation',{name:'Điều hướng công khai Linh Giới Online',exact:true});const world=nav.getByRole('link',{name:'Thế giới',exact:true});await world.focus();await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+'/game');await expect(world).toHaveAttribute('aria-current','page');
   await nav.getByRole('link',{name:'Linh Giới Online — Trang chủ',exact:true}).click();await expect(page).toHaveURL(origin+'/');await expect(page.locator('.lgo-immersive-hero')).toBeVisible();await expect(page.locator('.lgo-design-target-band')).toHaveCount(0);
  });
  test('main accessibility and expanded spacing remain coherent',async({page})=>{

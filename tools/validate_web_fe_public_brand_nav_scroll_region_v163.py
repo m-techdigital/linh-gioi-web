@@ -32,7 +32,7 @@ def check_public_brand_nav() -> None:
         "className=\"lgo-brand-nav\"",
         "className=\"lgo-brand-links\"",
         "role=\"region\"",
-        "aria-label=\"Public primary route links\"",
+        "aria-label=\"Liên kết điều hướng chính\"",
         "tabIndex={0}",
         "RouteAwareLink",
     ])
@@ -68,7 +68,7 @@ def check_tests_and_docs() -> None:
     require_text("tests/e2e/fe-public-brand-nav-scroll-region-v163.spec.ts", [
         "/classes",
         "/download",
-        "Public primary route links",
+        "Liên kết điều hướng chính",
         "tabIndex",
         "toBeFocused",
         "scrollWidth",

@@ -29,6 +29,7 @@
     "./marketing-layout.css": "./src/marketing-layout.css",
     "./art-wordmark.css": "./src/art-wordmark.css",
     "./home-editorial.css": "./src/home-editorial.css",
+    "./public-chrome.css": "./src/public-chrome.css",
     "./public-entry-layout.css": "./src/public-entry-layout.css",
     "./story-landing-layout.css": "./src/story-landing-layout.css",
     "./classes-landing-layout.css": "./src/classes-landing-layout.css",

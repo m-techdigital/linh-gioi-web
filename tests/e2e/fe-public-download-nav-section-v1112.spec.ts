@@ -6,7 +6,7 @@ const web = process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
 test.describe("public download section navigation continuity", () => {
   test("/download/trust keeps Trạng thái chơi marked current", async ({ page }) => {
     await page.goto(`${web}/download/trust`);
-    const nav = page.getByRole("navigation", { name: "Linh Giới Online public navigation" });
+    const nav = page.getByRole("navigation", { name: "Điều hướng công khai Linh Giới Online" });
     await expect(nav).toBeVisible();
     const playLink = nav.getByRole("link", { name: "Trạng thái chơi" });
     await expect(playLink).toBeVisible();

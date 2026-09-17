@@ -24,6 +24,13 @@ def require_text(rel: str, markers: list[str]) -> None:
         if marker not in text:
             fail(f"{rel}: missing {marker}")
 
+
+def forbid_text(rel: str, markers: list[str]) -> None:
+    text = read(rel)
+    for marker in markers:
+        if marker in text:
+            fail(f"{rel}: contains retired public-runtime marker {marker}")
+
 def check_shared_ui() -> None:
     require_text("packages/ui/src/primitives.tsx", [
         "export type DesignTargetReferenceProps",
@@ -51,8 +58,17 @@ def check_public_attachment() -> None:
         "Base UI/UX Layout",
     ])
     require_text("apps/web/src/components/PublicSiteShell.tsx", [
+        "<PublicNavigation/>",
+        "<MarketingFooter",
+    ])
+    forbid_text("apps/web/src/components/PublicSiteShell.tsx", [
         "PublicDesignTargetReference",
         "lgo-design-target-band",
+    ])
+    require_text("tests/e2e/fe-public-chrome-unification-v1272a.spec.ts", [
+        "all 27 audited public routes",
+        "designBandCount",
+        "toHaveCount(0)",
     ])
     require_text("apps/web/src/app/globals.css", [
         "WEB v1.97 public design target attachment",

@@ -22,7 +22,8 @@ def main():
  require('apps/web/src/components/PublicWorldLanding.tsx','worldRouteStops','lgo-world-landing-hero','Một thế giới','lgo-world-journey','lgo-world-region-grid','/game/loop','/journey','targetCopy','hero-city.png','hero-character.png')
  forbid('apps/web/src/app/game/page.tsx','lgo-game-world-design-board','game-world-atlas-hub.svg','Bằng chứng phụ','WorldAtlasStories','WorldRouteJourney','GamePillarGrid')
  require('packages/ui/src/public-entry-layout.css','immersive-shell.css','.lgo-world-landing-hero','.lgo-world-journey { display:grid; grid-template-columns:repeat(5','.lgo-world-region-grid { display:grid; grid-template-columns:repeat(5','@media (max-width:700px)','grid-template-columns:1fr','prefers-reduced-motion','forced-colors')
- require('packages/ui/src/immersive-shell.css','marketing-navigation.css','home-editorial.css','art-wordmark.css','.lgo-public-shell-immersive .lgo-main > .lgo-container')
+ require('packages/ui/src/immersive-shell.css','.lgo-public-shell-immersive .lgo-main > .lgo-container')
+ require('packages/ui/src/public-chrome.css','marketing-navigation.css','home-editorial.css','art-wordmark.css','.lgo-public-shell .lgo-site-header')
  require('tests/e2e/fe-game-world-realignment-v1266.spec.ts','proof-board engineering layout','five source world stops','distinct artwork','fake trailer','320px','forced colors','desktop target density')
  design=ROOT/'apps/web/public/design-reference/game-world-detailed-design-target-v1120.png'; manifest=ROOT/'apps/web/public/game-art/world-target/provenance.json'
  if not design.is_file() or not manifest.is_file(): fail('missing game world design/provenance')

@@ -90,7 +90,7 @@ function expectNamedScrollableRegion(metrics: RouteMetrics, required: RouteCase[
     const rail = metrics.scrollRegions.find((region) => region.className.includes("lgo-brand-links"));
     expect(rail, `${routeName} public brand rail`).toBeTruthy();
     expect(rail?.role, `${routeName} public brand rail role`).toBe("region");
-    expect(rail?.ariaLabel, `${routeName} public brand rail label`).toBe("Public primary route links");
+    expect(rail?.ariaLabel, `${routeName} public brand rail label`).toBe("Liên kết điều hướng chính");
     expect(rail?.tabIndex, `${routeName} public brand rail tabindex`).toBe(0);
     expect(rail?.scrollWidth ?? 0, `${routeName} public brand rail scrollable`).toBeGreaterThan(rail?.clientWidth ?? 0);
   }
