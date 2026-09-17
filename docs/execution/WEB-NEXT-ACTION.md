@@ -5,14 +5,14 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-START-VISUAL-REALIGNMENT-v1.270
+WEB-FE-DOWNLOAD-VISUAL-REALIGNMENT-v1.271
 
 Objective:
-Continue the owner-priority full-site visual remediation one page at a time. `/journey` v1.269 is closed by target-driven browser evidence; do not reopen it without a related regression. Defer the historical /news queue and move to the next page-specific target.
+Continue the owner-priority full-site visual remediation one page at a time. `/start` v1.270 is closed by target-driven browser evidence; do not reopen it without a related regression. Defer the historical /news queue and move to the first release/service page-specific target.
 
-Current FE scope: select `/start` as the next single active page. Rebuild against the existing start/onboarding detailed target and truthful source-backed onboarding routes; complete `/start` fully before any other page, with real browser desktop/mobile evidence, before touching release/service routes.
+Current FE scope: select `/download` as the next single active page. Rebuild against the existing Download detailed target and truthful availability/release-gate source data; complete `/download` fully before any other page, with real browser desktop/mobile evidence, before touching `/download/trust`.
 
-Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile;16 have detailed page targets. Historical CLOSED/PASS does not prove visual fidelity. `/game` v1.266, `/story` v1.267, `/classes` v1.268 and `/journey` v1.269 are now closed by real target-driven replacements. Continue sequentially `/start`, then release/service and support/community families. Do not use the old `/news` queue as current authority.
+Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile;16 have detailed page targets. Historical CLOSED/PASS does not prove visual fidelity. `/game` v1.266, `/story` v1.267, `/classes` v1.268, `/journey` v1.269 and `/start` v1.270 are now closed by real target-driven replacements. Continue sequentially `/download` → `/download/trust` → `/release` → `/release/readiness` → `/release/tester-pack` → `/status`, then support/community families. Do not use the old `/news` queue as current authority.
 
 Mandatory execution rules:
 
@@ -64,3 +64,4 @@ Story v1.267 checkpoint: `/story` now uses the immersive public shell, source-de
 
 Classes v1.268 checkpoint: `/classes` now uses the immersive public shell, canonical five-Lộ source data, clean target-derived portraits, a live Năm Lộ wheel, five illustrated selectable identity cards and a read-only selected-path feature. Focused14/14, selected dev74/74 and production74/74 PASS; build63; source/provenance/current-state/typecheck/lint gates PASS. Historical classes proof/art/layout suites are superseded, not runtime PASS. Latest report: LGO-WEB-FE-CLASSES-VISUAL-REALIGNMENT-REPORT-v1.268.md. Next single page: `/journey` v1.269.
 Journey v1.269 checkpoint: `/journey` now uses the immersive public shell, canonical six `sampleSessionBeats`, five `worldRouteStops`, a live informational four-phase cycle, one clean target-derived Linh Thành hero crop and the already audited world-target artwork. Focused12/12, selected dev86/86 and production86/86 PASS; build63; source/provenance/current-state/typecheck/lint gates PASS. Historical journey board/target/layout suites are superseded, not runtime PASS. Latest report: LGO-WEB-FE-JOURNEY-VISUAL-REALIGNMENT-REPORT-v1.269.md. Next single page: `/start` v1.270.
+Start v1.270 checkpoint: `/start` now uses the immersive public shell, five clean target-derived artwork crops, a live five-step onboarding rail, a keyboard-readable movement/Lộ guide panel and four illustrated milestones. Focused14/14, selected dev100/100 and production100/100 PASS; build63; source/provenance/current-state/typecheck/lint gates PASS. Historical Start board/gallery/target/layout suites are superseded, not runtime PASS. Latest report: LGO-WEB-FE-START-VISUAL-REALIGNMENT-REPORT-v1.270.md. Next single page: `/download` v1.271.

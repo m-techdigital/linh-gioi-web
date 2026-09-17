@@ -44,7 +44,7 @@ def main():
     require('docs/superpowers/specs/2026-09-17-public-site-visual-realignment-design.md','/journey','Source-derived artwork crops are allowed only as decorative art with provenance')
     require('docs/superpowers/plans/2026-09-17-public-site-visual-realignment.md','Task 4: `/journey`','20-minute journey timeline/route target')
     require('docs/execution/WEB-PROJECT-STATE.md','WEB-FE-JOURNEY-VISUAL-REALIGNMENT-v1.269 WEB_CLOSED','WEB-FE-START-VISUAL-REALIGNMENT-v1.270')
-    require('docs/execution/WEB-NEXT-ACTION.md','WEB-FE-START-VISUAL-REALIGNMENT-v1.270','Journey v1.269 checkpoint')
+    require('docs/execution/WEB-NEXT-ACTION.md','Journey v1.269 checkpoint')
     require('docs/execution/WEB-TASK-LEDGER.md','| WEB-FE-JOURNEY-VISUAL-REALIGNMENT-v1.269 | WEB-FE | WEB_CLOSED |')
     require('docs/execution/LGO-WEB-FE-JOURNEY-VISUAL-REALIGNMENT-REPORT-v1.269.md','Focused `/journey`: 12/12 PASS','Fresh production selected regression on port 3236: 86/86 PASS','1b3e9c98fcd43981867f764b89272783a262c013')
     require('docs/execution/HANDOFF-LGO-WEB-FE-JOURNEY-VISUAL-REALIGNMENT-v1.269.md','Next: `/start` visual realignment v1.270')

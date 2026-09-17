@@ -1,3 +1,16 @@
+Current phase: WEB-FE-START-VISUAL-REALIGNMENT-v1.270 WEB_CLOSED
+
+Current decision: `/start` is now a target-driven immersive onboarding landing. The live page uses the shared immersive shell, a cinematic Đông Môn hero, five live onboarding steps, one keyboard-readable movement/skill guide panel and four illustrated onboarding milestones. The historical generic hero, design board, technical blockout gallery, class grid and world route are superseded, not counted as current runtime PASS.
+
+Verified source delivery commit: `bc60189e5ec61fbb43bb8e0c3aca35f83684bbfc` on `origin/main`. Focused start: 14/14 PASS; selected dev regression: 100/100 PASS; fresh production selected regression: 100/100 PASS; production build: 63 static pages; UI/Web typecheck and lint PASS; clean source-archive current-state PASS. Production desktop/mobile screenshots and metrics were reviewed after real RED→GREEN replacement.
+
+Next task after final governance/archive delivery: WEB-FE-DOWNLOAD-VISUAL-REALIGNMENT-v1.271.
+Select `/download` as the next single active page, then `/download/trust`, followed by the remaining release/service and support/community families. Do not resume the historical `/news` queue.
+
+Detailed report: LGO-WEB-FE-START-VISUAL-REALIGNMENT-REPORT-v1.270.md.
+
+Historical state below is retained for provenance, not active visual authority.
+
 Current phase: WEB-FE-JOURNEY-VISUAL-REALIGNMENT-v1.269 WEB_CLOSED
 
 Current decision: `/journey` is now a target-driven immersive journey landing. The live page uses the shared immersive shell, a cinematic Linh Thành hero, a live informational four-phase cycle, all six canonical `sampleSessionBeats` as illustrated moment cards, and all five canonical `worldRouteStops` as the world-route rail. The historical generic hero, long proof cards and embedded journey reference board are superseded, not counted as current runtime PASS.
