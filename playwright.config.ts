@@ -189,6 +189,8 @@ export default defineConfig({
     "**/fe-support-design-target-density-v1131.spec.ts",
     "**/fe-support-real-ui-layout-v1146.spec.ts",
     "**/fe-support-real-ui-layout-v1204.spec.ts",
+    // v1.285 replaces v1.224 duplicated support-topic wall with one primary station + FAQ flow.
+    "**/fe-support-real-ui-layout-v1224.spec.ts",
     "**/fe-public-status-design-board-v181.spec.ts",
     "**/fe-status-design-target-density-v1130.spec.ts",
     "**/fe-status-vietnamese-real-ui-layout-v1145.spec.ts",

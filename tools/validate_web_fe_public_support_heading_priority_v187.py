@@ -19,7 +19,7 @@ def require_order(rel: str, first: str, second: str) -> None:
     a, b = text.find(first), text.find(second)
     if a < 0 or b < 0 or a > b: fail(f"{rel}: expected {first} before {second}")
 def check_routes() -> None:
-    require_order("apps/web/src/app/support/page.tsx", "<PublicSupportHero/>", "<PublicSupportTopics/>")
+    require_order("apps/web/src/app/support/page.tsx", "<PublicSupportHero/>", "<PublicSupportAnswers/>")
     require_order("apps/web/src/app/support/help/page.tsx", "<PublicHelpHero/>", "<PublicHelpAnswers/>")
     require_order("apps/web/src/app/support/safety/page.tsx", "<PublicSafetyHero/>", "<PublicSafetyChecklist/>")
     require_text("apps/web/src/components/PublicSupportExperience.tsx", ['title="Hỗ trợ cộng đồng"', "ExperienceHero", "Không có hệ thống ticket thật", "tra cứu", "Chưa có ticket"])
