@@ -8,8 +8,7 @@ def main()->int:
     prior=runpy.run_path(str(ROOT/'tools/validate_web_fe_control_tower_article_v1254.py'))
     result=prior['main']()
     require=prior['require'];errors=prior['ERRORS']
-    route=require('apps/web/src/app/news/[slug]/page.tsx',('if (entry.slug === "player-safety-support-faq-polish-started")','<PublicSafetySupportArticle entry={entry} related={related}/>'))
-    if route.find('notFound();')>route.find('<PublicSafetySupportArticle'):errors.append('category guard must precede selected article')
+    require('apps/web/src/components/PublicEditorialRendererRegistry.tsx', ('"player-safety-support-faq-polish-started": PublicSafetySupportArticle',))
     view=require('apps/web/src/components/PublicSafetySupportArticle.tsx',('contentDetailSections.filter(section => section.slug === entry.slug)','<PublishedArticle entry={entry} related={related}','chapterLinks={chapterLinks}','Mục lục bài viết an toàn và hỗ trợ','Bối cảnh của bản cập nhật web v1.14','href: "/support/safety"','href: "/support/help"','href: "/guides/player-safety-support-guide"','href: "/community"','href: "/support"','href: "/status"','href: "/download/trust"','href: "/release/tester-pack"'))
     for marker in ('<GuideArticle','<ExperienceHero','<Stack','<section','<form','useState(','fetch(','localStorage','sessionStorage','dangerouslySetInnerHTML'):
         if marker in view:errors.append('page must remain a thin source/label composition: '+marker)

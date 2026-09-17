@@ -17,10 +17,13 @@ def require(rel: str, markers: tuple[str, ...] = ()) -> str:
 def main() -> int:
     ERRORS.clear()
     route = require('apps/web/src/app/guides/[slug]/page.tsx', (
+
         'export const dynamicParams = false', 'localContentRepository.list("guides")',
-        'if (!entry || entry.category !== "guides") notFound();',
-        'if (entry.slug === "player-trust-release-guide")', '<PublicPlayerTrustGuide entry={entry}/>'))
-    if route.find('notFound();') > route.find('<PublicPlayerTrustGuide entry={entry}/>'): ERRORS.append('category guard must precede specialization')
+
+        'if (!entry || entry.category !== "guides") notFound();', 'renderGuideArticle(entry)', 'if (!rendered) notFound();'))
+
+    require('apps/web/src/components/PublicEditorialRendererRegistry.tsx', ('"player-trust-release-guide": PublicPlayerTrustGuide',))
+    if route.find('if (!entry || entry.category !== "guides") notFound();') > route.find('renderGuideArticle(entry)'): ERRORS.append('guide category guard must precede registry delegation')
     view = require('apps/web/src/components/PublicPlayerTrustGuide.tsx', (
         'guideDetailSteps.filter(step => step.slug === entry.slug)', 'title={entry.title}', 'lead={entry.summary}', '{entry.body}',
         'GuideArticle', 'contentsId="player-trust-contents"', 'Mục lục tin cậy trước bản test',

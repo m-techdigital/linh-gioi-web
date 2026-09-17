@@ -19,13 +19,14 @@ def require(rel: str, markers: tuple[str, ...] = ()) -> str:
 
 def main() -> int:
     ERRORS.clear()
-    route = require("apps/web/src/app/guides/[slug]/page.tsx", (
-        '@lgo-web/ui/guide-article.css', 'export const dynamicParams = false',
-        'localContentRepository.list("guides")', 'localContentRepository.bySlug(slug)',
-        'if (!entry || entry.category !== "guides") notFound();',
-        'if (entry.slug === "world-gameplay-loop-guide")', '<PublicWorldLoopGuide entry={entry}/>'))
-    if route.find('notFound();') > route.find('<PublicWorldLoopGuide entry={entry}/>'):
-        ERRORS.append("guide source/category guard must run before specialization")
+    route = require('apps/web/src/app/guides/[slug]/page.tsx', (
+
+        'export const dynamicParams = false', 'localContentRepository.list("guides")',
+
+        'if (!entry || entry.category !== "guides") notFound();', 'renderGuideArticle(entry)', 'if (!rendered) notFound();'))
+
+    require('apps/web/src/components/PublicEditorialRendererRegistry.tsx', ('"world-gameplay-loop-guide": PublicWorldLoopGuide',))
+    if route.find('if (!entry || entry.category !== "guides") notFound();') > route.find('renderGuideArticle(entry)'): ERRORS.append('guide category guard must precede registry delegation')
     require("packages/content/src/repository.ts", ('entry.status === "published"', 'entry.category === category'))
     view = require("apps/web/src/components/PublicWorldLoopGuide.tsx", (
         'guideDetailSteps.filter(step => step.slug === entry.slug)', 'title={entry.title}', 'lead={entry.summary}', '{entry.body}',

@@ -8,8 +8,7 @@ def main()->int:
     prior=runpy.run_path(str(ROOT/'tools/validate_web_fe_control_tower_article_v1254.py'))
     result=prior['main']()
     require=prior['require'];errors=prior['ERRORS']
-    route=require('apps/web/src/app/news/[slug]/page.tsx',('if (entry.slug === "status-download-trust-polish-started")','<PublicStatusTrustArticle entry={entry} related={related}/>'))
-    if route.find('notFound();')>route.find('<PublicStatusTrustArticle'):errors.append('category guard must precede status/trust specialization')
+    require('apps/web/src/components/PublicEditorialRendererRegistry.tsx', ('"status-download-trust-polish-started": PublicStatusTrustArticle',))
     view=require('apps/web/src/components/PublicStatusTrustArticle.tsx',('contentDetailSections.filter(section => section.slug === entry.slug)','<PublishedArticle entry={entry} related={related}','chapterLinks={chapterLinks}','Mục lục bài viết trạng thái và bản tải','Bối cảnh của bản cập nhật web v1.10','href: "/release/readiness"','href: "/release"','href: "/support/safety"','href: "/download"','href: "/support/help"','href: "/download/trust"','href: "/status"'))
     for marker in ('<GuideArticle','<ExperienceHero','<Stack','<section','<form','useState(','fetch(','localStorage','sessionStorage','dangerouslySetInnerHTML'):
         if marker in view:errors.append('page must remain a thin source/label composition: '+marker)

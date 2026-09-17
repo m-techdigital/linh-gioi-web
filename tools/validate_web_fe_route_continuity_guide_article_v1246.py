@@ -18,10 +18,13 @@ def require(rel: str, markers: tuple[str, ...] = ()) -> str:
 def main() -> int:
     ERRORS.clear()
     route = require('apps/web/src/app/guides/[slug]/page.tsx', (
+
         'export const dynamicParams = false', 'localContentRepository.list("guides")',
-        'if (!entry || entry.category !== "guides") notFound();',
-        'if (entry.slug === "route-continuity-conversion-guide")', '<PublicRouteContinuityGuide entry={entry}/>'))
-    if route.find('notFound();') > route.find('<PublicRouteContinuityGuide entry={entry}/>'): ERRORS.append('category guard must precede specialization')
+
+        'if (!entry || entry.category !== "guides") notFound();', 'renderGuideArticle(entry)', 'if (!rendered) notFound();'))
+
+    require('apps/web/src/components/PublicEditorialRendererRegistry.tsx', ('"route-continuity-conversion-guide": PublicRouteContinuityGuide',))
+    if route.find('if (!entry || entry.category !== "guides") notFound();') > route.find('renderGuideArticle(entry)'): ERRORS.append('guide category guard must precede registry delegation')
     view = require('apps/web/src/components/PublicRouteContinuityGuide.tsx', (
         'guideDetailSteps.filter(step => step.slug === entry.slug)', 'title={entry.title}', 'lead={entry.summary}', '{entry.body}',
         'GuideArticle', 'contentsId="continuity-guide-contents"', 'Mục lục đi tiếp đúng luồng đọc',

@@ -8,8 +8,7 @@ def main()->int:
     prior=runpy.run_path(str(ROOT/'tools/validate_web_fe_control_tower_article_v1254.py'))
     result=prior['main']()
     require=prior['require'];errors=prior['ERRORS']
-    route=require('apps/web/src/app/news/[slug]/page.tsx',('if (entry.slug === "visual-responsive-polish-started")','<PublicVisualResponsiveArticle entry={entry} related={related}/>'))
-    if route.find('notFound();')>route.find('<PublicVisualResponsiveArticle'):errors.append('category guard must precede visual responsive specialization')
+    require('apps/web/src/components/PublicEditorialRendererRegistry.tsx', ('"visual-responsive-polish-started": PublicVisualResponsiveArticle',))
     view=require('apps/web/src/components/PublicVisualResponsiveArticle.tsx',('contentDetailSections.filter(section => section.slug === entry.slug)','<PublishedArticle entry={entry} related={related}','chapterLinks={chapterLinks}','Mục lục bài viết visual và responsive','Bối cảnh của lượt hoàn thiện visual và responsive','href: "/accessibility"','href: "/game"','href: "/performance"','href: "/download"','href: "/support/help"','href: "/news"'))
     for marker in ('<GuideArticle','<ExperienceHero','<Stack','<section','<form','useState(','fetch(','localStorage','sessionStorage','dangerouslySetInnerHTML'):
         if marker in view:errors.append('page must remain a thin source/label composition: '+marker)

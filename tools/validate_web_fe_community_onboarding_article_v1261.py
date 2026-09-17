@@ -8,8 +8,7 @@ def main()->int:
     prior=runpy.run_path(str(ROOT/'tools/validate_web_fe_control_tower_article_v1254.py'))
     result=prior['main']()
     require=prior['require'];errors=prior['ERRORS']
-    route=require('apps/web/src/app/news/[slug]/page.tsx',('if (entry.slug === "community-roadmap-onboarding-started")','<PublicCommunityOnboardingArticle entry={entry} related={related}/>'))
-    if route.find('notFound();')>route.find('<PublicCommunityOnboardingArticle'):errors.append('category guard must precede selected article')
+    require('apps/web/src/components/PublicEditorialRendererRegistry.tsx', ('"community-roadmap-onboarding-started": PublicCommunityOnboardingArticle',))
     view=require('apps/web/src/components/PublicCommunityOnboardingArticle.tsx',('contentDetailSections.filter(section => section.slug === entry.slug)','<PublishedArticle entry={entry} related={related}','chapterLinks={chapterLinks}','Mục lục bài viết cộng đồng và lộ trình','Bối cảnh của bản cập nhật web v1.11','href: "/"','href: "/community"','href: "/community/onboarding"','href: "/support/safety"','href: "/roadmap"','href: "/status"','href: "/download/trust"','href: "/release/readiness"'))
     for marker in ('<GuideArticle','<ExperienceHero','<Stack','<section','<form','useState(','fetch(','localStorage','sessionStorage','dangerouslySetInnerHTML'):
         if marker in view:errors.append('page must remain a thin source/label composition: '+marker)

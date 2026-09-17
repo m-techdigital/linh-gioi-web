@@ -8,8 +8,7 @@ def main()->int:
     prior=runpy.run_path(str(ROOT/'tools/validate_web_fe_control_tower_article_v1254.py'))
     result=prior['main']()
     require=prior['require'];errors=prior['ERRORS']
-    route=require('apps/web/src/app/news/[slug]/page.tsx',('if (entry.slug === "public-ux-content-polish-started")','<PublicUXArticle entry={entry} related={related}/>'))
-    if route.find('notFound();')>route.find('<PublicUXArticle'):errors.append('category guard must precede public UX specialization')
+    require('apps/web/src/components/PublicEditorialRendererRegistry.tsx', ('"public-ux-content-polish-started": PublicUXArticle',))
     view=require('apps/web/src/components/PublicUXArticle.tsx',('contentDetailSections.filter(section => section.slug === entry.slug)','<PublishedArticle entry={entry} related={related}','chapterLinks={chapterLinks}','Mục lục bài viết UX public','Bối cảnh của bản cập nhật web v1.6','href: "/"','href: "/game"','href: "/roadmap"','href: "/download"','href: "/support/help"','href: "/news"'))
     for marker in ('<GuideArticle','<ExperienceHero','<Stack','<section','<form','useState(','fetch(','localStorage','sessionStorage','dangerouslySetInnerHTML'):
         if marker in view:errors.append('page must remain a thin source/label composition: '+marker)

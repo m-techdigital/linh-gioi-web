@@ -8,8 +8,7 @@ def main()->int:
     prior=runpy.run_path(str(ROOT/'tools/validate_web_fe_control_tower_article_v1254.py'))
     result=prior['main']()
     require=prior['require'];errors=prior['ERRORS']
-    route=require('apps/web/src/app/news/[slug]/page.tsx',('if (entry.slug === "content-ia-hub-polish-started")','<PublicContentHubArticle entry={entry} related={related}/>'))
-    if route.find('notFound();')>route.find('<PublicContentHubArticle'):errors.append('category guard must precede selected article')
+    require('apps/web/src/components/PublicEditorialRendererRegistry.tsx', ('"content-ia-hub-polish-started": PublicContentHubArticle',))
     view=require('apps/web/src/components/PublicContentHubArticle.tsx',('contentDetailSections.filter(section => section.slug === entry.slug)','<PublishedArticle entry={entry} related={related}','chapterLinks={chapterLinks}','Mục lục bài viết tìm đường đọc','Bối cảnh của bản cập nhật web v1.12','href: "/start"','href: "/guides/start-here-content-hub-guide"','href: "/guides"','href: "/news"','href: "/game"','href: "/download"','href: "/status"','href: "/community"'))
     for marker in ('<GuideArticle','<ExperienceHero','<Stack','<section','<form','useState(','fetch(','localStorage','sessionStorage','dangerouslySetInnerHTML'):
         if marker in view:errors.append('page must remain a thin source/label composition: '+marker)

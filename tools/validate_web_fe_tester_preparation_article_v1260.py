@@ -8,8 +8,7 @@ def main()->int:
     prior=runpy.run_path(str(ROOT/'tools/validate_web_fe_control_tower_article_v1254.py'))
     result=prior['main']()
     require=prior['require'];errors=prior['ERRORS']
-    route=require('apps/web/src/app/news/[slug]/page.tsx',('if (entry.slug === "closed-tester-information-pack-started")','<PublicTesterPreparationArticle entry={entry} related={related}/>'))
-    if route.find('notFound();')>route.find('<PublicTesterPreparationArticle'):errors.append('category guard must precede tester preparation specialization')
+    require('apps/web/src/components/PublicEditorialRendererRegistry.tsx', ('"closed-tester-information-pack-started": PublicTesterPreparationArticle',))
     view=require('apps/web/src/components/PublicTesterPreparationArticle.tsx',('contentDetailSections.filter(section => section.slug === entry.slug)','<PublishedArticle entry={entry} related={related}','chapterLinks={chapterLinks}','Mục lục bài viết chuẩn bị kiểm thử','Bối cảnh của bản cập nhật web v1.20','href: "/release/tester-pack#tester-checklist"','href: "/release/tester-pack#tester-device"','href: "/release/tester-pack#tester-limits"','href: "/release/tester-pack#tester-feedback"','href: "/guides/closed-tester-information-pack-guide"','href: "/support/safety"','href: "/support/help"'))
     for marker in ('<GuideArticle','<ExperienceHero','<Stack','<section','<form','useState(','fetch(','localStorage','sessionStorage','dangerouslySetInnerHTML'):
         if marker in view:errors.append('page must remain a thin source/label composition: '+marker)

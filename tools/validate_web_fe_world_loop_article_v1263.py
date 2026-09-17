@@ -8,8 +8,7 @@ def main()->int:
     prior=runpy.run_path(str(ROOT/'tools/validate_web_fe_control_tower_article_v1254.py'))
     result=prior['main']()
     require=prior['require'];errors=prior['ERRORS']
-    route=require('apps/web/src/app/news/[slug]/page.tsx',('if (entry.slug === "world-gameplay-loop-depth-started")','<PublicWorldLoopArticle entry={entry} related={related}/>'))
-    if route.find('notFound();')>route.find('<PublicWorldLoopArticle'):errors.append('category guard must precede selected article')
+    require('apps/web/src/components/PublicEditorialRendererRegistry.tsx', ('"world-gameplay-loop-depth-started": PublicWorldLoopArticle',))
     view=require('apps/web/src/components/PublicWorldLoopArticle.tsx',('contentDetailSections.filter(section => section.slug === entry.slug)','<PublishedArticle entry={entry} related={related}','chapterLinks={chapterLinks}','Mục lục bài viết vòng lặp thế giới','Bối cảnh của bản cập nhật web v1.13','href: "/game"','href: "/game/loop"','href: "/guides/world-gameplay-loop-guide"','href: "/guides/beginner"','href: "/start"','href: "/download/trust"','href: "/status"','href: "/support"'))
     for marker in ('<GuideArticle','<ExperienceHero','<Stack','<section','<form','useState(','fetch(','localStorage','sessionStorage','dangerouslySetInnerHTML'):
         if marker in view:errors.append('page must remain a thin source/label composition: '+marker)

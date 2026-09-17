@@ -18,10 +18,13 @@ def require(rel: str, markers: tuple[str, ...] = ()) -> str:
 def main() -> int:
     ERRORS.clear()
     route = require('apps/web/src/app/guides/[slug]/page.tsx', (
+
         'export const dynamicParams = false', 'localContentRepository.list("guides")',
-        'if (!entry || entry.category !== "guides") notFound();',
-        'if (entry.slug === "faq-search-helpfulness-guide")', '<PublicFaqGuide entry={entry}/>'))
-    if route.find('notFound();') > route.find('<PublicFaqGuide entry={entry}/>'): ERRORS.append('published/category guard must precede article')
+
+        'if (!entry || entry.category !== "guides") notFound();', 'renderGuideArticle(entry)', 'if (!rendered) notFound();'))
+
+    require('apps/web/src/components/PublicEditorialRendererRegistry.tsx', ('"faq-search-helpfulness-guide": PublicFaqGuide',))
+    if route.find('if (!entry || entry.category !== "guides") notFound();') > route.find('renderGuideArticle(entry)'): ERRORS.append('guide category guard must precede registry delegation')
     view = require('apps/web/src/components/PublicFaqGuide.tsx', (
         'guideDetailSteps.filter(step => step.slug === entry.slug)', 'title={entry.title}', 'lead={entry.summary}', '{entry.body}',
         'GuideArticle', 'contentsId="faq-guide-contents"', 'Mục lục tìm FAQ hữu ích',
