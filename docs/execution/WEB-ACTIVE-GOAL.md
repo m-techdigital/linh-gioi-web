@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — full public audit follow-through (2026-09-17)
+
+Full public assessment v1.277 is the current optimization authority. WEB-OPT-01 v1.278 is CLOSED at source commit `89c391b5a240544ab6c8bac0eb3b9bdef91c84f5`: the global `service-layout.css` dependency was removed, legacy service/editorial routes now own that stylesheet explicitly, superseded modern layout rules and six dead design-board blocks were removed, and median decoded CSS fell from 245,523 B to 171,998 B (-29.95%) with 59-route desktop/mobile layout parity preserved.
+
+Next task is **WEB-OPT-02-INTERACTION-HIT-AREA-MOBILE-NAVIGATION-v1.279**. Do not resume the superseded `/support`-first queue or historical `/news` queue. Shared optimization tasks may precede page work when the v1.277 backlog dependency graph requires them. Real Browser UI/UX Layout First, Base First, truthful non-claims, normal commit/push and evidence closure remain mandatory.
+
 ## Owner override — full public-system optimization after v1.277 audit (2026-09-17)
 
 The full public audit at `026a0719027b5db25bc7c07175ef1bb786d1ed6d` is the current authority. It supersedes the immediate `/support` v1.277 page queue. The Web is usable and visually coherent enough to continue development, but it is not yet product-complete or technically optimized.

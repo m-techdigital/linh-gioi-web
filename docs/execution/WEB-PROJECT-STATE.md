@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-01-PUBLIC-CSS-OWNERSHIP-PAYLOAD-RESET-v1.278 WEB_CLOSED
+
+Current decision: shared public CSS ownership is reset without product redesign. Root layout no longer loads the 5,067-line historical service stylesheet globally; 16 active legacy service/editorial route entries own it explicitly; superseded modern `/game`→`/release` service sections and six unconsumed design-board blocks were removed.
+
+Verified source delivery commit: `89c391b5a240544ab6c8bac0eb3b9bdef91c84f5` on `origin/main`. Fresh BEFORE median decoded CSS 245,523 B / P75 248,469 B / max 251,481 B; final clean build median 171,998 B / P75 174,944 B / max 177,956 B, a 29.95% median reduction against the >=20% target. Final v1.278 browser guard 4/4 PASS desktop/mobile; 59-route × 2-view layout fingerprint 118/118 matched after nine loading-race reruns; 12 representative BEFORE/AFTER screenshots were pixel-identical. UI/Web typecheck, Web lint, clean build 63 pages and clean current-state PASS.
+
+Next task: `WEB-OPT-02-INTERACTION-HIT-AREA-MOBILE-NAVIGATION-v1.279`. Do not reopen v1.278 unless a related CSS ownership/payload regression is proven.
+
+Detailed report: `LGO-WEB-OPT-01-CSS-OWNERSHIP-PAYLOAD-RESET-REPORT-v1.278.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: LGO-WEB-FULL-PUBLIC-ASSESSMENT-v1.277 WEB_CLOSED
 
 Current decision: the public Web is usable and visually coherent enough to continue development, but it is not yet product-complete or optimized. Full runtime/source/IA/content/performance/a11y/SEO/governance audit is now the active authority; the previous immediate `/support` v1.277 queue is superseded.

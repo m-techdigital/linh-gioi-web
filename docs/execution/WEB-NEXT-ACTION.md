@@ -4,31 +4,32 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-The former `/support` v1.277 immediate queue is superseded by the shared-foundation optimization sequence.
+WEB-OPT-01 v1.278 is CLOSED at source commit `89c391b5a240544ab6c8bac0eb3b9bdef91c84f5`; do not reopen it without a related regression.
 
 Next task:
-WEB-OPT-01-PUBLIC-CSS-OWNERSHIP-PAYLOAD-RESET-v1.278
+WEB-OPT-02-INTERACTION-HIT-AREA-MOBILE-NAVIGATION-v1.279
 
 Objective:
-Remove the global `service-layout.css` dependency and reduce historical CSS ownership/payload without redesigning product pages. Move only active reusable rules to explicit shared/page owners, retire proven-unconsumed historical selectors, preserve current visual semantics, and establish a smaller trustworthy baseline for all later page work.
+Raise shared public action/button/filter/disclosure hit areas and improve mobile public-navigation discoverability without changing route IA or product copy. Fix shared owners first; do not patch individual pages unless a route has a proven unique control.
 
-Current optimization scope: shared public foundation — root layout imports, `apps/web/src/app/globals.css`, active `packages/ui` CSS owners and route imports. No content rewrite, no page-specific redesign, no backend/Portal/Ops feature work.
+Current optimization scope: shared `packages/ui` action/button/filter/disclosure/navigation geometry plus the smallest required app composition changes. Audit native checkbox labels as total clickable hit areas rather than blindly enlarging checkbox glyphs. No content rewrite, no page redesign, no backend/Portal/Ops work.
 
 Entry baseline:
-- v1.277 audit found ~11,084 CSS source lines, `service-layout.css` 5,067 lines globally imported, `globals.css` 3,024 lines, and substantial historical selector residue.
-- 59/59 sitemap URLs rendered; 0 horizontal overflow at 1440/390; axe smoke 0 automated A/AA violations.
-- Typical service/content routes carry roughly 240–250KB decoded CSS.
+- v1.277 audit found representative actionable links/buttons/summaries at 31–40px high on real pages.
+- `/release` had 11 compact actions below 44px; `/status` filter buttons and details summaries were ~38–40px; several News actions were ~31–34px.
+- Axe A/AA smoke was clean, so this task addresses ergonomic/touch reachability rather than inventing semantic failures.
+- v1.278 CSS ownership reset is the accepted base: median decoded CSS 171,998 B and 118/118 desktop/mobile layout fingerprints preserved.
 
 Exit criteria:
-- root public layout no longer imports the whole service stylesheet globally; active service/content routes import explicit owners;
-- historical/dead selector removal is backed by consumer search plus browser regression, never deletion-by-guess;
-- median decoded public CSS is materially lower than the v1.277 baseline, with >=20% reduction as the target unless evidence proves a smaller safe bound;
-- 59-route HTTP/overflow smoke, selected modern+legacy desktop/mobile screenshots, relevant browser/e2e, typecheck, lint, build and current-state gates pass;
-- no intentional content/IA change and no visual regression is hidden by test relaxation.
+- at 390px, actionable button/link/summary controls in the 59-route geometry audit are >=44px high except justified inline-text links;
+- mobile brand navigation remains keyboard/focus reachable and its horizontal-scroll affordance is discoverable;
+- checkbox/radio controls are judged by associated label hit area, not glyph size alone;
+- no horizontal overflow and no visual hierarchy regression across representative core, release, support and editorial routes;
+- RED→GREEN focused browser coverage, 59-route geometry scan, typecheck/lint/build/current-state and normal commit/push closure all pass.
 
-Execution rules: Real Browser UI/UX Layout First; Base UI/UX Layout ownership first; RED→GREEN for new guards; normal commit/push; no force push; no production deployment. Do not batch WEB-OPT-02.
+Execution rules: Real Browser UI/UX Layout First; Base First; preserve v1.278 payload ownership; never relax the 44px ergonomic contract to obtain PASS; no force push or production deployment. Do not batch WEB-OPT-03.
 
-Runtime resource policy: reuse session-owned production 3236 after ownership verification; do not open a new version port.
+Runtime resource policy: reuse the session-owned runtime only after process ownership verification. Clean-build browser interception is allowed for exact-source layout evidence when Manager blocks creation of an additional listener; final closure still requires truthful runtime/process evidence.
 
 Historical compatibility markers retained until WEB-OPT-21: `WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT`; browser/e2e evidence remains mandatory.
 

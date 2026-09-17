@@ -540,7 +540,8 @@ def check_active_checkpoint() -> None:
         current_route = re.search(r"(?m)^Current route: `([^`]+)`", state)
         if not upcoming[1].startswith("WEB-FE-") or upcoming[1] != phase or not current_route or not route or route[1] != current_route[1]:
             fail("visual review must remain on the same task and route; no assumed closure or automatic advance")
-    require_text("docs/execution/WEB-TASK-LEDGER.md", f"| {phase} | WEB-FE | {status} |")
+    phase_kind = "WEB-OPT" if phase.startswith("WEB-OPT-") else "WEB-FE"
+    require_text("docs/execution/WEB-TASK-LEDGER.md", f"| {phase} | {phase_kind} | {status} |")
     if upcoming[1].startswith("WEB-FE-"):
         if not route:
             fail("page-scoped WEB-FE task requires an explicit Current FE scope route")

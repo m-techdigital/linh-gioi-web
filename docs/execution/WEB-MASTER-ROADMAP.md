@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-17 public optimization program
+
+Full public assessment v1.277 supersedes the old page-only visual queue as current optimization authority. WEB-OPT-01 v1.278 is CLOSED at `89c391b5a240544ab6c8bac0eb3b9bdef91c84f5`, reducing median decoded CSS from 245,523 B to 171,998 B (-29.95%) without rendered-layout drift across 59 public routes × desktop/mobile. Continue the ordered dependency backlog from `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`; next is WEB-OPT-02 v1.279 (interaction hit-area and mobile navigation).
+
+The long-term WEB-00→WEB-10 program remains valid for product/backend/deployment phases. The optimization backlog is the active public-Web execution lane until its current task closes; backend-dependent WEB-08/09/10 claims remain gated.
+
 Current optimization checkpoint: `LGO-WEB-FULL-PUBLIC-ASSESSMENT-v1.277` is closed at `026a0719027b5db25bc7c07175ef1bb786d1ed6d`. The prior `/support` v1.277 page queue is superseded. Next: `WEB-OPT-01 — Public CSS Ownership & Payload Reset — v1.278`. Full ordered authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
