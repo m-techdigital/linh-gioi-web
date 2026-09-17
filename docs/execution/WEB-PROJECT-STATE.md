@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-05-SEO-METADATA-SITEMAP-OWNERSHIP-v1.282 WEB_CLOSED
+
+Current decision: public SEO metadata now has one Base First owner derived from the v1.281 59-route IA/indexability contract. All 59 routes emit canonical metadata; 40 indexable routes expose unique route-specific descriptions and Open Graph URLs, while 19 Archive routes emit noindex and are excluded from sitemap. Sitemap no longer carries a stale global date; Guide detail freshness comes from source publication dates and routes without truthful freshness omit lastModified.
+
+Verified source delivery commit: `d8f2a2b5af106ab51960835117c48fd4745ffda3` on `origin/main`. Focused v1.282 8/8 desktop/mobile PASS; predecessor regressions v1.281/v1.280/v1.278 14/14 desktop/mobile plus v1.279 2/2 mobile PASS; Content tests20/20; Content/UI/Web typecheck, Web lint, build63 and clean current-state PASS.
+
+Next task: `WEB-OPT-06-EDITORIAL-RENDERER-CONSOLIDATION-v1.283`. Preserve v1.281 archive/player policy and v1.282 metadata/indexability while replacing slug-specialized route branching.
+
+Detailed report: `LGO-WEB-OPT-05-SEO-METADATA-SITEMAP-OWNERSHIP-REPORT-v1.282.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-04-PUBLIC-IA-PLAYER-LANGUAGE-CONTRACT-v1.281 WEB_CLOSED
 
 Current decision: the public Web now has one machine-readable 59-route ownership/indexability/language contract. All 17 current Web-program News records remain reachable as Archive/Devlog instead of primary player news; Homepage no longer promotes them as current game news; `/news` uses a truthful empty player-news state with a closed archive; `/events` is intentionally reachable and Archive/noindex intent.

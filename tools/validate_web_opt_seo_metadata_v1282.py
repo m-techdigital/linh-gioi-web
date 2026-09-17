@@ -116,8 +116,16 @@ def main() -> int:
     ))
 
     next_action = read("docs/execution/WEB-NEXT-ACTION.md")
-    if "WEB-OPT-05-SEO-METADATA-SITEMAP-OWNERSHIP-v1.282" not in next_action:
-        fail("WEB-NEXT-ACTION does not point to WEB-OPT-05 v1.282")
+    project_state = read("docs/execution/WEB-PROJECT-STATE.md")
+    ledger = read("docs/execution/WEB-TASK-LEDGER.md")
+    report = read("docs/execution/LGO-WEB-OPT-05-SEO-METADATA-SITEMAP-OWNERSHIP-REPORT-v1.282.md")
+    active_prefix = "Current phase: WEB-OPT-05-SEO-METADATA-SITEMAP-OWNERSHIP-v1.282 WEB_CLOSED"
+    if project_state.startswith(active_prefix) and "WEB-OPT-06-EDITORIAL-RENDERER-CONSOLIDATION-v1.283" not in next_action:
+        fail("active v1.282 checkpoint does not advance to WEB-OPT-06 v1.283")
+    if "| WEB-OPT-05-SEO-METADATA-SITEMAP-OWNERSHIP-v1.282 | WEB-OPT | WEB_CLOSED |" not in ledger:
+        fail("WEB-TASK-LEDGER does not record WEB-OPT-05 v1.282 closure")
+    if "d8f2a2b5af106ab51960835117c48fd4745ffda3" not in report or "40 player-facing/indexable routes" not in report or "19 Archive/noindex routes" not in report:
+        fail("v1.282 report is missing source/metadata closure evidence")
     current_state = read("tools/validate_web_current_state.py")
     if '"validate_web_opt_seo_metadata_v1282.py"' not in current_state:
         fail("v1.282 validator is not registered in WEB CURRENT STATE authority")

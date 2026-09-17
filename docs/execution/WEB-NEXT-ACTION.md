@@ -4,32 +4,30 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-04 v1.281 is CLOSED at source commit `a5659a33e0e74710efe334a96057dad7f64489c2`; do not reopen it without a related IA/player-language regression.
+WEB-OPT-05 v1.282 is CLOSED at source commit `d8f2a2b5af106ab51960835117c48fd4745ffda3`; do not reopen it without a related metadata/indexability regression.
 
 Next task:
-WEB-OPT-05-SEO-METADATA-SITEMAP-OWNERSHIP-v1.282
+WEB-OPT-06-EDITORIAL-RENDERER-CONSOLIDATION-v1.283
 
 Objective:
-Implement truthful metadata and sitemap ownership from the v1.281 machine-readable route policy: route-specific descriptions, canonical URLs, explicit index/noindex behavior, intentional sitemap membership/lastModified and consistent Open Graph metadata without inventing freshness or release state.
+Replace long slug-specialized News/Guide route branches with data/registry-driven renderer selection around the accepted shared article primitives and small explicit variants, preserving all current URLs, authored content, archive/indexability semantics and unknown-slug 404 behavior.
 
-Current optimization scope: public metadata helpers, root/route metadata composition, sitemap/robots, News/Guide dynamic metadata and the smallest tests/validators needed. Do not batch editorial renderer consolidation, broad copy rewrites, page redesign or backend work.
+Current optimization scope: `apps/web/src/app/news/[slug]`, `apps/web/src/app/guides/[slug]`, editorial renderer registry/shared article primitives and the smallest source/browser tests needed. Do not batch mobile-density redesign, primary News/Guides discovery redesign, article copy rewriting, backend/CMS work or SEO policy changes.
 
 Entry baseline:
-- v1.277 audit found all 59 URLs sharing one description, zero canonical URLs and stale static sitemap lastModified.
-- v1.281 now owns all 59 routes plus indexability intent; `/events`, `/patch-notes` and all 17 current Web-program News detail routes are Archive/noindex intent.
-- WEB-OPT-01–04 are closed predecessors and must remain regression-green.
+- v1.277 audit found 16 Guide slug-specialized branches and 11 News specialized renderers despite shared article primitives;
+- v1.281 owns player/archive classification and v1.282 owns metadata/indexability; both must remain stable;
+- WEB-OPT-01–05 are closed predecessors and must remain regression-green.
 
 Exit criteria:
-- every indexable public route emits a truthful route-specific description and canonical URL;
-- noindex-intent routes emit robots noindex and are excluded from sitemap unless a documented exception exists;
-- dynamic News/Guide metadata follows source content and IA classification;
-- sitemap membership and lastModified values are derived from explicit source ownership, not a stale global constant;
-- robots policy is explicit; no fake publication/release freshness;
-- metadata crawler/browser tests, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
+- dynamic News/Guide route files no longer contain long slug `if` chains; renderer ownership is explicit and typed;
+- every current News/Guide slug resolves to the same intended renderer family or an intentionally documented equivalent; unknown slugs remain 404;
+- authored content, related-link semantics, metadata/canonical/noindex and fragment/keyboard behavior remain valid;
+- full News/Guide route browser matrix + representative visual checks + typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: preserve v1.281 IA/language decisions; Base First metadata helper; RED→GREEN; no production deployment. Do not batch WEB-OPT-06.
+Execution rules: Base First; RED→GREEN; preserve v1.281/v1.282 policy; no broad article rewrite; no production deployment. Do not batch WEB-OPT-07.
 
-Runtime resource policy: exact clean-build browser/source evidence is allowed where Manager prevents a new listener.
+Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 
 Historical compatibility markers remain until WEB-OPT-21; browser/e2e evidence remains mandatory.
 

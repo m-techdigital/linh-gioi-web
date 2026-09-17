@@ -1,5 +1,12 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — SEO metadata/sitemap ownership closed (2026-09-18)
+
+WEB-OPT-05 v1.282 is CLOSED at source commit `d8f2a2b5af106ab51960835117c48fd4745ffda3`. All 59 public routes now have canonical ownership; 40 player-facing routes have unique route-specific descriptions and remain indexable, while 19 Archive routes emit noindex and are excluded from sitemap. Sitemap/robots now derive from the v1.281 route policy instead of a stale independent list/date.
+
+Next task is **WEB-OPT-06-EDITORIAL-RENDERER-CONSOLIDATION-v1.283**. Consolidate News/Guide dynamic renderer selection without rewriting article bodies or changing v1.281/v1.282 player/archive/SEO semantics.
+
+
 ## Owner optimization authority — public IA/player language closed (2026-09-18)
 
 WEB-OPT-04 v1.281 is CLOSED at source commit `a5659a33e0e74710efe334a96057dad7f64489c2`. A 59-route machine contract now separates Product/Guide/News/Support/Archive ownership; all current Web-program News entries are Archive/Devlog, `/events` is no longer orphaned, and Homepage/News primary discovery no longer treats implementation history as game news.

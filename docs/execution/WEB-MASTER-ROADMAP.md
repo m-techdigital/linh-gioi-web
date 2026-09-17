@@ -1,5 +1,12 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.282
+
+WEB-OPT-01 through WEB-OPT-05 are CLOSED. v1.282 at `d8f2a2b5af106ab51960835117c48fd4745ffda3` centralizes metadata ownership for all 59 public routes: 40 indexable routes have unique descriptions/canonicals, 19 Archive routes are canonical noindex surfaces, sitemap contains only intentional indexable routes and source-owned dates, and robots publishes explicit host/sitemap ownership.
+
+Continue the v1.277 dependency backlog. Next is WEB-OPT-06 v1.283 (editorial renderer consolidation), followed by WEB-OPT-07 editorial mobile density before remaining route-family work.
+
+
 ## 2026-09-18 optimization checkpoint v1.281
 
 WEB-OPT-01 through WEB-OPT-04 are CLOSED. v1.281 at `a5659a33e0e74710efe334a96057dad7f64489c2` establishes public route ownership/indexability/language policy, separates 17 Web-program News records into Archive/Devlog and resolves the `/events` orphan without rewriting article bodies.
