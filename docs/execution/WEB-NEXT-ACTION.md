@@ -4,34 +4,34 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-01 v1.278 is CLOSED at source commit `89c391b5a240544ab6c8bac0eb3b9bdef91c84f5`; do not reopen it without a related regression.
+WEB-OPT-02 v1.279 is CLOSED at source commit `5de43e8de9378d57162ad741dd5b3a4e87609417`; do not reopen it without a related regression.
 
 Next task:
-WEB-OPT-02-INTERACTION-HIT-AREA-MOBILE-NAVIGATION-v1.279
+WEB-OPT-03-PUBLIC-ASSET-BOUNDARY-IMAGE-DELIVERY-v1.280
 
 Objective:
-Raise shared public action/button/filter/disclosure hit areas and improve mobile public-navigation discoverability without changing route IA or product copy. Fix shared owners first; do not patch individual pages unless a route has a proven unique control.
+Move review-only design artifacts out of the public deploy root and optimize only high-impact product image delivery, without changing the accepted page compositions or inventing new artwork. Preserve source/provenance and stable dimensions.
 
-Current optimization scope: shared `packages/ui` action/button/filter/disclosure/navigation geometry plus the smallest required app composition changes. Audit native checkbox labels as total clickable hit areas rather than blindly enlarging checkbox glyphs. No content rewrite, no page redesign, no backend/Portal/Ops work.
+Current optimization scope: `apps/web/public/design-reference`, dead public design-reference consumers, high-impact public hero/content image delivery and the smallest required shared/app image primitives. No broad art redesign, no content rewrite, no backend/Portal/Ops feature work.
 
 Entry baseline:
-- v1.277 audit found representative actionable links/buttons/summaries at 31–40px high on real pages.
-- `/release` had 11 compact actions below 44px; `/status` filter buttons and details summaries were ~38–40px; several News actions were ~31–34px.
-- Axe A/AA smoke was clean, so this task addresses ergonomic/touch reachability rather than inventing semantic failures.
-- v1.278 CSS ownership reset is the accepted base: median decoded CSS 171,998 B and 118/118 desktop/mobile layout fingerprints preserved.
+- v1.277 audit measured `apps/web/public` at ~59MB, of which ~48MB is 23 design-reference PNGs; the public design-target component has no current app consumer.
+- `apps/web/public/game-art` is ~11MB; only one source file currently uses `next/image`.
+- homepage full-scroll image transfer was ~1.77MB; individual heavy hero assets are served at source size.
+- v1.278 CSS ownership and v1.279 interaction geometry are accepted predecessors and must remain regression-green.
 
 Exit criteria:
-- at 390px, actionable button/link/summary controls in the 59-route geometry audit are >=44px high except justified inline-text links;
-- mobile brand navigation remains keyboard/focus reachable and its horizontal-scroll affordance is discoverable;
-- checkbox/radio controls are judged by associated label hit area, not glyph size alone;
-- no horizontal overflow and no visual hierarchy regression across representative core, release, support and editorial routes;
-- RED→GREEN focused browser coverage, 59-route geometry scan, typecheck/lint/build/current-state and normal commit/push closure all pass.
+- no review-only design target remains under the public deploy root; provenance remains available outside the shipped public static path;
+- dead public design-reference runtime code is removed only when consumer search proves it unused;
+- selected high-impact hero/content images have truthful stable sizing/loading and materially lower transfer or deployment footprint without visible quality loss;
+- no broken public product image and no accidental artwork substitution;
+- fresh asset inventory/SHA, browser image-health/transfer comparison, representative production screenshots, relevant E2E, typecheck/lint/build/current-state and normal commit/push closure all pass.
 
-Execution rules: Real Browser UI/UX Layout First; Base First; preserve v1.278 payload ownership; never relax the 44px ergonomic contract to obtain PASS; no force push or production deployment. Do not batch WEB-OPT-03.
+Execution rules: preserve accepted visual compositions; use source assets only; Base First; RED→GREEN for new artifact/image-delivery guards; never delete review evidence without relocating it safely; no force push or production deployment. Do not batch WEB-OPT-04.
 
-Runtime resource policy: reuse the session-owned runtime only after process ownership verification. Clean-build browser interception is allowed for exact-source layout evidence when Manager blocks creation of an additional listener; final closure still requires truthful runtime/process evidence.
+Runtime resource policy: reuse session-owned runtime only after ownership verification; exact clean-build browser evidence is allowed where Manager blocks an additional listener.
 
-Historical compatibility markers retained until WEB-OPT-21: `WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT`; browser/e2e evidence remains mandatory.
+Historical compatibility markers remain until WEB-OPT-21; browser/e2e evidence remains mandatory.
 
 ---
 

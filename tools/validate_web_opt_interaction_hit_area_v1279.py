@@ -57,8 +57,16 @@ def main() -> int:
             ERRORS.append(f"v1.279 browser guard missing marker: {needle}")
 
     next_action = read("docs/execution/WEB-NEXT-ACTION.md")
-    if "WEB-OPT-02-INTERACTION-HIT-AREA-MOBILE-NAVIGATION-v1.279" not in next_action:
-        ERRORS.append("WEB-NEXT-ACTION does not point to WEB-OPT-02 v1.279")
+    project_state = read("docs/execution/WEB-PROJECT-STATE.md")
+    ledger = read("docs/execution/WEB-TASK-LEDGER.md")
+    report = read("docs/execution/LGO-WEB-OPT-02-INTERACTION-HIT-AREA-MOBILE-NAVIGATION-REPORT-v1.279.md")
+    active_checkpoint = project_state.startswith("Current phase: WEB-OPT-02-INTERACTION-HIT-AREA-MOBILE-NAVIGATION-v1.279 WEB_CLOSED")
+    if active_checkpoint and "WEB-OPT-03-PUBLIC-ASSET-BOUNDARY-IMAGE-DELIVERY-v1.280" not in next_action:
+        ERRORS.append("active v1.279 checkpoint does not advance to WEB-OPT-03 v1.280")
+    if "| WEB-OPT-02-INTERACTION-HIT-AREA-MOBILE-NAVIGATION-v1.279 | WEB-OPT | WEB_CLOSED |" not in ledger:
+        ERRORS.append("WEB-TASK-LEDGER does not record WEB-OPT-02 v1.279 closure")
+    if "72 controls below 44px" not in report or "5de43e8de9378d57162ad741dd5b3a4e87609417" not in report:
+        ERRORS.append("v1.279 report is missing final geometry/source evidence")
     current_state = read("tools/validate_web_current_state.py")
     if '"validate_web_opt_interaction_hit_area_v1279.py"' not in current_state:
         ERRORS.append("v1.279 validator is not registered in WEB CURRENT STATE authority")

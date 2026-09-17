@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — interaction ergonomics closed (2026-09-17)
+
+WEB-OPT-02 v1.279 is CLOSED at source commit `5de43e8de9378d57162ad741dd5b3a4e87609417`. Exact-v1.278 mobile baseline found 72 actionable controls below 44px across 8 routes; final v1.279 exact build has zero sub-44px audited controls across all 59 sitemap routes, zero horizontal-overflow routes, a visible 5px WebKit navigation scrollbar cue, and keyboard focus still reveals off-screen nav items. v1.278 CSS payload regression remains GREEN.
+
+Next task is **WEB-OPT-03-PUBLIC-ASSET-BOUNDARY-IMAGE-DELIVERY-v1.280**. Keep the full-audit dependency queue authoritative; do not resume superseded page-only queues. Real Browser UI/UX Layout First, Base First, truthful non-claims, normal push and evidence closure remain mandatory.
+
 ## Owner optimization authority — full public audit follow-through (2026-09-17)
 
 Full public assessment v1.277 is the current optimization authority. WEB-OPT-01 v1.278 is CLOSED at source commit `89c391b5a240544ab6c8bac0eb3b9bdef91c84f5`: the global `service-layout.css` dependency was removed, legacy service/editorial routes now own that stylesheet explicitly, superseded modern layout rules and six dead design-board blocks were removed, and median decoded CSS fell from 245,523 B to 171,998 B (-29.95%) with 59-route desktop/mobile layout parity preserved.

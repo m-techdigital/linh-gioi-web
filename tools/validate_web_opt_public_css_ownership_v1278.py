@@ -68,10 +68,9 @@ def main() -> int:
     report = read("docs/execution/LGO-WEB-OPT-01-CSS-OWNERSHIP-PAYLOAD-RESET-REPORT-v1.278.md")
     if "196,418 B" not in plan or "245,523 B" not in plan:
         fail("v1.278 plan is missing accepted CSS baseline/budget")
-    if not project_state.startswith("Current phase: WEB-OPT-01-PUBLIC-CSS-OWNERSHIP-PAYLOAD-RESET-v1.278 WEB_CLOSED"):
-        fail("WEB-PROJECT-STATE does not close WEB-OPT-01 v1.278")
-    if "WEB-OPT-02-INTERACTION-HIT-AREA-MOBILE-NAVIGATION-v1.279" not in next_action:
-        fail("WEB-NEXT-ACTION does not advance to WEB-OPT-02 v1.279")
+    active_checkpoint = project_state.startswith("Current phase: WEB-OPT-01-PUBLIC-CSS-OWNERSHIP-PAYLOAD-RESET-v1.278 WEB_CLOSED")
+    if active_checkpoint and "WEB-OPT-02-INTERACTION-HIT-AREA-MOBILE-NAVIGATION-v1.279" not in next_action:
+        fail("active v1.278 checkpoint does not advance to WEB-OPT-02 v1.279")
     if "| WEB-OPT-01-PUBLIC-CSS-OWNERSHIP-PAYLOAD-RESET-v1.278 | WEB-OPT | WEB_CLOSED |" not in ledger:
         fail("WEB-TASK-LEDGER does not record WEB-OPT-01 v1.278 closure")
     if "29.95%" not in report or "89c391b5a240544ab6c8bac0eb3b9bdef91c84f5" not in report:

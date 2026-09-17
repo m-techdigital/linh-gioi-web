@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-17 optimization checkpoint v1.279
+
+WEB-OPT-01 CSS ownership/payload reset and WEB-OPT-02 interaction hit-area/mobile-navigation are CLOSED. v1.279 at `5de43e8de9378d57162ad741dd5b3a4e87609417` removes all audited sub-44px mobile action targets from the 59-route public set while preserving v1.278 CSS payload ownership and no-overflow behavior. Continue the v1.277 ordered optimization backlog; next is WEB-OPT-03 v1.280 (public asset boundary and image delivery).
+
+The long-term WEB-00→WEB-10 product/backend/deployment program remains valid; the optimization backlog is the active public-Web execution lane.
+
 ## 2026-09-17 public optimization program
 
 Full public assessment v1.277 supersedes the old page-only visual queue as current optimization authority. WEB-OPT-01 v1.278 is CLOSED at `89c391b5a240544ab6c8bac0eb3b9bdef91c84f5`, reducing median decoded CSS from 245,523 B to 171,998 B (-29.95%) without rendered-layout drift across 59 public routes × desktop/mobile. Continue the ordered dependency backlog from `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`; next is WEB-OPT-02 v1.279 (interaction hit-area and mobile navigation).

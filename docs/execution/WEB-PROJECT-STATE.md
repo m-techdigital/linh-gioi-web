@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-02-INTERACTION-HIT-AREA-MOBILE-NAVIGATION-v1.279 WEB_CLOSED
+
+Current decision: shared public interaction geometry now meets the 44px mobile ergonomic contract without changing route IA or product copy. Release stage/readiness links, Status filters/disclosures, legacy service proof-card/news-detail actions and the mobile public navigation rail were corrected at shared owners.
+
+Verified source delivery commit: `5de43e8de9378d57162ad741dd5b3a4e87609417` on `origin/main`. Exact-v1.278 baseline: 59 routes, 1,927 audited actions, 72 controls below 44px across 8 routes. Final exact v1.279 build: 0 controls below 44px, 0 violating routes and 0 horizontal-overflow routes. Focused v1.279 browser 2/2 PASS; v1.278 CSS payload regression 4/4 PASS desktop/mobile; clean production build 63 pages; UI/Web typecheck, Web lint, v1.279/v1.278 validators and clean current-state PASS. Desktop/mobile BEFORE/AFTER visual review confirmed only intended hit-area growth.
+
+Next task: `WEB-OPT-03-PUBLIC-ASSET-BOUNDARY-IMAGE-DELIVERY-v1.280`. Do not reopen v1.279 without a related interaction-geometry/navigation regression.
+
+Detailed report: `LGO-WEB-OPT-02-INTERACTION-HIT-AREA-MOBILE-NAVIGATION-REPORT-v1.279.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-01-PUBLIC-CSS-OWNERSHIP-PAYLOAD-RESET-v1.278 WEB_CLOSED
 
 Current decision: shared public CSS ownership is reset without product redesign. Root layout no longer loads the 5,067-line historical service stylesheet globally; 16 active legacy service/editorial route entries own it explicitly; superseded modern `/game`→`/release` service sections and six unconsumed design-board blocks were removed.
