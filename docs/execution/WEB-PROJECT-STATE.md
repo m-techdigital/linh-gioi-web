@@ -1,3 +1,16 @@
+Current phase: WEB-FE-DOWNLOAD-VISUAL-REALIGNMENT-v1.271 WEB_CLOSED
+
+Current decision: `/download` is now a target-driven immersive closed-release-gate landing. The live page uses the shared immersive shell, one provenance-locked gate hero, a truthful `Chưa mở cổng phát hành` state, all five canonical `downloadReadiness` gates, both canonical `downloadBuilds` channels and four real official-information routes. The historical generic hero, download-depth/trust/evidence proof stack and expanded secondary evidence flow are superseded, not counted as current runtime PASS.
+
+Verified source delivery commit: `dae79b11925fb330d7e89519b3e8ed2f9b26d823` on `origin/main`. Focused download: 14/14 PASS; clean selected dev regression: 114/114 PASS; fresh production selected regression: 114/114 PASS; production build: 63 static pages; UI/Web typecheck and lint PASS; clean source-archive current-state PASS. Production desktop/mobile screenshots and metrics were reviewed after real RED→GREEN replacement. A prior 112/114 dev run was discarded as harness evidence because a concurrent Playwright process removed shared trace files; the isolated rerun passed 114/114 without changing product assertions.
+
+Next task after final governance/archive delivery: WEB-FE-DOWNLOAD-TRUST-VISUAL-REALIGNMENT-v1.272.
+Select `/download/trust` as the next single active page. Then continue `/release`, `/release/readiness`, `/release/tester-pack`, `/status` and the remaining support/community families. Do not resume the historical `/news` queue.
+
+Detailed report: LGO-WEB-FE-DOWNLOAD-VISUAL-REALIGNMENT-REPORT-v1.271.md.
+
+Historical state below is retained for provenance, not active visual authority.
+
 Current phase: WEB-FE-START-VISUAL-REALIGNMENT-v1.270 WEB_CLOSED
 
 Current decision: `/start` is now a target-driven immersive onboarding landing. The live page uses the shared immersive shell, a cinematic Đông Môn hero, five live onboarding steps, one keyboard-readable movement/skill guide panel and four illustrated onboarding milestones. The historical generic hero, design board, technical blockout gallery, class grid and world route are superseded, not counted as current runtime PASS.

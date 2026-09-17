@@ -39,7 +39,7 @@ def main():
  require('docs/superpowers/specs/2026-09-17-public-site-visual-realignment-design.md','/start','truthful')
  require('docs/superpowers/plans/2026-09-17-public-site-visual-realignment.md','Task 5: `/start`')
  require('docs/execution/WEB-PROJECT-STATE.md','WEB-FE-START-VISUAL-REALIGNMENT-v1.270 WEB_CLOSED','WEB-FE-DOWNLOAD-VISUAL-REALIGNMENT-v1.271')
- require('docs/execution/WEB-NEXT-ACTION.md','WEB-FE-DOWNLOAD-VISUAL-REALIGNMENT-v1.271','Start v1.270 checkpoint')
+ require('docs/execution/WEB-NEXT-ACTION.md','Start v1.270 checkpoint')
  require('docs/execution/WEB-TASK-LEDGER.md','| WEB-FE-START-VISUAL-REALIGNMENT-v1.270 | WEB-FE | WEB_CLOSED |')
  require('docs/execution/LGO-WEB-FE-START-VISUAL-REALIGNMENT-REPORT-v1.270.md','Focused `/start`: 14/14 PASS','Fresh production selected regression on port 3236: 100/100 PASS','bc60189e5ec61fbb43bb8e0c3aca35f83684bbfc')
  require('docs/execution/HANDOFF-LGO-WEB-FE-START-VISUAL-REALIGNMENT-v1.270.md','Next: `/download` visual realignment v1.271')
