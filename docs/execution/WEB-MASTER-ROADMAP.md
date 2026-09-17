@@ -1,6 +1,6 @@
 # WEB-MASTER-ROADMAP
 
-Current visual checkpoint: full-site visual realignment is active. `/game` v1.266, `/story` v1.267, `/classes` v1.268, `/journey` v1.269, `/start` v1.270 and `/download` v1.271 now use their dedicated target-driven compositions; next `/download/trust` v1.272. Historical test closure is not visual acceptance.
+Current visual checkpoint: full-site visual realignment is active. `/game` v1.266, `/story` v1.267, `/classes` v1.268, `/journey` v1.269, `/start` v1.270, `/download` v1.271 and `/download/trust` v1.272 now use their dedicated target-driven compositions; next `/release` v1.273. Historical test closure is not visual acceptance.
 
 This roadmap governs the independent Linh Giới Online Web Program. Every phase must include goal, allowed scope, forbidden scope, entry criteria, exit criteria, required evidence, non-claims and next phase.
 

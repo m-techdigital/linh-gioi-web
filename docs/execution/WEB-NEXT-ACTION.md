@@ -5,14 +5,14 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-DOWNLOAD-TRUST-VISUAL-REALIGNMENT-v1.272
+WEB-FE-RELEASE-VISUAL-REALIGNMENT-v1.273
 
 Objective:
-Continue the owner-priority full-site visual remediation one page at a time. `/download` v1.271 is closed by target-driven browser evidence; do not reopen it without a related regression. Defer the historical /news queue and move to the next release/service page-specific target.
+Continue the owner-priority full-site visual remediation one page at a time. `/download/trust` v1.272 is closed by target-driven browser evidence; do not reopen it without a related regression. Defer the historical /news queue and move to the next release/service page-specific target.
 
-Current FE scope: select `/download/trust` as the next single active page. Rebuild against the existing Download Trust detailed target and truthful checksum/provenance/release-gate source data; complete `/download/trust` fully before any other page, with real browser desktop/mobile evidence, before touching `/release`.
+Current FE scope: select `/release` as the next single active page. Rebuild against the existing Release detailed target and truthful release-stage/evidence source data; complete `/release` fully before any other page, with real browser desktop/mobile evidence, before touching `/release/readiness`.
 
-Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile;16 have detailed page targets. Historical CLOSED/PASS does not prove visual fidelity. `/game` v1.266, `/story` v1.267, `/classes` v1.268, `/journey` v1.269, `/start` v1.270 and `/download` v1.271 are now closed by real target-driven replacements. Continue sequentially `/download/trust` → `/release` → `/release/readiness` → `/release/tester-pack` → `/status`, then support/community families. Do not use the old `/news` queue as current authority.
+Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile;16 have detailed page targets. Historical CLOSED/PASS does not prove visual fidelity. `/game` v1.266, `/story` v1.267, `/classes` v1.268, `/journey` v1.269, `/start` v1.270, `/download` v1.271 and `/download/trust` v1.272 are now closed by real target-driven replacements. Continue sequentially `/release` → `/release/readiness` → `/release/tester-pack` → `/status`, then support/community families. Do not use the old `/news` queue as current authority.
 
 Mandatory execution rules:
 
@@ -67,3 +67,4 @@ Journey v1.269 checkpoint: `/journey` now uses the immersive public shell, canon
 Start v1.270 checkpoint: `/start` now uses the immersive public shell, five clean target-derived artwork crops, a live five-step onboarding rail, a keyboard-readable movement/Lộ guide panel and four illustrated milestones. Focused14/14, selected dev100/100 and production100/100 PASS; build63; source/provenance/current-state/typecheck/lint gates PASS. Historical Start board/gallery/target/layout suites are superseded, not runtime PASS. Latest report: LGO-WEB-FE-START-VISUAL-REALIGNMENT-REPORT-v1.270.md. Next single page: `/download` v1.271.
 
 Download v1.271 checkpoint: `/download` now uses the immersive public shell, canonical five `downloadReadiness` gates, both `downloadBuilds` channels, one clean locked-gate hero crop and four real official-information routes. Focused14/14, clean selected dev114/114 and production114/114 PASS; build63; source/provenance/current-state/typecheck/lint gates PASS. Historical Download target/layout suites are superseded, not runtime PASS. Latest report: LGO-WEB-FE-DOWNLOAD-VISUAL-REALIGNMENT-REPORT-v1.271.md. Next single page: `/download/trust` v1.272.
+Download Trust v1.272 checkpoint: `/download/trust` now uses the immersive public shell, canonical six `downloadTrustGates`, two clean provenance-locked trust-art crops, three truthful reading routes and a compact reason/principles band. Focused14/14, selected dev128/128 and production128/128 PASS; build63; source/provenance/current-state/typecheck/lint gates PASS. Historical Download Trust proof/design/layout suites are superseded, not runtime PASS; the cross-route v1.88 heading guard remains active. Latest report: LGO-WEB-FE-DOWNLOAD-TRUST-VISUAL-REALIGNMENT-REPORT-v1.272.md. Next single page: `/release` v1.273.

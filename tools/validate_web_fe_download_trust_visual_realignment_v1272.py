@@ -41,7 +41,11 @@ def main():
    if item.get('bakedWebUiControls') is not False: fail('download trust art must not contain baked web controls')
  require('docs/superpowers/specs/2026-09-17-public-site-visual-realignment-design.md','/download/trust')
  require('docs/superpowers/plans/2026-09-17-public-site-visual-realignment.md','Service, support and secondary route families')
- require('docs/execution/WEB-NEXT-ACTION.md','WEB-FE-DOWNLOAD-TRUST-VISUAL-REALIGNMENT-v1.272','Real Browser UI/UX Layout First')
+ require('docs/execution/WEB-PROJECT-STATE.md','WEB-FE-DOWNLOAD-TRUST-VISUAL-REALIGNMENT-v1.272 WEB_CLOSED','WEB-FE-RELEASE-VISUAL-REALIGNMENT-v1.273')
+ require('docs/execution/WEB-NEXT-ACTION.md','WEB-FE-RELEASE-VISUAL-REALIGNMENT-v1.273','Download Trust v1.272 checkpoint','Real Browser UI/UX Layout First')
+ require('docs/execution/WEB-TASK-LEDGER.md','| WEB-FE-DOWNLOAD-TRUST-VISUAL-REALIGNMENT-v1.272 | WEB-FE | WEB_CLOSED |')
+ require('docs/execution/LGO-WEB-FE-DOWNLOAD-TRUST-VISUAL-REALIGNMENT-REPORT-v1.272.md','Focused `/download/trust`: 14/14 PASS','Fresh production selected regression on port 3236: 128/128 PASS','e7846efa628f57bff44d15481c56182fccf0e90d')
+ require('docs/execution/HANDOFF-LGO-WEB-FE-DOWNLOAD-TRUST-VISUAL-REALIGNMENT-v1.272.md','Next: `/release` visual realignment v1.273')
  if ERRORS:
   print('WEB FE DOWNLOAD TRUST VISUAL REALIGNMENT v1.272 VALIDATION FAIL')
   for e in ERRORS: print('- '+e)

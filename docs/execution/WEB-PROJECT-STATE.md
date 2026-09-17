@@ -1,3 +1,16 @@
+Current phase: WEB-FE-DOWNLOAD-TRUST-VISUAL-REALIGNMENT-v1.272 WEB_CLOSED
+
+Current decision: `/download/trust` is now a target-driven immersive trust landing. The live page uses the shared immersive shell, two provenance-locked decorative hero crops, the truthful `Không tải giả` promise, all six canonical `downloadTrustGates` in source order and three real reading routes. The historical generic hero, internal proof boards, evidence stack and secondary disclosure are superseded, not counted as current runtime PASS.
+
+Verified source delivery commit: `e7846efa628f57bff44d15481c56182fccf0e90d` on `origin/main`. Focused Download Trust: 14/14 PASS; selected dev regression: 128/128 PASS; fresh production selected regression: 128/128 PASS; production build: 63 static pages; UI/Web typecheck and lint PASS; clean source-archive current-state PASS. Desktop/mobile browser screenshots were visually reviewed against the detailed target. The shared footer wordmark fallback was corrected after the still-active v1.88 guard exposed a first-load typography spike.
+
+Next task after final governance/archive delivery: WEB-FE-RELEASE-VISUAL-REALIGNMENT-v1.273.
+Select `/release` as the next single active page. Then continue `/release/readiness`, `/release/tester-pack`, `/status` and the remaining support/community families. Do not resume the historical `/news` queue.
+
+Detailed report: LGO-WEB-FE-DOWNLOAD-TRUST-VISUAL-REALIGNMENT-REPORT-v1.272.md.
+
+Historical state below is retained for provenance, not active visual authority.
+
 Current phase: WEB-FE-DOWNLOAD-VISUAL-REALIGNMENT-v1.271 WEB_CLOSED
 
 Current decision: `/download` is now a target-driven immersive closed-release-gate landing. The live page uses the shared immersive shell, one provenance-locked gate hero, a truthful `Chưa mở cổng phát hành` state, all five canonical `downloadReadiness` gates, both canonical `downloadBuilds` channels and four real official-information routes. The historical generic hero, download-depth/trust/evidence proof stack and expanded secondary evidence flow are superseded, not counted as current runtime PASS.
