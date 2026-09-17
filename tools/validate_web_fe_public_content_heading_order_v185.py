@@ -16,10 +16,10 @@ def require_text(rel: str, markers: list[str]) -> str:
     return text
 def check_routes() -> None:
     route_markers = {
-        "apps/web/src/app/events/page.tsx": ["lgo-events-experience", "Sự kiện Linh Giới", "<PublicEventsHero/>", "<PublicEventAnnouncements entries={entries}/>"],
-        "apps/web/src/app/patch-notes/page.tsx": ["lgo-patch-notes-experience", "Ghi chú cập nhật Linh Giới", "<PublicPatchNotesHero/>", "<PublicPatchNoteRecords entries={entries}/>"],
-        "apps/web/src/app/news/page.tsx": ["<PublicNewsDiscovery/>", "Tin tức Linh Giới", "reading-catalog.css"],
-        "apps/web/src/app/status/page.tsx": ["lgo-status-experience", "Trạng thái công khai", "PublicStatusHero", "PublicStatusSurfaces"],
+        "apps/web/src/app/events/page.tsx": ["lgo-events-experience", 'metadataForRoute("/events")', "<PublicEventsHero/>", "<PublicEventAnnouncements entries={entries}/>"],
+        "apps/web/src/app/patch-notes/page.tsx": ["lgo-patch-notes-experience", 'metadataForRoute("/patch-notes")', "<PublicPatchNotesHero/>", "<PublicPatchNoteRecords entries={entries}/>"],
+        "apps/web/src/app/news/page.tsx": ["<PublicNewsDiscovery/>", 'metadataForRoute("/news")', "reading-catalog.css"],
+        "apps/web/src/app/status/page.tsx": ["lgo-status-experience", 'metadataForRoute("/status")', "PublicStatusHero", "PublicStatusSurfaces"],
     }
     for rel, markers in route_markers.items(): require_text(rel, markers)
     require_text("apps/web/src/components/PublicNewsDiscovery.tsx", ['title="Tin tức Linh Giới"', "Không phải bản tin trực tiếp", "ReadingCatalog", "FeaturedReading"])

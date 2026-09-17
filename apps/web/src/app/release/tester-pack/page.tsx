@@ -1,9 +1,10 @@
+import { metadataForRoute } from "../../../lib/public-metadata";
 import "@lgo-web/ui/tester-pack-landing-layout.css";
 import "@lgo-web/ui/reading-tools.css";
 import { TesterPackHero, TesterPackShortcuts, TesterPackFeedback, TesterPackPreparation, TesterPackLimitations } from "../../../components/PublicTesterPackExperience";
 import { WebAppShell } from "../../../components/WebAppShell";
 
-export const metadata = { title: "Gói tester cộng đồng" };
+export const metadata = metadataForRoute("/release/tester-pack");
 
 export default function ClosedTesterInformationPackPage() {
   return <WebAppShell variant="immersive">

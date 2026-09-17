@@ -80,10 +80,12 @@ def main() -> int:
         "playwright.config.ts", "tests/e2e/public-navigation.spec.ts"
     ]:
         require_file(rel)
-    for phrase in ["openGraph", "description"]:
-        require_text("apps/web/src/app/layout.tsx", phrase)
-    require_text("apps/web/src/app/robots.ts", "sitemap")
-    require_text("apps/web/src/app/sitemap.ts", "localContentRepository")
+    require_text("apps/web/src/app/layout.tsx", "metadataForRoute")
+    for phrase in ["openGraph", "description", "alternates", "robots"]:
+        require_text("apps/web/src/lib/public-metadata.ts", phrase)
+    require_text("apps/web/src/app/robots.ts", "PUBLIC_SITE_ORIGIN")
+    require_text("apps/web/src/app/sitemap.ts", "publicRouteMatrix")
+    require_text("apps/web/src/app/sitemap.ts", "publicLastModifiedForRoute")
     for phrase in ["LCP <= 2.5s", "INP <= 200ms", "CLS <= 0.1", "SOURCE_READY_METRICS_UNVERIFIED"]:
         require_text("docs/execution/WEB-PERFORMANCE-BUDGET.md", phrase)
     require_text("apps/web/src/app/download/page.tsx", "PublicDownloadLanding")

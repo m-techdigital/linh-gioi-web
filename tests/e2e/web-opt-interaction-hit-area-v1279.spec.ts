@@ -1,12 +1,9 @@
 import { expect, test } from "@playwright/test";
+import { publicRouteMatrix } from "@lgo-web/content";
 import fs from "node:fs";
 import path from "node:path";
 
 const STATIC_BUILD = process.env.LGO_STATIC_BUILD_PATH;
-
-function routesFromXml(xml: string) {
-  return [...xml.matchAll(/<loc>https:\/\/linhgioi\.vn([^<]*)<\/loc>/g)].map((match) => match[1] || "/");
-}
 
 function appRouteFile(app: string, pathname: string, extension: ".html" | ".rsc") {
   const route = pathname.replace(/\/$/, "") || "/";
@@ -43,15 +40,6 @@ async function installStaticBuild(context: import("@playwright/test").BrowserCon
   });
 }
 
-async function publicRoutes(page: import("@playwright/test").Page) {
-  if (STATIC_BUILD) {
-    return routesFromXml(fs.readFileSync(path.join(STATIC_BUILD, ".next/server/app/sitemap.xml.body"), "utf8"));
-  }
-  const response = await page.request.get("/sitemap.xml");
-  expect(response.ok()).toBeTruthy();
-  return routesFromXml(await response.text());
-}
-
 async function ready(page: import("@playwright/test").Page) {
   await expect(page.locator("h1").first()).toBeVisible();
   await page.evaluate(async () => {
@@ -64,7 +52,7 @@ test.describe("WEB-OPT-02 interaction hit-area/mobile navigation v1.279", () => 
   test.beforeEach(async ({ context }) => installStaticBuild(context));
 
   test("all 59 public routes keep ergonomic mobile action hit areas", async ({ page }) => {
-    const routes = await publicRoutes(page);
+    const routes = publicRouteMatrix.map((entry) => entry.route);
     expect(routes).toHaveLength(59);
     const failures: Array<{ route: string; tag: string; text: string; className: string; height: number }> = [];
     for (const route of routes) {

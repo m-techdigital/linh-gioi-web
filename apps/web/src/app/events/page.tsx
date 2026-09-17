@@ -1,3 +1,4 @@
+import { metadataForRoute } from "../../lib/public-metadata";
 import "@lgo-web/ui/service-layout.css";
 import "@lgo-web/ui/release-layout.css";
 import "@lgo-web/ui/performance-layout.css";
@@ -8,7 +9,7 @@ import { Stack } from "@lgo-web/ui";
 import { PublicEventAnnouncements, PublicEventsHero, PublicEventsReadingRoutes } from "../../components/PublicEventsExperience";
 import { WebAppShell } from "../../components/WebAppShell";
 
-export const metadata = { title: "Sự kiện Linh Giới" };
+export const metadata = metadataForRoute("/events");
 
 export default function EventsPage() {
   const entries = localContentRepository.list("events");

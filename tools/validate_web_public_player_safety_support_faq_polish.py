@@ -46,7 +46,8 @@ def main() -> int:
         "apps/web/src/components/PublicSupportSafetyExperience.tsx": [
             "Báo lỗi an toàn", "Chưa có ticket thật", "chưa tra cứu tài khoản", "chưa có bảng kiểm duyệt"
         ],
-        "apps/web/src/app/sitemap.ts": ["/support/safety", "/guides/player-safety-support-guide"],
+        "packages/content/src/public-ia.ts": ["/support/safety", "/guides/player-safety-support-guide"],
+        "apps/web/src/app/sitemap.ts": ["publicRouteMatrix", "indexability"],
         "docs/execution/WEB-PROJECT-STATE.md": ["LGO_WEB_PUBLIC_PLAYER_SAFETY_SUPPORT_FAQ_POLISH_READY_v1.14"],
         "docs/execution/WEB-NEXT-ACTION.md": ["WEB-PUBLIC-ACCESSIBILITY-READABILITY-POLISH-v1.15"],
         "docs/execution/WEB-NON-CLAIMS.md": ["No secure ticket inbox", "No production support SLA", "No moderation dashboard"]

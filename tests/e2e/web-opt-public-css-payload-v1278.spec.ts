@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { publicRouteMatrix } from "@lgo-web/content";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -8,19 +9,6 @@ const STATIC_BUILD = process.env.LGO_STATIC_BUILD_PATH;
 function median(values: number[]) {
   const sorted = [...values].sort((a, b) => a - b);
   return sorted[Math.floor(sorted.length / 2)];
-}
-
-function routesFromXml(xml: string) {
-  return [...xml.matchAll(/<loc>https:\/\/linhgioi\.vn([^<]*)<\/loc>/g)].map((match) => match[1] || "/");
-}
-
-async function publicRoutes(page: import("@playwright/test").Page) {
-  if (STATIC_BUILD) {
-    return routesFromXml(fs.readFileSync(path.join(STATIC_BUILD, ".next/server/app/sitemap.xml.body"), "utf8"));
-  }
-  const response = await page.request.get("/sitemap.xml");
-  expect(response.ok()).toBeTruthy();
-  return routesFromXml(await response.text());
 }
 
 function appRouteFile(app: string, pathname: string, extension: ".html" | ".rsc") {
@@ -62,7 +50,7 @@ test.describe("WEB-OPT-01 public CSS ownership/payload v1.278", () => {
   });
 
   test("all sitemap routes stay overflow-free and median decoded CSS meets the reset budget", async ({ page }) => {
-    const routes = await publicRoutes(page);
+    const routes = publicRouteMatrix.map((entry) => entry.route);
     expect(routes).toHaveLength(59);
     const rows: Array<{ route: string; cssBytes: number; overflow: boolean }> = [];
     for (const route of routes) {

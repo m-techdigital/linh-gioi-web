@@ -1,3 +1,4 @@
+import { metadataForRoute } from "../../lib/public-metadata";
 import "@lgo-web/ui/service-layout.css";
 import "@lgo-web/ui/release-layout.css";
 import "@lgo-web/ui/performance-layout.css";
@@ -8,7 +9,7 @@ import { Stack } from "@lgo-web/ui";
 import { PublicPatchNoteRecords, PublicPatchNotesHero, PublicPatchNotesReadingRoutes } from "../../components/PublicPatchNotesExperience";
 import { WebAppShell } from "../../components/WebAppShell";
 
-export const metadata = { title: "Ghi chú cập nhật Linh Giới" };
+export const metadata = metadataForRoute("/patch-notes");
 
 export default function Page() {
   const entries = localContentRepository.list("patch-notes");

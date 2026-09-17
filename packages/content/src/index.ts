@@ -86,6 +86,12 @@ export {
   publicRouteMatrix,
   routePolicy
 } from "./public-ia";
+export {
+  PUBLIC_SITE_ORIGIN,
+  publicLastModifiedForRoute,
+  publicMetadataForRoute
+} from "./public-metadata";
+export type { PublicMetadataSource } from "./public-metadata";
 export type {
   PublicDiscovery,
   PublicIndexability,

@@ -1,3 +1,4 @@
+import { metadataForRoute } from "../../../lib/public-metadata";
 import "@lgo-web/ui/service-layout.css";
 import "@lgo-web/ui/release-layout.css";
 import "@lgo-web/ui/guidance-layout.css";
@@ -6,7 +7,7 @@ import { Stack } from "@lgo-web/ui";
 import { PublicHelpAnswers, PublicHelpBoundary, PublicHelpHero, PublicHelpReadingNotes, PublicHelpTopics } from "../../../components/PublicSupportHelpExperience";
 import { WebAppShell } from "../../../components/WebAppShell";
 
-export const metadata = { title: "FAQ nhanh" };
+export const metadata = metadataForRoute("/support/help");
 
 export default function SupportHelpPage() {
   return <WebAppShell>

@@ -85,7 +85,7 @@ def main() -> int:
     require("tests/e2e/web-opt-public-ia-language-v1281.spec.ts", (
         "primary news discovery is player-facing",
         "homepage stops promoting development-history articles",
-        "all sitemap routes have an intentional inbound public link",
+        "all 59 public routes have an intentional inbound public link",
     ))
 
     next_action = read("docs/execution/WEB-NEXT-ACTION.md")

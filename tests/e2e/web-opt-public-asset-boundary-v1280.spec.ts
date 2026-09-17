@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { publicRouteMatrix } from "@lgo-web/content";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -42,13 +43,6 @@ async function installStaticBuild(context: import("@playwright/test").BrowserCon
     return route.fulfill({ status: 200, contentType: type, body: fs.readFileSync(file) });
   });
 }
-async function routes(page: import("@playwright/test").Page) {
-  const xml = STATIC_BUILD
-    ? fs.readFileSync(path.join(STATIC_BUILD, ".next/server/app/sitemap.xml.body"), "utf8")
-    : await (await page.request.get("/sitemap.xml")).text();
-  return [...xml.matchAll(/<loc>https:\/\/linhgioi\.vn([^<]*)<\/loc>/g)].map((match) => match[1] || "/");
-}
-
 async function ready(page: import("@playwright/test").Page) {
   await expect(page.locator("h1").first()).toBeVisible();
   await page.evaluate(async () => {
@@ -64,7 +58,7 @@ test.describe("WEB-OPT-03 public asset boundary/image delivery v1.280", () => {
   test("review-only design targets are not public and live routes keep healthy product images", async ({ page }) => {
     const review = await page.goto("/design-reference/homepage-detailed-design-target-v1118.png", { waitUntil: "load" });
     expect(review?.status()).toBe(404);
-    const publicRoutes = await routes(page);
+    const publicRoutes = publicRouteMatrix.map((entry) => entry.route);
     expect(publicRoutes).toHaveLength(59);
     const failures: Array<{ route: string; src: string }> = [];
     const reviewRequests: string[] = [];

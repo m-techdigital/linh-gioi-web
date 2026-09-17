@@ -1,24 +1,14 @@
 import { expect, test, type Page } from "@playwright/test";
+import { publicRouteMatrix } from "@lgo-web/content";
 import fs from "node:fs";
 import path from "node:path";
 
 const STATIC_BUILD = process.env.LGO_STATIC_BUILD_PATH;
 const INTERNAL_PRIMARY_TERMS = [/WEB v\d/i, /PROVISIONAL_WEB_FIXTURE/i, /\bfixture\b/i, /\bruntime\b/i, /\be2e\b/i, /source-owned/i];
 
-function routesFromXml(xml: string) {
-  return [...xml.matchAll(/<loc>https:\/\/linhgioi\.vn([^<]*)<\/loc>/g)].map((match) => match[1] || "/");
-}
-
 function appRouteFile(app: string, pathname: string, extension: ".html" | ".rsc") {
   const route = pathname.replace(/\/$/, "") || "/";
   return path.join(app, ".next/server/app", `${route === "/" ? "index" : route.slice(1)}${extension}`);
-}
-
-async function sitemapRoutes(page: Page) {
-  if (STATIC_BUILD) return routesFromXml(fs.readFileSync(path.join(STATIC_BUILD, ".next/server/app/sitemap.xml.body"), "utf8"));
-  const response = await page.request.get("/sitemap.xml");
-  expect(response.ok()).toBeTruthy();
-  return routesFromXml(await response.text());
 }
 
 test.describe("WEB-OPT-04 public IA/player language v1.281", () => {
@@ -79,8 +69,8 @@ test.describe("WEB-OPT-04 public IA/player language v1.281", () => {
     await expect(page.locator("#home-news").getByRole("link", { name: /Trạng thái chơi/i })).toHaveAttribute("href", "/status");
   });
 
-  test("all sitemap routes have an intentional inbound public link, including events archive", async ({ page }) => {
-    const routes = await sitemapRoutes(page);
+  test("all 59 public routes have an intentional inbound public link, including events archive", async ({ page }) => {
+    const routes = publicRouteMatrix.map((entry) => entry.route);
     expect(routes).toHaveLength(59);
     const inbound = new Map(routes.map((route) => [route, 0]));
     for (const route of routes) {

@@ -53,8 +53,9 @@ def main() -> int:
     require_text("apps/web/src/app/journey/page.tsx", "PublicJourneyLanding", 'variant="immersive"')
     require_text("apps/web/src/components/PublicJourneyLanding.tsx", "sampleSessionBeats", "worldRouteStops", "20 phút không chỉ để đánh quái", "lgo-journey-beat-grid")
     require_text("apps/web/src/components/PublicNavigation.tsx", "/classes", "/game/loop", "Lộ phái", "Tính năng", "Tin tức")
-    require_text("apps/web/src/app/layout.tsx", "MMORPG hành động cộng đồng 2D", "Linh Thành")
-    require_text("apps/web/src/app/sitemap.ts", '"/classes"', '"/story"')
+    require_text("packages/content/src/public-metadata.ts", "MMORPG hành động cộng đồng 2D", "Linh Thành")
+    require_text("packages/content/src/public-ia.ts", 'route("/classes"', 'route("/story"')
+    require_text("apps/web/src/app/sitemap.ts", "publicRouteMatrix")
     require_text("apps/web/src/app/globals.css", "WEB v1.22 public game experience", "lgo-cinematic-hero", "lgo-class-path-grid", "lgo-world-route")
 
     homepage = read("apps/web/src/app/page.tsx") + read("apps/web/src/components/PublicHomeLanding.tsx")

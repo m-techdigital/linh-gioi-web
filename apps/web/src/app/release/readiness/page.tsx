@@ -1,9 +1,10 @@
+import { metadataForRoute } from "../../../lib/public-metadata";
 import "@lgo-web/ui/release-readiness-landing-layout.css";
 import { OwnerReleaseGateBoard } from "../../../components/PublicReleaseReadinessHubSections";
 import { ReleaseReadinessHero, ReleaseReadinessPlayerNextSteps } from "../../../components/PublicReleaseReadinessExperience";
 import { WebAppShell } from "../../../components/WebAppShell";
 
-export const metadata = { title: "Sẵn sàng phát hành" };
+export const metadata = metadataForRoute("/release/readiness");
 
 export default function ReleaseReadinessPage() {
   return <WebAppShell variant="immersive">

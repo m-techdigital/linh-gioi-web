@@ -1,3 +1,4 @@
+import { metadataForRoute } from "../../../lib/public-metadata";
 import "@lgo-web/ui/service-layout.css";
 import { PublicSafetySupportArticle } from "../../../components/PublicSafetySupportArticle";
 import { PublicWorldLoopArticle } from "../../../components/PublicWorldLoopArticle";
@@ -26,7 +27,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const entry = localContentRepository.bySlug(slug);
-  return { title: entry?.title ?? "Tin tức" };
+  if (!entry || entry.category !== "news") return metadataForRoute("/news");
+  return metadataForRoute(`/news/${entry.slug}`);
 }
 
 export default async function NewsDetailPage({ params }: { params: Promise<{ slug: string }> }) {

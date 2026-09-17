@@ -1,3 +1,4 @@
+import { metadataForRoute } from "../../../lib/public-metadata";
 import "@lgo-web/ui/service-layout.css";
 import { PublicFaqGuide } from "../../../components/PublicFaqGuide";
 import { PublicClosedTesterGuide } from "../../../components/PublicClosedTesterGuide";
@@ -43,7 +44,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const entry = localContentRepository.bySlug(slug);
-  return { title: entry?.title ?? "Hướng dẫn" };
+  if (!entry || entry.category !== "guides") return metadataForRoute("/guides");
+  return metadataForRoute(`/guides/${entry.slug}`);
 }
 
 export default async function GuideDetailPage({ params }: { params: Promise<{ slug: string }> }) {
