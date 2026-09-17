@@ -30,6 +30,12 @@ export default defineConfig({
   testIgnore: [
     // Public design targets remain evidence artifacts but no longer render as player-facing chrome; v1.272a owns public shell consistency.
     "**/fe-public-design-target-attachment-v197.spec.ts",
+    // v1.273 replaces the historical /release proof-board and compact proof-stack layouts.
+    "**/fe-public-release-narrative-design-board-v174.spec.ts",
+    "**/fe-release-design-target-density-v1127.spec.ts",
+    "**/fe-release-vietnamese-design-match-v1142.spec.ts",
+    "**/fe-release-real-ui-layout-v1200.spec.ts",
+    "**/fe-release-real-ui-layout-v1220.spec.ts",
     // v1.271 replaces the historical /download proof/depth layouts with the truthful target-driven release-gate landing.
     "**/fe-download-design-target-density-v1125.spec.ts",
     "**/fe-download-vietnamese-design-match-v1140.spec.ts",
