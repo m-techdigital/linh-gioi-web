@@ -1,3 +1,16 @@
+Current phase: WEB-FE-STORY-VISUAL-REALIGNMENT-v1.267 WEB_CLOSED
+
+Current decision: `/story` is now a target-driven immersive narrative landing. The live page uses source-derived story artwork, a three-line desktop hero title with foreground character layer, truthful reading actions, three canonical source chapters plus one clearly narrative event card, four-column desktop rhythm and one-column mobile flow. Historical proof-board/disclosure layouts are superseded, not counted as current runtime PASS.
+
+Verified source delivery commit: `f631e2aa129b367977ff301e725fd4cb29b2f541` on `origin/main`. Fresh production selected regression: 60/60 PASS; focused story: 20/20 PASS; production build: 63 static pages; UI/Web typecheck and lint PASS. Desktop/mobile target-vs-actual screenshots were reviewed after fixing both the compressed legacy grid and four-line hero title.
+
+Next task after final governance/archive delivery: WEB-FE-CLASSES-VISUAL-REALIGNMENT-v1.268.
+Select `/classes` as the next single active page. Then `/journey`, `/start`, followed by release/service and support/community families from the full-site visual audit plan. Do not resume the historical `/news` queue.
+
+Detailed report: LGO-WEB-FE-STORY-VISUAL-REALIGNMENT-REPORT-v1.267.md.
+
+Historical state below is retained for provenance, not active visual authority.
+
 Current phase: WEB-FE-GAME-WORLD-REALIGNMENT-v1.266 WEB_CLOSED
 
 Current decision: `/game` is now a target-driven immersive world landing, replacing the historical proof-board first flow. Fresh production40/40, focused18/18, build63, UI/Web/Portal/Ops typecheck, UI/Web lint, and16 exact sibling comparisons PASS. Source-derived world art is provenance-locked. Full-site audit confirms many other routes still need real design work.

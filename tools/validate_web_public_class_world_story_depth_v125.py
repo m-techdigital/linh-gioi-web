@@ -30,7 +30,6 @@ def main() -> int:
     require_text("apps/web/src/components/PublicGameDepthSections.tsx", "ClassIdentityDeck", "WorldAtlasStories", "StoryArcTimeline")
     for rel in (
         "apps/web/src/app/classes/page.tsx",
-        "apps/web/src/app/story/page.tsx",
         "apps/web/src/app/start/page.tsx",
         "apps/web/src/app/journey/page.tsx",
         "apps/web/src/app/download/page.tsx",
@@ -49,7 +48,9 @@ def main() -> int:
     if any(symbol in read("apps/web/src/components/PublicGameExperienceSections.tsx") for symbol in ("ClassIdentityDeck", "WorldAtlasStories", "StoryArcTimeline")):
         fail("PublicGameExperienceSections.tsx still owns v1.25 depth components; split them into PublicGameDepthSections.tsx")
     require_text("apps/web/src/app/classes/page.tsx", "ClassIdentityDeck")
-    require_text("apps/web/src/app/story/page.tsx", "StoryArcTimeline")
+    # /story v1.267 supersedes the legacy PublicPlayerHero + StoryArcTimeline proof flow while retaining canonical narrativeChapters data.
+    require_text("apps/web/src/app/story/page.tsx", "PublicStoryLanding", 'variant="immersive"')
+    require_text("apps/web/src/components/PublicStoryLanding.tsx", "narrativeChapters", "closingTurn", "lgo-story-chapter-grid")
     require_text("apps/web/src/app/globals.css", "WEB v1.25 class world story depth", "lgo-class-identity-deck", "lgo-world-atlas-stories", "lgo-story-arc-timeline")
     require_text("docs/execution/WEB-PROJECT-STATE.md", "v1.25")
     require_text("HANDOFF-LGO-WEB-PUBLIC-CLASS-WORLD-STORY-DEPTH-v1.25.md", "WEB-PUBLIC-CLASS-WORLD-STORY-DEPTH-v1.25")

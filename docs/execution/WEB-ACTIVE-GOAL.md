@@ -2,7 +2,7 @@
 
 ## Owner override — full public-page visual remediation (2026-09-17)
 
-A full browser audit found 27 concrete public routes and16 page-specific visual targets. Do not infer visual completion from historical validators/tests. Process one page at a time using the existing target, real browser screenshots and shared Base First owners. Current order: `/story`, `/classes`, `/journey`, `/start`, then service and support/community families. The old `/news` queue is historical, not active authority.
+A full browser audit found 27 concrete public routes and16 page-specific visual targets. Do not infer visual completion from historical validators/tests. Process one page at a time using the existing target, real browser screenshots and shared Base First owners. `/story` v1.267 is closed by target-driven browser evidence; current order: `/classes`, `/journey`, `/start`, then service and support/community families. The old `/news` queue is historical, not active authority.
 
 ## Owner priority override — homepage first (2026-09-17)
 

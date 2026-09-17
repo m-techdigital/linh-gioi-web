@@ -5,14 +5,14 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-STORY-VISUAL-REALIGNMENT-v1.267
+WEB-FE-CLASSES-VISUAL-REALIGNMENT-v1.268
 
 Objective:
-Owner priority override: restart at the homepage `/`; early public pages have NOT been accepted as matching the detailed design. Defer the remaining /news queue. Build from the actual homepage design, not previous CLOSED labels or same-layout regression counts.
+Continue the owner-priority full-site visual remediation one page at a time. `/story` v1.267 is closed by target-driven browser evidence; do not reopen it without a related regression. Defer the historical /news queue and move to the next page-specific target.
 
-Current FE scope: select `/story` as the next single active page. Rebuild from `story-detailed-design-target-v1121.png`; complete `/story` fully before any other page, with real browser desktop/mobile evidence, before touching `/classes`.
+Current FE scope: select `/classes` as the next single active page. Rebuild against the existing classes detailed target and canonical five-Lộ source data; complete `/classes` fully before any other page, with real browser desktop/mobile evidence, before touching `/journey`.
 
-Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile;16 have detailed page targets. Historical CLOSED/PASS does not prove visual fidelity. `/game` v1.266 is now closed by real target-driven replacement. Continue sequentially `/story` → `/classes` → `/journey` → `/start`, then release/service and support/community families. Do not use the old `/news` queue as current authority.
+Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile;16 have detailed page targets. Historical CLOSED/PASS does not prove visual fidelity. `/game` v1.266 and `/story` v1.267 are now closed by real target-driven replacements. Continue sequentially `/classes` → `/journey` → `/start`, then release/service and support/community families. Do not use the old `/news` queue as current authority.
 
 Mandatory execution rules:
 
@@ -25,7 +25,7 @@ Mandatory execution rules:
 3. CSS must be managed by owner/role.
    Theme/tokens: packages/design-tokens. Reusable component/layout style: packages/ui. Apps compose base and keep only truly route-specific differences. Do not inflate apps/web/src/app/globals.css with duplicate page blocks.
 
-4. Do not move past `/` until closure evidence exists:
+4. Do not move past the current single active page until closure evidence exists:
    - render in real browser/e2e;
    - desktop/mobile metrics and screenshot/visual review against the target and accepted shell;
    - active source validator and necessary typecheck/build;
@@ -34,7 +34,7 @@ Mandatory execution rules:
 
 5. Forbidden substitutes: text-only/copy-only, translation-only, design-only, validator/doc-only, content edits without browser evidence, multiple pages at once. Never relax layout tests just to obtain PASS.
 
-6. If execution drifts, return to `/`, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until `/` is closed.
+6. If execution drifts, return to the current active page, inspect rendered layout, check Base First owners, modify the shared base where reusable, and continue until that page is closed.
 
 Non-claims: FE-only until accepted game backend contracts exist. No independent backend. No production auth. No DB persistence. No CMS. No production deployment. No payment/shop/economy.
 
@@ -49,7 +49,7 @@ Validator compatibility and anti-drift guardrails:
 
 Runtime resource policy: keep dev3221 and reuse production3236 after fresh ownership/process verification. Do not open another port per version. Release finished handoff write claims after verified delivery; retain artifacts.
 
-Deferred historical queue (not active): WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.265 `/news/accessibility-readability-polish-started`. Current task stays homepage until review.
+Deferred historical queue (not active): WEB-FE-ACCESSIBILITY-INTERACTION-AUDIT-v1.265 `/news/accessibility-readability-polish-started`. Current task follows the sequential visual-remediation route above; do not resume the old news queue.
 
 Homepage revision3 checkpoint: header identity and primary-action icon/frame details are implemented and verified. Keep the SAME homepage task. Next review/refine the lower Khám phá/Bản tin media composition and footer against the original design, especially the bright gallery lead and repeated thumbnail treatment. Preserve real content, proven header/actions and native artwork. Packaging is not page acceptance. Latest report: LGO-WEB-FE-HOMEPAGE-HEADER-ACTIONS-REPORT-v1.265-r3.md.
 
@@ -58,3 +58,5 @@ Homepage revision4 checkpoint: Khám phá/Bản tin media and compact footer now
 Homepage revision5 checkpoint: source-derived cyan header sigil, live target motto and non-video discovery focal are implemented and verified. All registered homepage design regions now have truthful live equivalents; keep the SAME `/` task for owner visual acceptance. If accepted, /game is next; otherwise continue only `/`. Latest report: LGO-WEB-FE-HOMEPAGE-FINAL-DETAILS-REPORT-v1.265-r5.md.
 
 Homepage revision6 checkpoint: final target-density pass reduces immersive nav to six truthful target-rhythm routes and removes the redundant technical badge/prose from the hero while preserving the source brush logo, motto, CTAs, signals, discovery/news/footer and accessibility behavior. Fresh production156/156 after a real12px→14px motto readability fix. Keep the SAME `/` task for owner acceptance; packaging does not auto-advance. Latest report: LGO-WEB-FE-HOMEPAGE-FINAL-DENSITY-REPORT-v1.265-r6.md.
+
+Story v1.267 checkpoint: `/story` now uses the immersive public shell, source-derived target artwork, three-line desktop hero title with foreground character layer, truthful reading CTAs and a four-card chapter/event rhythm that stacks to one column on mobile. Fresh focused20/20 and production selected60/60 PASS; build63; provenance validator/typecheck/lint PASS. Historical story proof-board validators/tests are superseded, not runtime PASS. Latest report: LGO-WEB-FE-STORY-VISUAL-REALIGNMENT-REPORT-v1.267.md. Next single page: `/classes` v1.268.

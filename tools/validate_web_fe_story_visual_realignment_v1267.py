@@ -35,6 +35,11 @@ def main():
    if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest()!=item['sha256']: fail('story art drift '+item['file'])
  require('docs/superpowers/specs/2026-09-17-public-site-visual-realignment-design.md','/story','Historical validator/test PASS is engineering evidence only')
  require('docs/superpowers/plans/2026-09-17-public-site-visual-realignment.md','Task 2: `/story`','RED → source-art → shared owner → browser review flow')
+ require('docs/execution/WEB-PROJECT-STATE.md','WEB-FE-STORY-VISUAL-REALIGNMENT-v1.267 WEB_CLOSED','WEB-FE-CLASSES-VISUAL-REALIGNMENT-v1.268')
+ require('docs/execution/WEB-NEXT-ACTION.md','WEB-FE-CLASSES-VISUAL-REALIGNMENT-v1.268','Story v1.267 checkpoint')
+ require('docs/execution/WEB-TASK-LEDGER.md','| WEB-FE-STORY-VISUAL-REALIGNMENT-v1.267 | WEB-FE | WEB_CLOSED |')
+ require('docs/execution/LGO-WEB-FE-STORY-VISUAL-REALIGNMENT-REPORT-v1.267.md','Focused `/story`: 20/20 PASS','Fresh production selected regression on port 3236: 60/60 PASS','f631e2aa129b367977ff301e725fd4cb29b2f541')
+ require('docs/execution/HANDOFF-LGO-WEB-FE-STORY-VISUAL-REALIGNMENT-v1.267.md','Next: `/classes` visual realignment v1.268')
  if ERRORS:
   print('WEB FE STORY VISUAL REALIGNMENT v1.267 VALIDATION FAIL')
   for e in ERRORS: print('- '+e)
