@@ -18,7 +18,7 @@ const shortcuts: ReadonlyArray<{ href: string; icon: ReleaseIconName; title: str
 ];
 
 export function TesterPackHero() {
-  return <ExperienceHero className="lgo-release-hero lgo-release-frame" copyClassName="lgo-release-hero-copy"
+  return <ExperienceHero className="lgo-release-hero lgo-release-frame lgo-tester-pack-hero" copyClassName="lgo-release-hero-copy"
     badge="Linh Giới Online · Cộng đồng" badgeTone="gold" kicker="Cùng quan sát. Cùng cải thiện."
     title="Gói tester cộng đồng" lead="Một thế giới tốt hơn bắt đầu từ những phản hồi rõ ràng. Chuẩn bị checklist, ghi nhận trải nghiệm và hiểu giới hạn trước một lời mời thử nghiệm."
     actions={[{ href: "#tester-feedback", label: "Xem mẫu phản hồi", tone: "gold" }, { href: "/release/readiness", label: "Kiểm tra cổng duyệt", tone: "neutral" }]}
@@ -30,7 +30,8 @@ export function TesterPackHero() {
       </ul><p className="lgo-release-art-note">Minh họa thế giới và sổ tay · không phải ảnh gameplay</p>
     </>}
     visual={<>
-      <img className="lgo-release-hero-art" src="/game-art/world/dong-mon-skyline.webp" width="1360" height="765" alt="" fetchPriority="high" />
+      <img className="lgo-release-hero-art" src="/game-art/marketing/discovery-world.png" width="500" height="240" alt="" fetchPriority="high" />
+      <img className="lgo-tester-pack-traveler" src="/game-art/marketing/hero-traveler.png" width="344" height="348" alt="" fetchPriority="high" />
       <FieldManual title="Gói tester" quote="Cùng quan sát. Cùng cải thiện. Linh Giới tử tế hơn." steps={["Quan sát", "Ghi nhận", "Tái hiện", "Góp ý"]} />
     </>} />;
 }
@@ -40,7 +41,7 @@ export function TesterPackShortcuts() {
   </nav>;
 }
 export function TesterPackFeedback() {
-  return <div className="lgo-release-reading-grid">
+  return <div className="lgo-release-reading-grid lgo-tester-pack-primary-grid">
     <section className="lgo-release-paper-panel lgo-release-frame" aria-labelledby="tester-safety-heading">
       <ReleaseIcon name="shield" />
       <SectionHeading headingId="tester-safety-heading" eyebrow="Chia sẻ trải nghiệm, giữ riêng dữ liệu" title="Phản hồi an toàn" />
