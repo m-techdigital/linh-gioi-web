@@ -25,7 +25,7 @@ def main():
  forbid('apps/web/src/app/download/page.tsx','PublicPlayerHero','DownloadStatusDepth','DownloadTrustGateBoard','ReleaseEvidenceChecklist','lgo-download-expanded-evidence')
  require('packages/ui/src/download-landing-layout.css','immersive-shell.css','grid-template-columns:repeat(5','grid-template-columns:repeat(2','@media (max-width:700px)','forced-colors','prefers-reduced-motion')
  require('tests/e2e/fe-download-visual-realignment-v1271.spec.ts','five canonical readiness gates','both canonical release channels','four real official information routes','320px accessibility')
- design=ROOT/'apps/web/public/design-reference/download-detailed-design-target-v1125.png'
+ design=ROOT/'docs/design/reference/WEB-FE-DOWNLOAD-DETAILED-DESIGN-TARGET-v1.125.png'
  manifest=ROOT/'apps/web/public/game-art/download-target/provenance.json'
  if not design.is_file() or not manifest.is_file(): fail('missing download design/provenance')
  else:

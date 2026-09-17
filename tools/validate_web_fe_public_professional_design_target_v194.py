@@ -24,7 +24,7 @@ def png_size(rel: str) -> tuple[int, int]:
         return (0, 0)
     return struct.unpack(">II", data[16:24])
 def check_targets() -> None:
-    for rel in ["apps/web/public/design-reference/public-professional-design-target-v194.png", "docs/design/reference/WEB-FE-PUBLIC-PROFESSIONAL-DESIGN-TARGET-v1.94.png"]:
+    for rel in ["docs/design/reference/WEB-FE-PUBLIC-PROFESSIONAL-DESIGN-TARGET-v1.94.png", "docs/design/reference/WEB-FE-PUBLIC-PROFESSIONAL-DESIGN-TARGET-v1.94.png"]:
         require_file(rel)
         width, height = png_size(rel)
         if width < 1600 or height < 900:

@@ -37,8 +37,8 @@ def png_size(rel: str) -> tuple[int, int]:
     return struct.unpack(">II", data[16:24])
 
 TARGETS = [
-    ("Player Portal", "apps/web/public/design-reference/design-atlas-portal-v195.png", "apps/portal/public/design-reference/design-atlas-portal-v195.png"),
-    ("Ops/Admin", "apps/web/public/design-reference/design-atlas-ops-v195.png", "apps/ops/public/design-reference/design-atlas-ops-v195.png"),
+    ("Player Portal", "docs/design/reference/WEB-FE-DESIGN-ATLAS-PORTAL-v1.95.png", "apps/portal/public/design-reference/design-atlas-portal-v195.png"),
+    ("Ops/Admin", "docs/design/reference/WEB-FE-DESIGN-ATLAS-OPS-v1.95.png", "apps/ops/public/design-reference/design-atlas-ops-v195.png"),
 ]
 
 def check_assets() -> None:

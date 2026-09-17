@@ -36,7 +36,7 @@ def main() -> int:
     require("packages/content/src/fixtures.ts", "export const ownerReleaseGates", 'gate: "Gói phát hành"', 'gate: "Giới hạn đã biết"', 'gate: "Tiếp nhận tester"', 'gate: "Owner phê duyệt"')
 
     expected = {
-        "apps/web/public/design-reference/release-readiness-detailed-design-target-v1128.png": "54f6598e85630b57310a435d06ce3af34f9f3a239553e941e34ef417abcf5854",
+        "docs/design/reference/WEB-FE-RELEASE-READINESS-DETAILED-DESIGN-TARGET-v1.128.png": "54f6598e85630b57310a435d06ce3af34f9f3a239553e941e34ef417abcf5854",
         "apps/web/public/game-art/marketing/discovery-world.png": "b703a74303b7b376804b1ad4804e3c54c75cfcd1639113ee28a1926fe8d41d9e",
         "apps/web/public/game-art/marketing/hero-traveler.png": "44ebffae955f423d6cb9d3f6406d4b64470b76f4ea9c95d4bdcd47044db2ac62",
     }

@@ -1,7 +1,7 @@
 {
   "version": "v1.269",
   "role": "JOURNEY_TARGET_DECORATIVE_ART_PROVENANCE",
-  "sourcePath": "/design-reference/journey-detailed-design-target-v1123.png",
+  "sourcePath": "docs/design/reference/WEB-FE-JOURNEY-DETAILED-DESIGN-TARGET-v1.123.png",
   "sourceSha256": "b8a4385491c4ed152356d8bf652538b55a3bdbf225e0a415feeb1ae8a12724d4",
   "hero": {
     "path": "/game-art/journey-target/hero-city.png",

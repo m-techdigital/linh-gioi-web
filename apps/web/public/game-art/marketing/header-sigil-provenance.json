@@ -1,5 +1,5 @@
 {
-  "source": "apps/web/public/design-reference/homepage-detailed-design-target-v1118.png",
+  "source": "docs/design/reference/WEB-FE-HOMEPAGE-DETAILED-DESIGN-TARGET-v1.118.png",
   "sourceSha256": "ecf58cb2af080587e3be3b07430640b9765eb6b8319facc5bc9ad16e8eecef9e",
   "method": "Sharp raw integer 42x42 crop from registered homepage target; RGB bytes preserved from decoded source and only alpha bytes changed by cyan/background key. No resize, redraw or generation.",
   "rect": [

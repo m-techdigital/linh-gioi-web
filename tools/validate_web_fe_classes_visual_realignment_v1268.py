@@ -23,7 +23,7 @@ def main():
  forbid('apps/web/src/app/classes/page.tsx','PublicPlayerHero','ClassPathGrid','ClassIdentityDeck','ClassArtSpotlight','lgo-classespage-expanded-evidence')
  require('packages/ui/src/classes-landing-layout.css','immersive-shell.css','grid-template-columns:repeat(5','.lgo-class-selected-feature','@media (max-width:700px)','grid-template-columns:1fr','forced-colors','prefers-reduced-motion')
  require('tests/e2e/fe-classes-visual-realignment-v1268.spec.ts','five canonical illustrated path choices','selected-path feature','target wide five-card rhythm','portrait-friendly scene crop','320px')
- design=ROOT/'apps/web/public/design-reference/classes-detailed-design-target-v1122.png'
+ design=ROOT/'docs/design/reference/WEB-FE-CLASSES-DETAILED-DESIGN-TARGET-v1.122.png'
  manifest=ROOT/'apps/web/public/game-art/classes-target/provenance.json'
  if not design.is_file() or not manifest.is_file(): fail('missing classes design/provenance')
  else:

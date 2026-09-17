@@ -1,5 +1,5 @@
 {
-  "source": "apps/web/public/design-reference/homepage-detailed-design-target-v1118.png",
+  "source": "docs/design/reference/WEB-FE-HOMEPAGE-DETAILED-DESIGN-TARGET-v1.118.png",
   "sourceSha256": "ecf58cb2af080587e3be3b07430640b9765eb6b8319facc5bc9ad16e8eecef9e",
   "method": "Integer canvas crop from existing design target. No resizing, inpainting, generation or baked interactive labels. Discovery crop intentionally excludes center mockup action buttons; decorative city signage may remain scenery.",
   "items": [

@@ -42,7 +42,7 @@ def main() -> int:
     for token in sorted(set(re.findall(r"var\((--lgo-[\w-]+)", css)) - tokens): ERRORS.append(f"undefined canonical token: {token}")
     if "lgo-supporthelppage-stack" in require("packages/ui/src/service-layout.css"): ERRORS.append("obsolete help-only CSS retained")
     require("apps/web/src/components/PublicDesignTargetReference.tsx", ("support-help-detailed-design-target-v1132.png", 'pathname === "/support/help"'))
-    for rel in ("apps/web/public/design-reference/support-help-detailed-design-target-v1132.png", "apps/web/public/game-art/world/dong-mon-skyline.webp"):
+    for rel in ("docs/design/reference/WEB-FE-SUPPORT-HELP-DETAILED-DESIGN-TARGET-v1.132.png", "apps/web/public/game-art/world/dong-mon-skyline.webp"):
         if not (ROOT / rel).is_file(): ERRORS.append(f"missing approved reference/illustration {rel}")
     require("tests/e2e/fe-support-help-real-ui-layout-v1225.spec.ts", ("screenshot", "metrics.overflow", "toHaveCount(6)", "toHaveCount(1)", "page.goBack()", "page.reload()", 'keyboard.press("Space")', "requests).toEqual([])", "violations).toEqual([])", "groupBox!.width"))
     require("docs/execution/WEB-NON-CLAIMS.md", ("No production auth", "No DB persistence", "No independent backend"))

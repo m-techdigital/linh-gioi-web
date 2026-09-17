@@ -51,7 +51,7 @@ def main() -> int:
     if "Shared performance page layout for public copy/asset budget surfaces" in require("packages/ui/src/service-layout.css"):
         ERRORS.append("superseded compact performance layout retained")
     require("apps/web/src/components/PublicDesignTargetReference.tsx", ('pathname === "/performance"', "PUBLIC_PERFORMANCE_TARGET", "Thiết kế hiệu năng và khả năng đọc"))
-    for rel in ("apps/web/public/design-reference/design-atlas-public-service-v195.png", "apps/web/public/game-art/world/dong-mon-skyline.webp"):
+    for rel in ("docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-SERVICE-v1.95.png", "apps/web/public/game-art/world/dong-mon-skyline.webp"):
         if not (ROOT / rel).is_file(): ERRORS.append(f"missing approved reference {rel}")
     require("tests/e2e/fe-performance-real-ui-layout-v1229.spec.ts", (
         "m.overflow", "m.sample.top", "before", "not.toBeChecked", "requests).toEqual([])", "page.reload()",

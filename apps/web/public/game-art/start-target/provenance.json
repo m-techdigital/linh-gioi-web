@@ -1,7 +1,7 @@
 {
   "version": "v1.270",
   "role": "START_TARGET_DECORATIVE_ART_PROVENANCE",
-  "sourcePath": "/design-reference/start-detailed-design-target-v1124.png",
+  "sourcePath": "docs/design/reference/WEB-FE-START-DETAILED-DESIGN-TARGET-v1.124.png",
   "sourceSha256": "582a80dc582f3e9501111468e37eaa645860a815242ec54e4f4a8fd365009142",
   "items": [
     {"id":"hero-gate","path":"/game-art/start-target/hero-gate.png","crop":[555,58,1265,420],"resize":[1420,724],"sha256":"9cfbec93e4a2f7f765a542d22f74f90741c2a07753b391f156531b5885e40c28"},

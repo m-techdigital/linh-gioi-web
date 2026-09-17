@@ -23,7 +23,7 @@ def main():
  forbid('apps/web/src/app/story/page.tsx','PublicPlayerHero','StoryArcTimeline','NarrativeChapterGrid','lgo-storypage-expanded-evidence','lgo-story-fracture-design-board')
  require('packages/ui/src/story-landing-layout.css','immersive-shell.css','.lgo-story-hero-character { z-index:1','.lgo-story-hero-gate { z-index:0','max-width:12ch','.lgo-story-chapters { display:block','.lgo-story-chapter-grid { display:grid; grid-template-columns:repeat(4','@media (max-width:700px)','grid-template-columns:1fr','forced-colors','prefers-reduced-motion')
  require('tests/e2e/fe-story-visual-realignment-v1267.spec.ts','source-derived artwork','target reading width','target three-line rhythm','truthful reading routes','320px')
- design=ROOT/'apps/web/public/design-reference/story-detailed-design-target-v1121.png'
+ design=ROOT/'docs/design/reference/WEB-FE-STORY-DETAILED-DESIGN-TARGET-v1.121.png'
  manifest=ROOT/'apps/web/public/game-art/story-target/provenance.json'
  if not design.is_file() or not manifest.is_file(): fail('missing story design/provenance')
  else:

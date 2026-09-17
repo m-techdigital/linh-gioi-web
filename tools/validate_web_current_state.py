@@ -77,6 +77,7 @@ def finish(name: str) -> int:
 import runpy
 
 VALIDATORS = [
+    "validate_web_opt_public_asset_boundary_v1280.py",
     "validate_web_opt_interaction_hit_area_v1279.py",
     "validate_web_opt_public_css_ownership_v1278.py",
     "validate_web_fe_status_visual_realignment_v1276.py",

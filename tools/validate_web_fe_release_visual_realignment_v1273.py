@@ -35,7 +35,7 @@ def main() -> int:
     if fixtures.count('nextSafeRoute:') < 6: fail("release stage route contract unexpectedly shallow")
 
     expected = {
-        "apps/web/public/design-reference/release-detailed-design-target-v1127.png": "fcf63435f5a4ca75fcbed63a9ee9b69495a187ae6a5ba24960f5e687453d5562",
+        "docs/design/reference/WEB-FE-RELEASE-DETAILED-DESIGN-TARGET-v1.127.png": "fcf63435f5a4ca75fcbed63a9ee9b69495a187ae6a5ba24960f5e687453d5562",
         "apps/web/public/game-art/marketing/discovery-world.png": "b703a74303b7b376804b1ad4804e3c54c75cfcd1639113ee28a1926fe8d41d9e",
         "apps/web/public/game-art/marketing/hero-traveler.png": "44ebffae955f423d6cb9d3f6406d4b64470b76f4ea9c95d4bdcd47044db2ac62",
         "apps/web/public/game-art/start-target/open-gate.png": "4f3080cb1831ebf3ce3ebc7a9e5412106e4892c8e0ad0b13bff347875a5b3fd7",

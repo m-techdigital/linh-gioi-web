@@ -50,7 +50,7 @@ def main() -> int:
         if marker in service: ERRORS.append(f"obsolete compact block retained {marker}")
     if "Shared legacy world-loop evidence styles still consumed by sibling pages" not in service: ERRORS.append("missing retained sibling CSS owner")
     require("apps/web/src/components/PublicDesignTargetReference.tsx", ('pathname === "/game/loop"', "PUBLIC_GAME_WORLD_TARGET", "Hướng dẫn, không phải gameplay live"))
-    for rel in ("apps/web/public/design-reference/game-world-detailed-design-target-v1120.png", "apps/web/public/game-art/world/dong-mon-skyline.webp"):
+    for rel in ("docs/design/reference/WEB-FE-GAME-WORLD-DETAILED-DESIGN-TARGET-v1.120.png", "apps/web/public/game-art/world/dong-mon-skyline.webp"):
         if not (ROOT / rel).is_file(): ERRORS.append(f"missing existing visual source {rel}")
     require("tests/e2e/fe-game-loop-real-ui-layout-v1232.spec.ts", ("m.overflow", "screenshot", "toHaveCount(4)", "boundaries[i]", "page.reload()", "requests).toEqual([])", "violations).toEqual([])", "isMobile", "outlineStyle"))
     require("docs/execution/WEB-NON-CLAIMS.md", ("No production auth", "No DB persistence", "No combat damage", "No live world server claim"))

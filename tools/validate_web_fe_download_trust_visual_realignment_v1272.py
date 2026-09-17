@@ -27,7 +27,7 @@ def main():
  forbid('apps/web/src/app/download/trust/page.tsx','DownloadTrustGateBoard','ReleaseEvidenceChecklist','ReleaseTrustDesignBoard','lgo-downloadtrustpage-stack')
  require('packages/ui/src/download-trust-landing-layout.css','immersive-shell.css','grid-template-columns:repeat(6','@media (max-width:700px)','forced-colors','prefers-reduced-motion')
  require('tests/e2e/fe-download-trust-visual-realignment-v1272.spec.ts','six canonical trust gates','separate decorative trust art','320px remains readable')
- design=ROOT/'apps/web/public/design-reference/download-trust-detailed-design-target-v1126.png'
+ design=ROOT/'docs/design/reference/WEB-FE-DOWNLOAD-TRUST-DETAILED-DESIGN-TARGET-v1.126.png'
  manifest=ROOT/'apps/web/public/game-art/download-trust-target/provenance.json'
  if not design.is_file() or not manifest.is_file(): fail('missing download trust design/provenance')
  else:

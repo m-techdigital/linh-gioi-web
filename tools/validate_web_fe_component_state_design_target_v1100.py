@@ -37,9 +37,9 @@ def png_size(rel: str) -> tuple[int, int]:
     return struct.unpack(">II", data[16:24])
 
 def check_assets() -> None:
-    canonical = ROOT / "apps/web/public/design-reference/design-atlas-components-v195.png"
+    canonical = ROOT / "docs/design/reference/WEB-FE-DESIGN-ATLAS-COMPONENTS-v1.95.png"
     for rel in [
-        "apps/web/public/design-reference/design-atlas-components-v195.png",
+        "docs/design/reference/WEB-FE-DESIGN-ATLAS-COMPONENTS-v1.95.png",
         "apps/portal/public/design-reference/design-atlas-components-v195.png",
         "apps/ops/public/design-reference/design-atlas-components-v195.png",
     ]:

@@ -36,7 +36,7 @@ def main() -> int:
     require("packages/content/src/fixtures.ts", "closedTesterChecklist", "deviceReportTemplateFields", "knownLimitationNotes", "safeFeedbackTemplates")
 
     expected = {
-        "apps/web/public/design-reference/tester-pack-detailed-design-target-v1129.png": "e96488858a84c4b004cb8f7799aa7d58a17b7928cfe0e692fab3c3cf6a5c0f27",
+        "docs/design/reference/WEB-FE-TESTER-PACK-DETAILED-DESIGN-TARGET-v1.129.png": "e96488858a84c4b004cb8f7799aa7d58a17b7928cfe0e692fab3c3cf6a5c0f27",
         "apps/web/public/game-art/marketing/discovery-world.png": "b703a74303b7b376804b1ad4804e3c54c75cfcd1639113ee28a1926fe8d41d9e",
         "apps/web/public/game-art/marketing/hero-traveler.png": "44ebffae955f423d6cb9d3f6406d4b64470b76f4ea9c95d4bdcd47044db2ac62",
     }

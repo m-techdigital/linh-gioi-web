@@ -1,5 +1,5 @@
 {
-  "source": "apps/web/public/design-reference/homepage-detailed-design-target-v1118.png",
+  "source": "docs/design/reference/WEB-FE-HOMEPAGE-DETAILED-DESIGN-TARGET-v1.118.png",
   "sourceSha256": "ecf58cb2af080587e3be3b07430640b9765eb6b8319facc5bc9ad16e8eecef9e",
   "method": "Canvas integer crop + alpha-only masking. Opaque artwork RGB values remain source pixels. No interpolation resize, inpainting, generation or font substitution. Transparent gaps deliberately contain no invented hidden artwork.",
   "status": "RUNTIME_REVIEW_NOT_FINAL_MASTER",
@@ -14,19 +14,25 @@
     },
     {
       "id": "hero-artwork",
-      "path": "/game-art/marketing/hero-artwork.png",
+      "path": "/game-art/marketing/hero-artwork.webp",
       "width": 1672,
       "height": 405,
-      "sha256": "56924aa81d379f1127474d55990761e8e71a348c1ce518a17c777ab6222000e6",
-      "role": "Existing design pixel extraction with alpha mask; not a redrawn/HD original or whole UI screenshot."
+      "sha256": "864c0f329a2f8a2b710513d97d7dbe41383532e0cca3ad853b0afbf9aaed083a",
+      "role": "Existing design pixel extraction with alpha mask; not a redrawn/HD original or whole UI screenshot.",
+      "sourcePng": "docs/design/source/public-marketing/hero-artwork.png",
+      "sourcePngSha256": "56924aa81d379f1127474d55990761e8e71a348c1ce518a17c777ab6222000e6",
+      "delivery": "WebP q95 via cwebp -q 95 -alpha_q 100; dimensions and alpha preserved"
     },
     {
       "id": "hero-mobile",
-      "path": "/game-art/marketing/hero-mobile.png",
+      "path": "/game-art/marketing/hero-mobile.webp",
       "width": 565,
       "height": 405,
-      "sha256": "d8d79a104cb22b7debd60ef4d233bbf4da24def99daedcb0047589b14d56e3f8",
-      "role": "Native crop of the left traveler scene at x118:683, no scenic calligraphy behind mobile text."
+      "sha256": "8a4484967e6533391b2753dabe8c0d3ab79ce65cf01acb5499df01c4efae2717",
+      "role": "Native crop of the left traveler scene at x118:683, no scenic calligraphy behind mobile text.",
+      "sourcePng": "docs/design/source/public-marketing/hero-mobile.png",
+      "sourcePngSha256": "d8d79a104cb22b7debd60ef4d233bbf4da24def99daedcb0047589b14d56e3f8",
+      "delivery": "WebP q95 via cwebp -q 95 -alpha_q 100; dimensions and alpha preserved"
     }
   ],
   "extraction": {

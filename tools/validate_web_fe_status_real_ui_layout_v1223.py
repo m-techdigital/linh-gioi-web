@@ -46,7 +46,7 @@ def main() -> int:
     service = require("packages/ui/src/service-layout.css")
     if 'Status page composes the shared compact proof/disclosure layout' in service: ERRORS.append("old status layout block retained")
     require("apps/web/src/components/PublicDesignTargetReference.tsx", ('status-detailed-design-target-v1130.png', 'pathname === "/status"'))
-    for rel in ('apps/web/public/design-reference/status-detailed-design-target-v1130.png', 'apps/web/public/game-art/world/dong-mon-skyline.webp'):
+    for rel in ('docs/design/reference/WEB-FE-STATUS-DETAILED-DESIGN-TARGET-v1.130.png', 'apps/web/public/game-art/world/dong-mon-skyline.webp'):
         if not (ROOT/rel).is_file(): ERRORS.append(f"missing visual source {rel}")
     require("tests/e2e/fe-status-real-ui-layout-v1223.spec.ts", ('screenshot', 'metrics.overflow', 'metrics.surfaces.top', 'toHaveCount(4)', 'toHaveCount(2)', 'toHaveCount(1)', 'keyboard.press("Enter")', 'result.violations', 'style.signal', 'style.jade', 'style.h2'))
     require("docs/execution/WEB-NON-CLAIMS.md", ('No production auth', 'No DB persistence', 'No independent backend'))

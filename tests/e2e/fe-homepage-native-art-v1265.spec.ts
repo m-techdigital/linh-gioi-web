@@ -11,7 +11,7 @@ test.describe('homepage native-scale original artwork v1.265 revision2',()=>{
  });
  test('the scene is no longer a tiny zoomed city crop, preserving actual source-pixel scale',async({page,isMobile})=>{
   await page.waitForLoadState('networkidle');const images=await page.locator('.lgo-immersive-art img').evaluateAll(nodes=>nodes.map(i=>{const r=i.getBoundingClientRect();return{src:i.currentSrc,w:i.naturalWidth,h:i.naturalHeight,ratio:Math.max(r.width/i.naturalWidth,r.height/i.naturalHeight)};}));
-  expect(images.length).toBeGreaterThan(0);if(isMobile)expect(images[0]!.src).toContain('/hero-mobile.png');for(const i of images){expect(i.w).toBeGreaterThanOrEqual(isMobile?565:1600);expect(i.ratio).toBeLessThanOrEqual(1.02);expect(i.src).not.toContain('hero-moon-city.png');}
+  expect(images.length).toBeGreaterThan(0);if(isMobile)expect(images[0]!.src).toContain('/hero-mobile.webp');for(const i of images){expect(i.w).toBeGreaterThanOrEqual(isMobile?565:1600);expect(i.ratio).toBeLessThanOrEqual(1.02);expect(i.src).not.toContain('hero-moon-city.png');}
   await expect(page.locator('main img[src*=design-reference],main iframe,main canvas')).toHaveCount(0);
  });
  test('brand load failure uses readable live fallback, without duplicating the accessible name',async({page})=>{

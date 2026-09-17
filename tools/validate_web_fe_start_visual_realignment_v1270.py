@@ -25,7 +25,7 @@ def main():
  forbid('apps/web/src/app/start/page.tsx','PublicPlayerHero','ClassPathGrid','WorldRouteJourney','lgo-start-design-board','lgo-start-real-screenshot-panel')
  require('packages/ui/src/start-landing-layout.css','immersive-shell.css','grid-template-columns:repeat(5','grid-template-columns:repeat(4','@media (max-width:700px)','forced-colors','prefers-reduced-motion')
  require('tests/e2e/fe-start-visual-realignment-v1270.spec.ts','five target onboarding steps','movement controls and Lộ skill','four illustrated onboarding milestones','320px layout')
- design=ROOT/'apps/web/public/design-reference/start-detailed-design-target-v1124.png'
+ design=ROOT/'docs/design/reference/WEB-FE-START-DETAILED-DESIGN-TARGET-v1.124.png'
  manifest=ROOT/'apps/web/public/game-art/start-target/provenance.json'
  if not design.is_file() or not manifest.is_file(): fail('missing start design/provenance')
  else:

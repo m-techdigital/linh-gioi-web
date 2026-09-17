@@ -47,7 +47,7 @@ def main() -> int:
     globals_css = require("apps/web/src/app/globals.css")
     if 'WEB v1.128 release readiness detailed design target density' in globals_css: ERRORS.append("stale readiness CSS owner retained")
     require("packages/design-tokens/src/tokens.css", ('--lgo-font-editorial', '--lgo-color-parchment', '--lgo-color-art-ink'))
-    for asset in ('apps/web/public/design-reference/release-readiness-detailed-design-target-v1128.png',
+    for asset in ('docs/design/reference/WEB-FE-RELEASE-READINESS-DETAILED-DESIGN-TARGET-v1.128.png',
                   'apps/web/public/game-art/marketing/discovery-world.png',
                   'apps/web/public/game-art/marketing/hero-traveler.png'):
         if not (ROOT / asset).is_file(): ERRORS.append(f"missing visual source {asset}")

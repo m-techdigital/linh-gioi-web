@@ -36,7 +36,7 @@ def main() -> int:
     require("packages/content/src/fixtures.ts", "statusTrustSurfaces", 'surface: "Website công khai"', 'surface: "Gói tải game"', 'surface: "Tài khoản / quyền Portal"', 'surface: "Guardrail runtime/browser"')
 
     expected = {
-        "apps/web/public/design-reference/status-detailed-design-target-v1130.png": "16ea36f39426b58b640e620081e2b5a753816e03986fb8d6d342ce5a9703d6cc",
+        "docs/design/reference/WEB-FE-STATUS-DETAILED-DESIGN-TARGET-v1.130.png": "16ea36f39426b58b640e620081e2b5a753816e03986fb8d6d342ce5a9703d6cc",
         "apps/web/public/game-art/world/dong-mon-skyline.webp": "7c99154110e4f1a6fe7755be259d79f826818d8692468033c451ab79cc009f5f",
         "apps/web/public/game-art/marketing/hero-traveler.png": "44ebffae955f423d6cb9d3f6406d4b64470b76f4ea9c95d4bdcd47044db2ac62",
     }

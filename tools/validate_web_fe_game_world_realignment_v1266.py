@@ -25,7 +25,7 @@ def main():
  require('packages/ui/src/immersive-shell.css','.lgo-public-shell-immersive .lgo-main > .lgo-container')
  require('packages/ui/src/public-chrome.css','marketing-navigation.css','home-editorial.css','art-wordmark.css','.lgo-public-shell .lgo-site-header')
  require('tests/e2e/fe-game-world-realignment-v1266.spec.ts','proof-board engineering layout','five source world stops','distinct artwork','fake trailer','320px','forced colors','desktop target density')
- design=ROOT/'apps/web/public/design-reference/game-world-detailed-design-target-v1120.png'; manifest=ROOT/'apps/web/public/game-art/world-target/provenance.json'
+ design=ROOT/'docs/design/reference/WEB-FE-GAME-WORLD-DETAILED-DESIGN-TARGET-v1.120.png'; manifest=ROOT/'apps/web/public/game-art/world-target/provenance.json'
  if not design.is_file() or not manifest.is_file(): fail('missing game world design/provenance')
  else:
   d=json.loads(manifest.read_text())

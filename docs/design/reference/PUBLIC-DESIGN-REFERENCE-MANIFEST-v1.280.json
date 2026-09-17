@@ -1,0 +1,140 @@
+[
+  {
+    "formerPublicPath": "apps/web/public/design-reference/classes-detailed-design-target-v1122.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-CLASSES-DETAILED-DESIGN-TARGET-v1.122.png",
+    "bytes": 2560784,
+    "sha256": "bd72e1310bdde0ad9c22d99c89a527764ca1de76c8e7e7960db046a4bde81f0b"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/community-detailed-design-target-v1149.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-COMMUNITY-DETAILED-DESIGN-TARGET-v1.149.png",
+    "bytes": 2635604,
+    "sha256": "04958a8ff94240d98bc96f4b410c7e15db1ea6e571a64559dec2af7dec23a7ee"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/design-atlas-components-v195.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-DESIGN-ATLAS-COMPONENTS-v1.95.png",
+    "bytes": 2097427,
+    "sha256": "534f25b412d827f1fc3ed3935a46c96c97847036390ac1242ba9441196e49b9b"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/design-atlas-ops-v195.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-DESIGN-ATLAS-OPS-v1.95.png",
+    "bytes": 2017557,
+    "sha256": "e014c26155323d66002658fd676d3fc54d4ceaf6356f88f387ec9dce30a66b95"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/design-atlas-portal-v195.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-DESIGN-ATLAS-PORTAL-v1.95.png",
+    "bytes": 2072300,
+    "sha256": "98e3de399f8b10f125693077e539bac6bd9705b9272116fa853df7a3dfad5bab"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/design-atlas-public-core-v195.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-CORE-v1.95.png",
+    "bytes": 2188939,
+    "sha256": "8a589bfcd649bff9359b72669569618a2a4ab2b4ac8f7e2367f02fd0326cfdf0"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/design-atlas-public-service-v195.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-SERVICE-v1.95.png",
+    "bytes": 2301259,
+    "sha256": "984096ef81e09a6df616e3c9154dc1e1f930552e4ecf18034d2b9da60087a11d"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/download-detailed-design-target-v1125.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-DOWNLOAD-DETAILED-DESIGN-TARGET-v1.125.png",
+    "bytes": 2115912,
+    "sha256": "7b412f5ac5126fb0a9487c71525f9f95e881582d874ae1f9a2c2d7e64afdd134"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/download-trust-detailed-design-target-v1126.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-DOWNLOAD-TRUST-DETAILED-DESIGN-TARGET-v1.126.png",
+    "bytes": 2207341,
+    "sha256": "615e698aecbf8ed8210726c311fb9d864f4630e945459fc34184823e14c636a0"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/game-world-detailed-design-target-v1120.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-GAME-WORLD-DETAILED-DESIGN-TARGET-v1.120.png",
+    "bytes": 2314259,
+    "sha256": "25b50399d2dab8969de70963b27432210fbb91157a5283caf12a4bc2643d4d91"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/homepage-detailed-design-target-v1118.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-HOMEPAGE-DETAILED-DESIGN-TARGET-v1.118.png",
+    "bytes": 2423141,
+    "sha256": "ecf58cb2af080587e3be3b07430640b9765eb6b8319facc5bc9ad16e8eecef9e"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/homepage-visual-target-v193.svg",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-HOMEPAGE-VISUAL-TARGET-v1.93.svg",
+    "bytes": 7288,
+    "sha256": "1e6fb8e705440768d48978fdd2d1c58af16e70c20b6870f21475eb48b67353f6"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/journey-detailed-design-target-v1123.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-JOURNEY-DETAILED-DESIGN-TARGET-v1.123.png",
+    "bytes": 2264570,
+    "sha256": "b8a4385491c4ed152356d8bf652538b55a3bdbf225e0a415feeb1ae8a12724d4"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/public-professional-design-target-v194.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-PUBLIC-PROFESSIONAL-DESIGN-TARGET-v1.94.png",
+    "bytes": 2291785,
+    "sha256": "2b4caa7e0c2e7ee2930be2c4a3f97956732de1d20c89bebe933529cc39e0ed22"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/release-detailed-design-target-v1127.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-RELEASE-DETAILED-DESIGN-TARGET-v1.127.png",
+    "bytes": 2192015,
+    "sha256": "fcf63435f5a4ca75fcbed63a9ee9b69495a187ae6a5ba24960f5e687453d5562"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/release-readiness-detailed-design-target-v1128.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-RELEASE-READINESS-DETAILED-DESIGN-TARGET-v1.128.png",
+    "bytes": 2162607,
+    "sha256": "54f6598e85630b57310a435d06ce3af34f9f3a239553e941e34ef417abcf5854"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/start-detailed-design-target-v1124.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-START-DETAILED-DESIGN-TARGET-v1.124.png",
+    "bytes": 2085099,
+    "sha256": "582a80dc582f3e9501111468e37eaa645860a815242ec54e4f4a8fd365009142"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/status-detailed-design-target-v1130.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-STATUS-DETAILED-DESIGN-TARGET-v1.130.png",
+    "bytes": 1928504,
+    "sha256": "16ea36f39426b58b640e620081e2b5a753816e03986fb8d6d342ce5a9703d6cc"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/story-detailed-design-target-v1121.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-STORY-DETAILED-DESIGN-TARGET-v1.121.png",
+    "bytes": 2122919,
+    "sha256": "a5a0a0bf254fcf32babf525bed8154690025b4b9bf579af8f4b2afdaf49a82ba"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/support-detailed-design-target-v1131.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-SUPPORT-DETAILED-DESIGN-TARGET-v1.131.png",
+    "bytes": 2490116,
+    "sha256": "b5443e594cac10c9ef88e95fed4a45f4a3fd7530216078becfc59f5ee8777680"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/support-help-detailed-design-target-v1132.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-SUPPORT-HELP-DETAILED-DESIGN-TARGET-v1.132.png",
+    "bytes": 2543845,
+    "sha256": "87960e8f4b5296a61b75f476c4360e4e938defd65615c0261e09b9a908369cf6"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/support-safety-detailed-design-target-v1133.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-SUPPORT-SAFETY-DETAILED-DESIGN-TARGET-v1.133.png",
+    "bytes": 2502071,
+    "sha256": "900a70dcba25bb305775dadaac10a33ecb71983d567d55fdc988d0d98fc0d8ab"
+  },
+  {
+    "formerPublicPath": "apps/web/public/design-reference/tester-pack-detailed-design-target-v1129.png",
+    "canonicalDocPath": "docs/design/reference/WEB-FE-TESTER-PACK-DETAILED-DESIGN-TARGET-v1.129.png",
+    "bytes": 2331305,
+    "sha256": "e96488858a84c4b004cb8f7799aa7d58a17b7928cfe0e692fab3c3cf6a5c0f27"
+  }
+]

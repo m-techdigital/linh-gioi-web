@@ -53,7 +53,7 @@ def main() -> int:
     if "Shared support/safety safe-reporting layout." in service: ERRORS.append("old safety layout retained")
     if "Shared legacy safety evidence styles still consumed by sibling public pages" not in service: ERRORS.append("shared sibling evidence styles were removed")
     require("apps/web/src/components/PublicDesignTargetReference.tsx", ("support-safety-detailed-design-target-v1133.png", 'pathname === "/support/safety"'))
-    for rel in ("apps/web/public/design-reference/support-safety-detailed-design-target-v1133.png", "apps/web/public/game-art/world/dong-mon-skyline.webp"):
+    for rel in ("docs/design/reference/WEB-FE-SUPPORT-SAFETY-DETAILED-DESIGN-TARGET-v1.133.png", "apps/web/public/game-art/world/dong-mon-skyline.webp"):
         if not (ROOT / rel).is_file(): ERRORS.append(f"missing visual source {rel}")
     require("tests/e2e/fe-support-safety-real-ui-layout-v1226.spec.ts", ("metrics.overflow", "metrics.notice.top", "toHaveCount(5)", "1/5", "5/5", "0/5", "page.reload()", "requests).toEqual([])", "keyboard.press(\"Enter\")", "violations).toEqual([])", "checked preparation cards", "before.border", "screenshot"))
     require("docs/execution/WEB-NON-CLAIMS.md", ("No production auth", "No DB persistence", "No secure ticket inbox"))

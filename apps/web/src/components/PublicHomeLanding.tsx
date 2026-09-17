@@ -1,7 +1,7 @@
 import { localContentRepository } from "@lgo-web/content";
 import { ArtWordmark, EditorialPreviewCard, ExperienceHero, IllustratedLink, MediaMosaic, ReleaseIcon } from "@lgo-web/ui";
 
-const art = (id: string, width: number, height: number) => ({ src: `/game-art/marketing/${id}.png`, width, height });
+const art = (id: string, width: number, height: number, format: "png" | "webp" = "png") => ({ src: `/game-art/marketing/${id}.${format}`, width, height });
 const featureLinks = [
   { href: "/game", title: "Thế giới sống động", description: "Từ ánh đèn Linh Thành đến những cánh cổng bí ẩn.", image: art("feature-world",463,84) },
   { href: "/game/loop", title: "Chiến đấu hành động", description: "Khám phá nhịp luyện tập và định hướng lối chơi 2D.", image: art("feature-action",462,84) },
@@ -29,7 +29,7 @@ export function PublicHomeLanding() {
         {href:"/story",label:"Bắt đầu câu chuyện",tone:"gold",variant:"ornate",icon:<ReleaseIcon name="book"/>,description:"Đọc mở đầu hành trình"}
       ]}
       detail={<div className="lgo-landing-signals" aria-label="Định hướng thế giới"><span>Thế giới 2D</span><span>Năm Lộ nhân vật</span><span>Kết nối cộng đồng</span><span>Cùng nhau viết chuyện</span></div>}
-      visual={<div className="lgo-immersive-art" aria-hidden="true"><picture className="lgo-native-hero-scene"><source media="(max-width: 600px)" srcSet="/game-art/marketing/hero-mobile.png" width={565} height={405}/><img {...art("hero-artwork",1672,405)} alt="" fetchPriority="high"/></picture></div>}/>
+      visual={<div className="lgo-immersive-art" aria-hidden="true"><picture className="lgo-native-hero-scene"><source media="(max-width: 600px)" srcSet="/game-art/marketing/hero-mobile.webp" width={565} height={405}/><img {...art("hero-artwork",1672,405,"webp")} alt="" fetchPriority="high"/></picture></div>}/>
     <div className="lgo-landing-content">
       <section className="lgo-landing-features" aria-label="Ba nét riêng của Linh Giới">{featureLinks.map(item=><IllustratedLink {...item} key={item.href}/>)}</section>
       <div className="lgo-landing-columns">

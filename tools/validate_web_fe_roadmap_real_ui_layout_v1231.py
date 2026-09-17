@@ -49,7 +49,7 @@ def main() -> int:
     for token in sorted(set(re.findall(r"var\((--lgo-[\w-]+)", css)) - tokens): ERRORS.append(f"undefined canonical token {token}")
     if "Shared roadmap page layout for public planning gate surfaces" in require("packages/ui/src/service-layout.css"): ERRORS.append("obsolete compact roadmap block retained")
     require("apps/web/src/components/PublicDesignTargetReference.tsx", ('pathname === "/roadmap"', "Kế hoạch không phải lịch phát hành", "design-atlas-public-service-v195.png"))
-    for rel in ("apps/web/public/design-reference/design-atlas-public-service-v195.png", "apps/web/public/game-art/world/dong-mon-skyline.webp"):
+    for rel in ("docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-SERVICE-v1.95.png", "apps/web/public/game-art/world/dong-mon-skyline.webp"):
         if not (ROOT / rel).is_file(): ERRORS.append(f"missing existing visual reference {rel}")
     require("tests/e2e/fe-roadmap-real-ui-layout-v1231.spec.ts", ("m.overflow", "screenshot", "toHaveCount(15)", "current',11", "planned',3", "blocked',1", "next',0", "requests).toEqual([])", "page.reload()", "violations).toEqual([])"))
     require("docs/execution/WEB-NON-CLAIMS.md", ("No production auth", "No DB persistence", "No production deployment"))

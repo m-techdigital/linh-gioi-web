@@ -49,7 +49,7 @@ def main() -> int:
     if "Shared community page layout for public service/community surfaces" in service: ERRORS.append("obsolete community compact block retained")
     if "Shared legacy community evidence styles still consumed by sibling pages" not in service: ERRORS.append("missing preserved sibling evidence rules")
     require("apps/web/src/components/PublicDesignTargetReference.tsx", ("community-detailed-design-target-v1149.png", 'pathname === "/community"'))
-    for rel in ("apps/web/public/design-reference/community-detailed-design-target-v1149.png", "apps/web/public/game-art/community/linh-thanh-plaza-npc-preview.png", "apps/web/public/game-art/community/linh-thanh-plaza-target-selector.png"):
+    for rel in ("docs/design/reference/WEB-FE-COMMUNITY-DETAILED-DESIGN-TARGET-v1.149.png", "apps/web/public/game-art/community/linh-thanh-plaza-npc-preview.png", "apps/web/public/game-art/community/linh-thanh-plaza-target-selector.png"):
         if not (ROOT / rel).is_file(): ERRORS.append(f"missing approved reference {rel}")
     require("tests/e2e/fe-community-real-ui-layout-v1227.spec.ts", ("m.overflow", "m.cols", "toHaveCount(3)", "popupPromise", "new-tab cue must not be clipped", "keyboard.press('Enter')", "violations).toEqual([])", "screenshot"))
     require("docs/execution/WEB-NON-CLAIMS.md", ("No production auth", "No DB persistence", "No live community/chat/forum/guild backend"))

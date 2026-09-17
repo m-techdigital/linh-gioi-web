@@ -1,5 +1,5 @@
 {
-  "source": "apps/web/public/design-reference/homepage-detailed-design-target-v1118.png",
+  "source": "docs/design/reference/WEB-FE-HOMEPAGE-DETAILED-DESIGN-TARGET-v1.118.png",
   "sourceSha256": "ecf58cb2af080587e3be3b07430640b9765eb6b8319facc5bc9ad16e8eecef9e",
   "method": "sips crop only; no redraw, whole-page embedding or inpainting; art reviewed at source resolution. Crops are not gameplay screenshots.",
   "items": [

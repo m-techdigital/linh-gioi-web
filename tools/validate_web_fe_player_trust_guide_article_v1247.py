@@ -38,7 +38,7 @@ def main() -> int:
     require('packages/ui/src/guide-article.css', ('.lgo-article-cover', '.lgo-guide-chapter-actions', '.lgo-article-contents', '.lgo-guide-article-section:focus-visible'))
     if 'Player trust release guide composes compact guide-flow base' in require('packages/ui/src/service-layout.css'): ERRORS.append('obsolete exclusive player-trust guide CSS retained')
     require('apps/web/src/components/PublicDesignTargetReference.tsx', ('pathname === "/guides/player-trust-release-guide"', 'Bố cục cẩm nang trước bản test'))
-    for rel in ('apps/web/public/design-reference/design-atlas-public-core-v195.png','apps/web/public/game-art/world/dong-mon-skyline.webp'):
+    for rel in ('docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-CORE-v1.95.png','apps/web/public/game-art/world/dong-mon-skyline.webp'):
         if not (ROOT/rel).is_file(): ERRORS.append(f'missing accepted comparison/illustration: {rel}')
     require('apps/web/src/components/PublicTesterPackExperience.tsx', ('id="tester-checklist" tabIndex={-1}', 'LocalChecklist', '<ArticleFragmentRestoration targetIds={["tester-checklist"]} />'))
     require('packages/ui/src/index.ts', ('export { ArticleFragmentRestoration }',))

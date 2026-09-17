@@ -45,7 +45,7 @@ def main() -> int:
     if json.loads(require('packages/ui/package.json'))['exports'].get('./guide-article.css') != './src/guide-article.css': ERRORS.append('missing shared stylesheet export')
     if 'Shared compact beginner guide page layout.' in require('packages/ui/src/service-layout.css'): ERRORS.append('obsolete beginner-only CSS retained')
     require('apps/web/src/components/PublicDesignTargetReference.tsx', ('pathname === "/guides/beginner"', 'Bố cục cẩm nang nhập môn'))
-    for path in ('apps/web/public/design-reference/design-atlas-public-core-v195.png', 'apps/web/public/game-art/world/dong-mon-skyline.webp'):
+    for path in ('docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-CORE-v1.95.png', 'apps/web/public/game-art/world/dong-mon-skyline.webp'):
         if not (ROOT / path).is_file(): ERRORS.append(f'missing registered visual source {path}')
     require('tests/e2e/fe-beginner-guide-reading-v1235.spec.ts', (
         'beginnerGuideSections', 'step.action', 'step.playerTip', 'step.blockedScope', 'about:blank', 'page.goBack()',

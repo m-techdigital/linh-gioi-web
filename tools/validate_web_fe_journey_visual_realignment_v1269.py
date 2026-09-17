@@ -25,7 +25,7 @@ def main():
     forbid('apps/web/src/app/journey/page.tsx','PublicPlayerHero','SessionLoopRail','WorldRouteJourney','lgo-journey-design-board')
     require('packages/ui/src/journey-landing-layout.css','immersive-shell.css','grid-template-columns:repeat(6','grid-template-columns:repeat(5','@media (max-width:700px)','grid-template-columns:1fr','forced-colors','prefers-reduced-motion')
     require('tests/e2e/fe-journey-visual-realignment-v1269.spec.ts','four live journey phases','every canonical session beat','five canonical world-route stops','320px accessibility')
-    design = ROOT / 'apps/web/public/design-reference/journey-detailed-design-target-v1123.png'
+    design = ROOT / 'docs/design/reference/WEB-FE-JOURNEY-DETAILED-DESIGN-TARGET-v1.123.png'
     manifest = ROOT / 'apps/web/public/game-art/journey-target/provenance.json'
     if not design.is_file() or not manifest.is_file():
         fail('missing journey design/provenance')

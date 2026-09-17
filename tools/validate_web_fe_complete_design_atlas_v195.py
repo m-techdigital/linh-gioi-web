@@ -38,11 +38,11 @@ def png_size(rel: str) -> tuple[int, int]:
     return struct.unpack(">II", data[16:24])
 
 TARGETS = [
-    ("public core", "apps/web/public/design-reference/design-atlas-public-core-v195.png", "docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-CORE-v1.95.png"),
-    ("public service", "apps/web/public/design-reference/design-atlas-public-service-v195.png", "docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-SERVICE-v1.95.png"),
-    ("portal", "apps/web/public/design-reference/design-atlas-portal-v195.png", "docs/design/reference/WEB-FE-DESIGN-ATLAS-PORTAL-v1.95.png"),
-    ("ops", "apps/web/public/design-reference/design-atlas-ops-v195.png", "docs/design/reference/WEB-FE-DESIGN-ATLAS-OPS-v1.95.png"),
-    ("components", "apps/web/public/design-reference/design-atlas-components-v195.png", "docs/design/reference/WEB-FE-DESIGN-ATLAS-COMPONENTS-v1.95.png"),
+    ("public core", "docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-CORE-v1.95.png", "docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-CORE-v1.95.png"),
+    ("public service", "docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-SERVICE-v1.95.png", "docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-SERVICE-v1.95.png"),
+    ("portal", "docs/design/reference/WEB-FE-DESIGN-ATLAS-PORTAL-v1.95.png", "docs/design/reference/WEB-FE-DESIGN-ATLAS-PORTAL-v1.95.png"),
+    ("ops", "docs/design/reference/WEB-FE-DESIGN-ATLAS-OPS-v1.95.png", "docs/design/reference/WEB-FE-DESIGN-ATLAS-OPS-v1.95.png"),
+    ("components", "docs/design/reference/WEB-FE-DESIGN-ATLAS-COMPONENTS-v1.95.png", "docs/design/reference/WEB-FE-DESIGN-ATLAS-COMPONENTS-v1.95.png"),
 ]
 
 def check_targets() -> None:
