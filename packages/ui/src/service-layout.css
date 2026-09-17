@@ -214,7 +214,7 @@
   }
 
   .lgo-service-compact-proof-page .lgo-service-proof-card .lgo-link-button {
-    min-height: 34px;
+    min-height: 44px;
     padding-block: .32rem;
     font-size: .76rem;
   }
@@ -1666,7 +1666,7 @@
 
   .lgo-newsdetailpage-stack .lgo-link-button {
     justify-content: center;
-    min-height: 31px;
+    min-height: 44px;
     padding-block: .28rem;
     padding-inline: .38rem;
     font-size: .68rem;

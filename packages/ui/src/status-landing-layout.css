@@ -33,7 +33,7 @@
 .lgo-status-landing .lgo-visibility-card-heading h3{font-size:1.05rem}
 .lgo-status-landing .lgo-visibility-state{font-size:.58rem;padding:.24rem .35rem}
 .lgo-status-landing .lgo-visibility-card>p{font-size:.72rem;line-height:1.45;margin:.55rem 0 .5rem}
-.lgo-status-landing .lgo-visibility-card summary{min-height:40px;padding:.45rem 0;font-size:.68rem}
+.lgo-status-landing .lgo-visibility-card summary{min-height:44px;padding:.45rem 0;font-size:.68rem}
 .lgo-status-landing .lgo-visibility-card details p{font-size:.72rem;line-height:1.45}
 .lgo-status-landing .lgo-status-trust-grid{gap:12px}
 .lgo-status-landing .lgo-status-trust-grid>.lgo-release-reading-panel{padding:1rem 1.05rem}
@@ -73,14 +73,14 @@
   .lgo-status-landing .lgo-visibility-signal strong{font-size:.88rem}
   .lgo-status-landing .lgo-visibility-signal span{font-size:.58rem}
   .lgo-status-landing .lgo-visibility-filters{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .lgo-status-landing .lgo-visibility-filters .lgo-button{min-height:40px;font-size:.66rem;padding:.45rem .25rem}
+  .lgo-status-landing .lgo-visibility-filters .lgo-button{min-height:44px;font-size:.66rem;padding:.45rem .25rem}
   .lgo-status-landing .lgo-visibility-results{grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}
   .lgo-status-landing .lgo-visibility-card{padding:.65rem .65rem .05rem}
   .lgo-status-landing .lgo-visibility-card-heading{display:grid;gap:.35rem}
   .lgo-status-landing .lgo-visibility-card-heading h3{font-size:.92rem}
   .lgo-status-landing .lgo-visibility-state{width:max-content;font-size:.52rem}
   .lgo-status-landing .lgo-visibility-card>p{font-size:.66rem;line-height:1.4}
-  .lgo-status-landing .lgo-visibility-card summary{font-size:.62rem;min-height:38px}
+  .lgo-status-landing .lgo-visibility-card summary{font-size:.62rem;min-height:44px}
   .lgo-status-landing .lgo-status-trust-grid{grid-template-columns:1fr;gap:10px}
   .lgo-status-landing .lgo-status-commitments{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
   .lgo-status-landing .lgo-status-commitments strong{font-size:.7rem}
