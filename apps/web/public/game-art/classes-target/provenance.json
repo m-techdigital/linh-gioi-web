@@ -1,0 +1,104 @@
+{
+  "source": "apps/web/public/design-reference/classes-detailed-design-target-v1122.png",
+  "sourceSha256": "bd72e1310bdde0ad9c22d99c89a527764ca1de76c8e7e7960db046a4bde81f0b",
+  "sourceSize": [
+    1672,
+    941
+  ],
+  "method": "macOS sips integer crop; five portrait crops resized 2x for runtime clarity; no inpainting/generation/full-board embedding",
+  "items": [
+    {
+      "file": "vo.png",
+      "path": "/game-art/classes-target/vo.png",
+      "sourceRect": [
+        230,
+        420,
+        160,
+        145
+      ],
+      "resize": [
+        320,
+        290
+      ],
+      "sha256": "ef4a7828668b4762054ebd0fca920119e93f6effc416af38d7d68972038436c9",
+      "role": "decorative class portrait only; class name/role/copy/button remain live HTML"
+    },
+    {
+      "file": "kiem.png",
+      "path": "/game-art/classes-target/kiem.png",
+      "sourceRect": [
+        515,
+        420,
+        160,
+        145
+      ],
+      "resize": [
+        320,
+        290
+      ],
+      "sha256": "9da1b4beffd5ec4b41116d778f3f4d9c19d93ebb7e340b67feb6b66168152dff",
+      "role": "decorative class portrait only; class name/role/copy/button remain live HTML"
+    },
+    {
+      "file": "phap.png",
+      "path": "/game-art/classes-target/phap.png",
+      "sourceRect": [
+        800,
+        420,
+        160,
+        145
+      ],
+      "resize": [
+        320,
+        290
+      ],
+      "sha256": "96db26b8f86657ac3505db27e1602efd6e340b78e2af345d8f9321c0df113f81",
+      "role": "decorative class portrait only; class name/role/copy/button remain live HTML"
+    },
+    {
+      "file": "co.png",
+      "path": "/game-art/classes-target/co.png",
+      "sourceRect": [
+        1085,
+        420,
+        160,
+        145
+      ],
+      "resize": [
+        320,
+        290
+      ],
+      "sha256": "1535646db2976afe7d07615fd393b21f49733f3e28aa335dbd762fa2af0d037f",
+      "role": "decorative class portrait only; class name/role/copy/button remain live HTML"
+    },
+    {
+      "file": "linh.png",
+      "path": "/game-art/classes-target/linh.png",
+      "sourceRect": [
+        1372,
+        420,
+        160,
+        145
+      ],
+      "resize": [
+        320,
+        290
+      ],
+      "sha256": "cc2442efdda53db9d5dd5f02f8f5e4ada2ef6b2500f9a1f266e9fb572d397467",
+      "role": "decorative class portrait only; class name/role/copy/button remain live HTML"
+    },
+    {
+      "file": "vo-feature.png",
+      "path": "/game-art/classes-target/vo-feature.png",
+      "sourceRect": [
+        0,
+        645,
+        500,
+        225
+      ],
+      "resize": null,
+      "sha256": "77cb754ecf2b25dcb83d690e6d2981ca6de919a9b0f8331a38c470e55e208a01",
+      "role": "decorative selected Võ feature art only; identity/copy remains live HTML"
+    }
+  ]
+}

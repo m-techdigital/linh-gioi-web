@@ -32,7 +32,9 @@ def main() -> int:
     require_text("packages/content/src/fixtures.ts", "publicGameArtAssets", "WEB_REFERENCE_APPROVED", "notFinalArt")
     require_text("packages/content/src/index.ts", "publicGameArtAssets", "PublicGameArtAsset")
     require_text("apps/web/src/components/PublicGameExperienceSections.tsx", "lgo-world-concept-art", "Ý tưởng thế giới", "ClassArtSpotlight")
-    require_text("apps/web/src/app/classes/page.tsx", "ClassArtSpotlight")
+    # /classes v1.268 no longer renders the historical ClassArtSpotlight in first-flow; keep the original audited assets/manifest contract below while accepting the new source-backed owner.
+    require_text("apps/web/src/app/classes/page.tsx", "PublicClassesLanding", 'variant="immersive"')
+    require_text("apps/web/src/components/PublicClassesLanding.tsx", "classPaths", "/game-art/classes-target/")
     require_text("apps/web/src/app/globals.css", "WEB v1.24 approved art ingest", "lgo-world-concept-art", "lgo-class-art-spotlight")
 
     manifest_path = ROOT / "apps/web/public/game-art/manifest.json"

@@ -29,7 +29,6 @@ def main() -> int:
     require_text("apps/web/src/components/PublicPlayerHero.tsx", "PublicPlayerHero", "PublicHeroAction")
     require_text("apps/web/src/components/PublicGameDepthSections.tsx", "ClassIdentityDeck", "WorldAtlasStories", "StoryArcTimeline")
     for rel in (
-        "apps/web/src/app/classes/page.tsx",
         "apps/web/src/app/start/page.tsx",
         "apps/web/src/app/journey/page.tsx",
         "apps/web/src/app/download/page.tsx",
@@ -47,7 +46,9 @@ def main() -> int:
         fail("Guides duplicates the shared hero kicker markup")
     if any(symbol in read("apps/web/src/components/PublicGameExperienceSections.tsx") for symbol in ("ClassIdentityDeck", "WorldAtlasStories", "StoryArcTimeline")):
         fail("PublicGameExperienceSections.tsx still owns v1.25 depth components; split them into PublicGameDepthSections.tsx")
-    require_text("apps/web/src/app/classes/page.tsx", "ClassIdentityDeck")
+    # /classes v1.268 supersedes the legacy PublicPlayerHero + ClassIdentityDeck proof flow while retaining canonical classPaths depth data.
+    require_text("apps/web/src/app/classes/page.tsx", "PublicClassesLanding", 'variant="immersive"')
+    require_text("apps/web/src/components/PublicClassesLanding.tsx", "classPaths", "battleRhythm", "worldLens", "signatureVerbs", "lgo-class-selected-feature")
     # /story v1.267 supersedes the legacy PublicPlayerHero + StoryArcTimeline proof flow while retaining canonical narrativeChapters data.
     require_text("apps/web/src/app/story/page.tsx", "PublicStoryLanding", 'variant="immersive"')
     require_text("apps/web/src/components/PublicStoryLanding.tsx", "narrativeChapters", "closingTurn", "lgo-story-chapter-grid")

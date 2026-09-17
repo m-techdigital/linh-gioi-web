@@ -1,0 +1,79 @@
+@import "./immersive-shell.css";
+
+/* Route owner for the target-driven public classes landing page. */
+.lgo-public-shell-immersive .lgo-classes-landing { min-height:100vh; overflow:hidden; color:#eef3f8; background:#050e17; }
+.lgo-public-shell-immersive .lgo-classes-landing :is(h1,h2,h3) { font-family:var(--lgo-font-editorial); }
+.lgo-public-shell-immersive .lgo-classes-landing button:focus-visible { outline:3px solid var(--lgo-color-warm-gold); outline-offset:4px; }
+.lgo-public-shell-immersive .lgo-classes-landing-hero { position:relative; min-height:420px; overflow:hidden; display:grid; grid-template-columns:minmax(0,530px) 1fr; align-items:center; padding:44px max(4vw,58px); border-bottom:1px solid rgba(86,192,211,.24); isolation:isolate; }
+.lgo-public-shell-immersive .lgo-classes-landing-hero > picture { position:absolute; inset:0; z-index:-2; }
+.lgo-public-shell-immersive .lgo-classes-hero-city { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; image-rendering:auto; filter:saturate(.82) brightness(.66); }
+.lgo-public-shell-immersive .lgo-classes-landing-hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(3,10,17,.95) 0%,rgba(3,10,17,.72) 35%,rgba(3,10,17,.18) 68%,rgba(3,10,17,.64) 100%); }
+.lgo-public-shell-immersive .lgo-classes-hero-copy { position:relative; z-index:2; max-width:520px; text-shadow:0 2px 12px #02070c; }
+.lgo-public-shell-immersive .lgo-classes-eyebrow { display:inline-block; color:#dcb36a; font:700 16px/1.2 var(--lgo-font-editorial); letter-spacing:.12em; }
+.lgo-public-shell-immersive .lgo-classes-hero-copy h1 { max-width:12ch; margin:8px 0 14px; color:#f3e5cc; font-size:clamp(44px,4.1vw,66px); line-height:1.02; font-weight:400; }
+.lgo-public-shell-immersive .lgo-classes-hero-copy p { max-width:48ch; margin:0; color:#c5d1db; font-size:15px; line-height:1.6; }
+.lgo-public-shell-immersive .lgo-five-path-wheel { position:relative; justify-self:center; width:330px; aspect-ratio:1; border:1px solid rgba(214,173,100,.38); border-radius:50%; box-shadow:inset 0 0 0 48px rgba(5,18,28,.38),0 0 44px rgba(63,162,187,.12); }
+.lgo-public-shell-immersive .lgo-five-path-wheel::before { content:""; position:absolute; inset:54px; border:1px solid rgba(89,190,210,.34); border-radius:50%; }
+.lgo-public-shell-immersive .lgo-five-path-wheel strong { position:absolute; inset:50% auto auto 50%; transform:translate(-50%,-50%); color:#e7c47f; text-align:center; font:italic 500 30px/1.05 var(--lgo-font-editorial); }
+.lgo-public-shell-immersive .lgo-five-path-wheel span { position:absolute; width:74px; height:74px; display:grid; place-items:center; border:1px solid #8c7146; border-radius:50%; background:#0a1824; color:#f3e5d0; font-weight:800; }
+.lgo-public-shell-immersive .lgo-wheel-vo { left:128px; top:-28px; }
+.lgo-public-shell-immersive .lgo-wheel-kiem { right:-26px; top:108px; }
+.lgo-public-shell-immersive .lgo-wheel-phap { right:16px; bottom:4px; }
+.lgo-public-shell-immersive .lgo-wheel-co { left:15px; bottom:4px; }
+.lgo-public-shell-immersive .lgo-wheel-linh { left:-26px; top:108px; }
+
+.lgo-public-shell-immersive .lgo-class-choice-section { width:min(100% - 64px,1540px); margin:0 auto; padding:20px 0 18px; }
+.lgo-public-shell-immersive .lgo-class-choice-section > header { display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:12px; }
+.lgo-public-shell-immersive .lgo-class-choice-section > header span { color:#ddb56d; font-size:12px; font-weight:800; letter-spacing:.12em; }
+.lgo-public-shell-immersive .lgo-class-choice-section > header h2 { margin:3px 0 0; color:#f0e1c7; font-size:clamp(26px,2.2vw,34px); font-weight:400; }
+.lgo-public-shell-immersive .lgo-class-choice-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
+.lgo-public-shell-immersive .lgo-class-choice-card { min-width:0; overflow:hidden; border:1px solid #344b5b; border-radius:5px; background:#081520; }
+.lgo-public-shell-immersive .lgo-class-choice-card button { width:100%; min-height:294px; display:grid; grid-template-rows:148px auto auto 1fr; gap:3px; padding:0 12px 12px; border:0; background:transparent; color:inherit; text-align:left; cursor:pointer; }
+.lgo-public-shell-immersive .lgo-class-choice-card button[aria-pressed="true"] { box-shadow:inset 0 0 0 2px #c59c58; background:linear-gradient(180deg,rgba(197,156,88,.12),transparent 52%); }
+.lgo-public-shell-immersive .lgo-class-choice-card img { width:calc(100% + 24px); height:148px; margin:0 -12px 8px; object-fit:cover; object-position:center; }
+.lgo-public-shell-immersive .lgo-class-choice-card span { color:#ddb35f; font-size:11px; font-weight:800; letter-spacing:.05em; text-transform:uppercase; }
+.lgo-public-shell-immersive .lgo-class-choice-card h3 { margin:0; color:#f0e2ca; font-size:24px; line-height:1.02; font-weight:500; }
+.lgo-public-shell-immersive .lgo-class-choice-card p { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden; margin:4px 0 0; color:#aab8c5; font-size:14px; line-height:1.35; }
+.lgo-public-shell-immersive .lgo-choice-phap h3 { color:#c497ff; }
+.lgo-public-shell-immersive .lgo-choice-linh h3 { color:#68d8b2; }
+.lgo-public-shell-immersive .lgo-class-selected-feature { min-height:230px; display:grid; grid-template-columns:minmax(320px,520px) 1fr; gap:30px; align-items:center; border-top:1px solid rgba(86,192,211,.22); border-bottom:1px solid rgba(86,192,211,.18); background:linear-gradient(90deg,#101318,#07131d 58%,#06101a); }
+.lgo-public-shell-immersive .lgo-class-selected-feature > img { width:100%; height:100%; min-height:230px; object-fit:cover; }
+.lgo-public-shell-immersive .lgo-class-selected-feature > div { padding:26px max(4vw,58px) 26px 0; }
+.lgo-public-shell-immersive .lgo-class-selected-feature > div > span { color:#d9b064; font-size:12px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+.lgo-public-shell-immersive .lgo-class-selected-feature h2 { margin:5px 0 8px; color:#f0e1c9; font-size:clamp(27px,2.3vw,38px); line-height:1.04; font-weight:400; }
+.lgo-public-shell-immersive .lgo-class-selected-feature p { max-width:68ch; margin:0; color:#b8c6d1; font-size:14px; line-height:1.5; }
+.lgo-public-shell-immersive .lgo-selected-verbs { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0; }
+.lgo-public-shell-immersive .lgo-selected-verbs span { padding:5px 10px; border:1px solid rgba(198,159,91,.5); color:#e1c68f; font-size:12px; }
+.lgo-public-shell-immersive .lgo-selected-world-lens { color:#d8b875!important; font-style:italic; }
+
+@media (max-width:1000px) {
+ .lgo-public-shell-immersive .lgo-classes-landing-hero { grid-template-columns:minmax(0,1fr) 300px; }
+ .lgo-public-shell-immersive .lgo-five-path-wheel { width:280px; }
+ .lgo-public-shell-immersive .lgo-five-path-wheel span { width:64px; height:64px; }
+ .lgo-public-shell-immersive .lgo-wheel-vo { left:108px; }
+ .lgo-public-shell-immersive .lgo-wheel-kiem { right:-22px; top:90px; }
+ .lgo-public-shell-immersive .lgo-wheel-phap { right:12px; bottom:0; }
+ .lgo-public-shell-immersive .lgo-wheel-co { left:12px; bottom:0; }
+ .lgo-public-shell-immersive .lgo-wheel-linh { left:-22px; top:90px; }
+}
+@media (max-width:700px) {
+ .lgo-public-shell-immersive .lgo-classes-landing-hero { min-height:560px; grid-template-columns:1fr; align-content:end; gap:20px; padding:205px 18px 24px; }
+ .lgo-public-shell-immersive .lgo-classes-hero-city { height:250px; object-position:center 42%; mask-image:linear-gradient(180deg,#000 0,#000 70%,transparent 100%); }
+ .lgo-public-shell-immersive .lgo-classes-landing-hero::after { background:linear-gradient(180deg,rgba(3,10,17,.08) 0%,rgba(3,10,17,.35) 36%,#06101a 53%); }
+ .lgo-public-shell-immersive .lgo-classes-hero-copy { text-align:center; }
+ .lgo-public-shell-immersive .lgo-classes-hero-copy h1 { max-width:12ch; margin-inline:auto; font-size:clamp(40px,12vw,52px); }
+ .lgo-public-shell-immersive .lgo-classes-hero-copy p { margin-inline:auto; font-size:14px; }
+ .lgo-public-shell-immersive .lgo-five-path-wheel { display:none; }
+ .lgo-public-shell-immersive .lgo-class-choice-section { width:calc(100% - 24px); padding-top:18px; }
+ .lgo-public-shell-immersive .lgo-class-choice-section > header { display:block; }
+ .lgo-public-shell-immersive .lgo-class-choice-section > header h2 { font-size:28px; }
+ .lgo-public-shell-immersive .lgo-class-choice-grid { grid-template-columns:1fr; }
+ .lgo-public-shell-immersive .lgo-class-choice-card button { min-height:260px; grid-template-rows:154px auto auto 1fr; }
+ .lgo-public-shell-immersive .lgo-class-choice-card img { height:154px; }
+ .lgo-public-shell-immersive .lgo-class-selected-feature { grid-template-columns:1fr; }
+ .lgo-public-shell-immersive .lgo-class-selected-feature > img { min-height:180px; height:180px; }
+ .lgo-public-shell-immersive .lgo-class-selected-feature > div { padding:20px 18px 26px; }
+ .lgo-public-shell-immersive .lgo-class-selected-feature p { font-size:14px; }
+}
+@media (forced-colors:active) { .lgo-public-shell-immersive .lgo-class-choice-card,.lgo-public-shell-immersive .lgo-class-selected-feature { border:1px solid CanvasText; } }
+@media (prefers-reduced-motion:reduce) { html:has(.lgo-classes-landing) { scroll-behavior:auto; } }

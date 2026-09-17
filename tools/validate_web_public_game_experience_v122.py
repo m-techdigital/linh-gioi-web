@@ -30,6 +30,7 @@ def main() -> int:
     required_files = [
         "apps/web/src/components/PublicGameExperienceSections.tsx",
         "apps/web/src/app/classes/page.tsx",
+        "apps/web/src/components/PublicClassesLanding.tsx",
         "apps/web/src/app/story/page.tsx",
         "apps/web/src/components/PublicStoryLanding.tsx",
         "docs/execution/WEB-PUBLIC-GAME-EXPERIENCE-BRAND-REALIGNMENT-v1.22.md",
@@ -44,7 +45,8 @@ def main() -> int:
     require_text("apps/web/src/components/PublicHomeLanding.tsx", "Sống một đời khác trong Linh Giới", 'href: "/game"', 'href: "/classes"', 'href: "/story"', "MediaMosaic")
     require_text("apps/web/src/app/game/page.tsx", "PublicWorldLanding", "variant=\"immersive\"")
     require_text("apps/web/src/components/PublicWorldLanding.tsx", "Linh Thành", "Đông Môn", "Linh Lâm", "Cổ Di Tích", "Âm Giới", "worldRouteStops")
-    require_text("apps/web/src/app/classes/page.tsx", "Năm Lộ", "ClassPathGrid")
+    require_text("apps/web/src/app/classes/page.tsx", "PublicClassesLanding", "variant=\"immersive\"")
+    require_text("apps/web/src/components/PublicClassesLanding.tsx", "classPaths", "Chọn cách bạn bảo vệ Linh Giới", "lgo-class-choice-grid")
     require_text("apps/web/src/app/story/page.tsx", "PublicStoryLanding", "variant=\"immersive\"")
     require_text("apps/web/src/components/PublicStoryLanding.tsx", "Vết Nứt Đông Môn", "narrativeChapters", "lgo-story-chapter-grid")
     require_text("apps/web/src/app/journey/page.tsx", "20 phút", "SessionLoopRail")

@@ -48,10 +48,10 @@ async function expectCurrentPublicLink(page: import("@playwright/test").Page, na
 }
 
 test.describe("public navigation interaction audit", () => {
-  test("classes route marks Năm Lộ as current and keeps keyboard layout readable", async ({ page, isMobile }) => {
+  test("classes route marks Lộ phái as current and keeps keyboard layout readable", async ({ page, isMobile }) => {
     await page.goto("/classes");
-    await expect(page.getByRole("heading", { name: "Chọn cách bạn nhìn và bảo vệ thế giới" })).toBeVisible();
-    await expectCurrentPublicLink(page, "Năm Lộ", "/classes");
+    await expect(page.getByRole("heading", { name: "Chọn cách bạn bảo vệ Linh Giới" })).toBeVisible();
+    await expectCurrentPublicLink(page, "Lộ phái", "/classes");
     await expectSkipLink(page);
     expectReadable(await collectMetrics(page), isMobile);
   });
