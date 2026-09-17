@@ -17,8 +17,8 @@ def require(rel: str, markers: tuple[str, ...] = ()) -> str:
 
 def main() -> int:
     ERRORS.clear()
-    page = require("apps/web/src/app/status/page.tsx", ('@lgo-web/ui/release-layout.css', '@lgo-web/ui/visibility-layout.css', 'lgo-status-experience'))
-    parts = ('<PublicStatusHero/>', '<PublicStatusSurfaces/>', '<PublicStatusTrustAndMaintenance/>', '<PublicStatusNextSteps/>')
+    page = require("apps/web/src/app/status/page.tsx", ('@lgo-web/ui/status-landing-layout.css', 'lgo-status-landing', 'lgo-status-experience'))
+    parts = ('<PublicStatusHero />', '<PublicStatusSurfaces />', '<PublicStatusTrustAndMaintenance />', '<PublicStatusNextSteps />')
     offsets = [page.find(part) for part in parts]
     if -1 in offsets or offsets != sorted(offsets): ERRORS.append("status page must start with hero and real surface catalog")
     for marker in ('lgo-service-compact-proof-page', 'status-maintenance-signal-board.svg', '<form'):
@@ -37,9 +37,10 @@ def main() -> int:
     require("packages/ui/src/index.ts", ('VisibilityCatalog', 'VisibilitySignal'))
     exports = json.loads(require("packages/ui/package.json"))["exports"]
     if exports.get("./visibility-layout.css") != "./src/visibility-layout.css": ERRORS.append("missing shared visibility stylesheet export")
+    if exports.get("./status-landing-layout.css") != "./src/status-landing-layout.css": ERRORS.append("missing status landing stylesheet export")
     css = require("packages/ui/src/visibility-layout.css", ('var(--lgo-color-jade-teal)', ':focus-visible', 'min-height:44px', '-webkit-line-clamp:none', 'prefers-reduced-motion', '.lgo-release-layout .lgo-visibility-console-heading h2'))
     tokens = set(re.findall(r'(--lgo-[\w-]+)\s*:', require("packages/design-tokens/src/tokens.css")))
-    for rel in ('packages/ui/src/release-layout.css', 'packages/ui/src/reading-tools.css', 'packages/ui/src/visibility-layout.css'):
+    for rel in ('packages/ui/src/release-layout.css', 'packages/ui/src/reading-tools.css', 'packages/ui/src/visibility-layout.css', 'packages/ui/src/status-landing-layout.css'):
         refs = set(re.findall(r'var\((--lgo-[\w-]+)', require(rel)))
         for token in sorted(refs - tokens): ERRORS.append(f"{rel}: undefined canonical token {token}")
     service = require("packages/ui/src/service-layout.css")

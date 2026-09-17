@@ -77,6 +77,7 @@ def finish(name: str) -> int:
 import runpy
 
 VALIDATORS = [
+    "validate_web_fe_status_visual_realignment_v1276.py",
     "validate_web_fe_release_tester_pack_visual_realignment_v1275.py",
     "validate_web_fe_release_readiness_visual_realignment_v1274.py",
     "validate_web_fe_release_visual_realignment_v1273.py",
@@ -468,10 +469,10 @@ SUPERSEDED_LAYOUT_VALIDATORS = {
     "validate_web_fe_support_real_ui_layout_v1146.py": "validate_web_fe_support_real_ui_layout_v1224.py",
     "validate_web_fe_support_real_ui_layout_v1204.py": "validate_web_fe_support_real_ui_layout_v1224.py",
 
-    "validate_web_fe_public_status_design_board_v181.py": "validate_web_fe_status_real_ui_layout_v1223.py",
-    "validate_web_fe_status_design_target_density_v1130.py": "validate_web_fe_status_real_ui_layout_v1223.py",
-    "validate_web_fe_status_real_ui_layout_v1145.py": "validate_web_fe_status_real_ui_layout_v1223.py",
-    "validate_web_fe_status_real_ui_layout_v1203.py": "validate_web_fe_status_real_ui_layout_v1223.py",
+    "validate_web_fe_public_status_design_board_v181.py": "validate_web_fe_status_visual_realignment_v1276.py",
+    "validate_web_fe_status_design_target_density_v1130.py": "validate_web_fe_status_visual_realignment_v1276.py",
+    "validate_web_fe_status_real_ui_layout_v1145.py": "validate_web_fe_status_visual_realignment_v1276.py",
+    "validate_web_fe_status_real_ui_layout_v1203.py": "validate_web_fe_status_visual_realignment_v1276.py",
 
     "validate_web_fe_public_closed_tester_design_board_v177.py": "validate_web_fe_release_tester_pack_visual_realignment_v1275.py",
     "validate_web_fe_tester_pack_design_target_density_v1129.py": "validate_web_fe_release_tester_pack_visual_realignment_v1275.py",

@@ -1,18 +1,16 @@
-import "@lgo-web/ui/release-layout.css";
-import "@lgo-web/ui/visibility-layout.css";
-import { Stack } from "@lgo-web/ui";
+import "@lgo-web/ui/status-landing-layout.css";
 import { PublicStatusHero, PublicStatusSurfaces, PublicStatusTrustAndMaintenance, PublicStatusNextSteps } from "../../components/PublicStatusExperience";
 import { WebAppShell } from "../../components/WebAppShell";
 
 export const metadata = { title: "Trạng thái công khai" };
 
 export default function Page() {
-  return <WebAppShell>
-    <Stack className="lgo-statuspage-stack lgo-release-layout lgo-status-experience">
-      <PublicStatusHero/>
-      <PublicStatusSurfaces/>
-      <PublicStatusTrustAndMaintenance/>
-      <PublicStatusNextSteps/>
-    </Stack>
+  return <WebAppShell variant="immersive">
+    <div className="lgo-status-landing lgo-release-layout lgo-status-experience">
+      <PublicStatusHero />
+      <PublicStatusSurfaces />
+      <PublicStatusTrustAndMaintenance />
+      <PublicStatusNextSteps />
+    </div>
   </WebAppShell>;
 }

@@ -5,7 +5,7 @@ import type { VisibilityCatalogItem } from "@lgo-web/ui";
 const surfaces: readonly VisibilityCatalogItem[] = statusTrustSurfaces.map((item,index) => ({ id:`surface-${index}`,title:item.surface,visibility:item.visibility,summary:item.currentTruth,evidence:item.sourceOfTruth,boundary:item.forbiddenClaim }));
 
 export function PublicStatusHero() {
-  return <ExperienceHero className="lgo-release-hero lgo-release-frame" copyClassName="lgo-release-hero-copy"
+  return <ExperienceHero className="lgo-release-hero lgo-release-frame lgo-status-hero" copyClassName="lgo-release-hero-copy"
     badge="Linh Giới Online · Minh bạch trạng thái" badgeTone="gold" kicker="Minh bạch hôm nay. Vững bền ngày mai."
     title="Trạng thái công khai"
     lead="Hiểu nội dung nào đang hiển thị, hạng mục nào nội bộ hoặc còn tạm khóa. Màu tín hiệu mô tả phạm vi nội dung, không phải sức khỏe máy chủ game."
@@ -16,6 +16,7 @@ export function PublicStatusHero() {
     </>}
     visual={<>
       <img className="lgo-release-hero-art" src="/game-art/world/dong-mon-skyline.webp" width="1360" height="765" alt="" fetchPriority="high"/>
+      <img className="lgo-status-traveler" src="/game-art/marketing/hero-traveler.png" width="344" height="348" alt="" fetchPriority="high"/>
       <section className="lgo-visibility-console lgo-release-frame" aria-labelledby="status-signals-heading">
         <div className="lgo-visibility-console-heading"><h2 id="status-signals-heading">Tín hiệu hiển thị</h2><p>Phạm vi nội dung · không phải uptime</p></div>
         <div className="lgo-visibility-signals">
@@ -28,14 +29,14 @@ export function PublicStatusHero() {
     </>}/>;
 }
 export function PublicStatusSurfaces() {
-  return <section id="status-surfaces" aria-labelledby="status-surfaces-heading">
+  return <section id="status-surfaces" className="lgo-status-surfaces" aria-labelledby="status-surfaces-heading">
     <div className="lgo-release-section-heading"><SectionHeading headingId="status-surfaces-heading" eyebrow="Nội dung hiện tại trong source" title="Phạm vi từng hạng mục"/><p>Lọc cách hiển thị để đọc đúng giới hạn.<br/>Các hạng mục không phải kết quả kiểm tra máy chủ.</p></div>
     <VisibilityCatalog items={surfaces} label="Lọc phạm vi hiển thị"/>
   </section>;
 }
 export function PublicStatusTrustAndMaintenance() {
   const entries=localContentRepository.list("maintenance");
-  return <div className="lgo-release-reading-grid lgo-release-reading-grid-even">
+  return <div className="lgo-status-trust-grid lgo-release-reading-grid lgo-release-reading-grid-even">
     <section className="lgo-release-reading-panel lgo-release-frame" aria-labelledby="status-trust-heading">
       <SectionHeading headingId="status-trust-heading" eyebrow="Giới hạn tạo nên sự tin cậy" title="Cam kết minh bạch"/>
       <div className="lgo-status-commitments">

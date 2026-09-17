@@ -1,0 +1,92 @@
+@import "./immersive-shell.css";
+@import "./release-layout.css";
+@import "./visibility-layout.css";
+
+.lgo-status-landing{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding-bottom:18px;background:#06121d;color:var(--lgo-color-text-primary)}
+.lgo-status-landing>*{min-width:0}
+.lgo-status-landing>.lgo-status-surfaces,
+.lgo-status-landing>.lgo-status-trust-grid,
+.lgo-status-landing>.lgo-release-shortcuts-three{width:min(calc(100% - 36px),1540px);margin-inline:auto}
+.lgo-status-landing .lgo-status-hero{width:100%;min-height:430px;border-inline:0;border-radius:0;grid-template-columns:minmax(360px,.86fr) minmax(500px,1.14fr);gap:24px;padding:30px max(28px,calc((100vw - 1500px)/2));overflow:hidden}
+.lgo-status-landing .lgo-status-hero::before{background:linear-gradient(90deg,#06121d 0%,rgba(6,18,29,.92) 34%,rgba(6,18,29,.36) 58%,rgba(6,18,29,.74) 100%),linear-gradient(0deg,#06121d 0%,transparent 48%)}
+.lgo-status-landing .lgo-release-hero-art{object-position:center 46%;opacity:.62}
+.lgo-status-landing .lgo-status-traveler{position:absolute;z-index:0;left:29%;bottom:-4%;height:92%;width:auto;object-fit:contain;opacity:.48;filter:drop-shadow(0 18px 30px rgba(0,0,0,.5));pointer-events:none}
+.lgo-status-landing .lgo-release-hero-copy,.lgo-status-landing .lgo-visibility-console{position:relative;z-index:1}
+.lgo-status-landing .lgo-release-hero .lgo-hero-lead{font-size:.92rem;max-width:46ch}
+.lgo-status-landing .lgo-status-no-live{padding:.7rem .75rem;margin:.75rem 0 0;background:rgba(5,15,27,.76)}
+.lgo-status-landing .lgo-status-no-live p{font-size:.72rem;line-height:1.45}
+.lgo-status-landing .lgo-release-art-note{margin-top:.5rem;font-size:.62rem}
+.lgo-status-landing .lgo-visibility-console{padding:1rem .8rem .75rem;background:rgba(5,15,27,.9)}
+.lgo-status-landing .lgo-visibility-console-heading{margin-bottom:.75rem}
+.lgo-status-landing .lgo-visibility-signals{gap:.45rem}
+.lgo-status-landing .lgo-visibility-signal{padding:.35rem .35rem .7rem}
+.lgo-status-landing .lgo-visibility-signal svg{height:112px;max-width:88px}
+.lgo-status-landing .lgo-visibility-signal strong{font-size:1rem}
+.lgo-status-landing .lgo-visibility-signal span{font-size:.66rem;line-height:1.35}
+.lgo-status-landing .lgo-visibility-console>small{margin-top:.65rem;padding-top:.6rem;font-size:.58rem}
+
+.lgo-status-landing .lgo-release-section-heading{margin-bottom:.7rem}
+.lgo-status-landing .lgo-visibility-filterbar{margin:.55rem 0 .7rem}
+.lgo-status-landing .lgo-visibility-results{grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem}
+.lgo-status-landing .lgo-visibility-card{padding:.8rem .85rem .1rem}
+.lgo-status-landing .lgo-visibility-card-heading{gap:.5rem}
+.lgo-status-landing .lgo-visibility-card-heading h3{font-size:1.05rem}
+.lgo-status-landing .lgo-visibility-state{font-size:.58rem;padding:.24rem .35rem}
+.lgo-status-landing .lgo-visibility-card>p{font-size:.72rem;line-height:1.45;margin:.55rem 0 .5rem}
+.lgo-status-landing .lgo-visibility-card summary{min-height:40px;padding:.45rem 0;font-size:.68rem}
+.lgo-status-landing .lgo-visibility-card details p{font-size:.72rem;line-height:1.45}
+.lgo-status-landing .lgo-status-trust-grid{gap:12px}
+.lgo-status-landing .lgo-status-trust-grid>.lgo-release-reading-panel{padding:1rem 1.05rem}
+.lgo-status-landing .lgo-status-commitments{gap:.7rem;margin:.75rem 0 0}
+.lgo-status-landing .lgo-status-commitments>div{gap:.45rem}
+.lgo-status-landing .lgo-status-commitments strong{font-size:.76rem}
+.lgo-status-landing .lgo-status-commitments span{font-size:.68rem;line-height:1.4;margin-top:.18rem}
+.lgo-status-landing .lgo-status-maintenance>p{font-size:.74rem;line-height:1.45}
+.lgo-status-landing .lgo-status-maintenance article{margin-top:.75rem;padding-left:.75rem}
+.lgo-status-landing .lgo-status-maintenance article>span{font-size:.56rem}
+.lgo-status-landing .lgo-status-maintenance h3{font-size:1rem;margin:.35rem 0}
+.lgo-status-landing .lgo-status-maintenance article>p{font-size:.7rem;line-height:1.45}
+.lgo-status-landing .lgo-release-template-tips{margin-top:.55rem}
+.lgo-status-landing .lgo-release-shortcuts-three{gap:.65rem}
+.lgo-status-landing .lgo-release-shortcuts-three a{min-height:102px;padding:.8rem .75rem}
+.lgo-status-landing .lgo-release-shortcuts-three strong{font-size:1rem}
+.lgo-status-landing .lgo-release-shortcuts-three span{font-size:.68rem}
+
+@media(max-width:1000px){
+  .lgo-status-landing .lgo-status-hero{grid-template-columns:1fr;min-height:auto;padding:24px 18px;gap:14px}
+  .lgo-status-landing .lgo-status-traveler{left:auto;right:-24px;height:48%;opacity:.22}
+  .lgo-status-landing .lgo-visibility-console{width:100%}
+  .lgo-status-landing .lgo-visibility-signal svg{height:86px}
+  .lgo-status-landing .lgo-visibility-results{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+  .lgo-status-landing{gap:12px}
+  .lgo-status-landing>.lgo-status-surfaces,
+  .lgo-status-landing>.lgo-status-trust-grid,
+  .lgo-status-landing>.lgo-release-shortcuts-three{width:min(calc(100% - 16px),1540px)}
+  .lgo-status-landing .lgo-status-hero{padding:18px 10px 12px;gap:10px}
+  .lgo-status-landing .lgo-status-traveler{right:-42px;height:39%;opacity:.18}
+  .lgo-status-landing .lgo-visibility-console{padding:.8rem .5rem .55rem}
+  .lgo-status-landing .lgo-visibility-console-heading{margin-bottom:.55rem}
+  .lgo-status-landing .lgo-visibility-signal{padding:.25rem .2rem .55rem}
+  .lgo-status-landing .lgo-visibility-signal svg{height:68px;max-width:64px}
+  .lgo-status-landing .lgo-visibility-signal strong{font-size:.88rem}
+  .lgo-status-landing .lgo-visibility-signal span{font-size:.58rem}
+  .lgo-status-landing .lgo-visibility-filters{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .lgo-status-landing .lgo-visibility-filters .lgo-button{min-height:40px;font-size:.66rem;padding:.45rem .25rem}
+  .lgo-status-landing .lgo-visibility-results{grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}
+  .lgo-status-landing .lgo-visibility-card{padding:.65rem .65rem .05rem}
+  .lgo-status-landing .lgo-visibility-card-heading{display:grid;gap:.35rem}
+  .lgo-status-landing .lgo-visibility-card-heading h3{font-size:.92rem}
+  .lgo-status-landing .lgo-visibility-state{width:max-content;font-size:.52rem}
+  .lgo-status-landing .lgo-visibility-card>p{font-size:.66rem;line-height:1.4}
+  .lgo-status-landing .lgo-visibility-card summary{font-size:.62rem;min-height:38px}
+  .lgo-status-landing .lgo-status-trust-grid{grid-template-columns:1fr;gap:10px}
+  .lgo-status-landing .lgo-status-commitments{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+  .lgo-status-landing .lgo-status-commitments strong{font-size:.7rem}
+  .lgo-status-landing .lgo-status-commitments span{font-size:.62rem}
+  .lgo-status-landing .lgo-release-shortcuts-three{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(210px,78vw);overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;padding-bottom:4px}
+  .lgo-status-landing .lgo-release-shortcuts-three a{scroll-snap-align:start;min-height:98px}
+}
+@media(prefers-reduced-motion:reduce){.lgo-status-landing .lgo-status-traveler{transition:none}}
+@media(forced-colors:active){.lgo-status-landing .lgo-status-traveler{opacity:.12}.lgo-status-landing .lgo-visibility-card{border-color:CanvasText}}
