@@ -1,0 +1,65 @@
+@import "./immersive-shell.css";
+
+.lgo-public-shell-immersive .lgo-download-landing { min-height:100vh; overflow:hidden; color:#eef3f8; background:#06101a; }
+.lgo-public-shell-immersive .lgo-download-landing :is(h1,h2,h3) { font-family:var(--lgo-font-editorial); }
+.lgo-public-shell-immersive .lgo-download-landing :is(a,button):focus-visible { outline:3px solid var(--lgo-color-warm-gold); outline-offset:4px; }
+.lgo-public-shell-immersive .lgo-download-landing-hero { position:relative; min-height:430px; display:flex; align-items:center; overflow:hidden; isolation:isolate; padding:44px max(4vw,58px); border-bottom:1px solid rgba(205,154,74,.25); }
+.lgo-public-shell-immersive .lgo-download-hero-art { position:absolute; inset:0; z-index:-2; width:100%; height:100%; object-fit:cover; object-position:72% 48%; filter:saturate(.92) brightness(.72); }
+.lgo-public-shell-immersive .lgo-download-landing-hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(2,8,15,.98) 0%,rgba(2,8,15,.9) 38%,rgba(2,8,15,.28) 67%,rgba(2,8,15,.12) 100%); }
+.lgo-public-shell-immersive .lgo-download-hero-copy { width:min(640px,52vw); text-shadow:0 2px 12px #02070c; }
+.lgo-public-shell-immersive .lgo-download-eyebrow { color:#dcb36a; font-size:14px; font-weight:800; letter-spacing:.16em; }
+.lgo-public-shell-immersive .lgo-download-hero-copy h1 { margin:8px 0 14px; color:#f2e1c2; font-size:clamp(48px,4.5vw,70px); line-height:.98; font-weight:400; }
+.lgo-public-shell-immersive .lgo-download-release-state { max-width:590px; padding:14px 18px; border:1px solid rgba(210,158,74,.72); background:linear-gradient(90deg,rgba(60,37,12,.58),rgba(18,21,24,.32)); }
+.lgo-public-shell-immersive .lgo-download-release-state strong { display:block; color:#f2d59c; font-size:23px; }
+.lgo-public-shell-immersive .lgo-download-release-state p { margin:4px 0 0; color:#d4d8d6; font-size:15px; line-height:1.5; }
+.lgo-public-shell-immersive .lgo-download-landing-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+.lgo-public-shell-immersive .lgo-download-landing-actions a { min-height:46px; display:inline-flex; align-items:center; justify-content:center; padding:10px 16px; border:1px solid #4e9eab; border-radius:999px; color:#d9f2f5; background:rgba(5,22,31,.72); text-decoration:none; font-weight:800; font-size:14px; }
+.lgo-public-shell-immersive .lgo-download-landing-actions a:first-child { border-color:#c69b54; color:#f2dfbd; }
+
+.lgo-public-shell-immersive .lgo-download-readiness-section { width:min(100% - 48px,1220px); margin:18px auto 0; }
+.lgo-public-shell-immersive .lgo-download-readiness-section > header span,.lgo-public-shell-immersive .lgo-download-lower-grid header span { color:#d8aa59; font-size:11px; font-weight:800; letter-spacing:.13em; }
+.lgo-public-shell-immersive .lgo-download-readiness-section h2,.lgo-public-shell-immersive .lgo-download-lower-grid h2 { margin:4px 0 5px; color:#f1dfc2; font-size:clamp(26px,2.2vw,34px); line-height:1.05; font-weight:400; }
+.lgo-public-shell-immersive .lgo-download-readiness-section > header p { max-width:76ch; margin:0; color:#aebdc7; font-size:14px; line-height:1.45; }
+.lgo-public-shell-immersive .lgo-download-readiness-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px; margin-top:14px; }
+.lgo-public-shell-immersive .lgo-download-readiness-card { min-width:0; min-height:154px; padding:13px 12px 14px; border:1px solid rgba(61,126,140,.46); border-radius:7px; background:linear-gradient(180deg,rgba(8,28,39,.92),rgba(6,18,28,.92)); }
+.lgo-public-shell-immersive .lgo-download-readiness-card small,.lgo-public-shell-immersive .lgo-download-build-card small { display:inline-flex; min-height:24px; align-items:center; padding:3px 8px; border:1px solid rgba(184,145,77,.5); border-radius:999px; color:#e0bd7b; background:rgba(43,30,12,.36); font-size:11px; font-weight:800; }
+.lgo-public-shell-immersive .lgo-download-readiness-card h3 { margin:10px 0 5px; color:#eee0c9; font-size:18px; font-weight:500; line-height:1.1; }
+.lgo-public-shell-immersive .lgo-download-readiness-card p { margin:0; color:#9fb0bb; font-size:13px; line-height:1.38; }
+
+.lgo-public-shell-immersive .lgo-download-lower-grid { width:min(100% - 48px,1220px); margin:16px auto 24px; display:grid; grid-template-columns:1.2fr .8fr; gap:14px; }
+.lgo-public-shell-immersive .lgo-download-build-panel,.lgo-public-shell-immersive .lgo-download-info-panel { min-width:0; padding:16px; border:1px solid rgba(65,135,147,.38); border-radius:8px; background:rgba(6,22,32,.9); }
+.lgo-public-shell-immersive .lgo-download-lower-grid header { margin-bottom:12px; }
+.lgo-public-shell-immersive .lgo-download-build-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.lgo-public-shell-immersive .lgo-download-build-card { min-width:0; padding:12px; border:1px solid rgba(70,126,138,.38); border-radius:6px; background:#081721; }
+.lgo-public-shell-immersive .lgo-download-build-card h3 { margin:8px 0 5px; color:#efdfc5; font-size:17px; font-weight:500; }
+.lgo-public-shell-immersive .lgo-download-build-card p { margin:0; color:#9fb0bc; font-size:13px; line-height:1.4; }
+
+.lgo-public-shell-immersive .lgo-download-info-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.lgo-public-shell-immersive .lgo-download-info-link { min-height:74px; display:grid; grid-template-columns:1fr auto; align-content:center; gap:2px 10px; padding:12px 13px; border:1px solid rgba(78,153,166,.4); border-radius:6px; color:inherit; background:rgba(8,24,34,.82); text-decoration:none; }
+.lgo-public-shell-immersive .lgo-download-info-link strong { color:#e8ddca; font-size:15px; }
+.lgo-public-shell-immersive .lgo-download-info-link span { color:#9eb0bc; font-size:12px; line-height:1.35; }
+.lgo-public-shell-immersive .lgo-download-info-link b { grid-row:1 / span 2; grid-column:2; align-self:center; color:#78d7df; font-size:24px; font-weight:400; }
+
+@media (max-width:900px) {
+ .lgo-public-shell-immersive .lgo-download-readiness-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+ .lgo-public-shell-immersive .lgo-download-lower-grid { grid-template-columns:1fr; }
+}
+@media (max-width:700px) {
+ .lgo-public-shell-immersive .lgo-download-landing-hero { min-height:610px; align-items:flex-end; padding:300px 18px 28px; }
+ .lgo-public-shell-immersive .lgo-download-hero-art { height:340px; object-position:center 48%; mask-image:linear-gradient(180deg,#000 0,#000 72%,transparent 100%); }
+ .lgo-public-shell-immersive .lgo-download-landing-hero::after { background:linear-gradient(180deg,rgba(2,8,15,.08) 0%,rgba(2,8,15,.28) 42%,#06101a 58%); }
+ .lgo-public-shell-immersive .lgo-download-hero-copy { width:100%; text-align:center; }
+ .lgo-public-shell-immersive .lgo-download-hero-copy h1 { font-size:44px; }
+ .lgo-public-shell-immersive .lgo-download-release-state { margin-inline:auto; text-align:left; }
+ .lgo-public-shell-immersive .lgo-download-release-state p { font-size:14px; }
+ .lgo-public-shell-immersive .lgo-download-landing-actions { justify-content:center; }
+ .lgo-public-shell-immersive .lgo-download-landing-actions a { width:100%; min-height:46px; }
+ .lgo-public-shell-immersive .lgo-download-readiness-section,.lgo-public-shell-immersive .lgo-download-lower-grid { width:calc(100% - 24px); }
+ .lgo-public-shell-immersive .lgo-download-readiness-grid { grid-template-columns:1fr 1fr; gap:8px; }
+ .lgo-public-shell-immersive .lgo-download-readiness-card { min-height:0; }
+ .lgo-public-shell-immersive .lgo-download-readiness-card p,.lgo-public-shell-immersive .lgo-download-build-card p,.lgo-public-shell-immersive .lgo-download-info-link span { font-size:14px; }
+ .lgo-public-shell-immersive .lgo-download-build-grid,.lgo-public-shell-immersive .lgo-download-info-grid { grid-template-columns:1fr; }
+}
+@media (max-width:360px) { .lgo-public-shell-immersive .lgo-download-readiness-grid { grid-template-columns:1fr; } }
+@media (forced-colors:active) { .lgo-public-shell-immersive .lgo-download-readiness-card,.lgo-public-shell-immersive .lgo-download-build-card,.lgo-public-shell-immersive .lgo-download-info-link { border:1px solid CanvasText; } }
+@media (prefers-reduced-motion:reduce) { html:has(.lgo-download-landing) { scroll-behavior:auto; } }

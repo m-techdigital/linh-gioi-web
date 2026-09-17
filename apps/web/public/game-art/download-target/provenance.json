@@ -1,0 +1,28 @@
+{
+  "version": "v1.271",
+  "role": "DOWNLOAD_TARGET_DECORATIVE_ART_PROVENANCE",
+  "sourcePath": "/design-reference/download-detailed-design-target-v1125.png",
+  "sourceSha256": "7b412f5ac5126fb0a9487c71525f9f95e881582d874ae1f9a2c2d7e64afdd134",
+  "items": [
+    {
+      "id": "hero-gate",
+      "path": "/game-art/download-target/hero-gate.png",
+      "crop": [
+        760,
+        70,
+        1545,
+        555
+      ],
+      "resize": [
+        1570,
+        970
+      ],
+      "sha256": "ae81c592500c54a2a23d13b3b585ea576f81be4866e472889a2e33365d8da87a",
+      "bakedWebUiControls": false
+    }
+  ],
+  "notes": [
+    "Full design board is never runtime UI.",
+    "All labels, release state, readiness cards and actions remain live HTML."
+  ]
+}

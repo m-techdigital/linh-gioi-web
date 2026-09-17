@@ -28,9 +28,9 @@ def main() -> int:
     require_text("packages/content/src/types.ts", "openingImage", "stakes", "closingTurn")
     require_text("apps/web/src/components/PublicPlayerHero.tsx", "PublicPlayerHero", "PublicHeroAction")
     require_text("apps/web/src/components/PublicGameDepthSections.tsx", "ClassIdentityDeck", "WorldAtlasStories", "StoryArcTimeline")
-    require_text("apps/web/src/app/download/page.tsx", "PublicPlayerHero")
-    if "lgo-hero-kicker" in read("apps/web/src/app/download/page.tsx"):
-        fail("apps/web/src/app/download/page.tsx duplicates base hero kicker markup instead of PublicPlayerHero")
+    # /download v1.271 supersedes the legacy PublicPlayerHero/proof-depth composition while retaining canonical readiness/build data.
+    require_text("apps/web/src/app/download/page.tsx", "PublicDownloadLanding", 'variant="immersive"')
+    require_text("apps/web/src/components/PublicDownloadLanding.tsx", "downloadReadiness", "downloadBuilds", "Chưa mở cổng phát hành")
     # /start v1.270 supersedes the legacy PublicPlayerHero + proof/gallery/class/world flow.
     require_text("apps/web/src/app/start/page.tsx", "PublicStartLanding", 'variant="immersive"')
     require_text("apps/web/src/components/PublicStartLanding.tsx", "Học cách di chuyển", "Người Giữ Cổng", "Bia Luyện", "Slime Bóng Tối", "Mở Linh Thành")
