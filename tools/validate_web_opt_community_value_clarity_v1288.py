@@ -29,6 +29,16 @@ def main():
  prior=read('tools/validate_web_fe_community_real_ui_layout_v1227.py')
  for marker in ('PublicCommunityExperience.tsx','community-layout.css','NO_ACCEPTED_BACKEND_CONTRACT'):
   if marker not in prior: ERRORS.append('v1.227 community guard lost protection: '+marker)
+ next_action=read('docs/execution/WEB-NEXT-ACTION.md')
+ project_state=read('docs/execution/WEB-PROJECT-STATE.md')
+ ledger=read('docs/execution/WEB-TASK-LEDGER.md')
+ report=read('docs/execution/LGO-WEB-OPT-11-COMMUNITY-VALUE-CLARITY-REPORT-v1.288.md')
+ active_prefix='Current phase: WEB-OPT-11-COMMUNITY-VALUE-CLARITY-v1.288 WEB_CLOSED'
+ if active_prefix not in project_state: ERRORS.append('WEB-PROJECT-STATE lost v1.288 closure history')
+ if project_state.startswith(active_prefix) and 'WEB-OPT-12-COMMUNITY-ONBOARDING-v1.289' not in next_action: ERRORS.append('active v1.288 checkpoint does not advance to WEB-OPT-12 v1.289')
+ if '| WEB-OPT-11-COMMUNITY-VALUE-CLARITY-v1.288 | WEB-OPT | WEB_CLOSED |' not in ledger: ERRORS.append('WEB-TASK-LEDGER does not record WEB-OPT-11 v1.288 closure')
+ for marker in ('c03ee5804f13b82ea330b06588121df895291a9a','Exact v1.287 baseline mobile height was `4,203px`; final is `3,245px`','focused static browser coverage passes `8/8`'):
+  if marker not in report: ERRORS.append('v1.288 report missing closure evidence: '+marker)
  if ERRORS:
   print('WEB OPT COMMUNITY VALUE CLARITY v1.288 VALIDATION FAIL')
   for e in ERRORS: print('- '+e)

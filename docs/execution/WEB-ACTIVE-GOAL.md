@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — community value clarity closed (2026-09-18)
+
+WEB-OPT-11 v1.288 is CLOSED at source commit `c03ee5804f13b82ea330b06588121df895291a9a`. `/community` now places useful player destinations before one consolidated unavailable-live-social/no-intake boundary; mobile height falls 4,203px→3,245px (-22.79%) and the three value panels form a one-row swipeable rail with no page overflow.
+
+Next task is **WEB-OPT-12-COMMUNITY-ONBOARDING-v1.289** on `/community/onboarding` only. Shorten the newcomer path and make it more game-oriented while preserving static-only/no-registration/no-account/backend truth. Do not batch `/game/loop`.
+
 ## Owner optimization authority — support safety flow closed (2026-09-18)
 
 WEB-OPT-10 v1.287 is CLOSED at source commit `274bfab06307d7688ff1b3936ace654284a7c82f`. `/support/safety` now keeps privacy first while moving issue/no-ticket routing before the deep data reference; mobile height falls 3,842px→3,133px and issue/no-ticket guidance appears 1,312px earlier, with all five checks, three privacy items, two data panels and four issue disclosures preserved.

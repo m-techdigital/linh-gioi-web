@@ -4,28 +4,29 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-10 v1.287 is CLOSED at source commit `274bfab06307d7688ff1b3936ace654284a7c82f`; do not reopen it without a related safety/privacy/reporting-flow regression.
+WEB-OPT-11 v1.288 is CLOSED at source commit `c03ee5804f13b82ea330b06588121df895291a9a`; do not reopen it without a related community-value/live-social-boundary regression.
 
 Next task:
-WEB-OPT-11-COMMUNITY-VALUE-CLARITY-v1.288
+WEB-OPT-12-COMMUNITY-ONBOARDING-v1.289
 
 Objective:
-Clarify `/community` player value and next steps before unavailable live-social/technical boundaries, reducing repeated proof density while preserving truthful no-live-chat/forum/guild/backend limits.
+Make `/community/onboarding` shorter and more game-oriented, with a clear newcomer next/previous path, while preserving truthful static-only/no-registration/no-account/community-backend limits.
 
-Current optimization scope: `/community` only plus the smallest shared Base owner change genuinely required by that route. Do not batch `/community/onboarding`, roadmap, broad copy rewrites, backend/CMS/community systems or account/guild integration.
+Current optimization scope: `/community/onboarding` only plus the smallest shared Base owner change genuinely required by that route. Do not batch `/game/loop`, roadmap, broad copy rewrites, backend/CMS/community systems, waitlist, account or guild integration.
 
 Entry baseline:
-- WEB-OPT-01–10 foundations are CLOSED and must remain regression-green;
-- v1.277 identifies `/community` as a Phase-B route where technical-boundary repetition competes with player value;
-- no live chat/forum/guild/account/community backend is accepted.
+- WEB-OPT-01–11 foundations are CLOSED and must remain regression-green;
+- v1.288 establishes the accepted `/community` player-value-before-boundary rhythm;
+- no registration, waitlist, account enrollment, live social system or community backend is accepted.
 
 Exit criteria:
-- community purpose, useful player destinations and next steps appear before repeated technical constraints on desktop/mobile;
-- page length/proof density is materially reduced without hiding unavailable-feature boundaries;
-- keyboard/focus/touch behavior, accepted public shell and truthful no-live-social semantics remain intact;
+- newcomer path is materially shorter and more game-oriented on desktop/mobile;
+- next/previous route flow is clear before repeated technical constraints;
+- no waitlist/account enrollment or fake live-social action appears;
+- keyboard/focus/touch behavior and accepted public shell/language contracts remain intact;
 - focused browser/e2e, fresh desktop/mobile screenshots, relevant validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and Support-family contracts; no production deployment. Do not batch WEB-OPT-12.
+Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A, Support-family and v1.288 community contracts; no production deployment. Do not batch WEB-OPT-13.
 
 Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 

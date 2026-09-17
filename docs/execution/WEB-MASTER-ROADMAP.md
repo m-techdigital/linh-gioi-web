@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.288
+
+WEB-OPT-11 is CLOSED at `c03ee5804f13b82ea330b06588121df895291a9a`. `/community` removes the duplicate hero live-social warning, keeps one compact unavailable-live-social/no-intake boundary after useful player choices and changes the mobile three-card value wall into a swipeable rail. Mobile height falls 4,203px→3,245px (-22.79%) with zero page overflow; the three player routes, two prototype images, three conduct rules and no-backend contract remain.
+
+Continue Phase B with WEB-OPT-12 v1.289 on `/community/onboarding` only, followed by WEB-OPT-13 v1.290 on `/game/loop`.
+
 ## 2026-09-18 optimization checkpoint v1.287
 
 WEB-OPT-10 is CLOSED at `274bfab06307d7688ff1b3936ace654284a7c82f`. `/support/safety` keeps all privacy/data/no-ticket safeguards while moving safe issue routing 1,312px earlier on mobile and replacing the five-card vertical preparation wall with a one-row swipeable checklist rail.

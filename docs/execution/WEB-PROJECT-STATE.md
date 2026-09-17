@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-11-COMMUNITY-VALUE-CLARITY-v1.288 WEB_CLOSED
+
+Current decision: `/community` leads with player/community value and the three real next routes before one consolidated unavailable-live-social/no-intake boundary. Mobile height is 3,245px from 4,203px (-22.79%); the three value panels are one swipeable rail, page overflow is zero, forms remain zero, and two prototype images plus three conduct rules remain intact.
+
+Verified source delivery commit: `c03ee5804f13b82ea330b06588121df895291a9a`. Clean temporary production build63; focused static browser8/8 desktop/mobile; Web typecheck/lint; v1.288/v1.287/v1.286/v1.285 source validators; exact clean-archive current-state/package replay PASS.
+
+Next task: `WEB-OPT-12-COMMUNITY-ONBOARDING-v1.289` on `/community/onboarding` only. Do not batch `/game/loop`.
+
+Detailed report: `LGO-WEB-OPT-11-COMMUNITY-VALUE-CLARITY-REPORT-v1.288.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-10-SUPPORT-SAFETY-FLOW-v1.287 WEB_CLOSED
 
 Current decision: `/support/safety` preserves privacy guidance while making safe issue routing the next useful step after local preparation. Mobile height is 3,133px from 3,842px; issue routing moves to 1,374px from 2,686px and the no-ticket boundary to 1,766px from 3,078px. Five local checks, three privacy items, two data panels, four issue disclosures and no-intake/backend boundaries remain.
