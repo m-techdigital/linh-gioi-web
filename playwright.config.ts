@@ -28,6 +28,12 @@ export default defineConfig({
   // Historical readiness/tester/status schematic-card implementations are replaced by v1.221–v1.223.
   // These cases are retired, NOT counted as PASS; real composition and interaction tests replace them.
   testIgnore: [
+    // v1.270 replaces the historical /start proof-board/gallery/class-world layouts with the live target-driven onboarding landing.
+    "**/fe-public-start-design-board-v179.spec.ts",
+    "**/fe-public-start-real-onboarding-gallery-v190.spec.ts",
+    "**/fe-start-design-target-density-v1124.spec.ts",
+    "**/fe-start-vietnamese-design-match-v1139.spec.ts",
+    "**/fe-start-real-ui-layout-v1217.spec.ts",
     // v1.269 replaces the historical /journey proof/timeline layouts with the target-driven session landing.
     "**/fe-public-journey-design-board-v180.spec.ts",
     "**/fe-journey-design-target-density-v1123.spec.ts",

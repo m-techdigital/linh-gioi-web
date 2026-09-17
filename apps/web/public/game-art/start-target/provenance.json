@@ -1,0 +1,16 @@
+{
+  "version": "v1.270",
+  "role": "START_TARGET_DECORATIVE_ART_PROVENANCE",
+  "sourcePath": "/design-reference/start-detailed-design-target-v1124.png",
+  "sourceSha256": "582a80dc582f3e9501111468e37eaa645860a815242ec54e4f4a8fd365009142",
+  "items": [
+    {"id":"hero-gate","path":"/game-art/start-target/hero-gate.png","crop":[555,58,1265,420],"resize":[1420,724],"sha256":"9cfbec93e4a2f7f765a542d22f74f90741c2a07753b391f156531b5885e40c28"},
+    {"id":"keeper","path":"/game-art/start-target/keeper.png","crop":[154,735,476,825],"resize":[644,180],"sha256":"e046daf885c71a6493ff77d969e72280581458f55abd4f81b7c0932f5d8bfe7f"},
+    {"id":"training-stone","path":"/game-art/start-target/training-stone.png","crop":[486,735,814,825],"resize":[656,180],"sha256":"e402c478e328b3f686a473ef185fec43746803bc6a607770596004b1fcb57394"},
+    {"id":"shadow-slime","path":"/game-art/start-target/shadow-slime.png","crop":[828,735,1158,825],"resize":[660,180],"sha256":"24ebde5179b3e4bd7ebd240bb2e6b9ff01111a608522a61d1d961352869f6399"},
+    {"id":"open-gate","path":"/game-art/start-target/open-gate.png","crop":[1170,735,1500,825],"resize":[660,180],"sha256":"4f3080cb1831ebf3ce3ebc7a9e5412106e4892c8e0ad0b13bff347875a5b3fd7"}
+  ],
+  "bakedWebUiControls": false,
+  "canonicalPresentation": ["Học cách di chuyển","Người Giữ Cổng","Bia Luyện","Slime Bóng Tối","Mở Linh Thành"],
+  "notes": ["Full design board is never runtime UI.","All labels, keyboard controls and actions remain live HTML.","Historical onboarding blockout screenshots remain evidence only and are not used by the v1.270 first flow."]
+}

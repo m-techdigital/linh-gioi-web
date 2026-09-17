@@ -28,13 +28,12 @@ def main() -> int:
     require_text("packages/content/src/types.ts", "openingImage", "stakes", "closingTurn")
     require_text("apps/web/src/components/PublicPlayerHero.tsx", "PublicPlayerHero", "PublicHeroAction")
     require_text("apps/web/src/components/PublicGameDepthSections.tsx", "ClassIdentityDeck", "WorldAtlasStories", "StoryArcTimeline")
-    for rel in (
-        "apps/web/src/app/start/page.tsx",
-        "apps/web/src/app/download/page.tsx",
-    ):
-        require_text(rel, "PublicPlayerHero")
-        if "lgo-hero-kicker" in read(rel):
-            fail(f"{rel} duplicates base hero kicker markup instead of PublicPlayerHero")
+    require_text("apps/web/src/app/download/page.tsx", "PublicPlayerHero")
+    if "lgo-hero-kicker" in read("apps/web/src/app/download/page.tsx"):
+        fail("apps/web/src/app/download/page.tsx duplicates base hero kicker markup instead of PublicPlayerHero")
+    # /start v1.270 supersedes the legacy PublicPlayerHero + proof/gallery/class/world flow.
+    require_text("apps/web/src/app/start/page.tsx", "PublicStartLanding", 'variant="immersive"')
+    require_text("apps/web/src/components/PublicStartLanding.tsx", "Học cách di chuyển", "Người Giữ Cổng", "Bia Luyện", "Slime Bóng Tối", "Mở Linh Thành")
     # /game v1.266 supersedes the legacy PublicPlayerHero + WorldAtlasStories proof-card flow.
     require_text("apps/web/src/app/game/page.tsx", "PublicWorldLanding", 'variant="immersive"')
     require_text("apps/web/src/components/PublicWorldLanding.tsx", "worldRouteStops", "lgo-world-region-grid")
