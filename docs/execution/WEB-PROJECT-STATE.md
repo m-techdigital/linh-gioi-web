@@ -1,3 +1,16 @@
+Current phase: WEB-FE-JOURNEY-VISUAL-REALIGNMENT-v1.269 WEB_CLOSED
+
+Current decision: `/journey` is now a target-driven immersive journey landing. The live page uses the shared immersive shell, a cinematic Linh Thành hero, a live informational four-phase cycle, all six canonical `sampleSessionBeats` as illustrated moment cards, and all five canonical `worldRouteStops` as the world-route rail. The historical generic hero, long proof cards and embedded journey reference board are superseded, not counted as current runtime PASS.
+
+Verified source delivery commit: `1b3e9c98fcd43981867f764b89272783a262c013` on `origin/main`. Focused journey: 12/12 PASS; selected dev regression: 86/86 PASS; fresh production selected regression: 86/86 PASS; production build: 63 static pages; UI/Web typecheck and lint PASS; clean source-archive current-state PASS. Production desktop/mobile screenshots and metrics were reviewed after real RED→GREEN corrections, including removal of the historical `.lgo-journey-cycle` namespace collision.
+
+Next task after final governance/archive delivery: WEB-FE-START-VISUAL-REALIGNMENT-v1.270.
+Select `/start` as the next single active page. Then continue release/service and support/community families from the full-site visual audit plan. Do not resume the historical `/news` queue.
+
+Detailed report: LGO-WEB-FE-JOURNEY-VISUAL-REALIGNMENT-REPORT-v1.269.md.
+
+Historical state below is retained for provenance, not active visual authority.
+
 Current phase: WEB-FE-CLASSES-VISUAL-REALIGNMENT-v1.268 WEB_CLOSED
 
 Current decision: `/classes` is now a target-driven immersive five-Lộ landing. The live page uses the shared immersive shell, a cinematic Linh Thành hero with live Năm Lộ wheel, five canonical illustrated class choices sourced from `classPaths`, and one local/read-only selected-path feature using battle rhythm, signature verbs and world lens. The historical generic hero, proof cards and expanded ClassArtSpotlight disclosure are superseded, not counted as current runtime PASS.

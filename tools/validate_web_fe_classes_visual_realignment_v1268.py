@@ -36,7 +36,7 @@ def main():
  require('docs/superpowers/specs/2026-09-17-public-site-visual-realignment-design.md','/classes','Historical validator/test PASS is engineering evidence only')
  require('docs/superpowers/plans/2026-09-17-public-site-visual-realignment.md','Task 3: `/classes`','five-Lộ visual wheel/deck')
  require('docs/execution/WEB-PROJECT-STATE.md','WEB-FE-CLASSES-VISUAL-REALIGNMENT-v1.268 WEB_CLOSED','WEB-FE-JOURNEY-VISUAL-REALIGNMENT-v1.269')
- require('docs/execution/WEB-NEXT-ACTION.md','WEB-FE-JOURNEY-VISUAL-REALIGNMENT-v1.269','Classes v1.268 checkpoint')
+ require('docs/execution/WEB-NEXT-ACTION.md','Classes v1.268 checkpoint')
  require('docs/execution/WEB-TASK-LEDGER.md','| WEB-FE-CLASSES-VISUAL-REALIGNMENT-v1.268 | WEB-FE | WEB_CLOSED |')
  require('docs/execution/LGO-WEB-FE-CLASSES-VISUAL-REALIGNMENT-REPORT-v1.268.md','Focused `/classes`: 14/14 PASS','Fresh production selected regression on port 3236: 74/74 PASS','00385ed64fe38140953580b5d3fce915a476323d')
  require('docs/execution/HANDOFF-LGO-WEB-FE-CLASSES-VISUAL-REALIGNMENT-v1.268.md','Next: `/journey` visual realignment v1.269')
