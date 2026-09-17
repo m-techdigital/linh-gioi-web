@@ -4,28 +4,28 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-08 v1.285 is CLOSED at source commit `dcbe319887d021b2ab864b2c2222e39ddcb96018`; do not reopen it without a related Support entry-hierarchy regression.
+WEB-OPT-09 v1.286 is CLOSED at source commit `6a69d6ab7c8e65eb5a376a5e9f4c196c37f4fb7a`; do not reopen it without a related Help discovery/filter/fragment regression.
 
 Next task:
-WEB-OPT-09-SUPPORT-HELP-DISCOVERY-v1.286
+WEB-OPT-10-SUPPORT-SAFETY-FLOW-v1.287
 
 Objective:
-Shorten `/support/help` FAQ discovery path and reduce mobile wall-of-cards density while preserving local filtering, native answer semantics, fragments and safe boundaries.
+Improve `/support/safety` reporting/privacy guidance sequence and mobile touch flow without creating live intake, upload or account lookup.
 
-Current optimization scope: `/support/help` only plus the smallest shared Base owner change genuinely required by that route. Do not batch `/support/safety`, community routes, broad copy rewrites, backend/CMS search or live ticket intake.
+Current optimization scope: `/support/safety` only plus the smallest shared Base owner change genuinely required by that route. Do not batch community/onboarding routes, broad copy rewrites, backend/CMS moderation, upload or ticket systems.
 
 Entry baseline:
-- WEB-OPT-01–08 foundations are CLOSED and must remain regression-green;
-- v1.277 flags `/support/help` among the longest mobile service routes;
-- v1.285 establishes the accepted parent Support hierarchy and must remain stable.
+- WEB-OPT-01–09 foundations are CLOSED and must remain regression-green;
+- v1.285 parent Support and v1.286 Help discovery are accepted predecessors;
+- all safety/privacy/reporting boundaries remain source-of-truth constraints, not optional copy.
 
 Exit criteria:
-- faster first useful FAQ/question access and materially reduced mobile reading/card-wall cost;
-- local filter/reset, native answers, fragments, keyboard/focus/touch semantics remain intact;
-- no backend search, ticket intake, account lookup or invented SLA is introduced;
+- reporting/privacy sequence is easier to scan and act on desktop/mobile, with first useful safe-reporting step earlier;
+- touch targets, native disclosures/links, keyboard/focus and truthful no-live-intake boundaries remain intact;
+- no form upload, ticket submission, account lookup, moderation backend or invented SLA is introduced;
 - focused browser/e2e, fresh desktop/mobile screenshots, relevant validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A contracts and v1.285 Support parent hierarchy; no production deployment. Do not batch WEB-OPT-10.
+Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.285/v1.286 contracts; no production deployment. Do not batch WEB-OPT-11.
 
 Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 

@@ -28,8 +28,9 @@ def main():
  project_state=read('docs/execution/WEB-PROJECT-STATE.md')
  ledger=read('docs/execution/WEB-TASK-LEDGER.md')
  report=read('docs/execution/LGO-WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-REPORT-v1.285.md')
- if not project_state.startswith('Current phase: WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-v1.285 WEB_CLOSED'): ERRORS.append('WEB-PROJECT-STATE does not lead with v1.285 closure')
- if 'WEB-OPT-09-SUPPORT-HELP-DISCOVERY-v1.286' not in next_action: ERRORS.append('WEB-NEXT-ACTION does not advance to WEB-OPT-09 v1.286')
+ active_prefix='Current phase: WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-v1.285 WEB_CLOSED'
+ if active_prefix not in project_state: ERRORS.append('WEB-PROJECT-STATE lost v1.285 closure history')
+ if project_state.startswith(active_prefix) and 'WEB-OPT-09-SUPPORT-HELP-DISCOVERY-v1.286' not in next_action: ERRORS.append('active v1.285 checkpoint does not advance to WEB-OPT-09 v1.286')
  if '| WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-v1.285 | WEB-OPT | WEB_CLOSED |' not in ledger: ERRORS.append('WEB-TASK-LEDGER does not record WEB-OPT-08 v1.285 closure')
  for marker in ('dcbe319887d021b2ab864b2c2222e39ddcb96018','Mobile was `3,301px`; final is `2,548px`','Phase-A mobile regressions v1.279 + v1.278 + v1.281 `7/7`'):
   if marker not in report: ERRORS.append('v1.285 report missing closure evidence: '+marker)

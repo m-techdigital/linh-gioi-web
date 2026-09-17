@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — support help discovery closed (2026-09-18)
+
+WEB-OPT-09 v1.286 is CLOSED at source commit `6a69d6ab7c8e65eb5a376a5e9f4c196c37f4fb7a`. `/support/help` removes the duplicated six-card topic wall, keeps the six-topic question map as the entry owner and compresses the mobile local filter to one 44px rail; mobile height falls 4,881px→4,139px and the real answer directory advances 628px with no page overflow.
+
+Next task is **WEB-OPT-10-SUPPORT-SAFETY-FLOW-v1.287** on `/support/safety` only. Improve safety/reporting sequence and mobile touch flow without creating live intake, upload, account lookup or backend moderation.
+
 ## Owner optimization authority — support entry hierarchy closed (2026-09-18)
 
 WEB-OPT-08 v1.285 is CLOSED at source commit `dcbe319887d021b2ab864b2c2222e39ddcb96018`. `/support` now uses one primary four-route GuidanceStation instead of repeating the same destinations in a second topic-card wall; mobile height fell 3,301px→2,548px and FAQ moves 1,683px→1,009px with no loss of ticket/privacy/backend boundaries.

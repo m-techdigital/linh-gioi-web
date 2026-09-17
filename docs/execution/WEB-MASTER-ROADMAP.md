@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.286
+
+WEB-OPT-09 is CLOSED at `6a69d6ab7c8e65eb5a376a5e9f4c196c37f4fb7a`. `/support/help` removes the duplicated topic wall, advances the real answer directory by 628px on mobile and reduces total mobile height 15.20% while retaining six local categories, 12 native answers, fragment/history behavior and truthful no-backend-search/no-ticket boundaries.
+
+Continue Phase B with WEB-OPT-10 v1.287 on `/support/safety` only, then community/onboarding tasks in backlog order.
+
 ## 2026-09-18 optimization checkpoint v1.285
 
 WEB-OPT-08 is CLOSED at `dcbe319887d021b2ab864b2c2222e39ddcb96018`. Phase B now begins with a concise `/support` entry hierarchy: the duplicate topic wall is removed, mobile height falls 22.81%, FAQ appears 674px earlier, and truthful no-ticket/privacy/backend boundaries remain visible.

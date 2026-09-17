@@ -25,6 +25,16 @@ def main():
  if '"validate_web_opt_support_help_discovery_v1286.py"' not in state: ERRORS.append('v1.286 validator not registered in current state')
  prior=read('tools/validate_web_fe_support_help_real_ui_layout_v1225.py')
  if 'parts = ("<PublicHelpHero/>", "<PublicHelpAnswers/>", "<PublicHelpBoundary/>", "<PublicHelpReadingNotes/>")' not in prior: ERRORS.append('v1.225 help guard still requires duplicated topic wall')
+ next_action=read('docs/execution/WEB-NEXT-ACTION.md')
+ project_state=read('docs/execution/WEB-PROJECT-STATE.md')
+ ledger=read('docs/execution/WEB-TASK-LEDGER.md')
+ report=read('docs/execution/LGO-WEB-OPT-09-SUPPORT-HELP-DISCOVERY-REPORT-v1.286.md')
+ active_prefix='Current phase: WEB-OPT-09-SUPPORT-HELP-DISCOVERY-v1.286 WEB_CLOSED'
+ if active_prefix not in project_state: ERRORS.append('WEB-PROJECT-STATE lost v1.286 closure history')
+ if project_state.startswith(active_prefix) and 'WEB-OPT-10-SUPPORT-SAFETY-FLOW-v1.287' not in next_action: ERRORS.append('active v1.286 checkpoint does not advance to WEB-OPT-10 v1.287')
+ if '| WEB-OPT-09-SUPPORT-HELP-DISCOVERY-v1.286 | WEB-OPT | WEB_CLOSED |' not in ledger: ERRORS.append('WEB-TASK-LEDGER does not record WEB-OPT-09 v1.286 closure')
+ for marker in ('6a69d6ab7c8e65eb5a376a5e9f4c196c37f4fb7a','Mobile was `4,881px`; final is `4,139px`','v1.286 + parent v1.285 `8/8` PASS'):
+  if marker not in report: ERRORS.append('v1.286 report missing closure evidence: '+marker)
  if ERRORS:
   print('WEB OPT SUPPORT HELP DISCOVERY v1.286 VALIDATION FAIL')
   for e in ERRORS: print('- '+e)

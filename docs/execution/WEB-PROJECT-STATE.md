@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-09-SUPPORT-HELP-DISCOVERY-v1.286 WEB_CLOSED
+
+Current decision: `/support/help` reaches its 12 source-backed FAQ answers immediately after the six-topic question map; the duplicate topic-card wall is removed and the seven local filters form one mobile horizontal rail. Desktop height is 2,216px from 2,554px; mobile is 4,139px from 4,881px; answer directory moves to 654px desktop / 1,049px mobile; page overflow remains zero.
+
+Verified source delivery commit: `6a69d6ab7c8e65eb5a376a5e9f4c196c37f4fb7a`. Isolated v1.286+v1.285 browser8/8 desktop/mobile; Phase-A mobile7/7; build63; Web typecheck/lint; source validators; clean 2,003-file current-state candidate PASS.
+
+Next task: `WEB-OPT-10-SUPPORT-SAFETY-FLOW-v1.287` on `/support/safety` only. Do not batch community routes.
+
+Detailed report: `LGO-WEB-OPT-09-SUPPORT-HELP-DISCOVERY-REPORT-v1.286.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-v1.285 WEB_CLOSED
 
 Current decision: `/support` keeps one canonical quick-path station and removes the duplicated topic-card wall. Desktop height is 1,378px from 1,751px; mobile is 2,548px from 3,301px; FAQ moves to 544px desktop / 1,009px mobile with zero overflow. Four support destinations, six FAQ disclosures, no-ticket/privacy boundaries and `NO_ACCEPTED_BACKEND_CONTRACT` remain.
