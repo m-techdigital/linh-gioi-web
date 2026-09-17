@@ -1,3 +1,4 @@
+import "@lgo-web/ui/service-layout.css";
 import "@lgo-web/ui/release-layout.css";
 import "@lgo-web/ui/forms.css";
 import "@lgo-web/ui/reading-catalog.css";

@@ -1,3 +1,4 @@
+import "@lgo-web/ui/service-layout.css";
 import { PublicSafetySupportArticle } from "../../../components/PublicSafetySupportArticle";
 import { PublicWorldLoopArticle } from "../../../components/PublicWorldLoopArticle";
 import { PublicContentHubArticle } from "../../../components/PublicContentHubArticle";

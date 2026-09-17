@@ -1,3 +1,4 @@
+import "@lgo-web/ui/service-layout.css";
 import { Stack } from "@lgo-web/ui";
 import "@lgo-web/ui/release-layout.css";
 import "@lgo-web/ui/guidance-layout.css";

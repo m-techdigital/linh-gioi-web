@@ -1,3 +1,4 @@
+import "@lgo-web/ui/service-layout.css";
 import { PublicFaqGuide } from "../../../components/PublicFaqGuide";
 import { PublicClosedTesterGuide } from "../../../components/PublicClosedTesterGuide";
 import { PublicReleaseReadinessGuide } from "../../../components/PublicReleaseReadinessGuide";
