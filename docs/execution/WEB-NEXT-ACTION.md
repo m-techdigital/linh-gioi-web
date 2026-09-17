@@ -4,28 +4,28 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-07 v1.284 is CLOSED at source commit `e105aa7f874730ac6c82e8c49c37499a44dd806a`; do not reopen it without a related editorial-density/reading-flow regression.
+WEB-OPT-08 v1.285 is CLOSED at source commit `dcbe319887d021b2ab864b2c2222e39ddcb96018`; do not reopen it without a related Support entry-hierarchy regression.
 
 Next task:
-WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-v1.285
+WEB-OPT-09-SUPPORT-HELP-DISCOVERY-v1.286
 
 Objective:
-Replace `/support` generic proof-density with a clear player support entry hierarchy while preserving truthful no-ticket/no-account-lookup boundaries and the accepted public shell.
+Shorten `/support/help` FAQ discovery path and reduce mobile wall-of-cards density while preserving local filtering, native answer semantics, fragments and safe boundaries.
 
-Current optimization scope: `/support` only plus the smallest shared Base owner change genuinely required by that route. Do not batch `/support/help`, `/support/safety`, community routes, broad copy rewrites, backend/CMS work or live intake.
+Current optimization scope: `/support/help` only plus the smallest shared Base owner change genuinely required by that route. Do not batch `/support/safety`, community routes, broad copy rewrites, backend/CMS search or live ticket intake.
 
 Entry baseline:
-- WEB-OPT-01–07 Phase-A foundations are CLOSED and must remain regression-green;
-- the v1.277 audit names `/support` as the first remaining Phase-B route;
-- existing Support target/history is comparison evidence, not permission to restore superseded page-local patterns.
+- WEB-OPT-01–08 foundations are CLOSED and must remain regression-green;
+- v1.277 flags `/support/help` among the longest mobile service routes;
+- v1.285 establishes the accepted parent Support hierarchy and must remain stable.
 
 Exit criteria:
-- desktop/mobile `/support` presents a shorter, clearer path to the correct support/safety/status/help destinations;
-- no fake ticket submission, account lookup, SLA or backend capability is introduced;
-- keyboard/focus/touch behavior, truthful non-claims and accepted shell/navigation remain intact;
-- focused browser/e2e, fresh desktop/mobile screenshots, relevant source validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
+- faster first useful FAQ/question access and materially reduced mobile reading/card-wall cost;
+- local filter/reset, native answers, fragments, keyboard/focus/touch semantics remain intact;
+- no backend search, ticket intake, account lookup or invented SLA is introduced;
+- focused browser/e2e, fresh desktop/mobile screenshots, relevant validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A IA/metadata/editorial contracts; no production deployment. Do not batch WEB-OPT-09.
+Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A contracts and v1.285 Support parent hierarchy; no production deployment. Do not batch WEB-OPT-10.
 
 Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 

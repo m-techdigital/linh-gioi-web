@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.285
+
+WEB-OPT-08 is CLOSED at `dcbe319887d021b2ab864b2c2222e39ddcb96018`. Phase B now begins with a concise `/support` entry hierarchy: the duplicate topic wall is removed, mobile height falls 22.81%, FAQ appears 674px earlier, and truthful no-ticket/privacy/backend boundaries remain visible.
+
+Continue with WEB-OPT-09 v1.286 on `/support/help` only, then WEB-OPT-10 v1.287 on `/support/safety`.
+
 ## 2026-09-18 optimization checkpoint v1.284
 
 WEB-OPT-01 through WEB-OPT-07 are CLOSED. v1.284 at `e105aa7f874730ac6c82e8c49c37499a44dd806a` reduces the 33-route editorial mobile P90 height from 5,089px to 4,016px and first-useful-next-step P90 from 2,193px to 1,846px while preserving exact authored text/headings/links/disclosures and truth boundaries.

@@ -26,8 +26,8 @@ def main():
  ledger=read('docs/execution/WEB-TASK-LEDGER.md')
  report=read('docs/execution/LGO-WEB-OPT-07-EDITORIAL-MOBILE-DENSITY-READING-FLOW-REPORT-v1.284.md')
  active_prefix='Current phase: WEB-OPT-07-EDITORIAL-MOBILE-DENSITY-READING-FLOW-v1.284 WEB_CLOSED'
- if not project_state.startswith(active_prefix): ERRORS.append('WEB-PROJECT-STATE does not lead with v1.284 closure')
- if 'WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-v1.285' not in next_action: ERRORS.append('WEB-NEXT-ACTION does not advance to WEB-OPT-08 v1.285')
+ if active_prefix not in project_state: ERRORS.append('WEB-PROJECT-STATE lost v1.284 closure history')
+ if project_state.startswith(active_prefix) and 'WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-v1.285' not in next_action: ERRORS.append('active v1.284 checkpoint does not advance to WEB-OPT-08 v1.285')
  if '| WEB-OPT-07-EDITORIAL-MOBILE-DENSITY-READING-FLOW-v1.284 | WEB-OPT | WEB_CLOSED |' not in ledger: ERRORS.append('WEB-TASK-LEDGER does not record WEB-OPT-07 v1.284 closure')
  for marker in ('e105aa7f874730ac6c82e8c49c37499a44dd806a','P90 `4,016px`','474744742f0fb3ff30f879ad356797be560a50c67aba0861466a49b76f6ef453'):
   if marker not in report: ERRORS.append('v1.284 report missing closure evidence: '+marker)

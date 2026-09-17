@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-v1.285 WEB_CLOSED
+
+Current decision: `/support` keeps one canonical quick-path station and removes the duplicated topic-card wall. Desktop height is 1,378px from 1,751px; mobile is 2,548px from 3,301px; FAQ moves to 544px desktop / 1,009px mobile with zero overflow. Four support destinations, six FAQ disclosures, no-ticket/privacy boundaries and `NO_ACCEPTED_BACKEND_CONTRACT` remain.
+
+Verified source delivery commit: `dcbe319887d021b2ab864b2c2222e39ddcb96018`. Focused browser4/4; Phase-A mobile regressions7/7; build63; Web typecheck/lint; Support/Help/Safety source guards; clean 2,000-file current-state candidate PASS.
+
+Next task: `WEB-OPT-09-SUPPORT-HELP-DISCOVERY-v1.286` on `/support/help` only. Do not batch `/support/safety`.
+
+Detailed report: `LGO-WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-REPORT-v1.285.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-07-EDITORIAL-MOBILE-DENSITY-READING-FLOW-v1.284 WEB_CLOSED
 
 Current decision: all 33 News/Guide detail routes retain authored meaning and explicit truth boundaries while the shared mobile article/catalog rhythm is materially shorter. Exact mobile P90 height is 4,016px from 5,089px, max 4,264px from 5,357px, and first-useful-next-step P90 1,846px from 2,193px; no audited route has page-level horizontal overflow.

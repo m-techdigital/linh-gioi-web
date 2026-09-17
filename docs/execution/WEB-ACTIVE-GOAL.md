@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — support entry hierarchy closed (2026-09-18)
+
+WEB-OPT-08 v1.285 is CLOSED at source commit `dcbe319887d021b2ab864b2c2222e39ddcb96018`. `/support` now uses one primary four-route GuidanceStation instead of repeating the same destinations in a second topic-card wall; mobile height fell 3,301px→2,548px and FAQ moves 1,683px→1,009px with no loss of ticket/privacy/backend boundaries.
+
+Next task is **WEB-OPT-09-SUPPORT-HELP-DISCOVERY-v1.286** on `/support/help` only. Shorten FAQ discovery and mobile card-wall cost while preserving local filtering, native answers, fragments, keyboard semantics and no-backend-search/no-ticket truth.
+
 ## Owner optimization authority — editorial mobile density closed (2026-09-18)
 
 WEB-OPT-07 v1.284 is CLOSED at source commit `e105aa7f874730ac6c82e8c49c37499a44dd806a`. Across all 33 News/Guide detail routes, exact mobile P90 height fell from 5,089px to 4,016px and first-useful-next-step P90 from 2,193px to 1,846px, with zero page-level horizontal overflow and 33/33 exact content/headings/links/disclosure parity.

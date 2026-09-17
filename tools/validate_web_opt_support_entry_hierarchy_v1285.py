@@ -24,6 +24,15 @@ def main():
  if '"validate_web_fe_support_real_ui_layout_v1224.py": "validate_web_opt_support_entry_hierarchy_v1285.py"' not in state: ERRORS.append('v1.224 support validator not explicitly superseded by v1.285')
  config=read('playwright.config.ts')
  if '"**/fe-support-real-ui-layout-v1224.spec.ts"' not in config: ERRORS.append('historical v1.224 support browser layout still active')
+ next_action=read('docs/execution/WEB-NEXT-ACTION.md')
+ project_state=read('docs/execution/WEB-PROJECT-STATE.md')
+ ledger=read('docs/execution/WEB-TASK-LEDGER.md')
+ report=read('docs/execution/LGO-WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-REPORT-v1.285.md')
+ if not project_state.startswith('Current phase: WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-v1.285 WEB_CLOSED'): ERRORS.append('WEB-PROJECT-STATE does not lead with v1.285 closure')
+ if 'WEB-OPT-09-SUPPORT-HELP-DISCOVERY-v1.286' not in next_action: ERRORS.append('WEB-NEXT-ACTION does not advance to WEB-OPT-09 v1.286')
+ if '| WEB-OPT-08-SUPPORT-ENTRY-HIERARCHY-v1.285 | WEB-OPT | WEB_CLOSED |' not in ledger: ERRORS.append('WEB-TASK-LEDGER does not record WEB-OPT-08 v1.285 closure')
+ for marker in ('dcbe319887d021b2ab864b2c2222e39ddcb96018','Mobile was `3,301px`; final is `2,548px`','Phase-A mobile regressions v1.279 + v1.278 + v1.281 `7/7`'):
+  if marker not in report: ERRORS.append('v1.285 report missing closure evidence: '+marker)
  if ERRORS:
   print('WEB OPT SUPPORT ENTRY HIERARCHY v1.285 VALIDATION FAIL')
   for e in ERRORS: print('- '+e)
