@@ -5,14 +5,18 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-RELEASE-VISUAL-REALIGNMENT-v1.273
+WEB-FE-RELEASE-TESTER-PACK-VISUAL-REALIGNMENT-v1.275
 
 Objective:
-Continue the owner-priority full-site visual remediation one page at a time. `/download/trust` v1.272 is closed by target-driven browser evidence; do not reopen it without a related regression. Defer the historical /news queue and move to the next release/service page-specific target.
+Continue the owner-priority full-site visual remediation one page at a time. `/release/readiness` v1.274 is closed by target-driven real-browser evidence and verified source delivery; do not reopen it without a related regression. The next single active page is `/release/tester-pack` using the registered Public Tester Pack detailed target v1.129 and the accepted shared public/release chrome.
 
-Current FE scope: select `/release` as the next single active page. Rebuild against the existing Release detailed target and truthful release-stage/evidence source data; complete `/release` fully before any other page, with real browser desktop/mobile evidence, before touching `/release/readiness`.
+Current FE scope: select `/release/tester-pack` as the next single active page. Capture fresh production BEFORE desktop/mobile, compare against the registered Tester Pack target, then RED→GREEN the real page body while preserving truthful local-only tester preparation controls and `NO_ACCEPTED_BACKEND_CONTRACT`. Complete `/release/tester-pack` fully before touching `/status`.
 
-Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile;16 have detailed page targets. Historical CLOSED/PASS does not prove visual fidelity. `/game` v1.266, `/story` v1.267, `/classes` v1.268, `/journey` v1.269, `/start` v1.270, `/download` v1.271 and `/download/trust` v1.272 are now closed by real target-driven replacements. Continue sequentially `/release` → `/release/readiness` → `/release/tester-pack` → `/status`, then support/community families. Do not use the old `/news` queue as current authority.
+Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile; 16 have detailed page targets. Historical CLOSED/PASS does not prove visual fidelity. `/game` v1.266, `/story` v1.267, `/classes` v1.268, `/journey` v1.269, `/start` v1.270, `/download` v1.271, `/download/trust` v1.272, `/release` v1.273 and `/release/readiness` v1.274 have now passed target-driven replacement/review. Continue sequentially `/release/tester-pack` → `/status`, then support/community families. Do not use the old `/news` queue as current authority.
+
+Release v1.273 checkpoint: `/release` source was accepted and delivered at `98eadfcfd59d07d224c6e8733e1d211c5408efd8` with focused14/14, selected dev74/74, production74/74 and build63. It is the accepted predecessor to v1.274 and must not be reopened without a related regression.
+
+Release Readiness v1.274 checkpoint: `/release/readiness` is closed at source commit `fed86b406e673243d0ebcb56442df8bb8005dbc0`. Focused12/12, active v1.22110/10, selected dev96/96 and production96/96 PASS; build63; production desktop/mobile AFTER reviewed without dev badge; clean archive current-state PASS. Latest report: LGO-WEB-FE-RELEASE-READINESS-VISUAL-REALIGNMENT-REPORT-v1.274.md. Next single page: `/release/tester-pack` v1.275.
 
 Mandatory execution rules:
 

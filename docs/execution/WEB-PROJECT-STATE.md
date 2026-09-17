@@ -1,3 +1,17 @@
+Current phase: WEB-FE-RELEASE-READINESS-VISUAL-REALIGNMENT-v1.274 WEB_CLOSED
+
+Current decision: `/release/readiness` now uses the accepted immersive public/release chrome with a cinematic two-art hero, live readiness console, four canonical owner gates, truthful tester preparation and the real Download/Status/Support routes. The duplicated historical readiness proof disclosure and old constrained page frame are superseded. Mobile owner gates use an internal horizontal rail; evidence remains reachable through native disclosures.
+
+Verified source delivery commit: `fed86b406e673243d0ebcb56442df8bb8005dbc0` on `origin/main`. Focused v1.274: 12/12 PASS; active v1.221 compatibility: 10/10 PASS; selected dev: 96/96 PASS; production: 96/96 PASS; production build: 63 static pages; UI/Web typecheck and lint PASS; canonical content 14/14 PASS; clean source-archive current-state PASS. Production desktop/mobile AFTER screenshots were visually reviewed with no dev badge.
+
+Accepted predecessor `/release` v1.273 source commit: `98eadfcfd59d07d224c6e8733e1d211c5408efd8`. Do not reopen v1.273 or v1.274 without a related regression.
+
+Next task: WEB-FE-RELEASE-TESTER-PACK-VISUAL-REALIGNMENT-v1.275 on `/release/tester-pack`. Do not touch `/status` until v1.275 is closed.
+
+Detailed report: LGO-WEB-FE-RELEASE-READINESS-VISUAL-REALIGNMENT-REPORT-v1.274.md.
+
+Historical state below is retained for provenance, not active visual authority.
+
 Current phase: WEB-FE-DOWNLOAD-TRUST-VISUAL-REALIGNMENT-v1.272 WEB_CLOSED
 
 Current decision: `/download/trust` is now a target-driven immersive trust landing. The live page uses the shared immersive shell, two provenance-locked decorative hero crops, the truthful `Không tải giả` promise, all six canonical `downloadTrustGates` in source order and three real reading routes. The historical generic hero, internal proof boards, evidence stack and secondary disclosure are superseded, not counted as current runtime PASS.

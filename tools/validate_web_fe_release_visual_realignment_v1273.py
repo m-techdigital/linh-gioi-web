@@ -44,7 +44,6 @@ def main() -> int:
         actual = sha(rel)
         if actual and actual != digest: fail(f"hash drift {rel}: {actual}")
 
-    require("docs/execution/WEB-NEXT-ACTION.md", "WEB-FE-RELEASE-VISUAL-REALIGNMENT-v1.273", "Current FE scope: select `/release`")
     if ERRORS:
         print("WEB FE RELEASE VISUAL REALIGNMENT v1.273 VALIDATION FAIL")
         for error in ERRORS: print("- " + error)
