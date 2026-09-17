@@ -5,14 +5,14 @@ Status: WEB_TASK_CONTINUE
 Owner delivery policy: commit and push are now explicitly authorized. Close each page with reviewed source/test/docs, verified origin/main HEAD, ZIP/SHA256 and browser evidence, then continue without asking for confirmation. No force-push or production deployment.
 
 Next task:
-WEB-FE-CLASSES-VISUAL-REALIGNMENT-v1.268
+WEB-FE-JOURNEY-VISUAL-REALIGNMENT-v1.269
 
 Objective:
-Continue the owner-priority full-site visual remediation one page at a time. `/story` v1.267 is closed by target-driven browser evidence; do not reopen it without a related regression. Defer the historical /news queue and move to the next page-specific target.
+Continue the owner-priority full-site visual remediation one page at a time. `/classes` v1.268 is closed by target-driven browser evidence; do not reopen it without a related regression. Defer the historical /news queue and move to the next page-specific target.
 
-Current FE scope: select `/classes` as the next single active page. Rebuild against the existing classes detailed target and canonical five-Lộ source data; complete `/classes` fully before any other page, with real browser desktop/mobile evidence, before touching `/journey`.
+Current FE scope: select `/journey` as the next single active page. Rebuild against the existing journey detailed target and canonical session/world-route source data; complete `/journey` fully before any other page, with real browser desktop/mobile evidence, before touching `/start`.
 
-Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile;16 have detailed page targets. Historical CLOSED/PASS does not prove visual fidelity. `/game` v1.266 and `/story` v1.267 are now closed by real target-driven replacements. Continue sequentially `/classes` → `/journey` → `/start`, then release/service and support/community families. Do not use the old `/news` queue as current authority.
+Full-site visual audit override (2026-09-17): 27 public routes were captured desktop/mobile;16 have detailed page targets. Historical CLOSED/PASS does not prove visual fidelity. `/game` v1.266, `/story` v1.267 and `/classes` v1.268 are now closed by real target-driven replacements. Continue sequentially `/journey` → `/start`, then release/service and support/community families. Do not use the old `/news` queue as current authority.
 
 Mandatory execution rules:
 
@@ -60,3 +60,6 @@ Homepage revision5 checkpoint: source-derived cyan header sigil, live target mot
 Homepage revision6 checkpoint: final target-density pass reduces immersive nav to six truthful target-rhythm routes and removes the redundant technical badge/prose from the hero while preserving the source brush logo, motto, CTAs, signals, discovery/news/footer and accessibility behavior. Fresh production156/156 after a real12px→14px motto readability fix. Keep the SAME `/` task for owner acceptance; packaging does not auto-advance. Latest report: LGO-WEB-FE-HOMEPAGE-FINAL-DENSITY-REPORT-v1.265-r6.md.
 
 Story v1.267 checkpoint: `/story` now uses the immersive public shell, source-derived target artwork, three-line desktop hero title with foreground character layer, truthful reading CTAs and a four-card chapter/event rhythm that stacks to one column on mobile. Fresh focused20/20 and production selected60/60 PASS; build63; provenance validator/typecheck/lint PASS. Historical story proof-board validators/tests are superseded, not runtime PASS. Latest report: LGO-WEB-FE-STORY-VISUAL-REALIGNMENT-REPORT-v1.267.md. Next single page: `/classes` v1.268.
+
+
+Classes v1.268 checkpoint: `/classes` now uses the immersive public shell, canonical five-Lộ source data, clean target-derived portraits, a live Năm Lộ wheel, five illustrated selectable identity cards and a read-only selected-path feature. Focused14/14, selected dev74/74 and production74/74 PASS; build63; source/provenance/current-state/typecheck/lint gates PASS. Historical classes proof/art/layout suites are superseded, not runtime PASS. Latest report: LGO-WEB-FE-CLASSES-VISUAL-REALIGNMENT-REPORT-v1.268.md. Next single page: `/journey` v1.269.

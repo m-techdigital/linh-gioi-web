@@ -1,3 +1,16 @@
+Current phase: WEB-FE-CLASSES-VISUAL-REALIGNMENT-v1.268 WEB_CLOSED
+
+Current decision: `/classes` is now a target-driven immersive five-Lộ landing. The live page uses the shared immersive shell, a cinematic Linh Thành hero with live Năm Lộ wheel, five canonical illustrated class choices sourced from `classPaths`, and one local/read-only selected-path feature using battle rhythm, signature verbs and world lens. The historical generic hero, proof cards and expanded ClassArtSpotlight disclosure are superseded, not counted as current runtime PASS.
+
+Verified source delivery commit: `00385ed64fe38140953580b5d3fce915a476323d` on `origin/main`. Focused classes: 14/14 PASS; selected dev regression: 74/74 PASS; fresh production selected regression: 74/74 PASS; production build: 63 static pages; UI/Web typecheck and lint PASS; clean source-archive current-state PASS. Production desktop/mobile screenshots and metrics were reviewed after real RED→GREEN corrections.
+
+Next task after final governance/archive delivery: WEB-FE-JOURNEY-VISUAL-REALIGNMENT-v1.269.
+Select `/journey` as the next single active page. Then `/start`, followed by release/service and support/community families from the full-site visual audit plan. Do not resume the historical `/news` queue.
+
+Detailed report: LGO-WEB-FE-CLASSES-VISUAL-REALIGNMENT-REPORT-v1.268.md.
+
+Historical state below is retained for provenance, not active visual authority.
+
 Current phase: WEB-FE-STORY-VISUAL-REALIGNMENT-v1.267 WEB_CLOSED
 
 Current decision: `/story` is now a target-driven immersive narrative landing. The live page uses source-derived story artwork, a three-line desktop hero title with foreground character layer, truthful reading actions, three canonical source chapters plus one clearly narrative event card, four-column desktop rhythm and one-column mobile flow. Historical proof-board/disclosure layouts are superseded, not counted as current runtime PASS.
