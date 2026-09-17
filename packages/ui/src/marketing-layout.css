@@ -94,3 +94,11 @@
  .lgo-public-shell-immersive .lgo-immersive-landing :is(a,summary):focus-visible { outline-color:Highlight; }
  .lgo-public-shell-immersive .lgo-immersive-hero,.lgo-illustrated-link,.lgo-landing-news-card { border:1px solid CanvasText; }
 }
+
+/* WEB-OPT-04: truthful homepage news empty state when no player-facing news exists. */
+.lgo-public-shell-immersive .lgo-home-news-empty { min-height:258px; display:grid; align-content:center; gap:10px; padding:22px; border:1px solid #2e4b62; border-radius:7px; background:linear-gradient(145deg,#0b1b2b,#07131f); }
+.lgo-public-shell-immersive .lgo-home-news-empty h3 { margin:0; color:#f3d7a0; font-size:21px; }
+.lgo-public-shell-immersive .lgo-home-news-empty p { margin:0; color:#bcd0e1; font-size:14px; line-height:1.55; }
+.lgo-public-shell-immersive .lgo-home-news-empty > div { display:flex; flex-wrap:wrap; gap:10px; margin-top:4px; }
+.lgo-public-shell-immersive .lgo-home-news-empty a { min-height:44px; display:inline-flex; align-items:center; padding:8px 12px; border:1px solid #3c6278; border-radius:4px; color:#91e8f0; text-decoration:none; }
+@media(max-width:600px) { .lgo-public-shell-immersive .lgo-home-news-empty { min-height:220px; padding:18px; } .lgo-public-shell-immersive .lgo-home-news-empty > div { display:grid; } }

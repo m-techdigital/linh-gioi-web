@@ -94,3 +94,9 @@
 .lgo-catalog-publication { display:flex; flex-wrap:wrap; gap:.3rem .6rem; color:var(--release-muted); font-size:.78rem; line-height:1.5; margin-top:.65rem; grid-column:1/-1; }
 .lgo-catalog-publication time { color:var(--lgo-color-parchment); }
 .lgo-reading-catalog-card:has(.lgo-catalog-publication) .lgo-catalog-summary p { font-size:max(.86rem,14px); }
+
+/* WEB-OPT-04: archived Web-program history stays available without dominating player news discovery. */
+.lgo-news-devlog-archive-body { padding:.35rem 0 1rem; }
+.lgo-news-devlog-archive-body > p { max-width:76ch; color:var(--release-muted); font-size:max(.86rem,14px); line-height:1.55; }
+.lgo-news-primary-empty-actions { grid-template-columns:repeat(3,minmax(0,1fr)); }
+@media(max-width:700px) { .lgo-news-primary-empty-actions { grid-template-columns:1fr; } }

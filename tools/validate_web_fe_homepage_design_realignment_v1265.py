@@ -12,7 +12,7 @@ def main():
   for n in needles:
    if n not in s:errors.append(name+' missing '+n)
  check('apps/web/src/app/page.tsx',['PublicHomeLanding','variant="immersive"','marketing-layout.css'])
- check('apps/web/src/components/PublicHomeLanding.tsx',['<ExperienceHero','motto="KIẾP NÀY, THẾ GIỚI RỘNG LỚN HƠN BẠN NGHĨ"','<IllustratedLink','<MediaMosaic','localContentRepository.list("news")','entry.publishedAt','entry.summary','/game','/classes','/story'])
+ check('apps/web/src/components/PublicHomeLanding.tsx',['<ExperienceHero','motto="KIẾP NÀY, THẾ GIỚI RỘNG LỚN HƠN BẠN NGHĨ"','<IllustratedLink','<MediaMosaic','playerNewsEntries()','entry.publishedAt','entry.summary','/game','/classes','/story'])
  check('apps/web/src/components/PublicSiteShell.tsx',['lgo-public-shell-immersive','<PublicNavigation/>','<MarketingFooter'])
  check('packages/ui/src/public-chrome.css',['.lgo-public-shell .lgo-site-header','.lgo-nav-sigil-art'])
  check('packages/ui/src/marketing-layout.css',['.lgo-immersive-art','position:absolute','grid-template-columns:repeat(3','min-height:44px','forced-colors','prefers-reduced-motion'])

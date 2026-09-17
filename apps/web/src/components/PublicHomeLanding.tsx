@@ -1,4 +1,4 @@
-import { localContentRepository } from "@lgo-web/content";
+import { playerNewsEntries } from "@lgo-web/content";
 import { ArtWordmark, EditorialPreviewCard, ExperienceHero, IllustratedLink, MediaMosaic, ReleaseIcon } from "@lgo-web/ui";
 
 const art = (id: string, width: number, height: number, format: "png" | "webp" = "png") => ({ src: `/game-art/marketing/${id}.${format}`, width, height });
@@ -17,7 +17,7 @@ const date = new Intl.DateTimeFormat("vi-VN", { day:"2-digit",month:"2-digit",ye
 const newsArt = [art("news-event",242,91),art("news-update",244,91),art("news-community",244,91)] as const;
 
 export function PublicHomeLanding() {
-  const news = localContentRepository.list("news").slice(0,3);
+  const news = playerNewsEntries().slice(0,3);
   return <div className="lgo-immersive-landing">
     <ExperienceHero className="lgo-immersive-hero" copyClassName="lgo-immersive-copy"
       title={<ArtWordmark src="/game-art/marketing/wordmark-brush.png" width={422} height={169} label="Linh Giới Online" fallback={<><span>Linh Giới</span><small>ONLINE</small></>}/>}
@@ -40,9 +40,11 @@ export function PublicHomeLanding() {
         </section>
         <section id="home-news" aria-labelledby="home-news-heading">
           <div className="lgo-landing-heading"><h2 id="home-news-heading"><ReleaseIcon name="document"/>Bản tin Linh Giới</h2><a href="/news">Xem tất cả <span aria-hidden="true">→</span></a></div>
-          <div className="lgo-landing-news-grid">{news.map((entry,index)=><EditorialPreviewCard key={entry.slug}
+          {news.length > 0 ? <div className="lgo-landing-news-grid">{news.map((entry,index)=><EditorialPreviewCard key={entry.slug}
             title={entry.title} href={`/news/${entry.slug}`} dateTime={entry.publishedAt} dateLabel={date.format(new Date(entry.publishedAt))}
-            category="Nhật ký web" summary={entry.summary} image={newsArt[index]!}/>)}</div>
+            category="Bản tin" summary={entry.summary} image={newsArt[index]!}/>)}</div> :
+            <div className="lgo-home-news-empty"><h3>Chưa có bản tin game mới</h3><p>Nhật ký phát triển web vẫn được lưu riêng để tham khảo, không dùng làm tin chính cho người chơi.</p>
+              <div><a href="/news">Xem kho bản tin</a><a href="/status">Trạng thái chơi</a></div></div>}
         </section>
       </div>
     </div>

@@ -77,6 +77,7 @@ def finish(name: str) -> int:
 import runpy
 
 VALIDATORS = [
+    "validate_web_opt_public_ia_language_v1281.py",
     "validate_web_opt_public_asset_boundary_v1280.py",
     "validate_web_opt_interaction_hit_area_v1279.py",
     "validate_web_opt_public_css_ownership_v1278.py",
@@ -410,6 +411,7 @@ SUPERSEDED_LAYOUT_VALIDATORS = {
     "validate_web_fe_news_visual_responsive_real_ui_layout_v1179.py": "validate_web_fe_visual_responsive_article_v1256.py",
     "validate_web_fe_news_public_ux_real_ui_layout_v1178.py": "validate_web_fe_public_ux_article_v1255.py",
     "validate_web_fe_news_control_tower_real_ui_layout_v1177.py": "validate_web_fe_control_tower_article_v1254.py",
+    "validate_web_fe_news_discovery_v1253.py": "validate_web_opt_public_ia_language_v1281.py",
     "validate_web_fe_news_real_ui_layout_v1176.py": "validate_web_fe_news_discovery_v1253.py",
     "validate_web_fe_patch_notes_real_ui_layout_v1199.py": "validate_web_fe_patch_notes_journal_v1252.py",
     "validate_web_fe_patch_notes_real_ui_layout_v1175.py": "validate_web_fe_patch_notes_journal_v1252.py",

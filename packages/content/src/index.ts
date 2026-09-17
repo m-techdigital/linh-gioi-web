@@ -78,6 +78,21 @@ export {
   homeDiscoveryMoments
 } from "./fixtures";
 export { LocalContentRepository, localContentRepository } from "./repository";
+export {
+  archiveNewsEntries,
+  currentNewsPolicy,
+  playerNewsEntries,
+  publicLanguageContract,
+  publicRouteMatrix,
+  routePolicy
+} from "./public-ia";
+export type {
+  PublicDiscovery,
+  PublicIndexability,
+  PublicLanguageProfile,
+  PublicRouteOwner,
+  PublicRoutePolicy
+} from "./public-ia";
 export { assertContentFixturesValid, findDuplicateSlugs, findInvalidDates, findInvalidSlugs } from "./validation";
 export type {
   CommunityPrinciple,
