@@ -62,19 +62,45 @@
  .lgo-article-cover img { height:190px; }
 }
 @media(max-width:600px) {
- .lgo-release-layout .lgo-guide-article-hero { padding:1.2rem; }
- .lgo-release-layout .lgo-guide-article-hero h1 { font-size:2.15rem; }
- .lgo-article-cover { display:block; }
- .lgo-article-cover img { height:135px; }
- .lgo-article-cover figcaption { padding:.85rem; }
- .lgo-article-cover strong { font-size:1.2rem; }
- .lgo-article-contents ol { grid-template-columns:1fr; }
- .lgo-guide-article-section { padding:1.15rem; }
- .lgo-article-section-marker { width:2.5rem; height:2.5rem; font-size:1.2rem; }
- .lgo-article-section-navigation { gap:.45rem; }
- .lgo-article-section-navigation a > span { font-size:.75rem; }
+ /* WEB-OPT-07 mobile editorial density: keep every authored/truth block visible while shortening the reading rail. */
+ .lgo-guide-article-root { gap:.9rem; }
+ .lgo-guide-article-layout { gap:.85rem; }
+ .lgo-release-layout .lgo-guide-article-hero { gap:.9rem; padding:.85rem 1rem; }
+ .lgo-release-layout .lgo-guide-article-hero h1 { font-size:1.9rem; line-height:1.12; }
+ .lgo-article-hero-boundary { gap:.5rem; font-size:.8rem; line-height:1.5; }
+ .lgo-guide-article-hero .lgo-performance-priority-console { padding:1rem .2rem .2rem; }
+ .lgo-guide-article-hero .lgo-performance-priority-console ol { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .lgo-guide-article-hero .lgo-performance-priority-console li { min-width:0; padding:.5rem .35rem; border-top:0; border-bottom:1px solid color-mix(in srgb,var(--lgo-color-text-muted) 18%,transparent); }
+ .lgo-guide-article-hero .lgo-performance-priority-console li > a { min-height:44px; padding:.4rem .25rem; }
+ .lgo-guide-article-hero .lgo-performance-priority-console li span { min-width:1.4rem; }
+ .lgo-article-cover { display:grid; grid-template-columns:112px minmax(0,1fr); align-items:stretch; }
+ .lgo-article-cover img { height:100%; min-height:112px; }
+ .lgo-article-cover figcaption { gap:.3rem; padding:.65rem .7rem; text-align:left; }
+ .lgo-article-cover strong { font-size:1.08rem; }
+ .lgo-article-cover small { line-height:1.4; }
+ .lgo-article-contents { padding:.75rem; }
+ .lgo-article-contents ol { grid-template-columns:repeat(2,minmax(0,1fr)); gap:.25rem; margin-top:.45rem; }
+ .lgo-article-contents nav a { min-height:44px; gap:.45rem; padding:.4rem; }
+ .lgo-article-contents nav a > span { font-size:1rem; }
+ .lgo-article-contents nav strong { font-size:.76rem; line-height:1.35; }
+ .lgo-release-layout .lgo-article-contents > p { margin-top:.55rem; padding-top:.55rem; line-height:1.5; }
+ .lgo-guide-article-body { gap:.8rem; }
+ .lgo-guide-article-intro { padding:.5rem 0 .5rem .75rem; }
+ .lgo-guide-article-intro p { margin-top:.3rem; line-height:1.6; }
+ .lgo-guide-article-section { padding:.9rem 1rem; }
+ .lgo-guide-article-section > header { gap:.7rem; padding-bottom:.65rem; }
+ .lgo-article-section-marker { width:2.15rem; height:2.15rem; border-width:2px; font-size:1.05rem; }
+ .lgo-release-layout .lgo-guide-article-section h2 { margin-top:.2rem; font-size:1.35rem; line-height:1.22; }
+ .lgo-article-section-copy { gap:.7rem; margin-top:.7rem; }
+ .lgo-release-layout .lgo-article-section-copy p { line-height:1.62; }
+ .lgo-article-outcome { padding-left:.65rem; }
+ .lgo-article-boundary { padding:.55rem .65rem; }
+ .lgo-release-layout .lgo-article-boundary p { line-height:1.55; }
+ .lgo-article-section-navigation { gap:.35rem; margin-top:.8rem; padding-top:.65rem; }
+ .lgo-article-section-navigation a { line-height:1.35; }
+ .lgo-article-section-navigation a > span { font-size:.75rem; line-height:1.35; }
  .lgo-article-section-navigation .lgo-article-return { font-size:.75rem; padding:.3rem; }
- .lgo-article-related { grid-template-columns:1fr; padding:1.2rem; gap:.5rem; }
+ .lgo-article-related { grid-template-columns:1fr; padding:.9rem 1rem; gap:.35rem; }
  .lgo-guide-article-section, .lgo-article-contents { scroll-margin-top:8rem; }
 }
 @media(forced-colors:active) { .lgo-guide-article-section:target, .lgo-guide-article-section:focus-visible, .lgo-article-section-navigation a:focus-visible, .lgo-guide-article-section .lgo-link-button:focus-visible { outline-color:Highlight; } }
@@ -90,7 +116,10 @@
 /* Optional chapter reading choices. Native links, never selected or saved preferences. */
 .lgo-guide-chapter-actions { display:flex; flex-wrap:wrap; gap:.65rem; min-width:0; }
 .lgo-guide-chapter-actions > .lgo-link-button { gap:.7rem; }
-@media(max-width:600px) { .lgo-guide-chapter-actions > .lgo-link-button { width:100%; } }
+@media(max-width:600px) {
+ .lgo-guide-chapter-actions { flex-wrap:nowrap; overflow-x:auto; scroll-snap-type:x proximity; overscroll-behavior-inline:contain; padding-bottom:.2rem; }
+ .lgo-guide-chapter-actions > .lgo-link-button { flex:0 0 auto; width:auto; max-width:86%; scroll-snap-align:start; }
+}
 
 /* Opt-in editorial articles: readable source boundaries and reduced-motion anchor travel. */
 .lgo-editorial-article .lgo-article-boundary p { font-size:max(.83rem,14px); }

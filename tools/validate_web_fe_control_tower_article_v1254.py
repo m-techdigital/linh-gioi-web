@@ -27,7 +27,11 @@ def main()->int:
    if marker in text:ERRORS.append(f'{owner}: unexpected intake/operation {marker}')
  require('packages/ui/src/article-fragment-restoration.tsx',('targetIds.includes(targetId)','target.focus({ preventScroll: true })','behavior: "instant"'))
  css=require('packages/ui/src/guide-article.css',('.lgo-editorial-article .lgo-article-boundary p { font-size:max(.83rem,14px); }','html:has(.lgo-editorial-article) { scroll-behavior:auto; }','prefers-reduced-motion:reduce'))
- css+=require('packages/ui/src/guidance-layout.css',('.lgo-guidance-article-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }','@media(max-width:900px) { .lgo-guidance-article-grid { grid-template-columns:1fr; } }'))
+ guidance_css=require('packages/ui/src/guidance-layout.css',('.lgo-guidance-article-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }',))
+ mobile_stack='@media(max-width:900px) { .lgo-guidance-article-grid { grid-template-columns:1fr; } }'
+ mobile_rail=('WEB-OPT-07 related-reading rail','grid-auto-flow:column','overflow-x:auto','scroll-snap-type:x proximity')
+ if mobile_stack not in guidance_css and not all(marker in guidance_css for marker in mobile_rail):ERRORS.append('guidance layout missing supported mobile article reading pattern')
+ css+=guidance_css
  tokens=set(re.findall(r'(--lgo-[\w-]+)\s*:',require('packages/design-tokens/src/tokens.css')))
  for token in sorted(set(re.findall(r'var\((--lgo-[\w-]+)',css))-tokens):ERRORS.append('undefined token '+token)
  require('apps/web/src/components/PublicDesignTargetReference.tsx',('pathname === "/news/web-program-control-tower"','Bố cục bài viết nền tảng web'))
