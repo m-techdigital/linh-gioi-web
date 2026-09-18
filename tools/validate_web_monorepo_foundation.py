@@ -92,10 +92,10 @@ def main() -> int:
         if api_dir.exists():
             fail(f"app/api route present in WEB-01: {api_dir.relative_to(ROOT)}")
 
-    require_text("apps/portal/src/app/page.tsx", "Player Portal is blocked until accepted Auth/DB/API contract")
-    require_text("apps/portal/src/app/page.tsx", "No production auth is claimed")
-    require_text("apps/ops/src/app/page.tsx", "Ops/Admin is blocked until accepted RBAC/audit/security/API contract")
-    require_text("apps/ops/src/app/page.tsx", "No real ops/admin mutation is claimed")
+    require_text("apps/portal/src/app/page.tsx", "PROVISIONAL_WEB_FIXTURE")
+    require_text("apps/portal/src/app/page.tsx", "NOT_CANONICAL_BACKEND_CONTRACT")
+    require_text("apps/ops/src/app/page.tsx", "NO_REAL_OPS_MUTATION")
+    require_text("apps/ops/src/app/page.tsx", "NOT_CANONICAL_BACKEND_CONTRACT")
     require_text("packages/api-client/src/index.ts", "NO_ACCEPTED_BACKEND_CONTRACT")
     require_text("packages/contracts/README.md", "No production web API contract accepted yet")
 

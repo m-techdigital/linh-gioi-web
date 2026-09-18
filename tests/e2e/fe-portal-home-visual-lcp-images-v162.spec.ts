@@ -1,4 +1,4 @@
-// v1.62 coverage: Portal home above-fold visual panels make all LCP-eligible images eager.
+// v1.62 migrated coverage: Portal home secondary visual panels remain loaded/readable without competing with primary player data.
 import { test, expect, type Page } from "@playwright/test";
 
 const portal = process.env.LGO_PORTAL_URL ?? "http://127.0.0.1:3001";
@@ -38,7 +38,7 @@ async function collectImageMetrics(page: Page): Promise<ImageMetrics> {
 }
 
 test.describe("Portal home visual LCP images", () => {
-  test("above-fold visual panel images are eager on desktop and mobile", async ({ page }) => {
+  test("secondary visual panel images stay lazy and readable on desktop and mobile", async ({ page }) => {
     await page.goto(`${portal}/`);
     await expect(page.getByRole("heading", { name: "Tổng quan người chơi" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Tổng quan hình ảnh hành trình" })).toBeVisible();
@@ -47,14 +47,14 @@ test.describe("Portal home visual LCP images", () => {
     const vo = page.getByAltText("Portal home development art Võ");
     await expect(world).toBeVisible();
     await expect(vo).toBeVisible();
-    await expect(world).toHaveAttribute("loading", "eager");
-    await expect(vo).toHaveAttribute("loading", "eager");
+    await expect(world).toHaveAttribute("loading", "lazy");
+    await expect(vo).toHaveAttribute("loading", "lazy");
 
     const metrics = await collectImageMetrics(page);
     expect(metrics.pageOverflow, "Portal home page overflow").toBeLessThanOrEqual(0);
     expect(metrics.images, "Portal home visual image count").toHaveLength(2);
     for (const image of metrics.images) {
-      expect(image.loading, `${image.alt} loading`).toBe("eager");
+      expect(image.loading, `${image.alt} loading`).toBe("lazy");
       expect(image.complete, `${image.alt} complete`).toBe(true);
       expect(image.naturalWidth, `${image.alt} natural width`).toBeGreaterThan(0);
       for (const size of image.fontSizes) expect(size, `${image.alt} copy font-size`).toBeLessThanOrEqual(42);

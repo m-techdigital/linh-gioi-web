@@ -1,4 +1,4 @@
-// v1.51 coverage: Portal home WORLD_CONCEPT image eager loading, typography and overflow.
+// v1.51 migrated coverage: Portal home secondary WORLD_CONCEPT loading, hierarchy, typography and overflow.
 import { test, expect } from "@playwright/test";
 
 const portal = process.env.LGO_PORTAL_URL ?? "http://127.0.0.1:3001";
@@ -8,6 +8,7 @@ type Metrics = {
   naturalWidth: number;
   loading: string | null;
   top: number;
+  primaryBottom: number;
   width: number;
   height: number;
   overflow: number;
@@ -20,12 +21,14 @@ async function collectMetrics(page: import("@playwright/test").Page): Promise<Me
     const image = document.querySelector<HTMLImageElement>('img[alt="Portal home Đông Môn world concept"]');
     if (!image) throw new Error("missing Portal home world image");
     const rect = image.getBoundingClientRect();
+    const primary = document.querySelector<HTMLElement>(".lgo-portal-overview-grid")?.getBoundingClientRect();
     const h1 = document.querySelector("h1");
     return {
       complete: image.complete,
       naturalWidth: image.naturalWidth,
       loading: image.getAttribute("loading"),
       top: rect.top,
+      primaryBottom: primary?.bottom ?? Number.NEGATIVE_INFINITY,
       width: rect.width,
       height: rect.height,
       overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -35,18 +38,18 @@ async function collectMetrics(page: import("@playwright/test").Page): Promise<Me
   });
 }
 
-test.describe("Portal home LCP image loading", () => {
-  test("home world visual uses eager loading without layout overflow", async ({ page, isMobile }) => {
+test.describe("Portal home secondary world image loading", () => {
+  test("home world visual stays secondary and lazy without layout overflow", async ({ page, isMobile }) => {
     await page.goto(`${portal}/`);
     await expect(page.getByRole("heading", { name: "Tổng quan người chơi", exact: true })).toBeVisible();
     const image = page.getByRole("img", { name: "Portal home Đông Môn world concept" });
     await expect(image).toBeVisible();
-    await expect(image, "Portal home WORLD_CONCEPT visual should be eager for reviewed route").toHaveAttribute("loading", "eager");
+    await expect(image, "Secondary WORLD_CONCEPT visual should not compete with primary player data loading").toHaveAttribute("loading", "lazy");
 
     const metrics = await collectMetrics(page);
     expect(metrics.complete, "image decode/load state").toBe(true);
     expect(metrics.naturalWidth, "image natural width").toBeGreaterThan(0);
-    expect(metrics.top, "image should remain in route composition without large layout drift").toBeLessThan(isMobile ? 1300 : 900);
+    expect(metrics.top, "secondary art must render after the account/character journey").toBeGreaterThan(metrics.primaryBottom);
     expect(metrics.width, "image rendered width").toBeGreaterThan(120);
     expect(metrics.height, "image rendered height").toBeGreaterThan(80);
     expect(metrics.overflow, "horizontal overflow").toBeLessThanOrEqual(0);

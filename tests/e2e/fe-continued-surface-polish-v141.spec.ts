@@ -99,3 +99,77 @@ test("ops home renders operational visual map without mutation controls", async 
   }
   await expectNoWritesOrMutationControls(page, writes);
 });
+
+
+test("portal real-data-ready visual prototype prioritizes task/account/character hierarchy without opening writes", async ({ page }) => {
+  const writes: string[] = [];
+  page.on("request", (request) => {
+    if (!["GET", "HEAD"].includes(request.method())) writes.push(`${request.method()} ${request.url()}`);
+  });
+
+  await page.goto(`${portal}/login`);
+  const authTask = page.locator(".lgo-portal-auth-task");
+  const accessJourney = page.locator(".lgo-access-journey");
+  await expect(authTask).toBeVisible();
+  await expect(accessJourney).toBeVisible();
+  const loginOrder = await page.evaluate(() => {
+    const task = document.querySelector(".lgo-portal-auth-task")?.getBoundingClientRect();
+    const journey = document.querySelector(".lgo-access-journey")?.getBoundingClientRect();
+    return {
+      taskTop: task?.top ?? Number.POSITIVE_INFINITY,
+      journeyTop: journey?.top ?? Number.NEGATIVE_INFINITY,
+      overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth
+    };
+  });
+  expect(loginOrder.taskTop, "login task must precede world-context journey").toBeLessThan(loginOrder.journeyTop);
+  expect(loginOrder.overflow, "login horizontal overflow").toBeLessThanOrEqual(0);
+  await expect(page.locator("main form")).toHaveCount(0);
+
+  await page.goto(`${portal}/`);
+  await expect(page.locator(".lgo-portal-overview-grid")).toBeVisible();
+  const homeOrder = await page.evaluate(() => {
+    const core = document.querySelector(".lgo-portal-overview-grid")?.getBoundingClientRect();
+    const art = document.querySelector('[aria-label="Portal home visual panels"]')?.getBoundingClientRect();
+    return {
+      coreTop: core?.top ?? Number.POSITIVE_INFINITY,
+      artTop: art?.top ?? Number.NEGATIVE_INFINITY,
+      overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth
+    };
+  });
+  expect(homeOrder.coreTop, "account/character journey must precede decorative art").toBeLessThan(homeOrder.artTop);
+  expect(homeOrder.overflow, "home horizontal overflow").toBeLessThanOrEqual(0);
+
+  await page.goto(`${portal}/account`);
+  await expect(page.getByRole("heading", { name: "Thông tin nhận diện" })).toBeVisible();
+  await expect(page.getByText("Chưa kết nối email production", { exact: true })).toHaveCount(0);
+  await expect(page.getByText("Fixture only", { exact: true })).toHaveCount(0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(0);
+
+  await page.goto(`${portal}/characters`);
+  const roster = page.getByRole("list", { name: "Character slot roster" });
+  await expect(roster.getByRole("listitem")).toHaveCount(3);
+  await expect(page.getByText("Chưa có nhân vật", { exact: true })).toBeVisible();
+  for (const unsupported of ["Lv. 18 · illustrative", "Lv. 12 · illustrative", "Ready fixture", "Resting fixture", "Hôm nay · illustrative", "Hôm qua · illustrative"]) {
+    await expect(page.getByText(unsupported, { exact: true })).toHaveCount(0);
+  }
+  await expect(page.getByText("NOT_CANONICAL_BACKEND_CONTRACT", { exact: true })).toBeVisible();
+  const characterMetrics = await page.evaluate(() => {
+    const rail = document.querySelector<HTMLElement>(".lgo-portal-character-grid");
+    return {
+      viewport: innerWidth,
+      pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      railClientWidth: rail?.clientWidth ?? 0,
+      railScrollWidth: rail?.scrollWidth ?? 0
+    };
+  });
+  expect(characterMetrics.pageOverflow).toBeLessThanOrEqual(0);
+  if (characterMetrics.viewport <= 760) {
+    expect(characterMetrics.railScrollWidth, "mobile character slots should use an internal rail instead of a taller page stack")
+      .toBeGreaterThan(characterMetrics.railClientWidth);
+  } else {
+    expect(characterMetrics.railScrollWidth, "desktop/tablet roster should fit its three-column composition")
+      .toBeLessThanOrEqual(characterMetrics.railClientWidth + 1);
+  }
+
+  expect(writes, "visual prototype must remain GET/HEAD-only").toEqual([]);
+});

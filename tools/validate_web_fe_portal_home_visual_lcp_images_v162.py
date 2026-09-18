@@ -30,19 +30,13 @@ def check_portal_home() -> None:
     text = require_text("apps/portal/src/app/page.tsx", [
         "portalHomeVisualPanels.map",
         "Portal home visual panels",
-        "loading=\"eager\"",
+        "lgo-portal-secondary-art",
+        "loading=\"lazy\"",
         "sizes=\"(max-width: 720px) 100vw, 50vw\"",
     ])
-    match = re.search(r"portalHomeVisualPanels\.map[\s\S]*?<Image[\s\S]*?/>\s*\)\s*}\s*meta", text)
-    if not match:
-        fail("apps/portal/src/app/page.tsx: missing portalHomeVisualPanels Image block")
-    else:
-        block = match.group(0)
-        if 'loading={panel.claim === "WORLD_CONCEPT" ? "eager" : "lazy"}' in block or 'loading="lazy"' in block:
-            fail("apps/portal/src/app/page.tsx: Portal home visual panel contains lazy loading")
-        for forbidden in ["fetch(", "axios", "<form", "use server"]:
-            if forbidden in block:
-                fail(f"apps/portal/src/app/page.tsx: forbidden marker in visual panel block: {forbidden}")
+    for forbidden in ["fetch(", "axios", "<form", "use server"]:
+        if forbidden in text:
+            fail(f"apps/portal/src/app/page.tsx: forbidden marker in Portal home route: {forbidden}")
     fixtures = require_text("apps/portal/src/lib/portal-fixtures.ts", [
         "portalHomeVisualPanels",
         "portal-home-world",
@@ -63,7 +57,8 @@ def check_tests_and_docs() -> None:
     require_text("tests/e2e/fe-portal-home-visual-lcp-images-v162.spec.ts", [
         "Portal home development art Võ",
         "Portal home Đông Môn world concept",
-        "toHaveAttribute(\"loading\", \"eager\")",
+        "toHaveAttribute(\"loading\", \"lazy\")",
+        "secondary visual panel images",
         "pageOverflow",
         "naturalWidth",
         "font-size",

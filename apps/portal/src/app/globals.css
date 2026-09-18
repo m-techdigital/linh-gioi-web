@@ -55,3 +55,246 @@ p { color: var(--lgo-color-text-muted); line-height: 1.7; }
     padding: var(--lgo-space-md);
   }
 }
+
+
+/* PWEB-VIS-01: Portal-owned real-data-ready composition. Shared primitives/tokens remain authoritative. */
+.lgo-portal-task-card,
+.lgo-portal-identity-card,
+.lgo-portal-account-primary,
+.lgo-portal-account-capabilities,
+.lgo-portal-character-roster,
+.lgo-portal-character-detail-primary {
+  display: grid;
+  gap: var(--lgo-space-lg);
+  min-width: 0;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid rgba(49, 216, 232, .18);
+  border-radius: var(--lgo-radius-xl);
+  background:
+    radial-gradient(circle at top left, rgba(49, 216, 232, .09), transparent 19rem),
+    rgba(10, 24, 42, .72);
+  box-shadow: var(--lgo-shadow-panel);
+}
+
+.lgo-portal-task-card-heading,
+.lgo-portal-roster-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--lgo-space-lg);
+}
+
+.lgo-portal-task-card-heading h2,
+.lgo-portal-roster-heading h2,
+.lgo-portal-section-intro h2,
+.lgo-portal-identity-card h2 {
+  margin: .25rem 0 0;
+}
+
+.lgo-portal-task-card-heading p,
+.lgo-portal-roster-heading p,
+.lgo-portal-section-intro p,
+.lgo-portal-identity-card p {
+  margin-bottom: 0;
+}
+
+.lgo-portal-task-lead {
+  max-width: 68ch;
+  margin: 0;
+}
+
+.lgo-portal-auth-task {
+  gap: var(--lgo-space-md);
+  border-color: rgba(245, 200, 107, .28);
+  background:
+    radial-gradient(circle at top right, rgba(245, 200, 107, .10), transparent 17rem),
+    linear-gradient(135deg, rgba(49, 216, 232, .06), rgba(10, 24, 42, .78));
+}
+
+.lgo-portal-auth-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--lgo-space-md);
+}
+
+.lgo-portal-secondary-context,
+.lgo-portal-secondary-art {
+  display: grid;
+  gap: var(--lgo-space-md);
+}
+
+.lgo-portal-section-intro {
+  max-width: 72ch;
+}
+
+.lgo-portal-section-intro > :first-child {
+  margin-top: 0;
+}
+
+.lgo-portal-section-intro > :last-child {
+  margin-bottom: 0;
+}
+
+.lgo-portal-overview-grid {
+  display: grid;
+  grid-template-columns: minmax(16rem, .78fr) minmax(0, 1.22fr);
+  gap: var(--lgo-space-lg);
+  align-items: stretch;
+}
+
+.lgo-portal-identity-card {
+  align-content: start;
+  border-color: rgba(245, 200, 107, .26);
+}
+
+.lgo-portal-slot-summary {
+  display: grid;
+  gap: .35rem;
+  margin-top: auto;
+  padding-top: var(--lgo-space-md);
+  border-top: 1px solid rgba(49, 216, 232, .13);
+}
+
+.lgo-portal-slot-summary strong {
+  color: var(--lgo-color-text-primary);
+}
+
+.lgo-portal-slot-summary span {
+  color: var(--lgo-color-text-muted);
+  font-size: .9rem;
+}
+
+.lgo-portal-secondary-art {
+  opacity: .94;
+}
+
+.lgo-portal-account-primary {
+  border-color: rgba(49, 216, 232, .24);
+}
+
+.lgo-portal-account-capabilities {
+  background: rgba(7, 17, 31, .72);
+}
+
+.lgo-portal-character-roster {
+  gap: var(--lgo-space-md);
+}
+
+.lgo-portal-character-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--lgo-space-md);
+}
+
+.lgo-portal-character-card {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: var(--lgo-space-md);
+  min-width: 0;
+  min-height: 22rem;
+  padding: var(--lgo-space-md);
+  border: 1px solid rgba(49, 216, 232, .18);
+  border-radius: var(--lgo-radius-xl);
+  background:
+    linear-gradient(180deg, rgba(49, 216, 232, .07), rgba(6, 16, 29, .74)),
+    rgba(10, 24, 42, .72);
+}
+
+.lgo-portal-character-card-empty {
+  border-style: dashed;
+  background: rgba(7, 17, 31, .58);
+}
+
+.lgo-portal-character-slot-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--lgo-space-sm);
+  color: var(--lgo-color-text-muted);
+  font-size: .84rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.lgo-portal-character-sigil {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 10;
+  border: 1px solid rgba(245, 200, 107, .22);
+  border-radius: var(--lgo-radius-lg);
+  background:
+    radial-gradient(circle at 50% 42%, rgba(49, 216, 232, .22), transparent 42%),
+    linear-gradient(145deg, rgba(122, 75, 217, .20), rgba(7, 17, 31, .86));
+  color: var(--lgo-color-warm-gold);
+  font-family: var(--lgo-font-display);
+  font-size: clamp(1.45rem, 3vw, 2.15rem);
+  font-weight: 800;
+}
+
+.lgo-portal-character-card-empty .lgo-portal-character-sigil {
+  color: var(--lgo-color-text-muted);
+  border-style: dashed;
+}
+
+.lgo-portal-character-copy {
+  display: grid;
+  gap: .45rem;
+  align-content: start;
+}
+
+.lgo-portal-character-copy h3,
+.lgo-portal-character-copy p,
+.lgo-portal-character-copy small {
+  margin: 0;
+}
+
+.lgo-portal-character-copy small {
+  color: var(--lgo-color-text-muted);
+  line-height: 1.5;
+}
+
+.lgo-portal-capability-note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--lgo-space-md);
+  padding: var(--lgo-space-md);
+  border: 1px solid rgba(122, 75, 217, .32);
+  border-radius: var(--lgo-radius-lg);
+  background: rgba(122, 75, 217, .07);
+}
+
+.lgo-portal-capability-note strong {
+  color: var(--lgo-color-text-primary);
+}
+
+.lgo-portal-capability-note p {
+  margin: .3rem 0 0;
+}
+
+@media (max-width: 760px) {
+  .lgo-portal-task-card-heading,
+  .lgo-portal-roster-heading,
+  .lgo-portal-capability-note {
+    flex-direction: column;
+  }
+
+  .lgo-portal-auth-fields,
+  .lgo-portal-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lgo-portal-character-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(82%, 1fr);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: var(--lgo-space-sm);
+  }
+
+  .lgo-portal-character-card {
+    min-height: 0;
+    scroll-snap-align: start;
+  }
+}

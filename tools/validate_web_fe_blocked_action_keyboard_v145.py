@@ -54,7 +54,7 @@ def check_portal_routes() -> None:
             "BlockedActionButton",
             label,
             "NO_ACCEPTED_BACKEND_CONTRACT",
-            "No production auth",
+            "PROVISIONAL_WEB_FIXTURE",
         ])
         if "<SpiritButton type=\"button\" disabled" in text:
             fail(f"{rel}: still uses native disabled SpiritButton for blocked action")

@@ -68,7 +68,7 @@ def main() -> int:
 
     require(portal_home, "PROVISIONAL_WEB_FIXTURE")
     require(portal_home, "NOT_CANONICAL_BACKEND_CONTRACT")
-    require(portal_home, "Player Portal is blocked until accepted Auth/DB/API contract")
+    require(portal_home, "NO_ACCEPTED_BACKEND_CONTRACT")
     require(ops_home, "NO_REAL_OPS_MUTATION")
     require(ops_home, "NOT_CANONICAL_BACKEND_CONTRACT")
     require(ops_home, "Ops/Admin is blocked until accepted RBAC/audit/security/API contract")

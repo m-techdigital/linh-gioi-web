@@ -46,7 +46,8 @@ def main():
         require(rel, 'disabled')
         forbid(rel, '<input')
         forbid(rel, '<form')
-    require('apps/portal/src/app/login/page.tsx', 'No production auth is claimed')
+    require('apps/portal/src/app/login/page.tsx', 'NOT_CANONICAL_BACKEND_CONTRACT')
+    require('apps/portal/src/app/login/page.tsx', 'NO_ACCEPTED_BACKEND_CONTRACT')
 
     ops_pages=('apps/ops/src/app/security-governance/page.tsx','apps/ops/src/app/audit/page.tsx')
     for rel in ops_pages:

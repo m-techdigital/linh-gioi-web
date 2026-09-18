@@ -31,11 +31,13 @@ def check_portal_home_route() -> None:
     text = require_text(rel, [
         "portalHomeVisualPanels",
         "Image",
-        "loading=\"eager\"",
+        "loading=\"lazy\"",
+        "lgo-portal-overview-grid",
+        "lgo-portal-secondary-art",
         "NO_ACCEPTED_BACKEND_CONTRACT",
     ])
     if "priority" in text:
-        fail(f"{rel}: use explicit loading=\"eager\" for selected visual, not priority")
+        fail(f"{rel}: secondary visual must not use priority loading")
     fixtures = require_text("apps/portal/src/lib/portal-fixtures.ts", ["portalHomeVisualPanels", "WORLD_CONCEPT", "portal-home-world"])
     if "portal-home-world" not in fixtures:
         fail("apps/portal/src/lib/portal-fixtures.ts: missing Portal home WORLD_CONCEPT panel")
@@ -53,7 +55,9 @@ def check_tests_and_docs() -> None:
     require_text("tests/e2e/fe-portal-home-lcp-image-v151.spec.ts", [
         "Portal home Đông Môn world concept",
         "loading",
-        "eager",
+        "lazy",
+        "primaryBottom",
+        "secondary art",
         "horizontal overflow",
         "font-size",
         "Tổng quan người chơi",

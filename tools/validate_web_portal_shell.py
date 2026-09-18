@@ -82,11 +82,14 @@ def main() -> int:
         require_file(rel)
     for state in ["loading", "empty", "error", "unauthorized", "forbidden", "session-expired", "offline", "success-demo"]:
         require_text("packages/auth/src/index.ts", state)
+    # Portal routes may evolve product copy/visual hierarchy, but the machine-readable
+    # contract boundary must remain explicit until the real integration tasks open.
     for rel in ["apps/portal/src/app/page.tsx", "apps/portal/src/app/login/page.tsx", "apps/portal/src/app/characters/[id]/page.tsx"]:
         require_text(rel, "PROVISIONAL_WEB_FIXTURE")
         require_text(rel, "NOT_CANONICAL_BACKEND_CONTRACT")
-        require_text(rel, "Player Portal is blocked until accepted Auth/DB/API contract")
-        require_text(rel, "No production auth is claimed")
+    require_any_text("apps/portal/src/app/page.tsx", ["NO_ACCEPTED_BACKEND_CONTRACT", "accepted Auth / DB / API contract"])
+    require_any_text("apps/portal/src/app/login/page.tsx", ["NO_ACCEPTED_BACKEND_CONTRACT", "production auth/session chưa được mở"])
+    require_any_text("apps/portal/src/app/characters/[id]/page.tsx", ["NO_ACCEPTED_BACKEND_CONTRACT", "chờ accepted Auth / DB / API contract"])
     require_text("packages/api-client/src/index.ts", "NO_ACCEPTED_BACKEND_CONTRACT")
     require_text("packages/auth/src/index.ts", "NO_PRODUCTION_AUTH")
     return finish("WEB PORTAL SHELL")

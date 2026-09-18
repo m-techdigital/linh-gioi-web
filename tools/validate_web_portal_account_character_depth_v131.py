@@ -40,12 +40,12 @@ def main() -> int:
         require(fixtures, marker)
 
     routes = {
-        "apps/portal/src/app/page.tsx": ("MetricGrid", "DataList", "LinkButton"),
-        "apps/portal/src/app/account/page.tsx": ("KeyValueGrid", "MetricGrid", "LinkButton"),
+        "apps/portal/src/app/page.tsx": ("DataList", "LinkButton", "lgo-portal-overview-grid", "NO_ACCEPTED_BACKEND_CONTRACT"),
+        "apps/portal/src/app/account/page.tsx": ("KeyValueGrid", "DataList", "LinkButton"),
         "apps/portal/src/app/account/security/page.tsx": ("VisualProofGrid", "DataList", "InlineFeedback", "NO_ACCEPTED_BACKEND_CONTRACT"),
         "apps/portal/src/app/account/sessions/page.tsx": ("DataTable", "PaginationBar", "portalSessionFixtures"),
-        "apps/portal/src/app/characters/page.tsx": ("DataTable", "MetricGrid", "LinkButton"),
-        "apps/portal/src/app/characters/[id]/page.tsx": ("KeyValueGrid", "portalCharacterFixtures", "LinkButton"),
+        "apps/portal/src/app/characters/page.tsx": ("LinkButton", "StatusBadge", "Character slot roster"),
+        "apps/portal/src/app/characters/[id]/page.tsx": ("KeyValueGrid", "DataList", "portalCharacterFixtures", "LinkButton"),
     }
     for rel, markers in routes.items():
         for marker in markers:

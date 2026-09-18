@@ -12,9 +12,23 @@ for (const route of ["login", "register", "recovery"]) {
     await expect(page.locator("h1")).toBeVisible();
     await expect(page.getByRole("list", { name: "Các bước truy cập dự kiến" }).getByRole("listitem")).toHaveCount(3);
     await expect(page.locator('[aria-current="step"]')).toHaveCount(1);
-    await expect(page.locator("main input")).toHaveCount(route === "recovery" ? 1 : 3);
-    for (const input of await page.locator("main input").all()) await expect(input).toBeDisabled();
-    for (const button of await page.locator("main button").all()) await expect(button).toBeDisabled();
+    const inputs = page.locator("main input");
+    await expect(inputs).toHaveCount(route === "recovery" ? 1 : 2);
+    for (const input of await inputs.all()) {
+      await expect(input).toHaveAttribute("aria-disabled", "true");
+      await expect(input).toHaveAttribute("data-disabled", "true");
+      await expect(input).toHaveAttribute("readonly", "");
+    }
+    const checkbox = page.locator('main [role="checkbox"]');
+    await expect(checkbox).toHaveCount(route === "recovery" ? 0 : 1);
+    if (route !== "recovery") {
+      await expect(checkbox).toHaveAttribute("aria-disabled", "true");
+      await expect(checkbox).toHaveAttribute("data-disabled", "true");
+    }
+    for (const button of await page.locator("main button").all()) {
+      await expect(button).toHaveAttribute("aria-disabled", "true");
+      await expect(button).toHaveAttribute("data-disabled", "true");
+    }
     await expect(page.locator("form")).toHaveCount(0);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await page.getByRole("link", { name: "Trạng thái truy cập", exact: true }).click();

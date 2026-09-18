@@ -26,11 +26,17 @@ def main():
     for layout in ('apps/portal/src/app/layout.tsx','apps/ops/src/app/layout.tsx'):
         require(layout,'@lgo-web/ui/data.css')
     portal='apps/portal/src/app/characters/page.tsx'; ops='apps/ops/src/app/player-operations/page.tsx'
-    for rel in (portal,ops):
-        require(rel,'MetricGrid'); require(rel,'DataTable'); require(rel,'PaginationBar'); require(rel,'PROVISIONAL_WEB_FIXTURE'); require(rel,'NOT_CANONICAL_BACKEND_CONTRACT')
-        forbid(rel,'<table')
-    require(portal,'No real character DTO or backend contract')
-    require(portal,'No production auth is claimed')
+    # Shared table/metric/pagination primitives remain canonical and Ops still consumes them.
+    for marker in ('MetricGrid','DataTable','PaginationBar','PROVISIONAL_WEB_FIXTURE','NOT_CANONICAL_BACKEND_CONTRACT'):
+        require(ops, marker)
+    forbid(ops,'<table')
+    # Portal character roster may use a product-specific three-slot card composition while
+    # retaining shared actions/status and the same no-backend contract boundary.
+    for marker in ('LinkButton','StatusBadge','Character slot roster','PROVISIONAL_WEB_FIXTURE','NOT_CANONICAL_BACKEND_CONTRACT'):
+        require(portal, marker)
+    forbid(portal,'<table')
+    forbid(portal,'fetch(')
+    forbid(portal,'axios')
     require(ops,'NO_REAL_OPS_MUTATION')
     require(ops,'Ops/Admin is blocked until accepted RBAC/audit/security/API contract')
     if ERRORS:
