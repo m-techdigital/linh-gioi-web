@@ -15,7 +15,6 @@ export function PublicAccessibilityHero() {
   badge="Linh Giới Online · Cùng đọc, cùng khám phá" badgeTone="gold" kicker="Rõ đường đọc · Dễ tìm thao tác"
   title="Dễ đọc và dễ thao tác" lead="Bắt đầu từ tiêu đề, nhận biết điều đang được chọn và đi tiếp theo nhịp của bạn. Thử một lượt thao tác bàn phím ngay trong trang này."
   actions={[{href:"#accessibility-practice",label:"Thử bằng bàn phím",tone:"gold"},{href:"/performance",label:"Thử khoảng cách đọc",tone:"neutral"}]}
-  detail={<p className="lgo-accessibility-hero-note"><ReleaseIcon name="shield"/>Hướng dẫn công khai, không phải chứng nhận truy cập hoặc thiết lập theo tài khoản.</p>}
   visual={<section className="lgo-keyboard-guide" aria-labelledby="accessibility-keys-heading">
    <span className="lgo-keyboard-practice-overline">Ba thao tác để đi tiếp</span><h2 id="accessibility-keys-heading">Theo phím,<br/><em>không lạc hướng.</em></h2>
    <dl><div><dt><kbd>Tab</kbd></dt><dd>Đi tới điều khiển tiếp theo.</dd></div><div><dt><kbd>Space / Enter</kbd></dt><dd>Thay đổi ô hoặc mở phần hướng dẫn.</dd></div><div><dt><kbd>Shift + Tab</kbd></dt><dd>Quay lại điều khiển trước.</dd></div></dl>
@@ -39,10 +38,10 @@ export function PublicAccessibilityPrinciples() {
  return <div className="lgo-release-reading-grid lgo-release-reading-grid-even">
   <section id="accessibility-principles" className="lgo-release-reading-panel lgo-release-frame" aria-labelledby="accessibility-principles-heading">
    <SectionHeading headingId="accessibility-principles-heading" eyebrow="Đọc rõ trước, hiệu ứng sau" title="Những nguyên tắc đang theo"/>
-   <QuestionDisclosureList items={accessibilityReadabilityPrinciples.map(item=>({id:`readability-${item.id}`,question:item.title,answer:<><p>{item.playerBenefit}</p><p>{item.implementationNote}</p><small>{item.nonClaim}</small></>}))}/>
+   <QuestionDisclosureList items={accessibilityReadabilityPrinciples.map(item=>({id:`readability-${item.id}`,question:item.title,answer:<p>{item.playerBenefit}</p>}))}/>
   </section>
   <aside id="accessibility-boundaries" className="lgo-release-reading-panel lgo-release-frame" aria-labelledby="accessibility-boundaries-heading">
-   <SectionHeading headingId="accessibility-boundaries-heading" eyebrow="Nói rõ điều chưa chứng minh" title="Giới hạn hiện tại"/>
+   <SectionHeading headingId="accessibility-boundaries-heading" eyebrow="Hiểu đúng phạm vi hỗ trợ" title="Điều hướng dẫn chưa thay thế"/>
    <ul className="lgo-accessibility-boundary-list"><li><strong>Chưa có audit WCAG chính thức</strong><span>Kiểm thử tự động và khung thực hành không thay thế đánh giá truy cập đầy đủ.</span></li><li><strong>Không lưu thiết lập cá nhân</strong><span>Không có tùy chọn đồng bộ tài khoản hoặc hồ sơ truy cập.</span></li><li><strong>Không tuyên bố chứng nhận pháp lý</strong><span>Chưa có xác nhận từ phòng kiểm thử công nghệ hỗ trợ.</span></li></ul>
    <p className="lgo-accessibility-runtime-note">Khung thực hành cần JavaScript. Truy cập toàn bộ website khi tắt JavaScript vẫn còn giới hạn và chưa được tuyên bố hỗ trợ đầy đủ.</p>
    <LinkButton href="/support/safety" tone="neutral">Chuẩn bị góp ý an toàn</LinkButton>
@@ -52,9 +51,10 @@ export function PublicAccessibilityPrinciples() {
 }
 export function PublicAccessibilityNotes() {
  const items=[
+  ...accessibilityReadabilityPrinciples.map(item=>({id:`principle-source-${item.id}`,question:`Tìm hiểu thêm · ${item.title}`,answer:<><p>{item.implementationNote}</p><small>{item.nonClaim}</small></>})),
   ...focusOrderCheckpoints.map(item=>({id:`focus-${item.sequence}`,question:`${item.sequence} · ${item.label}`,answer:<><p>{item.keyboardExpectation}</p><small>{item.nonClaim}</small></>})),
   ...mobileScannabilityRules.map((item,index)=>({id:`scan-${index}`,question:item.surface,answer:<><p>{item.mobileNeed}</p><p>{item.contentTreatment}</p><small>{item.failureToAvoid}</small></>})),
   ...routeReadabilityChecks.map((item,index)=>({id:`reading-route-${index}`,question:item.headingPromise,answer:<><p>{item.firstAction}</p><p>{item.scanAid}</p><small>{item.boundary}</small></>}))
  ];
- return <details className="lgo-release-more-evidence"><summary>Thứ tự focus, nhịp đọc mobile và ghi chú từng trang <span aria-hidden="true">+</span></summary><QuestionDisclosureList items={items}/></details>;
+ return <details className="lgo-release-more-evidence"><summary>Tìm hiểu sâu hơn về focus và cách đọc <span aria-hidden="true">+</span></summary><QuestionDisclosureList items={items}/></details>;
 }

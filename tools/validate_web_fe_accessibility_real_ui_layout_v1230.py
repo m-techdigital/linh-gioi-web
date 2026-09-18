@@ -46,7 +46,7 @@ def main() -> int:
     if "Shared accessibility page layout for public readability/focus surfaces" in require("packages/ui/src/service-layout.css"):
         ERRORS.append("superseded accessibility compact block retained")
     require("apps/web/src/components/PublicDesignTargetReference.tsx", ('pathname === "/accessibility"', "PUBLIC_ACCESSIBILITY_TARGET", "Thiết kế cách đọc và thao tác"))
-    require("tests/e2e/fe-accessibility-real-ui-layout-v1230.spec.ts", ("m.overflow", "toBeFocused", "keyboard.press('Shift+Tab')", "practice.evaluate(e=>e.contains(document.activeElement))", "page.reload()", "outgoing).toEqual([])", "#main-content", "forcedColors:'active'", "violations).toEqual([])", "screenshot"))
+    require("tests/e2e/fe-accessibility-real-ui-layout-v1230.spec.ts", ("STATIC_BUILD", "m.overflow", "toBeFocused", "keyboard.press('Shift+Tab')", "practice.evaluate(e=>e.contains(document.activeElement))", "page.reload()", "outgoing).toEqual([])", "#main-content", "forcedColors:'active'", "violations).toEqual([])", "screenshot"))
     require("docs/execution/WEB-NON-CLAIMS.md", ("No formal WCAG audit certification", "No personal accessibility settings backend", "No assistive-technology lab certification"))
     print("WEB FE ACCESSIBILITY REAL UI LAYOUT v1.230 SOURCE " + ("FAIL" if ERRORS else "PASS"))
     for error in ERRORS: print(f"- {error}")

@@ -1,8 +1,29 @@
-import {test,expect} from "@playwright/test";
-const origin=process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
+import {test,expect,type BrowserContext} from "@playwright/test";
+import fs from "node:fs";
+import path from "node:path";
+const STATIC_BUILD=process.env.LGO_STATIC_BUILD_PATH;
+const origin=STATIC_BUILD?"http://wip.local":(process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000");
+function appRouteFile(app:string,pathname:string,extension:".html"|".rsc"){
+ const route=pathname.replace(/\/$/,"")||"/";
+ return path.join(app,".next/server/app",(route==="/"?"index":route.slice(1))+extension);
+}
+async function mountStaticBuild(context:BrowserContext){
+ if(!STATIC_BUILD)return;
+ await context.route("http://wip.local/**",async route=>{
+  const url=new URL(route.request().url());let file:string|undefined;let contentType="application/octet-stream";
+  if(url.searchParams.has("_rsc")){file=appRouteFile(STATIC_BUILD,url.pathname,".rsc");contentType="text/x-component";}
+  else if(url.pathname.startsWith("/_next/static/"))file=path.join(STATIC_BUILD,".next",url.pathname.slice("/_next/".length));
+  else if(url.pathname==="/_next/image"){const source=url.searchParams.get("url");if(source?.startsWith("/"))file=path.join(STATIC_BUILD,"public",source);}
+  else {const publicFile=path.join(STATIC_BUILD,"public",url.pathname);if(url.pathname!=="/"&&fs.existsSync(publicFile)&&fs.statSync(publicFile).isFile())file=publicFile;else{file=appRouteFile(STATIC_BUILD,url.pathname,".html");contentType="text/html";}}
+  if(!file||!fs.existsSync(file))return route.fulfill({status:404,body:"not found"});
+  if(file.endsWith(".css"))contentType="text/css";else if(file.endsWith(".js"))contentType="application/javascript";
+  else if(file.endsWith(".png"))contentType="image/png";else if(file.endsWith(".webp"))contentType="image/webp";else if(file.endsWith(".svg"))contentType="image/svg+xml";else if(file.endsWith(".woff2"))contentType="font/woff2";
+  return route.fulfill({status:200,contentType,body:fs.readFileSync(file)});
+ });
+}
 
 test.describe('readability and real keyboard practice v1.230',()=>{
- test.beforeEach(async({page})=>{await page.goto(origin+'/accessibility');await expect(page.getByRole('heading',{level:1,name:'Dễ đọc và dễ thao tác',exact:true})).toBeVisible();});
+ test.beforeEach(async({context,page})=>{await mountStaticBuild(context);await page.goto(origin+'/accessibility');await expect(page.getByRole('heading',{level:1,name:'Dễ đọc và dễ thao tác',exact:true})).toBeVisible();});
  test('key guide and paper practice replace the embedded route-map',async({page,isMobile})=>{
   await expect(page.locator('.lgo-keyboard-guide kbd')).toHaveCount(3);
   await expect(page.locator('.lgo-keyboard-practice')).toBeVisible();
@@ -39,7 +60,7 @@ test.describe('readability and real keyboard practice v1.230',()=>{
   await page.keyboard.press('Tab');const skip=page.getByRole('link',{name:'Bỏ qua menu tới nội dung chính',exact:true});await expect(skip).toBeFocused();
   await page.keyboard.press('Enter');await expect(page).toHaveURL(origin+'/accessibility#main-content');
   const routes=page.locator('#accessibility-routes nav');await expect(routes.getByRole('link')).toHaveCount(5);
-  for(const href of ['/accessibility','/start','/download/trust','/support/safety','/game/loop'])expect((await page.request.get(origin+href)).status()).toBe(200);
+  for(const href of ['/accessibility','/start','/download/trust','/support/safety','/game/loop'])if(!STATIC_BUILD)expect((await page.request.get(origin+href)).status()).toBe(200);
   await routes.locator('a[href="/start"]').click();await expect(page).toHaveURL(origin+'/start');
  });
  test('scope stays explicit and expanded source principles stay readable',async({page})=>{
