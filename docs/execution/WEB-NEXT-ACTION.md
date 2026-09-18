@@ -4,29 +4,29 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-13 v1.290 is CLOSED at source commit `4830f7b7c90b9623937f9fa8805afd1180ab4b29`; do not reopen it without a related game-loop density/non-claim regression.
+WEB-OPT-14 v1.291 is CLOSED at source commit `5fcb4c07b6959d67eeee670c06d068b7e87cd9f2`; do not reopen it without a related guide-discovery/source-reachability regression.
 
 Next task:
-WEB-OPT-14-GUIDES-DISCOVERY-v1.291
+WEB-OPT-15-NEWS-PLAYER-DISCOVERY-v1.292
 
 Objective:
-Rebuild `/guides` discovery around player intent and curated categories after editorial consolidation, so players reach the right guide without scanning a long generic catalog.
+Present real player/project news as the primary `/news` experience and keep Web-engineering history subordinate as an explicit archive. If no source-owned player news currently exists, preserve a truthful empty state instead of inventing announcements.
 
-Current optimization scope: `/guides` only plus the smallest shared Base owner change genuinely required by that route. Do not batch Guide detail pages, News, Events, broad article rewriting, backend/CMS/search services or production deployment.
+Current optimization scope: `/news` only plus the smallest shared Base owner change genuinely required by that route. Do not batch News detail pages, Events, Patch Notes, broad article rewriting, CMS/backend feeds or production deployment.
 
 Entry baseline:
-- WEB-OPT-01–13 foundations are CLOSED and must remain regression-green;
-- v1.283 owns Guide detail renderer consolidation and v1.284 owns editorial mobile reading density;
-- no backend search, personalization, saved reading state or CMS is accepted.
+- WEB-OPT-01–14 foundations are CLOSED and must remain regression-green;
+- v1.281 classifies current Web-program history as Archive/Devlog and v1.282 owns metadata/indexability;
+- current player-news source may legitimately be empty; engineering history must remain reachable without becoming primary game news.
 
 Exit criteria:
-- desktop/mobile `/guides` exposes clear intent/category discovery with materially less scanning cost;
-- all 16 published Guide detail routes remain intentionally reachable and source meaning is preserved;
-- no fake search/backend/personalization state is introduced;
+- desktop/mobile `/news` makes the player-news state and next useful routes primary before the engineering archive;
+- archived Web-program records remain intentionally reachable but visually/substantively subordinate;
+- no fake announcement, event, release state, backend feed or CMS behavior is introduced;
 - keyboard/focus/touch behavior and accepted public shell/language/metadata contracts remain intact;
 - fresh BEFORE/AFTER screenshots/metrics, focused browser/e2e, relevant validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.290 contracts; no production deployment. Do not batch WEB-OPT-15.
+Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.291 contracts; no production deployment. Do not batch WEB-OPT-16.
 
 Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 

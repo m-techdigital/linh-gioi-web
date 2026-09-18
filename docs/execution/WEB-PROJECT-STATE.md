@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-14-GUIDES-DISCOVERY-v1.291 WEB_CLOSED
+
+Current decision: `/guides` uses curated intent-first discovery. Initial cards are 3 Nhập môn guides instead of all 16; **Tất cả (16)** still reveals every published guide. Desktop height is 1,526px from 2,912px (-47.60%); mobile is 2,608px from 5,028px (-48.13%); mobile filters are a one-row swipe rail with zero page overflow.
+
+Verified source delivery commit: `5fcb4c07b6959d67eeee670c06d068b7e87cd9f2`. Exact production build63; final v1.291 + complete v1.234 regression 28/28 desktop/mobile; Content20/20; Content/UI/Web typecheck; Web lint; v1.291/v1.234/v1.290/v1.284 source guards; clean 2,018-file current-state candidate PASS.
+
+Next task: `WEB-OPT-15-NEWS-PLAYER-DISCOVERY-v1.292` on `/news` only. Preserve v1.281 Archive/Devlog truth and do not fabricate player news.
+
+Detailed report: `LGO-WEB-OPT-14-GUIDES-DISCOVERY-REPORT-v1.291.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-13-GAME-LOOP-DENSITY-v1.290 WEB_CLOSED
 
 Current decision: `/game/loop` remains informational/read-only while mobile density drops to 4,282px from 4,880px (-12.25%). Hero height is 730px from 841px and reading section 835px from 1,343px; mobile stages are one swipe rail, page overflow is zero and the duplicate hero technical boundary is removed while reading/scope/route proof owners remain.

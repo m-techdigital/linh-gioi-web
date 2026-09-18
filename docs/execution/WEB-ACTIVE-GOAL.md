@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — guides discovery closed (2026-09-18)
+
+WEB-OPT-14 v1.291 is CLOSED at source commit `5fcb4c07b6959d67eeee670c06d068b7e87cd9f2`. `/guides` now opens on a three-guide Nhập môn shelf instead of a 16-card wall; mobile height falls 5,028px→2,608px (-48.13%) and the category controls become one swipe rail while **Tất cả (16)** preserves access to every published guide.
+
+Next task is **WEB-OPT-15-NEWS-PLAYER-DISCOVERY-v1.292** on `/news` only. Keep player/project news primary, engineering history subordinate as explicit archive, and do not invent game-news records when no source exists.
+
 ## Owner optimization authority — game loop density closed (2026-09-18)
 
 WEB-OPT-13 v1.290 is CLOSED at source commit `4830f7b7c90b9623937f9fa8805afd1180ab4b29`. `/game/loop` reduces mobile height 4,880px→4,282px (-12.25%, -598px), removes the duplicate hero gameplay boundary and turns the four-stage mobile wall into a world-loop-only swipe rail with zero page overflow.

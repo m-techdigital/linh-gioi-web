@@ -37,6 +37,19 @@ def main():
  state=read("tools/validate_web_current_state.py")
  if '"validate_web_opt_guides_discovery_v1291.py"' not in state:
   ERRORS.append("v1.291 validator not registered in current state")
+ next_action=read("docs/execution/WEB-NEXT-ACTION.md")
+ project_state=read("docs/execution/WEB-PROJECT-STATE.md")
+ ledger=read("docs/execution/WEB-TASK-LEDGER.md")
+ report=read("docs/execution/LGO-WEB-OPT-14-GUIDES-DISCOVERY-REPORT-v1.291.md")
+ active_prefix="Current phase: WEB-OPT-14-GUIDES-DISCOVERY-v1.291 WEB_CLOSED"
+ if active_prefix not in project_state:
+  ERRORS.append("WEB-PROJECT-STATE lost v1.291 closure history")
+ if project_state.startswith(active_prefix) and "WEB-OPT-15-NEWS-PLAYER-DISCOVERY-v1.292" not in next_action:
+  ERRORS.append("active v1.291 checkpoint does not advance to WEB-OPT-15 v1.292")
+ if "| WEB-OPT-14-GUIDES-DISCOVERY-v1.291 | WEB-OPT | WEB_CLOSED |" not in ledger:
+  ERRORS.append("WEB-TASK-LEDGER does not record WEB-OPT-14 v1.291 closure")
+ for marker in ("5fcb4c07b6959d67eeee670c06d068b7e87cd9f2","5,028px","2,608px","28/28"):
+  if marker not in report: ERRORS.append("v1.291 report missing closure evidence: "+marker)
  if ERRORS:
   print("WEB OPT GUIDES DISCOVERY v1.291 VALIDATION FAIL")
   for e in ERRORS: print("- "+e)

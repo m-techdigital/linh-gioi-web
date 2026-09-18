@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.291
+
+WEB-OPT-14 is CLOSED at `5fcb4c07b6959d67eeee670c06d068b7e87cd9f2`. `/guides` changes from a 16-card default wall to a curated 3-guide Nhập môn start, keeps all 16 one action away and compresses mobile categories into a horizontal rail. Desktop/mobile height falls 47.60%/48.13% with zero page overflow.
+
+Continue Phase B with WEB-OPT-15 v1.292 on `/news` only, followed by WEB-OPT-16 v1.293 on `/events`.
+
 ## 2026-09-18 optimization checkpoint v1.290
 
 WEB-OPT-13 is CLOSED at `4830f7b7c90b9623937f9fa8805afd1180ab4b29`. `/game/loop` removes the duplicate hero non-live boundary and changes only its four-stage mobile ReadingJourney into a swipe rail. Mobile height falls 4,880px→4,282px (-12.25%) with zero page overflow while desktop remains effectively unchanged.
