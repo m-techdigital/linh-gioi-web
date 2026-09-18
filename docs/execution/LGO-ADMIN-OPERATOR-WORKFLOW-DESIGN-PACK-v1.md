@@ -78,6 +78,8 @@ One staff user may hold multiple capabilities, but UI workflow remains capabilit
 
 Staff identity is separate from player identity.
 
+Current Game/backend authority (reply `MM-915b77146372`) confirms that no accepted staff IAM/RBAC/audit backend exists today. Player ProductAuth is the only implemented product-auth domain; staff auth must be a separate future authority, never a player-role flag.
+
 Required foundation:
 - staff_users;
 - staff_sessions;
@@ -129,10 +131,10 @@ No mutation is implemented as:
 - hidden superuser override.
 
 First candidate mutations:
-- revoke selected player session;
-- approved unstuck/reset-to-safe-checkpoint.
+- revoke selected player session, only after a durable/listable session domain exists;
+- approved unstuck/reset-to-safe-checkpoint, only after Game defines a server-owned canonical safe checkpoint/reset command.
 
-Both require backend domain support before UI opens.
+Current `AuthSessionRegistry` is in-memory and has no durable revoke-by-session-ID contract. Current Map01A `SafeStartLaneX` is a client-entry fallback, not an Admin reset authority. Both candidates therefore remain future-domain work until their owning contracts exist.
 ## 5. Information architecture
 
 Primary:
@@ -221,10 +223,14 @@ Initial sections:
 - current known map/runtime summary;
 - timestamps where useful.
 
+Current bearer-scoped character GETs already expose optional persisted `runtimeState {mapId,laneX,facing,updatedAt}`. A future Admin read API may project this diagnostically, but Admin must never call the player-scoped `POST /auth/characters/{characterId}/map01a-state` mutation endpoint directly.
+
 ### Sessions
 Only after durable session domain:
 - active/revoked/expired summaries;
 - current/last-seen metadata allowed by privacy policy.
+
+Today, `AuthSessionRegistry` is an in-memory `ConcurrentHashMap`; `/auth/logout` invalidates only the presented token and password reset invalidates all account sessions. There is no durable session row/list/revoke-by-ID contract yet.
 
 ### Progression
 Only after GAME-DATA-01.
@@ -244,8 +250,10 @@ No credentials, tokens, password hashes or recovery secrets are ever shown.
 Actions are separated from data inspection.
 
 Initial safe candidates:
-- revoke selected session;
-- unstuck character to a defined safe checkpoint.
+- revoke selected session — future only after durable sessions, capability, reason, idempotency and audit exist;
+- unstuck character to a defined safe checkpoint — NEEDS-DESIGN until Game owns a canonical server reset target/command.
+
+Do not derive an Admin unstuck target from client fallback lanes, route nodes, arbitrary coordinates or player mutation endpoints.
 
 Each action:
 1. opens dedicated confirmation;
@@ -315,7 +323,7 @@ Rules:
 - every sanction records reason/capability/correlation/audit;
 - evidence access follows least privilege.
 
-Until moderation backend exists, all enforcement controls remain blocked.
+Until moderation backend exists, all enforcement controls remain blocked. Game reply `MM-915b77146372` confirms there is no accepted generic suspend/ban/moderation command in the current backend; Trust & Safety remains a separate future domain rather than a Player 360 shortcut.
 ## 12. Audit workflow
 
 Audit is append-only evidence, not an editable activity feed.
@@ -691,3 +699,22 @@ The Admin design pack is accepted when:
 - cross-sandbox backend assumptions are reviewed or parked with explicit ASK IDs.
 
 This document does not claim production Admin integration is active.
+
+## 29. Game/backend authority review closure
+
+- request: `MM-dde494f827e1`
+- response: `MM-915b77146372`
+- task: `T-f7829053d3f0`
+- responder: `S-LGO-HUB-20260917-D4F1`
+- status: ANSWERED / integrated
+- reply_to integrity: PASS
+
+Integrated conclusions:
+- A: no accepted staff IAM/RBAC/audit backend exists; staff auth remains separate from player ProductAuth;
+- B: Player 360 is a privileged read model over owning domains, not a writable aggregate; durable sessions remain future data;
+- C: persisted character runtime state may later be projected through an Admin read API, but Admin must not call the player Map01A mutation endpoint;
+- D: session revoke is compatible only after durable/listable sessions exist and must carry capability/reason/idempotency/audit;
+- E: Admin unstuck is NEEDS-DESIGN; current client safe-start fallback is not a canonical reset authority;
+- F: no accepted generic suspend/ban/moderation command exists; Trust & Safety remains a separate future domain.
+
+Cross-system impact: no current Admin mutation is opened by this review. Staff IAM, durable session revoke, Admin runtime-state read API, canonical unstuck checkpoint/command and moderation remain explicit future-domain dependencies.
