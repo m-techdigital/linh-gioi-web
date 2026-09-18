@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "authority": "WEB-OPT-23-PUBLIC-PERFORMANCE-GOVERNANCE-BUDGETS-v1.300",
+  "baseline_commit": "fb44f69b9ee9a6a6fc3fd6e593ce59340e8c1521",
+  "route_count": 59,
+  "policy": {
+    "byte_tolerance": "Approximately 5% over the accepted v1.299 baseline; rounded upward for deterministic review.",
+    "page_height_tolerance": "Approximately 5% over accepted P90/max heights; no cosmetic redesign is required below the cap.",
+    "active_suite_tolerance": "No silent suite growth after the v1.300 guard/spec. Any additional active suite requires explicit budget review.",
+    "public_asset_count_tolerance": "+2 files over the accepted 80-file baseline."
+  },
+  "decoded_css": {
+    "baseline_median_bytes": 174917,
+    "baseline_max_bytes": 178914,
+    "tolerance_percent": 5
+  },
+  "public_assets": {
+    "baseline_file_count": 80,
+    "max_file_count": 82,
+    "baseline_total_bytes": 10187479,
+    "max_total_bytes": 10700000,
+    "baseline_image_bytes": 10148291,
+    "max_image_bytes": 10660000,
+    "baseline_max_single_asset": 1587579,
+    "max_single_asset": 1670000
+  },
+  "heavy_image_transfer": {
+    "baseline_p90_bytes": 1081021,
+    "baseline_max_route_bytes": 1652849,
+    "baseline_max_single_bytes": 1587579,
+    "tolerance_percent": 5
+  },
+  "page_height": {
+    "baseline_desktop_p90": 3258,
+    "baseline_desktop_max": 3391,
+    "baseline_mobile_p90": 4016,
+    "baseline_mobile_max": 4282,
+    "tolerance_percent": 5
+  },
+  "design_reference": {
+    "baseline_public_files": 0,
+    "max_public_files": 0,
+    "baseline_runtime_requests": 0,
+    "max_runtime_requests": 0
+  },
+  "active_suite": {
+    "baseline_validators": 168,
+    "baseline_browser_specs": 159,
+    "max_validators": 169,
+    "max_browser_specs": 160
+  },
+  "runtime": {
+    "desktop": {
+      "css_median_bytes": {
+        "baseline": 174917,
+        "limit": 184000
+      },
+      "css_max_bytes": {
+        "baseline": 178914,
+        "limit": 188000
+      },
+      "page_height_p90": {
+        "baseline": 3258,
+        "limit": 3450
+      },
+      "page_height_max": {
+        "baseline": 3391,
+        "limit": 3600
+      },
+      "image_bytes_p90": {
+        "baseline": 1081021,
+        "limit": 1140000
+      },
+      "image_bytes_max_route": {
+        "baseline": 1652849,
+        "limit": 1740000
+      },
+      "image_bytes_max_single": {
+        "baseline": 1587579,
+        "limit": 1670000
+      }
+    },
+    "mobile": {
+      "css_median_bytes": {
+        "baseline": 174917,
+        "limit": 184000
+      },
+      "css_max_bytes": {
+        "baseline": 178914,
+        "limit": 188000
+      },
+      "page_height_p90": {
+        "baseline": 4016,
+        "limit": 4250
+      },
+      "page_height_max": {
+        "baseline": 4282,
+        "limit": 4500
+      },
+      "image_bytes_p90": {
+        "baseline": 1081021,
+        "limit": 1140000
+      },
+      "image_bytes_max_route": {
+        "baseline": 1652849,
+        "limit": 1740000
+      },
+      "image_bytes_max_single": {
+        "baseline": 1587579,
+        "limit": 1670000
+      }
+    }
+  }
+}

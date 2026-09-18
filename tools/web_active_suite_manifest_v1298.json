@@ -10,6 +10,7 @@
   },
   "active": {
     "validators": [
+      "validate_web_opt_public_performance_governance_budgets_v1300.py",
       "validate_web_opt_content_fixture_modularization_v1299.py",
       "validate_web_opt_active_suite_authority_v1298.py",
       "validate_web_opt_player_roadmap_v1297.py",
@@ -334,6 +335,7 @@
       "web-opt-public-asset-boundary-v1280.spec.ts",
       "web-opt-public-css-payload-v1278.spec.ts",
       "web-opt-public-ia-language-v1281.spec.ts",
+      "web-opt-public-performance-governance-budgets-v1300.spec.ts",
       "web-opt-seo-metadata-v1282.spec.ts",
       "web-opt-support-entry-hierarchy-v1285.spec.ts",
       "web-opt-support-help-discovery-v1286.spec.ts",
