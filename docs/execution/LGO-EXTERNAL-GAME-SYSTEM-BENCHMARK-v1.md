@@ -64,6 +64,8 @@ Safe area:
 - is not a scale percentage;
 - must be applied independently.
 
+Current LGO authority reply `MM-1a8c924ff7ec` confirms UIF-02R already implements this separation: `RuntimeViewportMetrics` reads `Screen.safeArea`, converts it to `SafePanelRect`, and Hub/`SafeAreaRoot` consume that rect independently from profile/composition scale. Final mobile-landscape acceptance should retain asymmetric cutout simulation plus by-eye exact-source review; physical-device touch usability remains a separate non-claim.
+
 Touch:
 - is a distinct input/presentation concern.
 
@@ -95,8 +97,8 @@ Observed:
 
 ADOPT:
 - class choice should communicate combat identity through role + representative actions, not lore/name only.
-- shared tutorial spine can contain Path-specific combat teaching.
-- “unstuck” should target a canonical safe entrance/checkpoint, not raw coordinate editing.
+- shared tutorial spine can contain Path-specific combat teaching. Current Founder Alpha authority confirms one shared movement/dialogue/jump/dash spine with a small Võ/Kiếm-specific combat teaching beat; duplicating the whole tutorial is not required.
+- “unstuck” should target a canonical safe entrance/checkpoint, not raw coordinate editing. Current LGO authority says this is NEEDS-DESIGN: Map01A safe-entry fallback is not a server-owned reset command.
 
 ADAPT:
 - use class-specific tutorial differences only around combat identity; do not duplicate the entire LGO onboarding five times.
@@ -124,7 +126,8 @@ ADOPT:
 
 ADAPT:
 - long-term LGO skill progression can include meaningful upgrades/branches as an alternative to “new button every milestone”.
-- this can help reconcile owner 10-level progression intent with a bounded active loadout.
+- current Game authority explicitly allows MEANINGFUL-PROGRESSION at 10-level milestones; it does not require a brand-new active skill button at every visual milestone.
+- GAME-DESIGN-02 still owns the concrete Lv1–100 progression policy; authoritative visual level rows are appearance milestones, not skill-unlock rows.
 
 REJECT:
 - importing Lost Ark's endgame progression/economy complexity.
@@ -171,7 +174,8 @@ ADOPT:
 
 ADAPT:
 - account-wide cosmetic ownership is a useful reference, not an LGO decision.
-- LGO must separately decide account-vs-character ownership and migration semantics.
+- current accepted LGO authority leaves cosmetic ownership ACCOUNT vs CHARACTER explicitly OPEN.
+- LGO must separately decide account-vs-character ownership and migration semantics before persistence/schema work.
 
 REJECT:
 - assuming GW2 transmutation currency/account rules belong in LGO.
@@ -265,11 +269,12 @@ ADAPT:
 - world/session operations should start read-only and freshness-aware.
 
 ### Useful changes to LGO backlog
-1. GAME-DESIGN-01 should explicitly include class-selection role/main-skill preview plus Path-specific tutorial combat beat.
-2. ADM-05 unstuck design should use canonical safe checkpoint/entrance semantics, never arbitrary position editing.
-3. GAME-DESIGN-02 should evaluate “new skill vs meaningful skill upgrade/branch” at 10-level milestones so active-button count stays bounded.
+1. GAME-DESIGN-01: shared tutorial spine + narrow Võ/Kiếm combat teaching beat is confirmed compatible with Founder Alpha authority.
+2. ADM-05 unstuck: keep a canonical safe checkpoint/entrance design dependency; current client fallback lane is not reset authority.
+3. GAME-DESIGN-02: meaningful upgrade/branch/passive progression is allowed at 10-level milestones; define the actual Lv1–100 cadence without forcing a new active button each row.
 4. PWEB social/community expansion should remain post-social-backend and companion-oriented.
-5. GAME-ART/equipment design should preserve preview/apply and stat/cosmetic separation without deciding account-wide ownership prematurely.
+5. GAME-ART/equipment design should preserve preview/apply and stat/cosmetic separation; cosmetic ownership remains OPEN.
+6. UIF-02R safe-area gate is PRESENT; retain asymmetric cutout simulation + exact-source visual review, while physical-device touch remains separately unproven.
 ## 12. What is intentionally NOT adopted
 
 - DFO class count/advancement complexity.
@@ -298,21 +303,23 @@ Preferred sources in this benchmark are official/first-party:
 Where official sources describe a mature system, the benchmark extracts principles only.
 
 No source proves that LGO currently implements the referenced feature.
-## 14. Mission review questions
+## 14. Mission review closure
 
-Game should answer only from current LGO authority/source:
+- request: `MM-11b78ee9e1b9`
+- response: `MM-1a8c924ff7ec`
+- task: `T-0801f59f1dce`
+- responder: `S-LGO-HUB-20260917-D4F1`
+- status: ANSWERED / integrated
+- reply_to integrity: PASS
 
-A. Does the current Founder Alpha tutorial design allow the shared onboarding spine to branch into a small Võ/Kiếm-specific combat teaching beat without duplicating the whole tutorial?
+Current-LGO answers:
+- A — CONFIRM: shared tutorial spine with a small Võ/Kiếm-specific combat teaching beat is compatible; no full tutorial duplication is required.
+- B — NEEDS-DESIGN: no server-owned canonical unstuck/checkpoint/reset command exists; do not infer arbitrary coordinates from client fallback state.
+- C — OPEN: no accepted source decides cosmetic ownership as account-wide vs per-character.
+- D — MEANINGFUL-PROGRESSION-ALLOWED: no current authority requires a brand-new active skill button every 10 levels; GAME-DESIGN-02 owns the actual cadence.
+- E — PRESENT: UIF-02R separates safe area/cutout from profile/composition; keep asymmetric cutout simulation + by-eye exact-source review as the acceptance gate, with physical-device touch usability a separate non-claim.
 
-B. For future Admin unstuck, is there a current canonical safe spawn/checkpoint authority that can support reset-to-safe-place semantics, or must GAME-DESIGN/world work define one first?
-
-C. Is there any current accepted source that already decides cosmetic ownership account-wide vs per-character? If not, keep it OPEN despite the GW2 reference.
-
-D. Does current Game progression design allow meaningful skill upgrade/branch at a 10-level milestone, or has owner intent already required “brand-new skill button” at every milestone?
-
-E. Does current UIF-02R implementation already model Screen.safeArea/cutout separately from profile/layout composition? If not, should that become a specific follow-up gate before mobile final acceptance?
-
-This benchmark does not block current visual work. Any unanswered row is WAITING_CROSS_SANDBOX while other tasks continue.
+Cross-system impact: keep Founder Alpha combat-kit and Lv1–100 progression design dependencies; retain a future canonical checkpoint/unstuck design dependency before Admin mutation. No API/schema mutation is requested by this benchmark closure.
 ## 15. Acceptance
 
 Complete when:
