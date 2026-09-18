@@ -76,6 +76,12 @@ test.describe("WEB-OPT-04 public IA/player language v1.281", () => {
     for (const route of routes) {
       const response = await page.goto(route, { waitUntil: "load" });
       expect(response?.ok(), `${route} HTTP`).toBeTruthy();
+      // WEB-OPT-14 compatibility: the curated guide shelf is intentionally partial until “Tất cả” is selected.
+      if (route === "/guides") {
+        const catalog = page.locator(".lgo-reading-catalog");
+        await catalog.getByRole("button", { name: /^Tất cả/ }).click();
+        await expect(catalog.locator(".lgo-reading-catalog-card")).toHaveCount(16);
+      }
       const links = await page.locator("a[href^='/']").evaluateAll((nodes) => nodes.map((node) => (node as HTMLAnchorElement).getAttribute("href") || ""));
       for (const href of links) {
         const target = href.split("#", 1)[0] || "/";

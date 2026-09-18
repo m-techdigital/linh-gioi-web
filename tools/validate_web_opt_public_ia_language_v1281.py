@@ -86,6 +86,8 @@ def main() -> int:
         "primary news discovery is player-facing",
         "homepage stops promoting development-history articles",
         "all 59 public routes have an intentional inbound public link",
+        'if (route === "/guides")',
+        'name: /^Tất cả/',
     ))
 
     next_action = read("docs/execution/WEB-NEXT-ACTION.md")

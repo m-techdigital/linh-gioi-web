@@ -101,5 +101,3 @@
 /* WEB-OPT-04: archived Web-program history stays available without dominating player news discovery. */
 .lgo-news-devlog-archive-body { padding:.35rem 0 1rem; }
 .lgo-news-devlog-archive-body > p { max-width:76ch; color:var(--release-muted); font-size:max(.86rem,14px); line-height:1.55; }
-.lgo-news-primary-empty-actions { grid-template-columns:repeat(3,minmax(0,1fr)); }
-@media(max-width:700px) { .lgo-news-primary-empty-actions { grid-template-columns:1fr; } }

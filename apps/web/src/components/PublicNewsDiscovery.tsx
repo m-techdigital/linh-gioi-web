@@ -19,7 +19,7 @@ export function PublicNewsDiscovery() {
       badge="Linh Giới Online · Bản tin" badgeTone="gold" kicker="Tin dành cho người chơi · Tách khỏi nhật ký kỹ thuật"
       title="Tin tức Linh Giới" lead="Khi có thông tin game, cộng đồng hoặc phát hành thật sự hữu ích cho người chơi, bản tin chính sẽ xuất hiện tại đây. Nhật ký phát triển web được giữ riêng để tham khảo."
       actions={[{ href: "#news-library", label: "Xem bản tin hiện tại", tone: "gold" }, { href: "/status", label: "Trạng thái chơi", tone: "neutral" }]}
-      detail={<p className="lgo-library-boundary"><ReleaseIcon name="shield"/><span>Không phải bản tin trực tiếp. Không biến thay đổi kỹ thuật thành tin game.<br/>Ngày đăng lịch sử không xác nhận game đã phát hành.</span></p>}
+      detail={<p className="lgo-release-art-note">Minh họa thế giới · Bản tin chính chỉ xuất hiện khi có nội dung người chơi thật</p>}
       visual={<><img className="lgo-release-hero-art" src="/game-art/world/dong-mon-skyline.webp" width="1360" height="765" alt="" fetchPriority="high"/>
         {featured ? <FeaturedReading title={featured.title} description={featured.summary} href={`/news/${featured.slug}`} actionLabel="Mở bản tin"
           image={{ src: "/game-art/world/dong-mon-skyline.webp", width: 1360, height: 765, alt: "Tranh minh họa thế giới Linh Giới, không phải ảnh một sự kiện đang diễn ra" }}/> : null}</>}/>
@@ -35,15 +35,6 @@ export function PublicNewsDiscovery() {
         </nav>}
       <ArticleFragmentRestoration targetIds={["news-library"]}/>
     </section>
-    <details id="news-devlog-archive" className="lgo-catalog-summary lgo-release-reading-panel lgo-release-frame">
-      <summary>Nhật ký phát triển web · {archive.length} bài <span aria-hidden="true">+</span></summary>
-      <div className="lgo-news-devlog-archive-body">
-        <p>Kho này lưu lịch sử xây dựng website để đối chiếu. Nội dung có thể nhắc phiên bản, công cụ hoặc giới hạn kỹ thuật và không phải bản tin game hiện tại.</p>
-        <nav className="lgo-announcement-reading-routes" aria-label="Kho thông tin lịch sử"><LinkButton href="/events" tone="neutral">Sự kiện minh họa</LinkButton><LinkButton href="/patch-notes" tone="neutral">Ghi chú cập nhật</LinkButton></nav>
-        <ReadingCatalog entries={archive.map((entry) => ({ id: entry.slug, title: entry.title, description: entry.summary, href: `/news/${entry.slug}`, groupId: "archive",
-          publication: { iso: entry.publishedAt, label: publicationDate.format(new Date(entry.publishedAt)) } }))} groups={[]} label="Nhật ký phát triển" copy={archiveCopy}/>
-      </div>
-    </details>
     <aside className="lgo-release-reading-panel lgo-release-frame" aria-labelledby="news-reading-heading">
       <SectionHeading headingId="news-reading-heading" eyebrow="Đọc đúng nguồn" title="Bản tin không thay thế trạng thái hiện tại"/>
       <p>Trạng thái chơi, lộ trình, cẩm nang và hỗ trợ là các điểm đọc chính khi bạn cần biết điều gì đang dùng được hoặc còn bị khóa.</p>
@@ -53,5 +44,14 @@ export function PublicNewsDiscovery() {
       </nav>
       <small>NO_ACCEPTED_BACKEND_CONTRACT · Không có đăng ký nhận tin, thông báo tài khoản hoặc kênh tin trực tiếp.</small>
     </aside>
+    <details id="news-devlog-archive" className="lgo-catalog-summary lgo-release-reading-panel lgo-release-frame">
+      <summary>Nhật ký phát triển web · {archive.length} bài <span aria-hidden="true">+</span></summary>
+      <div className="lgo-news-devlog-archive-body">
+        <p>Kho này lưu lịch sử xây dựng website để đối chiếu. Không phải bản tin trực tiếp. Không biến thay đổi kỹ thuật thành tin game. Nội dung có thể nhắc phiên bản, công cụ hoặc giới hạn kỹ thuật và không phải bản tin game hiện tại.</p>
+        <nav className="lgo-announcement-reading-routes" aria-label="Kho thông tin lịch sử"><LinkButton href="/events" tone="neutral">Sự kiện minh họa</LinkButton><LinkButton href="/patch-notes" tone="neutral">Ghi chú cập nhật</LinkButton></nav>
+        <ReadingCatalog entries={archive.map((entry) => ({ id: entry.slug, title: entry.title, description: entry.summary, href: `/news/${entry.slug}`, groupId: "archive",
+          publication: { iso: entry.publishedAt, label: publicationDate.format(new Date(entry.publishedAt)) } }))} groups={[]} label="Nhật ký phát triển" copy={archiveCopy}/>
+      </div>
+    </details>
   </Stack>;
 }

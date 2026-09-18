@@ -27,6 +27,12 @@
 .lgo-announcement-empty h3 { font:500 1.5rem/1.4 var(--lgo-font-editorial); color:var(--lgo-color-parchment); }
 .lgo-announcement-reading-routes { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.7rem; margin:1rem 0; }
 .lgo-announcement-reading-routes .lgo-link-button { gap:.55rem; justify-content:space-between; }
+/* WEB-OPT-15 player-news empty action rail: news-only useful routes override the generic announcement grid. */
+.lgo-announcement-reading-routes.lgo-news-primary-empty-actions { grid-template-columns:repeat(3,minmax(0,1fr)); }
+@media(max-width:700px) {
+  .lgo-announcement-reading-routes.lgo-news-primary-empty-actions { display:flex; flex-wrap:nowrap; gap:.65rem; overflow-x:auto; scroll-snap-type:x proximity; padding-bottom:.35rem; scrollbar-width:thin; }
+  .lgo-announcement-reading-routes.lgo-news-primary-empty-actions > .lgo-link-button { flex:0 0 min(82vw,21rem); scroll-snap-align:start; }
+}
 @media(max-width:800px) {
   .lgo-announcement-card { grid-template-columns:1fr; gap:1rem; }
   .lgo-announcement-publication { display:grid; grid-template-columns:2rem minmax(0,1fr); gap:.35rem .7rem; border-right:0; padding:0 0 1rem; border-bottom:1px solid color-mix(in srgb,var(--lgo-color-art-ink) 23%,transparent); }
