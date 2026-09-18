@@ -38,6 +38,16 @@ def main():
  state=read("tools/validate_web_current_state.py")
  if '"validate_web_opt_events_product_decision_v1293.py"' not in state:
   ERRORS.append("v1.293 validator not registered in current state")
+ next_action=read("docs/execution/WEB-NEXT-ACTION.md")
+ project_state=read("docs/execution/WEB-PROJECT-STATE.md")
+ ledger=read("docs/execution/WEB-TASK-LEDGER.md")
+ report=read("docs/execution/LGO-WEB-OPT-16-EVENTS-PRODUCT-DECISION-REPORT-v1.293.md")
+ active_prefix="Current phase: WEB-OPT-16-EVENTS-PRODUCT-DECISION-v1.293 WEB_CLOSED"
+ if not project_state.startswith(active_prefix): ERRORS.append("WEB-PROJECT-STATE does not lead with v1.293 closure")
+ if "WEB-OPT-17-PATCH-NOTES-PRODUCT-BOUNDARY-v1.294" not in next_action: ERRORS.append("WEB-NEXT-ACTION does not advance to WEB-OPT-17 v1.294")
+ if "| WEB-OPT-16-EVENTS-PRODUCT-DECISION-v1.293 | WEB-OPT | WEB_CLOSED |" not in ledger: ERRORS.append("WEB-TASK-LEDGER does not record WEB-OPT-16 v1.293 closure")
+ for marker in ("816421209a8bd9f5d5d92d2e10902375b763aef4","2,410px","2,200px","24/24"):
+  if marker not in report: ERRORS.append("v1.293 report missing closure evidence: "+marker)
  if ERRORS:
   print("WEB OPT EVENTS PRODUCT DECISION v1.293 VALIDATION FAIL")
   for error in ERRORS: print("- "+error)

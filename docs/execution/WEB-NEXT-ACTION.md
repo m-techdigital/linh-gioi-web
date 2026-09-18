@@ -4,29 +4,29 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: 026a0719027b5db25bc7c07175ef1bb786d1ed6d — LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md.
 Backlog authority: LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md.
-WEB-OPT-15 v1.292 is CLOSED at source commit 839121ddfe8a4ae71416beb0c1f2a93602db278d; do not reopen it without a related player-news/archive-hierarchy regression.
+WEB-OPT-16 v1.293 is CLOSED at source commit 816421209a8bd9f5d5d92d2e10902375b763aef4; do not reopen it without an events source-truth/archive/indexability regression.
 
 Next task:
-WEB-OPT-16-EVENTS-PRODUCT-DECISION-v1.293
+WEB-OPT-17-PATCH-NOTES-PRODUCT-BOUNDARY-v1.294
 
 Objective:
-Make an explicit product decision for /events from current source truth: expose truthful current/future event information only if supported, otherwise keep/remove fixture-only event material from primary indexable public IA instead of presenting it as live product activity.
+Separate /patch-notes player/game/public release-note meaning from browser/runtime engineering history. Keep historical Web-program records reachable as archive material, but do not present them as game patch releases or imply a downloadable/released game build.
 
-Current optimization scope: /events only plus the smallest shared Base/IA/metadata owner change genuinely required by that decision. Do not batch /patch-notes, News detail pages, broad content rewriting, backend event systems, registration/reward systems or production deployment.
+Current optimization scope: /patch-notes only plus the smallest shared Base/IA/metadata owner change genuinely required by that boundary. Do not batch /performance, broad News rewrites, game runtime/backend release systems, launcher/version APIs or production deployment.
 
 Entry baseline:
-- WEB-OPT-01–15 foundations are CLOSED and must remain regression-green;
-- v1.281 currently classifies /events as Archive and v1.282 owns metadata/indexability;
-- existing event fixtures are not evidence of a live schedule, registration flow or reward backend.
+- WEB-OPT-01–16 foundations are CLOSED and must remain regression-green;
+- v1.281 currently classifies /patch-notes as Archive and v1.282 owns metadata/indexability;
+- existing patch-note fixtures are Web/browser engineering history, not proof of a game client release.
 
 Exit criteria:
-- /events communicates a source-supported product state with no fabricated live/current event;
-- public IA/indexability matches that product decision and retains intentional navigation continuity;
-- no registration, countdown, reward, account or event-backend capability is invented;
+- /patch-notes clearly separates player/game release-note state from archived Web engineering records;
+- public IA/indexability remains source-truthful and historical records remain reachable;
+- no game version, client availability, download, launcher, maintenance or release backend is invented;
 - keyboard/focus/touch behavior and accepted public shell/language/metadata contracts remain intact;
 - fresh BEFORE/AFTER screenshots/metrics, focused browser/e2e, relevant validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.292 contracts; no production deployment. Do not batch WEB-OPT-17.
+Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.293 contracts; no production deployment. Do not batch WEB-OPT-18.
 
 Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 

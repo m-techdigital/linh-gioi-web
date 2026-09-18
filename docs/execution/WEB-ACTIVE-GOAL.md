@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — events product decision closed (2026-09-18)
+
+WEB-OPT-16 v1.293 is CLOSED at source commit 816421209a8bd9f5d5d92d2e10902375b763aef4. /events remains an Archive/noindex surface because its only published event record is a provisional fixture with no live schedule, registration, reward or accepted event backend. The page now leads with 0 confirmed live events and keeps the fixture in a collapsed illustrative archive; mobile height falls 2,410px→2,200px with zero overflow.
+
+Next task is **WEB-OPT-17-PATCH-NOTES-PRODUCT-BOUNDARY-v1.294** on /patch-notes only. Separate player/game/public release-note meaning from browser/runtime engineering history without inventing a released game build.
+
 ## Owner optimization authority — news player discovery closed (2026-09-18)
 
 WEB-OPT-15 v1.292 is CLOSED at source commit 839121ddfe8a4ae71416beb0c1f2a93602db278d. /news now places the truthful 0-player-news state and useful Status/Guides/Roadmap routes before the collapsed 17-entry Web-engineering archive; mobile height falls 1,875px→1,681px (-10.35%), the repeated hero technical boundary is removed and the three empty-state actions become one swipe rail with zero page overflow.
