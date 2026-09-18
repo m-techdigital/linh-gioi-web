@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.295
+
+WEB-OPT-18 is CLOSED at 1524fbc299c7e43403ac1bbc380224c7299c4b6d. /performance keeps the local reading workshop and four useful routes, replaces the three-cell engineering measurement dashboard with one concise non-measurement boundary, removes four repeated source-proof disclosures and uses player-readable heading/copy. Desktop/mobile height is 2,367px/3,966px with zero overflow.
+
+Continue Phase B with WEB-OPT-19 v1.296 on /accessibility only, followed by WEB-OPT-20 v1.297 on /roadmap.
+
 ## 2026-09-18 optimization checkpoint v1.294
 
 WEB-OPT-17 is CLOSED at dbf9e05231b906faf74d9be356ab05bc5eacd99d. /patch-notes stays archive/noindex, exposes 0 confirmed game updates as the primary state, moves Status/Roadmap/Download/Trust before history and keeps both Web engineering fixtures in a collapsed archive. Desktop/mobile height is 1,386px/2,321px with zero overflow.

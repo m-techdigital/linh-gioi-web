@@ -4,29 +4,29 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: 026a0719027b5db25bc7c07175ef1bb786d1ed6d — LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md.
 Backlog authority: LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md.
-WEB-OPT-17 v1.294 is CLOSED at source commit dbf9e05231b906faf74d9be356ab05bc5eacd99d; do not reopen it without a game-vs-Web release-boundary/archive regression.
+WEB-OPT-18 v1.295 is CLOSED at source commit 1524fbc299c7e43403ac1bbc380224c7299c4b6d; do not reopen it without a related player-guidance/performance-nonclaim regression.
 
 Next task:
-WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-v1.295
+WEB-OPT-19-ACCESSIBILITY-PLAYER-HELP-v1.296
 
 Objective:
-Keep useful /performance guidance while removing engineering-dashboard tone and repeated proof blocks. Reframe the route around player-readable device/readability guidance without inventing measured speed, Core Web Vitals certification, monitoring results or production telemetry.
+Present /accessibility as player help/readability guidance rather than compliance tooling while preserving the real keyboard practice, readable navigation paths and truthful certification/settings boundaries.
 
-Current optimization scope: /performance only plus the smallest shared Base owner change genuinely required by that route. Do not batch /accessibility, broad Guides/News rewrites, telemetry/backend monitoring, CDN work, runtime benchmarking or production deployment.
+Current optimization scope: /accessibility only plus the smallest shared Base owner change genuinely required by that route. Do not batch /roadmap, broad Guides/News rewrites, legal compliance systems, preference persistence, telemetry or production deployment.
 
 Entry baseline:
-- WEB-OPT-01–17 foundations are CLOSED and must remain regression-green;
-- the route already contains truthful non-claims and local/static guidance from v1.229;
-- performance reference material must remain guidance, not measured production evidence.
+- WEB-OPT-01–18 foundations are CLOSED and must remain regression-green;
+- the route already has native keyboard/focus practice and truthful non-claims from v1.230;
+- no formal WCAG audit, legal certification, assistive-device certification or persisted user preference backend is accepted.
 
 Exit criteria:
-- /performance leads with player/device-readable guidance rather than engineering-dashboard language;
-- repeated proof/evidence blocks are reduced while source meaning and safe next routes remain discoverable;
-- no speed score, Core Web Vitals pass, monitoring, CDN or device certification is invented;
+- /accessibility leads with player-readable help and practical keyboard/readability guidance rather than compliance-dashboard language;
+- real keyboard practice, focus order and safe route links remain usable on desktop/mobile;
+- no WCAG/legal certification, stored preference, telemetry or assistive-device support claim is invented;
 - keyboard/focus/touch behavior and accepted public shell/language contracts remain intact;
 - fresh BEFORE/AFTER screenshots/metrics, focused browser/e2e, relevant validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.294 contracts; no production deployment. Do not batch WEB-OPT-19.
+Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.295 contracts; no production deployment. Do not batch WEB-OPT-20.
 
 Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 

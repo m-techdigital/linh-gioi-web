@@ -38,6 +38,16 @@ def main():
  state=read("tools/validate_web_current_state.py")
  if '"validate_web_opt_performance_guidance_tone_v1295.py"' not in state:
   ERRORS.append("v1.295 validator not registered in current state")
+ next_action=read("docs/execution/WEB-NEXT-ACTION.md")
+ project_state=read("docs/execution/WEB-PROJECT-STATE.md")
+ ledger=read("docs/execution/WEB-TASK-LEDGER.md")
+ report=read("docs/execution/LGO-WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-REPORT-v1.295.md")
+ active_prefix="Current phase: WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-v1.295 WEB_CLOSED"
+ if not project_state.startswith(active_prefix): ERRORS.append("WEB-PROJECT-STATE does not lead with v1.295 closure")
+ if "WEB-OPT-19-ACCESSIBILITY-PLAYER-HELP-v1.296" not in next_action: ERRORS.append("WEB-NEXT-ACTION does not advance to WEB-OPT-19 v1.296")
+ if "| WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-v1.295 | WEB-OPT | WEB_CLOSED |" not in ledger: ERRORS.append("WEB-TASK-LEDGER does not record WEB-OPT-18 v1.295 closure")
+ for marker in ("1524fbc299c7e43403ac1bbc380224c7299c4b6d","4,428px","3,966px","20/20"):
+  if marker not in report: ERRORS.append("v1.295 report missing closure evidence: "+marker)
  if ERRORS:
   print("WEB OPT PERFORMANCE GUIDANCE TONE v1.295 VALIDATION FAIL")
   for error in ERRORS: print("- "+error)

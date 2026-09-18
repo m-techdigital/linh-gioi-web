@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — performance guidance tone closed (2026-09-18)
+
+WEB-OPT-18 v1.295 is CLOSED at source commit 1524fbc299c7e43403ac1bbc380224c7299c4b6d. /performance now leads with player-readable device/reading guidance instead of engineering-dashboard tone; mobile height falls 4,428px→3,966px, hero proof 1→0, measurement cells 3→1 and route proof disclosures 4→0 with zero overflow.
+
+Next task is **WEB-OPT-19-ACCESSIBILITY-PLAYER-HELP-v1.296** on /accessibility only. Preserve native keyboard/readability practice and truthful limits while presenting the page as player help rather than compliance tooling; do not invent WCAG certification, legal compliance or persisted preferences.
+
 ## Owner optimization authority — patch notes product boundary closed (2026-09-18)
 
 WEB-OPT-17 v1.294 is CLOSED at source commit dbf9e05231b906faf74d9be356ab05bc5eacd99d. /patch-notes remains Archive/noindex because both published records are provisional Web/browser engineering fixtures, not game client releases. The page now leads with 0 confirmed game updates, places player verification routes before history and keeps both engineering records in a collapsed archive; mobile height falls 3,014px→2,321px with zero overflow.

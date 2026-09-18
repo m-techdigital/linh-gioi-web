@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-v1.295 WEB_CLOSED
+
+Current decision: /performance now presents reading/device help before engineering proof. The H1 is player-readable, the local ReadingPreview remains the main practice, the measurement dashboard is one concise non-measurement boundary, and four repeated route proof disclosures are removed. Desktop height is 2,367px from 2,412px (-1.87%), mobile 3,966px from 4,428px (-10.43%), mobile measurement 373px from 548px (-31.93%), overflow remains zero.
+
+Verified source delivery commit: 1524fbc299c7e43403ac1bbc380224c7299c4b6d. Exact build63; v1.295 browser8/8 + v1.229 desktop6/6 + mobile6/6 = 20/20; Content20/20; Content/UI/Web typecheck; Web lint; v1.295/v1.229/v1.89/v1.85/v1.281/v1.282 source guards; clean 2,030-file current-state candidate PASS.
+
+Next task: WEB-OPT-19-ACCESSIBILITY-PLAYER-HELP-v1.296 on /accessibility only. Preserve real keyboard/readability practice while reframing compliance-style language as player help without certification or persisted preference claims.
+
+Detailed report: LGO-WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-REPORT-v1.295.md.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-17-PATCH-NOTES-PRODUCT-BOUNDARY-v1.294 WEB_CLOSED
 
 Current decision: /patch-notes remains Archive/noindex because both published records are provisional Web/browser engineering fixtures rather than game patch releases. The route now states 0 confirmed game updates, shows no primary AnnouncementBoard, places player verification routes before history and keeps the two exact records in a collapsed Web archive. Desktop height is 1,386px from 1,716px (-19.23%), mobile 2,321px from 3,014px (-22.99%), primary state mobile 478px from 1,242px (-61.51%), overflow remains zero.
