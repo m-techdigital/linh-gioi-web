@@ -4,29 +4,29 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: 026a0719027b5db25bc7c07175ef1bb786d1ed6d — LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md.
 Backlog authority: LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md.
-WEB-OPT-16 v1.293 is CLOSED at source commit 816421209a8bd9f5d5d92d2e10902375b763aef4; do not reopen it without an events source-truth/archive/indexability regression.
+WEB-OPT-17 v1.294 is CLOSED at source commit dbf9e05231b906faf74d9be356ab05bc5eacd99d; do not reopen it without a game-vs-Web release-boundary/archive regression.
 
 Next task:
-WEB-OPT-17-PATCH-NOTES-PRODUCT-BOUNDARY-v1.294
+WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-v1.295
 
 Objective:
-Separate /patch-notes player/game/public release-note meaning from browser/runtime engineering history. Keep historical Web-program records reachable as archive material, but do not present them as game patch releases or imply a downloadable/released game build.
+Keep useful /performance guidance while removing engineering-dashboard tone and repeated proof blocks. Reframe the route around player-readable device/readability guidance without inventing measured speed, Core Web Vitals certification, monitoring results or production telemetry.
 
-Current optimization scope: /patch-notes only plus the smallest shared Base/IA/metadata owner change genuinely required by that boundary. Do not batch /performance, broad News rewrites, game runtime/backend release systems, launcher/version APIs or production deployment.
+Current optimization scope: /performance only plus the smallest shared Base owner change genuinely required by that route. Do not batch /accessibility, broad Guides/News rewrites, telemetry/backend monitoring, CDN work, runtime benchmarking or production deployment.
 
 Entry baseline:
-- WEB-OPT-01–16 foundations are CLOSED and must remain regression-green;
-- v1.281 currently classifies /patch-notes as Archive and v1.282 owns metadata/indexability;
-- existing patch-note fixtures are Web/browser engineering history, not proof of a game client release.
+- WEB-OPT-01–17 foundations are CLOSED and must remain regression-green;
+- the route already contains truthful non-claims and local/static guidance from v1.229;
+- performance reference material must remain guidance, not measured production evidence.
 
 Exit criteria:
-- /patch-notes clearly separates player/game release-note state from archived Web engineering records;
-- public IA/indexability remains source-truthful and historical records remain reachable;
-- no game version, client availability, download, launcher, maintenance or release backend is invented;
-- keyboard/focus/touch behavior and accepted public shell/language/metadata contracts remain intact;
+- /performance leads with player/device-readable guidance rather than engineering-dashboard language;
+- repeated proof/evidence blocks are reduced while source meaning and safe next routes remain discoverable;
+- no speed score, Core Web Vitals pass, monitoring, CDN or device certification is invented;
+- keyboard/focus/touch behavior and accepted public shell/language contracts remain intact;
 - fresh BEFORE/AFTER screenshots/metrics, focused browser/e2e, relevant validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.293 contracts; no production deployment. Do not batch WEB-OPT-18.
+Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.294 contracts; no production deployment. Do not batch WEB-OPT-19.
 
 Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 

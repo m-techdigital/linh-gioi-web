@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-17-PATCH-NOTES-PRODUCT-BOUNDARY-v1.294 WEB_CLOSED
+
+Current decision: /patch-notes remains Archive/noindex because both published records are provisional Web/browser engineering fixtures rather than game patch releases. The route now states 0 confirmed game updates, shows no primary AnnouncementBoard, places player verification routes before history and keeps the two exact records in a collapsed Web archive. Desktop height is 1,386px from 1,716px (-19.23%), mobile 2,321px from 3,014px (-22.99%), primary state mobile 478px from 1,242px (-61.51%), overflow remains zero.
+
+Verified source delivery commit: dbf9e05231b906faf74d9be356ab05bc5eacd99d. Exact build63; v1.294 browser8/8 + v1.252 desktop9/9 + mobile9/9 = 26/26; Content20/20; Content/UI/Web typecheck; Web lint; v1.294/v1.252/v1.281/v1.282/v1.85 source guards; clean 2,027-file current-state candidate PASS.
+
+Next task: WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-v1.295 on /performance only. Preserve truthful guidance while removing engineering-dashboard tone and repeated proof density; do not claim measured production performance.
+
+Detailed report: LGO-WEB-OPT-17-PATCH-NOTES-PRODUCT-BOUNDARY-REPORT-v1.294.md.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-16-EVENTS-PRODUCT-DECISION-v1.293 WEB_CLOSED
 
 Current decision: /events remains Archive/noindex because the only published event record is the provisional spirit-festival-event-placeholder fixture. The page now states 0 confirmed live events, presents no primary live AnnouncementBoard, and keeps the fixture available only inside a collapsed illustrative archive. Desktop height is 1,386px from 1,420px (-2.39%), mobile 2,200px from 2,410px (-8.71%), current-state block mobile 421px from 692px (-39.16%), overflow remains zero.

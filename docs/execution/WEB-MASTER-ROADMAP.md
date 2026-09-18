@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.294
+
+WEB-OPT-17 is CLOSED at dbf9e05231b906faf74d9be356ab05bc5eacd99d. /patch-notes stays archive/noindex, exposes 0 confirmed game updates as the primary state, moves Status/Roadmap/Download/Trust before history and keeps both Web engineering fixtures in a collapsed archive. Desktop/mobile height is 1,386px/2,321px with zero overflow.
+
+Continue Phase B with WEB-OPT-18 v1.295 on /performance only, followed by WEB-OPT-19 v1.296 on /accessibility.
+
 ## 2026-09-18 optimization checkpoint v1.293
 
 WEB-OPT-16 is CLOSED at 816421209a8bd9f5d5d92d2e10902375b763aef4. /events stays archive/noindex, exposes 0 confirmed live events as the primary source-supported state and moves the sole provisional fixture into a collapsed illustrative archive. Desktop/mobile height is 1,386px/2,200px with zero overflow.

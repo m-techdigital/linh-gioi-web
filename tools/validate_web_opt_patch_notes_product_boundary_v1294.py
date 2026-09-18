@@ -42,6 +42,16 @@ def main():
  state=read("tools/validate_web_current_state.py")
  if '"validate_web_opt_patch_notes_product_boundary_v1294.py"' not in state:
   ERRORS.append("v1.294 validator not registered in current state")
+ next_action=read("docs/execution/WEB-NEXT-ACTION.md")
+ project_state=read("docs/execution/WEB-PROJECT-STATE.md")
+ ledger=read("docs/execution/WEB-TASK-LEDGER.md")
+ report=read("docs/execution/LGO-WEB-OPT-17-PATCH-NOTES-PRODUCT-BOUNDARY-REPORT-v1.294.md")
+ active_prefix="Current phase: WEB-OPT-17-PATCH-NOTES-PRODUCT-BOUNDARY-v1.294 WEB_CLOSED"
+ if not project_state.startswith(active_prefix): ERRORS.append("WEB-PROJECT-STATE does not lead with v1.294 closure")
+ if "WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-v1.295" not in next_action: ERRORS.append("WEB-NEXT-ACTION does not advance to WEB-OPT-18 v1.295")
+ if "| WEB-OPT-17-PATCH-NOTES-PRODUCT-BOUNDARY-v1.294 | WEB-OPT | WEB_CLOSED |" not in ledger: ERRORS.append("WEB-TASK-LEDGER does not record WEB-OPT-17 v1.294 closure")
+ for marker in ("dbf9e05231b906faf74d9be356ab05bc5eacd99d","3,014px","2,321px","26/26"):
+  if marker not in report: ERRORS.append("v1.294 report missing closure evidence: "+marker)
  if ERRORS:
   print("WEB OPT PATCH NOTES PRODUCT BOUNDARY v1.294 VALIDATION FAIL")
   for error in ERRORS: print("- "+error)

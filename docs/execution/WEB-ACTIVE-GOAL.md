@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — patch notes product boundary closed (2026-09-18)
+
+WEB-OPT-17 v1.294 is CLOSED at source commit dbf9e05231b906faf74d9be356ab05bc5eacd99d. /patch-notes remains Archive/noindex because both published records are provisional Web/browser engineering fixtures, not game client releases. The page now leads with 0 confirmed game updates, places player verification routes before history and keeps both engineering records in a collapsed archive; mobile height falls 3,014px→2,321px with zero overflow.
+
+Next task is **WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-v1.295** on /performance only. Keep useful player-facing performance guidance while removing engineering-dashboard tone and repeated proof blocks; do not invent measured speed, Core Web Vitals certification or production telemetry.
+
 ## Owner optimization authority — events product decision closed (2026-09-18)
 
 WEB-OPT-16 v1.293 is CLOSED at source commit 816421209a8bd9f5d5d92d2e10902375b763aef4. /events remains an Archive/noindex surface because its only published event record is a provisional fixture with no live schedule, registration, reward or accepted event backend. The page now leads with 0 confirmed live events and keeps the fixture in a collapsed illustrative archive; mobile height falls 2,410px→2,200px with zero overflow.
