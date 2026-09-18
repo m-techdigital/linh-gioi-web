@@ -18,7 +18,7 @@ def require(rel: str, markers: tuple[str, ...] = ()) -> str:
 def main() -> int:
     ERRORS.clear()
     page = require('apps/web/src/app/patch-notes/page.tsx', ('localContentRepository.list("patch-notes")', 'lgo-patch-notes-experience', '@lgo-web/ui/announcement-board.css'))
-    order = ('<PublicPatchNotesHero/>', '<PublicPatchNoteRecords entries={entries}/>', '<PublicPatchNotesReadingRoutes/>')
+    order = ('<PublicPatchNotesHero/>', '<PublicPatchNoteRecords entries={entries}/>', '<PublicPatchNotesReadingRoutes/>', '<PublicPatchNotesArchive entries={entries}/>')
     offsets = [page.find(marker) for marker in order]
     if -1 in offsets or offsets != sorted(offsets): ERRORS.append('journal composition order changed')
     view = require('apps/web/src/components/PublicPatchNotesExperience.tsx', (
@@ -26,12 +26,13 @@ def main() -> int:
         'id: entry.slug', 'title: entry.title', 'summary: entry.summary', 'body: entry.body',
         'iso: entry.publishedAt', 'publicationDate.format(new Date(entry.publishedAt))', 'timeZone: "UTC"',
         'copy={{ eyebrow: "Nhật ký phát triển", publicationNote: "Không phải ngày phát hành game", disclosureLabel: "Đọc toàn bộ bản ghi" }}',
-        'Bản ghi không mở tải build mới hoặc xác nhận phát hành game.', 'Không phải số phiên bản game có thể tải.',
+        'Bản ghi không mở tải build mới hoặc xác nhận phát hành game.', 'Chưa có ghi chú phát hành game',
+        '0 bản cập nhật game được xác nhận', 'id="patch-notes-web-archive"', 'Nhật ký kỹ thuật Web',
         'Không phải ảnh bản cập nhật đã phát hành', 'NO_ACCEPTED_BACKEND_CONTRACT',
         '<ArticleFragmentRestoration targetIds={["patch-notes-announcements"]}/>',
         'id="patch-notes-announcements"', 'tabIndex={-1}', 'href: "#patch-notes-announcements"',
         'href="/status"', 'href="/roadmap"', 'href="/download"', 'href="/download/trust"',
-        'emptyTitle="Chưa có ghi chú cập nhật công khai"', 'không cài bản vá'))
+        'emptyTitle="Chưa có bản ghi kỹ thuật Web"', 'không cài bản vá'))
     board = require('packages/ui/src/announcement-board.tsx', (
         'export type AnnouncementBoardCopy', 'copy?: AnnouncementBoardCopy', 'copy = defaultCopy',
         'eyebrow: "Thông báo định hướng"', 'publicationNote: "Không phải ngày tổ chức"', 'disclosureLabel: "Đọc toàn bộ thông báo"',
@@ -49,7 +50,7 @@ def main() -> int:
     if 'Patch notes page composes shared service proof/card layout' in require('packages/ui/src/service-layout.css'): ERRORS.append('obsolete patch-only CSS retained')
     require('apps/web/src/components/PublicDesignTargetReference.tsx', ('pathname === "/patch-notes"', 'Bố cục nhật ký phát triển'))
     require('tests/e2e/fe-patch-notes-journal-v1252.spec.ts', (
-        'entry.summary', 'entry.body', 'entry.publishedAt', 'card.width', 'metrics.loaded', 'width:320',
+        'entry.summary', 'entry.body', 'entry.publishedAt', 'patch-notes-web-archive', 'STATIC_BUILD', 'card.width', 'metrics.loaded', 'width:320',
         'toBeGreaterThanOrEqual(14)', 'toBeGreaterThanOrEqual(44)', 'toBeFocused()', 'requests).toEqual([])',
         "keyboard.press('Shift+Tab')", 'forcedColors', 'violations).toEqual([])', 'page.goBack()', 'page.reload()',
         'screenshot', 'two native records expand independently', 'Không phải ngày phát hành game'))

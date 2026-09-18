@@ -6,7 +6,7 @@ import "@lgo-web/ui/reading-catalog.css";
 import "@lgo-web/ui/announcement-board.css";
 import { localContentRepository } from "@lgo-web/content";
 import { Stack } from "@lgo-web/ui";
-import { PublicPatchNoteRecords, PublicPatchNotesHero, PublicPatchNotesReadingRoutes } from "../../components/PublicPatchNotesExperience";
+import { PublicPatchNoteRecords, PublicPatchNotesArchive, PublicPatchNotesHero, PublicPatchNotesReadingRoutes } from "../../components/PublicPatchNotesExperience";
 import { WebAppShell } from "../../components/WebAppShell";
 
 export const metadata = metadataForRoute("/patch-notes");
@@ -17,5 +17,6 @@ export default function Page() {
     <PublicPatchNotesHero/>
     <PublicPatchNoteRecords entries={entries}/>
     <PublicPatchNotesReadingRoutes/>
+    <PublicPatchNotesArchive entries={entries}/>
   </Stack></WebAppShell>;
 }
