@@ -31,7 +31,7 @@ def check_ops_routes() -> None:
         ("apps/ops/src/app/trust-safety/page.tsx", ["Chuyển phê duyệt — chưa khả dụng", "Áp dụng biện pháp — chưa khả dụng"]),
         ("apps/ops/src/app/content-liveops/page.tsx", ["Publish event — blocked", "Rollback — blocked"]),
         ("apps/ops/src/app/support/[id]/page.tsx", ["Assign case — blocked", "Escalate — blocked"]),
-        ("apps/ops/src/app/player-operations/[id]/page.tsx", ["Suspend account — blocked", "Apply moderation — blocked"]),
+        ("apps/ops/src/app/player-operations/[id]/page.tsx", ["Revoke session — blocked", "Unstuck — blocked"]),
         ("apps/ops/src/app/game-operations/[id]/page.tsx", ["Apply operation — blocked"]),
     ]
     for rel, labels in routes:

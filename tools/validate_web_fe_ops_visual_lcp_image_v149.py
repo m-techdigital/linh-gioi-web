@@ -27,12 +27,11 @@ def require_text(rel: str, markers: list[str]) -> str:
     return text
 
 def check_ops_routes() -> None:
-    routes = [
+    primary_routes = [
         "apps/ops/src/app/page.tsx",
-        "apps/ops/src/app/control-center/page.tsx",
         "apps/ops/src/app/security-governance/page.tsx",
     ]
-    for rel in routes:
+    for rel in primary_routes:
         text = require_text(rel, [
             "Image",
             "loading=",
@@ -45,6 +44,20 @@ def check_ops_routes() -> None:
             fail(f"{rel}: missing WORLD_CONCEPT eager loading expression")
         if "fetch(" in text or "axios" in text or "<form" in text:
             fail(f"{rel}: forbidden backend/form marker")
+
+    control = "apps/ops/src/app/control-center/page.tsx"
+    text = require_text(control, [
+        "Image",
+        "opsVisualProofPanels",
+        "NO_ACCEPTED_BACKEND_CONTRACT",
+        'loading="lazy"',
+        "lgo-ops-secondary-visual",
+        "Freshness: unavailable",
+    ])
+    if "priority" in text:
+        fail(f"{control}: secondary visual must not use priority loading")
+    if "fetch(" in text or "axios" in text or "<form" in text:
+        fail(f"{control}: forbidden backend/form marker")
 
 def check_tests_and_docs() -> None:
     for rel in [

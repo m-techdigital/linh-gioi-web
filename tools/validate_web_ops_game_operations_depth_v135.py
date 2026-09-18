@@ -14,7 +14,7 @@ def main():
  f='apps/ops/src/lib/ops-fixtures.ts'
  for m in ('opsGameOperationFixtures','opsGameOperationActivityFixtures','PROVISIONAL_WEB_FIXTURE','NO_REAL_OPS_MUTATION','NOT_CANONICAL_BACKEND_CONTRACT'): req(f,m)
  routes={
-  'apps/ops/src/app/game-operations/page.tsx':('MetricGrid','DataTable','LinkButton','opsGameOperationFixtures'),
+  'apps/ops/src/app/game-operations/page.tsx':('DataList','LinkButton','StatusBadge','opsGameOperationFixtures','Freshness: unavailable','NO_REAL_OPS_MUTATION'),
   'apps/ops/src/app/game-operations/[id]/page.tsx':('CaseSummary','ActivityTimeline','FormField','SelectInput','opsGameOperationActivityFixtures'),
   'apps/ops/src/app/content-liveops/page.tsx':('ProvisionalFeatureShell','CaseSummary','ActivityTimeline'),
  }

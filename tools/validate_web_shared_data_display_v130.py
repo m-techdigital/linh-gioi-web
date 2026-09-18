@@ -26,8 +26,9 @@ def main():
     for layout in ('apps/portal/src/app/layout.tsx','apps/ops/src/app/layout.tsx'):
         require(layout,'@lgo-web/ui/data.css')
     portal='apps/portal/src/app/characters/page.tsx'; ops='apps/ops/src/app/player-operations/page.tsx'
-    # Shared table/metric/pagination primitives remain canonical and Ops still consumes them.
-    for marker in ('MetricGrid','DataTable','PaginationBar','PROVISIONAL_WEB_FIXTURE','NOT_CANONICAL_BACKEND_CONTRACT'):
+    # Shared table/metric/pagination primitives remain canonical even when a workflow uses a
+    # better-fit shared DataList/form composition instead of forcing a generic CRUD table.
+    for marker in ('DataList','FormField','TextInput','PROVISIONAL_WEB_FIXTURE','NOT_CANONICAL_BACKEND_CONTRACT'):
         require(ops, marker)
     forbid(ops,'<table')
     # Portal character roster may use a product-specific three-slot card composition while

@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     errors=[]
     expected={
-        'apps/ops/src/app/control-center/page.tsx':['MetricGrid','opsReviewQueueFixtures','DataList','LinkButton'],
+        'apps/ops/src/app/control-center/page.tsx':['opsReviewQueueFixtures','DataList','LinkButton','sourceMeta','Freshness: unavailable','lgo-ops-secondary-visual'],
         'apps/ops/src/app/trust-safety/page.tsx':['CaseSummary','ActivityTimeline','opsSafetyReviewFixture','ProgressSteps','BlockedActionButton','NO_ACCEPTED_BACKEND_CONTRACT'],
         'apps/ops/src/app/security-governance/page.tsx':['ProgressSteps','opsApprovalSteps','VisualProofGrid','Governance route continuity'],
         'apps/ops/src/app/page.tsx':['LinkButton','href: "/trust-safety"','href: "/security-governance"'],

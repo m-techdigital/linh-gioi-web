@@ -13,7 +13,7 @@ const cases: RouteCase[] = [
   { path: "/trust-safety", heading: "Trust & Safety", actions: ["Chuyển phê duyệt — chưa khả dụng", "Áp dụng biện pháp — chưa khả dụng"] },
   { path: "/content-liveops", heading: "Content & LiveOps", actions: ["Publish event — blocked", "Rollback — blocked"] },
   { path: "/support/support-fixture-001", heading: /Support review · support-fixture-001/, actions: ["Assign case — blocked", "Escalate — blocked"] },
-  { path: "/player-operations/fixture-001", heading: /Player review · Fixture Player 001/, actions: ["Suspend account — blocked", "Apply moderation — blocked"] },
+  { path: "/player-operations/fixture-001", heading: /Player 360 · Fixture Player 001/, actions: ["Revoke session — blocked", "Unstuck — blocked"] },
   { path: "/game-operations/world-fixture-001", heading: /Operation review · World session A/, actions: ["Apply operation — blocked"] },
 ];
 
