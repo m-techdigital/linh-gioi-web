@@ -43,7 +43,7 @@ def main():
   "engineering history remains source-owned but is not public roadmap content",
   "four release stages lead the public roadmap without fake progress",
   "publicRoadmapItems")
- state=read("tools/validate_web_current_state.py")
+ state=read("tools/web_active_suite_manifest_v1298.json")
  if '"validate_web_opt_player_roadmap_v1297.py"' not in state:
   ERRORS.append("v1.297 validator not registered in current state")
 

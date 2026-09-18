@@ -35,7 +35,7 @@ def main():
   "player-readable guidance replaces engineering dashboard tone",
   "reading workshop remains local, optional and non-measuring",
   "useful routes and non-claims remain without telemetry or fake score")
- state=read("tools/validate_web_current_state.py")
+ state=read("tools/web_active_suite_manifest_v1298.json")
  if '"validate_web_opt_performance_guidance_tone_v1295.py"' not in state:
   ERRORS.append("v1.295 validator not registered in current state")
  next_action=read("docs/execution/WEB-NEXT-ACTION.md")

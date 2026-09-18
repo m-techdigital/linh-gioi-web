@@ -103,7 +103,7 @@ def main() -> int:
         fail("WEB-TASK-LEDGER does not record WEB-OPT-03 v1.280 closure")
     if "1c131e10ffe7f5ef060189cc02cbf57e77fcdf7a" not in report or "83.35%" not in report:
         fail("v1.280 report is missing source/footprint closure evidence")
-    current_state = read("tools/validate_web_current_state.py")
+    current_state = read("tools/web_active_suite_manifest_v1298.json")
     if '"validate_web_opt_public_asset_boundary_v1280.py"' not in current_state:
         fail("v1.280 validator is not registered in WEB CURRENT STATE authority")
 

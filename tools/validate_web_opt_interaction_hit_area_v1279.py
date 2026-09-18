@@ -67,7 +67,7 @@ def main() -> int:
         ERRORS.append("WEB-TASK-LEDGER does not record WEB-OPT-02 v1.279 closure")
     if "72 controls below 44px" not in report or "5de43e8de9378d57162ad741dd5b3a4e87609417" not in report:
         ERRORS.append("v1.279 report is missing final geometry/source evidence")
-    current_state = read("tools/validate_web_current_state.py")
+    current_state = read("tools/web_active_suite_manifest_v1298.json")
     if '"validate_web_opt_interaction_hit_area_v1279.py"' not in current_state:
         ERRORS.append("v1.279 validator is not registered in WEB CURRENT STATE authority")
 

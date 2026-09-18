@@ -24,7 +24,7 @@ def main():
   if marker in page+experience: ERRORS.append('community must remain static guidance/prototype only: '+marker)
  css=need('packages/ui/src/community-layout.css','WEB-OPT-11 community value rail','display:flex','overflow-x:auto','scroll-snap-type:x proximity','flex:0 0 min(86vw,22rem)')
  test=need('tests/e2e/web-opt-community-value-clarity-v1288.spec.ts','player value and next steps lead before one compact live-social boundary','toBeLessThanOrEqual(3650)','overflowX','axe.run','captures accepted desktop/mobile community composition')
- state=read('tools/validate_web_current_state.py')
+ state=read('tools/web_active_suite_manifest_v1298.json')
  if '"validate_web_opt_community_value_clarity_v1288.py"' not in state: ERRORS.append('v1.288 validator not registered in current state')
  prior=read('tools/validate_web_fe_community_real_ui_layout_v1227.py')
  for marker in ('PublicCommunityExperience.tsx','community-layout.css','NO_ACCEPTED_BACKEND_CONTRACT'):

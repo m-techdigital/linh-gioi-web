@@ -1,0 +1,1194 @@
+{
+  "schema_version": 1,
+  "authority": "WEB-OPT-21-ACTIVE-TEST-VALIDATOR-AUTHORITY-CONSOLIDATION-v1.298",
+  "historical_is_provenance_not_pass": true,
+  "policy": {
+    "browser_selection": "Playwright testMatch comes only from active.browser_specs.",
+    "validator_dispatch": "WEB CURRENT STATE executes only active.validators.",
+    "superseded_behavior": "Superseded entries remain immutable provenance and are never printed or counted as runtime PASS.",
+    "registration": "A new current gate must be registered here before normal execution."
+  },
+  "active": {
+    "validators": [
+      "validate_web_opt_active_suite_authority_v1298.py",
+      "validate_web_opt_player_roadmap_v1297.py",
+      "validate_web_opt_accessibility_player_help_v1296.py",
+      "validate_web_opt_performance_guidance_tone_v1295.py",
+      "validate_web_opt_patch_notes_product_boundary_v1294.py",
+      "validate_web_opt_events_product_decision_v1293.py",
+      "validate_web_opt_news_player_discovery_v1292.py",
+      "validate_web_opt_guides_discovery_v1291.py",
+      "validate_web_opt_game_loop_density_v1290.py",
+      "validate_web_opt_community_onboarding_v1289.py",
+      "validate_web_opt_community_value_clarity_v1288.py",
+      "validate_web_opt_support_safety_flow_v1287.py",
+      "validate_web_opt_support_help_discovery_v1286.py",
+      "validate_web_opt_support_entry_hierarchy_v1285.py",
+      "validate_web_opt_editorial_mobile_density_v1284.py",
+      "validate_web_opt_editorial_renderers_v1283.py",
+      "validate_web_opt_seo_metadata_v1282.py",
+      "validate_web_opt_public_ia_language_v1281.py",
+      "validate_web_opt_public_asset_boundary_v1280.py",
+      "validate_web_opt_interaction_hit_area_v1279.py",
+      "validate_web_opt_public_css_ownership_v1278.py",
+      "validate_web_fe_status_visual_realignment_v1276.py",
+      "validate_web_fe_release_tester_pack_visual_realignment_v1275.py",
+      "validate_web_fe_release_readiness_visual_realignment_v1274.py",
+      "validate_web_fe_release_visual_realignment_v1273.py",
+      "validate_web_fe_download_trust_visual_realignment_v1272.py",
+      "validate_web_fe_download_visual_realignment_v1271.py",
+      "validate_web_fe_start_visual_realignment_v1270.py",
+      "validate_web_fe_journey_visual_realignment_v1269.py",
+      "validate_web_fe_classes_visual_realignment_v1268.py",
+      "validate_web_fe_story_visual_realignment_v1267.py",
+      "validate_web_fe_game_world_realignment_v1266.py",
+      "validate_web_fe_homepage_design_realignment_v1265.py",
+      "validate_web_program_constitution.py",
+      "validate_web_monorepo_foundation.py",
+      "validate_web_design_system.py",
+      "validate_web_live_content.py",
+      "validate_web_public_rc.py",
+      "validate_web_portal_shell.py",
+      "validate_web_ops_shell.py",
+      "validate_web_runtime_preseed.py",
+      "validate_web_public_player_safety_support_faq_polish.py",
+      "validate_web_public_game_experience_v122.py",
+      "validate_web_public_game_visual_cta_v123.py",
+      "validate_web_public_approved_art_ingest_v124.py",
+      "validate_web_public_class_world_story_depth_v125.py",
+      "validate_web_base_first.py",
+      "validate_web_shared_base.py",
+      "validate_web_shared_page_patterns_v128.py",
+      "validate_web_shared_form_controls_v129.py",
+      "validate_web_shared_data_display_v130.py",
+      "validate_web_portal_account_character_depth_v131.py",
+      "validate_web_ops_player_operations_depth_v132.py",
+      "validate_web_portal_support_recovery_depth_v133.py",
+      "validate_web_ops_support_triage_depth_v134.py",
+      "validate_web_ops_game_operations_depth_v135.py",
+      "validate_web_portal_access_depth_v136.py",
+      "validate_web_ops_review_depth_v138.py",
+      "validate_web_game_contract_sync_v10.py",
+      "validate_web_portal_journey_demo_v139.py",
+      "validate_web_fe_visual_asset_layout_v140.py",
+      "validate_web_fe_continued_surface_polish_v141.py",
+      "validate_web_fe_route_depth_continuity_v142.py",
+      "validate_web_fe_accessibility_interaction_audit_v143.py",
+      "validate_web_fe_public_navigation_interaction_v144.py",
+      "validate_web_fe_blocked_action_keyboard_v145.py",
+      "validate_web_fe_ops_blocked_action_keyboard_v146.py",
+      "validate_web_fe_workspace_skip_link_visual_v147.py",
+      "validate_web_fe_portal_security_lcp_image_v148.py",
+      "validate_web_fe_ops_visual_lcp_image_v149.py",
+      "validate_web_fe_public_skip_link_visual_v150.py",
+      "validate_web_fe_portal_home_lcp_image_v151.py",
+      "validate_web_fe_portal_journey_lcp_image_v152.py",
+      "validate_web_fe_public_cinematic_image_loading_v153.py",
+      "validate_web_fe_portal_support_blocked_action_v156.py",
+      "validate_web_fe_shared_pagination_boundary_v157.py",
+      "validate_web_fe_accessibility_axe_matrix_v158.py",
+      "validate_web_fe_shared_data_table_scroll_region_v159.py",
+      "validate_web_fe_shared_fixture_form_controls_v160.py",
+      "validate_web_fe_workspace_nav_scroll_region_v161.py",
+      "validate_web_fe_portal_home_visual_lcp_images_v162.py",
+      "validate_web_fe_public_brand_nav_scroll_region_v163.py",
+      "validate_web_fe_expanded_route_readability_v165.py",
+      "validate_web_fe_shared_pagination_boundary_reason_v166.py",
+      "validate_web_fe_portal_access_journey_visual_v168.py",
+      "validate_web_fe_ops_audit_visual_v169.py",
+      "validate_web_fe_public_content_heading_order_v185.py",
+      "validate_web_fe_public_release_heading_priority_v186.py",
+      "validate_web_fe_public_support_heading_priority_v187.py",
+      "validate_web_fe_public_trust_heading_priority_v188.py",
+      "validate_web_fe_public_route_heading_priority_v189.py",
+      "validate_web_fe_public_community_real_plaza_gallery_v191.py",
+      "validate_web_fe_public_visual_atmosphere_v192.py",
+      "validate_web_fe_public_professional_design_target_v194.py",
+      "validate_web_fe_complete_design_atlas_v195.py",
+      "validate_web_design_first_governance_v196.py",
+      "validate_web_fe_public_design_target_attachment_v197.py",
+      "validate_web_fe_workspace_design_target_attachment_v198.py",
+      "validate_web_fe_workspace_design_target_asset_v199.py",
+      "validate_web_fe_component_state_design_target_v1100.py",
+      "validate_web_fe_design_target_link_a11y_v1101.py",
+      "validate_web_fe_design_target_focus_motion_v1102.py",
+      "validate_web_fe_design_target_link_rel_v1103.py",
+      "validate_web_fe_design_target_region_scope_v1104.py",
+      "validate_web_fe_design_target_region_description_v1105.py",
+      "validate_web_fe_design_target_actions_group_v1106.py",
+      "validate_web_fe_design_target_visible_new_tab_cue_v1107.py",
+      "validate_web_fe_design_target_cue_spacing_v1108.py",
+      "validate_web_fe_design_target_reduced_motion_v1109.py",
+      "validate_web_fe_design_target_transition_parity_v1110.py",
+      "validate_web_fe_design_target_link_scope_name_v1111.py",
+      "validate_web_fe_public_download_nav_section_v1112.py",
+      "validate_web_fe_public_expanded_service_route_audit_v1113.py",
+      "validate_web_fe_public_expanded_core_route_audit_v1114.py",
+      "validate_web_fe_portal_expanded_route_audit_v1115.py",
+      "validate_web_fe_ops_expanded_route_audit_v1116.py",
+      "validate_web_fe_shell_keyboard_reachability_v1117.py",
+      "validate_web_fe_news_release_readiness_real_ui_layout_v1184.py",
+      "validate_web_fe_news_player_trust_release_real_ui_layout_v1185.py",
+      "validate_web_fe_news_route_continuity_real_ui_layout_v1186.py",
+      "validate_web_fe_news_accessibility_readability_real_ui_layout_v1191.py",
+      "validate_web_fe_news_performance_copy_budget_real_ui_layout_v1192.py",
+      "validate_web_fe_news_route_continuity_conversion_real_ui_layout_v1193.py",
+      "validate_web_fe_news_player_trust_release_real_ui_layout_v1194.py",
+      "validate_web_fe_news_release_readiness_hub_real_ui_layout_v1195.py",
+      "validate_web_fe_news_faq_search_helpfulness_real_ui_layout_v1197.py",
+      "validate_web_fe_release_readiness_real_ui_layout_v1221.py",
+      "validate_web_fe_status_real_ui_layout_v1223.py",
+      "validate_web_fe_support_help_real_ui_layout_v1225.py",
+      "validate_web_fe_support_safety_real_ui_layout_v1226.py",
+      "validate_web_fe_community_real_ui_layout_v1227.py",
+      "validate_web_fe_community_onboarding_real_ui_layout_v1228.py",
+      "validate_web_fe_performance_real_ui_layout_v1229.py",
+      "validate_web_fe_accessibility_real_ui_layout_v1230.py",
+      "validate_web_fe_roadmap_real_ui_layout_v1231.py",
+      "validate_web_fe_game_loop_real_ui_layout_v1232.py",
+      "validate_web_fe_world_loop_guide_article_v1233.py",
+      "validate_web_fe_guides_discovery_real_ui_layout_v1234.py",
+      "validate_web_fe_beginner_guide_reading_v1235.py",
+      "validate_web_fe_gate_entry_guide_article_v1236.py",
+      "validate_web_fe_training_loop_guide_article_v1237.py",
+      "validate_web_fe_download_readiness_guide_article_v1238.py",
+      "validate_web_fe_support_community_guide_article_v1239.py",
+      "validate_web_fe_release_trust_guide_article_v1240.py",
+      "validate_web_fe_community_roadmap_guide_article_v1241.py",
+      "validate_web_fe_start_here_guide_article_v1242.py",
+      "validate_web_fe_player_safety_guide_article_v1243.py",
+      "validate_web_fe_readability_guide_article_v1244.py",
+      "validate_web_fe_performance_guide_article_v1245.py",
+      "validate_web_fe_route_continuity_guide_article_v1246.py",
+      "validate_web_fe_player_trust_guide_article_v1247.py",
+      "validate_web_fe_release_readiness_guide_article_v1248.py",
+      "validate_web_fe_tester_guide_article_v1249.py",
+      "validate_web_fe_faq_guide_article_v1250.py",
+      "validate_web_fe_events_announcement_board_v1251.py",
+      "validate_web_fe_patch_notes_journal_v1252.py",
+      "validate_web_fe_control_tower_article_v1254.py",
+      "validate_web_fe_public_ux_article_v1255.py",
+      "validate_web_fe_visual_responsive_article_v1256.py",
+      "validate_web_fe_game_info_article_v1257.py",
+      "validate_web_fe_detail_reading_article_v1258.py",
+      "validate_web_fe_status_trust_article_v1259.py",
+      "validate_web_fe_tester_preparation_article_v1260.py",
+      "validate_web_fe_community_onboarding_article_v1261.py",
+      "validate_web_fe_content_hub_article_v1262.py",
+      "validate_web_fe_world_loop_article_v1263.py",
+      "validate_web_fe_safety_support_article_v1264.py"
+    ],
+    "browser_specs": [
+      "fe-accessibility-axe-matrix-v158.spec.ts",
+      "fe-accessibility-interaction-audit-v143.spec.ts",
+      "fe-accessibility-real-ui-layout-v1230.spec.ts",
+      "fe-beginner-guide-reading-v1235.spec.ts",
+      "fe-blocked-action-keyboard-v145.spec.ts",
+      "fe-classes-visual-realignment-v1268.spec.ts",
+      "fe-community-onboarding-real-ui-layout-v1228.spec.ts",
+      "fe-community-real-ui-layout-v1227.spec.ts",
+      "fe-community-roadmap-guide-article-v1241.spec.ts",
+      "fe-complete-design-atlas-v195.spec.ts",
+      "fe-component-state-design-target-v1100.spec.ts",
+      "fe-continued-surface-polish-v141.spec.ts",
+      "fe-design-target-actions-group-v1106.spec.ts",
+      "fe-design-target-cue-spacing-v1108.spec.ts",
+      "fe-design-target-focus-motion-v1102.spec.ts",
+      "fe-design-target-link-a11y-v1101.spec.ts",
+      "fe-design-target-link-rel-v1103.spec.ts",
+      "fe-design-target-link-scope-name-v1111.spec.ts",
+      "fe-design-target-reduced-motion-v1109.spec.ts",
+      "fe-design-target-region-description-v1105.spec.ts",
+      "fe-design-target-region-scope-v1104.spec.ts",
+      "fe-design-target-transition-parity-v1110.spec.ts",
+      "fe-design-target-visible-new-tab-cue-v1107.spec.ts",
+      "fe-download-readiness-guide-article-v1238.spec.ts",
+      "fe-download-trust-design-target-density-v1126.spec.ts",
+      "fe-download-trust-real-ui-layout-v1219.spec.ts",
+      "fe-download-trust-vietnamese-design-match-v1141.spec.ts",
+      "fe-download-trust-visual-realignment-v1272.spec.ts",
+      "fe-download-visual-realignment-v1271.spec.ts",
+      "fe-events-announcement-board-v1251.spec.ts",
+      "fe-expanded-route-readability-v165.spec.ts",
+      "fe-faq-boundary-destination-v1250.spec.ts",
+      "fe-faq-guide-article-v1250.spec.ts",
+      "fe-game-loop-real-ui-layout-v1232.spec.ts",
+      "fe-game-world-realignment-v1266.spec.ts",
+      "fe-gate-entry-guide-article-v1236.spec.ts",
+      "fe-guides-discovery-real-ui-layout-v1234.spec.ts",
+      "fe-homepage-design-realignment-v1265.spec.ts",
+      "fe-homepage-final-density-v1265.spec.ts",
+      "fe-homepage-header-actions-v1265.spec.ts",
+      "fe-homepage-lower-composition-v1265.spec.ts",
+      "fe-homepage-native-art-v1265.spec.ts",
+      "fe-journey-visual-realignment-v1269.spec.ts",
+      "fe-news-accessibility-readability-real-ui-layout-v1191.spec.ts",
+      "fe-news-community-onboarding-article-v1261.spec.ts",
+      "fe-news-content-hub-article-v1262.spec.ts",
+      "fe-news-control-tower-article-v1254.spec.ts",
+      "fe-news-detail-reading-article-v1258.spec.ts",
+      "fe-news-discovery-v1253.spec.ts",
+      "fe-news-faq-search-helpfulness-real-ui-layout-v1197.spec.ts",
+      "fe-news-game-info-article-v1257.spec.ts",
+      "fe-news-performance-copy-budget-real-ui-layout-v1192.spec.ts",
+      "fe-news-player-trust-release-real-ui-layout-v1185.spec.ts",
+      "fe-news-player-trust-release-real-ui-layout-v1194.spec.ts",
+      "fe-news-public-ux-article-v1255.spec.ts",
+      "fe-news-release-readiness-hub-real-ui-layout-v1195.spec.ts",
+      "fe-news-release-readiness-real-ui-layout-v1184.spec.ts",
+      "fe-news-route-continuity-conversion-real-ui-layout-v1193.spec.ts",
+      "fe-news-route-continuity-real-ui-layout-v1186.spec.ts",
+      "fe-news-safety-support-article-v1264.spec.ts",
+      "fe-news-status-trust-article-v1259.spec.ts",
+      "fe-news-tester-pack-article-v1260.spec.ts",
+      "fe-news-visual-responsive-article-v1256.spec.ts",
+      "fe-news-world-loop-article-v1263.spec.ts",
+      "fe-ops-audit-visual-v169.spec.ts",
+      "fe-ops-blocked-action-keyboard-v146.spec.ts",
+      "fe-ops-expanded-route-audit-v1116.spec.ts",
+      "fe-ops-visual-lcp-image-v149.spec.ts",
+      "fe-patch-notes-journal-v1252.spec.ts",
+      "fe-performance-guide-article-v1245.spec.ts",
+      "fe-performance-real-ui-layout-v1229.spec.ts",
+      "fe-player-safety-guide-article-v1243.spec.ts",
+      "fe-player-trust-guide-article-v1247.spec.ts",
+      "fe-portal-access-journey-visual-v168.spec.ts",
+      "fe-portal-expanded-route-audit-v1115.spec.ts",
+      "fe-portal-home-lcp-image-v151.spec.ts",
+      "fe-portal-home-visual-lcp-images-v162.spec.ts",
+      "fe-portal-journey-lcp-image-v152.spec.ts",
+      "fe-portal-security-lcp-image-v148.spec.ts",
+      "fe-portal-support-blocked-action-v156.spec.ts",
+      "fe-public-brand-nav-scroll-region-v163.spec.ts",
+      "fe-public-chrome-homepage-parity.spec.ts",
+      "fe-public-chrome-unification-v1272a.spec.ts",
+      "fe-public-cinematic-image-loading-v153.spec.ts",
+      "fe-public-community-real-plaza-gallery-v191.spec.ts",
+      "fe-public-content-heading-order-v185.spec.ts",
+      "fe-public-download-nav-section-v1112.spec.ts",
+      "fe-public-download-trust-design-board-v167.spec.ts",
+      "fe-public-expanded-core-route-audit-v1114.spec.ts",
+      "fe-public-expanded-service-route-audit-v1113.spec.ts",
+      "fe-public-navigation-interaction-v144.spec.ts",
+      "fe-public-professional-design-target-v194.spec.ts",
+      "fe-public-release-heading-priority-v186.spec.ts",
+      "fe-public-route-heading-priority-v189.spec.ts",
+      "fe-public-skip-link-visual-v150.spec.ts",
+      "fe-public-support-heading-priority-v187.spec.ts",
+      "fe-public-trust-heading-priority-v188.spec.ts",
+      "fe-public-visual-atmosphere-v192.spec.ts",
+      "fe-readability-guide-article-v1244.spec.ts",
+      "fe-release-readiness-guide-article-v1248.spec.ts",
+      "fe-release-readiness-real-ui-layout-v1221.spec.ts",
+      "fe-release-readiness-vietnamese-design-match-v1143.spec.ts",
+      "fe-release-readiness-visual-realignment-v1274.spec.ts",
+      "fe-release-tester-pack-visual-realignment-v1275.spec.ts",
+      "fe-release-trust-guide-article-v1240.spec.ts",
+      "fe-release-visual-realignment-v1273.spec.ts",
+      "fe-roadmap-real-ui-layout-v1231.spec.ts",
+      "fe-route-continuity-guide-article-v1246.spec.ts",
+      "fe-route-depth-continuity-v142.spec.ts",
+      "fe-shared-data-table-scroll-region-v159.spec.ts",
+      "fe-shared-fixture-form-controls-v160.spec.ts",
+      "fe-shared-pagination-boundary-reason-v166.spec.ts",
+      "fe-shared-pagination-boundary-v157.spec.ts",
+      "fe-shell-keyboard-reachability-v1117.spec.ts",
+      "fe-start-here-guide-article-v1242.spec.ts",
+      "fe-start-visual-realignment-v1270.spec.ts",
+      "fe-status-real-ui-layout-v1223.spec.ts",
+      "fe-status-visual-realignment-v1276.spec.ts",
+      "fe-story-visual-realignment-v1267.spec.ts",
+      "fe-support-community-guide-article-v1239.spec.ts",
+      "fe-support-help-real-ui-layout-v1225.spec.ts",
+      "fe-support-safety-real-ui-layout-v1226.spec.ts",
+      "fe-tester-checklist-destination-v1247.spec.ts",
+      "fe-tester-guide-article-v1249.spec.ts",
+      "fe-tester-pack-real-ui-layout-v1222.spec.ts",
+      "fe-tester-section-destinations-v1249.spec.ts",
+      "fe-training-loop-guide-article-v1237.spec.ts",
+      "fe-visual-asset-layout-v140.spec.ts",
+      "fe-workspace-design-target-asset-v199.spec.ts",
+      "fe-workspace-design-target-attachment-v198.spec.ts",
+      "fe-workspace-nav-scroll-region-v161.spec.ts",
+      "fe-workspace-skip-link-visual-v147.spec.ts",
+      "fe-world-loop-guide-article-v1233.spec.ts",
+      "ops-review.spec.ts",
+      "portal-access.spec.ts",
+      "portal-journey-demo.spec.ts",
+      "public-navigation.spec.ts",
+      "runtime-multi-app.spec.ts",
+      "web-opt-accessibility-player-help-v1296.spec.ts",
+      "web-opt-community-onboarding-v1289.spec.ts",
+      "web-opt-community-value-clarity-v1288.spec.ts",
+      "web-opt-editorial-mobile-density-v1284.spec.ts",
+      "web-opt-editorial-renderers-v1283.spec.ts",
+      "web-opt-events-product-decision-v1293.spec.ts",
+      "web-opt-game-loop-density-v1290.spec.ts",
+      "web-opt-guides-discovery-v1291.spec.ts",
+      "web-opt-interaction-hit-area-v1279.spec.ts",
+      "web-opt-news-player-discovery-v1292.spec.ts",
+      "web-opt-patch-notes-product-boundary-v1294.spec.ts",
+      "web-opt-performance-guidance-tone-v1295.spec.ts",
+      "web-opt-player-roadmap-v1297.spec.ts",
+      "web-opt-public-asset-boundary-v1280.spec.ts",
+      "web-opt-public-css-payload-v1278.spec.ts",
+      "web-opt-public-ia-language-v1281.spec.ts",
+      "web-opt-seo-metadata-v1282.spec.ts",
+      "web-opt-support-entry-hierarchy-v1285.spec.ts",
+      "web-opt-support-help-discovery-v1286.spec.ts",
+      "web-opt-support-safety-flow-v1287.spec.ts",
+      "workspace-layout.spec.ts"
+    ]
+  },
+  "superseded": {
+    "validators": {
+      "validate_web_fe_accessibility_real_ui_layout_v1152.py": {
+        "replacement": "validate_web_fe_accessibility_real_ui_layout_v1230.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_accessibility_real_ui_layout_v1210.py": {
+        "replacement": "validate_web_fe_accessibility_real_ui_layout_v1230.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_classes_design_target_density_v1122.py": {
+        "replacement": "validate_web_fe_classes_visual_realignment_v1268.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_classes_real_ui_layout_v1215.py": {
+        "replacement": "validate_web_fe_classes_visual_realignment_v1268.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_classes_vietnamese_design_match_v1137.py": {
+        "replacement": "validate_web_fe_classes_visual_realignment_v1268.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_community_onboarding_real_ui_layout_v1150.py": {
+        "replacement": "validate_web_fe_community_onboarding_real_ui_layout_v1228.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_community_onboarding_real_ui_layout_v1208.py": {
+        "replacement": "validate_web_fe_community_onboarding_real_ui_layout_v1228.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_community_real_ui_layout_v1149.py": {
+        "replacement": "validate_web_fe_community_real_ui_layout_v1227.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_community_real_ui_layout_v1207.py": {
+        "replacement": "validate_web_fe_community_real_ui_layout_v1227.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_download_design_target_density_v1125.py": {
+        "replacement": "validate_web_fe_download_visual_realignment_v1271.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_download_real_ui_layout_v1218.py": {
+        "replacement": "validate_web_fe_download_visual_realignment_v1271.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_download_trust_design_target_density_v1126.py": {
+        "replacement": "validate_web_fe_download_trust_visual_realignment_v1272.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_download_trust_real_ui_layout_v1219.py": {
+        "replacement": "validate_web_fe_download_trust_visual_realignment_v1272.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_download_trust_vietnamese_design_match_v1141.py": {
+        "replacement": "validate_web_fe_download_trust_visual_realignment_v1272.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_download_vietnamese_design_match_v1140.py": {
+        "replacement": "validate_web_fe_download_visual_realignment_v1271.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_events_real_ui_layout_v1174.py": {
+        "replacement": "validate_web_fe_events_announcement_board_v1251.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_events_real_ui_layout_v1198.py": {
+        "replacement": "validate_web_fe_events_announcement_board_v1251.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_game_loop_real_ui_layout_v1154.py": {
+        "replacement": "validate_web_fe_game_loop_real_ui_layout_v1232.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_game_loop_real_ui_layout_v1212.py": {
+        "replacement": "validate_web_fe_game_loop_real_ui_layout_v1232.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_game_real_ui_layout_v1213.py": {
+        "replacement": "validate_web_fe_game_world_realignment_v1266.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_game_world_design_target_density_v1120.py": {
+        "replacement": "validate_web_fe_game_world_realignment_v1266.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_game_world_vietnamese_first_flow_v1135.py": {
+        "replacement": "validate_web_fe_game_world_realignment_v1266.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guide_world_loop_real_ui_layout_v1155.py": {
+        "replacement": "validate_web_fe_world_loop_guide_article_v1233.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_accessibility_readability_real_ui_layout_v1167.py": {
+        "replacement": "validate_web_fe_readability_guide_article_v1244.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_beginner_real_ui_layout_v1157.py": {
+        "replacement": "validate_web_fe_beginner_guide_reading_v1235.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_beginner_training_loop_real_ui_layout_v1159.py": {
+        "replacement": "validate_web_fe_training_loop_guide_article_v1237.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_closed_tester_information_pack_real_ui_layout_v1172.py": {
+        "replacement": "validate_web_fe_tester_guide_article_v1249.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_community_roadmap_real_ui_layout_v1163.py": {
+        "replacement": "validate_web_fe_community_roadmap_guide_article_v1241.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_download_readiness_real_ui_layout_v1160.py": {
+        "replacement": "validate_web_fe_download_readiness_guide_article_v1238.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_faq_search_helpfulness_real_ui_layout_v1173.py": {
+        "replacement": "validate_web_fe_faq_guide_article_v1250.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_gate_entry_real_ui_layout_v1158.py": {
+        "replacement": "validate_web_fe_gate_entry_guide_article_v1236.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_index_real_ui_layout_v1156.py": {
+        "replacement": "validate_web_fe_guides_discovery_real_ui_layout_v1234.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_performance_copy_budget_real_ui_layout_v1168.py": {
+        "replacement": "validate_web_fe_performance_guide_article_v1245.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_player_safety_support_real_ui_layout_v1166.py": {
+        "replacement": "validate_web_fe_player_safety_guide_article_v1243.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_player_trust_release_real_ui_layout_v1170.py": {
+        "replacement": "validate_web_fe_player_trust_guide_article_v1247.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_release_readiness_hub_real_ui_layout_v1171.py": {
+        "replacement": "validate_web_fe_release_readiness_guide_article_v1248.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_release_trust_real_ui_layout_v1162.py": {
+        "replacement": "validate_web_fe_release_trust_guide_article_v1240.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_route_continuity_conversion_real_ui_layout_v1169.py": {
+        "replacement": "validate_web_fe_route_continuity_guide_article_v1246.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_start_here_real_ui_layout_v1164.py": {
+        "replacement": "validate_web_fe_start_here_guide_article_v1242.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_support_community_real_ui_layout_v1161.py": {
+        "replacement": "validate_web_fe_support_community_guide_article_v1239.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_guides_world_gameplay_loop_real_ui_layout_v1165.py": {
+        "replacement": "validate_web_fe_world_loop_guide_article_v1233.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_homepage_detailed_design_target_v1118.py": {
+        "replacement": "validate_web_fe_homepage_design_realignment_v1265.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_homepage_target_fold_density_v1119.py": {
+        "replacement": "validate_web_fe_homepage_design_realignment_v1265.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_homepage_vietnamese_first_flow_v1134.py": {
+        "replacement": "validate_web_fe_homepage_design_realignment_v1265.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_journey_design_target_density_v1123.py": {
+        "replacement": "validate_web_fe_journey_visual_realignment_v1269.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_journey_real_ui_layout_v1216.py": {
+        "replacement": "validate_web_fe_journey_visual_realignment_v1269.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_journey_vietnamese_design_match_v1138.py": {
+        "replacement": "validate_web_fe_journey_visual_realignment_v1269.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_news_closed_tester_pack_real_ui_layout_v1183.py": {
+        "replacement": "validate_web_fe_tester_preparation_article_v1260.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_news_closed_tester_pack_real_ui_layout_v1196.py": {
+        "replacement": "validate_web_fe_tester_preparation_article_v1260.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_news_community_roadmap_real_ui_layout_v1188.py": {
+        "replacement": "validate_web_fe_community_onboarding_article_v1261.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_news_content_ia_hub_real_ui_layout_v1187.py": {
+        "replacement": "validate_web_fe_content_hub_article_v1262.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_news_control_tower_real_ui_layout_v1177.py": {
+        "replacement": "validate_web_fe_control_tower_article_v1254.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_news_discovery_v1253.py": {
+        "replacement": "validate_web_opt_public_ia_language_v1281.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_news_guide_detail_real_ui_layout_v1181.py": {
+        "replacement": "validate_web_fe_detail_reading_article_v1258.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_news_player_safety_support_real_ui_layout_v1190.py": {
+        "replacement": "validate_web_fe_safety_support_article_v1264.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_news_public_game_info_real_ui_layout_v1180.py": {
+        "replacement": "validate_web_fe_game_info_article_v1257.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_news_public_ux_real_ui_layout_v1178.py": {
+        "replacement": "validate_web_fe_public_ux_article_v1255.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_news_real_ui_layout_v1176.py": {
+        "replacement": "validate_web_opt_public_ia_language_v1281.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only.",
+        "replacement_chain": [
+          "validate_web_fe_news_discovery_v1253.py",
+          "validate_web_opt_public_ia_language_v1281.py"
+        ]
+      },
+      "validate_web_fe_news_status_download_trust_real_ui_layout_v1182.py": {
+        "replacement": "validate_web_fe_status_trust_article_v1259.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_news_visual_responsive_real_ui_layout_v1179.py": {
+        "replacement": "validate_web_fe_visual_responsive_article_v1256.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_news_world_gameplay_loop_real_ui_layout_v1189.py": {
+        "replacement": "validate_web_fe_world_loop_article_v1263.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_patch_notes_real_ui_layout_v1175.py": {
+        "replacement": "validate_web_fe_patch_notes_journal_v1252.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_patch_notes_real_ui_layout_v1199.py": {
+        "replacement": "validate_web_fe_patch_notes_journal_v1252.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_performance_real_ui_layout_v1151.py": {
+        "replacement": "validate_web_fe_performance_real_ui_layout_v1229.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_performance_real_ui_layout_v1209.py": {
+        "replacement": "validate_web_fe_performance_real_ui_layout_v1229.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_accessibility_design_board_v178.py": {
+        "replacement": "validate_web_fe_accessibility_real_ui_layout_v1230.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_class_art_loading_v154.py": {
+        "replacement": "validate_web_fe_classes_visual_realignment_v1268.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_class_art_typography_v155.py": {
+        "replacement": "validate_web_fe_classes_visual_realignment_v1268.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_closed_tester_design_board_v177.py": {
+        "replacement": "validate_web_fe_release_tester_pack_visual_realignment_v1275.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_community_onboarding_design_board_v175.py": {
+        "replacement": "validate_web_fe_community_onboarding_real_ui_layout_v1228.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_download_trust_design_board_v167.py": {
+        "replacement": "validate_web_fe_download_trust_visual_realignment_v1272.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_game_loop_design_board_v182.py": {
+        "replacement": "validate_web_fe_game_loop_real_ui_layout_v1232.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_game_world_design_board_v183.py": {
+        "replacement": "validate_web_fe_game_world_realignment_v1266.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_home_visual_target_v193.py": {
+        "replacement": "validate_web_fe_homepage_design_realignment_v1265.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_journey_design_board_v180.py": {
+        "replacement": "validate_web_fe_journey_visual_realignment_v1269.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_performance_design_board_v176.py": {
+        "replacement": "validate_web_fe_performance_real_ui_layout_v1229.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_release_narrative_design_board_v174.py": {
+        "replacement": "validate_web_fe_release_visual_realignment_v1273.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_release_readiness_design_board_v171.py": {
+        "replacement": "validate_web_fe_release_readiness_visual_realignment_v1274.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_roadmap_design_board_v170.py": {
+        "replacement": "validate_web_fe_roadmap_real_ui_layout_v1231.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_safety_support_design_board_v172.py": {
+        "replacement": "validate_web_fe_support_safety_real_ui_layout_v1226.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_start_design_board_v179.py": {
+        "replacement": "validate_web_fe_start_visual_realignment_v1270.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_start_real_onboarding_gallery_v190.py": {
+        "replacement": "validate_web_fe_start_visual_realignment_v1270.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_status_design_board_v181.py": {
+        "replacement": "validate_web_fe_status_visual_realignment_v1276.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_story_chapter_typography_v164.py": {
+        "replacement": "validate_web_fe_story_visual_realignment_v1267.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_story_fracture_design_board_v184.py": {
+        "replacement": "validate_web_fe_story_visual_realignment_v1267.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_public_support_help_design_board_v173.py": {
+        "replacement": "validate_web_fe_support_help_real_ui_layout_v1225.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_release_design_target_density_v1127.py": {
+        "replacement": "validate_web_fe_release_visual_realignment_v1273.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_release_readiness_design_target_density_v1128.py": {
+        "replacement": "validate_web_fe_release_readiness_visual_realignment_v1274.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_release_readiness_real_ui_layout_v1143.py": {
+        "replacement": "validate_web_fe_release_readiness_visual_realignment_v1274.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_release_readiness_real_ui_layout_v1201.py": {
+        "replacement": "validate_web_fe_release_readiness_visual_realignment_v1274.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_release_real_ui_layout_v1200.py": {
+        "replacement": "validate_web_fe_release_visual_realignment_v1273.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_release_real_ui_layout_v1220.py": {
+        "replacement": "validate_web_fe_release_visual_realignment_v1273.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_release_tester_pack_real_ui_layout_v1202.py": {
+        "replacement": "validate_web_fe_release_tester_pack_visual_realignment_v1275.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_release_vietnamese_design_match_v1142.py": {
+        "replacement": "validate_web_fe_release_visual_realignment_v1273.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_roadmap_real_ui_layout_v1153.py": {
+        "replacement": "validate_web_fe_roadmap_real_ui_layout_v1231.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_roadmap_real_ui_layout_v1211.py": {
+        "replacement": "validate_web_fe_roadmap_real_ui_layout_v1231.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_start_design_target_density_v1124.py": {
+        "replacement": "validate_web_fe_start_visual_realignment_v1270.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_start_real_ui_layout_v1217.py": {
+        "replacement": "validate_web_fe_start_visual_realignment_v1270.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_start_vietnamese_design_match_v1139.py": {
+        "replacement": "validate_web_fe_start_visual_realignment_v1270.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_status_design_target_density_v1130.py": {
+        "replacement": "validate_web_fe_status_visual_realignment_v1276.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_status_real_ui_layout_v1145.py": {
+        "replacement": "validate_web_fe_status_visual_realignment_v1276.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_status_real_ui_layout_v1203.py": {
+        "replacement": "validate_web_fe_status_visual_realignment_v1276.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_story_design_target_density_v1121.py": {
+        "replacement": "validate_web_fe_story_visual_realignment_v1267.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_story_real_ui_layout_v1214.py": {
+        "replacement": "validate_web_fe_story_visual_realignment_v1267.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_story_vietnamese_design_match_v1136.py": {
+        "replacement": "validate_web_fe_story_visual_realignment_v1267.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_support_design_target_density_v1131.py": {
+        "replacement": "validate_web_opt_support_entry_hierarchy_v1285.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_support_help_design_target_density_v1132.py": {
+        "replacement": "validate_web_fe_support_help_real_ui_layout_v1225.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_support_help_real_ui_layout_v1147.py": {
+        "replacement": "validate_web_fe_support_help_real_ui_layout_v1225.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_support_help_real_ui_layout_v1205.py": {
+        "replacement": "validate_web_fe_support_help_real_ui_layout_v1225.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_support_real_ui_layout_v1146.py": {
+        "replacement": "validate_web_opt_support_entry_hierarchy_v1285.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_support_real_ui_layout_v1204.py": {
+        "replacement": "validate_web_opt_support_entry_hierarchy_v1285.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_support_real_ui_layout_v1224.py": {
+        "replacement": "validate_web_opt_support_entry_hierarchy_v1285.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_support_safety_design_target_density_v1133.py": {
+        "replacement": "validate_web_fe_support_safety_real_ui_layout_v1226.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_support_safety_real_ui_layout_v1148.py": {
+        "replacement": "validate_web_fe_support_safety_real_ui_layout_v1226.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_support_safety_real_ui_layout_v1206.py": {
+        "replacement": "validate_web_fe_support_safety_real_ui_layout_v1226.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_tester_pack_design_target_density_v1129.py": {
+        "replacement": "validate_web_fe_release_tester_pack_visual_realignment_v1275.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_tester_pack_real_ui_layout_v1144.py": {
+        "replacement": "validate_web_fe_release_tester_pack_visual_realignment_v1275.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_fe_tester_pack_real_ui_layout_v1222.py": {
+        "replacement": "validate_web_fe_release_tester_pack_visual_realignment_v1275.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      },
+      "validate_web_public_home_discovery_v126.py": {
+        "replacement": "validate_web_fe_homepage_design_realignment_v1265.py",
+        "reason": "Historical validator retained as provenance; current-state executes the active replacement only."
+      }
+    },
+    "browser_specs": {
+      "fe-accessibility-real-ui-layout-v1152.spec.ts": {
+        "reason": "v1.230 replaces diagram/compact readability checks with native focus practice; NOT PASS."
+      },
+      "fe-accessibility-real-ui-layout-v1210.spec.ts": {
+        "reason": "v1.230 replaces diagram/compact readability checks with native focus practice; NOT PASS."
+      },
+      "fe-classes-design-target-density-v1122.spec.ts": {
+        "reason": "v1.268 replaces the historical /classes proof/art layouts with the live target-driven five-path landing."
+      },
+      "fe-classes-real-ui-layout-v1215.spec.ts": {
+        "reason": "v1.268 replaces the historical /classes proof/art layouts with the live target-driven five-path landing."
+      },
+      "fe-classes-vietnamese-design-match-v1137.spec.ts": {
+        "reason": "v1.268 replaces the historical /classes proof/art layouts with the live target-driven five-path landing."
+      },
+      "fe-community-onboarding-real-ui-layout-v1150.spec.ts": {
+        "reason": "v1.228 replaces mislabeled combat-board/compact onboarding cases; not counted as PASS."
+      },
+      "fe-community-onboarding-real-ui-layout-v1208.spec.ts": {
+        "reason": "v1.228 replaces mislabeled combat-board/compact onboarding cases; not counted as PASS."
+      },
+      "fe-community-real-ui-layout-v1149.spec.ts": {
+        "reason": "v1.227 replaces community mockup/compact layout; v1.91 asset/gallery coverage stays active."
+      },
+      "fe-community-real-ui-layout-v1207.spec.ts": {
+        "reason": "v1.227 replaces community mockup/compact layout; v1.91 asset/gallery coverage stays active."
+      },
+      "fe-download-design-target-density-v1125.spec.ts": {
+        "reason": "v1.271 replaces the historical /download proof/depth layouts with the truthful target-driven release-gate landing."
+      },
+      "fe-download-real-ui-layout-v1218.spec.ts": {
+        "reason": "v1.271 replaces the historical /download proof/depth layouts with the truthful target-driven release-gate landing."
+      },
+      "fe-download-vietnamese-design-match-v1140.spec.ts": {
+        "reason": "v1.271 replaces the historical /download proof/depth layouts with the truthful target-driven release-gate landing."
+      },
+      "fe-events-real-ui-layout-v1174.spec.ts": {
+        "reason": "v1.251 replaces only the old compact events-page layout assertions."
+      },
+      "fe-events-real-ui-layout-v1198.spec.ts": {
+        "reason": "v1.251 replaces only the old compact events-page layout assertions."
+      },
+      "fe-game-loop-real-ui-layout-v1154.spec.ts": {
+        "reason": "v1.232 retires exact old loop diagram/compact composition; shared onboarding/heading tests stay active."
+      },
+      "fe-game-loop-real-ui-layout-v1212.spec.ts": {
+        "reason": "v1.232 retires exact old loop diagram/compact composition; shared onboarding/heading tests stay active."
+      },
+      "fe-game-real-ui-layout-v1213.spec.ts": {
+        "reason": "v1.266 replaces the historical /game proof-board layouts with the live target-driven world landing."
+      },
+      "fe-game-world-design-target-density-v1120.spec.ts": {
+        "reason": "v1.266 replaces the historical /game proof-board layouts with the live target-driven world landing."
+      },
+      "fe-game-world-vietnamese-first-flow-v1135.spec.ts": {
+        "reason": "v1.266 replaces the historical /game proof-board layouts with the live target-driven world landing."
+      },
+      "fe-guide-world-loop-real-ui-layout-v1155.spec.ts": {
+        "reason": "Only these exact historical world-loop layouts are superseded; not counted as runtime PASS."
+      },
+      "fe-guides-accessibility-readability-real-ui-layout-v1167.spec.ts": {
+        "reason": "v1.244 replaces this exact compact readability guide; historical, not runtime PASS."
+      },
+      "fe-guides-beginner-real-ui-layout-v1157.spec.ts": {
+        "reason": "v1.235 replaces the clipped beginner multi-board layout; historical assertions are not PASS."
+      },
+      "fe-guides-beginner-training-loop-real-ui-layout-v1159.spec.ts": {
+        "reason": "v1.237 replaces only the old training-guide compact layout, not a runtime PASS."
+      },
+      "fe-guides-closed-tester-information-pack-real-ui-layout-v1172.spec.ts": {
+        "reason": "v1.249 owns only this formerly compact article; tester/privacy and real navigation stay active."
+      },
+      "fe-guides-community-roadmap-real-ui-layout-v1163.spec.ts": {
+        "reason": "v1.241 replaces only the old compact community-roadmap guide; historical != runtime PASS."
+      },
+      "fe-guides-download-readiness-real-ui-layout-v1160.spec.ts": {
+        "reason": "v1.238 supersedes only the old compact download-readiness article, not a runtime PASS."
+      },
+      "fe-guides-faq-search-helpfulness-real-ui-layout-v1173.spec.ts": {
+        "reason": "v1.250 replaces only this compact FAQ guide; category/source/runtime tests stay active."
+      },
+      "fe-guides-gate-entry-real-ui-layout-v1158.spec.ts": {
+        "reason": "v1.236 replaces only the gate-entry compact layout; published/category checks stay active."
+      },
+      "fe-guides-index-real-ui-layout-v1156.spec.ts": {
+        "reason": "v1.234 replaces exact old guides two-shelf/line-clamp layout; published-content checks remain active."
+      },
+      "fe-guides-performance-copy-budget-real-ui-layout-v1168.spec.ts": {
+        "reason": "v1.245 replaces this exact compact guide; source/HTTP/reading tests remain active."
+      },
+      "fe-guides-player-safety-support-real-ui-layout-v1166.spec.ts": {
+        "reason": "v1.243 supersedes only the compact player-safety guide layout; historical, not PASS."
+      },
+      "fe-guides-player-trust-release-real-ui-layout-v1170.spec.ts": {
+        "reason": "v1.247 replaces this exact compact guide; HTTP/source/interaction guards remain active."
+      },
+      "fe-guides-release-readiness-hub-real-ui-layout-v1171.spec.ts": {
+        "reason": "v1.248 replaces only this guide's compact-layout assertions. Source/route tests remain active."
+      },
+      "fe-guides-release-trust-real-ui-layout-v1162.spec.ts": {
+        "reason": "v1.240 replaces only the compact trust/checksum article layout; historical is not PASS."
+      },
+      "fe-guides-route-continuity-conversion-real-ui-layout-v1169.spec.ts": {
+        "reason": "v1.246 replaces only the compact route-continuity guide, not its source/HTTP contracts."
+      },
+      "fe-guides-start-here-real-ui-layout-v1164.spec.ts": {
+        "reason": "v1.242 supersedes only the static compact start-here guide, not a runtime PASS."
+      },
+      "fe-guides-support-community-real-ui-layout-v1161.spec.ts": {
+        "reason": "v1.239 replaces only the compact support/community guide layout; historical is not PASS."
+      },
+      "fe-guides-world-gameplay-loop-real-ui-layout-v1165.spec.ts": {
+        "reason": "Only these exact historical world-loop layouts are superseded; not counted as runtime PASS."
+      },
+      "fe-homepage-detailed-design-target-v1118.spec.ts": {
+        "reason": "Owner reopened homepage: old tests asserted a split hero/design link, not actual new composition."
+      },
+      "fe-homepage-target-fold-density-v1119.spec.ts": {
+        "reason": "Owner reopened homepage: old tests asserted a split hero/design link, not actual new composition."
+      },
+      "fe-homepage-vietnamese-first-flow-v1134.spec.ts": {
+        "reason": "Owner reopened homepage: old tests asserted a split hero/design link, not actual new composition."
+      },
+      "fe-journey-design-target-density-v1123.spec.ts": {
+        "reason": "v1.269 replaces the historical /journey proof/timeline layouts with the target-driven session landing."
+      },
+      "fe-journey-real-ui-layout-v1216.spec.ts": {
+        "reason": "v1.269 replaces the historical /journey proof/timeline layouts with the target-driven session landing."
+      },
+      "fe-journey-vietnamese-design-match-v1138.spec.ts": {
+        "reason": "v1.269 replaces the historical /journey proof/timeline layouts with the target-driven session landing."
+      },
+      "fe-news-closed-tester-pack-real-ui-layout-v1183.spec.ts": {
+        "reason": "v1.260 replaces both historical compact render checks for this exact tester news slug."
+      },
+      "fe-news-closed-tester-pack-real-ui-layout-v1196.spec.ts": {
+        "reason": "v1.260 replaces both historical compact render checks for this exact tester news slug."
+      },
+      "fe-news-community-roadmap-real-ui-layout-v1188.spec.ts": {
+        "reason": "v1.261 replaces only this compact article; community and roadmap destination suites stay active."
+      },
+      "fe-news-content-ia-hub-real-ui-layout-v1187.spec.ts": {
+        "reason": "v1.262 supersedes this compact article only; library and Start behavior stay covered."
+      },
+      "fe-news-control-tower-real-ui-layout-v1177.spec.ts": {
+        "reason": "v1.254 replaces only the first compact news article; other news/article tests remain active."
+      },
+      "fe-news-guide-detail-real-ui-layout-v1181.spec.ts": {
+        "reason": "v1.258 replaces only the exact compact news/guide-detail article. Other articles remain active."
+      },
+      "fe-news-player-safety-support-real-ui-layout-v1190.spec.ts": {
+        "reason": "v1.264 replaces only this compact article; Safety and FAQ destination suites stay active."
+      },
+      "fe-news-public-game-info-real-ui-layout-v1180.spec.ts": {
+        "reason": "v1.257 replaces only the exact compact public-game-info article; other article suites remain active."
+      },
+      "fe-news-public-ux-real-ui-layout-v1178.spec.ts": {
+        "reason": "v1.255 replaces only the original compact UX article; other news and heading tests remain active."
+      },
+      "fe-news-real-ui-layout-v1176.spec.ts": {
+        "reason": "v1.253 replaces only the old three-card news index; article and heading tests remain active."
+      },
+      "fe-news-status-download-trust-real-ui-layout-v1182.spec.ts": {
+        "reason": "v1.259 replaces only this exact compact status/trust article layout."
+      },
+      "fe-news-visual-responsive-real-ui-layout-v1179.spec.ts": {
+        "reason": "v1.256 replaces only this exact compact article; source/reading/sibling suites remain active."
+      },
+      "fe-news-world-gameplay-loop-real-ui-layout-v1189.spec.ts": {
+        "reason": "v1.263 replaces the old compact article only; world-loop and guide suites stay active."
+      },
+      "fe-patch-notes-real-ui-layout-v1175.spec.ts": {
+        "reason": "v1.252 replaces exact old compact patch-note snapshots; v1.85 heading/route tests stay active."
+      },
+      "fe-patch-notes-real-ui-layout-v1199.spec.ts": {
+        "reason": "v1.252 replaces exact old compact patch-note snapshots; v1.85 heading/route tests stay active."
+      },
+      "fe-performance-real-ui-layout-v1151.spec.ts": {
+        "reason": "v1.229 replaces embedded performance HUD/compact assertions with live reader controls; NOT PASS."
+      },
+      "fe-performance-real-ui-layout-v1209.spec.ts": {
+        "reason": "v1.229 replaces embedded performance HUD/compact assertions with live reader controls; NOT PASS."
+      },
+      "fe-public-accessibility-design-board-v178.spec.ts": {
+        "reason": "v1.230 replaces diagram/compact readability checks with native focus practice; NOT PASS."
+      },
+      "fe-public-class-art-loading-v154.spec.ts": {
+        "reason": "v1.268 replaces the historical /classes proof/art layouts with the live target-driven five-path landing."
+      },
+      "fe-public-class-art-typography-v155.spec.ts": {
+        "reason": "v1.268 replaces the historical /classes proof/art layouts with the live target-driven five-path landing."
+      },
+      "fe-public-closed-tester-design-board-v177.spec.ts": {
+        "reason": "Historical suite retired by the pre-v1.298 Playwright authority."
+      },
+      "fe-public-community-onboarding-design-board-v175.spec.ts": {
+        "reason": "v1.228 replaces mislabeled combat-board/compact onboarding cases; not counted as PASS."
+      },
+      "fe-public-design-target-attachment-v197.spec.ts": {
+        "reason": "Public design targets remain evidence artifacts but no longer render as player-facing chrome; v1.272a owns public shell consistency."
+      },
+      "fe-public-game-loop-design-board-v182.spec.ts": {
+        "reason": "v1.232 retires exact old loop diagram/compact composition; shared onboarding/heading tests stay active."
+      },
+      "fe-public-game-world-design-board-v183.spec.ts": {
+        "reason": "v1.266 replaces the historical /game proof-board layouts with the live target-driven world landing."
+      },
+      "fe-public-home-visual-target-v193.spec.ts": {
+        "reason": "Owner reopened homepage: old tests asserted a split hero/design link, not actual new composition."
+      },
+      "fe-public-journey-design-board-v180.spec.ts": {
+        "reason": "v1.269 replaces the historical /journey proof/timeline layouts with the target-driven session landing."
+      },
+      "fe-public-performance-design-board-v176.spec.ts": {
+        "reason": "v1.229 replaces embedded performance HUD/compact assertions with live reader controls; NOT PASS."
+      },
+      "fe-public-release-narrative-design-board-v174.spec.ts": {
+        "reason": "v1.273 replaces the historical /release proof-board and compact proof-stack layouts."
+      },
+      "fe-public-release-readiness-design-board-v171.spec.ts": {
+        "reason": "Historical suite retired by the pre-v1.298 Playwright authority."
+      },
+      "fe-public-roadmap-design-board-v170.spec.ts": {
+        "reason": "v1.231 replaces roadmap image/compact assertions; active trust-heading/status regression stays."
+      },
+      "fe-public-safety-support-design-board-v172.spec.ts": {
+        "reason": "v1.226 supersedes static safety mockup assertions; not counted as PASS."
+      },
+      "fe-public-start-design-board-v179.spec.ts": {
+        "reason": "v1.270 replaces the historical /start proof-board/gallery/class-world layouts with the live target-driven onboarding landing."
+      },
+      "fe-public-start-real-onboarding-gallery-v190.spec.ts": {
+        "reason": "v1.270 replaces the historical /start proof-board/gallery/class-world layouts with the live target-driven onboarding landing."
+      },
+      "fe-public-status-design-board-v181.spec.ts": {
+        "reason": "v1.285 replaces v1.224 duplicated support-topic wall with one primary station + FAQ flow."
+      },
+      "fe-public-story-chapter-typography-v164.spec.ts": {
+        "reason": "v1.267 replaces the historical /story proof-board layouts with the live target-driven story landing."
+      },
+      "fe-public-story-fracture-design-board-v184.spec.ts": {
+        "reason": "v1.267 replaces the historical /story proof-board layouts with the live target-driven story landing."
+      },
+      "fe-public-support-help-design-board-v173.spec.ts": {
+        "reason": "v1.225 retires diagram-only help presentation; replaced by real map/answers/history tests, NOT PASS."
+      },
+      "fe-release-design-target-density-v1127.spec.ts": {
+        "reason": "v1.273 replaces the historical /release proof-board and compact proof-stack layouts."
+      },
+      "fe-release-readiness-design-target-density-v1128.spec.ts": {
+        "reason": "Historical suite retired by the pre-v1.298 Playwright authority."
+      },
+      "fe-release-readiness-real-ui-layout-v1201.spec.ts": {
+        "reason": "Historical suite retired by the pre-v1.298 Playwright authority."
+      },
+      "fe-release-real-ui-layout-v1200.spec.ts": {
+        "reason": "v1.273 replaces the historical /release proof-board and compact proof-stack layouts."
+      },
+      "fe-release-real-ui-layout-v1220.spec.ts": {
+        "reason": "v1.273 replaces the historical /release proof-board and compact proof-stack layouts."
+      },
+      "fe-release-tester-pack-real-ui-layout-v1202.spec.ts": {
+        "reason": "Historical suite retired by the pre-v1.298 Playwright authority."
+      },
+      "fe-release-vietnamese-design-match-v1142.spec.ts": {
+        "reason": "v1.273 replaces the historical /release proof-board and compact proof-stack layouts."
+      },
+      "fe-roadmap-real-ui-layout-v1153.spec.ts": {
+        "reason": "v1.231 replaces roadmap image/compact assertions; active trust-heading/status regression stays."
+      },
+      "fe-roadmap-real-ui-layout-v1211.spec.ts": {
+        "reason": "v1.231 replaces roadmap image/compact assertions; active trust-heading/status regression stays."
+      },
+      "fe-start-design-target-density-v1124.spec.ts": {
+        "reason": "v1.270 replaces the historical /start proof-board/gallery/class-world layouts with the live target-driven onboarding landing."
+      },
+      "fe-start-real-ui-layout-v1217.spec.ts": {
+        "reason": "v1.270 replaces the historical /start proof-board/gallery/class-world layouts with the live target-driven onboarding landing."
+      },
+      "fe-start-vietnamese-design-match-v1139.spec.ts": {
+        "reason": "v1.270 replaces the historical /start proof-board/gallery/class-world layouts with the live target-driven onboarding landing."
+      },
+      "fe-status-design-target-density-v1130.spec.ts": {
+        "reason": "v1.285 replaces v1.224 duplicated support-topic wall with one primary station + FAQ flow."
+      },
+      "fe-status-real-ui-layout-v1203.spec.ts": {
+        "reason": "v1.285 replaces v1.224 duplicated support-topic wall with one primary station + FAQ flow."
+      },
+      "fe-status-vietnamese-real-ui-layout-v1145.spec.ts": {
+        "reason": "v1.285 replaces v1.224 duplicated support-topic wall with one primary station + FAQ flow."
+      },
+      "fe-story-design-target-density-v1121.spec.ts": {
+        "reason": "v1.267 replaces the historical /story proof-board layouts with the live target-driven story landing."
+      },
+      "fe-story-real-ui-layout-v1214.spec.ts": {
+        "reason": "v1.267 replaces the historical /story proof-board layouts with the live target-driven story landing."
+      },
+      "fe-story-vietnamese-design-match-v1136.spec.ts": {
+        "reason": "v1.267 replaces the historical /story proof-board layouts with the live target-driven story landing."
+      },
+      "fe-support-design-target-density-v1131.spec.ts": {
+        "reason": "v1.224 replaces support mockup/card-only assertions; never counted as runtime PASS."
+      },
+      "fe-support-help-design-target-density-v1132.spec.ts": {
+        "reason": "v1.225 retires diagram-only help presentation; replaced by real map/answers/history tests, NOT PASS."
+      },
+      "fe-support-help-real-ui-layout-v1147.spec.ts": {
+        "reason": "v1.225 retires diagram-only help presentation; replaced by real map/answers/history tests, NOT PASS."
+      },
+      "fe-support-help-real-ui-layout-v1205.spec.ts": {
+        "reason": "v1.225 retires diagram-only help presentation; replaced by real map/answers/history tests, NOT PASS."
+      },
+      "fe-support-real-ui-layout-v1146.spec.ts": {
+        "reason": "v1.224 replaces support mockup/card-only assertions; never counted as runtime PASS."
+      },
+      "fe-support-real-ui-layout-v1204.spec.ts": {
+        "reason": "v1.224 replaces support mockup/card-only assertions; never counted as runtime PASS."
+      },
+      "fe-support-real-ui-layout-v1224.spec.ts": {
+        "reason": "v1.285 replaces v1.224 duplicated support-topic wall with one primary station + FAQ flow."
+      },
+      "fe-support-safety-design-target-density-v1133.spec.ts": {
+        "reason": "v1.226 supersedes static safety mockup assertions; not counted as PASS."
+      },
+      "fe-support-safety-real-ui-layout-v1148.spec.ts": {
+        "reason": "v1.226 supersedes static safety mockup assertions; not counted as PASS."
+      },
+      "fe-support-safety-real-ui-layout-v1206.spec.ts": {
+        "reason": "v1.226 supersedes static safety mockup assertions; not counted as PASS."
+      },
+      "fe-tester-pack-design-target-density-v1129.spec.ts": {
+        "reason": "Historical suite retired by the pre-v1.298 Playwright authority."
+      },
+      "fe-tester-pack-vietnamese-real-ui-layout-v1144.spec.ts": {
+        "reason": "Historical suite retired by the pre-v1.298 Playwright authority."
+      }
+    }
+  },
+  "provenance": {
+    "validators": [
+      "validate_web_public_accessibility_readability_polish.py",
+      "validate_web_public_closed_tester_information_pack.py",
+      "validate_web_public_community_roadmap_onboarding.py",
+      "validate_web_public_content_ia_hub_polish.py",
+      "validate_web_public_faq_search_helpfulness_polish.py",
+      "validate_web_public_game_info_depth.py",
+      "validate_web_public_news_guide_detail_pages.py",
+      "validate_web_public_performance_copy_asset_budget_polish.py",
+      "validate_web_public_player_trust_release_narrative.py",
+      "validate_web_public_release_readiness_hub_polish.py",
+      "validate_web_public_route_continuity_conversion_polish.py",
+      "validate_web_public_status_download_trust_polish.py",
+      "validate_web_public_ux_content_polish.py",
+      "validate_web_public_vertical_slice.py",
+      "validate_web_public_visual_responsive_polish.py",
+      "validate_web_public_world_gameplay_loop_depth.py",
+      "validate_web_runtime_browser_matrix.py",
+      "validate_web_shared_app_shell_v127.py"
+    ],
+    "note": "Standalone/historical validators preserved in source but not dispatched by WEB CURRENT STATE."
+  },
+  "retired_browser_patterns": [
+    {
+      "pattern": "fe-release-readiness-real-ui-layout-v1143.spec.ts",
+      "reason": "Historical suite retired by the pre-v1.298 Playwright authority."
+    }
+  ]
+}

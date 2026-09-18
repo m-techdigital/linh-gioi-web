@@ -126,7 +126,7 @@ def main() -> int:
         fail("WEB-TASK-LEDGER does not record WEB-OPT-05 v1.282 closure")
     if "d8f2a2b5af106ab51960835117c48fd4745ffda3" not in report or "40 player-facing/indexable routes" not in report or "19 Archive/noindex routes" not in report:
         fail("v1.282 report is missing source/metadata closure evidence")
-    current_state = read("tools/validate_web_current_state.py")
+    current_state = read("tools/web_active_suite_manifest_v1298.json")
     if '"validate_web_opt_seo_metadata_v1282.py"' not in current_state:
         fail("v1.282 validator is not registered in WEB CURRENT STATE authority")
 

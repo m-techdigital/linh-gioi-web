@@ -21,7 +21,7 @@ def main():
   if marker in experience+directory: ERRORS.append('support/help must remain local reading only: '+marker)
  css=need('packages/ui/src/question-directory.css','overflow-x:auto','flex-wrap:nowrap','min-height:44px')
  test=need('tests/e2e/web-opt-support-help-discovery-v1286.spec.ts','question map leads directly to the local answer directory','toBeLessThanOrEqual(isMobile ? 4250 : 2250)','mobile topic filters stay compact','toBeFocused()')
- state=read('tools/validate_web_current_state.py')
+ state=read('tools/web_active_suite_manifest_v1298.json')
  if '"validate_web_opt_support_help_discovery_v1286.py"' not in state: ERRORS.append('v1.286 validator not registered in current state')
  prior=read('tools/validate_web_fe_support_help_real_ui_layout_v1225.py')
  if 'parts = ("<PublicHelpHero/>", "<PublicHelpAnswers/>", "<PublicHelpBoundary/>", "<PublicHelpReadingNotes/>")' not in prior: ERRORS.append('v1.225 help guard still requires duplicated topic wall')

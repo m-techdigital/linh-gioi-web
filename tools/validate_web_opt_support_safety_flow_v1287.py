@@ -22,7 +22,7 @@ def main():
   if marker in page+experience: ERRORS.append('support/safety must remain local guidance only: '+marker)
  css=need('packages/ui/src/reading-tools.css','WEB-OPT-10 safety checklist rail','display:flex','flex-wrap:nowrap','overflow-x:auto','scroll-snap-type:x proximity')
  test=need('tests/e2e/web-opt-support-safety-flow-v1287.spec.ts','safe-reporting sequence reaches issue routing before the deep data reference','toBeLessThanOrEqual(2100)','toBeLessThanOrEqual(3400)','swipeable one-row touch rail','toBeChecked()')
- state=read('tools/validate_web_current_state.py')
+ state=read('tools/web_active_suite_manifest_v1298.json')
  if '"validate_web_opt_support_safety_flow_v1287.py"' not in state: ERRORS.append('v1.287 validator not registered in current state')
  prior=read('tools/validate_web_fe_support_safety_real_ui_layout_v1226.py')
  for marker in ('<PublicSafetyChecklist/>','PrivacyNotice','DataBoundaryColumns','NO_ACCEPTED_BACKEND_CONTRACT'):

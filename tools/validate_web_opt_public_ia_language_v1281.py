@@ -101,11 +101,11 @@ def main() -> int:
         fail("WEB-TASK-LEDGER does not record WEB-OPT-04 v1.281 closure")
     if "a5659a33e0e74710efe334a96057dad7f64489c2" not in report or "3232px" not in report or "1266px" not in report:
         fail("v1.281 report is missing source/IA closure evidence")
-    current_state = read("tools/validate_web_current_state.py")
+    current_state = read("tools/web_active_suite_manifest_v1298.json")
     if '"validate_web_opt_public_ia_language_v1281.py"' not in current_state:
         fail("v1.281 validator is not registered in WEB CURRENT STATE authority")
-    if '"validate_web_fe_news_discovery_v1253.py": "validate_web_opt_public_ia_language_v1281.py"' not in current_state:
-        fail("v1.253 news discovery is not explicitly superseded by v1.281")
+    if '"validate_web_fe_news_discovery_v1253.py"' not in current_state or '"validate_web_opt_public_ia_language_v1281.py"' not in current_state:
+        fail("v1.253 news discovery is not explicitly superseded by manifest authority v1.281")
 
     if ERRORS:
         print("WEB OPT PUBLIC IA LANGUAGE v1.281 VALIDATION FAIL")

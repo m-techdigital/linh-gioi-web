@@ -19,7 +19,7 @@ def main():
  for marker in ('line-clamp:','-webkit-line-clamp:'):
   if marker in guide and marker not in ('-webkit-line-clamp:none;',): ERRORS.append('article content must not be truncated: '+marker)
  test=need('tests/e2e/web-opt-editorial-mobile-density-v1284.spec.ts','33 editorial routes materially reduce mobile scroll cost','toBeLessThanOrEqual(4300)','toBeLessThanOrEqual(1850)','truth boundaries','native fragment focus')
- state=read('tools/validate_web_current_state.py')
+ state=read('tools/web_active_suite_manifest_v1298.json')
  if '"validate_web_opt_editorial_mobile_density_v1284.py"' not in state: ERRORS.append('v1.284 validator not registered in current state')
  next_action=read('docs/execution/WEB-NEXT-ACTION.md')
  project_state=read('docs/execution/WEB-PROJECT-STATE.md')

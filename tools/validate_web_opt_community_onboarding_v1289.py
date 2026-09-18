@@ -24,7 +24,7 @@ def main():
  css=need('packages/ui/src/reading-journey.css','WEB-OPT-12 onboarding mobile rails','display:flex','overflow-x:auto','scroll-snap-type:x proximity','flex:0 0 min(82vw,21rem)','#onboarding-audiences .lgo-question-list')
  test=need('tests/e2e/web-opt-community-onboarding-v1289.spec.ts','newcomer journey is game-oriented before technical release surfaces','compact swipe rails','NO_ACCEPTED_BACKEND_CONTRACT','axe.run')
  legacy_test=need('tests/e2e/fe-community-onboarding-real-ui-layout-v1228.spec.ts',"const expected=['/start','/game','/community'];","toContainText('Khám phá cách chơi')","toHaveURL(origin+'/start')")
- state=read('tools/validate_web_current_state.py')
+ state=read('tools/web_active_suite_manifest_v1298.json')
  if '"validate_web_opt_community_onboarding_v1289.py"' not in state: ERRORS.append('v1.289 validator not registered in current state')
  prior=read('tools/validate_web_fe_community_onboarding_real_ui_layout_v1228.py')
  for marker in ('PublicCommunityOnboardingExperience.tsx','reading-journey.css','NO_ACCEPTED_BACKEND_CONTRACT','href:"/start"','href:"/game"'):

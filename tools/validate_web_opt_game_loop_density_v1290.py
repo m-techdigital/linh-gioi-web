@@ -27,7 +27,7 @@ def main():
  for marker in ("<canvas","<form","fetch(","WebSocket","localStorage","sessionStorage"):
   if marker in page+view: ERRORS.append("game-loop must remain read-only: "+marker)
  test=need("tests/e2e/web-opt-game-loop-density-v1290.spec.ts","repeated technical boundaries collapse into one clear scope owner","compact swipe rail","read-only interaction and next routes remain truthful","mobile scroll cost stays materially below the 4880px baseline","toBeLessThanOrEqual(4490)")
- state=read("tools/validate_web_current_state.py")
+ state=read("tools/web_active_suite_manifest_v1298.json")
  if '"validate_web_opt_game_loop_density_v1290.py"' not in state:
   ERRORS.append("v1.290 validator not registered in current state")
  next_action=read("docs/execution/WEB-NEXT-ACTION.md")

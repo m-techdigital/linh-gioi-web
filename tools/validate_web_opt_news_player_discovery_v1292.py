@@ -42,7 +42,7 @@ def main():
   "truthful player-news empty state is primary and archive follows useful routes",
   "hero and mobile empty-state actions prioritize players instead of repeated technical proof",
   "archive remains reachable without becoming player news or a live feed")
- state=read("tools/validate_web_current_state.py")
+ state=read("tools/web_active_suite_manifest_v1298.json")
  if '"validate_web_opt_news_player_discovery_v1292.py"' not in state:
   ERRORS.append("v1.292 validator not registered in current state")
  next_action=read("docs/execution/WEB-NEXT-ACTION.md")

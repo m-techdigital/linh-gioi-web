@@ -35,7 +35,7 @@ def main():
   "provisional event fixture remains reachable only inside collapsed archive",
   "read-only routes remain useful without registration countdown or reward state",
   'meta[name="robots"]')
- state=read("tools/validate_web_current_state.py")
+ state=read("tools/web_active_suite_manifest_v1298.json")
  if '"validate_web_opt_events_product_decision_v1293.py"' not in state:
   ERRORS.append("v1.293 validator not registered in current state")
  next_action=read("docs/execution/WEB-NEXT-ACTION.md")

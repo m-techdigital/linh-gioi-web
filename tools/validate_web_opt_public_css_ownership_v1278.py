@@ -75,7 +75,7 @@ def main() -> int:
         fail("WEB-TASK-LEDGER does not record WEB-OPT-01 v1.278 closure")
     if "29.95%" not in report or "89c391b5a240544ab6c8bac0eb3b9bdef91c84f5" not in report:
         fail("v1.278 report is missing final payload/source evidence")
-    current_state_validator = read("tools/validate_web_current_state.py")
+    current_state_validator = read("tools/web_active_suite_manifest_v1298.json")
     if '"validate_web_opt_public_css_ownership_v1278.py"' not in current_state_validator:
         fail("v1.278 validator is not registered in WEB CURRENT STATE authority")
     if ERRORS:

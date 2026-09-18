@@ -49,7 +49,7 @@ def main():
   'all 16 Guide routes preserve authored semantics and indexable metadata',
   'unknown editorial slugs remain 404'
  ))
- state=read('tools/validate_web_current_state.py')
+ state=read('tools/web_active_suite_manifest_v1298.json')
  if '"validate_web_opt_editorial_renderers_v1283.py"' not in state: fail('v1.283 validator not registered in current state')
  next_action=read('docs/execution/WEB-NEXT-ACTION.md')
  project_state=read('docs/execution/WEB-PROJECT-STATE.md')

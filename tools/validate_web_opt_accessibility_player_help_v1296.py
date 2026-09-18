@@ -38,7 +38,7 @@ def main():
   "main principles read as player help while technical proof moves to deep notes",
   "keyboard practice and five player routes remain real and local",
   "player help remains accessible without fake settings or certification")
- state=read("tools/validate_web_current_state.py")
+ state=read("tools/web_active_suite_manifest_v1298.json")
  if '"validate_web_opt_accessibility_player_help_v1296.py"' not in state:
   ERRORS.append("v1.296 validator not registered in current state")
  next_action=read("docs/execution/WEB-NEXT-ACTION.md")

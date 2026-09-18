@@ -34,7 +34,7 @@ def main():
   "curated beginner intent is the initial view","all published guides stay one action away",
   "mobile intent filters are one compact swipe rail","local search still reaches the full guide set",
   "curated initial discovery keeps scan height materially below the 16-card baseline","isMobile?3000:1800")
- state=read("tools/validate_web_current_state.py")
+ state=read("tools/web_active_suite_manifest_v1298.json")
  if '"validate_web_opt_guides_discovery_v1291.py"' not in state:
   ERRORS.append("v1.291 validator not registered in current state")
  next_action=read("docs/execution/WEB-NEXT-ACTION.md")

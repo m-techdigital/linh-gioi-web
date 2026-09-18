@@ -39,7 +39,7 @@ def main():
   "web engineering records remain exact and reachable only in collapsed archive",
   "player verification routes precede engineering archive without release actions",
   'meta[name="robots"]')
- state=read("tools/validate_web_current_state.py")
+ state=read("tools/web_active_suite_manifest_v1298.json")
  if '"validate_web_opt_patch_notes_product_boundary_v1294.py"' not in state:
   ERRORS.append("v1.294 validator not registered in current state")
  next_action=read("docs/execution/WEB-NEXT-ACTION.md")
