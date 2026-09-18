@@ -32,14 +32,15 @@ function normalizeReadingText(value: string) {
   return value.normalize("NFD").replace(/\p{M}/gu, "").replace(/[đĐ]/g, "d").toLowerCase().replace(/\s+/g, " ").trim();
 }
 
-export function ReadingCatalog({ entries, groups, label, copy = defaultCopy }: {
+export function ReadingCatalog({ entries, groups, label, copy = defaultCopy, initialGroupId = "all" }: {
   entries: readonly ReadingCatalogEntry[];
   groups: readonly ReadingCatalogGroup[];
   label: string;
   copy?: ReadingCatalogCopy;
+  initialGroupId?: string;
 }) {
   const [query, setQuery] = useState("");
-  const [groupId, setGroupId] = useState("all");
+  const [groupId, setGroupId] = useState(initialGroupId);
   const prefix = useId();
   const inputId = `${prefix}-search`, resultsId = `${prefix}-results`;
   const phrase = normalizeReadingText(query);

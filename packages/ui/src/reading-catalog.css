@@ -56,7 +56,10 @@
   .lgo-library-help { grid-template-columns:1fr; }
 }
 @media(max-width:600px) {
-  .lgo-reading-catalog-grid { grid-template-columns:1fr; }
+  /* WEB-OPT-14 mobile intent filter rail: /guides only; other catalog consumers keep their layout. */
+  .lgo-guides-discovery .lgo-reading-catalog-filters { display:flex; flex-wrap:nowrap; overflow-x:auto; scroll-snap-type:x proximity; overscroll-behavior-inline:contain; padding-bottom:.35rem; scrollbar-width:thin; }
+  .lgo-guides-discovery .lgo-reading-catalog-filters > button { flex:0 0 auto; scroll-snap-align:start; }
+  .lgo-guides-discovery .lgo-reading-catalog-grid { grid-template-columns:1fr; }
   .lgo-reading-catalog-search { grid-template-columns:1fr; gap:.65rem; }
   .lgo-reading-catalog-search > button { margin:0; justify-self:start; }
   .lgo-reading-catalog-filters { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }

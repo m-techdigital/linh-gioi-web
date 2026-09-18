@@ -15,7 +15,7 @@ test.describe('published guide discovery and local filters v1.234',()=>{
   await page.screenshot({path:test.info().outputPath('guides-directory.png'),fullPage:true});
  });
  test('catalog preserves all published source titles and descriptions, not invented aliases',async({page})=>{
-  const catalog=page.locator('.lgo-reading-catalog');await expect(catalog.locator('article')).toHaveCount(guides.length);
+  const catalog=page.locator('.lgo-reading-catalog');await catalog.getByRole('button',{name:/^Tất cả/}).click();await expect(catalog.locator('article')).toHaveCount(guides.length);
   for(const entry of guides){const card=catalog.locator(`article[data-entry-id="${entry.slug}"]`);await expect(card.getByRole('heading',{level:3})).toHaveText(entry.title);await expect(card.locator('p')).toHaveText(entry.summary);await expect(card.getByRole('link')).toHaveAttribute('href',`/guides/${entry.slug}`);expect(await card.locator('p').evaluate(e=>getComputedStyle(e).webkitLineClamp)).toBe('none');}
   await expect(catalog.getByRole('status')).toContainText(`${guides.length}/${guides.length}`);
   await catalog.locator('[data-entry-id="world-gameplay-loop-guide"]').getByRole('link').click();await expect(page).toHaveURL(origin+'/guides/world-gameplay-loop-guide');
@@ -37,7 +37,7 @@ test.describe('published guide discovery and local filters v1.234',()=>{
   const catalog=page.locator('.lgo-reading-catalog'),input=catalog.getByRole('searchbox');await expect(input).toBeVisible();await page.waitForLoadState('networkidle');
   const requests:string[]=[];page.on('request',r=>{if(['fetch','xhr'].includes(r.resourceType())||r.method()!=='GET')requests.push(r.url());});
   await input.fill('Linh');await catalog.getByRole('button',{name:/^Đọc website/}).click();await expect(catalog.locator('article')).not.toHaveCount(0);expect(requests).toEqual([]);expect(page.url()).toBe(origin+'/guides');
-  await page.reload();await expect(input).toHaveValue('');await expect(catalog.getByRole('button',{name:/^Tất cả/})).toHaveAttribute('aria-pressed','true');await expect(catalog.locator('article')).toHaveCount(guides.length);
+  await page.reload();await expect(input).toHaveValue('');await expect(catalog.getByRole('button',{name:/^Nhập môn/})).toHaveAttribute('aria-pressed','true');await expect(catalog.locator('article')).toHaveCount(3);
  });
  test('featured article and beginner links navigate to existing source pages',async({page})=>{
   const featured=page.locator('.lgo-library-featured');await expect(featured.getByRole('heading')).toHaveText('Vòng lặp thế giới nhập môn');await expect(featured.getByRole('link')).toHaveAttribute('href','/guides/world-gameplay-loop-guide');await featured.getByRole('link').click();await expect(page).toHaveURL(origin+'/guides/world-gameplay-loop-guide');
@@ -53,7 +53,7 @@ test.describe('published guide discovery and local filters v1.234',()=>{
   const violations=await page.evaluate(async()=>{const axe=(window as unknown as {axe:{run:(e:Element|null,o:unknown)=>Promise<{violations:{id:string}[]}>}}).axe;return (await axe.run(document.querySelector('main'),{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}})).violations.map(v=>v.id);});expect(violations).toEqual([]);
  });
  test('summary disclosures keep the full source available without a wall of expanded text',async({page})=>{
-  const cards=page.locator('.lgo-reading-catalog-card');await expect(cards).toHaveCount(guides.length);
+  const catalog=page.locator('.lgo-reading-catalog');await catalog.getByRole('button',{name:/^Tất cả/}).click();const cards=page.locator('.lgo-reading-catalog-card');await expect(cards).toHaveCount(guides.length);
   const first=cards.first(),details=first.locator('details');await expect(details).not.toHaveAttribute('open','');
   await expect(first.locator('p')).not.toBeVisible();const summary=details.locator('summary');
   await summary.focus();await page.keyboard.press('Enter');await expect(details).toHaveAttribute('open','');

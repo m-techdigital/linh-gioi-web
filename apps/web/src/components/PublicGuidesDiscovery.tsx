@@ -31,7 +31,7 @@ export function PublicGuidesDiscovery() {
         {featured ? <FeaturedReading title={featured.title} description={featured.summary} href={`/guides/${featured.slug}`} image={{src:"/game-art/world/dong-mon-skyline.webp",width:1360,height:765,alt:"Minh họa thế giới Linh Giới trên bìa bài hướng dẫn"}}/> : null}</>}/>
     <section id="guide-library" aria-labelledby="guide-library-heading">
       <div className="lgo-release-section-heading"><SectionHeading headingId="guide-library-heading" eyebrow="Thư viện hướng dẫn" title="Tìm đúng bài cần đọc"/><p>Nhóm đọc để định hướng.<br/>Tiêu đề và mô tả giữ nguyên từ bài đã công bố.</p></div>
-      <ReadingCatalog entries={entries.map(entry=>({id:entry.slug,title:entry.title,description:entry.summary,href:`/guides/${entry.slug}`,groupId:shelfBySlug[entry.slug]??"other"}))} groups={groups} label="Kết quả hướng dẫn"/>
+      <ReadingCatalog entries={entries.map(entry=>({id:entry.slug,title:entry.title,description:entry.summary,href:`/guides/${entry.slug}`,groupId:shelfBySlug[entry.slug]??"other"}))} groups={groups} label="Kết quả hướng dẫn" initialGroupId="beginner"/>
     </section>
     <aside className="lgo-release-reading-panel lgo-release-frame lgo-library-help" aria-labelledby="guide-help-heading">
       <div><SectionHeading headingId="guide-help-heading" eyebrow="Cần một điểm bắt đầu?" title="Đọc ít hơn, đi đúng hơn"/><p>Trang Bắt đầu giúp chọn lối đọc. Hướng dẫn an toàn giúp chuẩn bị góp ý mà không chia sẻ dữ liệu riêng tư.</p></div>

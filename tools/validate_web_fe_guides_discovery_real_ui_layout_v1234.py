@@ -26,7 +26,7 @@ def main() -> int:
     if view.find("<ExperienceHero") >= view.find("<ReadingCatalog"): ERRORS.append("hero must precede published directory")
     catalog = require("packages/ui/src/reading-catalog.tsx", (
         "export function ReadingCatalog", "FilterChoices", "FormField", "TextInput", 'type="search"', "maxLength={120}",
-        'normalize("NFD")', "text.includes(phrase)", "entry.groupId === groupId", 'useState("all")', 'useState("")',
+        'normalize("NFD")', "text.includes(phrase)", "entry.groupId === groupId", 'initialGroupId = "all"', 'useState(initialGroupId)', 'useState("")',
         'role="status"', 'aria-live="polite"', "visible.length", "entries.length", "document.getElementById(inputId)?.focus()",
         "setQuery(\"\"); setGroupId(\"all\")", "Chưa tìm thấy bài phù hợp", "Chưa có hướng dẫn công khai", "<details", "{entry.description}",
         'aria-label={`${copy.actionLabel}: ${entry.title}`}', 'actionLabel: "Đọc hướng dẫn"', 'copy = defaultCopy', "không được gửi hoặc lưu"))
