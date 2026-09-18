@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
+from web_fixture_source import fixture_source
 import sys
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -8,6 +9,7 @@ def fail(message: str) -> None:
     sys.exit(1)
 
 def read(rel: str) -> str:
+    if rel == "packages/content/src/fixtures.ts": return fixture_source(ROOT)
     path = ROOT / rel
     if not path.exists():
         fail(f"missing {rel}")

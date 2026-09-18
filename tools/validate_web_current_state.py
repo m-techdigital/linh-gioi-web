@@ -5,6 +5,7 @@ from pathlib import Path
 import sys
 import re
 import json
+from web_fixture_source import fixture_source
 ROOT = Path(__file__).resolve().parents[1]
 ERRORS: list[str] = []
 
@@ -119,7 +120,7 @@ def public_route_exists(route: str) -> bool:
     if not all(marker in source for marker in required):
         return False
     entries = re.search(r"export const contentEntries\s*:\s*ContentEntry\[\]\s*=\s*\[(.*?)^\];",
-                        fixtures.read_text(encoding="utf-8"), re.S | re.M)
+                        fixture_source(ROOT), re.S | re.M)
     if not entries:
         return False
     for block in re.findall(r"^  \{\n(.*?)^  \}", entries[1], re.S | re.M):

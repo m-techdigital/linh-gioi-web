@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Source ownership and planning non-claims. Does not replace real browser verification."""
 from pathlib import Path
+from web_fixture_source import fixture_source
 import json
 import re
 
@@ -8,11 +9,14 @@ ROOT = Path(__file__).resolve().parents[1]
 ERRORS: list[str] = []
 
 def require(rel: str, markers: tuple[str, ...] = ()) -> str:
-    path = ROOT / rel
-    if not path.is_file():
-        ERRORS.append(f"missing {rel}")
-        return ""
-    text = path.read_text(encoding="utf-8")
+    if rel == "packages/content/src/fixtures.ts":
+        text = fixture_source(ROOT)
+    if rel != "packages/content/src/fixtures.ts":
+        path = ROOT / rel
+        if not path.is_file():
+            ERRORS.append(f"missing {rel}")
+            return ""
+        text = path.read_text(encoding="utf-8")
     for marker in markers:
         if marker not in text: ERRORS.append(f"{rel}: missing {marker}")
     return text

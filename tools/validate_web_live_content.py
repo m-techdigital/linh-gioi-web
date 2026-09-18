@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from pathlib import Path
+from web_fixture_source import fixture_source
 import sys
 ROOT = Path(__file__).resolve().parents[1]
 ERRORS: list[str] = []
@@ -18,6 +19,7 @@ def require_dir(rel: str) -> None:
         fail(f"missing dir: {rel}")
 
 def read(rel: str) -> str:
+    if rel == "packages/content/src/fixtures.ts": return fixture_source(ROOT)
     p = ROOT / rel
     if not p.is_file():
         fail(f"missing readable file: {rel}")
@@ -88,7 +90,7 @@ def main() -> int:
     for phrase in ["ContentRepository", "LocalContentRepository", "findDuplicateSlugs", "findInvalidDates", "No CMS", "No DB persistence", "No backend API claim"]:
         require_any_text("packages/content/src/index.ts", [phrase]) if phrase.startswith("find") else require_any_text("docs/execution/WEB-CONTENT-MODEL.md", [phrase])
     fixtures = read("packages/content/src/fixtures.ts")
-    content_entries_match = re.search(r"export const contentEntries: ContentEntry\[\] = \[([\s\S]*?)\n\];\n\nexport const downloadBuilds", fixtures)
+    content_entries_match = re.search(r"export const contentEntries: ContentEntry\[\] = \[([\s\S]*?)^\];", fixtures, re.M)
     content_entries_text = content_entries_match.group(1) if content_entries_match else fixtures
     slugs = re.findall(r'slug: "([^"]+)"', content_entries_text)
     if len(slugs) != len(set(slugs)):

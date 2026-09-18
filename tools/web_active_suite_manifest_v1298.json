@@ -10,6 +10,7 @@
   },
   "active": {
     "validators": [
+      "validate_web_opt_content_fixture_modularization_v1299.py",
       "validate_web_opt_active_suite_authority_v1298.py",
       "validate_web_opt_player_roadmap_v1297.py",
       "validate_web_opt_accessibility_player_help_v1296.py",

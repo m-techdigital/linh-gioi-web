@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 from pathlib import Path
+from web_fixture_source import fixture_source
 import sys
 ROOT = Path(__file__).resolve().parents[1]
 ERRORS: list[str] = []
@@ -9,6 +10,7 @@ def fail(msg: str) -> None:
     ERRORS.append(msg)
 
 def read(rel: str) -> str:
+    if rel == "packages/content/src/fixtures.ts": return fixture_source(ROOT)
     p = ROOT / rel
     if not p.is_file():
         fail(f"missing file: {rel}")

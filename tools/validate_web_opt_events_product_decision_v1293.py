@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Source guard for WEB-OPT-16 events product decision v1.293."""
 from pathlib import Path
+from web_fixture_source import fixture_source
 ROOT=Path(__file__).resolve().parents[1]
 ERRORS=[]
 
 def read(rel):
+ if rel == "packages/content/src/fixtures.ts": return fixture_source(ROOT)
  p=ROOT/rel
  if not p.is_file():
   ERRORS.append("missing "+rel)
