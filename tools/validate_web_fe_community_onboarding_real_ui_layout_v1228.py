@@ -26,8 +26,8 @@ def main() -> int:
         if m in page: ERRORS.append(f"obsolete/unsafe composition {m}")
     parts = require("apps/web/src/components/PublicCommunityOnboardingExperience.tsx", (
         'title="Hòa nhập cộng đồng Linh Giới"', "FieldManual", "ReadingJourney", "communityOnboardingPaths.map",
-        "communityFeedbackChannels.map", 'href:"/status"', 'href:"/roadmap"', 'href:"/community"',
-        "Kiểm tra trạng thái", "Đọc mốc mở dần", "Quay lại cộng đồng", "không cấp quyền thử nghiệm",
+        "communityFeedbackChannels.map", 'href:"/start"', 'href:"/game"', 'href:"/community"',
+        "Bắt đầu hành trình", "Khám phá cách chơi", "Về quảng trường", "không cấp quyền thử nghiệm",
         "Chưa có danh sách chờ", "NO_ACCEPTED_BACKEND_CONTRACT", 'fetchPriority="high"'))
     journey = require("packages/ui/src/reading-journey.tsx", (
         '"use client"', "useState(0)", "ProgressStep", "ProgressSteps", "aria-controls={panelId}",

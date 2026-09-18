@@ -77,6 +77,7 @@ def finish(name: str) -> int:
 import runpy
 
 VALIDATORS = [
+    "validate_web_opt_community_onboarding_v1289.py",
     "validate_web_opt_community_value_clarity_v1288.py",
     "validate_web_opt_support_safety_flow_v1287.py",
     "validate_web_opt_support_help_discovery_v1286.py",

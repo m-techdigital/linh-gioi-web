@@ -10,12 +10,14 @@ test.describe("community onboarding is a reading journey, not enrollment v1.228"
     await expect(page.locator('.lgo-onboarding-experience .lgo-field-manual')).toBeVisible();
     await expect(page.locator('main img[src*=design-boards],main img[src*=design-reference]')).toHaveCount(0);
     await expect(page.locator('.lgo-reading-journey .lgo-progress-step')).toHaveCount(3);
-    await expect(page.getByRole('link',{name:'Bố cục hòa nhập cộng đồng cho Hòa nhập cộng đồng · Ba bước đọc, không đăng ký — mở trong tab mới',exact:true})).toHaveAttribute('href','/design-reference/community-detailed-design-target-v1149.png');
+    await expect(page.locator('main a[href^="/design-reference/"]')).toHaveCount(0);
     const m=await page.evaluate(()=>{
       const copy=document.querySelector('.lgo-onboarding-experience .lgo-release-hero-copy')!.getBoundingClientRect(),manual=document.querySelector('.lgo-onboarding-experience .lgo-field-manual')!.getBoundingClientRect();
-      return {copy:copy.toJSON(),manual:manual.toJSON(),overflow:document.documentElement.scrollWidth-innerWidth,columns:getComputedStyle(document.querySelector('.lgo-reading-journey .lgo-progress-steps')!).gridTemplateColumns.split(' ').length};
+      const stepStyle=getComputedStyle(document.querySelector('.lgo-reading-journey .lgo-progress-steps')!);
+      return {copy:copy.toJSON(),manual:manual.toJSON(),overflow:document.documentElement.scrollWidth-innerWidth,display:stepStyle.display,overflowX:stepStyle.overflowX,columns:stepStyle.gridTemplateColumns.split(' ').length};
     });
-    expect(m.overflow).toBeLessThanOrEqual(0);expect(m.columns).toBe(isMobile?1:3);
+    expect(m.overflow).toBeLessThanOrEqual(0);
+    if(isMobile){expect(m.display).toBe('flex');expect(m.overflowX).toBe('auto');}else{expect(m.display).toBe('grid');expect(m.columns).toBe(3);}
     if(isMobile)expect(m.manual.top).toBeGreaterThanOrEqual(m.copy.bottom);else expect(m.manual.left).toBeGreaterThanOrEqual(m.copy.right);
     await page.screenshot({path:test.info().outputPath('onboarding-layout.png'),fullPage:true});
   });
@@ -28,7 +30,7 @@ test.describe("community onboarding is a reading journey, not enrollment v1.228"
     expect(disabledOpacity,'disabled navigation must be visually distinct').toBeLessThan(enabledOpacity);
     await journey.getByRole('button',{name:'Bước tiếp',exact:true}).click();
     await expect(journey.getByRole('status')).toContainText('2/3');
-    await expect(journey.locator('.lgo-reading-journey-panel')).toContainText('Đọc mốc mở dần');
+    await expect(journey.locator('.lgo-reading-journey-panel')).toContainText('Khám phá cách chơi');
     await journey.getByRole('button',{name:'Bước tiếp',exact:true}).click();
     await expect(journey.getByRole('status')).toContainText('3/3');
     await expect(journey.getByRole('button',{name:'Bước tiếp',exact:true})).toBeDisabled();
@@ -38,7 +40,7 @@ test.describe("community onboarding is a reading journey, not enrollment v1.228"
   });
   test("keyboard selects any step, all destinations work, and reload resets reading state",async({page})=>{
     const journey=page.locator('.lgo-reading-journey');await expect(journey).toBeVisible();
-    const expected=['/status','/roadmap','/community'];
+    const expected=['/start','/game','/community'];
     for(let i=0;i<3;i++){
       const select=journey.getByRole('button',{name:new RegExp(`^Xem bước ${i+1}:`)});
       await select.focus();await page.keyboard.press('Space');await expect(select).toHaveAttribute('aria-pressed','true');
@@ -48,7 +50,7 @@ test.describe("community onboarding is a reading journey, not enrollment v1.228"
       expect((await select.boundingBox())!.height).toBeGreaterThanOrEqual(44);
     }
     await page.reload();await expect(journey.getByRole('status')).toContainText('1/3');
-    await journey.locator('.lgo-reading-journey-panel').getByRole('link').click();await expect(page).toHaveURL(origin+'/status');
+    await journey.locator('.lgo-reading-journey-panel').getByRole('link').click();await expect(page).toHaveURL(origin+'/start');
   });
   test("four source-backed audience paths are readable and not fake registrations",async({page})=>{
     const paths=page.locator('#onboarding-audiences .lgo-question-list details');await expect(paths).toHaveCount(4);

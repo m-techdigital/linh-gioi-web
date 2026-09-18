@@ -21,8 +21,6 @@
 .lgo-reading-journey-controls { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:.8rem; }
 .lgo-reading-journey-controls output { color:var(--lgo-color-text-primary); font-size:.78rem; text-align:center; }
 .lgo-reading-journey-boundary { color:var(--lgo-color-text-muted); font-size:.75rem; line-height:1.65; margin:.8rem 0 0; }
-.lgo-onboarding-hero-boundary { display:flex; align-items:start; gap:.7rem; font-size:.83rem; color:var(--lgo-color-text-muted); margin:1.2rem 0; }
-.lgo-onboarding-hero-boundary > .lgo-release-icon { color:var(--lgo-color-warm-gold); }
 .lgo-onboarding-experience .lgo-onboarding-contract-note { font-size:.7rem; overflow-wrap:anywhere; margin-top:1rem; }
 .lgo-onboarding-experience .lgo-question-answer small { display:block; color:var(--lgo-color-text-muted); font-size:.8rem; line-height:1.6; }
 .lgo-reading-journey[data-columns="4"] .lgo-progress-steps { grid-template-columns:repeat(4,minmax(0,1fr)); }
@@ -34,6 +32,15 @@
   .lgo-reading-journey[data-columns="4"] .lgo-progress-steps { grid-template-columns:1fr; }
   .lgo-reading-journey .lgo-progress-steps { grid-template-columns:1fr; gap:.65rem; }
   .lgo-reading-journey .lgo-progress-step { flex-direction:row; padding:1rem; }
+  /* WEB-OPT-12 onboarding mobile rails: scope the swipe treatment to onboarding only. */
+  .lgo-onboarding-experience > #onboarding-reading,
+  .lgo-onboarding-experience > .lgo-release-reading-grid,
+  .lgo-onboarding-experience .lgo-reading-journey,
+  .lgo-onboarding-experience #onboarding-audiences { min-width:0; width:100%; max-width:100%; }
+  .lgo-onboarding-experience .lgo-reading-journey .lgo-progress-steps { display:flex; width:100%; max-width:100%; min-width:0; flex-wrap:nowrap; gap:.65rem; overflow-x:auto; scroll-snap-type:x proximity; padding-bottom:.35rem; scrollbar-width:thin; }
+  .lgo-onboarding-experience .lgo-reading-journey .lgo-progress-step { flex:0 0 min(82vw,21rem); flex-direction:column; padding:1rem; scroll-snap-align:start; }
+  .lgo-onboarding-experience #onboarding-audiences .lgo-question-list { display:flex; width:100%; max-width:100%; min-width:0; flex-wrap:nowrap; gap:.7rem; overflow-x:auto; scroll-snap-type:x proximity; padding-bottom:.35rem; scrollbar-width:thin; }
+  .lgo-onboarding-experience #onboarding-audiences .lgo-question-list > details { flex:0 0 min(82vw,21rem); scroll-snap-align:start; align-self:stretch; }
   .lgo-reading-journey-panel { grid-template-columns:1fr; gap:1rem; padding:1.15rem; }
   .lgo-reading-journey .lgo-progress-step p { margin:.5rem 0 .65rem; }
 }

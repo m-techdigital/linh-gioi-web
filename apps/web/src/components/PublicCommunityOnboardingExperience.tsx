@@ -3,27 +3,27 @@ import { ExperienceHero, FieldManual, LinkButton, QuestionDisclosureList, Readin
 import type { ReadingJourneyStep } from "@lgo-web/ui";
 
 const readingSteps: readonly ReadingJourneyStep[] = [
-  { id:"status", title:"Kiểm tra trạng thái", summary:"Hiểu phạm vi đang có, không nhầm hướng dẫn với máy chủ thật.", detail:"Xem trạng thái website, gói tải và phạm vi thử nghiệm trước khi tham gia cộng đồng. Màu trạng thái mô tả nội dung trong source, không phải số liệu vận hành trực tiếp.", href:"/status", action:"Xem trạng thái" },
-  { id:"roadmap", title:"Đọc mốc mở dần", summary:"Phân biệt điều đang chuẩn bị với tính năng đã được mở.", detail:"Nắm rõ những phần đang chuẩn bị, những phần chưa mở và cách theo dõi cập nhật. Mốc trong lộ trình không thay thế gói build, bằng chứng nguồn gốc và phê duyệt phát hành.", href:"/roadmap", action:"Xem lộ trình" },
-  { id:"community", title:"Quay lại cộng đồng", summary:"Đọc nguyên tắc chung và chuẩn bị phản hồi an toàn.", detail:"Dùng trang cộng đồng làm điểm gom quy tắc ứng xử, phản hồi an toàn và hướng dẫn tham gia. Hiện chưa có trò chuyện, diễn đàn, bang hội hoặc danh sách chờ công khai.", href:"/community", action:"Về cộng đồng" }
+  { id:"start", title:"Bắt đầu hành trình", summary:"Biết nên xem gì trước khi tìm bản tải hay quyền thử nghiệm.", detail:"Mở hướng dẫn bắt đầu để xem lộ trình dành cho người chơi mới và những phần có thể khám phá ngay trên website. Đây là hướng dẫn đọc, không phải tài khoản hay phiên chơi trực tuyến.", href:"/start", action:"Mở hướng dẫn bắt đầu" },
+  { id:"game", title:"Khám phá cách chơi", summary:"Hiểu thế giới, nhịp khám phá và vòng lặp đang được giới thiệu.", detail:"Đọc phần Thế giới để hiểu bối cảnh, lớp nhân vật và nhịp chơi đang được mô tả công khai. Nội dung hiện là hướng dẫn sản phẩm, không phải gameplay live hay máy chủ đang mở.", href:"/game", action:"Khám phá cách chơi" },
+  { id:"community", title:"Về quảng trường", summary:"Đọc nguyên tắc chung và chuẩn bị phản hồi an toàn.", detail:"Dùng trang cộng đồng làm điểm gom quy tắc ứng xử, phản hồi an toàn và hướng dẫn tham gia. Hiện chưa có trò chuyện, diễn đàn, bang hội hoặc danh sách chờ công khai.", href:"/community", action:"Về cộng đồng" }
 ];
 
 export function PublicOnboardingHero() {
   return <ExperienceHero className="lgo-release-hero lgo-release-frame" copyClassName="lgo-release-hero-copy"
-    badge="Linh Giới Online · Chào người bạn mới" badgeTone="gold" kicker="Hiểu đúng hôm nay · Đồng hành dài lâu"
+    badge="Linh Giới Online · Chào người bạn mới" badgeTone="gold" kicker="Khám phá thế giới · Hiểu cách chơi · Gặp cộng đồng"
     title="Hòa nhập cộng đồng Linh Giới"
-    lead="Bắt đầu bằng một lộ trình đọc ngắn: hiểu trạng thái, nắm mốc mở dần và cùng giữ không gian cộng đồng an toàn. Không cần nhập tài khoản hay thông tin riêng tư."
-    actions={[{href:"#onboarding-reading",label:"Bắt đầu ba bước đọc",tone:"gold"},{href:"/community",label:"Về cộng đồng",tone:"neutral"}]}
-    detail={<><p className="lgo-onboarding-hero-boundary"><ReleaseIcon name="shield"/><span>Hướng dẫn chuẩn bị, không phải đăng ký.<br/>Chưa có diễn đàn, bang hội hoặc danh sách chờ.</span></p><p className="lgo-release-art-note">Minh họa thế giới · Không phải gameplay trực tuyến</p></>}
+    lead="Đi qua ba điểm dành cho người mới: bắt đầu hành trình, khám phá cách chơi rồi ghé quảng trường cộng đồng. Không cần nhập tài khoản hay thông tin riêng tư."
+    actions={[{href:"#onboarding-reading",label:"Bắt đầu ba bước",tone:"gold"},{href:"/community",label:"Về cộng đồng",tone:"neutral"}]}
+    detail={<p className="lgo-release-art-note">Minh họa thế giới · Không phải gameplay trực tuyến</p>}
     visual={<><img className="lgo-release-hero-art" src="/game-art/world/dong-mon-skyline.webp" width="1360" height="765" alt="" fetchPriority="high"/>
-      <FieldManual title="Cùng hòa nhập" quote="Hiểu nhau từ những bước đầu" steps={["Đọc trạng thái","Hiểu lộ trình","Cùng xây dựng"]}/>
+      <FieldManual title="Cùng hòa nhập" quote="Hiểu nhau từ những bước đầu" steps={["Bắt đầu hành trình","Khám phá cách chơi","Cùng xây dựng"]}/>
     </>}/>;
 }
 export function PublicOnboardingReading() {
   return <section id="onboarding-reading" aria-labelledby="onboarding-reading-heading">
-    <div className="lgo-release-section-heading"><SectionHeading headingId="onboarding-reading-heading" eyebrow="Ba bước, không cần tài khoản" title="Đi theo thứ tự để hiểu đúng"/><p>Chọn bước bất kỳ hoặc dùng Bước trước / Bước tiếp.<br/>Đây là vị trí đang đọc, không phải tiến trình xét duyệt.</p></div>
+    <div className="lgo-release-section-heading"><SectionHeading headingId="onboarding-reading-heading" eyebrow="Ba bước dành cho người mới" title="Từ thế giới đến cộng đồng"/><p>Chọn bước bất kỳ hoặc dùng Bước trước / Bước tiếp.<br/>Đây là vị trí đang đọc, không phải tiến trình xét duyệt.</p></div>
     <ReadingJourney steps={readingSteps} label="Ba bước hòa nhập cộng đồng"
-      boundary="Chỉ ghi nhớ bước đang xem trên trang này; tải lại sẽ về bước đầu. Đọc hướng dẫn không cấp quyền thử nghiệm, không đăng ký và không gửi dữ liệu."/>
+      boundary="Vị trí đang đọc chỉ tồn tại trên trang này. Không đăng ký, không cấp quyền thử nghiệm và không gửi dữ liệu."/>
   </section>;
 }
 export function PublicOnboardingAudiences() {
