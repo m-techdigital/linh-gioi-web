@@ -132,30 +132,41 @@ def public_route_exists(route: str) -> bool:
 def check_active_checkpoint() -> None:
     state = read("docs/execution/WEB-PROJECT-STATE.md")
     queue = read("docs/execution/WEB-NEXT-ACTION.md")
+    primary_queue = queue.split("\n---\n", 1)[0]
+    queue_status = re.search(r"(?m)^Status:\s*(WEB_TASK_CONTINUE|WEB_TASK_REVIEW)$", primary_queue)
     current = re.match(r"Current phase: ([A-Z0-9-]+)-v(\d+)\.(\d+) (WEB_CLOSED|WEB_VISUAL_REVIEW_REQUIRED)", state)
-    upcoming = re.search(r"(?m)^Next task:\s*\n((?:WEB-FE|WEB-OPT)-[A-Z0-9-]+-v(\d+)\.(\d+))", queue)
-    route = re.search(r"Current FE scope: select `([^`]+)`", queue)
-    shared_scope = re.search(r"(?m)^Current optimization scope:\s*(.+)$", queue)
-    if not current or not upcoming:
-        fail("active checkpoint/next task header is missing or ambiguous")
+    upcoming = re.search(r"(?m)^Next task:\s*\n((?:WEB-FE|WEB-OPT)-[A-Z0-9-]+-v(\d+)\.(\d+))", primary_queue)
+    route = re.search(r"Current FE scope: select `([^`]+)`", primary_queue)
+    shared_scope = re.search(r"(?m)^Current optimization scope:\s*(.+)$", primary_queue)
+    if not current or not queue_status:
+        fail("active checkpoint/status header is missing or ambiguous")
         return
     phase = f"{current[1]}-v{current[2]}.{current[3]}"
     status = current[4]
-    if status == "WEB_CLOSED":
-        if (int(upcoming[2]), int(upcoming[3])) != (int(current[2]), int(current[3]) + 1):
-            fail("next task must be the successor of the first, active checkpoint (not a historical marker)")
-    else:
-        current_route = re.search(r"(?m)^Current route: `([^`]+)`", state)
-        if not upcoming[1].startswith("WEB-FE-") or upcoming[1] != phase or not current_route or not route or route[1] != current_route[1]:
-            fail("visual review must remain on the same task and route; no assumed closure or automatic advance")
     phase_kind = "WEB-OPT" if phase.startswith("WEB-OPT-") else "WEB-FE"
     require_text("docs/execution/WEB-TASK-LEDGER.md", f"| {phase} | {phase_kind} | {status} |")
-    if upcoming[1].startswith("WEB-FE-"):
+    if status == "WEB_CLOSED":
+        if upcoming:
+            if queue_status[1] != "WEB_TASK_CONTINUE":
+                fail("closed checkpoint with successor must remain WEB_TASK_CONTINUE")
+            elif (int(upcoming[2]), int(upcoming[3])) != (int(current[2]), int(current[3]) + 1):
+                fail("next task must be the successor of the first, active checkpoint (not a historical marker)")
+        else:
+            terminal = queue_status[1] == "WEB_TASK_REVIEW" and "No automatic successor is authorized." in primary_queue
+            if not terminal:
+                fail("closed checkpoint without successor requires explicit terminal review authority")
+            return
+    else:
+        current_route = re.search(r"(?m)^Current route: `([^`]+)`", state)
+        if not upcoming or not upcoming[1].startswith("WEB-FE-") or upcoming[1] != phase or not current_route or not route or route[1] != current_route[1]:
+            fail("visual review must remain on the same task and route; no assumed closure or automatic advance")
+            return
+    if upcoming and upcoming[1].startswith("WEB-FE-"):
         if not route:
             fail("page-scoped WEB-FE task requires an explicit Current FE scope route")
         elif not public_route_exists(route[1]):
             fail(f"next public page does not exist: {route[1]}")
-    elif not shared_scope:
+    elif upcoming and not shared_scope:
         fail("shared WEB-OPT task requires an explicit Current optimization scope")
 
 def main() -> int:

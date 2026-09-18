@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-23-PUBLIC-PERFORMANCE-GOVERNANCE-BUDGETS-v1.300 WEB_CLOSED
+
+Current decision: the accepted optimized public source is protected by explicit regression budgets across decoded CSS, public asset footprint, heavy image transfer, route height, zero design-reference shipping and active-suite authority drift. Current authority is 169 active validators / 160 active browser specs with no silent growth permitted.
+
+Verified source delivery commit: 5dc5813eced6d732fac2df830586f8b4303196d9. Fresh build63; budget browser6/6 across 59 routes desktop/mobile; Content23/23; typecheck11/11; Web lint; v1.300/v1.298/v1.278/v1.280 guards; clean source current-state2052 PASS.
+
+Next authority: none assigned. WEB-OPT-01–23 complete the v1.277 optimization backlog; no automatic successor is authorized. Future/backend-dependent work remains gated by canonical contracts.
+
+Detailed report: LGO-WEB-OPT-23-PUBLIC-PERFORMANCE-GOVERNANCE-BUDGETS-REPORT-v1.300.md.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-22-CONTENT-FIXTURE-MODULARIZATION-v1.299 WEB_CLOSED
 
 Current decision: the public content fixture contract remains stable while physical ownership is split across product/editorial/support/release/historical modules. The facade is 5 lines; 77/77 export blocks match the accepted baseline.

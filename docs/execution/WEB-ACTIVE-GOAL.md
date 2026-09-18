@@ -1,5 +1,12 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — public performance/governance budgets closed (2026-09-18)
+
+WEB-OPT-23 v1.300 is CLOSED at source commit `5dc5813eced6d732fac2df830586f8b4303196d9`. Automated budgets now guard 59-route CSS, public assets, heavy image transfer, page-height outliers, zero design-reference shipping and active-suite authority drift. Fresh browser6/6, build63, Content23/23, typecheck11/11, lint and clean source current-state are GREEN.
+
+WEB-OPT-01 through WEB-OPT-23 complete the v1.277 optimization backlog. **No automatic successor is authorized.** Future/backend-dependent work remains gated; a fresh task requires explicit owner/operator authority.
+
+
 ## Owner optimization authority — content fixtures modularized (2026-09-18)
 
 WEB-OPT-22 v1.299 is CLOSED at source commit `12c74e2edcd613c240136aa3df62a6a5ffc03fd2`. The 3,302-line fixture monolith is now a 5-line facade over product/editorial/support/release/historical modules, with 77/77 export-block parity and stable package exports.

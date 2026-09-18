@@ -1,31 +1,27 @@
 # WEB-NEXT-ACTION
 
-Status: WEB_TASK_CONTINUE
+Status: WEB_TASK_REVIEW
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-22 v1.299 is CLOSED at source commit `12c74e2edcd613c240136aa3df62a6a5ffc03fd2`; do not reopen it without fixture/export/copy-parity regression evidence.
+WEB-OPT-23 v1.300 is CLOSED at source commit `5dc5813eced6d732fac2df830586f8b4303196d9`; do not reopen it without a measurable budget/authority regression.
 
-Next task:
-WEB-OPT-23-PUBLIC-PERFORMANCE-GOVERNANCE-BUDGETS-v1.300
+Optimization program state:
+- WEB-OPT-01 through WEB-OPT-23 are CLOSED under the v1.277 optimization authority;
+- Phase C ends at v1.300 and the backlog defines no v1.301 successor;
+- **No automatic successor is authorized.**
+- the Future/backend-dependent lane remains gated by accepted canonical game-backend/release contracts and must not be simulated by public fixtures.
 
-Objective:
-Codify regression budgets from the accepted optimized public source for decoded CSS, public asset footprint, heavy image transfer, route page-height outliers, accidental design-reference shipping and active-test authority drift.
+Current optimization scope: none; Phase C backlog is complete through v1.300.
 
-Current optimization scope: measurement/budget tooling and governance evidence only. Do not cosmetically redesign routes, rewrite approved copy, alter backend contracts or deploy production changes.
+Review action:
+- review/accept the v1.300 budget authority and closure evidence;
+- commission a fresh assessment only through explicit new authority;
+- activate backend-dependent work only when the required canonical contracts exist.
 
-Entry baseline:
-- WEB-OPT-01–22 are CLOSED;
-- current public source/build evidence is the accepted pre-release baseline;
-- active browser/source-gate authority is canonical from v1.298 and fixture ownership is modular from v1.299.
+Closure evidence: fresh build63; v1.300 budget browser6/6 over 59 desktop/mobile routes; Content23/23; typecheck11/11; Web lint; source guards; clean source current-state PASS; package/SHA/replay required before delivery closure.
 
-Exit criteria:
-- automated budgets use documented accepted baseline values with explicit regression tolerances;
-- budgets fail on measurable regression without forcing cosmetic redesign;
-- design-reference shipping and active-suite authority drift are guarded;
-- relevant tests/validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
-
-Execution rules: Phase C maintenance only; measure first; RED→GREEN; no production deployment.
+Execution rule: remain on review authority after verified package/push. Do not infer a next task from the historical compatibility snapshot below.
 
 ---
 

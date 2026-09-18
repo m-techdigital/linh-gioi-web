@@ -1,5 +1,12 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.300
+
+WEB-OPT-23 is CLOSED at `5dc5813eced6d732fac2df830586f8b4303196d9`. The accepted optimized public Web now has explicit automated budgets for decoded CSS, public asset footprint, heavy image transfer, route page-height outliers, zero design-reference shipping and active-suite authority drift.
+
+WEB-OPT-01–23 complete the v1.277 optimization program. There is no approved automatic successor. Future/backend-dependent work stays gated by accepted canonical game-backend/release contracts; otherwise a new cycle begins only from explicit fresh assessment authority.
+
+
 ## 2026-09-18 optimization checkpoint v1.299
 
 WEB-OPT-22 is CLOSED at `12c74e2edcd613c240136aa3df62a6a5ffc03fd2`. Content fixture ownership is split into five typed domains behind the unchanged `@lgo-web/content` facade; 77/77 moved export blocks remain copy-equivalent.

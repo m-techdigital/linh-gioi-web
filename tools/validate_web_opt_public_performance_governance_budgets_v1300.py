@@ -61,6 +61,19 @@ def main():
  public_refs=ROOT/"apps/web/public/design-reference"
  ref_files=[p for p in public_refs.rglob("*") if p.is_file()] if public_refs.exists() else []
  if len(ref_files)>budget.get("design_reference",{}).get("max_public_files",0):ERRORS.append("design-reference shipping budget exceeded")
+ project_state=read("docs/execution/WEB-PROJECT-STATE.md")
+ active_prefix="Current phase: WEB-OPT-23-PUBLIC-PERFORMANCE-GOVERNANCE-BUDGETS-v1.300 WEB_CLOSED"
+ if project_state.startswith(active_prefix):
+  next_action=read("docs/execution/WEB-NEXT-ACTION.md")
+  primary=next_action.split("\n---\n",1)[0]
+  ledger=read("docs/execution/WEB-TASK-LEDGER.md")
+  report=read("docs/execution/LGO-WEB-OPT-23-PUBLIC-PERFORMANCE-GOVERNANCE-BUDGETS-REPORT-v1.300.md")
+  if "Status: WEB_TASK_REVIEW" not in primary:ERRORS.append("v1.300 terminal closure must be WEB_TASK_REVIEW")
+  if "No automatic successor is authorized." not in primary:ERRORS.append("v1.300 terminal closure lacks no-successor authority")
+  if "Next task:" in primary:ERRORS.append("v1.300 terminal closure must not invent a successor")
+  if "| WEB-OPT-23-PUBLIC-PERFORMANCE-GOVERNANCE-BUDGETS-v1.300 | WEB-OPT | WEB_CLOSED |" not in ledger:ERRORS.append("ledger missing v1.300 closure")
+  for marker in ("5dc5813eced6d732fac2df830586f8b4303196d9","6/6 PASS","2,052-file","169 validators / 160 browser specs"):
+   if marker not in report:ERRORS.append("v1.300 report missing closure evidence: "+marker)
  if ERRORS:
   print("WEB OPT PUBLIC PERFORMANCE GOVERNANCE BUDGETS v1.300 VALIDATION FAIL")
   for e in ERRORS:print("- "+e)
