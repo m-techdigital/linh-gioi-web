@@ -3,6 +3,8 @@ from __future__ import annotations
 from pathlib import Path
 import sys
 
+from web_workspace_style_boundaries import TARGETS as STYLE_BOUNDARY_TARGETS, scan_text as scan_style_boundary_text
+
 ROOT = Path(__file__).resolve().parents[1]
 ERRORS: list[str] = []
 
@@ -31,6 +33,11 @@ def main() -> int:
     require(public_hero, "ExperienceHero")
     forbid(public_hero, "<StatusBadge")
     forbid(public_hero, "<LinkButton")
+
+    for rel in STYLE_BOUNDARY_TARGETS:
+        source = read(rel)
+        for issue in scan_style_boundary_text(rel, source):
+            ERRORS.append(f"style-boundary {issue.path}:{issue.line}: {issue.message}")
 
     for rel in [
         "apps/portal/src/app/login/page.tsx",

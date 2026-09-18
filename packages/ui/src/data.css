@@ -49,6 +49,7 @@
   outline-offset: 3px;
 }
 
+/* style-boundary-owned-scroll: data table horizontal scroll contract */
 .lgo-data-table {
   width: 100%;
   min-width: 620px;
