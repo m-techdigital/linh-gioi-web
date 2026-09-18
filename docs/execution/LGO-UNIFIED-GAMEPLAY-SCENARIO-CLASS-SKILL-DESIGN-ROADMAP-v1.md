@@ -1,7 +1,7 @@
 # LGO Unified Gameplay / Scenario / Class / Skill / Design Roadmap v1
 
 Date: 2026-09-18
-Status: DRAFT — WAITING_CROSS_SANDBOX REVIEW
+Status: CURRENT-SOURCE REVIEW CLOSED — OWNER/PROVENANCE DECISIONS REMAIN EXPLICIT
 Task: `T-f9c2c132c769`
 Umbrella Mission: `MS-57a638c72421`
 
@@ -77,6 +77,8 @@ Shared world-event direction:
 - city warning → crisis → restoration.
 
 This is the story spine to preserve unless a later owner decision explicitly supersedes it.
+
+Game current-source review `MM-17078c385e79` found no contradiction with this sequence. Active authority aligns on Linh Thành/Đông Môn → training → Linh Lâm → Cổ Di Tích/Âm Giới escalation.
 ## 4. Map hierarchy and rollout
 
 ### CURRENT AUTHORITY
@@ -107,14 +109,16 @@ Linh Thành districts include:
 
 Not every node opens immediately. Shell/preview does not equal backend/product completion.
 
-### Naming/history conflict — OPEN
+### Naming/history conflict — provenance decision remains OPEN
 Older owner/runtime history uses **Đông Lâm / Cổng Đông Lâm**, including the current stable runtime ID `map-01a-cong-dong-lam`.
 Current narrative authority uses **Linh Thành – Đông Môn** and authoring-local key `dong-mon`.
+
+Game current-source review `MM-17078c385e79` confirms there is no current authority defining “Đông Lâm” as a separate canonical narrative zone beyond legacy/reference strings and the durable runtime ID. The runtime string is not narrative proof of a separate place.
 
 Rule:
 - do not rename `map-01a-cong-dong-lam`;
 - do not assume Đông Lâm == Đông Môn by string similarity;
-- historical boards/content must be mapped through an explicit provenance/containment decision;
+- historical boards/content still require an explicit provenance/containment decision;
 - Product Bible v2 already establishes that stable runtime IDs are not silently renamed for narrative cleanup.
 ## 5. Five canonical Paths
 
@@ -172,7 +176,7 @@ Therefore the unified model has two independent tracks:
 - weapon/accessory/VFX evolution;
 - no assumption that a visual milestone itself grants a skill.
 
-A future dedicated skill-progression spec must map the owner’s 10-level cadence without overloading the visual progression file.
+A future dedicated skill-progression spec must map the owner’s 10-level cadence without overloading the visual progression file. Game review `MM-17078c385e79` confirms no accepted class/skill data contradicts this separation: visual Lv001…Lv100 rows are not skill unlocks, and the limited-loadout / roughly 10–14 skills-per-Path direction leaves exact milestone progression to GAME-DESIGN-02.
 ## 7. Skill production contract
 
 Before a skill is production-opened, define:
@@ -266,6 +270,15 @@ Use shared window/profile tokens:
 - touch reach;
 - camera/profile rules.
 
+Current UIF-02R constraints confirmed by Game review `MM-17078c385e79`:
+- semantic `PCWide / Tablet / MobileLandscape` profiles are presentation authority;
+- root/global visual scale is not composition authority;
+- safe-area/cutout is handled separately from profile/layout composition;
+- touch floor is preserved instead of shrinking controls indefinitely;
+- screen-local composition variants require exact-source visual evidence.
+
+These are UI/runtime presentation constraints only; they do not change modular body/equipment/wardrobe ownership contracts.
+
 Player-visible UI changes require:
 - PC capture;
 - tablet/intermediate capture where applicable;
@@ -303,8 +316,9 @@ A prior narrative/design document records an earlier direction of:
 - Võ / Kiếm / Pháp first;
 - Cơ / Linh later.
 
-This is **not** the current Founder Alpha rule and should not overwrite Product Bible v2.
-It remains useful as post-Alpha rollout history until a new owner decision replaces it.
+Game review `MM-17078c385e79` confirms this does **not** supersede the current five-identity schema and does not make Pháp Founder Alpha combat-complete. Current authority remains five canonical identities `vo/kiem/phap/co/linh`, with Founder Alpha capability staging Võ + Kiếm first.
+
+The older Võ/Kiếm/Pháp note remains historical/post-Alpha planning context only.
 
 ### Long-term
 - all five classes combat-complete;
@@ -537,10 +551,10 @@ Every production map requires:
 - composite design board used directly as runtime asset.
 - technical test green treated as sufficient visual acceptance.
 
-### OPEN / NEED CROSS-SANDBOX OR OWNER DECISION
-- exact semantic/provenance mapping of historical “Đông Lâm/Cổng Đông Lâm” narrative boards to current Đông Môn/Map01A.
-- exact Lv1–100 gameplay skill unlock table.
-- exact Soft Launch class release order after Founder Alpha.
+### OPEN / OWNER OR DEDICATED DESIGN DECISION
+- exact semantic/provenance mapping of historical “Đông Lâm/Cổng Đông Lâm” narrative boards to current Đông Môn/Map01A; current-source review confirms no separate canonical Đông Lâm narrative zone.
+- exact Lv1–100 gameplay skill unlock/progression table; current-source review confirms art milestone rows do not define it.
+- exact Soft Launch class release order after Founder Alpha; the historical Võ/Kiếm/Pháp note is not current Founder Alpha authority.
 - long-term ownership of cosmetics at account vs character level.
 - exact rarity/stat/drop/crafting/market numbers.
 - exact class-switch/Path-change policy.
@@ -616,17 +630,22 @@ For pure design tasks:
 - Mission cross-review.
 
 Docs/validators cannot substitute for a playable/visual gate when the task changes what the player sees.
-## 20. Cross-sandbox review request
+## 20. Cross-sandbox review closure
 
-Game sandbox should verify:
-- current source compatibility with the story/map sequence;
-- whether any active source supersedes the historical Soft Launch Võ/Kiếm/Pháp direction;
-- whether “Đông Lâm” has a current authoritative semantic mapping beyond the stable runtime ID name;
-- whether any current class/skill content contradicts the long-term cadence;
-- whether current visual rework changes any shared design-system principle in this roadmap.
+- request: `MM-72fb1762ce9c`
+- response: `MM-17078c385e79`
+- responder: `S-LGO-HUB-20260917-D4F1`
+- status: ANSWERED / integrated
+- reply_to integrity: PASS
 
-Unresolved rows remain `WAITING_CROSS_SANDBOX`.
-They do not block independent database/contract/Web work.
+Integrated findings:
+1. Story/map sequence: no current-source contradiction; keep Linh Thành/Đông Môn → training → Linh Lâm → Cổ Di Tích/Âm Giới escalation.
+2. Soft Launch: older Võ/Kiếm/Pháp direction is historical planning context, not current Founder Alpha authority; five identities remain canonical and Võ/Kiếm are combat-complete first.
+3. Đông Lâm: no current canonical narrative zone is defined beyond legacy/reference strings and durable runtime ID `map-01a-cong-dong-lam`; keep the provenance task and do not rename durable IDs.
+4. Alpha vs Lv100: current class/skill data does not contradict the separate gameplay-vs-visual progression tracks; GAME-DESIGN-02 owns exact milestone policy.
+5. UIF-02R: semantic profiles, composition-not-root-scale, separate safe-area/cutout handling, touch floor and exact-source visual evidence carry forward; modular asset/equipment rules do not change.
+
+No current-source compatibility blocker remains for this roadmap. Remaining OPEN rows are explicit owner/provenance/dedicated-design decisions rather than unresolved Game review.
 
 ## 21. Acceptance target
 
@@ -639,4 +658,4 @@ The task can close only when:
 - resulting follow-up tasks are registered with dependencies;
 - docs are evidenced, committed and pushed.
 
-Until Game review arrives, this document remains a draft and this task is parked rather than falsely closed.
+Game current-source review has arrived and is integrated. This roadmap may close as the reconciled planning baseline while its explicitly OPEN owner/provenance/dedicated-design decisions continue through the registered follow-up tasks.
