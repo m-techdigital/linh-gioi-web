@@ -4,29 +4,29 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-12 v1.289 is CLOSED at source commit `c6de3524c672e3302a23e212d5ba542804907dff`; do not reopen it without a related onboarding/static-boundary regression.
+WEB-OPT-13 v1.290 is CLOSED at source commit `4830f7b7c90b9623937f9fa8805afd1180ab4b29`; do not reopen it without a related game-loop density/non-claim regression.
 
 Next task:
-WEB-OPT-13-GAME-LOOP-DENSITY-v1.290
+WEB-OPT-14-GUIDES-DISCOVERY-v1.291
 
 Objective:
-Reduce `/game/loop` vertical length and repeated boundary blocks while keeping the route clearly informational/read-only rather than implying live gameplay, progress, rewards or persistence.
+Rebuild `/guides` discovery around player intent and curated categories after editorial consolidation, so players reach the right guide without scanning a long generic catalog.
 
-Current optimization scope: `/game/loop` only plus the smallest shared Base owner change genuinely required by that route. Do not batch `/guides`, News, broad gameplay-copy rewrites, backend/game runtime, account/progress/reward systems or production deployment.
+Current optimization scope: `/guides` only plus the smallest shared Base owner change genuinely required by that route. Do not batch Guide detail pages, News, Events, broad article rewriting, backend/CMS/search services or production deployment.
 
 Entry baseline:
-- WEB-OPT-01–12 foundations are CLOSED and must remain regression-green;
-- v1.289 explicitly restored generic mobile `ReadingJourney` behavior outside onboarding and final v1.232 game-loop regression is 12/12 PASS;
-- no playable session, saved character progress, quest completion or reward backend is accepted.
+- WEB-OPT-01–13 foundations are CLOSED and must remain regression-green;
+- v1.283 owns Guide detail renderer consolidation and v1.284 owns editorial mobile reading density;
+- no backend search, personalization, saved reading state or CMS is accepted.
 
 Exit criteria:
-- desktop/mobile `/game/loop` is materially shorter with repeated boundary blocks reduced;
-- player reading sequence and next routes remain clear without fake gameplay state;
-- no progress, quest-completion, inventory, reward or account persistence is introduced;
-- keyboard/focus/touch behavior and accepted public shell/language contracts remain intact;
+- desktop/mobile `/guides` exposes clear intent/category discovery with materially less scanning cost;
+- all 16 published Guide detail routes remain intentionally reachable and source meaning is preserved;
+- no fake search/backend/personalization state is introduced;
+- keyboard/focus/touch behavior and accepted public shell/language/metadata contracts remain intact;
 - fresh BEFORE/AFTER screenshots/metrics, focused browser/e2e, relevant validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.289 contracts; no production deployment. Do not batch WEB-OPT-14.
+Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.290 contracts; no production deployment. Do not batch WEB-OPT-15.
 
 Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 

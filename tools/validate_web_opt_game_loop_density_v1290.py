@@ -30,6 +30,18 @@ def main():
  state=read("tools/validate_web_current_state.py")
  if '"validate_web_opt_game_loop_density_v1290.py"' not in state:
   ERRORS.append("v1.290 validator not registered in current state")
+ next_action=read("docs/execution/WEB-NEXT-ACTION.md")
+ project_state=read("docs/execution/WEB-PROJECT-STATE.md")
+ ledger=read("docs/execution/WEB-TASK-LEDGER.md")
+ report=read("docs/execution/LGO-WEB-OPT-13-GAME-LOOP-DENSITY-REPORT-v1.290.md")
+ if not project_state.startswith("Current phase: WEB-OPT-13-GAME-LOOP-DENSITY-v1.290 WEB_CLOSED"):
+  ERRORS.append("WEB-PROJECT-STATE does not lead with v1.290 closure")
+ if "WEB-OPT-14-GUIDES-DISCOVERY-v1.291" not in next_action:
+  ERRORS.append("WEB-NEXT-ACTION does not advance to WEB-OPT-14 v1.291")
+ if "| WEB-OPT-13-GAME-LOOP-DENSITY-v1.290 | WEB-OPT | WEB_CLOSED |" not in ledger:
+  ERRORS.append("WEB-TASK-LEDGER does not record WEB-OPT-13 v1.290 closure")
+ for marker in ("4830f7b7c90b9623937f9fa8805afd1180ab4b29","4,880px","4,282px","18/18"):
+  if marker not in report: ERRORS.append("v1.290 report missing closure evidence: "+marker)
  if ERRORS:
   print("WEB OPT GAME LOOP DENSITY v1.290 VALIDATION FAIL")
   for e in ERRORS: print("- "+e)

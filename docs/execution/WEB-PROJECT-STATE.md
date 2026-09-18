@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-13-GAME-LOOP-DENSITY-v1.290 WEB_CLOSED
+
+Current decision: `/game/loop` remains informational/read-only while mobile density drops to 4,282px from 4,880px (-12.25%). Hero height is 730px from 841px and reading section 835px from 1,343px; mobile stages are one swipe rail, page overflow is zero and the duplicate hero technical boundary is removed while reading/scope/route proof owners remain.
+
+Verified source delivery commit: `4830f7b7c90b9623937f9fa8805afd1180ab4b29`. Clean temp production build63; final v1.290 static10/10 plus v1.289 regression8/8 = focused18/18; Content20/20; Content/UI/Web typecheck; Web lint; v1.290/v1.289/v1.232 source guards; clean 2,015-file current-state candidate PASS.
+
+Next task: `WEB-OPT-14-GUIDES-DISCOVERY-v1.291` on `/guides` only. Preserve Guide detail renderer/metadata/mobile reading contracts.
+
+Detailed report: `LGO-WEB-OPT-13-GAME-LOOP-DENSITY-REPORT-v1.290.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-12-COMMUNITY-ONBOARDING-v1.289 WEB_CLOSED
 
 Current decision: `/community/onboarding` is a shorter game-oriented newcomer reading flow: Start → Game → Community. Mobile height is 2,668px from 3,289px (-18.88%), hero 694px from 805px, reading 773px from 1,103px and audience choices 192px from 372px; page overflow is zero and the duplicate hero technical boundary is removed.

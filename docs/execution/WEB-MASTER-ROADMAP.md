@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.290
+
+WEB-OPT-13 is CLOSED at `4830f7b7c90b9623937f9fa8805afd1180ab4b29`. `/game/loop` removes the duplicate hero non-live boundary and changes only its four-stage mobile ReadingJourney into a swipe rail. Mobile height falls 4,880px→4,282px (-12.25%) with zero page overflow while desktop remains effectively unchanged.
+
+Continue Phase B with WEB-OPT-14 v1.291 on `/guides` only, followed by WEB-OPT-15 v1.292 on `/news`.
+
 ## 2026-09-18 optimization checkpoint v1.289
 
 WEB-OPT-12 is CLOSED at `c6de3524c672e3302a23e212d5ba542804907dff`. `/community/onboarding` replaces release/status-first newcomer reading with Start → Game → Community, removes the duplicate hero technical boundary and reduces mobile height 3,289px→2,668px (-18.88%) using onboarding-scoped reading/audience rails.

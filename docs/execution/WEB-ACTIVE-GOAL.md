@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — game loop density closed (2026-09-18)
+
+WEB-OPT-13 v1.290 is CLOSED at source commit `4830f7b7c90b9623937f9fa8805afd1180ab4b29`. `/game/loop` reduces mobile height 4,880px→4,282px (-12.25%, -598px), removes the duplicate hero gameplay boundary and turns the four-stage mobile wall into a world-loop-only swipe rail with zero page overflow.
+
+Next task is **WEB-OPT-14-GUIDES-DISCOVERY-v1.291** on `/guides` only. Rebuild discovery around player intent/categories while preserving all Guide detail routes and Phase-A editorial contracts; do not batch News.
+
 ## Owner optimization authority — community onboarding closed (2026-09-18)
 
 WEB-OPT-12 v1.289 is CLOSED at source commit `c6de3524c672e3302a23e212d5ba542804907dff`. `/community/onboarding` now leads Start → Game → Community, removes the duplicate hero technical boundary, and reduces mobile height 3,289px→2,668px (-18.88%); onboarding reading/audience choices are one-row swipe rails with zero page overflow.
