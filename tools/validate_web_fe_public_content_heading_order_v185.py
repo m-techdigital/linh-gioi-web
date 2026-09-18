@@ -23,7 +23,7 @@ def check_routes() -> None:
     }
     for rel, markers in route_markers.items(): require_text(rel, markers)
     require_text("apps/web/src/components/PublicNewsDiscovery.tsx", ['title="Tin tức Linh Giới"', "Không phải bản tin trực tiếp", "ReadingCatalog", "FeaturedReading"])
-    require_text("apps/web/src/components/PublicEventsExperience.tsx", ['title="Sự kiện Linh Giới"', "Chưa có lịch live, đăng ký tham gia hoặc phần thưởng sự kiện.", "Chủ đề đang được giới thiệu", "AnnouncementBoard"])
+    require_text("apps/web/src/components/PublicEventsExperience.tsx", ['title="Sự kiện Linh Giới"', "Chưa có lịch live, đăng ký tham gia hoặc phần thưởng sự kiện.", "Chưa có sự kiện live đang mở", "AnnouncementBoard"])
     require_text("apps/web/src/components/PublicPatchNotesExperience.tsx", ['title="Ghi chú cập nhật Linh Giới"', "Bản ghi không mở tải build mới hoặc xác nhận phát hành game.", "Những thay đổi đã được ghi lại", "AnnouncementBoard"])
     require_text("apps/web/src/components/PublicStatusExperience.tsx", ['title="Trạng thái công khai"', "ExperienceHero", "VisibilityCatalog"])
 def check_tests_and_docs() -> None:

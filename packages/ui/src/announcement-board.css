@@ -25,6 +25,9 @@
 .lgo-release-layout .lgo-announcement-details > summary:focus-visible { outline:2px solid var(--lgo-color-art-ink); outline-offset:3px; }
 .lgo-announcement-empty { text-align:center; border:1px dashed var(--release-line); }
 .lgo-announcement-empty h3 { font:500 1.5rem/1.4 var(--lgo-font-editorial); color:var(--lgo-color-parchment); }
+/* WEB-OPT-16: provisional event fixtures are reference archive, not current/live event state. */
+.lgo-events-fixture-archive-body { padding:.4rem 0 1rem; }
+.lgo-events-fixture-archive-body > p { max-width:76ch; color:var(--release-muted); font-size:max(.86rem,14px); line-height:1.6; }
 .lgo-announcement-reading-routes { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.7rem; margin:1rem 0; }
 .lgo-announcement-reading-routes .lgo-link-button { gap:.55rem; justify-content:space-between; }
 /* WEB-OPT-15 player-news empty action rail: news-only useful routes override the generic announcement grid. */
