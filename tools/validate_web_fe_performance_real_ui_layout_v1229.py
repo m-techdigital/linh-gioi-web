@@ -26,10 +26,10 @@ def main() -> int:
     for forbidden in ("performance-copy-budget-hud.svg", "lgo-service-compact-proof-page", "<form"):
         if forbidden in page: ERRORS.append(f"obsolete/unsafe page composition {forbidden}")
     experience = require("apps/web/src/components/PublicPerformanceExperience.tsx", (
-        'title="Hiệu năng và ngân sách nội dung"', "ReadingPreview", "Chưa có số đo production", "Không phải kết quả benchmark",
+        'title="Đọc nhẹ và rõ trên thiết bị của bạn"', "ReadingPreview", "Điều khung thử không đo", "Không có dữ liệu production", "Không phải kết quả benchmark",
         "Chưa công bố", "Chưa chứng nhận", "Chưa có CDN riêng", "NO_ACCEPTED_BACKEND_CONTRACT",
         "performanceCopyBudgetPrinciples.map", "staticRouteCompositionRules.map", "mobileDensityBudgets.map", "perceivedLoadSignals.map",
-        'href={item.route}', "không phải báo cáo tốc độ website", "Không phải báo cáo tối ưu của từng trang"))
+        'href={item.route}', "Không phải báo cáo tối ưu của từng trang"))
     preview = require("packages/ui/src/reading-preview.tsx", (
         '"use client"', "export function ReadingPreview", 'useState(false)', "CheckboxField", "SpiritButton",
         "aria-pressed", "aria-controls", 'role="status"', 'aria-live="polite"', 'data-density={density}',
@@ -54,7 +54,7 @@ def main() -> int:
     for rel in ("docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-SERVICE-v1.95.png", "apps/web/public/game-art/world/dong-mon-skyline.webp"):
         if not (ROOT / rel).is_file(): ERRORS.append(f"missing approved reference {rel}")
     require("tests/e2e/fe-performance-real-ui-layout-v1229.spec.ts", (
-        "m.overflow", "m.sample.top", "before", "not.toBeChecked", "requests).toEqual([])", "page.reload()",
+        "STATIC_BUILD", "m.overflow", "m.sample.top", "before", "not.toBeChecked", "requests).toEqual([])", "page.reload()",
         "route.abort()", "page.unroute", "outgoing).toEqual([])", "violations).toEqual([])", "screenshot"))
     require("docs/execution/WEB-NON-CLAIMS.md", ("No production RUM monitoring", "No Lighthouse score certification", "No CDN deployment claim"))
     print("WEB FE PERFORMANCE REAL UI LAYOUT v1.229 SOURCE " + ("FAIL" if ERRORS else "PASS"))

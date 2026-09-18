@@ -12,9 +12,8 @@ const routeLabels: Record<string, {title: string; summary: string; icon: Release
 export function PublicPerformanceHero() {
   return <ExperienceHero className="lgo-release-hero lgo-release-frame lgo-performance-hero" copyClassName="lgo-release-hero-copy"
     badge="Linh Giới Online · Trải nghiệm đọc" badgeTone="gold" kicker="Ít nhiễu hơn · Quyết định rõ hơn"
-    title="Hiệu năng và ngân sách nội dung" lead="Đọc điều quan trọng trước. Mở chi tiết khi cần. Thử khoảng cách nội dung và chọn có tải thêm minh họa trong một khung đọc riêng."
+    title="Đọc nhẹ và rõ trên thiết bị của bạn" lead="Ưu tiên nội dung cần biết, khoảng cách dễ đọc và minh họa chỉ khi bạn chọn. Khung thử bên dưới giúp bạn xem cách trình bày thay đổi mà không đo hay thay đổi thiết bị."
     actions={[{href:"#performance-preview",label:"Thử cách đọc",tone:"gold"},{href:"/accessibility",label:"Hướng dẫn dễ đọc",tone:"neutral"}]}
-    detail={<p className="lgo-performance-hero-note"><ReleaseIcon name="shield"/>Trải nghiệm thử tại chỗ, không phải báo cáo tốc độ website.</p>}
     visual={<ReadingPriorityPanel headingId="performance-priority-heading" overline="Ngân sách cho sự chú ý"
       title={<>Rõ trước.<br/><em>Đẹp vừa đủ.</em></>}
       items={[{label:"Nội dung",value:"Điều cần biết nằm trước"},{label:"Minh họa",value:"Tải thêm khi bạn chọn"},{label:"Chi tiết",value:"Mở rộng, không cắt bỏ"}]}
@@ -32,14 +31,12 @@ export function PublicPerformanceWorkshop() {
 }
 export function PublicPerformanceMeasurement() {
   return <section id="performance-measurement" className="lgo-performance-measurement lgo-release-frame" aria-labelledby="performance-measurement-heading">
-    <SectionHeading headingId="performance-measurement-heading" eyebrow="Phân biệt hướng dẫn và bằng chứng" title="Chưa có số đo production"/>
-    <p>Không phải kết quả benchmark. Thao tác trong khung thử không xác nhận điểm số, thời gian tải, FPS hoặc hiệu năng trên thiết bị của bạn.</p>
-    <dl className="lgo-measurement-boundary">
-      <div><dt>Core Web Vitals</dt><dd><strong>Chưa công bố</strong><span>Không có dữ liệu người dùng thực để kết luận.</span></dd></div>
-      <div><dt>Lighthouse</dt><dd><strong>Chưa chứng nhận</strong><span>Không đưa điểm giả hoặc suy ra từ test giao diện.</span></dd></div>
-      <div><dt>Hạ tầng ảnh</dt><dd><strong>Chưa có CDN riêng</strong><span>Minh họa mẫu là tài nguyên trong repo hiện tại.</span></dd></div>
+    <SectionHeading headingId="performance-measurement-heading" eyebrow="Ranh giới của khung thử" title="Điều khung thử không đo"/>
+    <p>Không phải kết quả benchmark. Các nút chỉ đổi cách trình bày mẫu trên trang này; chúng không đánh giá mạng, máy, FPS hay tốc độ tải của bạn.</p>
+    <dl className="lgo-measurement-boundary lgo-performance-guidance-boundary">
+      <div><dt>Dữ liệu thực tế</dt><dd><strong>Không có dữ liệu production</strong><span>Core Web Vitals: Chưa công bố. Lighthouse: Chưa chứng nhận. Chưa có CDN riêng. Không suy ra chất lượng thiết bị từ test giao diện.</span></dd></div>
     </dl>
-    <small>Hướng dẫn frontend · Không có giám sát production · NO_ACCEPTED_BACKEND_CONTRACT</small>
+    <small>Chưa có số đo production · Không có giám sát production · NO_ACCEPTED_BACKEND_CONTRACT</small>
   </section>;
 }
 export function PublicPerformancePrinciples() {
@@ -56,7 +53,6 @@ export function PublicPerformanceRoutes() {
       return <article className="lgo-performance-route-tile" key={item.route}>
         <ReleaseIcon name={label?.icon ?? "document"}/><h3>{label?.title ?? item.route}</h3><p>{label?.summary ?? item.copyBudget}</p>
         <LinkButton href={item.route} tone="neutral">Đọc hướng dẫn <ReleaseIcon name="arrow"/></LinkButton>
-        <details><summary>Ghi chú trong source <span aria-hidden="true">+</span></summary><div><p>{item.staticSurface}</p><p>{item.copyBudget}</p><p>{item.cssAssetRule}</p><small>{item.fallbackMessage}</small></div></details>
       </article>;
     })}</div>
   </section>;
@@ -66,5 +62,5 @@ export function PublicPerformanceNotes() {
     ...perceivedLoadSignals.map((item,index)=>({id:`performance-load-${index}`,question:item.playerFeeling,answer:<><p>{item.copyTreatment}</p><small>{item.mustAvoid}</small></>})),
     ...mobileDensityBudgets.map((item,index)=>({id:`performance-density-${index}`,question:item.surface,answer:<><p>{item.densityTarget}</p><p>{item.treatment}</p><small>{item.failureToAvoid}</small></>}))
   ];
-  return <details className="lgo-release-more-evidence"><summary>Nhịp đọc mobile và tín hiệu tải nội dung <span aria-hidden="true">+</span></summary><QuestionDisclosureList items={items}/></details>;
+  return <details className="lgo-release-more-evidence"><summary>Mẹo giữ trải nghiệm đọc gọn trên mobile <span aria-hidden="true">+</span></summary><QuestionDisclosureList items={items}/></details>;
 }

@@ -26,7 +26,7 @@ def check_routes() -> None:
     require_text("apps/web/src/components/PublicAccessibilityExperience.tsx", ['title="Dễ đọc và dễ thao tác"', "Chưa có audit WCAG chính thức", "Không tuyên bố chứng nhận pháp lý", "Không lưu thiết lập cá nhân"])
     require_text("apps/web/src/components/PublicCommunityExperience.tsx", ['title="Cộng đồng Linh Giới"', "Chưa có trò chuyện, diễn đàn hoặc bang hội", "không có kiểm duyệt trực tiếp", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("apps/web/src/components/PublicWorldLoopExperience.tsx", ['title="Vòng lặp gameplay thế giới"', "Đang đọc, không phải đang chơi", "không có mô phỏng combat", "NO_ACCEPTED_BACKEND_CONTRACT"])
-    require_text("apps/web/src/components/PublicPerformanceExperience.tsx", ['title="Hiệu năng và ngân sách nội dung"', "Chưa có số đo production", "Core Web Vitals", "Chưa chứng nhận", "Chưa có CDN riêng", "Không phải kết quả benchmark"])
+    require_text("apps/web/src/components/PublicPerformanceExperience.tsx", ['title="Đọc nhẹ và rõ trên thiết bị của bạn"', "Chưa có số đo production", "Core Web Vitals", "Chưa chứng nhận", "Chưa có CDN riêng", "Không phải kết quả benchmark"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-route-heading-priority-v189.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-v1.89.md", "LGO-WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-REPORT-v1.89.md", "HANDOFF-LGO-WEB-FE-PUBLIC-ROUTE-HEADING-PRIORITY-v1.89.md"]: require_file(rel)
     require_text("tests/e2e/fe-public-route-heading-priority-v189.spec.ts", ["/accessibility", "/community", "/game/loop", "/performance", "starts content with the page h1", "pageOverflow", "maxFont"])

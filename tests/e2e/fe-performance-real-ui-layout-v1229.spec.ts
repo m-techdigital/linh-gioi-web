@@ -1,14 +1,36 @@
-import {test, expect} from "@playwright/test";
-const origin=process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000";
+import {test, expect, type BrowserContext} from "@playwright/test";
+import fs from "node:fs";
+import path from "node:path";
+const STATIC_BUILD=process.env.LGO_STATIC_BUILD_PATH;
+const origin=STATIC_BUILD?"http://wip.local":(process.env.LGO_WEB_URL ?? "http://127.0.0.1:3000");
+function appRouteFile(app:string,pathname:string,extension:".html"|".rsc"){
+ const route=pathname.replace(/\/$/,"")||"/";
+ return path.join(app,".next/server/app",(route==="/"?"index":route.slice(1))+extension);
+}
+async function mountStaticBuild(context:BrowserContext){
+ if(!STATIC_BUILD)return;
+ await context.route("http://wip.local/**",async route=>{
+  const url=new URL(route.request().url());let file:string|undefined;let contentType="application/octet-stream";
+  if(url.searchParams.has("_rsc")){file=appRouteFile(STATIC_BUILD,url.pathname,".rsc");contentType="text/x-component";}
+  else if(url.pathname.startsWith("/_next/static/"))file=path.join(STATIC_BUILD,".next",url.pathname.slice("/_next/".length));
+  else if(url.pathname==="/_next/image"){const source=url.searchParams.get("url");if(source?.startsWith("/"))file=path.join(STATIC_BUILD,"public",source);}
+  else {const publicFile=path.join(STATIC_BUILD,"public",url.pathname);if(url.pathname!=="/"&&fs.existsSync(publicFile)&&fs.statSync(publicFile).isFile())file=publicFile;else{file=appRouteFile(STATIC_BUILD,url.pathname,".html");contentType="text/html";}}
+  if(!file||!fs.existsSync(file))return route.fulfill({status:404,body:"not found"});
+  if(file.endsWith(".css"))contentType="text/css";else if(file.endsWith(".js"))contentType="application/javascript";
+  else if(file.endsWith(".png"))contentType="image/png";else if(file.endsWith(".webp"))contentType="image/webp";else if(file.endsWith(".svg"))contentType="image/svg+xml";else if(file.endsWith(".woff2"))contentType="font/woff2";
+  return route.fulfill({status:200,contentType,body:fs.readFileSync(file)});
+ });
+}
 
 test.describe("performance reading workshop, not fabricated measurement v1.229",()=>{
- test.beforeEach(async({page})=>{
+ test.beforeEach(async({context,page})=>{
+  await mountStaticBuild(context);
   await page.goto(`${origin}/performance`);
-  await expect(page.getByRole("heading",{level:1,name:"Hiệu năng và ngân sách nội dung",exact:true})).toBeVisible();
+  await expect(page.getByRole("heading",{level:1,name:"Đọc nhẹ và rõ trên thiết bị của bạn",exact:true})).toBeVisible();
  });
  test("real workshop composition replaces embedded mockup and unmeasured scores",async({page,isMobile})=>{
   await expect(page.locator('.lgo-performance-priority-console')).toBeVisible();
-  await expect(page.locator('.lgo-measurement-boundary > div')).toHaveCount(3);
+  await expect(page.locator('.lgo-measurement-boundary > div')).toHaveCount(1);
   await expect(page.locator('main img[src*=design-boards], main img[src*=design-reference]')).toHaveCount(0);
   const m=await page.evaluate(()=>{
    const copy=document.querySelector('.lgo-performance-experience .lgo-release-hero-copy')!.getBoundingClientRect();
@@ -20,7 +42,7 @@ test.describe("performance reading workshop, not fabricated measurement v1.229",
   expect(m.overflow).toBeLessThanOrEqual(0);
   if(isMobile){expect(m.console.top).toBeGreaterThanOrEqual(m.copy.bottom);expect(m.sample.top).toBeGreaterThanOrEqual(m.controls.bottom);}
   else{expect(m.console.left).toBeGreaterThanOrEqual(m.copy.right);expect(m.sample.left).toBeGreaterThanOrEqual(m.controls.right);}
-  await expect(page.locator('#performance-measurement')).toContainText('Chưa có số đo production');
+  await expect(page.locator('#performance-measurement')).toContainText('Điều khung thử không đo');
   await expect(page.locator('#performance-measurement')).toContainText('Không phải kết quả benchmark');
   await page.screenshot({path:test.info().outputPath('performance-layout.png'),fullPage:true});
  });
@@ -37,7 +59,7 @@ test.describe("performance reading workshop, not fabricated measurement v1.229",
   await preview.getByRole('button',{name:'Đặt lại khung thử',exact:true}).click();await expect(sample).toHaveAttribute('data-density','compact');
  });
  test("optional illustration is not fetched until selected, and choice resets on reload",async({page})=>{
-  const requests:string[]=[];await page.route('**/game-art/world/dong-mon-skyline.webp',async route=>{requests.push(route.request().url());await route.continue();});
+  const requests:string[]=[];await page.route('**/game-art/world/dong-mon-skyline.webp',async route=>{requests.push(route.request().url());if(STATIC_BUILD)await route.fulfill({status:200,contentType:'image/webp',body:fs.readFileSync(path.join(STATIC_BUILD,'public/game-art/world/dong-mon-skyline.webp'))});else await route.continue();});
   await page.reload();const preview=page.locator('.lgo-reading-preview');await expect(preview).toBeVisible();
   const toggle=preview.getByRole('checkbox',{name:'Hiện minh họa trong khung thử',exact:true});await expect(toggle).not.toBeChecked();
   await expect(preview.locator('img')).toHaveCount(0);expect(requests).toEqual([]);
@@ -63,7 +85,7 @@ test.describe("performance reading workshop, not fabricated measurement v1.229",
  test("source-backed routes and disclosures remain useful without fake telemetry",async({page})=>{
   const routes=page.locator('#performance-routes');await expect(routes.locator('article')).toHaveCount(4);
   for(const href of ['/performance','/download/trust','/game/loop','/support/safety']){
-   const link=routes.locator(`a[href="${href}"]`);await expect(link).toBeVisible();expect((await page.request.get(origin+href)).status()).toBe(200);
+   const link=routes.locator(`a[href="${href}"]`);await expect(link).toBeVisible();if(!STATIC_BUILD)expect((await page.request.get(origin+href)).status()).toBe(200);
   }
   const principles=page.locator('#performance-principles details');await expect(principles).toHaveCount(4);
   const first=principles.first();await first.locator('summary').focus();await page.keyboard.press('Enter');await expect(first).toHaveAttribute('open','');
