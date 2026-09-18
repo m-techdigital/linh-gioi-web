@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-21-ACTIVE-TEST-VALIDATOR-AUTHORITY-CONSOLIDATION-v1.298 WEB_CLOSED
+
+Current decision: one canonical manifest now owns active browser/source-gate authority. Current-state dispatch executes 167 active validators; Playwright lists exactly 159 active spec files. 119 validator and 112 browser supersessions remain provenance-only, plus 18 standalone provenance validators and one retired browser pattern.
+
+Verified source delivery commit: 3a11d997c0ee8576fd49dbce2d12e5e6c94e34bc. Authority validator PASS; Playwright list 159/159; Web typecheck/lint PASS; clean current-state PASS; historical runtime-pass marker count 0.
+
+Next authority: WEB-OPT-22-CONTENT-FIXTURE-MODULARIZATION-v1.299.
+
+Detailed report: LGO-WEB-OPT-21-ACTIVE-TEST-VALIDATOR-AUTHORITY-CONSOLIDATION-REPORT-v1.298.md.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-20-PLAYER-ROADMAP-v1.297 WEB_CLOSED
 
 Current decision: `/roadmap` now leads with four player-readable product stages before release conditions. The 15-entry engineering implementation archive is no longer rendered publicly, while all 15 records remain source-owned for governance/history. Desktop height is 1,771px from 1,789px; mobile is 3,959px from 3,907px; page overflow remains zero.

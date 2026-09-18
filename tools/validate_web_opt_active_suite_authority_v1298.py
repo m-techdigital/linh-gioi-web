@@ -70,6 +70,16 @@ def main():
   if marker not in current:ERRORS.append("current-state not manifest-driven: "+marker)
  for legacy in ("VALIDATORS = [","SUPERSEDED_LAYOUT_VALIDATORS = {"):
   if legacy in current:ERRORS.append("current-state still embeds legacy authority: "+legacy)
+ project_state=read("docs/execution/WEB-PROJECT-STATE.md")
+ active_prefix="Current phase: WEB-OPT-21-ACTIVE-TEST-VALIDATOR-AUTHORITY-CONSOLIDATION-v1.298 WEB_CLOSED"
+ if project_state.startswith(active_prefix):
+  next_action=read("docs/execution/WEB-NEXT-ACTION.md")
+  ledger=read("docs/execution/WEB-TASK-LEDGER.md")
+  report=read("docs/execution/LGO-WEB-OPT-21-ACTIVE-TEST-VALIDATOR-AUTHORITY-CONSOLIDATION-REPORT-v1.298.md")
+  if "WEB-OPT-22-CONTENT-FIXTURE-MODULARIZATION-v1.299" not in next_action:ERRORS.append("v1.298 closure does not advance to v1.299")
+  if "| WEB-OPT-21-ACTIVE-TEST-VALIDATOR-AUTHORITY-CONSOLIDATION-v1.298 | WEB-OPT | WEB_CLOSED |" not in ledger:ERRORS.append("ledger missing v1.298 closure")
+  for marker in ("3a11d997c0ee8576fd49dbce2d12e5e6c94e34bc","167 active validators","159 active browser specs","Historical runtime-pass marker count: **0**"):
+   if marker not in report:ERRORS.append("v1.298 report missing closure evidence: "+marker)
  if ERRORS:
   print("WEB OPT ACTIVE SUITE AUTHORITY v1.298 VALIDATION FAIL")
   for e in ERRORS:print("- "+e)

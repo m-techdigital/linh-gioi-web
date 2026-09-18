@@ -4,30 +4,31 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-20 v1.297 is CLOSED at source commit `ef4755ba4346ce3107172baa87a9f579d6727f6b`; do not reopen it without a related player-roadmap/truth-boundary regression.
+WEB-OPT-21 v1.298 is CLOSED at source commit `3a11d997c0ee8576fd49dbce2d12e5e6c94e34bc`; do not reopen it without active-suite authority drift.
 
 Next task:
-WEB-OPT-21-ACTIVE-TEST-VALIDATOR-AUTHORITY-CONSOLIDATION-v1.298
+WEB-OPT-22-CONTENT-FIXTURE-MODULARIZATION-v1.299
 
 Objective:
-Establish one explicit active-suite authority for browser tests and source validators so current gates are identifiable without treating historical/superseded suites as current PASS evidence.
+Split the monolithic typed content fixture domains behind the existing repository contract so product/support/release/editorial/historical ownership is reviewable without changing approved public copy or consumer behavior.
 
-Current optimization scope: active-suite manifest/authority, current-state validator dispatch and explicit supersession/provenance only. Do not change public product UI/copy, content fixtures, backend contracts or deployment behavior.
+Current optimization scope: fixture module boundaries, typed exports/import compatibility and content validation only. Do not rewrite public copy, redesign UI, change backend contracts or deploy production changes.
 
 Entry baseline:
-- WEB-OPT-01–20 are CLOSED and Phase B product-facing source is stabilized;
-- the v1.277 audit found 251 E2E specs, 284 validators, 112 ignored specs and 469 validator references;
-- historical suites must remain provenance, but their existence must not imply active runtime PASS.
+- WEB-OPT-01–21 are CLOSED;
+- `packages/content/src/fixtures.ts` is 3,302 lines and mixes multiple content domains;
+- existing consumers and public rendering semantics must remain stable.
 
 Exit criteria:
-- one canonical manifest identifies active browser/source gates and explicit supersession;
-- current-state authority is materially simpler and does not silently count retired history as active PASS;
-- historical evidence/provenance remains recoverable;
-- focused authority tests, relevant regression/typecheck/lint/current-state and normal commit/push/package closure PASS.
+- fixture domains are split into clear typed modules behind stable exports;
+- existing consumer imports/contracts remain compatible;
+- no approved copy or route behavior changes;
+- content tests, relevant validators, typecheck/lint/current-state and normal commit/push/package closure PASS.
 
-Execution rules: Phase C maintenance only; Base First; RED→GREEN; no public UI redesign or production deployment. Do not batch WEB-OPT-22.
+Execution rules: Phase C maintenance only; Base First; RED→GREEN; no public redesign or copy rewrite. Do not batch WEB-OPT-23.
 
-Runtime resource policy: reuse valid evidence where fingerprint/authority is unchanged; browser work only when the manifest behavior itself requires it.
+Runtime resource policy: browser work only if fixture modularization creates a runtime-contract reason to verify it.
+
 ---
 
 ## Historical validator compatibility snapshot — not active queue

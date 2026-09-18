@@ -1,5 +1,12 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — active-suite authority consolidated (2026-09-18)
+
+WEB-OPT-21 v1.298 is CLOSED at source commit `3a11d997c0ee8576fd49dbce2d12e5e6c94e34bc`. One canonical manifest now owns 167 active validators and 159 active browser specs while 119 validator + 112 browser supersessions remain provenance-only. Current-state dispatch no longer prints historical suites as runtime PASS.
+
+Next authority is **WEB-OPT-22-CONTENT-FIXTURE-MODULARIZATION-v1.299**. Split the 3,302-line typed fixture domains behind the existing repository contract without public copy/behavior changes.
+
+
 ## Owner optimization authority — player roadmap closed (2026-09-18)
 
 WEB-OPT-20 v1.297 is CLOSED at source commit `ef4755ba4346ce3107172baa87a9f579d6727f6b`. `/roadmap` now leads with four player-readable product stages before release conditions; the 15-entry Web-engineering archive is removed from the public journey while all 15 records remain source-owned for governance/history. Desktop height is 1,771px from 1,789px; mobile is 3,959px from 3,907px; overflow remains zero.

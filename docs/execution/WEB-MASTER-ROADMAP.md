@@ -1,5 +1,12 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.298
+
+WEB-OPT-21 is CLOSED at `3a11d997c0ee8576fd49dbce2d12e5e6c94e34bc`. The repository now has one active-suite manifest for validator/browser authority; current-state is 667→265 lines and Playwright config 221→56 lines, with 167 active validators / 159 active browser specs and historical suites retained only as provenance.
+
+Continue Phase C with WEB-OPT-22 v1.299 Content Fixture Modularization; do not batch WEB-OPT-23.
+
+
 ## 2026-09-18 optimization checkpoint v1.297
 
 WEB-OPT-20 is CLOSED at `ef4755ba4346ce3107172baa87a9f579d6727f6b`. `/roadmap` now exposes four player-readable product stages before release conditions; the 15-record Web-engineering archive is governance-only while source provenance remains intact. Desktop/mobile height is 1,771px/3,959px with zero overflow.
