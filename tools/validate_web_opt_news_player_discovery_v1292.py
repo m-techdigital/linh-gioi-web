@@ -45,6 +45,16 @@ def main():
  state=read("tools/validate_web_current_state.py")
  if '"validate_web_opt_news_player_discovery_v1292.py"' not in state:
   ERRORS.append("v1.292 validator not registered in current state")
+ next_action=read("docs/execution/WEB-NEXT-ACTION.md")
+ project_state=read("docs/execution/WEB-PROJECT-STATE.md")
+ ledger=read("docs/execution/WEB-TASK-LEDGER.md")
+ report=read("docs/execution/LGO-WEB-OPT-15-NEWS-PLAYER-DISCOVERY-REPORT-v1.292.md")
+ active_prefix="Current phase: WEB-OPT-15-NEWS-PLAYER-DISCOVERY-v1.292 WEB_CLOSED"
+ if not project_state.startswith(active_prefix): ERRORS.append("WEB-PROJECT-STATE does not lead with v1.292 closure")
+ if "WEB-OPT-16-EVENTS-PRODUCT-DECISION-v1.293" not in next_action: ERRORS.append("WEB-NEXT-ACTION does not advance to WEB-OPT-16 v1.293")
+ if "| WEB-OPT-15-NEWS-PLAYER-DISCOVERY-v1.292 | WEB-OPT | WEB_CLOSED |" not in ledger: ERRORS.append("WEB-TASK-LEDGER does not record WEB-OPT-15 v1.292 closure")
+ for marker in ("839121ddfe8a4ae71416beb0c1f2a93602db278d","1,875px","1,681px","18/18"):
+  if marker not in report: ERRORS.append("v1.292 report missing closure evidence: "+marker)
  if ERRORS:
   print("WEB OPT NEWS PLAYER DISCOVERY v1.292 VALIDATION FAIL")
   for error in ERRORS: print("- "+error)

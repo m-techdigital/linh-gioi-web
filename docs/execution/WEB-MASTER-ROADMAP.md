@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.292
+
+WEB-OPT-15 is CLOSED at 839121ddfe8a4ae71416beb0c1f2a93602db278d. /news keeps the truthful 0-player / 17-archive source policy, moves useful player routes before the engineering archive, removes the duplicate hero technical boundary and turns the mobile empty-state actions into a news-only swipe rail. Desktop/mobile height is 1,206px/1,681px with zero overflow.
+
+Continue Phase B with WEB-OPT-16 v1.293 on /events only, followed by WEB-OPT-17 v1.294 on /patch-notes.
+
 ## 2026-09-18 optimization checkpoint v1.291
 
 WEB-OPT-14 is CLOSED at `5fcb4c07b6959d67eeee670c06d068b7e87cd9f2`. `/guides` changes from a 16-card default wall to a curated 3-guide Nhập môn start, keeps all 16 one action away and compresses mobile categories into a horizontal rail. Desktop/mobile height falls 47.60%/48.13% with zero page overflow.

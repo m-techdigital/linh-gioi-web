@@ -2,31 +2,31 @@
 
 Status: WEB_TASK_CONTINUE
 
-Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
-Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-14 v1.291 is CLOSED at source commit `5fcb4c07b6959d67eeee670c06d068b7e87cd9f2`; do not reopen it without a related guide-discovery/source-reachability regression.
+Assessment authority: 026a0719027b5db25bc7c07175ef1bb786d1ed6d — LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md.
+Backlog authority: LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md.
+WEB-OPT-15 v1.292 is CLOSED at source commit 839121ddfe8a4ae71416beb0c1f2a93602db278d; do not reopen it without a related player-news/archive-hierarchy regression.
 
 Next task:
-WEB-OPT-15-NEWS-PLAYER-DISCOVERY-v1.292
+WEB-OPT-16-EVENTS-PRODUCT-DECISION-v1.293
 
 Objective:
-Present real player/project news as the primary `/news` experience and keep Web-engineering history subordinate as an explicit archive. If no source-owned player news currently exists, preserve a truthful empty state instead of inventing announcements.
+Make an explicit product decision for /events from current source truth: expose truthful current/future event information only if supported, otherwise keep/remove fixture-only event material from primary indexable public IA instead of presenting it as live product activity.
 
-Current optimization scope: `/news` only plus the smallest shared Base owner change genuinely required by that route. Do not batch News detail pages, Events, Patch Notes, broad article rewriting, CMS/backend feeds or production deployment.
+Current optimization scope: /events only plus the smallest shared Base/IA/metadata owner change genuinely required by that decision. Do not batch /patch-notes, News detail pages, broad content rewriting, backend event systems, registration/reward systems or production deployment.
 
 Entry baseline:
-- WEB-OPT-01–14 foundations are CLOSED and must remain regression-green;
-- v1.281 classifies current Web-program history as Archive/Devlog and v1.282 owns metadata/indexability;
-- current player-news source may legitimately be empty; engineering history must remain reachable without becoming primary game news.
+- WEB-OPT-01–15 foundations are CLOSED and must remain regression-green;
+- v1.281 currently classifies /events as Archive and v1.282 owns metadata/indexability;
+- existing event fixtures are not evidence of a live schedule, registration flow or reward backend.
 
 Exit criteria:
-- desktop/mobile `/news` makes the player-news state and next useful routes primary before the engineering archive;
-- archived Web-program records remain intentionally reachable but visually/substantively subordinate;
-- no fake announcement, event, release state, backend feed or CMS behavior is introduced;
+- /events communicates a source-supported product state with no fabricated live/current event;
+- public IA/indexability matches that product decision and retains intentional navigation continuity;
+- no registration, countdown, reward, account or event-backend capability is invented;
 - keyboard/focus/touch behavior and accepted public shell/language/metadata contracts remain intact;
 - fresh BEFORE/AFTER screenshots/metrics, focused browser/e2e, relevant validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.291 contracts; no production deployment. Do not batch WEB-OPT-16.
+Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.292 contracts; no production deployment. Do not batch WEB-OPT-17.
 
 Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 

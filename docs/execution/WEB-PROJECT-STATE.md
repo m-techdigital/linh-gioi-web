@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-15-NEWS-PLAYER-DISCOVERY-v1.292 WEB_CLOSED
+
+Current decision: /news exposes the truthful player-news state first: current source policy is 0 player-news and 17 archived Web-program entries. Useful Status/Guides/Roadmap routes now precede the collapsed archive; desktop height is 1,206px from 1,259px (-4.21%), mobile 1,681px from 1,875px (-10.35%), mobile hero 378px from 462px and page overflow remains zero.
+
+Verified source delivery commit: 839121ddfe8a4ae71416beb0c1f2a93602db278d. Exact final build63; v1.292 browser12/12 + v1.281 regression6/6 = 18/18 desktop/mobile; Content20/20; Content/UI/Web typecheck; Web lint; v1.292/v1.281/v1.282/v1.251/v1.85 source guards; clean 2,021-file current-state candidate PASS.
+
+Next task: WEB-OPT-16-EVENTS-PRODUCT-DECISION-v1.293 on /events only. Preserve source truth and make an explicit public/indexability decision without fabricating live-event state.
+
+Detailed report: LGO-WEB-OPT-15-NEWS-PLAYER-DISCOVERY-REPORT-v1.292.md.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-14-GUIDES-DISCOVERY-v1.291 WEB_CLOSED
 
 Current decision: `/guides` uses curated intent-first discovery. Initial cards are 3 Nhập môn guides instead of all 16; **Tất cả (16)** still reveals every published guide. Desktop height is 1,526px from 2,912px (-47.60%); mobile is 2,608px from 5,028px (-48.13%); mobile filters are a one-row swipe rail with zero page overflow.

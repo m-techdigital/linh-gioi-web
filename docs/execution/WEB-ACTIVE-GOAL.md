@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — news player discovery closed (2026-09-18)
+
+WEB-OPT-15 v1.292 is CLOSED at source commit 839121ddfe8a4ae71416beb0c1f2a93602db278d. /news now places the truthful 0-player-news state and useful Status/Guides/Roadmap routes before the collapsed 17-entry Web-engineering archive; mobile height falls 1,875px→1,681px (-10.35%), the repeated hero technical boundary is removed and the three empty-state actions become one swipe rail with zero page overflow.
+
+Next task is **WEB-OPT-16-EVENTS-PRODUCT-DECISION-v1.293** on /events only. Decide from source truth whether the route has a real current/future event worth public/indexable treatment or should remain/remove from primary indexable IA; do not invent a live event.
+
 ## Owner optimization authority — guides discovery closed (2026-09-18)
 
 WEB-OPT-14 v1.291 is CLOSED at source commit `5fcb4c07b6959d67eeee670c06d068b7e87cd9f2`. `/guides` now opens on a three-guide Nhập môn shelf instead of a 16-card wall; mobile height falls 5,028px→2,608px (-48.13%) and the category controls become one swipe rail while **Tất cả (16)** preserves access to every published guide.
