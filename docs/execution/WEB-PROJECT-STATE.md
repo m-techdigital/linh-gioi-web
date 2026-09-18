@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-20-PLAYER-ROADMAP-v1.297 WEB_CLOSED
+
+Current decision: `/roadmap` now leads with four player-readable product stages before release conditions. The 15-entry engineering implementation archive is no longer rendered publicly, while all 15 records remain source-owned for governance/history. Desktop height is 1,771px from 1,789px; mobile is 3,959px from 3,907px; page overflow remains zero.
+
+Verified source delivery commit: `ef4755ba4346ce3107172baa87a9f579d6727f6b`. Exact build63; v1.297 + migrated v1.231 browser matrix 20/20 desktop/mobile; Content20/20; Content/UI/Web typecheck; Web lint; v1.297/v1.231/v1.88/v1.296/v1.281/v1.282 source guards; clean 2,036-file current-state candidate PASS.
+
+Next authority: `WEB-OPT-21-ACTIVE-TEST-VALIDATOR-AUTHORITY-CONSOLIDATION-v1.298`. It is not started by this closure turn.
+
+Detailed report: `LGO-WEB-OPT-20-PLAYER-ROADMAP-REPORT-v1.297.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-19-ACCESSIBILITY-PLAYER-HELP-v1.296 WEB_CLOSED
 
 Current decision: /accessibility now presents practical player help before compliance/source proof. Keyboard practice and five routes remain, the hero compliance note is removed, three main principles contain only player benefits, and implementation/non-claims move to the final collapsed deep-notes section. Desktop remains 2,007px, mobile 3,620px from 3,659px, hero 662px from 735px, overflow zero.

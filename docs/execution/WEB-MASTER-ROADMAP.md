@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.297
+
+WEB-OPT-20 is CLOSED at `ef4755ba4346ce3107172baa87a9f579d6727f6b`. `/roadmap` now exposes four player-readable product stages before release conditions; the 15-record Web-engineering archive is governance-only while source provenance remains intact. Desktop/mobile height is 1,771px/3,959px with zero overflow.
+
+Phase B product-facing route optimization is complete through WEB-OPT-20. Next authority is Phase C WEB-OPT-21 v1.298 Active Test/Validator Authority Consolidation; this checkpoint does not start it.
+
 ## 2026-09-18 optimization checkpoint v1.296
 
 WEB-OPT-19 is CLOSED at 70a397772840bb757b3cb4d7955687fbc3d6125c. /accessibility keeps keyboard practice, five player routes and three readability principles but removes compliance proof from the hero/main answers and moves implementation/non-claims to deep collapsed notes. Desktop remains 2,007px; mobile is 3,620px with zero overflow.

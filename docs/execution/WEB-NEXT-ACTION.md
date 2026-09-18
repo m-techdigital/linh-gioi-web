@@ -2,36 +2,32 @@
 
 Status: WEB_TASK_CONTINUE
 
-Assessment authority: 026a0719027b5db25bc7c07175ef1bb786d1ed6d — LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md.
-Backlog authority: LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md.
-WEB-OPT-19 v1.296 is CLOSED at source commit 70a397772840bb757b3cb4d7955687fbc3d6125c; do not reopen it without a keyboard/player-help/nonclaim regression.
+Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
+Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
+WEB-OPT-20 v1.297 is CLOSED at source commit `ef4755ba4346ce3107172baa87a9f579d6727f6b`; do not reopen it without a related player-roadmap/truth-boundary regression.
 
 Next task:
-WEB-OPT-20-PLAYER-ROADMAP-v1.297
+WEB-OPT-21-ACTIVE-TEST-VALIDATOR-AUTHORITY-CONSOLIDATION-v1.298
 
 Objective:
-Replace /roadmap mixed Web-engineering milestone emphasis with a player-readable product/release roadmap. Keep truthful stage/availability boundaries and link engineering history only from governance/internal surfaces; do not invent release dates, completion percentages or released-game state.
+Establish one explicit active-suite authority for browser tests and source validators so current gates are identifiable without treating historical/superseded suites as current PASS evidence.
 
-Current optimization scope: /roadmap only plus the smallest shared Base/IA/metadata owner change genuinely required. Do not batch later governance/test work, backend release systems, production scheduling or deployment.
+Current optimization scope: active-suite manifest/authority, current-state validator dispatch and explicit supersession/provenance only. Do not change public product UI/copy, content fixtures, backend contracts or deployment behavior.
 
 Entry baseline:
-- WEB-OPT-01–19 foundations are CLOSED and must remain regression-green;
-- current roadmap mixes product/player milestones with Web/browser engineering history;
-- no committed production release dates or completion percentages are accepted.
+- WEB-OPT-01–20 are CLOSED and Phase B product-facing source is stabilized;
+- the v1.277 audit found 251 E2E specs, 284 validators, 112 ignored specs and 469 validator references;
+- historical suites must remain provenance, but their existence must not imply active runtime PASS.
 
 Exit criteria:
-- /roadmap leads with player-readable product/release stages and truthful current/future boundaries;
-- engineering implementation history no longer dominates the public primary journey;
-- no fake release date, completion %, production deployment or live-service milestone is introduced;
-- keyboard/focus/touch behavior and accepted public shell/language/metadata contracts remain intact;
-- fresh BEFORE/AFTER screenshots/metrics, focused browser/e2e, relevant validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
+- one canonical manifest identifies active browser/source gates and explicit supersession;
+- current-state authority is materially simpler and does not silently count retired history as active PASS;
+- historical evidence/provenance remains recoverable;
+- focused authority tests, relevant regression/typecheck/lint/current-state and normal commit/push/package closure PASS.
 
-Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.296 contracts; no production deployment.
+Execution rules: Phase C maintenance only; Base First; RED→GREEN; no public UI redesign or production deployment. Do not batch WEB-OPT-22.
 
-Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
-
-Historical compatibility markers remain until WEB-OPT-21; browser/e2e evidence remains mandatory.
-
+Runtime resource policy: reuse valid evidence where fingerprint/authority is unchanged; browser work only when the manifest behavior itself requires it.
 ---
 
 ## Historical validator compatibility snapshot — not active queue

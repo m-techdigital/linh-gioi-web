@@ -1,5 +1,12 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — player roadmap closed (2026-09-18)
+
+WEB-OPT-20 v1.297 is CLOSED at source commit `ef4755ba4346ce3107172baa87a9f579d6727f6b`. `/roadmap` now leads with four player-readable product stages before release conditions; the 15-entry Web-engineering archive is removed from the public journey while all 15 records remain source-owned for governance/history. Desktop height is 1,771px from 1,789px; mobile is 3,959px from 3,907px; overflow remains zero.
+
+Next authority is **WEB-OPT-21-ACTIVE-TEST-VALIDATOR-AUTHORITY-CONSOLIDATION-v1.298**. Phase C should establish one explicit active-suite manifest and simplify current-state authority without silently treating historical suites as active PASS evidence.
+
+
 ## Owner optimization authority — accessibility player help closed (2026-09-18)
 
 WEB-OPT-19 v1.296 is CLOSED at source commit 70a397772840bb757b3cb4d7955687fbc3d6125c. /accessibility keeps real keyboard/readability practice in the primary journey while removing repeated compliance/source proof from the hero and main principle answers; mobile hero falls 735px→662px, proof density drops hero 1→0 / principle small 3→0 / principle paragraphs 6→3, with zero overflow.
