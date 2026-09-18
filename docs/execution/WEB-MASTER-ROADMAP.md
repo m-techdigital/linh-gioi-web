@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.289
+
+WEB-OPT-12 is CLOSED at `c6de3524c672e3302a23e212d5ba542804907dff`. `/community/onboarding` replaces release/status-first newcomer reading with Start → Game → Community, removes the duplicate hero technical boundary and reduces mobile height 3,289px→2,668px (-18.88%) using onboarding-scoped reading/audience rails.
+
+Continue Phase B with WEB-OPT-13 v1.290 on `/game/loop` only, followed by WEB-OPT-14 v1.291 on `/guides`. The shared ReadingJourney regression was explicitly checked so v1.289 does not pre-implement v1.290.
+
 ## 2026-09-18 optimization checkpoint v1.288
 
 WEB-OPT-11 is CLOSED at `c03ee5804f13b82ea330b06588121df895291a9a`. `/community` removes the duplicate hero live-social warning, keeps one compact unavailable-live-social/no-intake boundary after useful player choices and changes the mobile three-card value wall into a swipeable rail. Mobile height falls 4,203px→3,245px (-22.79%) with zero page overflow; the three player routes, two prototype images, three conduct rules and no-backend contract remain.

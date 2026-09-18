@@ -4,29 +4,29 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-11 v1.288 is CLOSED at source commit `c03ee5804f13b82ea330b06588121df895291a9a`; do not reopen it without a related community-value/live-social-boundary regression.
+WEB-OPT-12 v1.289 is CLOSED at source commit `c6de3524c672e3302a23e212d5ba542804907dff`; do not reopen it without a related onboarding/static-boundary regression.
 
 Next task:
-WEB-OPT-12-COMMUNITY-ONBOARDING-v1.289
+WEB-OPT-13-GAME-LOOP-DENSITY-v1.290
 
 Objective:
-Make `/community/onboarding` shorter and more game-oriented, with a clear newcomer next/previous path, while preserving truthful static-only/no-registration/no-account/community-backend limits.
+Reduce `/game/loop` vertical length and repeated boundary blocks while keeping the route clearly informational/read-only rather than implying live gameplay, progress, rewards or persistence.
 
-Current optimization scope: `/community/onboarding` only plus the smallest shared Base owner change genuinely required by that route. Do not batch `/game/loop`, roadmap, broad copy rewrites, backend/CMS/community systems, waitlist, account or guild integration.
+Current optimization scope: `/game/loop` only plus the smallest shared Base owner change genuinely required by that route. Do not batch `/guides`, News, broad gameplay-copy rewrites, backend/game runtime, account/progress/reward systems or production deployment.
 
 Entry baseline:
-- WEB-OPT-01–11 foundations are CLOSED and must remain regression-green;
-- v1.288 establishes the accepted `/community` player-value-before-boundary rhythm;
-- no registration, waitlist, account enrollment, live social system or community backend is accepted.
+- WEB-OPT-01–12 foundations are CLOSED and must remain regression-green;
+- v1.289 explicitly restored generic mobile `ReadingJourney` behavior outside onboarding and final v1.232 game-loop regression is 12/12 PASS;
+- no playable session, saved character progress, quest completion or reward backend is accepted.
 
 Exit criteria:
-- newcomer path is materially shorter and more game-oriented on desktop/mobile;
-- next/previous route flow is clear before repeated technical constraints;
-- no waitlist/account enrollment or fake live-social action appears;
+- desktop/mobile `/game/loop` is materially shorter with repeated boundary blocks reduced;
+- player reading sequence and next routes remain clear without fake gameplay state;
+- no progress, quest-completion, inventory, reward or account persistence is introduced;
 - keyboard/focus/touch behavior and accepted public shell/language contracts remain intact;
-- focused browser/e2e, fresh desktop/mobile screenshots, relevant validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
+- fresh BEFORE/AFTER screenshots/metrics, focused browser/e2e, relevant validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A, Support-family and v1.288 community contracts; no production deployment. Do not batch WEB-OPT-13.
+Execution rules: one route only; Real Browser UI/UX Layout First; Base First; RED→GREEN; preserve Phase-A and v1.289 contracts; no production deployment. Do not batch WEB-OPT-14.
 
 Runtime resource policy: exact clean-build/browser evidence is allowed where Manager prevents a new listener.
 

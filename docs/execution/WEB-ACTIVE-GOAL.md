@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — community onboarding closed (2026-09-18)
+
+WEB-OPT-12 v1.289 is CLOSED at source commit `c6de3524c672e3302a23e212d5ba542804907dff`. `/community/onboarding` now leads Start → Game → Community, removes the duplicate hero technical boundary, and reduces mobile height 3,289px→2,668px (-18.88%); onboarding reading/audience choices are one-row swipe rails with zero page overflow.
+
+Next task is **WEB-OPT-13-GAME-LOOP-DENSITY-v1.290** on `/game/loop` only. Reduce repeated boundary density and vertical cost while preserving gameplay non-claims; do not batch `/guides`.
+
 ## Owner optimization authority — community value clarity closed (2026-09-18)
 
 WEB-OPT-11 v1.288 is CLOSED at source commit `c03ee5804f13b82ea330b06588121df895291a9a`. `/community` now places useful player destinations before one consolidated unavailable-live-social/no-intake boundary; mobile height falls 4,203px→3,245px (-22.79%) and the three value panels form a one-row swipeable rail with no page overflow.

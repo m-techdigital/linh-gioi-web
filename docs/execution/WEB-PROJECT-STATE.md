@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-12-COMMUNITY-ONBOARDING-v1.289 WEB_CLOSED
+
+Current decision: `/community/onboarding` is a shorter game-oriented newcomer reading flow: Start → Game → Community. Mobile height is 2,668px from 3,289px (-18.88%), hero 694px from 805px, reading 773px from 1,103px and audience choices 192px from 372px; page overflow is zero and the duplicate hero technical boundary is removed.
+
+Verified source delivery commit: `c6de3524c672e3302a23e212d5ba542804907dff`. Exact dev focused6/6, onboarding legacy12/12 and shared game-loop12/12 desktop/mobile PASS; clean temp production build63; production-static focused6/6; Content20/20; Content/UI/Web typecheck; Web lint; v1.289-v1.285 plus v1.228/v1.232 source guards; clean 2,012-file current-state candidate PASS.
+
+Next task: `WEB-OPT-13-GAME-LOOP-DENSITY-v1.290` on `/game/loop` only. v1.289 explicitly restores generic ReadingJourney behavior outside onboarding.
+
+Detailed report: `LGO-WEB-OPT-12-COMMUNITY-ONBOARDING-REPORT-v1.289.md`.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-11-COMMUNITY-VALUE-CLARITY-v1.288 WEB_CLOSED
 
 Current decision: `/community` leads with player/community value and the three real next routes before one consolidated unavailable-live-social/no-intake boundary. Mobile height is 3,245px from 4,203px (-22.79%); the three value panels are one swipeable rail, page overflow is zero, forms remain zero, and two prototype images plus three conduct rules remain intact.

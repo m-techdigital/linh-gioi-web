@@ -29,6 +29,16 @@ def main():
  prior=read('tools/validate_web_fe_community_onboarding_real_ui_layout_v1228.py')
  for marker in ('PublicCommunityOnboardingExperience.tsx','reading-journey.css','NO_ACCEPTED_BACKEND_CONTRACT','href:"/start"','href:"/game"'):
   if marker not in prior: ERRORS.append('v1.228 onboarding guard lost protection: '+marker)
+ next_action=read('docs/execution/WEB-NEXT-ACTION.md')
+ project_state=read('docs/execution/WEB-PROJECT-STATE.md')
+ ledger=read('docs/execution/WEB-TASK-LEDGER.md')
+ report=read('docs/execution/LGO-WEB-OPT-12-COMMUNITY-ONBOARDING-REPORT-v1.289.md')
+ active_prefix='Current phase: WEB-OPT-12-COMMUNITY-ONBOARDING-v1.289 WEB_CLOSED'
+ if active_prefix not in project_state: ERRORS.append('WEB-PROJECT-STATE lost v1.289 closure history')
+ if project_state.startswith(active_prefix) and 'WEB-OPT-13-GAME-LOOP-DENSITY-v1.290' not in next_action: ERRORS.append('active v1.289 checkpoint does not advance to WEB-OPT-13 v1.290')
+ if '| WEB-OPT-12-COMMUNITY-ONBOARDING-v1.289 | WEB-OPT | WEB_CLOSED |' not in ledger: ERRORS.append('WEB-TASK-LEDGER does not record WEB-OPT-12 v1.289 closure')
+ for marker in ('c6de3524c672e3302a23e212d5ba542804907dff','mobile height was `3,289px`; final is `2,668px`','shared v1.232 `/game/loop` regression is `12/12`'):
+  if marker not in report: ERRORS.append('v1.289 report missing closure evidence: '+marker)
  if ERRORS:
   print('WEB OPT COMMUNITY ONBOARDING v1.289 VALIDATION FAIL')
   for e in ERRORS: print('- '+e)
