@@ -1,5 +1,11 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.296
+
+WEB-OPT-19 is CLOSED at 70a397772840bb757b3cb4d7955687fbc3d6125c. /accessibility keeps keyboard practice, five player routes and three readability principles but removes compliance proof from the hero/main answers and moves implementation/non-claims to deep collapsed notes. Desktop remains 2,007px; mobile is 3,620px with zero overflow.
+
+Continue Phase B with WEB-OPT-20 v1.297 on /roadmap only.
+
 ## 2026-09-18 optimization checkpoint v1.295
 
 WEB-OPT-18 is CLOSED at 1524fbc299c7e43403ac1bbc380224c7299c4b6d. /performance keeps the local reading workshop and four useful routes, replaces the three-cell engineering measurement dashboard with one concise non-measurement boundary, removes four repeated source-proof disclosures and uses player-readable heading/copy. Desktop/mobile height is 2,367px/3,966px with zero overflow.

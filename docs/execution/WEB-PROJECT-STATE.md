@@ -1,3 +1,15 @@
+Current phase: WEB-OPT-19-ACCESSIBILITY-PLAYER-HELP-v1.296 WEB_CLOSED
+
+Current decision: /accessibility now presents practical player help before compliance/source proof. Keyboard practice and five routes remain, the hero compliance note is removed, three main principles contain only player benefits, and implementation/non-claims move to the final collapsed deep-notes section. Desktop remains 2,007px, mobile 3,620px from 3,659px, hero 662px from 735px, overflow zero.
+
+Verified source delivery commit: 70a397772840bb757b3cb4d7955687fbc3d6125c. Exact build63; v1.296 browser8/8 + v1.230 desktop6/6 + mobile6/6 = 20/20; Content20/20; Content/UI/Web typecheck; Web lint; v1.296/v1.230/v1.89/v1.85/v1.281/v1.282 source guards; clean 2,033-file current-state candidate PASS.
+
+Next task: WEB-OPT-20-PLAYER-ROADMAP-v1.297 on /roadmap only. Create a player-readable product/release roadmap without inventing dates, completion or production-release claims.
+
+Detailed report: LGO-WEB-OPT-19-ACCESSIBILITY-PLAYER-HELP-REPORT-v1.296.md.
+
+Historical state below is retained for provenance, not active optimization authority.
+
 Current phase: WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-v1.295 WEB_CLOSED
 
 Current decision: /performance now presents reading/device help before engineering proof. The H1 is player-readable, the local ReadingPreview remains the main practice, the measurement dashboard is one concise non-measurement boundary, and four repeated route proof disclosures are removed. Desktop height is 2,367px from 2,412px (-1.87%), mobile 3,966px from 4,428px (-10.43%), mobile measurement 373px from 548px (-31.93%), overflow remains zero.

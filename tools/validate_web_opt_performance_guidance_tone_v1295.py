@@ -43,8 +43,8 @@ def main():
  ledger=read("docs/execution/WEB-TASK-LEDGER.md")
  report=read("docs/execution/LGO-WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-REPORT-v1.295.md")
  active_prefix="Current phase: WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-v1.295 WEB_CLOSED"
- if not project_state.startswith(active_prefix): ERRORS.append("WEB-PROJECT-STATE does not lead with v1.295 closure")
- if "WEB-OPT-19-ACCESSIBILITY-PLAYER-HELP-v1.296" not in next_action: ERRORS.append("WEB-NEXT-ACTION does not advance to WEB-OPT-19 v1.296")
+ if active_prefix not in project_state: ERRORS.append("WEB-PROJECT-STATE lost v1.295 closure history")
+ if project_state.startswith(active_prefix) and "WEB-OPT-19-ACCESSIBILITY-PLAYER-HELP-v1.296" not in next_action: ERRORS.append("active v1.295 checkpoint does not advance to WEB-OPT-19 v1.296")
  if "| WEB-OPT-18-PERFORMANCE-GUIDANCE-TONE-v1.295 | WEB-OPT | WEB_CLOSED |" not in ledger: ERRORS.append("WEB-TASK-LEDGER does not record WEB-OPT-18 v1.295 closure")
  for marker in ("1524fbc299c7e43403ac1bbc380224c7299c4b6d","4,428px","3,966px","20/20"):
   if marker not in report: ERRORS.append("v1.295 report missing closure evidence: "+marker)

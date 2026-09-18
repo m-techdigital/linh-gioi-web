@@ -1,5 +1,11 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — accessibility player help closed (2026-09-18)
+
+WEB-OPT-19 v1.296 is CLOSED at source commit 70a397772840bb757b3cb4d7955687fbc3d6125c. /accessibility keeps real keyboard/readability practice in the primary journey while removing repeated compliance/source proof from the hero and main principle answers; mobile hero falls 735px→662px, proof density drops hero 1→0 / principle small 3→0 / principle paragraphs 6→3, with zero overflow.
+
+Next task is **WEB-OPT-20-PLAYER-ROADMAP-v1.297** on /roadmap only. Replace mixed Web-engineering milestone emphasis with a player-readable product/release roadmap while keeping engineering history out of the public primary journey; do not invent release dates or completion state.
+
 ## Owner optimization authority — performance guidance tone closed (2026-09-18)
 
 WEB-OPT-18 v1.295 is CLOSED at source commit 1524fbc299c7e43403ac1bbc380224c7299c4b6d. /performance now leads with player-readable device/reading guidance instead of engineering-dashboard tone; mobile height falls 4,428px→3,966px, hero proof 1→0, measurement cells 3→1 and route proof disclosures 4→0 with zero overflow.
