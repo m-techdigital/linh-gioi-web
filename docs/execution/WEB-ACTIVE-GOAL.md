@@ -1,5 +1,12 @@
 # WEB-ACTIVE-GOAL
 
+## Owner optimization authority — content fixtures modularized (2026-09-18)
+
+WEB-OPT-22 v1.299 is CLOSED at source commit `12c74e2edcd613c240136aa3df62a6a5ffc03fd2`. The 3,302-line fixture monolith is now a 5-line facade over product/editorial/support/release/historical modules, with 77/77 export-block parity and stable package exports.
+
+Next authority is **WEB-OPT-23-PUBLIC-PERFORMANCE-GOVERNANCE-BUDGETS-v1.300**. Establish regression budgets from the accepted optimized source without cosmetic redesign.
+
+
 ## Owner optimization authority — active-suite authority consolidated (2026-09-18)
 
 WEB-OPT-21 v1.298 is CLOSED at source commit `3a11d997c0ee8576fd49dbce2d12e5e6c94e34bc`. One canonical manifest now owns 167 active validators and 159 active browser specs while 119 validator + 112 browser supersessions remain provenance-only. Current-state dispatch no longer prints historical suites as runtime PASS.

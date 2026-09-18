@@ -1,5 +1,12 @@
 # WEB-MASTER-ROADMAP
 
+## 2026-09-18 optimization checkpoint v1.299
+
+WEB-OPT-22 is CLOSED at `12c74e2edcd613c240136aa3df62a6a5ffc03fd2`. Content fixture ownership is split into five typed domains behind the unchanged `@lgo-web/content` facade; 77/77 moved export blocks remain copy-equivalent.
+
+Continue Phase C with WEB-OPT-23 v1.300 Public Performance & Governance Budgets.
+
+
 ## 2026-09-18 optimization checkpoint v1.298
 
 WEB-OPT-21 is CLOSED at `3a11d997c0ee8576fd49dbce2d12e5e6c94e34bc`. The repository now has one active-suite manifest for validator/browser authority; current-state is 667→265 lines and Playwright config 221→56 lines, with 167 active validators / 159 active browser specs and historical suites retained only as provenance.

@@ -4,30 +4,28 @@ Status: WEB_TASK_CONTINUE
 
 Assessment authority: `026a0719027b5db25bc7c07175ef1bb786d1ed6d` — `LGO-WEB-FULL-PUBLIC-ASSESSMENT-REPORT-v1.277.md`.
 Backlog authority: `LGO-WEB-PUBLIC-OPTIMIZATION-BACKLOG-v1.277.md`.
-WEB-OPT-21 v1.298 is CLOSED at source commit `3a11d997c0ee8576fd49dbce2d12e5e6c94e34bc`; do not reopen it without active-suite authority drift.
+WEB-OPT-22 v1.299 is CLOSED at source commit `12c74e2edcd613c240136aa3df62a6a5ffc03fd2`; do not reopen it without fixture/export/copy-parity regression evidence.
 
 Next task:
-WEB-OPT-22-CONTENT-FIXTURE-MODULARIZATION-v1.299
+WEB-OPT-23-PUBLIC-PERFORMANCE-GOVERNANCE-BUDGETS-v1.300
 
 Objective:
-Split the monolithic typed content fixture domains behind the existing repository contract so product/support/release/editorial/historical ownership is reviewable without changing approved public copy or consumer behavior.
+Codify regression budgets from the accepted optimized public source for decoded CSS, public asset footprint, heavy image transfer, route page-height outliers, accidental design-reference shipping and active-test authority drift.
 
-Current optimization scope: fixture module boundaries, typed exports/import compatibility and content validation only. Do not rewrite public copy, redesign UI, change backend contracts or deploy production changes.
+Current optimization scope: measurement/budget tooling and governance evidence only. Do not cosmetically redesign routes, rewrite approved copy, alter backend contracts or deploy production changes.
 
 Entry baseline:
-- WEB-OPT-01–21 are CLOSED;
-- `packages/content/src/fixtures.ts` is 3,302 lines and mixes multiple content domains;
-- existing consumers and public rendering semantics must remain stable.
+- WEB-OPT-01–22 are CLOSED;
+- current public source/build evidence is the accepted pre-release baseline;
+- active browser/source-gate authority is canonical from v1.298 and fixture ownership is modular from v1.299.
 
 Exit criteria:
-- fixture domains are split into clear typed modules behind stable exports;
-- existing consumer imports/contracts remain compatible;
-- no approved copy or route behavior changes;
-- content tests, relevant validators, typecheck/lint/current-state and normal commit/push/package closure PASS.
+- automated budgets use documented accepted baseline values with explicit regression tolerances;
+- budgets fail on measurable regression without forcing cosmetic redesign;
+- design-reference shipping and active-suite authority drift are guarded;
+- relevant tests/validators, typecheck/lint/build/current-state and normal commit/push/package closure PASS.
 
-Execution rules: Phase C maintenance only; Base First; RED→GREEN; no public redesign or copy rewrite. Do not batch WEB-OPT-23.
-
-Runtime resource policy: browser work only if fixture modularization creates a runtime-contract reason to verify it.
+Execution rules: Phase C maintenance only; measure first; RED→GREEN; no production deployment.
 
 ---
 

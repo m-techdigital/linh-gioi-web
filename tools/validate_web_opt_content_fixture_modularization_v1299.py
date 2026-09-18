@@ -74,6 +74,16 @@ def main():
   if marker not in test:ERRORS.append("fixture module test missing "+marker)
  index=read("packages/content/src/index.ts")
  if '} from "./fixtures";' not in index:ERRORS.append("package public fixture facade changed")
+ project_state=read("docs/execution/WEB-PROJECT-STATE.md")
+ active_prefix="Current phase: WEB-OPT-22-CONTENT-FIXTURE-MODULARIZATION-v1.299 WEB_CLOSED"
+ if project_state.startswith(active_prefix):
+  next_action=read("docs/execution/WEB-NEXT-ACTION.md")
+  ledger=read("docs/execution/WEB-TASK-LEDGER.md")
+  report=read("docs/execution/LGO-WEB-OPT-22-CONTENT-FIXTURE-MODULARIZATION-REPORT-v1.299.md")
+  if "WEB-OPT-23-PUBLIC-PERFORMANCE-GOVERNANCE-BUDGETS-v1.300" not in next_action:ERRORS.append("v1.299 closure does not advance to v1.300")
+  if "| WEB-OPT-22-CONTENT-FIXTURE-MODULARIZATION-v1.299 | WEB-OPT | WEB_CLOSED |" not in ledger:ERRORS.append("ledger missing v1.299 closure")
+  for marker in ("12c74e2edcd613c240136aa3df62a6a5ffc03fd2","77/77 export blocks","23/23 PASS","2,048-file"):
+   if marker not in report:ERRORS.append("v1.299 report missing closure evidence: "+marker)
  if ERRORS:
   print("WEB OPT CONTENT FIXTURE MODULARIZATION v1.299 VALIDATION FAIL")
   for e in ERRORS:print("- "+e)
