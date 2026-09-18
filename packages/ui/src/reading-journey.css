@@ -41,6 +41,11 @@
   .lgo-onboarding-experience .lgo-reading-journey .lgo-progress-step { flex:0 0 min(82vw,21rem); flex-direction:column; padding:1rem; scroll-snap-align:start; }
   .lgo-onboarding-experience #onboarding-audiences .lgo-question-list { display:flex; width:100%; max-width:100%; min-width:0; flex-wrap:nowrap; gap:.7rem; overflow-x:auto; scroll-snap-type:x proximity; padding-bottom:.35rem; scrollbar-width:thin; }
   .lgo-onboarding-experience #onboarding-audiences .lgo-question-list > details { flex:0 0 min(82vw,21rem); scroll-snap-align:start; align-self:stretch; }
+  /* WEB-OPT-13 game-loop mobile rail: keep generic ReadingJourney stacking intact outside this route. */
+  .lgo-world-loop-experience > #loop-reading,
+  .lgo-world-loop-experience .lgo-reading-journey { min-width:0; width:100%; max-width:100%; }
+  .lgo-world-loop-experience .lgo-reading-journey[data-columns="4"] .lgo-progress-steps { display:flex; width:100%; max-width:100%; min-width:0; flex-wrap:nowrap; gap:.65rem; overflow-x:auto; scroll-snap-type:x proximity; padding-bottom:.35rem; scrollbar-width:thin; }
+  .lgo-world-loop-experience .lgo-reading-journey[data-columns="4"] .lgo-progress-step { flex:0 0 min(82vw,21rem); flex-direction:column; padding:1rem; scroll-snap-align:start; }
   .lgo-reading-journey-panel { grid-template-columns:1fr; gap:1rem; padding:1.15rem; }
   .lgo-reading-journey .lgo-progress-step p { margin:.5rem 0 .65rem; }
 }

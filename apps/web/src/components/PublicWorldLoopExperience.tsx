@@ -21,7 +21,7 @@ export function PublicWorldLoopHero() {
     badge="Linh Giới Online · Hành trình nhập môn" badgeTone="gold" kicker="Vào cổng · Được dẫn đường · Hiểu cách luyện tập"
     title="Vòng lặp gameplay thế giới" lead="Bắt đầu bằng một điểm đến rõ ràng. Tìm hiểu cổng vào, người dẫn đường và bia luyện tập, rồi đối chiếu điều kiện bản tải trước khi kỳ vọng bước vào game."
     actions={[{href:"#loop-reading",label:"Đọc bốn bước",tone:"gold"},{href:"/game",label:"Khám phá thế giới",tone:"neutral"}]}
-    detail={<><p className="lgo-loop-hero-boundary"><ReleaseIcon name="shield"/><span>Đang đọc, không phải đang chơi.<br/>Website không có mô phỏng combat, túi đồ hay phiên chơi trực tuyến.</span></p><p className="lgo-release-art-note">Minh họa định hướng · Không phải client hoặc máy chủ đang chạy</p></>}
+    detail={<p className="lgo-release-art-note">Minh họa định hướng · Không phải client hoặc máy chủ đang chạy</p>}
     visual={<><img className="lgo-release-hero-art" src="/game-art/world/dong-mon-skyline.webp" width="1360" height="765" alt="" fetchPriority="high"/>
       <figure className="lgo-loop-vista lgo-release-frame">
         <img src="/game-art/world/dong-mon-skyline.webp" width="1360" height="765" alt="Minh họa cổng thành và kiến trúc Linh Giới giữa núi mây"/>
@@ -42,8 +42,8 @@ export function PublicWorldLoopQuestionsAndScope() {
     </section>
     <aside className="lgo-release-paper-panel lgo-release-frame" aria-labelledby="loop-scope-heading">
       <ReleaseIcon name="lock"/><SectionHeading headingId="loop-scope-heading" eyebrow="Hướng dẫn không thay thế bản dựng" title="Đây chưa phải game trên web"/>
-      <p>Spirit Gate, Gate Keeper và Training Stone là các điểm định hướng trong nội dung website. Nút “Xem bước này” chỉ mở phần giải thích.</p>
-      <p>Không có HP, sát thương, kỹ năng, vật phẩm, nhiệm vụ lưu máy chủ hay quyền truy cập tài khoản được cấp từ trang này.</p>
+      <p><strong>Đang đọc, không phải đang chơi.</strong> Spirit Gate, Gate Keeper và Training Stone chỉ là điểm định hướng trong nội dung website; nút “Xem bước này” chỉ mở phần giải thích.</p>
+      <p>Trang này không có mô phỏng combat, HP, sát thương, kỹ năng, vật phẩm, nhiệm vụ lưu máy chủ, phần thưởng hay quyền truy cập tài khoản.</p>
       <LinkButton href="/download/trust" tone="neutral">Đọc điều kiện bản tải</LinkButton>
       <p className="lgo-loop-contract-note">NO_ACCEPTED_BACKEND_CONTRACT</p>
     </aside>
