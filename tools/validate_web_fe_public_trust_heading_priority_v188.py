@@ -24,7 +24,7 @@ def check_routes() -> None:
     require_order("apps/web/src/app/roadmap/page.tsx", "<PublicRoadmapHero/>", "<PublicRoadmapGates/>")
     require_order("apps/web/src/app/community/onboarding/page.tsx", "<PublicOnboardingHero/>", "<PublicOnboardingReading/>")
     require_text("apps/web/src/components/PublicDownloadTrustLanding.tsx", ["Không tải giả", "Chỉ mở cổng tải khi build, SHA256", "Khi chưa có artifact thật"])
-    require_text("apps/web/src/components/PublicRoadmapExperience.tsx", ['title="Roadmap phát triển web"', "WEB-08 backend contract sync", "Chưa mở đăng nhập, dữ liệu tài khoản hoặc tích hợp máy chủ thật", "NO_ACCEPTED_BACKEND_CONTRACT"])
+    require_text("apps/web/src/components/PublicRoadmapExperience.tsx", ['title="Lộ trình Linh Giới Online"', "Tài khoản & máy chủ", "không phải ngày mở game", "NO_ACCEPTED_BACKEND_CONTRACT"])
     require_text("apps/web/src/components/PublicCommunityOnboardingExperience.tsx", ['title="Hòa nhập cộng đồng Linh Giới"', "chưa có trò chuyện, diễn đàn, bang hội", "danh sách chờ công khai", "Chưa có danh sách chờ"])
 def check_tests_and_docs() -> None:
     for rel in ["tests/e2e/fe-public-trust-heading-priority-v188.spec.ts", "docs/execution/specs/WEB-FE-PUBLIC-TRUST-HEADING-PRIORITY-v1.88.md", "LGO-WEB-FE-PUBLIC-TRUST-HEADING-PRIORITY-REPORT-v1.88.md", "HANDOFF-LGO-WEB-FE-PUBLIC-TRUST-HEADING-PRIORITY-v1.88.md"]: require_file(rel)

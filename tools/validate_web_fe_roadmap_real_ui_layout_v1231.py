@@ -20,17 +20,20 @@ def require(rel: str, markers: tuple[str, ...] = ()) -> str:
 def main() -> int:
     ERRORS.clear()
     page = require("apps/web/src/app/roadmap/page.tsx", ("@lgo-web/ui/planning-layout.css", "lgo-roadmap-experience"))
-    parts = ("<PublicRoadmapHero/>", "<PublicRoadmapGates/>", "<PublicRoadmapBoundaries/>", "<PublicRoadmapStages/>", "<PublicRoadmapSourceArchive/>")
+    parts = ("<PublicRoadmapHero/>", "<PublicRoadmapStages/>", "<PublicRoadmapBoundaries/>", "<PublicRoadmapGates/>")
     offsets = [page.find(part) for part in parts]
-    if -1 in offsets or offsets != sorted(offsets): ERRORS.append("roadmap must lead with real hero/conditions before historical records")
+    if -1 in offsets or offsets != sorted(offsets): ERRORS.append("roadmap must lead with player stages before release conditions")
     for marker in ("public-roadmap-flow.svg", "lgo-service-compact-proof-page", "<form", "design-reference"):
         if marker in page: ERRORS.append(f"obsolete/unsafe composition {marker}")
     view = require("apps/web/src/components/PublicRoadmapExperience.tsx", (
-        'title="Roadmap phát triển web"', "PlanningGateMap", "gatePresentation[gate.gate]", "stageTitles[stage.stage]",
+        'title="Lộ trình Linh Giới Online"', "PlanningGateMap", "gatePresentation[gate.gate]", "stageTitles[stage.stage]",
         "roadmapDecisionGates.map", "state:gate.status", "gateLabels[gate.status]", "stagedReleaseMessages.map",
         "gate.decisionOwner", "gate.publicMessage", "gate.mustNotClaim", "stage.ownerChecklist", "stage.nonClaim",
-        "items={publicRoadmapItems}", "không phải tiến độ hiện tại", "Không phải lịch phát hành", "NO_ACCEPTED_BACKEND_CONTRACT",
-        'id="roadmap-source-archive"', 'href="/download/trust"', 'href="/community/onboarding"', 'fetchPriority="high"'))
+        "Các chặng người chơi có thể theo dõi", "Không phải lịch phát hành", "NO_ACCEPTED_BACKEND_CONTRACT",
+        'href="/status"', 'href="/download/trust"', 'fetchPriority="high"'))
+    if "publicRoadmapItems" in view or "MilestoneArchive" in view or 'id="roadmap-source-archive"' in view:
+        ERRORS.append("public roadmap must not render engineering implementation archive")
+    require("packages/content/src/fixtures.ts", ("export const publicRoadmapItems", 'version: "v1.6"', 'version: "WEB-08"', 'title: "Game backend contract sync"'))
     catalog = require("packages/ui/src/milestone-archive.tsx", (
         '"use client"', 'useState<Filter>("all")', "items.filter(item => item.status === filter)", "FilterChoices",
         'data-source-state={item.status}', "item.title", "item.summary", "item.version", 'role="status"',
@@ -51,7 +54,7 @@ def main() -> int:
     require("apps/web/src/components/PublicDesignTargetReference.tsx", ('pathname === "/roadmap"', "Kế hoạch không phải lịch phát hành", "design-atlas-public-service-v195.png"))
     for rel in ("docs/design/reference/WEB-FE-DESIGN-ATLAS-PUBLIC-SERVICE-v1.95.png", "apps/web/public/game-art/world/dong-mon-skyline.webp"):
         if not (ROOT / rel).is_file(): ERRORS.append(f"missing existing visual reference {rel}")
-    require("tests/e2e/fe-roadmap-real-ui-layout-v1231.spec.ts", ("m.overflow", "screenshot", "toHaveCount(15)", "current',11", "planned',3", "blocked',1", "next',0", "requests).toEqual([])", "page.reload()", "violations).toEqual([])"))
+    require("tests/e2e/fe-roadmap-real-ui-layout-v1231.spec.ts", ("m.overflow", "publicRoadmapItems", "toHaveLength(15)", "engineering history remains source-owned", "four release stages lead the public roadmap", "roadmap-source-archive", "violations).toEqual([])"))
     require("docs/execution/WEB-NON-CLAIMS.md", ("No production auth", "No DB persistence", "No production deployment"))
     print("WEB FE ROADMAP REAL UI LAYOUT v1.231 SOURCE " + ("FAIL" if ERRORS else "PASS"))
     for error in ERRORS: print(f"- {error}")
