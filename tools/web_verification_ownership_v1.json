@@ -1,0 +1,523 @@
+{
+  "schema_version": 1,
+  "description": "Compact verification ownership for LGO Web/Admin. Known scopes select canonical existing checks; unknown paths broaden safely.",
+  "modes": [
+    "changed",
+    "focused",
+    "integration",
+    "release"
+  ],
+  "always_checks": [
+    "git-diff-check"
+  ],
+  "release_checks": [
+    "root-lint",
+    "root-typecheck",
+    "root-test",
+    "root-build",
+    "current-state",
+    "root-e2e"
+  ],
+  "unknown_checks": {
+    "changed": [
+      "current-state"
+    ],
+    "focused": [
+      "current-state",
+      "root-typecheck"
+    ],
+    "integration": [
+      "current-state",
+      "root-typecheck",
+      "root-test"
+    ],
+    "release": [
+      "current-state"
+    ]
+  },
+  "checks": {
+    "git-diff-check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cost": "fast"
+    },
+    "shared-base": {
+      "command": [
+        "python3",
+        "tools/validate_web_shared_base.py"
+      ],
+      "cost": "fast"
+    },
+    "portal-shell": {
+      "command": [
+        "python3",
+        "tools/validate_web_portal_shell.py"
+      ],
+      "cost": "fast"
+    },
+    "ops-shell": {
+      "command": [
+        "python3",
+        "tools/validate_web_ops_shell.py"
+      ],
+      "cost": "fast"
+    },
+    "game-contract-sync": {
+      "command": [
+        "python3",
+        "tools/validate_web_game_contract_sync_v10.py"
+      ],
+      "cost": "fast"
+    },
+    "live-content": {
+      "command": [
+        "python3",
+        "tools/validate_web_live_content.py"
+      ],
+      "cost": "fast"
+    },
+    "public-rc": {
+      "command": [
+        "python3",
+        "tools/validate_web_public_rc.py"
+      ],
+      "cost": "fast"
+    },
+    "active-suite-authority": {
+      "command": [
+        "python3",
+        "tools/validate_web_opt_active_suite_authority_v1298.py"
+      ],
+      "cost": "fast"
+    },
+    "monorepo-foundation": {
+      "command": [
+        "python3",
+        "tools/validate_web_monorepo_foundation.py"
+      ],
+      "cost": "fast"
+    },
+    "ui-typecheck": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/ui",
+        "typecheck"
+      ],
+      "cost": "medium"
+    },
+    "design-tokens-typecheck": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/design-tokens",
+        "typecheck"
+      ],
+      "cost": "medium"
+    },
+    "portal-typecheck": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/portal",
+        "typecheck"
+      ],
+      "cost": "medium"
+    },
+    "portal-test": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/portal",
+        "test"
+      ],
+      "cost": "medium"
+    },
+    "ops-typecheck": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/ops",
+        "typecheck"
+      ],
+      "cost": "medium"
+    },
+    "ops-test": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/ops",
+        "test"
+      ],
+      "cost": "medium"
+    },
+    "web-typecheck": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/web",
+        "typecheck"
+      ],
+      "cost": "medium"
+    },
+    "web-test": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/web",
+        "test"
+      ],
+      "cost": "medium"
+    },
+    "contracts-typecheck": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/contracts",
+        "typecheck"
+      ],
+      "cost": "medium"
+    },
+    "contracts-test": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/contracts",
+        "test"
+      ],
+      "cost": "medium"
+    },
+    "api-client-typecheck": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/api-client",
+        "typecheck"
+      ],
+      "cost": "medium"
+    },
+    "api-client-test": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/api-client",
+        "test"
+      ],
+      "cost": "medium"
+    },
+    "auth-typecheck": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/auth",
+        "typecheck"
+      ],
+      "cost": "medium"
+    },
+    "auth-test": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/auth",
+        "test"
+      ],
+      "cost": "medium"
+    },
+    "content-typecheck": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/content",
+        "typecheck"
+      ],
+      "cost": "medium"
+    },
+    "content-test": {
+      "command": [
+        "pnpm",
+        "--filter",
+        "@lgo-web/content",
+        "test"
+      ],
+      "cost": "medium"
+    },
+    "root-lint": {
+      "command": [
+        "pnpm",
+        "lint"
+      ],
+      "cost": "expensive"
+    },
+    "root-typecheck": {
+      "command": [
+        "pnpm",
+        "typecheck"
+      ],
+      "cost": "expensive"
+    },
+    "root-test": {
+      "command": [
+        "pnpm",
+        "test"
+      ],
+      "cost": "expensive"
+    },
+    "root-build": {
+      "command": [
+        "pnpm",
+        "build"
+      ],
+      "cost": "expensive"
+    },
+    "current-state": {
+      "command": [
+        "python3",
+        "tools/validate_web_current_state.py"
+      ],
+      "cost": "expensive",
+      "note": "Best run from a clean source candidate because generated/cache artifacts are intentionally rejected."
+    },
+    "root-e2e": {
+      "command": [
+        "pnpm",
+        "test:e2e"
+      ],
+      "cost": "expensive"
+    }
+  },
+  "owners": [
+    {
+      "id": "shared-ui",
+      "patterns": [
+        "packages/ui/**",
+        "packages/design-tokens/**"
+      ],
+      "checks": {
+        "changed": [
+          "shared-base"
+        ],
+        "focused": [
+          "shared-base",
+          "ui-typecheck",
+          "design-tokens-typecheck"
+        ],
+        "integration": [
+          "shared-base",
+          "ui-typecheck",
+          "design-tokens-typecheck",
+          "portal-typecheck",
+          "ops-typecheck",
+          "web-typecheck"
+        ],
+        "release": [
+          "shared-base"
+        ]
+      }
+    },
+    {
+      "id": "portal",
+      "patterns": [
+        "apps/portal/**"
+      ],
+      "checks": {
+        "changed": [
+          "portal-shell",
+          "shared-base"
+        ],
+        "focused": [
+          "portal-shell",
+          "shared-base",
+          "portal-typecheck",
+          "portal-test"
+        ],
+        "integration": [
+          "portal-shell",
+          "shared-base",
+          "portal-typecheck",
+          "portal-test"
+        ],
+        "release": [
+          "portal-shell",
+          "shared-base"
+        ]
+      }
+    },
+    {
+      "id": "ops",
+      "patterns": [
+        "apps/ops/**"
+      ],
+      "checks": {
+        "changed": [
+          "ops-shell",
+          "shared-base"
+        ],
+        "focused": [
+          "ops-shell",
+          "shared-base",
+          "ops-typecheck",
+          "ops-test"
+        ],
+        "integration": [
+          "ops-shell",
+          "shared-base",
+          "ops-typecheck",
+          "ops-test"
+        ],
+        "release": [
+          "ops-shell",
+          "shared-base"
+        ]
+      }
+    },
+    {
+      "id": "contracts-auth",
+      "patterns": [
+        "packages/contracts/**",
+        "packages/api-client/**",
+        "packages/auth/**"
+      ],
+      "checks": {
+        "changed": [
+          "game-contract-sync"
+        ],
+        "focused": [
+          "game-contract-sync",
+          "contracts-typecheck",
+          "contracts-test",
+          "api-client-typecheck",
+          "api-client-test",
+          "auth-typecheck",
+          "auth-test"
+        ],
+        "integration": [
+          "game-contract-sync",
+          "contracts-typecheck",
+          "api-client-typecheck",
+          "auth-typecheck",
+          "portal-typecheck",
+          "ops-typecheck"
+        ],
+        "release": [
+          "game-contract-sync"
+        ]
+      }
+    },
+    {
+      "id": "content",
+      "patterns": [
+        "packages/content/**"
+      ],
+      "checks": {
+        "changed": [
+          "live-content"
+        ],
+        "focused": [
+          "live-content",
+          "content-typecheck",
+          "content-test"
+        ],
+        "integration": [
+          "live-content",
+          "content-typecheck",
+          "content-test",
+          "web-typecheck",
+          "web-test"
+        ],
+        "release": [
+          "live-content"
+        ]
+      }
+    },
+    {
+      "id": "public-web",
+      "patterns": [
+        "apps/web/**"
+      ],
+      "checks": {
+        "changed": [
+          "public-rc"
+        ],
+        "focused": [
+          "public-rc",
+          "web-typecheck",
+          "web-test"
+        ],
+        "integration": [
+          "public-rc",
+          "web-typecheck",
+          "web-test"
+        ],
+        "release": [
+          "public-rc"
+        ]
+      }
+    },
+    {
+      "id": "tooling",
+      "patterns": [
+        "tools/**",
+        "package.json",
+        "pnpm-lock.yaml",
+        "pnpm-workspace.yaml",
+        "turbo.json",
+        "playwright.config.*",
+        "tsconfig*.json"
+      ],
+      "checks": {
+        "changed": [
+          "active-suite-authority"
+        ],
+        "focused": [
+          "active-suite-authority",
+          "monorepo-foundation"
+        ],
+        "integration": [
+          "active-suite-authority",
+          "monorepo-foundation",
+          "root-typecheck"
+        ],
+        "release": [
+          "active-suite-authority",
+          "monorepo-foundation"
+        ]
+      }
+    },
+    {
+      "id": "docs",
+      "patterns": [
+        "docs/**"
+      ],
+      "checks": {
+        "changed": [],
+        "focused": [],
+        "integration": [],
+        "release": []
+      }
+    },
+    {
+      "id": "browser-tests",
+      "patterns": [
+        "tests/e2e/**"
+      ],
+      "checks": {
+        "changed": [
+          "active-suite-authority"
+        ],
+        "focused": [
+          "active-suite-authority"
+        ],
+        "integration": [
+          "active-suite-authority",
+          "root-typecheck"
+        ],
+        "release": [
+          "active-suite-authority"
+        ]
+      }
+    }
+  ]
+}

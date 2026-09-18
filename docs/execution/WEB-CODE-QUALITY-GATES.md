@@ -20,6 +20,29 @@ No command may be claimed PASS unless it executed and exited zero.
 
 Current sandbox status: source validators PASS; Node/pnpm/browser gates UNVERIFIED_ENVIRONMENT.
 
+## Changed-scope verification
+
+Use the compact ownership runner before choosing broader checks:
+
+```bash
+# current working-tree changes
+pnpm verify:scope --mode focused
+
+# committed delta plus current WIP
+pnpm verify:scope --mode integration --changed-from origin/main
+
+# inspect only, do not execute
+pnpm verify:scope --mode release --changed-from origin/main --plan
+```
+
+Modes:
+- `changed`: cheapest canonical source guards for the changed owner.
+- `focused`: owner guard + changed package typecheck/test.
+- `integration`: focused owner plus directly consuming app/package checks.
+- `release`: task closure chain, including lint/typecheck/test/build/current-state/browser gates.
+
+Unknown paths broaden safely instead of being silently skipped. Checks are deduplicated by canonical check ID and execution records source provenance + timing when `--report` is used.
+
 ## Targeted inner-loop gates
 
 Follow Base First and verify only the affected slice while implementing:

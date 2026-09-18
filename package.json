@@ -20,6 +20,7 @@
     "test:e2e": "bash tools/run_lgo_web_browser_matrix.sh",
     "storybook:build": "echo \"Storybook runtime is planned for WEB-02+ and requires package install\"",
     "validate": "python3 tools/validate_web_current_state.py",
+    "verify:scope": "python3 tools/web_changed_scope_verification.py",
     "validate:constitution": "python3 tools/validate_web_program_constitution.py",
     "validate:foundation": "python3 tools/validate_web_monorepo_foundation.py",
     "validate:design": "python3 tools/validate_web_design_system.py",
