@@ -70,7 +70,9 @@ Rules:
 - backend bearer token is never stored in browser localStorage/sessionStorage;
 - browser receives a secure HttpOnly/SameSite cookie or equivalent server-session representation;
 - BFF attaches Authorization to Game API requests;
-- logout invalidates backend session then clears browser session;
+- logout calls the current Game `/auth/logout`, invalidates the presented backend token, then clears browser session state;
+- password-recovery reset currently invalidates all sessions for the account;
+- current Game ProductAuth has no browser-localStorage requirement, so this BFF/session boundary is compatible with Game authority;
 - expired backend session invalidates Portal state consistently;
 - CSRF protections are applied to browser-originated mutations according to the chosen cookie/session mechanism;
 - raw recovery reset token is never logged or exposed beyond the required reset flow.
@@ -266,6 +268,11 @@ Deferred:
 - security posture;
 - session count until durable sessions exist.
 
+Authority note from Game reply `MM-654f22c29329`:
+- email exists internally as the product credential/recovery destination;
+- `AccountResponse` still exposes only `accountId/displayName/createdAt/updatedAt`;
+- there is no accepted AccountResponse contract for email verification, security posture or session-device inventory, so Portal must not invent those fields.
+
 Actions:
 - Bảo mật;
 - Phiên đăng nhập;
@@ -345,7 +352,7 @@ States:
 - server unavailable;
 - auth expired.
 
-No create-character CTA until the real product create-character contract is explicitly opened for Player Web.
+No create-character CTA in the first real Player Web release. Game reply `MM-654f22c29329` confirms character creation remains in Game/Unity for this scope: current bearer-scoped product APIs expose own-character list/detail, while Create Character product UI/endpoint remains DESIGN_GATED. The legacy `POST /accounts/{accountId}/characters` path is M3/dev-smoke compatibility and must not be called by Player Web product UI.
 
 ## 14. Route design — characters/[id]
 
@@ -357,13 +364,15 @@ Identity:
 - slot.
 
 Current world state:
-- current runtime map label if available;
+- current runtime map label if `runtimeState.mapId` is present and maps to a player-safe label;
 - updated timestamp if useful/player-safe.
+
+`runtimeState.mapId` is confirmed as a bearer-scoped read field in `CharacterResponse`. Treat it as a typed machine ID: do not expose `laneX/facing` as a broader world-model claim and do not infer unrelated narrative locations from a Map01A ID.
 
 Account relationship:
 - own account only; backend concealed-not-found semantics for missing/foreign IDs.
 
-Developer/internal fields such as entityId, legacy x/y/z/yaw and raw stored classId are not automatically player-facing.
+Developer/internal fields such as entityId, legacy x/y/z/yaw and raw stored `classId` are not automatically player-facing. `runtimeClassId` is the canonical five-class product/runtime identity for display and new product logic; `classId` remains compatibility/raw durable data.
 
 Future sections:
 - progression;
@@ -751,12 +760,12 @@ Rows marked READY_DESIGN are design-ready, not implementation-ready until their 
 | Character class | CharacterResponse.runtimeClassId | map to Võ/Kiếm/Pháp/Cơ/Linh | real-capable |
 | Stored classId | CharacterResponse.classId | hidden from normal player UI; compatibility only | diagnostic only |
 | Character slot | CharacterResponse.slot | show as slot/context if useful | real-capable |
-| Current map | runtimeState.mapId | map to safe display label if Game review confirms | WAITING_CROSS_SANDBOX: MM-a610edff1357 |
+| Current map | runtimeState.mapId | map typed machine ID to a player-safe label only; do not infer lane/facing or broader world hierarchy | CONFIRMED_BY_GAME: MM-654f22c29329 |
 | Character level | Progression domain | never infer from fixture | blocked |
 | Last played | no current accepted source | do not show as real | blocked |
 | Equipment | Inventory domain | open after GAME-DATA-02 | blocked |
 | Session count/list | durable IAM session domain | open after DB-05 | blocked |
-| Email verification | no current AccountResponse field | do not invent | WAITING_CROSS_SANDBOX: MM-a610edff1357 |
+| Email verification | no current AccountResponse field; email exists internally as credential/recovery destination | do not invent verification/security posture fields | CONFIRMED_BY_GAME: MM-654f22c29329 |
 | Security posture | no canonical source | static guidance only | blocked |
 | Support cases | Support domain | own cases only | blocked |
 ## 33. Layout wireframe — authenticated desktop
@@ -857,14 +866,19 @@ For each Portal route:
 A visually polished page that violates data authority fails review.
 ## 38. Cross-sandbox response tracking
 
-Current required Game review:
-- message: MM-a610edff1357
-- task: T-fdd70208c592
-- responder: S-LGO-HUB-20260917-D4F1
-- status: WAITING_CROSS_SANDBOX for rows A–E only
-- expected reply: reply_to=MM-a610edff1357
+Game review closure:
+- request: `MM-a610edff1357`
+- response: `MM-654f22c29329`
+- task: `T-fdd70208c592`
+- responder: `S-LGO-HUB-20260917-D4F1`
+- status: ANSWERED / integrated
+- reply_to integrity: PASS
 
-PWEB-01 may continue and commit its design baseline while waiting.
-If Game response changes A–E assumptions, reopen this task from REVIEW, patch the affected sections, rerun verification, then complete.
+Integrated conclusions:
+- A: first real Player Web remains read-only for character creation; creation stays Game/Unity and DESIGN_GATED;
+- B: `runtimeState.mapId` may drive a player-safe read-only location label, without exposing lane/facing or inferring a broader world hierarchy;
+- C: `runtimeClassId` is canonical five-class display identity; `classId` is compatibility/internal;
+- D: BFF/server-session adaptation is compatible with current Game ProductAuth; Java bearer stays out of browser localStorage; logout calls current backend logout then clears Web session;
+- E: no accepted account contract owns email-verification/security-posture/session-device fields.
 
-The program does not stop while this ASK is unanswered.
+Cross-system impact: no Game/API change is required for this first read-only Portal scope. Create Character remains gated; mapId stays a typed machine ID; account-security fields remain deferred until owned by real backend domains.
